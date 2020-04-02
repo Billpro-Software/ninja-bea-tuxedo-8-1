@@ -1,0 +1,77 @@
+#ifndef	 VISUALEDGE_IDL
+#define	 VISUALEDGE_IDL
+
+//
+// Uncomment the #define below if compiling for NEO
+// #define __NEO_IDL__
+//
+//
+// Uncomment the #define below if compiling for PowerBroker
+// #define __PBCP_IDL__
+//
+
+#ifndef __NO_LIFECYCLE__
+
+#ifdef __NEO_IDL__
+#include <Cos/LifeCycle.idl>
+#else
+#include <lifecycle.idl>
+#endif
+
+#ifdef __PBCP_IDL__
+#pragma pb_include "lifecycle.h" from "pbroker/corba/lifecycl/lifcyc.h"
+#endif
+
+#endif // __NO_LIFECYCLE__
+
+module VisualEdge
+{
+	interface UserAuthenticator
+	{
+		typedef sequence<octet>	AuthenticationData;
+
+		enum Protocol
+		{
+			SimpleEncodedPassword,
+			ClientAuthentication
+		};
+
+		void BeginAuthentication(
+			in string 			userId,
+			in Protocol			protocol,
+			inout AuthenticationData	code,
+			out AuthenticationData		challenge);
+
+		void CommitAuthentication(
+			in AuthenticationData	code);
+	};
+
+#ifndef __NO_LIFECYCLE__
+
+	// Persistence feature is not available
+	exception NotAvailable
+	{
+	};
+
+	// This object cannot be made persistent
+	exception NotSupported
+	{
+	};
+
+	// Object reference is already persistent
+	exception AlreadyPersistent
+	{
+	};
+
+	interface VeLifeCycle : ::CosLifeCycle::LifeCycleObject
+	{
+		Object GetPersistentIOR() raises(
+						NotAvailable,
+						NotSupported,
+						AlreadyPersistent);
+	};
+#endif // __NO_LIFECYCLE__
+
+};
+
+#endif // VISUALEDGE_IDL

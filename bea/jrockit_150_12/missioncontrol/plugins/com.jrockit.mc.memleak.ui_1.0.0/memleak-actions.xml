@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE action-set SYSTEM "action-set.dtd">
+
+<!--
+The actions define all the Actions used in the JRockit Memleak application,
+the layout of menu bars, tool bars and right click menus.
+-->
+
+<action-set id="memleak">
+
+    <!-- =================================================================== -->
+    <!-- Define the main menus -->
+    <!-- =================================================================== -->
+
+    <action id="file-menu-command"
+        name="File"
+        mnemonic="F"
+        always-enabled="true"/>
+
+    <action id="edit-menu-command"
+        name="Edit"
+        mnemonic="E"
+        always-enabled="true"/>
+
+    <action id="view-menu-command"
+        name="View"
+        mnemonic="V"
+        always-enabled="true"/>
+
+    <action id="actions-menu-command"
+        name="Actions"
+        mnemonic="A"
+        always-enabled="true"/>
+
+    <action id="help-menu-command"
+        name="Help"
+        mnemonic="H"
+        always-enabled="true"/>
+
+    <!-- =================================================================== -->
+    <!-- Define the File menu -->
+    <!-- =================================================================== -->
+
+    <action id="export-command"
+        name="Export graph"
+        mnemonic=""
+        small-icon-path="export-graph-16.png"
+        accel=""
+        displays-window="true"
+        desc="Export graph to image file"/>
+
+    <action id="print-command"
+        name="Print graph"
+        mnemonic=""
+        small-icon-path="print-16.png"
+        accel=""
+        displays-window="true"
+        desc="Print graph"/>
+
+    <!-- =================================================================== -->
+    <!-- Define the Edit menu -->
+    <!-- =================================================================== -->
+
+    <action id="cut-command"
+        name="Remove"
+        mnemonic=""
+        small-icon-path="delete.gif"
+        accel=""
+        desc="Remove selected nodes"/>
+
+    <!-- =================================================================== -->
+    <!-- Define the View menu -->
+    <!-- =================================================================== -->
+
+    <action id="reload-command"
+        name="Refresh"
+        mnemonic="R"
+        accel=""
+        small-icon-path="refresh-16.png"
+        desc="Refresh current view"/>
+
+    <action id="relayout-command"
+        name="Relayout Graph"
+        mnemonic=""
+        accel=""
+        small-icon-path="relayout-graph-16.png"
+        desc="Relayout graph"/>
+
+    <action id="zoom-in-command"
+        name="Zoom In"
+        mnemonic=""
+        small-icon-path="zoom-in-16.png"
+        accel=""
+        desc="Zoom in"/>
+
+    <action id="zoom-out-command"
+        name="Zoom Out"
+        mnemonic=""
+        small-icon-path="zoom-out-16.png"
+        accel=""
+        desc="Zoom out"/>
+
+    <action id="zoom-selected-command"
+        name="Zoom Selected"
+        mnemonic=""
+        small-icon-path="zoom-selected-node-16.png"
+        accel=""
+        desc="Zoom selected nodes"/>
+
+    <action id="zoom-original-command"
+        name="Zoom 100%"
+        mnemonic=""
+        accel=""
+        small-icon-path="zoom-identity-16.png"
+        desc="Zoom to 100%"/>
+
+    <action id="zoom-fit-command"
+        name="Fit to Window"
+        mnemonic=""
+        small-icon-path="fit-window-16.png"
+        accel=""
+        desc="Fit to window"/>
+
+    <action id="birds-eye-graph-view-command"
+        name="Bird's-eye View"
+        mnemonic=""
+        small-icon-path="overview-16.png"
+        accel=""
+        displays-window="true"
+        desc="Bird's-eye view of graph"/>
+
+    <action id="show-type-graph-command"
+        name="Show Referring Types"
+        mnemonic=""
+        small-icon-path="typesgraph_C.gif"
+        accel=""
+        desc="Show graph of types pointing to the selected type"/>
+
+    <action id="show-instance-graph-command"
+        name="Show Referring Instances"
+        mnemonic=""
+        small-icon-path="instancesgraph.gif"
+        accel=""
+        desc="Show graph of instances pointing to the selected instance"/>
+        
+ 	<action id="start-new-graph-on-node-command"
+ 		name="Restart Graph on Node"
+ 		mnemonic=""
+ 		small-icon-path="restartgraphonnode.gif"
+ 		accel=""
+ 		desc="Restart graph on selected node"/>
+
+    <action id="expand-referring-nodes-command"
+        name="Expand Nodes"
+        mnemonic=""
+        small-icon-path="expandnode_green.gif"
+        accel=""
+        desc="Show more nodes referring to the selected node"/>
+
+    <action id="expand-all-referring-nodes-command"
+        name="Expand All Nodes"
+        mnemonic=""
+        small-icon-path="expandallnodes.gif"
+        accel=""
+        desc="Show all nodes referring to the selected node"/>
+
+    <action id="inspect-instance-command"
+        name="Inspect Instance"
+        mnemonic=""
+        small-icon-path="debug_watch.gif"
+        accel=""
+        desc="Inspect the selected instance"/>
+
+    <action id="list-instances-command"
+        name="List Instances"
+        mnemonic=""
+        small-icon-path="debug_watch.gif"
+        accel=""
+        desc="List instances referring to type"/>
+
+    <action id="largest-arrays-command"
+    	name="List Largest Arrays"
+    	mnemonic=""
+    	small-icon-path="array.gif"
+    	accel=""
+    	desc="List largest arrays of the selected array type"/>
+
+    <action id="show-allocation-stack-trace-command"
+        name="Show Allocation Traces"
+        mnemonic=""
+        small-icon-path="debug_callstack.gif"
+        accel=""
+        desc="Show allocation stack traces"/>
+
+    <action id="refresh-inspected-data-command"
+        name="Refresh inspected data"
+        mnemonic=""
+        small-icon-path="refresh-16.png"
+        accel=""
+        desc="Refresh inspected data"/>
+
+    <!-- =================================================================== -->
+    <!-- Define the Actions menu -->
+    <!-- =================================================================== -->
+
+    <action id="start-command"
+        name="Start"
+        mnemonic=""
+        small-icon-path="start-16.png"
+        displays-window="false"
+        desc="Starts the current operation"/>
+
+    <action id="pause-command"
+        name="Pause"
+        mnemonic=""
+        small-icon-path="pause-16.png"
+        displays-window="false"
+        desc="Pauses updating"/>
+
+    <action id="stop-command"
+        name="Stop"
+        mnemonic=""
+        small-icon-path="stop-16.png"
+        displays-window="false"
+        desc="Stops the current operation"/>
+
+    <action id="do-gc"
+        name="Garbage Collect"
+        mnemonic=""
+        small-icon-path="gc-16.png"
+        displays-window="false"
+        desc="Perform garbage collection on the server"/>
+
+    <!-- =================================================================== -->
+    <!-- Define the main window menus and tool bar -->
+    <!-- =================================================================== -->
+
+    <action-list id="main-menu">
+        <action-list id="file-menu" idref="file-menu-command">
+            <action idref="export-command"/>
+            <action idref="print-command"/>
+        </action-list>
+
+        <action-list id="edit-menu" idref="edit-menu-command">
+            <action idref="cut-command"/>
+        </action-list>
+
+        <action-list id="view-menu" idref="view-menu-command">
+            <action idref="reload-command"/>
+            <action idref="relayout-command"/>
+            <action idref="start-new-graph-on-node-command"/>
+            <empty/>
+            <action idref="expand-referring-nodes-command"/>
+            <action idref="expand-all-referring-nodes-command"/>
+            <action idref="show-type-graph-command"/>
+            <action idref="show-instance-graph-command"/>
+            <action idref="show-allocation-stack-trace-command"/>
+            <empty/>
+            <action idref="list-instances-command"/>
+            <action idref="inspect-instance-command"/>
+            <action idref="largest-arrays-command"/>
+            <empty/>
+            <action idref="zoom-in-command"/>
+            <action idref="zoom-out-command"/>
+            <action idref="zoom-selected-command"/>
+            <action idref="zoom-original-command"/>
+            <action idref="zoom-fit-command"/>
+            <empty/>
+            <action idref="birds-eye-graph-view-command"/>
+        </action-list>
+
+        <action-list id="actions-menu" idref="actions-menu-command">
+            <action idref="start-command"/>
+            <action idref="pause-command"/>
+            <action idref="stop-command"/>
+            <empty/>
+            <action idref="do-gc"/>
+        </action-list>
+    </action-list>
+
+    <!-- Tool bar -->
+
+    <action-list id="main-toolbar" type="main">
+        <action idref="export-command"/>
+        <action idref="print-command"/>
+        <empty/>
+        <action idref="start-command"/>
+        <action idref="pause-command"/>
+        <action idref="stop-command"/>
+        <empty/>
+        <action idref="do-gc"/>
+        <empty/>
+        <action idref="reload-command"/>
+        <action idref="relayout-command"/>
+        <action idref="start-new-graph-on-node-command"/>
+        <empty/>
+        <action idref="zoom-in-command"/>
+        <action idref="zoom-out-command"/>
+        <action idref="zoom-selected-command"/>
+        <action idref="zoom-original-command"/>
+        <action idref="zoom-fit-command"/>
+        <empty/>
+        <action idref="birds-eye-graph-view-command"/>
+    </action-list>
+
+    <!-- =================================================================== -->
+    <!-- Define the trend table popup menu -->
+    <!-- =================================================================== -->
+
+    <action-list id="trend-popup">
+        <action idref="show-type-graph-command"/>
+        <action idref="show-allocation-stack-trace-command"/>
+        <action idref="largest-arrays-command"/>
+    </action-list>
+
+    <!-- =================================================================== -->
+    <!-- Define the graph node details panel popup menu -->
+    <!-- =================================================================== -->
+
+    <action-list id="graph-inspect-panel-popup">
+        <action idref="reload-command"/>
+        <empty/>
+        <action idref="show-instance-graph-command"/>
+        <empty/>
+        <action idref="inspect-instance-command"/>
+    </action-list>
+
+    <!-- =================================================================== -->
+    <!-- Define the Types graph node popup menu -->
+    <!-- =================================================================== -->
+
+    <action-list id="types-graph-popup">
+        <action idref="list-instances-command"/>
+        <action idref="largest-arrays-command"/>
+        <empty/>
+        <action idref="show-allocation-stack-trace-command"/>
+        <empty/>
+        <action idref="start-new-graph-on-node-command"/>
+        <empty/>
+        <action idref="expand-all-referring-nodes-command"/>
+        <empty/>
+        <action idref="cut-command"/>
+    </action-list>
+
+    <!-- =================================================================== -->
+    <!-- Define the Instances graph node popup menu -->
+    <!-- =================================================================== -->
+
+    <action-list id="instances-graph-popup">
+        <action idref="inspect-instance-command"/>
+        <empty/>
+        <action idref="show-allocation-stack-trace-command"/>
+        <empty/>
+        <action idref="start-new-graph-on-node-command"/>
+        <empty/>
+        <action idref="expand-all-referring-nodes-command"/>
+        <empty/>
+        <action idref="cut-command"/>
+    </action-list>
+</action-set>

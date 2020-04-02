@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+  <persistence-unit name="customer">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>java:/app/jdbc/jdbc/NinjaTestDS</jta-data-source>
+    <non-jta-data-source>customerDatabaseUnmanaged</non-jta-data-source>
+    <class>view.Customer</class>
+    <properties>
+      <property name="eclipselink.target-server" value="WebLogic_10"/>
+      <property name="eclipselink.target-database" value="Oracle11"/>
+      <property name="javax.persistence.jtaDataSource"
+                value="java:/app/jdbc/jdbc/NinjaTestDS"/>
+    </properties>
+  </persistence-unit>
+</persistence>

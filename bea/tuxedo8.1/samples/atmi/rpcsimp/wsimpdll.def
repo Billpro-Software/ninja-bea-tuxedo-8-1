@@ -1,0 +1,23 @@
+;       (c) 2003 BEA Systems, Inc. All Rights Reserved.
+;       Copyright (c) 1993 USL
+;       All rights reserved
+;
+;       THIS IS UNPUBLISHED PROPRIETARY
+;       SOURCE CODE OF USL
+;       The copyright notice above does not
+;       evidence any actual or intended
+;       publication of such source code.
+;
+;ident	"@(#) samples/atmi/rpcsimp/wsimpdll.def	$Revision: 1.5 $"
+
+LIBRARY        WSIMPDLL
+PROTMODE
+DESCRIPTION    'TUXEDO /RPC SAMPLE DLL'
+CODE	PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD SINGLE
+HEAPSIZE       1024
+SEGMENTS     WEPSEG PRELOAD FIXED
+;EXETYPE        WINDOWS
+EXPORTS
+        TO_UPPER           @1
+        TO_LOWER           @2

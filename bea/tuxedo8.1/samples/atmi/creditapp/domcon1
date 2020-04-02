@@ -1,0 +1,108 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1990, 1994 Novell, Inc.
+#	Copyright (c) 1994 Novell
+#	  All Rights Reserved
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+#	UNIX System Laboratories, Inc.
+#	The copyright notice above does not evidence any
+#	actual or intended publication of such source code.
+
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/domcon1	$Revision: 1.5 $"
+
+#
+# TUXEDO DOMAIN CONFIGURATION FILE
+#
+*DM_RESOURCES
+#
+VERSION=U22
+# 
+
+#
+#
+*DM_LOCAL_DOMAINS
+#
+#
+QDOM1 	GWGRP=BANKB2
+	TYPE=TDOMAIN
+	DOMAINID="QDOM1"
+	BLOCKTIME=10   
+	MAXDATALEN=56  
+	MAXRDOM=89         
+	DMTLOGDEV="<APPDIR1>/DMTLOG" 
+	AUDITLOG="<APPDIR1>/AUDITLOG"
+	DMTLOGNAME="DMTLOG_TDOM1"    
+
+QDOM2 	GWGRP=BANKB3
+	TYPE=TDOMAIN
+	DOMAINID="QDOM2"
+	BLOCKTIME=10   
+	MAXDATALEN=56  
+	MAXRDOM=89         
+	DMTLOGDEV="<APPDIR1>/DMTLOG" 
+	AUDITLOG="<APPDIR1>/AUDITLOG"
+	DMTLOGNAME="DMTLOG_TDOM2"    
+
+QDOM3 	GWGRP=BANKB4
+	TYPE=TDOMAIN
+	DOMAINID="QDOM3"
+	BLOCKTIME=10   
+	MAXDATALEN=56  
+	MAXRDOM=89         
+	DMTLOGDEV="<APPDIR1>/DMTLOG" 
+	AUDITLOG="<APPDIR1>/AUDITLOG"
+	DMTLOGNAME="DMTLOG_TDOM3"    
+
+
+#
+#
+*DM_REMOTE_DOMAINS
+#
+#
+TDOM1 	TYPE=TDOMAIN
+	DOMAINID="TDOM1"
+
+TDOM2 	TYPE=TDOMAIN
+	DOMAINID="TDOM2"
+
+TDOM3 	TYPE=TDOMAIN
+	DOMAINID="TDOM3"
+
+
+
+#
+#
+*DM_TDOMAIN
+#
+TDOM1	NWADDR="<network address of SITE2>"
+	NWDEVICE="<device of provider2>"
+TDOM2	NWADDR="<network address of SITE3>"
+	NWDEVICE="<device of provider3>"
+TDOM3	NWADDR="<network address of SITE4>"
+	NWDEVICE="<device of provider4>"
+QDOM1	NWADDR="<network address of SITE1>"
+	NWDEVICE="<device of provider1>"
+QDOM2	NWADDR="<network address of SITE1A>"
+	NWDEVICE="<device of provider1>"
+QDOM3	NWADDR="<network address of SITE1B>"
+	NWDEVICE="<device of provider1>"
+#
+#
+
+
+
+
+#
+#
+*DM_LOCAL_SERVICES
+#
+#
+
+WITHDRAWALA	
+INQUIRYA		
+OPENCA
+CLOSECA
+

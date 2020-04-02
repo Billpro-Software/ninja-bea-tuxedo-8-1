@@ -1,0 +1,124 @@
+<!-- Copyright (c) 2006, 2009, Oracle and/or its affiliates.
+All rights reserved. -->
+
+<!--MODIFIED  (MM/DD/YY)-->
+<!--akrajend   01/29/08 -  #(7639193) Adde id-prefix description and values-->
+<!--gnagaraj   12/12/08 -  Add description for value-set-size -->
+<!--gnagaraj   09/27/06 -  Created -->
+
+<!-- This is a sample file illustrating how administrators can define valid 
+values for customization layers to be used in JDeveloper for creating
+customizations. 
+
+Administrators can define allowed values for all possible customization
+layers in this file, provide unique id for each customization layer & value
+and also provide user friendly display names for each value. The id for layer
+name & value will be used to generate unique prefix for a given
+customization layer/value setting. This prefix can be used by clients to
+generate non conflicting ids across customization in different layers. The
+display names will be used for presenting the layer values in the UI and
+values will be used to construct CustConfig.
+
+These values are applicable for the entire JDeveloper instance and 
+do not change from application to application. -->
+
+<!--To enable customization, each application should define <cust-config> 
+in it's adf-config.xml listing specific Customomization Class (CC)s, in the 
+order in which the customizations should be applied. The last CC will act
+as the tip layer.
+
+If such an adf-config.xml exists for the application, JDeveloper would
+present each CC as a layer and will allow the user to choose a value
+from the list of values defined in this file. -->
+
+<!-- MDS supports other means of providing customization layer values. 
+(specifically for the case of Oracle Applications to provide these values 
+from Database tables). If such a custom CustomizationLayerValueProvider is
+registered, this file will not be used by JDeveloper and instead all requests
+for layer values will be made to the registered implementation. See
+oracle.mds.dt.cust.CustomizationRegistry for more details -->
+
+<!-- How does value-set-size affects the UI?
+The value-set-size currently accepts the following three values
+
+no_values - Indicates to MDS DT that the customization layer is only meant to 
+            be used at runtime and should not be exposed in JDeveloper's
+            Customization window. 
+small -     Indicates that the layer has a limited set of allowed values.  
+            Customization  windows will display all the values in a drop-down 
+            list
+large -     Indicates that layer has large number of allowed values. 
+            Customization window will employ a  ListOfValues (LOV) for such a
+            layer.
+-->
+
+<!-- How to specify an id-prefix for the new elements being added as
+ customizations?
+Users of JDev customization role can define a prefix for the customization 
+layer's name/value pair in the CustomizationLayerValues.xml file. The below
+example data shows how users can specify the prefix at layer name level
+and layer value level.
+
+Based on these id-prefix, MDS would generate a unique id prefix for current
+customization layer / name selection. The generated id prefix can be used by
+components to generate unique ids for customizations.
+
+The id-prefix would be generated based on the following rules.
+1. If both the layer name prefix(N) and layer value prefix(V) are provided,
+then the generated id-prefix will be the concatenated string of both the
+ prefixes(NV).
+2. If the layer name prefix(N) is provided but layer value prefix(V) is not
+ provided, then the generated id-prefix would be the prefix of layer name(N).
+3. If the layer value prefix(N) is provided but layer name prefix(V) is not
+ provided, then the generated id-prefix would be the prefix of layer value(V).
+4. If both the layer name prefix(N) and layer value prefix(V) are not provided,
+then the generated id-prefix would be concatenated string of both the layer
+name and layer value($name$value).
+
+It is the responsibility of the administrator who defines this
+customizationLayerValues.xml data, to set these id-prefix values in such a
+fashion that the resultant id prefix is unique.
+For example- Consider the User layer defined in the sample data below. The
+resultant id prefixes for each layer values will be different and unique
+as follows.
+User/user1 - us1
+User/user2 - us2
+User/guest - userguest
+User/admin - Useradmin
+
+Similarly, the administrator can also set the id-prefix values for the 
+layer name/values according to the layer name/values they define,
+so that the resultant id prefix is unique across all layer name/value pairs.
+
+Read CustomizationLayerValueSet javadoc for more details on id-prefix
+generation.
+-->
+
+<cust-layers  xmlns="http://xmlns.oracle.com/mds/dt">
+  <cust-layer name="site" id-prefix="s">
+      <!-- Generated id-prefix would be "s1" and "s2" for values 
+	"site1" and "site2".-->
+      <cust-layer-value value="site1" display-name="Site One" id-prefix="1" />
+      <cust-layer-value value="site2" display-name="Site Two" id-prefix="2" />
+      <!-- Generated id-prefix would be "s" for value "site"
+	   since no prefix was specified on the value -->
+      <!-- ADF SiteCC always returns the value as "site" -->
+      <cust-layer-value value="site" display-name="Site"/>
+   </cust-layer>
+
+   <!-- Customization layers that are only meant for runtime usage can
+   be excluded in design time by defining size as "no_values"--> 
+   <cust-layer name="runtime_only_layer" value-set-size="no_values"/>
+
+   <cust-layer name="user" value-set-size="large">
+    <!-- Generated id-prefix would be "us1" and "us2" for values "user1"
+	 and "user2" since no prefix was defined per-name level -->
+      <cust-layer-value value="user1" display-name="First User" id-prefix="us1" />
+      <cust-layer-value value="user2" display-name="Second User" id-prefix="us2" />
+    <!-- Generated id-prefix would be "useradmin" and "userguest" for
+	 values "admin" and "guest" since no prefix was defined at both
+	 layer level and name level -->
+      <cust-layer-value value="admin" display-name="Administrator"/>
+      <cust-layer-value value="guest"/>
+   </cust-layer>
+</cust-layers>

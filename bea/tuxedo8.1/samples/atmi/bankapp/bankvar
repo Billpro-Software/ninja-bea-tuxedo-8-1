@@ -1,0 +1,175 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1990 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/bankapp/bankvar	$Revision: 1.5 $"
+
+#
+# This file sets all the environment variables needed by the TUXEDO software
+# to run the bankapp
+#
+# This directory contains all the TUXEDO software
+# System administrator must set this variable
+#
+if [ -z "${TUXDIR}" ] ; then
+	if [ ! -z "${ROOTDIR}" ] ; then
+		TUXDIR=$ROOTDIR
+		export TUXDIR
+	fi
+fi
+TUXDIR=${TUXDIR:?}
+#
+# Reset LANG if necessary
+#
+if [ ! -d ${TUXDIR}/locale/C -a -d ${TUXDIR}/locale/english_us ] ; then
+	export LANG
+	LANG=english_us.ascii
+fi
+#
+# This directory contains all the user written code
+#
+# Contains the full path name of the directory that the application
+# generator should place the files it creates
+#
+APPDIR=${TUXDIR}/apps/bankapp
+#
+# This path contains the shared objects that are dynamically linked at
+# runtime in certain environments, e.g., SVR4.
+#
+LD_LIBRARY_PATH=${TUXDIR}/lib:${LD_LIBRARY_PATH}
+#
+# Set the path to shared objects in HP-UX
+#
+SHLIB_PATH=${TUXDIR}/lib:${SHLIB_PATH}
+#
+# Set the path to shared objects in AIX
+#
+LIBPATH=${TUXDIR}/lib:/usr/lib:${LIBPATH}
+#
+# Logical block size; Database Administrator must set this variable
+#
+BLKSIZE=512
+#
+# Set default name of the database to be used by database utilities
+# and database creation scripts
+#
+DBNAME=bankdb
+#
+# Indicate whether database is to be opened in share or private mode
+#
+DBPRIVATE=no
+#          
+# Set Ipc Key for the database; this MUST differ from the UBBCONFIG
+# *RESOURCES IPCKEY parameter
+#
+DIPCKEY=80953
+#
+# Environment file to be used by tmloadcf
+#
+ENVFILE=${APPDIR}/ENVFILE
+#
+# List of field table files to be used by mc, viewc, tmloadcf, etc.
+#
+FIELDTBLS=Usysflds,bankflds,creditflds,eventflds
+#
+FIELDTBLS32=Usysfl32,evt_mib,tpadm
+#
+# List of directories to search to find field table files
+#
+FLDTBLDIR=${TUXDIR}/udataobj:${APPDIR}
+#
+FLDTBLDIR32=${TUXDIR}/udataobj:${APPDIR}
+#
+# Universal Device List for database
+#
+FSCONFIG=${APPDIR}/bankdl1
+#
+# Network address, used in MENU script
+#
+NADDR=
+#
+# Network device name
+#
+NDEVICE=
+#
+# Network listener address, used in MENU script
+#
+NLSADDR=
+#
+# Make sure TERM is set
+#
+TERM=${TERM:?}
+#
+# Set device for the transaction log; this should match the TLOGDEVICE
+# parameter under this site's LMID in the *MACHINES section of the
+# UBBCONFIG file
+#
+TLOGDEVICE=${APPDIR}/TLOG
+#
+# Device for binary file that gives /T all its information
+#
+TUXCONFIG=${APPDIR}/tuxconfig
+#
+# Set the prefix of the file which is to contain the central user log;
+# this should match the ULOGPFX parameter under this site's LMID in the
+# *MACHINES section of the UBBCONFIG file
+#
+ULOGPFX=${APPDIR}/ULOG
+#
+# System name, used by RUNME.sh
+#
+UNAME=
+#
+# List of view files to be used by viewc, tmloadcf, etc.
+#
+VIEWFILES=aud.V
+#
+VIEWFILES32=mib_views,tmib_views
+#
+# List of directories to search to find view files
+#
+VIEWDIR=${TUXDIR}/udataobj:${APPDIR}
+#
+VIEWDIR32=${TUXDIR}/udataobj:${APPDIR}
+#
+# Specify the Q device (if events included in demo)
+#
+QMCONFIG=${APPDIR}/qdevice
+#
+# Export all variables just set
+#
+export TUXDIR APPDIR BLKSIZE DBNAME DBPRIVATE DIPCKEY ENVFILE
+export LD_LIBRARY_PATH SHLIB_PATH LIBPATH
+export FIELDTBLS FLDTBLDIR FSCONFIG MASKPATH OKXACTS TERM
+export FIELDTBLS32 FLDTBLDIR32
+export TLOGDEVICE TUXCONFIG ULOGPFX
+export VIEWDIR VIEWFILES
+export VIEWDIR32 VIEWFILES32
+export QMCONFIG
+#
+# Add TUXDIR/bin to PATH if not already there
+#
+a="`echo $PATH | grep ${TUXDIR}/bin`"
+if [ x"$a" = x ]
+then
+	PATH=${TUXDIR}/bin:${PATH}
+	export PATH
+fi
+#
+# Add APPDIR to PATH if not already there
+#
+a="`echo $PATH | grep ${APPDIR}`"
+if [ x"$a" = x ]
+then
+	PATH=${PATH}:${APPDIR}
+	export PATH
+fi
+
+#
+# Check for other machine types bin directories
+#
+for DIR in /usr/5bin /usr/ccs/bin /opt/SUNWspro/bin
+do
+	if [ -d ${DIR} ] ; then
+		PATH="${DIR}:${PATH}"
+	fi
+done

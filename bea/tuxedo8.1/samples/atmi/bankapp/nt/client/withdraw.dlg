@@ -1,0 +1,25 @@
+/*	(c) 2003 BEA Systems, Inc. All Rights Reserved. */
+/*	Copyright (c) 1995 BEA Systems, Inc.	*/
+/*	  All Rights Reserved 	 	*/
+
+/*	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF     	*/
+/*	BEA Systems, Inc.                     			*/
+/*	The copyright notice above does not evidence any   	*/
+/*	actual or intended publication of such source code.	*/
+
+/* #ident	"@(#) samples/atmi/bankapp/nt/client/withdraw.dlg	$Revision: 1.4 $"	*/
+
+#include "windows.h"
+WITHDRAW DIALOG DISCARDABLE LOADONCALL PURE MOVEABLE 10, 35, 240, 100
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "WITHDRAWAL"
+BEGIN
+  CONTROL "TUXEDO (R) Transaction Processing System" 104, "STATIC", WS_CHILD | WS_VISIBLE | 0x1L, 58, 1, 160, 9
+  CONTROL "Banking Services" 105, "STATIC", WS_CHILD | WS_VISIBLE | 0x1L, 90, 9, 66, 10
+  CONTROL "Withdrawal From Account Number:" 102, "STATIC", WS_CHILD | WS_VISIBLE, 18, 30, 103, 9
+  CONTROL "" IDC_ACCOUNT1, "EDIT", WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP | 0x2L, 133, 30, 41, 11
+  CONTROL "Withdrawal Amount:" 103, "STATIC", WS_CHILD | WS_VISIBLE, 18, 48, 98, 12
+  CONTROL "" IDC_AMOUNT, "EDIT", WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP | 0x2L, 133, 48, 41, 11
+  CONTROL "OK" IDOK, "BUTTON", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 91, 68, 42, 12
+  CONTROL "CANCEL" IDCANCEL, "BUTTON", WS_CHILD | WS_VISIBLE | WS_TABSTOP, 169, 68, 42, 12
+END

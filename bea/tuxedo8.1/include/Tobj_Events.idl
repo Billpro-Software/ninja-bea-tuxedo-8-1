@@ -1,0 +1,54 @@
+//--------------------------------------------------------------------
+//
+// Copyright (c) 1999 BEA Systems, Inc.
+// All rights reserved
+//
+// THIS IS UNPUBLISHED PROPRIETARY
+// SOURCE CODE OF BEA Systems, Inc.
+// The copyright notice above does not
+// evidence any actual or intended
+// publication of such source code.
+//
+// #ident "@(#)nts/idl/Tobj_Events.idl $Revision: 1.2 $"
+//
+//--------------------------------------------------------------------
+
+#ifndef _TOBJ_EVENTS_IDL_
+#define _TOBJ_EVENTS_IDL_
+
+#pragma prefix      "beasys.com"
+#pragma javaPackage "com.beasys"
+
+module Tobj_Events
+{
+  // CORBA::IMP_LIMIT minor codes
+  const unsigned long POST_UNSUPPORTED_VALUE_IN_ANY    = 0x54555800; // 1414879232
+  const unsigned long POST_UNSUPPORTED_PRIORITY_VALUE  = 0x54555801; // 1414879233
+  const unsigned long POST_DOMAIN_CONTAINS_SEPARATOR   = 0x54555802; // 1414879234
+  const unsigned long POST_TYPE_CONTAINS_SEPARATOR     = 0x54555803; // 1414879235
+  const unsigned long POST_SYSTEM_EVENTS_UNSUPPORTED   = 0x54555804; // 1414879236
+  const unsigned long SUB_DOMAIN_BEGINS_WITH_SYSEV     = 0x54555805; // 1414879237
+  const unsigned long TRANSIENT_ONLY_CONFIGURATION     = 0x54555806; // 1414879238
+  const unsigned long SUB_EMPTY_DOMAIN                 = 0x54555807; // 1414879239
+  const unsigned long SUB_EMPTY_TYPE                   = 0x54555808; // 1414879240
+  const unsigned long SUB_DOMAIN_AND_TYPE_TOO_LONG     = 0x54555809; // 1414879241
+  const unsigned long SUB_FILTER_TOO_LONG              = 0x5455580A; // 1414879242
+  const unsigned long POST_EMPTY_DOMAIN                = 0x5455580B; // 1414879243
+  const unsigned long POST_EMPTY_TYPE                  = 0x5455580C; // 1414879244
+  const unsigned long POST_DOMAIN_AND_TYPE_TOO_LONG    = 0x5455580D; // 1414879245
+  const unsigned long SUB_NAME_TOO_LONG                = 0x5455580E; // 1414879246
+
+  // CORBA::BAD_PARAM minor codes:
+  const unsigned long SUB_INVALID_FILTER_EXPRESSION    = 0x54555810; // 1414879248
+  const unsigned long SUB_UNSUPPORTED_QOS_VALUE        = 0x54555811; // 1414879249
+  const unsigned long INVALID_SUBSCRIPTION_ID          = 0x54555812; // 1414879250
+  const unsigned long INVALID_CHANNEL_ID               = 0x54555813; // 1414879251
+
+  // CORBA::BAD_INV_ORDER minor codes:
+  const unsigned long INCOMPLETE_SUBSCRIPTION          = 0x54555820; // 1414879264
+
+  // CORBA::INV_OBJREF minor codes:
+  const unsigned long SUB_NIL_CALLBACK_REF             = 0x54555830; // 1414879280
+};
+
+#endif // _TOBJ_EVENTS_IDL_

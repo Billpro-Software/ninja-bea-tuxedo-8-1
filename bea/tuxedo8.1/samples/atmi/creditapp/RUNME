@@ -1,0 +1,396 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1990, 1994 Novell, Inc.
+#	Copyright (c) 1994 Novell
+#	  All Rights Reserved
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+#	UNIX System Laboratories, Inc.
+#	The copyright notice above does not evidence any
+#	actual or intended publication of such source code.
+
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/RUNME	$Revision: 1.5 $"
+#
+
+tput clear
+
+		while true
+		do
+		echo "Enter remote shell RSH value (rsh,remsh,rmsh etc)\n"
+		echo "Enter <CR> for default rsh   ....\c"
+			read RSH
+			if [  -z "${RSH}" ] ; then
+				RSH=rsh    
+			fi
+				echo "\n\tRSH=${RSH} will be used.\n"
+			break
+		done
+
+
+
+
+		while true
+		do
+		echo "Enter remote copy RCP value (rcp etc)\n"
+		echo "Enter <CR> for default rcp ....\c"
+			read RCP
+			if [  -z "${RCP}" ] ; then
+				RCP=rcp
+			fi
+				echo "\n\tRCP=${RCP} will be used.\n"
+			break
+		done
+
+
+export RCP RSH
+
+while true
+do
+	#
+	# Print out the MENU and prompt for choice
+	#
+	echo
+	echo "\t 1) Initialize configuration files and makefiles."
+	echo "\t 2) Copy files to remote sites."
+	echo "\t 3) Build crdtapp clients and servers."
+	echo "\t 4) Create databases."
+	echo "\t 5) Generate binary tuxconfig and bdmconfig files."
+	echo "\t 6) Create Transaction Log file."
+	echo "\t 7) Boot the application."
+	echo "\t 8) Populate the database."
+	echo "\t 9) Shutdown the application."
+	echo "\t10) Cleanup IPC Resources, database files and log files."
+	echo "\t q) Quit."
+	echo "\nAction ? \c"
+	read CHOICE
+	echo
+	case "${CHOICE}" in
+		1)	sh SETUP.sh
+			;;
+		2)	NUM=2                         
+		  	for MACH in `cat BRANCHES `
+			do
+			if [ ! -r crdt${MACH}.dm2 -o ! -r crdtvar.dm1 ] ; then
+				echo "\nCannot propagate files without both crdtvar.dm1 \c"
+				echo "and crdt${MACH}.dm2"
+				continue
+			fi
+			echo "\n\t. crdt${MACH}.dm2\n" ; . crdt${MACH}.dm2
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+			if [ -z "${A2}" ] ; then
+				echo "\nCould not determine APPDIR for dm2"
+				continue
+			fi
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			if [ -z "${U2}" ] ; then
+				echo "\nCould not determine system name for dm2"
+				continue
+			fi
+			echo "\n\tCopying files to ${U2}\n"
+			if
+			${RCP} `make -f crdt_app${NUM}.mk list | sed 's;.*/;;'` \
+				CRDT${MACH}.mk2 crdt${MACH}.dm2 cleanup.sh listnr \
+				UBB${MACH} DOMC${MACH} ${U2}:${A2}
+			then
+				echo "\nCopy succeeded"
+			else
+				echo "Copy failed"
+				break
+			fi
+			    NUM=`expr  ${NUM} + 1`
+			done
+				echo "\n*** Remember to build clients/server, tlogs and \c"
+				echo "databases on all machines before booting ***\n"
+			;;
+		3)	for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+			if [ -r CRDT${MACH}.mk2 -a -r CRDTAPP.mk1 ] ; then
+
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+					echo "\n\tMaking CRDTAPP on domain ${U2}\n"
+					echo "\n\tmake -f CRDT${MACH}.mk2 | tee -a CRDTAPP.out\n"
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+				 make -f CRDT${MACH}.mk2 2>&1 | tee -a CRDTAPP.out"'
+
+			else
+				echo "\nInsufficient information for client/server build"
+				echo "Please choose activity 1.\n"
+				COMP_FLG=1
+				break
+			fi
+			done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+
+					echo "\n\tMaking CRDTAPP on domain `uname -n`\n"
+					echo "\n\tmake -f CRDTAPP.mk1 | tee -a CRDTAPP.out\n"
+					. crdtvar.dm1
+					make -f CRDTAPP.mk1 2>&1 | tee -a CRDTAPP.out
+					echo "\n*** Remember to build remote clients/servers \c"
+					echo "before booting ***\n"
+					fi
+			;;
+		4)	for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+			if [ -r crdt${MACH}.dm2  -a -r crdtvar.dm1 ] ; then
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+					echo "\n\tMaking crdtapp database on domain ${U2}\n"
+
+					echo "\n\t. crdt${MACH}.dm2\n\tcrbankdb\n"
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  crbankdb "' 
+
+
+
+			else
+				echo "\nInsufficient information for database creation"
+				echo "Please choose activity 1.\n"
+				COMP_FLG=1
+				break
+			fi
+			done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+					echo "\n\tMaking crdtapp database on domain `uname -n`\n"
+					echo "\n\t. crdtvar.dm1\n\tcrbankdb\n"
+					. crdtvar.dm1 ; crbankdb
+
+					echo "\n*** Remember to create remote databases \c"
+					echo "before booting ***\n"
+					fi
+
+			;;
+		5)	for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+
+			if [ -r UBBDOM1 -a -r crdtvar.dm1  -a -r UBB${MACH} -a -r crdt${MACH}.dm2 ] ; then
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+
+				echo "\n\t. crdt${MACH}.dm2\n\ttmloadcf -y UBB${MACH}\n"
+
+				echo "\n\tdmloadcf -y DOMC${MACH}\n"
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  tmloadcf -y UBB${MACH};  \
+					  dmloadcf -y DOMC${MACH}"'
+
+
+
+
+			else
+				echo "\nInsufficient information for tmloadcf"
+				echo "Please choose activity 1.\n"
+				COMP_FLG=1
+				break
+			fi
+			done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+				echo "\n\t. crdtvar.dm1\n\ttmloadcf -y UBBDOM1\n"
+				echo "\n\tdmloadcf -y DOMCONFG1\n"
+
+				. crdtvar.dm1 ; tmloadcf -y UBBDOM1;
+
+					dmloadcf -y DOMCONFG1
+				echo "\n*** Remember to start remote tlisten \c"
+				echo "before booting ***\n"
+					fi
+			;;
+		6)	for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+
+			if [ -r crdtvar.dm1 -a -r crdt${MACH}.dm2 ] ; then
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+
+				echo "\n\t. crdt${MACH}.dm2\n\tcrtlog -m\n"
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  crtlog2 -m"' 
+
+			else
+				echo "\nCrdtvar file not initialized."
+				echo "Please choose activity 1.\n"
+				COMP_FLG=1
+				break
+			fi
+                        done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+
+				echo "\n\t. crdtvar.dm1\n\tcrtlog -m\n"
+				. crdtvar.dm1 ; crtlog -m
+					fi
+			;;
+		7)	for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+
+			if [ -r crdtvar.dm1 -a -r crdt${MACH}.dm2 ] ; then
+
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+
+				echo "\n\t. crdt${MACH}.dm2\n\ttmboot -y\n"
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  tmboot -y"' 
+
+
+			else
+				echo "\nInsufficient information for tmboot."
+				echo "Please choose activity 1 or 5.\n"
+				COMP_FLG=1
+				break
+			fi
+
+                        done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+				echo "\n\t. crdtvar.dm1\n\ttmboot -y\n"
+					. crdtvar.dm1 ; tmboot -y
+					fi
+			;;
+
+		8)	list=""
+			for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+
+			if [ -r crdtvar.dm1 -a -r crdt${MACH}.dm2 ] ; then
+			       
+
+				echo "\n\t. crdt${MACH}.dm2\n\tpopulate\n"
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  populate"'  &
+
+					list="${list}$! "
+					
+#
+			else
+				echo "\nInsufficient information for database population."
+				echo "Please choose activity 1.\n"
+				COMP_FLG=1
+				break
+			fi
+			done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+				echo "\n\t. crdtvar.dm1\n\tpopulate\n"
+
+				. crdtvar.dm1 ; populate &
+
+					list="${list}$! "
+					
+					for i in ${list}
+					
+					do
+						
+						wait ${i}
+						
+					done
+#
+					fi
+
+			;;
+
+
+		9)	for MACH in `cat BRANCHES `
+			do
+			COMP_FLG=0
+
+			if [ -r crdtvar.dm1 -a -r crdt${MACH}.dm2 ] ; then
+
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+
+				echo "\n\t. crdt${MACH}.dm2\n\ttmshutdown -y\n"
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  tmshutdown -y"' 
+
+
+			else
+				echo "\nInsufficient information for tmshutdown."
+				echo "Please choose activity 1 or 5.\n"
+				COMP_FLG=1
+				break
+			fi
+
+                        done
+					if [ ${COMP_FLG} -eq 0 ] ; then
+				echo "\n\t. crdtvar.dm1\n\ttmshutdown -y\n"
+					. crdtvar.dm1 ; tmshutdown -y
+					fi
+			;;
+
+
+
+
+
+
+		10) echo "\nThis command will remove all of your allocated IPC"
+			echo "resources.  You should do this only after shutting"
+			echo "down your application."
+			echo
+			echo "Are you sure you want to remove your IPC \c"
+			echo "resources (<cr> == n) ? \c"
+			read YN
+			if [ "${YN}" = "y" ] ; then
+
+		   	for MACH in `cat BRANCHES `
+			do
+
+			U2="`grep '^UNAME=' crdt${MACH}.dm2 | line | sed 's/UNAME=//'`"
+			A2="`grep '^APPDIR=' crdt${MACH}.dm2 | line | sed 's/APPDIR=//'`"
+
+				echo "\n\tRemoving IPCS on  remote domains  ...Please Wait ...\n"
+
+				eval ${RSH} '${U2} " cd ${A2}; \
+					. ./crdt${MACH}.dm2 ; \
+					  sh cleanup.sh   "' 
+
+			done
+
+
+				echo "\n\tRemote domains  complete .\n"
+
+				echo "\n\tRemoving IPCS on local domain  ...Please Wait ...\n"
+				ipc=`ipcs -c | sed -n "/$LOGNAME[ ]*[^ ]*\$/s/\(.*\)0x.*/-\1/p"`
+				if [ -n "$ipc" ] ; then
+					echo "\tipcrm $ipc"
+					ipcrm $ipc
+				fi
+				echo "\trm -f crdtdl? TLOG* ULOG* UBB* DOM* crdtvar.dm?"
+				rm -f crdtdl? TLOG* ULOG* UBB* DOM* crdtvar.dm?
+				echo "\n\tLocal domain  complete .\n"
+			
+			fi
+			;;
+
+		q)	break ;;
+		*)	echo "Illegal action selection."
+			continue
+			;;
+	esac
+done

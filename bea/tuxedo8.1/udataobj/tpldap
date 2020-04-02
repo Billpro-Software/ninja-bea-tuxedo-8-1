@@ -1,0 +1,24 @@
+#ident	"tuxedo/cmdldap/tpldap	$Revision: 1.1 $"
+# Tuxedo LDAP Authentication Server Profile.
+#
+# created: Wed Jun 05 11:09:48 2002
+# version: 1.0
+#
+FILE_VERSION   1
+LDAP_VERSION   3
+BINDDN         cn=Admin
+UID            uid
+BASE           ou=people,ou=myrealm,dc=mydomain
+PASSWORD       password
+LDAP_ADDR      //localhost:7001
+EXPIRE         0
+SRCH_ORDER     LDAP
+LOCAL_FILE     tpusr
+WLS_DOMAIN     mydomain
+WLS_REALM      myrealm
+ADM_GROUP      Administrators
+OP_GROUP       Operators
+TUX_UID_KW     TUX_UID
+TUX_GID_KW     TUX_GID
+
+# end of file

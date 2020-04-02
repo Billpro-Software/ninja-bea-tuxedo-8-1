@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- Definition file for the pages in the diagnostics subsystem
+     of the WebLogic Server administration console.
+
+     Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved. -->
+  <netuix:book definitionLabel="DiagnosticsLogTable" localizationBundle="global"
+               markupName="book"
+               markupType="Book"
+               presentationClass="invisible"
+               title="logtable.title">
+    <netuix:content>
+          
+  <!-- Definition for the log table page -->
+  <netuix:book definitionLabel="DiagnosticsLogTableBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="logtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsLogTablePage" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticslogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="logtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/LogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the view log dispatcher page -->
+   <netuix:book definitionLabel="DiagnosticsViewLogDispatcherBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewLogDispatcherPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-content">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewLogDispatcherPortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewLogDispatcher.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the view domain log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewDomainLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewdomainlogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewDomainLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewdomainlogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewdomainlogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewDomainLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewDomainLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the view server log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewServerLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewserverlogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewServerLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewserverlogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewserverlogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewServerLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewServerLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the view web server log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewWebServerLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewwebserverlogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewWebServerLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewwebserverlogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewwebserverlogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewWebServerLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewWebServerLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+      <!-- Definition for the view events archive table page -->
+  <netuix:book definitionLabel="DiagnosticsViewEventsLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="vieweventslogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewEventsLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.vieweventslogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="vieweventslogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewEventsLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewEventsLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>  
+
+      <!-- Definition for the view metrics archive table page -->
+  <netuix:book definitionLabel="DiagnosticsViewMetricsLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewmetricslogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewMetricsLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.viewmetricslogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewmetricslogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewMetricsLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewMetricsLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>  
+
+      <!-- Definition for the view webapp log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewWebAppLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewwebapplogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewWebAppLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewwebapplogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewwebapplogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewWebAppLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewWebAppLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>  
+
+      <!-- Definition for the view connector log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewConnectorLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewconnectorlogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewConnectorLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewconnectorlogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewconnectorlogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewConnectorLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewConnectorLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>  
+
+      <!-- Definition for the view JMS log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewJmsLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewjmslogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewJmsLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewjmslogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewjmslogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewJmsLogTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewJmsLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the view JMS SAF log table page -->
+  <netuix:book definitionLabel="DiagnosticsViewJmsSAFLogTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="viewjmssaflogtable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsViewJmsSAFLogTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsviewjmssaflogtable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="viewjmssaflogtable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsViewJmsLogSAFTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ViewJmsSAFLogTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the domain log entry page -->
+  <netuix:book definitionLabel="DiagnosticsDomainLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="domainlogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsDomainLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsdomainlogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="domainlogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsDomainLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/DomainLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the server log entry page -->
+  <netuix:book definitionLabel="DiagnosticsServerLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="serverlogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsServerLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsserverlogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="serverlogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsServerLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/ServerLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the http access log entry page -->
+  <netuix:book definitionLabel="DiagnosticsWebServerLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="webserverlogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsWebServerLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticswebserverlogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="webserverlogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsWebServerLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/WebServerLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+      <!-- Definition for the events log entry page -->
+  <netuix:book definitionLabel="DiagnosticsEventsLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="eventslogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsEventsLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticseventslogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="eventslogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsEventsLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/EventsLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+      <!-- Definition for the metrics log entry page -->
+  <netuix:book definitionLabel="DiagnosticsMetricsLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="metricslogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsMetricsLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsmetricslogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="metricslogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsMetricsLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/MetricsLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+      <!-- Definition for the webapp log entry page -->
+  <netuix:book definitionLabel="DiagnosticsWebAppLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="webapplogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsWebAppLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticswebapplogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="webapplogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsWebAppLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/WebAppLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+      <!-- Definition for the jms log entry page -->
+  <netuix:book definitionLabel="DiagnosticsJmsLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jmslogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsJmsLogEntryPage" title="not.used" markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsjmslogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="jmslogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsJmsLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/JmsLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the jms SAF log entry page -->
+  <netuix:book definitionLabel="DiagnosticsJmsSAFLogEntryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jmssaflogentry.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsJmsSAFLogEntryPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticsjmssaflogentry.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="jmssaflogentry.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsJmsSAFLogEntryPortlet"
+                                          contentUri="/PortalConfig/diagnostics/JmsSAFLogEntry.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the request performance page -->
+      <netuix:book definitionLabel="RequestPerformanceBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="requestperformance.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="RequestPerformancePage" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="client.diagnostics.requestperformance.title;requestperf"/>
+            <netuix:meta name="breadcrumb" content="requestperformance.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="RequestPerformancePortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/RequestPerformance.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the module table page -->
+      <netuix:book definitionLabel="DiagnosticsModuleTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="moduletable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsModuleTablePage" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.moduletable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="moduletable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsModuleTablePortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/ModuleTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the module creation assistant page -->
+      <netuix:book definitionLabel="DiagnosticsCreateModuleBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.module.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCreateModule" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.createmodule.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsCreateModulePortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/CreateModule.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the module deletion assistant page -->
+      <netuix:book definitionLabel="DiagnosticsDeleteModuleBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.module.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsDeleteModule" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.deletemodule.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsDeleteModulePortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/DeleteModule.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+       <!-- Definition for the module book -->
+  <netuix:book definitionLabel="DiagnosticsModuleBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsModulePages" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsModuleTabsBook" title="DiagnosticsModuleTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsModuleconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsModuleConfigGeneralPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.moduleconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="configuration-page" content="WLDFSystemResource"/>             
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsModuleConfigGeneralPortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/ModuleConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the Metrics subtab -->
+                      <netuix:page definitionLabel="DiagnosticsModuleConfigMetricsPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.metrics.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.moduleconfigmetrics.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsModuleConfigMetricsPortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/ModuleConfigMetrics.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Watch Notification Goes Here -->
+                      <!-- Jason -->
+                      <netuix:page definitionLabel="DiagnosticsModuleConfigWatchnotificationsPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.watchenotifications.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.moduleconfigwatchnotification.title;diagnostics"/>
+                            <netuix:content>
+                              <netuix:flowLayout orientation="vertical" markupType="Layout" markupName="singleColumnLayout">
+                                <netuix:placeholder flow="vertical" markupType="Placeholder" markupName="singleColumn_columnOne">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ModuleConfigWatchnotificationsPortlet"
+                                                          contentUri="/PortalConfig/diagnostics/ModuleConfigWatchnotifications.portlet"/>
+                                </netuix:placeholder>
+                                <netuix:placeholder flow="vertical" markupType="Placeholder" markupName="singleColumn_columnOne">
+                                  <netuix:book definitionLabel="DiagnosticsModuleConfigWatchnotificationsBook"
+                                               markupName="book"
+                                               markupType="Book"
+                                               title="NotificationsBook">
+
+                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                    <netuix:content>
+
+                                    <!-- Definition for the watches subtab -->
+                                    <netuix:page definitionLabel="DiagnosticsModuleConfigWatchPage" markupName="page"
+                                                   markupType="Page"
+                                                   presentationClass="page-content"
+                                                   title="tab.diagnostics.watches.label">
+                                        <netuix:meta name="helpid"
+                                                     content="Diagnostics.diagnostics.moduleconfigwatch.title;diagnostics"/>
+                                        <netuix:content>
+                                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+
+                                              <netuix:portletInstance instanceLabel="DiagnosticsModuleConfigWatchPortlet" markupType="Portlet"
+                                                                      contentUri="/PortalConfig/diagnostics/ModuleConfigWatch.portlet"/>
+
+                                            </netuix:placeholder>
+                                          </netuix:layout>
+                                        </netuix:content>
+                                      </netuix:page>
+
+                                      <!-- Definition for the notifications subtab -->
+                                    <netuix:page definitionLabel="DiagnosticsModuleConfigNotificationPage" markupName="page"
+                                                   markupType="Page"
+                                                   presentationClass="page-content"
+                                                   title="tab.diagnostics.notifications.label">
+                                        <netuix:meta name="helpid"
+                                                     content="Diagnostics.diagnostics.moduleconfignotification.title;diagnostics"/>
+                                        <netuix:content>
+                                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                              <netuix:portletInstance instanceLabel="DiagnosticsModuleConfigNotificationPortlet" markupType="Portlet"
+                                                                      contentUri="/PortalConfig/diagnostics/ModuleConfigNotification.portlet"/>
+                                            </netuix:placeholder>
+                                          </netuix:layout>
+                                        </netuix:content>
+                                      </netuix:page>
+
+                                    </netuix:content>
+                                  </netuix:book>
+
+                                </netuix:placeholder>
+                              </netuix:flowLayout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the Instrumentation subtab -->
+                      <netuix:page definitionLabel="DiagnosticsModuleConfigInstrumentationPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.instrumentation.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.moduleconfiginstrumentation.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsModuleConfigInstrumentationPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/module/ModuleConfigInstrumentation.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+
+                      <!-- Definition for the targets tab -->
+                  <netuix:book definitionLabel="DiagnosticsModuletargetsTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.targets.label">
+                        <netuix:content>
+                          <netuix:page definitionLabel="DiagnosticsModuleTargetsPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.targets.label">
+                            <netuix:meta name="helpid" content="Diagnostics.diagnostics.moduletargets.title;diagnostics"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsModuleTargetsPortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/ModuleTargets.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the diagnostic monitor creation assistant page -->
+  <netuix:book definitionLabel="DiagnosticsCreateMonitorBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.monitor.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCreateMonitor" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.createmonitor.title;diagnostics"/>
+
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsCreateMonitorPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/module/DiagnosticsCreateMonitor.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the custom diagnostic monitor creation assistant page -->
+  <netuix:book definitionLabel="DiagnosticsCreateCustomMonitorBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.add.custommonitor.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCreateCustomMonitor" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.createcustommonitor.title;diagnostics"/>
+
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsCreateCustomMonitorPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/module/CreateCustomMonitor.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the diagnostic monitor remove assistant page -->
+  <netuix:book definitionLabel="DiagnosticsRemoveMonitorBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.remove.monitor.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsRemoveMonitor" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.removemonitor.title;diagnostics"/>
+
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsRemoveMonitorPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/module/RemoveMonitor.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the Instrumentation monitor configuration page -->
+  <netuix:book definitionLabel="DiagnosticsMonitorConfigBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="DiagnosticsMonitorConfigPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.module.diagnosticsmonitorconfig.title;diagnostics"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>  
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="DiagnosticsMonitorConfigPageBook"
+                               title="DiagnosticsMonitorConfigBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="MonitorConfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+
+                              <netuix:portletInstance instanceLabel="DiagnosticsMonitorConfigPortlet" markupType="Portlet"
+                                                      contentUri="/PortalConfig/diagnostics/module/DiagnosticsMonitorConfig.portlet"/>
+                            
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+
+      <!-- Definition for the metric creation assistant page -->
+  <netuix:book definitionLabel="DiagnosticsCreateMetricBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.metric.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCreateMetric" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.createmetric.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsCreateMetricPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/CreateMetric.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the metric deletion assistant page -->
+  <netuix:book definitionLabel="DiagnosticsDeleteMetricBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.metric.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsDeleteMetric" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.deletemetric.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsDeleteMetricPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/DeleteMetric.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- Definition for the Metric configuration page -->
+  <netuix:book definitionLabel="ConfigMetricBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+
+        <netuix:content>
+          <netuix:page definitionLabel="ConfigMetricPage" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true">
+
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="ConfigMetricTabsBook" title="ConfigMetricTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="ConfigMetricConfigTabPage" markupName="book" markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="ConfigMetricConfigGenerlPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+
+                            <netuix:meta name="helpid" content="Diagnostics.diagnostics.configmetric.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ConfigMetricPortlet"
+                                                          contentUri="/PortalConfig/diagnostics/ConfigMetric.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the Instances subtab -->
+                      <netuix:page definitionLabel="ConfigMetricConfigInstancesPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.harvestedinstances.label">
+
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.configmetricinstances.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ConfigMetricInstancesPortlet"
+                                                          contentUri="/PortalConfig/diagnostics/ConfigMetricInstances.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- Definition for the watch creation assistant page -->
+  <netuix:book definitionLabel="DiagnosticsCreateWatchBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.watch.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCreateWatch" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.createwatch.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsCreateWatchPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/CreateWatch.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the watch deletion assistant page -->
+  <netuix:book definitionLabel="DiagnosticsDeleteWatchBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.watch.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsDeleteWatch" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.deletewatch.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsDeleteWatchPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/DeleteWatch.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Jason: definition for watch config -->
+  <netuix:book definitionLabel="DiagnosticsWatchBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsWatchPages" title="not.used" markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsWatchTabsBook" title="DiagnosticsWatchTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsWatchconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsWatchConfigGeneralPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.watchconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsWatchConfigGeneralPortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/WatchConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the Rule Expressions subtab -->
+                      <netuix:page definitionLabel="DiagnosticsWatchConfigRulePage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.ruleexpressions.label">
+                            <netuix:meta name="helpid" content="Diagnostics.diagnostics.editwatchrule.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsWatchConfigRulePortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/WatchConfigRule.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <netuix:page definitionLabel="DiagnosticsWatchConfigAlarmPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.alarms.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.watchconfigalarm.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsWatchConfigAlarmPortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/WatchConfigAlarm.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <netuix:page definitionLabel="DiagnosticsWatchConfigNotificationsPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.notifications.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.watchconfignotifications.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsWatchConfigNotificationsPortlet" markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/WatchConfigNotifications.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the notification creation assistant page -->
+  <netuix:book definitionLabel="DiagnosticsCreateNotificationBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.notification.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCreateNotification" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.createnotification.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsCreateNotificationPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/CreateNotification.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the notification deletion assistant page -->
+  <netuix:book definitionLabel="DiagnosticsDeleteNotificationBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.notification.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsDeleteNotification" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.deletenotification.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance instanceLabel="DiagnosticsDeleteNotificationPortlet" markupType="Portlet"
+                                          contentUri="/PortalConfig/diagnostics/DeleteNotification.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="DiagnosticsSmtpNotificationBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsSmtpNotificationPages" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsSmtpNotificationTabsBook"
+                               title="DiagnosticsSmtpNotificationTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsSmtpNotificationconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsSmtpNotificationConfigGeneralPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.notificationconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsSmtpNotificationConfigGeneralPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/NotificationConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the SMTP properties subtab -->
+                      <netuix:page definitionLabel="DiagnosticsSmtpNotificationConfigPropertiesPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.smtpproperties.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.smtpnotificationconfigproperties.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsSmtpNotificationConfigPropertiesPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/SmtpNotificationConfigProperties.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="DiagnosticsJmsNotificationBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsJmsNotificationPages" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsJmsNotificationTabsBook"
+                               title="DiagnosticsJmsNotificationTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsJmsNotificationconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsJmsNotificationConfigGeneralPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.notificationconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsJmsNotificationConfigGeneralPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/NotificationConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the JMS properties subtab -->
+                      <netuix:page definitionLabel="DiagnosticsJmsNotificationConfigPropertiesPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.jmsproperties.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.jmsnotificationconfigproperties.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsJmsNotificationConfigPropertiesPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/JmsNotificationConfigProperties.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="DiagnosticsImageNotificationBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsImageNotificationPages" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsImageNotificationTabsBook"
+                               title="DiagnosticsImageNotificationTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsImageNotificationconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsImageNotificationConfigGeneralPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.notificationconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsImageNotificationConfigGeneralPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/NotificationConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the IMAGE properties subtab -->
+                      <netuix:page definitionLabel="DiagnosticsImageNotificationConfigPropertiesPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.imageproperties.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.imagenotificationconfigproperties.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsImageNotificationConfigPropertiesPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/ImageNotificationConfigProperties.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="DiagnosticsJmxNotificationBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsJmxNotificationPages" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsJmxNotificationTabsBook"
+                               title="DiagnosticsJmxNotificationTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsJmxNotificationconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsJmxNotificationConfigGeneralPage" markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.notificationconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsJmxNotificationConfigGeneralPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/NotificationConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the Jmx properties subtab -->
+                      <netuix:page definitionLabel="DiagnosticsJmxNotificationConfigPropertiesPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.jmxproperties.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.jmxnotificationconfigproperties.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsJmxNotificationConfigPropertiesPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/JmxNotificationConfigProperties.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="DiagnosticsSnmpNotificationBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsSnmpNotificationPages" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book definitionLabel="DiagnosticsSnmpNotificationTabsBook"
+                               title="DiagnosticsSnmpNotificationTabsBook"
+                               markupName="book"
+                               markupType="Book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                  <!-- Definition for the config tab -->
+                  <netuix:book definitionLabel="DiagnosticsSnmpNotificationconfigTabPage" markupName="book"
+                                   markupType="Book"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Definition for the general subtab -->
+                      <netuix:page definitionLabel="DiagnosticsSnmpNotificationConfigGeneralPage"
+                                       markupName="page"
+                                       markupType="Page"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.notificationconfiggeneral.title;diagnostics"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance instanceLabel="DiagnosticsSnmpNotificationConfigGeneralPortlet"
+                                                          markupType="Portlet"
+                                                          contentUri="/PortalConfig/diagnostics/NotificationConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the DiagnosticsNotificationConfigDispatcher page -->
+  <netuix:book definitionLabel="DiagnosticsNotificationConfigDispatcher"
+                   title="diagnostics.notifications.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="DiagnosticsNotificationConfigDispatcherPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="DiagnosticsNotificationConfigDispatcherPortlet"
+                                          contentUri="/PortalConfig/diagnostics/DiagnosticsNotificationConfigDispatcher.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the context table page -->
+  <netuix:book definitionLabel="DiagnosticsContextTableBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="diagnosticcontexttable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsContextTablePage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.diagnosticscontexttable.title;diagnostics"/>
+            <netuix:meta name="breadcrumb" content="contexttable.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsContextTablePortlet"
+                                          contentUri="/PortalConfig/diagnostics/ContextTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the enable context page -->
+  <netuix:book definitionLabel="DiagnosticsEnableContextBook"
+                   title="diagnosticenablecontext.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsEnableContextPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.enablecontext.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsEnableContextPortlet"
+                                          contentUri="/PortalConfig/diagnostics/EnableContext.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the disable context page -->
+  <netuix:book definitionLabel="DiagnosticsDisableContextBook"
+                   title="diagnosticdisablecontext.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsDisableContextPage" title="not.used"
+                       markupName="page"
+                       markupType="Page"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Diagnostics.diagnostics.enablecontext.title;diagnostics"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DiagnosticsDisableContextPortlet"
+                                          contentUri="/PortalConfig/diagnostics/DisableContext.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

@@ -1,0 +1,101 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1995 Novell, Inc.
+#	All rights reserved
+#
+#	THIS IS UNPUBLISHED PROPRIETARY
+#	SOURCE CODE OF Unix System Laboratories, Inc.
+#	The copyright notice above does not
+#	evidence any actual or intended
+#	publication of such source code.
+#
+#ident	"@(#) samples/atmi/rpcsimp/rpcsimp.nt	$Revision: 1.4 $"
+CC=cl
+INCDIR=$(TUXDIR)\include
+CFLAGS=-DWIN32 -MD -W3 -nologo -I. -I$(INCDIR)
+TIDL=$(TUXDIR)\bin\tidl.exe
+LIBES=$(TUXDIR)\lib\libtrpc.lib
+all:	client.exe server.exe
+
+# TUXEDO client
+client.exe:	simp.h simp_cstub.obj client.c $(LIBES)
+	(set TUXDIR=$(TUXDIR)) & (set CC=$(CC)) & (set CFLAGS=$(CFLAGS)) & \
+		$(TUXDIR)\bin\buildclient -oclient \
+		-fclient.c -fsimp_cstub.obj -f$(LIBES) 
+
+
+# TUXEDO server
+server.exe:	simp.h simp_sstub.obj $(LIBES)
+	(set TUXDIR=$(TUXDIR)) & (set CC=$(CC)) & (set CFLAGS=$(CFLAGS)) & \
+		$(TUXDIR)\bin\buildserver -oserver \
+		-s changecasev1_0 -fserver.c -fsimp_sstub.obj -f$(LIBES)
+
+simp_cstub.obj simp_sstub.obj simp.h:	simp.idl
+	$(TIDL) -cc_cmd "$(CC) $(CFLAGS) -c" simp.idl
+
+#
+# TUXEDO Gateway example
+# Uses TUXEDO client above plus a gateway server and a DCE server
+#
+
+#
+# DEC DCE for NT(intel)  
+# DCEDIR is the DCE installation directory; change as needed
+# DCEDIR=$(DCELOC)
+# Use C calling convention 
+# IDLOPTS=-call_std cdecl -v
+# DCECFLAGS=-DWIN32 -D_REENTRANT -D_X86_=1 -DM_I86 -W3 -I. -I$(DCEDIR)\dce\include -I$(TUXDIR)\include
+# DCELIBS=$(DCEDIR)\DCE\LIB\libdce.lib $(DCEDIR)\DCE\LIB\pthreads.lib 
+
+#
+#  IDL compiler
+#
+IDL=idl
+
+ALL2=client.exe simpgw.exe dceserver.exe
+all2: $(ALL2)
+
+# TUXEDO-to-DCE Gateway
+simpdce.idl:	simp.idl
+!if exist(simpdce.idl)
+	del simpdce.idl
+!endif
+	copy simp.idl simpdce.idl
+
+gwinit.c:	dceserver.c
+!if exist(gwinit.c)
+	del gwinit.c
+!endif
+	copy dceserver.c gwinit.c
+
+gwinit.obj:	gwinit.c
+	$(CC) -c $(DCECFLAGS) -DTPSVRINIT gwinit.c
+
+dceepv.obj:	dceepv.c simpdce.h
+	$(CC) -c $(DCECFLAGS) dceepv.c
+
+dcebind.obj:	dcebind.c simpdce.h
+	$(CC) -c $(DCECFLAGS) dcebind.c
+
+simpgw.exe: simpdce.idl gwinit.obj dcebind.obj dceepv.obj
+	blds_dce -n DEC_DCE -o simpgw -f gwinit.obj -f dcebind.obj -f dceepv.obj simpdce.idl
+
+# DCE server
+simpdce_sstub.obj simpdce.h: simpdce.idl
+	$(IDL) $(IDLOPTS) -client none -keep object -sstub simpdce_sstub simpdce.idl
+
+dceserver.obj:	dceserver.c simpdce.h
+	$(CC) -c $(DCECFLAGS) dceserver.c
+
+dcemgr.obj:	dcemgr.c simpdce.h
+	$(CC) -c $(DCECFLAGS) dcemgr.c
+
+dceserver.exe:	simpdce_sstub.obj dceserver.obj dcemgr.obj
+	$(CC) dceserver.obj simpdce_sstub.obj dcemgr.obj -o dceserver $(DCELIBS)
+
+# Cleanup
+clean::
+	del /F /Q *.obj server.exe $(ALL2) ULOG.* $(TUXCONFIG) 
+	del /F /Q stderr stdout *stub.c *.h simpdce.idl gwinit.c 
+	del /F /Q *.map *.pdb *.ilk *.pch
+
+clobber: clean

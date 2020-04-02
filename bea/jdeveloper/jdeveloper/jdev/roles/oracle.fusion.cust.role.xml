@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+
+<!--
+  This is the Application customization role. Configures JDeveloper for
+  customizing applications using Oracle MDS customizations.
+-->
+<role xmlns="http://xmlns.oracle.com/ide/roles"
+      id="oracle.fusion.cust.role"
+      rsbundle="oracle.mds.dt.resource.CustRes"
+      version="1.0">
+
+  <!-- bug 5617201 - Resource keys not yet supported for roles!
+  <name rskey="CUST_ROLE_NAME"/>
+  <description rskey="CUST_ROLE_DESCR"/>
+  -->
+
+  <name>Customization Developer</name>
+  <description>Configures the product for customizing metadata.</description>
+
+  <disabled-extensions>
+    <!--Disable extensions for features not suitable during customizations mode -->
+    <!--extension refid="oracle.ide.audit"/-->
+  </disabled-extensions>
+
+  <hooks xmlns="http://jcp.org/jsr/198/extension-manifest"
+         xmlns:c="http://xmlns.oracle.com/ide/customization">
+    <jdeveloper-hook xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+      <system-properties>
+        <!-- The system property is set only in this role to not enable
+         customizations in the default role -->
+        <property name="oracle.mds.dt.cust.enabled" value="true"/>
+
+        <!-- This system property enables mdsrt to include userdata
+         for customization related info in the merged dom -->
+        <property name="oracle.mds.include.customizationlayer.info" value="true"/>
+
+        <!-- This property will bypass the restrict customizability rules.
+         We decided not to enforce those in JDev -->
+        <property name="oracle.mds.bypassCustRestrict" value="true"/>
+
+         <!-- This property will ensures to allow mutations on the node
+         that references nodes with brittle local references -->
+        <property name="oracle.mds.brittle.xpath" value="false"/>
+
+        <!-- This property will enable local unique attribute validation,
+         the fix bug #(8407093) -->
+        <property name="oracle.mds.validatelocaluniqueattr" value="true"/>
+
+     </system-properties>
+    </jdeveloper-hook>
+
+    <c:menu-customizations>
+      <!--Hide menus not suitable during customizations mode -->
+
+      <!-- bug 5584735 - Hiding Refactor menu does not work yet -->
+      <!--c:hide idref="Refactor"/-->
+
+       <!-- These are handled in the code since it supports disabling
+      the actions completely(i.e, keyboard shortcuts and toolbar as well) -->
+      <!-- Hide find/replace in files and find usage  -->
+      <!--c:action idref="Ide.SEARCH_SOURCE_PATH_CMD_ID">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="Ide.REPLACE_SOURCE_PATH_CMD_ID">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="FIND_USAGES">
+        <c:hidden>true</c:hidden>
+      </c:action-->
+    <c:action idref="XmlContext.surroundNode">
+      <c:hidden>true</c:hidden>
+    </c:action>
+    <c:action idref="Refactor">
+      <c:hidden>true</c:hidden>
+    </c:action>
+    <!-- 6815791 -->
+    <c:action idref="oracle.jdevimpl.webapp.common.addins#bind-or-navigate">
+      <c:hidden>true</c:hidden>
+    </c:action>
+
+      <!-- Do not allow the ADF page flow design-time to create any new artifacts or
+           set any id attributes when in the customization role. -->
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ConvertFromBoundedTaskFlowWithPageFragmentsToUnboundedTaskFlow">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ConvertFromBoundedTaskFlowWithPagesToUnboundedTaskFlow">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ConvertToTaskFlowDefinition">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ConvertToTaskFlowTemplate">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ConvertToTaskFlowWithPageFragments">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ConvertToTaskFlowWithPages">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.CreateReferentPage">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.CreateReferentPageFragment">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.CreateReferentPageOrPageFragment">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.CreateReferentTaskFlowDefinition">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.CreateTaskFlowFromFacesConfig">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.adfdt.controller.adfc.source.controller.ExtractTaskFlow">
+        <c:hidden>true</c:hidden>
+      </c:action>
+
+      <!-- Do not allow the ADF menu design-time to create any new artifacts when in the
+           customization role. -->
+      <c:action idref="ADFMenuAddin.CREATE_MENU_ADDIN_CMD_ID">
+        <c:hidden>true</c:hidden>
+      </c:action>
+
+      <!-- BUG 7649551 - APPLICATIONS NEW, RENAME, AND DELETE MENU ITEMS ENABLED IN CUSTOMIZATION ROLE -->
+      <c:action idref="oracle.jdeveloper.cmd.NewApplicationCommand">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.jdevimpl.navigator.ApplicationNavigatorAddin.ERASE_APPLICATION">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.jdevimpl.navigator.ApplicationNavigatorAddin.RENAME_APPLICATION">
+        <c:hidden>true</c:hidden>
+      </c:action>
+
+      <!-- Bug fix 8833821: Taglib.tld context options that create new files
+       should be disabled -->	  
+      <c:action idref="oracle.jdevimpl.jsp.wizards.taglib.TagRunner.ADDTAGFILE">
+        <c:hidden>true</c:hidden>
+      </c:action>
+      <c:action idref="oracle.jdevimpl.jsp.wizards.taglib.TagRunner.ADDTAG">
+        <c:hidden>true</c:hidden>
+      </c:action>
+
+      <!--  Don't allow the JUnit actions to create new artifacts. -->
+      <c:action idref="JUnitAddin.ADD_METHOD_TEST_CASE_CMD">
+        <c:hidden>true</c:hidden>
+      </c:action>
+    </c:menu-customizations>
+
+     <!-- this makes the resource bundle framework write to the override bundle -->
+     <!-- BUG 8223648 - Customization role should allow writes to override bundle.-->
+     <c:resourcebundle-shaping-preferences>
+     <c:readOnly>false</c:readOnly>
+     <c:writeToOverride>true</c:writeToOverride>
+    </c:resourcebundle-shaping-preferences>
+
+    <!-- Do not allow the ADF page flow design-time to create any new artifacts or
+         set any id attributes when in the customization role. -->
+    <c:adf-page-flow-gestures>
+      <allow-new-page>false</allow-new-page>
+      <allow-new-task-flow>false</allow-new-task-flow>
+      <allow-new-page-definition>false</allow-new-page-definition>
+      <allow-new-java-class>false</allow-new-java-class>
+      <use_index_reference_search>false</use_index_reference_search>
+    </c:adf-page-flow-gestures>
+
+    <c:adfmdt-preferences>
+       <allowDataControlCreate>false</allowDataControlCreate>
+    </c:adfmdt-preferences>
+  </hooks>
+
+</role>

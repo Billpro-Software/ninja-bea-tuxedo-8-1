@@ -1,0 +1,58 @@
+#
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE
+# OF BEA Systems, Inc.
+# The copyright notice above does not evidence
+# any actual or intended publication of such
+# source code
+#
+#
+#ident	"@(#) samples/atmi/CSIMPAPP/README.nt	$Revision: 1.5 $"
+#
+
+This is a brief description of the TUXEDO COBOL Simple Application.
+A more comprehensive look can be found in the TUXEDO ETP System,
+Release 6.1, Transaction Monitor COBOL Guide.
+
+The Simple Application consists of a single server offering a single
+service.  The client is run with a single argument, which is a string
+to convert to upper case.  The client calls the service, which returns
+the converted string.  The client then prints that string.
+
+Example: CSIMPCL "Hello World"
+
+ Returned string is: HELLO WORLD
+
+This application runs a single server on a single machine.  It is
+designed so that it can be up and running within minutes after
+installing the TUXEDO COBOL software.
+
+You should probably copy the CSIMPAPP files to your own directory,
+since the configuration file must be edited and you might also
+want to experiment with the client and server code.
+
+The sample configuration file (UBBCSIMPLE), the server environmnent file
+(envfile.nt) and the environment setting script (setenv.cmd) must be edited to
+replace the bracketed items with values appropriate to your installation.
+
+Your TUXDIR and TUXCONFIG environment variables must match the
+values in the configuration file.  
+
+Once these files are correct the sample application can be run
+by executing the command "runsample." This command is a script that
+will build the server and client, create the binary configuration file, boot
+the application, run the client, and then remove everything. Once
+this script has been run successfully, it may be instructive to
+run each command individually outside of the script.
+
+Suggested next steps:
+	Run more than one copy of the "CSIMPSERV" server, all operating
+	from a single queue (Hint: See the RQADDR parameter in ubbconfig(5)).
+
+	Configure a networked application, where the client and server
+	run on different machines.
+
+	Try the administrative command, "tmadmin", to display and
+	modify the parameters of the running application.  (Try
+	suspending the service, and then running the client.)

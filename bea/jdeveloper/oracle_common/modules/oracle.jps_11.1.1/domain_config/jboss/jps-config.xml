@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<jpsConfig xmlns="http://xmlns.oracle.com/oracleas/schema/11/jps-config-11_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/oracleas/schema/11/jps-config-11_1.xsd" schema-major-version="11" schema-minor-version="1">
+    <!-- This property is for jaas mode. Possible values are "off", "doas" and "doasprivileged" -->
+    <property name="oracle.security.jps.jaas.mode" value="off"/>
+
+    <propertySets>
+        <!-- SAML Trusted Issuer -->
+        <propertySet name="saml.trusted.issuers.1">
+            <property name="name" value="www.oracle.com"/>
+        </propertySet>
+    </propertySets>
+
+    <serviceProviders>
+        <serviceProvider type="CREDENTIAL_STORE" name="credstoressp" class="oracle.security.jps.internal.credstore.ssp.SspCredentialStoreProvider">
+            <description>SecretStore-based CSF Provider</description>
+        </serviceProvider>
+
+        <serviceProvider type="IDENTITY_STORE" name="idstore.ldap.provider" class="oracle.security.jps.internal.idstore.ldap.LdapIdentityStoreProvider">
+            <description>LDAP-based IdentityStore Provider</description>
+        </serviceProvider>
+
+        <serviceProvider type="IDENTITY_STORE" name="idstore.xml.provider" class="oracle.security.jps.internal.idstore.xml.XmlIdentityStoreProvider">
+            <description>XML-based IdentityStore Provider</description>
+        </serviceProvider>
+
+        <serviceProvider type="POLICY_STORE" name="policystore.xml.provider" class="oracle.security.jps.internal.policystore.xml.XmlPolicyStoreProvider">
+            <description>XML-based PolicyStore Provider</description>
+        </serviceProvider>
+
+        <serviceProvider type="LOGIN" name="jaas.login.provider" class="oracle.security.jps.internal.login.jaas.JaasLoginServiceProvider">
+            <description>This is Jaas Login Service Provider and is used to configure login module service instances</description>
+        </serviceProvider>
+
+        <serviceProvider type="KEY_STORE" name="keystore.provider" class="oracle.security.jps.internal.keystore.KeyStoreProvider">
+            <description>PKI Based Keystore Provider</description>
+            <property name="provider.property.name" value="owsm"/>
+        </serviceProvider>
+
+        <serviceProvider type="AUDIT" name="audit.provider" class="oracle.security.jps.internal.audit.AuditProvider">
+            <description>Audit Service</description>
+        </serviceProvider>
+
+        <serviceProvider type="PDP" name="pdp.service.provider" class="oracle.security.jps.az.internal.runtime.provider.PDPServiceProvider">
+            <description>Runtime PDP Service Provider</description>
+        </serviceProvider>
+
+    </serviceProviders>
+
+    <serviceInstances>
+        <!-- JPS Credential Store Service Instance -->
+        <serviceInstance name="credstore" provider="credstoressp" location="./">
+            <description>File Based Credential Store Service Instance</description>
+        </serviceInstance>
+
+        <serviceInstance location="./bootstrap" provider="credstoressp" name="bootstrap.credstore">
+            <property value="./bootstrap" name="location"/>
+        </serviceInstance>
+
+        <!-- JPS XML Identity Store Service Instance -->
+        <serviceInstance name="idstore.xml" provider="idstore.xml.provider" location="./system-jazn-data.xml">
+            <description>File Based Identity Store Service Instance</description>
+            <property name="subscriber.name" value="jazn.com"/>
+        </serviceInstance>
+
+        <!-- JPS XML Policy Store Service Instance -->
+        <serviceInstance name="policystore.xml" provider="policystore.xml.provider" location="./system-jazn-data.xml">
+            <description>File Based Policy Store Service Instance</description>
+        </serviceInstance>
+
+        <!-- KeyStore Service Instance -->
+        <serviceInstance name="keystore" provider="keystore.provider" location="./default-keystore.jks">
+            <description>Default JPS Keystore Service</description>
+            <property name="keystore.provider.type" value="file"/>
+            <property name="keystore.file.path" value="./"/>
+            <property name="keystore.type" value="JKS"/>
+            <property name="keystore.csf.map" value="oracle.wsm.security"/>
+            <property name="keystore.pass.csf.key" value="keystore-csf-key"/>
+            <property name="keystore.sig.csf.key" value="sign-csf-key"/>
+            <property name="keystore.enc.csf.key" value="enc-csf-key"/> 	
+        </serviceInstance>
+
+        <!-- JPS Audit Service Instance-->
+        <serviceInstance name="audit" provider="audit.provider">
+            <property name="audit.filterPreset" value="None"/>
+	    <property name="audit.maxDirSize" value ="0"/>
+	    <property name="audit.maxFileSize" value ="104857600"/>
+            <property name="audit.loader.jndi" value="jdbc/AuditDB"/>
+            <property name="audit.loader.interval" value="15" />
+            <property name="audit.loader.repositoryType" value="File" />
+        </serviceInstance>
+
+        <!-- JPS SAML Login Module -->
+        <serviceInstance name="saml.loginmodule" provider="jaas.login.provider">
+            <description>SAML Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.saml.JpsSAMLLoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+            <propertySetRef ref="saml.trusted.issuers.1"/>
+        </serviceInstance>
+
+        <!-- JPS SAML2 Login Module -->
+        <serviceInstance name="saml2.loginmodule" provider="jaas.login.provider">
+            <description>SAML2 Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.saml.JpsSAML2LoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+            <propertySetRef ref="saml.trusted.issuers.1"/>
+        </serviceInstance>
+
+        <!-- Kerberos Login Module Instance. -->
+        <serviceInstance name="krb5.loginmodule" provider="jaas.login.provider">
+            <description>Kerberos Login Module</description>
+            <property name="loginModuleClassName" value="com.sun.security.auth.module.Krb5LoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+            <property name="storeKey" value="true"/>
+            <property name="useKeyTab" value="true"/>
+            <property name="doNotPrompt" value="true"/>
+            <property name="keyTab" value="./krb5.keytab"/>
+            <property name="principal" value="HOST/localhost@EXAMPLE.COM"/>
+        </serviceInstance>
+
+        <!-- JPS Digest Authenticator Login Module Instance -->
+        <serviceInstance name="digest.authenticator.loginmodule" provider="jaas.login.provider">
+            <description>Digest Authenticator Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.digest.DigestLoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+        </serviceInstance>
+
+        <!-- JPS X509 Certificate Authenticator Login Module Instance -->
+        <serviceInstance name="certificate.authenticator.loginmodule" provider="jaas.login.provider">
+            <description>X509 Certificate Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.x509.X509LoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+        </serviceInstance>
+
+        <!-- WSS Username token digest login module -->
+        <serviceInstance name="wss.digest.loginmodule" provider="jaas.login.provider">
+            <description>WSS Digest Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.digest.WSSDigestLoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+        </serviceInstance>
+
+        <!-- User Authentication Login Module -->
+        <serviceInstance name="user.authentication.loginmodule" provider="jaas.login.provider">
+            <description>User Authentication Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.authentication.JpsUserAuthenticationLoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+        </serviceInstance>
+
+        <!-- User Assertion Login Module -->
+        <serviceInstance name="user.assertion.loginmodule" provider="jaas.login.provider">
+            <description>User Assertion Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.assertion.JpsUserAssertionLoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+        </serviceInstance>
+
+        <!-- User Idstore Login Module -->
+        <serviceInstance name="idstore.lm" provider="jaas.login.provider">
+            <description>Identity Store Login Module</description>
+            <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.idstore.IdStoreLoginModule"/>
+            <property name="jaas.login.controlFlag" value="REQUIRED"/>
+        </serviceInstance>
+
+        <!-- This is the runtime PDP service -->
+        <serviceInstance name="pdp.service" provider="pdp.service.provider">
+            <description>Runtime PDP service instance</description>
+        </serviceInstance>
+
+    </serviceInstances>
+
+    <jpsContexts default="default">
+        <!-- This is the default JPS context. All the mendatory services and Login Modules must be configured in this default context -->
+        <jpsContext name="default">
+            <serviceInstanceRef ref="credstore"/>
+            <serviceInstanceRef ref="keystore"/> 
+            <serviceInstanceRef ref="policystore.xml"/>
+            <serviceInstanceRef ref="audit"/>
+            <serviceInstanceRef ref="idstore.xml"/>
+            <serviceInstanceRef ref="idstore.lm" />
+            <serviceInstanceRef ref="pdp.service"/>
+        </jpsContext>
+
+        <jpsContext name="bootstrap_credstore_context">
+            <serviceInstanceRef ref="bootstrap.credstore"/>
+        </jpsContext>
+
+        <!-- Digest Authenticator Login Module -->
+        <jpsContext name="oracle.security.jps.fmw.authenticator.DigestAuthenticator">
+            <serviceInstanceRef ref="digest.authenticator.loginmodule"/>
+        </jpsContext>
+
+        <!-- Certificate Authenticator Login Module -->
+        <jpsContext name="X509CertificateAuthentication">
+            <serviceInstanceRef ref="certificate.authenticator.loginmodule"/>
+        </jpsContext>
+
+        <!-- SAML Login Module Context -->
+        <jpsContext name="SAML">
+            <serviceInstanceRef ref="saml.loginmodule"/>
+        </jpsContext>
+
+    </jpsContexts>
+</jpsConfig>

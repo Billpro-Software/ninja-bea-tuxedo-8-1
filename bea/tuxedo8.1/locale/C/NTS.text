@@ -1,0 +1,218 @@
+$ --------------------------------------------------------------------
+$
+$ Copyright (c) 1999 BEA Systems, Inc.
+$ All rights reserved
+$
+$ THIS IS UNPUBLISHED PROPRIETARY
+$ SOURCE CODE OF BEA Systems, Inc.
+$ The copyright notice above does not
+$ evidence any actual or intended
+$ publication of such source code.
+$
+$ #ident "@(#)nts/utils/NTS.text $Revision: 1.3 $"
+$
+$ --------------------------------------------------------------------
+$
+$ Any new Events Service messages should be added at the end
+$ before the last two lines:
+$
+$ $
+$ $ catcheck:ON
+$
+$ Be sure to follow the format of the existing message definitions:
+$ $ <number> "<SEVERITY>: <message text>."
+$
+$ where
+$   <number>       - Should be the next successive number.
+$   <SEVERITY>     - Should be one of: INFO, WARN, ERROR, or FATAL.
+$   <message text> - Should include %s for any parameter 
+$
+$ Comments added after the "$set" below must begin with "$ #".
+$
+$ Messages marked as OBSOLETE or INTERNAL USE ONLY are never returned
+$ externally and should not be documented.
+$
+$ --------------------------------------------------------------------
+$
+$ catalogue: NTS_CAT
+$quote "
+$set 1
+$ catcheck:OFF
+$
+$ --------------------------------------------------------------------
+$
+$ generic errors (should be moved to another message catalog)
+$
+1000 "ERROR : internal error : %s"
+1001 "ERROR : out of memory : %s"
+1002 "ERROR : unexpected CORBA::SystemException : %s"
+1003 "ERROR : unexpected CORBA::Exception : %s"
+1004 "ERROR : unexpected exception : %s"
+$
+$ --------------------------------------------------------------------
+$
+$ notification forwarder
+$
+1020 "syntax error. syntax = %s"
+1021 "INFO : %s has successfully started."
+1022 "ERROR : %s has not successfully started."
+1023 "INFO : %s has shut down."
+1024 "WARN : callback for %s doesn't exist"
+1025 "WARN : dropping subscription for %s"
+$
+$ --------------------------------------------------------------------
+$
+$ notification server
+$
+1040 "ERROR : syntax error.  syntax = %s [-s qspace]"
+1041 "ERROR : transient only configuration"
+$
+$ --------------------------------------------------------------------
+$
+$  Admin Messages and Help
+$
+1200 "Terminate the session.\n"
+1201 "Echo input command lines when set to on.  If no option is\n\
+given, then the current setting is toggled, and the new setting\n\
+is printed.  The initial setting is off.\n"
+1202 "Print help messages. If command is specified, the abbreviation,\n\
+arguments, and description for that command are printed. all\n\
+causes a description of all commands to be displayed.\n\
+Omitting all arguments causes the syntax of all commands to be displayed.\n"
+1203 "1203 is obsolete"
+1204 "Paginate output.  If no option is given, then the current\n\
+setting will be toggled, and the new setting is printed.\n\
+Pagination may only be turned on when both standard input and\n\
+standard output are terminal devices.  The shell environment\n\
+variable PAGER may be used to override the default command\n\
+used for paging output.\n"
+1205 "1205 is obsolete"
+1206 "Produce output in verbose mode.  If no option is given, then\n\
+the current setting will be toggled, and the new setting is\n\
+printed.  The initial setting is off.\n"
+1207 "[{command|all}]"
+1208 "[{off|on}]"
+1209 "ERROR: Must have white space following quoted string\n"
+1210 "ERROR: No matching double quote\n"
+1211 "ERROR: Failed to execute %s, errno = %d\n"
+1212 "ERROR: Syntax - "
+1213 "ERROR: Command %s not found\n"
+1214 "Echo is now on\n"
+1215 "Echo is now off\n"
+1216 "Pagination is now on\n"
+1217 "Pagination is now off\n"
+1218 "Verbose mode is now on\n"
+1219 "Verbose mode is now off\n"
+1220 "[{-i id | -n name | -t | -p}]"
+1221 "[{-i id | -n name | -t | -p}] [-y]"
+1222 "[{-i id | -n name}]"
+1223 "[{-i id | -n name}] [-y]"
+1224 "List subscriptions.\n\
+\n\
+By default, all subscriptions are listed.\n\
+\n\
+-i id   : list the subscription 'id'\n\
+-n name : list all subscriptions named 'name'\n\
+-t      : list all transient subscriptions\n\
+-p      : list all persistent subscritions\n"
+1225 "1225 is obsolete"
+1226 "Remove subscriptions.\n\
+\n\
+By default, all subscriptions are removed.\n\
+By default, the user will be prompted to confirm the removal.\n\
+\n\
+-i id   : remove the subscription 'id'\n\
+-n name : remove all subscriptions named 'name'\n\
+-t      : remove all transient subscriptions\n\
+-p      : remove all persistent subscriptions\n\
+-y      : don't prompt to confirm the removal\n"
+1227 "1227 is obsolete"
+1228 "List pending events for persistent subscriptions.\n\
+\n\
+By default, all pending events are listed.\n\
+\n\
+-i id   : list pending events for subscription 'id'\n\
+-n name : list pending events for subscriptions named 'name'\n"
+1229 "1229 is obsolete"
+1230 "Remove pending events for persistent subscriptions.\n\
+\n\
+By default, all pending events are removed.\n\
+By default, the user will be prompted to confirm the removal.\n\
+\n\
+-i id   : remove pending events for subscription 'id'\n\
+-n name : remove pending events for subscriptions named 'name'\n\
+-o      : remove pending events for obsolete subscriptions\n\
+-y      : don't prompt to confirm the removal\n"
+1231 "1231 is obsolete"
+1232 "List events which couldn't be delivered to persistent subscribers.\n\
+\n\
+By default, all undeliverable events are listed.\n\
+\n\
+-i id   : list undeliverable events for subscription 'id'\n\
+-n name : list undeliverable events for subscriptions named 'name'\n"
+1233 "1233 is obsolete"
+1234 "Remove events which couldn't be delivered to persistent subscribers.\n\
+\n\
+By default, all undeliverable events are removed.\n\
+By default, the user will be prompted to confirm the removal.\n\
+\n\
+-i id   : remove undeliverable events for subscription 'id'\n\
+-n name : remove undeliverable events for subscriptions named 'name'\n\
+-o      : remove undeliverable events for obsolete subscriptions\n\
+-y      : don't prompt to confirm the removal\n"
+1235 "1235 is obsolete"
+1236 "Reattempt to deliver events which couldn't be delivered.\n\
+to persistent subscribers.\n\
+\n\
+By default, all undeliverable events are retried.\n\
+By default, the user will be prompted to confirm the retry.\n\
+\n\
+-i id   : retry undeliverable events for subscription 'id'\n\
+-n name : retry undeliverable events for subscriptions named 'name'\n\
+-y      : don't prompt to confirm the retry\n"
+1237 "1237 is obsolete"
+1238 "Usage: %s\n"
+1239 "NOTE: Administrator priviledges are required\n"
+1240 "ERROR: Invalid option - %s\n"
+1241 "ERROR: Invalid argument - %s\n"
+1242 "ERROR: Initialize failed - %s \n"
+1243 "ERROR: Failed to initialize as Administrator - No Permission\n"
+1244 "Are you sure? [y, n] "
+1245 "Check ULOG for more information\n"
+1246 "No subscriptions removed\n"
+1247 "%ld subscription(s) removed\n"
+1248 "No events removed\n"
+1249 "%ld event(s) removed\n"
+1250 "No events retried\n"
+1251 "%ld event(s) retried\n"
+1252 "INFO: /Q Qspace - %s\n"
+1253 "INFO: /Q Device - %s (%s)\n"
+1254 "INFO: No /Q Device found\n"
+1255 "INFO: No /Q Qspace found\n"
+1256 "INFO: Event commands are disabled\n"
+1257 "INFO: Unable to verify /Q information\n"
+1258 "Event commands disabled\n"
+1259 "No subscriptions found\n"
+1260 "No events found\n"
+1261 "%ld subscription(s) failed to be removed\n\n"
+1262 "%ld event(s) failed to be removed\n\n"
+1263 "%ld event(s) failed to be retried\n\n"
+1264 "<Operation Timeout>\n"
+1265 "ERROR: TMIB Operation Failure - %s"
+1266 "ERROR: TMIB Operation Failure - No status reported"
+1267 "[{-i id | -n name | -o}] [-y]"
+1268 "ERROR: Unable to remove subscription"
+1269 "ERROR: Unable to remove event"
+1270 "ERROR: Unable to retry event"
+1271 "ERROR: Subscription command failed - "
+1272 "ERROR: Event command failed - "
+1273 "INFO: Automatic scan for /Q information failed\n"
+1274 "INFO: Inactive /Q group %s found - /Q device ignored"
+1275 "WARN: Unable to verify /Q group %s - /Q device ignored"
+1276 "INFO: /Q Device Ignored - "
+$
+$ --------------------------------------------------------------------
+$
+$ catcheck:ON
+$
+$ --------------------------------------------------------------------

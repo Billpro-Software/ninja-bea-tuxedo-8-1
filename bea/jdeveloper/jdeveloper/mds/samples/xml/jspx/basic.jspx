@@ -1,0 +1,20 @@
+<!-- A simple jspx page
+     This JSP is intended for use in verifying that MDS can be integrated
+     with non-JSP engines.  
+  MODIFIED (MM/DD/YY)
+  dklein    09/06/05 - dklein_nonorajsp04
+  dklein    08/09/05 - Created
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:jsp="http://java.sun.com/JSP/Page"
+      xmlns:fmt="http://java.sun.com/jsp/jstl/fmt">
+<head><title>MDS non-oracle JSP engine integration test</title></head>
+
+<body>
+<h1>MDS non-oracle JSP engine integration test</h1>
+    <jsp:useBean id="now" class="java.util.Date" />
+    A simple bean with some live content:
+    <fmt:formatDate value="${now}" pattern="MMMM d, yyyy, H:mm:ss"/>
+</body>
+
+</html>

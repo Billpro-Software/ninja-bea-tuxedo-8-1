@@ -1,0 +1,963 @@
+ splashscreen
+
+ Timestamp is 4cfadde2 (Sat Dec 04 16:33:38 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000390f4H .text                   CODE
+ 0002:00000000 000001a0H .idata$5                DATA
+ 0002:000001a0 00001fc0H .rdata                  DATA
+ 0002:00002160 00000078H .rdata$debug            DATA
+ 0002:000021e0 00000004H .rdata$sxdata           DATA
+ 0002:000021e4 00000004H .rtc$IAA                DATA
+ 0002:000021e8 00000004H .rtc$IZZ                DATA
+ 0002:000021ec 00000004H .rtc$TAA                DATA
+ 0002:000021f0 00000004H .rtc$TZZ                DATA
+ 0002:000021f4 00000050H .idata$2                DATA
+ 0002:00002244 00000014H .idata$3                DATA
+ 0002:00002258 000001a0H .idata$4                DATA
+ 0002:000023f8 00000590H .idata$6                DATA
+ 0002:00002990 00000281H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00003354H .data                   DATA
+ 0003:00003368 00002e28H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000378H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0001:00000000       _JNI_OnLoad@8              10001000 f   java_awt_SplashScreen.obj
+ 0001:00000010       _Java_java_awt_SplashScreen__1update@40 10001010 f   java_awt_SplashScreen.obj
+ 0001:00000140       _Java_java_awt_SplashScreen__1isVisible@16 10001140 f   java_awt_SplashScreen.obj
+ 0001:00000170       _Java_java_awt_SplashScreen__1getBounds@16 10001170 f   java_awt_SplashScreen.obj
+ 0001:000002b0       _Java_java_awt_SplashScreen__1getInstance@8 100012b0 f   java_awt_SplashScreen.obj
+ 0001:000002c0       _Java_java_awt_SplashScreen__1close@16 100012c0 f   java_awt_SplashScreen.obj
+ 0001:00000300       _Java_java_awt_SplashScreen__1getImageFileName@16 10001300 f   java_awt_SplashScreen.obj
+ 0001:00000350       _Java_java_awt_SplashScreen__1getImageJarName@16 10001350 f   java_awt_SplashScreen.obj
+ 0001:000003a0       _Java_java_awt_SplashScreen__1setImageData@20 100013a0 f   java_awt_SplashScreen.obj
+ 0001:00000420       _initDither                10001420 f   splashscreen_gfx_impl.obj
+ 0001:000004f0       _quantizeColors            100014f0 f   splashscreen_gfx_impl.obj
+ 0001:000006d0       _initColorCube             100016d0 f   splashscreen_gfx_impl.obj
+ 0001:00000810       _convertLine               10001810 f   splashscreen_gfx_impl.obj
+ 0001:000009e0       _initRect                  100019e0 f   splashscreen_gfx_impl.obj
+ 0001:00000a70       _convertRect               10001a70 f   splashscreen_gfx_impl.obj
+ 0001:00000a90       _convertRect2              10001a90 f   splashscreen_gfx_impl.obj
+ 0001:00000c10       _fillRect                  10001c10 f   splashscreen_gfx_impl.obj
+ 0001:00000cb0       _initFormat                10001cb0 f   splashscreen_gfx_impl.obj
+ 0001:00000d60       _dumpFormat                10001d60 f   splashscreen_gfx_impl.obj
+ 0001:00000d70       _optimizeFormat            10001d70 f   splashscreen_gfx_impl.obj
+ 0001:00000da0       _platformByteOrder         10001da0 f   splashscreen_gfx_impl.obj
+ 0001:00000dc0       _scaleColor                10001dc0 f i splashscreen_gfx_impl.obj
+ 0001:00000df0       _blendRGB                  10001df0 f i splashscreen_gfx_impl.obj
+ 0001:00000e90       _putRGBADither             10001e90 f i splashscreen_gfx_impl.obj
+ 0001:00001190       _ditherColor               10002190 f i splashscreen_gfx_impl.obj
+ 0001:00001270       _premultiplyRGBA           10002270 f i splashscreen_gfx_impl.obj
+ 0001:000012f0       _getRGBA                   100022f0 f i splashscreen_gfx_impl.obj
+ 0001:000015e0       _fillLine                  100025e0 f i splashscreen_gfx_impl.obj
+ 0001:00001640       _getMaskShift              10002640 f i splashscreen_gfx_impl.obj
+ 0001:000016c0       _SplashStreamGifInputFunc  100026c0 f   splashscreen_gif.obj
+ 0001:000016f0       _SplashDecodeGif           100026f0 f   splashscreen_gif.obj
+ 0001:000021a0       _SplashDecodeGifStream     100031a0 f   splashscreen_gif.obj
+ 0001:000021e0       _SplashGetInstance         100031e0 f   splashscreen_impl.obj
+ 0001:00002220       _SplashSetFileJarName      10003220 f   splashscreen_impl.obj
+ 0001:000022a0       _SplashInit                100032a0 f   splashscreen_impl.obj
+ 0001:00002310       _SplashClose               10003310 f   splashscreen_impl.obj
+ 0001:00002360       _SplashCleanup             10003360 f   splashscreen_impl.obj
+ 0001:00002460       _SplashDone                10003460 f   splashscreen_impl.obj
+ 0001:00002480       _SplashIsStillLooping      10003480 f   splashscreen_impl.obj
+ 0001:000024d0       _SplashUpdateScreenData    100034d0 f   splashscreen_impl.obj
+ 0001:00002650       _SplashNextFrame           10003650 f   splashscreen_impl.obj
+ 0001:00002730       _BitmapToYXBandedRectangles 10003730 f   splashscreen_impl.obj
+ 0001:00002940       _SplashLoadFile            10003940 f   splashscreen_impl.obj
+ 0001:00002ac0       _SplashLoadMemory          10003ac0 f   splashscreen_impl.obj
+ 0001:00002b10       _SplashStart               10003b10 f   splashscreen_impl.obj
+ 0001:00002b40       _SplashStreamInitFile      10003b40 f   splashscreen_impl.obj
+ 0001:00002c30       _SplashStreamInitMemory    10003c30 f   splashscreen_impl.obj
+ 0001:00002d10       _SplashDecodeJpeg          10003d10 f   splashscreen_jpeg.obj
+ 0001:00003000       _SplashDecodeJpegStream    10004000 f   splashscreen_jpeg.obj
+ 0001:000032f0       _my_png_read_stream        100042f0 f   splashscreen_png.obj
+ 0001:00003340       _SplashDecodePng           10004340 f   splashscreen_png.obj
+ 0001:00003810       _SplashDecodePngStream     10004810 f   splashscreen_png.obj
+ 0001:00003870       _SplashConvertStringAlloc  10004870 f   splashscreen_sys.obj
+ 0001:00003910       _SplashTime                10004910 f   splashscreen_sys.obj
+ 0001:00003920       _SplashInitFrameShape      10004920 f   splashscreen_sys.obj
+ 0001:00003a70       _SplashPaint               10004a70 f   splashscreen_sys.obj
+ 0001:00003d40       _SplashRedrawWindow        10004d40 f   splashscreen_sys.obj
+ 0001:00004070       _SplashReconfigureNow      10005070 f   splashscreen_sys.obj
+ 0001:00004120       _SplashCreateWindow        10005120 f   splashscreen_sys.obj
+ 0001:00004430       _SplashLock                10005430 f   splashscreen_sys.obj
+ 0001:00004450       _SplashUnlock              10005450 f   splashscreen_sys.obj
+ 0001:00004470       _SplashInitPlatform        10005470 f   splashscreen_sys.obj
+ 0001:00004680       _SplashCleanupPlatform     10005680 f   splashscreen_sys.obj
+ 0001:00004740       _SplashDonePlatform        10005740 f   splashscreen_sys.obj
+ 0001:00004770       _SplashMessagePump         10005770 f   splashscreen_sys.obj
+ 0001:000047b0       _SplashScreenThread@4      100057b0 f   splashscreen_sys.obj
+ 0001:00004860       _SplashCreateThread        10005860 f   splashscreen_sys.obj
+ 0001:00004890       _SplashClosePlatform       10005890 f   splashscreen_sys.obj
+ 0001:000048b0       _SplashUpdate              100058b0 f   splashscreen_sys.obj
+ 0001:000048d0       _SplashReconfigure         100058d0 f   splashscreen_sys.obj
+ 0001:000048f0       _png_set_sig_bytes         100058f0 f   png.obj
+ 0001:00004930       _png_sig_cmp               10005930 f   png.obj
+ 0001:000049b0       _png_check_sig             100059b0 f   png.obj
+ 0001:000049d0       _png_zalloc                100059d0 f   png.obj
+ 0001:00004a50       _png_zfree                 10005a50 f   png.obj
+ 0001:00004a70       _png_reset_crc             10005a70 f   png.obj
+ 0001:00004a90       _png_calculate_crc         10005a90 f   png.obj
+ 0001:00004b10       _png_create_info_struct    10005b10 f   png.obj
+ 0001:00004b60       _png_destroy_info_struct   10005b60 f   png.obj
+ 0001:00004bc0       _png_info_init             10005bc0 f   png.obj
+ 0001:00004be0       _png_info_init_3           10005be0 f   png.obj
+ 0001:00004c30       _png_data_freer            10005c30 f   png.obj
+ 0001:00004c90       _png_free_data             10005c90 f   png.obj
+ 0001:00004df0       _png_info_destroy          10005df0 f   png.obj
+ 0001:00004e20       _png_get_io_ptr            10005e20 f   png.obj
+ 0001:00004e30       _png_get_copyright         10005e30 f   png.obj
+ 0001:00004e50       _png_get_libpng_ver        10005e50 f   png.obj
+ 0001:00004e70       _png_get_header_ver        10005e70 f   png.obj
+ 0001:00004e90       _png_get_header_version    10005e90 f   png.obj
+ 0001:00004eb0       _png_reset_zstream         10005eb0 f   png.obj
+ 0001:00004ed0       _png_access_version_number 10005ed0 f   png.obj
+ 0001:00004ee0       _png_mmx_support           10005ee0 f   png.obj
+ 0001:00004ef0       _png_error2                10005ef0 f   pngerror.obj
+ 0001:00004ff0       _png_warning2              10005ff0 f   pngerror.obj
+ 0001:00005080       _png_chunk_error2          10006080 f   pngerror.obj
+ 0001:000051e0       _png_chunk_warning2        100061e0 f   pngerror.obj
+ 0001:00005240       _png_set_error_fn          10006240 f   pngerror.obj
+ 0001:00005260       _png_get_error_ptr         10006260 f   pngerror.obj
+ 0001:00005270       _png_set_strip_error_numbers 10006270 f   pngerror.obj
+ 0001:00005290       _png_get_valid             10006290 f   pngget.obj
+ 0001:000052b0       _png_get_rowbytes          100062b0 f   pngget.obj
+ 0001:000052d0       _png_get_rows              100062d0 f   pngget.obj
+ 0001:000052f0       _png_get_image_width       100062f0 f   pngget.obj
+ 0001:00005310       _png_get_image_height      10006310 f   pngget.obj
+ 0001:00005330       _png_get_bit_depth         10006330 f   pngget.obj
+ 0001:00005350       _png_get_color_type        10006350 f   pngget.obj
+ 0001:00005370       _png_get_filter_type       10006370 f   pngget.obj
+ 0001:00005390       _png_get_interlace_type    10006390 f   pngget.obj
+ 0001:000053b0       _png_get_compression_type  100063b0 f   pngget.obj
+ 0001:000053d0       _png_get_x_pixels_per_meter 100063d0 f   pngget.obj
+ 0001:000053f0       _png_get_y_pixels_per_meter 100063f0 f   pngget.obj
+ 0001:00005410       _png_get_pixels_per_meter  10006410 f   pngget.obj
+ 0001:00005430       _png_get_pixel_aspect_ratio 10006430 f   pngget.obj
+ 0001:00005450       _png_get_x_offset_microns  10006450 f   pngget.obj
+ 0001:00005470       _png_get_y_offset_microns  10006470 f   pngget.obj
+ 0001:00005490       _png_get_x_offset_pixels   10006490 f   pngget.obj
+ 0001:000054b0       _png_get_y_offset_pixels   100064b0 f   pngget.obj
+ 0001:000054d0       _png_get_channels          100064d0 f   pngget.obj
+ 0001:000054f0       _png_get_signature         100064f0 f   pngget.obj
+ 0001:00005510       _png_get_gAMA              10006510 f   pngget.obj
+ 0001:00005550       _png_get_gAMA_fixed        10006550 f   pngget.obj
+ 0001:00005590       _png_get_IHDR              10006590 f   pngget.obj
+ 0001:000056f0       _png_get_PLTE              100066f0 f   pngget.obj
+ 0001:00005740       _png_get_sBIT              10006740 f   pngget.obj
+ 0001:00005780       _png_get_tRNS              10006780 f   pngget.obj
+ 0001:00005830       _png_get_user_width_max    10006830 f   pngget.obj
+ 0001:00005860       _png_get_user_height_max   10006860 f   pngget.obj
+ 0001:00005890       _png_create_struct         10006890 f   pngmem.obj
+ 0001:000058b0       _png_create_struct_2       100068b0 f   pngmem.obj
+ 0001:00005960       _png_destroy_struct        10006960 f   pngmem.obj
+ 0001:00005980       _png_destroy_struct_2      10006980 f   pngmem.obj
+ 0001:000059e0       _png_malloc                100069e0 f   pngmem.obj
+ 0001:00005a60       _png_malloc_default        10006a60 f   pngmem.obj
+ 0001:00005aa0       _png_free                  10006aa0 f   pngmem.obj
+ 0001:00005af0       _png_free_default          10006af0 f   pngmem.obj
+ 0001:00005b10       _png_malloc_warn           10006b10 f   pngmem.obj
+ 0001:00005b60       _png_memcpy_check          10006b60 f   pngmem.obj
+ 0001:00005ba0       _png_memset_check          10006ba0 f   pngmem.obj
+ 0001:00005be0       _png_set_mem_fn            10006be0 f   pngmem.obj
+ 0001:00005c10       _png_get_mem_ptr           10006c10 f   pngmem.obj
+ 0001:00005c20       _png_process_data          10006c20 f   pngpread.obj
+ 0001:00005c60       _png_process_some_data     10006c60 f   pngpread.obj
+ 0001:00005cf0       _png_push_read_sig         10006cf0 f   pngpread.obj
+ 0001:00005de0       _png_push_read_chunk       10006de0 f   pngpread.obj
+ 0001:00006230       _png_push_crc_skip         10007230 f   pngpread.obj
+ 0001:00006250       _png_push_crc_finish       10007250 f   pngpread.obj
+ 0001:00006420       _png_push_fill_buffer      10007420 f   pngpread.obj
+ 0001:00006560       _png_push_save_buffer      10007560 f   pngpread.obj
+ 0001:00006740       _png_push_restore_buffer   10007740 f   pngpread.obj
+ 0001:00006790       _png_push_read_IDAT        10007790 f   pngpread.obj
+ 0001:00006ae0       _png_process_IDAT_data     10007ae0 f   pngpread.obj
+ 0001:00006c60       _png_push_process_row      10007c60 f   pngpread.obj
+ 0001:00007340       _png_read_push_finish_row  10008340 f   pngpread.obj
+ 0001:00007590       _png_push_handle_unknown   10008590 f   pngpread.obj
+ 0001:00007600       _png_push_have_info        10008600 f   pngpread.obj
+ 0001:00007630       _png_push_have_end         10008630 f   pngpread.obj
+ 0001:00007660       _png_push_have_row         10008660 f   pngpread.obj
+ 0001:000076a0       _png_progressive_combine_row 100086a0 f   pngpread.obj
+ 0001:000076d0       _png_set_progressive_read_fn 100086d0 f   pngpread.obj
+ 0001:00007710       _png_get_progressive_ptr   10008710 f   pngpread.obj
+ 0001:00007720       _png_create_read_struct    10008720 f   pngread.obj
+ 0001:00007750       _png_create_read_struct_2  10008750 f   pngread.obj
+ 0001:00007a00       _png_read_init             10008a00 f   pngread.obj
+ 0001:00007a20       _png_read_init_2           10008a20 f   pngread.obj
+ 0001:00007aa0       _png_read_init_3           10008aa0 f   pngread.obj
+ 0001:00007c90       _png_read_info             10008c90 f   pngread.obj
+ 0001:00007f90       _png_read_update_info      10008f90 f   pngread.obj
+ 0001:00007fd0       _png_start_read_image      10008fd0 f   pngread.obj
+ 0001:00007ff0       _png_read_row              10008ff0 f   pngread.obj
+ 0001:00008700       _png_read_rows             10009700 f   pngread.obj
+ 0001:00008810       _png_read_image            10009810 f   pngread.obj
+ 0001:000088a0       _png_read_end              100098a0 f   pngread.obj
+ 0001:00008ab0       _png_destroy_read_struct   10009ab0 f   pngread.obj
+ 0001:00008b90       _png_read_destroy          10009b90 f   pngread.obj
+ 0001:00008dc0       _png_set_read_status_fn    10009dc0 f   pngread.obj
+ 0001:00008de0       _png_read_png              10009de0 f   pngread.obj
+ 0001:00008f50       _png_read_data             10009f50 f   pngrio.obj
+ 0001:00008f90       _png_set_read_fn           10009f90 f   pngrio.obj
+ 0001:00008fe0       _png_set_crc_action        10009fe0 f   pngrtran.obj
+ 0001:00009150       _png_set_strip_16          1000a150 f   pngrtran.obj
+ 0001:00009170       _png_set_gamma             1000a170 f   pngrtran.obj
+ 0001:000091f0       _png_set_expand            1000a1f0 f   pngrtran.obj
+ 0001:00009210       _png_set_palette_to_rgb    1000a210 f   pngrtran.obj
+ 0001:00009230       _png_set_gray_1_2_4_to_8   1000a230 f   pngrtran.obj
+ 0001:00009250       _png_set_tRNS_to_alpha     1000a250 f   pngrtran.obj
+ 0001:00009270       _png_set_gray_to_rgb       1000a270 f   pngrtran.obj
+ 0001:00009290       _png_init_read_transformations 1000a290 f   pngrtran.obj
+ 0001:00009440       _png_read_transform_info   1000a440 f   pngrtran.obj
+ 0001:00009630       _png_do_read_transformations 1000a630 f   pngrtran.obj
+ 0001:00009850       _png_do_chop               1000a850 f   pngrtran.obj
+ 0001:000098f0       _png_do_read_filler        1000a8f0 f   pngrtran.obj
+ 0001:0000a020       _png_do_gray_to_rgb        1000b020 f   pngrtran.obj
+ 0001:0000a3e0       _png_build_grayscale_palette 1000b3e0 f   pngrtran.obj
+ 0001:0000a4e0       _png_do_gamma              1000b4e0 f   pngrtran.obj
+ 0001:0000aba0       _png_do_expand_palette     1000bba0 f   pngrtran.obj
+ 0001:0000afb0       _png_do_expand             1000bfb0 f   pngrtran.obj
+ 0001:0000b720       _png_build_gamma_table     1000c720 f   pngrtran.obj
+ 0001:0000bb70       _png_do_read_intrapixel    1000cb70 f   pngrtran.obj
+ 0001:0000bd60       _png_get_uint_31           1000cd60 f   pngrutil.obj
+ 0001:0000bda0       _png_get_uint_32           1000cda0 f   pngrutil.obj
+ 0001:0000bde0       _png_get_uint_16           1000cde0 f   pngrutil.obj
+ 0001:0000be10       _png_crc_read              1000ce10 f   pngrutil.obj
+ 0001:0000be40       _png_crc_finish            1000ce40 f   pngrutil.obj
+ 0001:0000bf30       _png_crc_error             1000cf30 f   pngrutil.obj
+ 0001:0000bfc0       _png_handle_IHDR           1000cfc0 f   pngrutil.obj
+ 0001:0000c1d0       _png_handle_PLTE           1000d1d0 f   pngrutil.obj
+ 0001:0000c4b0       _png_handle_IEND           1000d4b0 f   pngrutil.obj
+ 0001:0000c520       _png_handle_gAMA           1000d520 f   pngrutil.obj
+ 0001:0000c690       _png_handle_sBIT           1000d690 f   pngrutil.obj
+ 0001:0000c870       _png_handle_tRNS           1000d870 f   pngrutil.obj
+ 0001:0000cb50       _png_handle_unknown        1000db50 f   pngrutil.obj
+ 0001:0000cbf0       _png_check_chunk_name      1000dbf0 f   pngrutil.obj
+ 0001:0000cce0       _png_combine_row           1000dce0 f   pngrutil.obj
+ 0001:0000d170       _png_do_read_interlace     1000e170 f   pngrutil.obj
+ 0001:0000d790       _png_read_filter_row       1000e790 f   pngrutil.obj
+ 0001:0000db50       _png_read_finish_row       1000eb50 f   pngrutil.obj
+ 0001:0000df80       _png_read_start_row        1000ef80 f   pngrutil.obj
+ 0001:0000e3c0       _png_set_gAMA              1000f3c0 f   pngset.obj
+ 0001:0000e470       _png_set_gAMA_fixed        1000f470 f   pngset.obj
+ 0001:0000e510       _png_set_IHDR              1000f510 f   pngset.obj
+ 0001:0000e7f0       _png_set_PLTE              1000f7f0 f   pngset.obj
+ 0001:0000e8c0       _png_set_sBIT              1000f8c0 f   pngset.obj
+ 0001:0000e900       _png_set_tRNS              1000f900 f   pngset.obj
+ 0001:0000e9d0       _png_permit_empty_plte     1000f9d0 f   pngset.obj
+ 0001:0000ea00       _png_permit_mng_features   1000fa00 f   pngset.obj
+ 0001:0000ea30       _png_set_rows              1000fa30 f   pngset.obj
+ 0001:0000ea90       _png_set_invalid           1000fa90 f   pngset.obj
+ 0001:0000eac0       _png_set_user_limits       1000fac0 f   pngset.obj
+ 0001:0000eae0       _png_set_interlace_handling 1000fae0 f   pngtrans.obj
+ 0001:0000eb10       _png_set_filler            1000fb10 f   pngtrans.obj
+ 0001:0000eba0       _png_set_add_alpha         1000fba0 f   pngtrans.obj
+ 0001:0000ebd0       _png_get_user_transform_ptr 1000fbd0 f   pngtrans.obj
+ 0001:0000ebf0       _DGifOpenFileName          1000fbf0 f   dgif_lib.obj
+ 0001:0000ec50       _DGifOpenFileHandle        1000fc50 f   dgif_lib.obj
+ 0001:0000ee30       _DGifOpen                  1000fe30 f   dgif_lib.obj
+ 0001:0000efd0       _DGifGetScreenDesc         1000ffd0 f   dgif_lib.obj
+ 0001:0000f1e0       _DGifGetRecordType         100101e0 f   dgif_lib.obj
+ 0001:0000f2c0       _DGifGetImageDesc          100102c0 f   dgif_lib.obj
+ 0001:0000f660       _DGifGetLine               10010660 f   dgif_lib.obj
+ 0001:0000f710       _DGifGetPixel              10010710 f   dgif_lib.obj
+ 0001:0000f7b0       _DGifGetExtension          100107b0 f   dgif_lib.obj
+ 0001:0000f850       _DGifGetExtensionNext      10010850 f   dgif_lib.obj
+ 0001:0000f960       _DGifCloseFile             10010960 f   dgif_lib.obj
+ 0001:0000fae0       _DGifGetCode               10010ae0 f   dgif_lib.obj
+ 0001:0000fb30       _DGifGetCodeNext           10010b30 f   dgif_lib.obj
+ 0001:00010120       _DGifGetLZCodes            10011120 f   dgif_lib.obj
+ 0001:00010420       _DGifSlurp                 10011420 f   dgif_lib.obj
+ 0001:000105b0       _GifLastError              100115b0 f   gif_err.obj
+ 0001:000105d0       _PrintGifError             100115d0 f   gif_err.obj
+ 0001:000106f0       _BitSize                   100116f0 f   gifalloc.obj
+ 0001:00010730       _MakeMapObject             10011730 f   gifalloc.obj
+ 0001:000107d0       _FreeMapObject             100117d0 f   gifalloc.obj
+ 0001:00010800       _DumpColorMap              10011800 f   gifalloc.obj
+ 0001:000108d0       _MakeExtension             100118d0 f   gifalloc.obj
+ 0001:000108e0       _AddExtensionBlock         100118e0 f   gifalloc.obj
+ 0001:000109b0       _FreeExtension             100119b0 f   gifalloc.obj
+ 0001:00010a20       _FreeLastSavedImage        10011a20 f   gifalloc.obj
+ 0001:00010aa0       _MakeSavedImage            10011aa0 f   gifalloc.obj
+ 0001:00010c50       _FreeSavedImages           10011c50 f   gifalloc.obj
+ 0001:00010d00       _compress2                 10011d00 f   compress.obj
+ 0001:00010dd0       _compress                  10011dd0 f   compress.obj
+ 0001:00010df0       _deflateInit_              10011df0 f   deflate.obj
+ 0001:00010e20       _deflateInit2_             10011e20 f   deflate.obj
+ 0001:00011110       _deflateSetDictionary      10012110 f   deflate.obj
+ 0001:000112b0       _deflateReset              100122b0 f   deflate.obj
+ 0001:00011390       _deflateParams             10012390 f   deflate.obj
+ 0001:000114b0       _deflate                   100124b0 f   deflate.obj
+ 0001:00011970       _deflateEnd                10012970 f   deflate.obj
+ 0001:00011a90       _deflateCopy               10012a90 f   deflate.obj
+ 0001:000132e0       _gzopen                    100142e0 f   gzio.obj
+ 0001:000136c0       _gzdopen                   100146c0 f   gzio.obj
+ 0001:00013700       _gzsetparams               10014700 f   gzio.obj
+ 0001:00013b60       _gzread                    10014b60 f   gzio.obj
+ 0001:00013e80       _gzgetc                    10014e80 f   gzio.obj
+ 0001:00013ec0       _gzgets                    10014ec0 f   gzio.obj
+ 0001:00013f50       _gzwrite                   10014f50 f   gzio.obj
+ 0001:00014030       _gzprintf                  10015030 f   gzio.obj
+ 0001:000140a0       _gzputc                    100150a0 f   gzio.obj
+ 0001:000140e0       _gzputs                    100150e0 f   gzio.obj
+ 0001:00014110       _gzflush                   10015110 f   gzio.obj
+ 0001:000142a0       _gzseek                    100152a0 f   gzio.obj
+ 0001:000144b0       _gzrewind                  100154b0 f   gzio.obj
+ 0001:00014560       _gztell                    10015560 f   gzio.obj
+ 0001:00014580       _gzeof                     10015580 f   gzio.obj
+ 0001:00014640       _gzclose                   10015640 f   gzio.obj
+ 0001:00014720       _gzerror                   10015720 f   gzio.obj
+ 0001:00014840       _inflate_blocks_reset      10015840 f   infblock.obj
+ 0001:00014920       _inflate_blocks_new        10015920 f   infblock.obj
+ 0001:00014a40       _inflate_blocks            10015a40 f   infblock.obj
+ 0001:00015fb0       _inflate_blocks_free       10016fb0 f   infblock.obj
+ 0001:00016030       _inflate_set_dictionary    10017030 f   infblock.obj
+ 0001:00016070       _inflate_blocks_sync_point 10017070 f   infblock.obj
+ 0001:00016090       _inflate_codes_new         10017090 f   infcodes.obj
+ 0001:00016110       _inflate_codes             10017110 f   infcodes.obj
+ 0001:00016f00       _inflate_codes_free        10017f00 f   infcodes.obj
+ 0001:00016f40       _inflate_fast              10017f40 f   inffast.obj
+ 0001:000176f0       _inflateReset              100186f0 f   inflate.obj
+ 0001:00017780       _inflateEnd                10018780 f   inflate.obj
+ 0001:00017810       _inflateInit2_             10018810 f   inflate.obj
+ 0001:000179a0       _inflateInit_              100189a0 f   inflate.obj
+ 0001:000179c0       _inflate                   100189c0 f   inflate.obj
+ 0001:000180d0       _inflateSetDictionary      100190d0 f   inflate.obj
+ 0001:00018190       _inflateSync               10019190 f   inflate.obj
+ 0001:000182e0       _inflateSyncPoint          100192e0 f   inflate.obj
+ 0001:00018320       _inflate_trees_bits        10019320 f   inftrees.obj
+ 0001:00018bf0       _inflate_trees_dynamic     10019bf0 f   inftrees.obj
+ 0001:00018d80       _inflate_trees_fixed       10019d80 f   inftrees.obj
+ 0001:00018db0       _inflate_flush             10019db0 f   infutil.obj
+ 0001:00018f90       __tr_init                  10019f90 f   trees.obj
+ 0001:00019120       __tr_stored_block          1001a120 f   trees.obj
+ 0001:000192f0       __tr_align                 1001a2f0 f   trees.obj
+ 0001:00019410       __tr_flush_block           1001a410 f   trees.obj
+ 0001:0001a8b0       __tr_tally                 1001b8b0 f   trees.obj
+ 0001:0001b100       _uncompress                1001c100 f   uncompr.obj
+ 0001:0001b1d0       _adler32                   1001c1d0 f   zadler32.obj
+ 0001:0001b410       _get_crc_table             1001c410 f   zcrc32.obj
+ 0001:0001b420       _crc32                     1001c420 f   zcrc32.obj
+ 0001:0001b5d0       _zlibVersion               1001c5d0 f   zutil.obj
+ 0001:0001b5e0       _z_error                   1001c5e0 f   zutil.obj
+ 0001:0001b610       _zError                    1001c610 f   zutil.obj
+ 0001:0001b630       _zcalloc                   1001c630 f   zutil.obj
+ 0001:0001b660       _zcfree                    1001c660 f   zutil.obj
+ 0001:0001b680       _jAbort                    1001c680 f   jcomapi.obj
+ 0001:0001b6f0       _jDestroy                  1001c6f0 f   jcomapi.obj
+ 0001:0001b730       _jAlcQTable                1001c730 f   jcomapi.obj
+ 0001:0001b770       _jAlcHTable                1001c770 f   jcomapi.obj
+ 0001:0001b7b0       _jCreaDecompress           1001c7b0 f   jdapimin.obj
+ 0001:0001b930       _jDestDecompress           1001c930 f   jdapimin.obj
+ 0001:0001b950       _jAbrtDecompress           1001c950 f   jdapimin.obj
+ 0001:0001b970       _jReadHeader               1001c970 f   jdapimin.obj
+ 0001:0001ba20       _jConsumeInput             1001ca20 f   jdapimin.obj
+ 0001:0001be20       _jInComplete               1001ce20 f   jdapimin.obj
+ 0001:0001be80       _jHasMultScn               1001ce80 f   jdapimin.obj
+ 0001:0001bee0       _jFinDecompress            1001cee0 f   jdapimin.obj
+ 0001:0001bff0       _jStrtDecompress           1001cff0 f   jdapistd.obj
+ 0001:0001c290       _jReadScanlines            1001d290 f   jdapistd.obj
+ 0001:0001c380       _jReadRawData              1001d380 f   jdapistd.obj
+ 0001:0001c4a0       _jStrtOutput               1001d4a0 f   jdapistd.obj
+ 0001:0001c540       _jFinOutput                1001d540 f   jdapistd.obj
+ 0001:0001c610       _jIDCoefC                  1001d610 f   jdcoefct.obj
+ 0001:0001dc90       _jIDColor                  1001ec90 f   jdcolor.obj
+ 0001:0001e500       _jIIDCT                    1001f500 f   jddctmgr.obj
+ 0001:0001e8b0       _jMkDDerived               1001f8b0 f   jdhuff.obj
+ 0001:0001ecf0       _jFilBitBuf                1001fcf0 f   jdhuff.obj
+ 0001:0001eeb0       _jHufDecode                1001feb0 f   jdhuff.obj
+ 0001:0001f000       _jIHDecoder                10020000 f   jdhuff.obj
+ 0001:0001f940       _jIInCtlr                  10020940 f   jdinput.obj
+ 0001:00020260       _jIDMainC                  10021260 f   jdmainct.obj
+ 0001:00020be0       _jResyncRestart            10021be0 f   jdmarker.obj
+ 0001:00020f70       _jIMReader                 10021f70 f   jdmarker.obj
+ 0001:000239e0       _jSaveMarkers              100249e0 f   jdmarker.obj
+ 0001:00023af0       _jSetMarker                10024af0 f   jdmarker.obj
+ 0001:00023b70       _jCalcDimensions           10024b70 f   jdmaster.obj
+ 0001:00023fc0       _jNewCMap                  10024fc0 f   jdmaster.obj
+ 0001:00024070       _jIDMaster                 10025070 f   jdmaster.obj
+ 0001:00024780       _jIMUpsampler              10025780 f   jdmerge.obj
+ 0001:00025070       _jIPHDecoder               10026070 f   jdphuff.obj
+ 0001:00026400       _jIDPostC                  10027400 f   jdpostct.obj
+ 0001:000268c0       _jIUpsampler               100278c0 f   jdsample.obj
+ 0001:00027320       _jStdError                 10028320 f   jerror.obj
+ 0001:000274b0       _jRDfloat                  100284b0 f   jidctflt.obj
+ 0001:00027d90       _jRDifast                  10028d90 f   jidctfst.obj
+ 0001:00028720       _jRDislow                  10029720 f   jidctint.obj
+ 0001:00029290       _jRD4x4                    1002a290 f   jidctred.obj
+ 0001:000298e0       _jRD2x2                    1002a8e0 f   jidctred.obj
+ 0001:00029ba0       _jRD1x1                    1002aba0 f   jidctred.obj
+ 0001:00029c00       _jIMemMgr                  1002ac00 f   jmemmgr.obj
+ 0001:0002aff0       _jGetSmall                 1002bff0 f   jmemnobs.obj
+ 0001:0002b010       _jFreeSmall                1002c010 f   jmemnobs.obj
+ 0001:0002b030       _jGetLarge                 1002c030 f   jmemnobs.obj
+ 0001:0002b050       _jFreeLarge                1002c050 f   jmemnobs.obj
+ 0001:0002b070       _jMemAvail                 1002c070 f   jmemnobs.obj
+ 0001:0002b080       _jOpenBackStore            1002c080 f   jmemnobs.obj
+ 0001:0002b0a0       _jMemInit                  1002c0a0 f   jmemnobs.obj
+ 0001:0002b0b0       _jMemTerm                  1002c0b0 f   jmemnobs.obj
+ 0001:0002b0c0       _jI1Quant                  1002c0c0 f   jquant1.obj
+ 0001:0002c130       _jI2Quant                  1002d130 f   jquant2.obj
+ 0001:0002def0       _jDivRound                 1002eef0 f   jutils.obj
+ 0001:0002df10       _jRound                    1002ef10 f   jutils.obj
+ 0001:0002df30       _jCopySamples              1002ef30 f   jutils.obj
+ 0001:0002dfb0       _jCopyBlocks               1002efb0 f   jutils.obj
+ 0001:0002dfd0       _jZeroFar                  1002efd0 f   jutils.obj
+ 0001:0002dff0       _jCreaCompress             1002eff0 f   jcapimin.obj
+ 0001:0002e160       _jDestCompress             1002f160 f   jcapimin.obj
+ 0001:0002e180       _jAbrtCompress             1002f180 f   jcapimin.obj
+ 0001:0002e1a0       _jSuppressTables           1002f1a0 f   jcapimin.obj
+ 0001:0002e240       _jFinCompress              1002f240 f   jcapimin.obj
+ 0001:0002e3d0       _jWrtMarker                1002f3d0 f   jcapimin.obj
+ 0001:0002e480       _jWrtMHeader               1002f480 f   jcapimin.obj
+ 0001:0002e4f0       _jWrtMByte                 1002f4f0 f   jcapimin.obj
+ 0001:0002e510       _jWrtTables                1002f510 f   jcapimin.obj
+ 0001:0002e5a0       _jStrtCompress             1002f5a0 f   jcapistd.obj
+ 0001:0002e650       _jWrtScanlines             1002f650 f   jcapistd.obj
+ 0001:0002e780       _jWrtRawData               1002f780 f   jcapistd.obj
+ 0001:0002e8c0       _jICCoefC                  1002f8c0 f   jccoefct.obj
+ 0001:0002f2c0       _jICColor                  100302c0 f   jccolor.obj
+ 0001:0002fca0       _jIFDCT                    10030ca0 f   jcdctmgr.obj
+ 0001:00030740       _jMkCDerived               10031740 f   jchuff.obj
+ 0001:00030a30       _jGenOptTbl                10031a30 f   jchuff.obj
+ 0001:00030e10       _jIHEncoder                10031e10 f   jchuff.obj
+ 0001:00031c50       _jICompress                10032c50 f   jcinit.obj
+ 0001:00031d70       _jICMainC                  10032d70 f   jcmainct.obj
+ 0001:00031fb0       _jIMWriter                 10032fb0 f   jcmarker.obj
+ 0001:00032cc0       _jICMaster                 10033cc0 f   jcmaster.obj
+ 0001:00033fd0       _jAddQuantTable            10034fd0 f   jcparam.obj
+ 0001:000340f0       _jSetLQuality              100350f0 f   jcparam.obj
+ 0001:00034130       _jQualityScaling           10035130 f   jcparam.obj
+ 0001:00034180       _jSetQuality               10035180 f   jcparam.obj
+ 0001:000341b0       _jSetDefaults              100351b0 f   jcparam.obj
+ 0001:00034490       _jDefColorspace            10035490 f   jcparam.obj
+ 0001:00034550       _jSetColorspace            10035550 f   jcparam.obj
+ 0001:00034b70       _jSimProgress              10035b70 f   jcparam.obj
+ 0001:00034f80       _jIPHEncoder               10035f80 f   jcphuff.obj
+ 0001:00036210       _jICPrepC                  10037210 f   jcprepct.obj
+ 0001:000369a0       _jIDownsampler             100379a0 f   jcsample.obj
+ 0001:00037670       _jWrtCoefs                 10038670 f   jctrans.obj
+ 0001:00037700       _jCopyCrit                 10038700 f   jctrans.obj
+ 0001:00037f10       _jReadCoefs                10038f10 f   jdtrans.obj
+ 0001:00038170       _jFDfloat                  10039170 f   jfdctflt.obj
+ 0001:000384e0       _jFDifast                  100394e0 f   jfdctfst.obj
+ 0001:00038870       _jFDislow                  10039870 f   jfdctint.obj
+ 0001:00038d14       _memcpy                    10039d14 f   MSVCRT:MSVCR71.dll
+ 0001:00038d1a       _memcmp                    10039d1a f   MSVCRT:MSVCR71.dll
+ 0001:00038d20       _memset                    10039d20 f   MSVCRT:MSVCR71.dll
+ 0001:00038d26       __setjmp3                  10039d26 f   MSVCRT:MSVCR71.dll
+ 0001:00038d30       _strlen                    10039d30 f   MSVCRT:MSVCR71.dll
+ 0001:00038d40       __alloca_probe             10039d40     MSVCRT:chkstk.obj
+ 0001:00038d40       __chkstk                   10039d40 f   MSVCRT:chkstk.obj
+ 0001:00038d7e       _fabs                      10039d7e f   MSVCRT:MSVCR71.dll
+ 0001:00038d84       _pow                       10039d84 f   MSVCRT:MSVCR71.dll
+ 0001:00038d8c       __ftol2                    10039d8c f   MSVCRT:ftol2.obj
+ 0001:00038e02       _strcpy                    10039e02 f   MSVCRT:MSVCR71.dll
+ 0001:00038e08       _strcat                    10039e08 f   MSVCRT:MSVCR71.dll
+ 0001:00038e0e       __CRT_INIT@12              10039e0e f   MSVCRT:crtdll.obj
+ 0001:00038ecc       __DllMainCRTStartup@12     10039ecc f   MSVCRT:crtdll.obj
+ 0001:00038fb0       __initterm                 10039fb0 f   MSVCRT:MSVCR71.dll
+ 0001:00038fb6       __onexit                   10039fb6 f   MSVCRT:atonexit.obj
+ 0001:00038fdc       _atexit                    10039fdc f   MSVCRT:atonexit.obj
+ 0001:00038fee       __RTC_Initialize           10039fee f   MSVCRT:initsect.obj
+ 0001:00039032       __RTC_Terminate            1003a032 f   MSVCRT:initsect.obj
+ 0001:00039076       ___CppXcptFilter           1003a076 f   MSVCRT:MSVCR71.dll
+ 0001:0003907c       _DllMain@12                1003a07c f   MSVCRT:dllmain.obj
+ 0001:0003909c       __SEH_prolog               1003a09c f   MSVCRT:sehprolg.obj
+ 0001:000390d7       __SEH_epilog               1003a0d7 f   MSVCRT:sehprolg.obj
+ 0001:000390e8       __except_handler3          1003a0e8 f   MSVCRT:MSVCR71.dll
+ 0001:000390ee       ___dllonexit               1003a0ee f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__CreateCompatibleDC@4 1003b000     gdi32:GDI32.dll
+ 0002:00000004       __imp__StretchDIBits@52    1003b004     gdi32:GDI32.dll
+ 0002:00000008       __imp__RealizePalette@4    1003b008     gdi32:GDI32.dll
+ 0002:0000000c       __imp__SelectPalette@12    1003b00c     gdi32:GDI32.dll
+ 0002:00000010       __imp__CreatePalette@4     1003b010     gdi32:GDI32.dll
+ 0002:00000014       __imp__CombineRgn@16       1003b014     gdi32:GDI32.dll
+ 0002:00000018       __imp__CreateRectRgn@16    1003b018     gdi32:GDI32.dll
+ 0002:0000001c       __imp__DeleteDC@4          1003b01c     gdi32:GDI32.dll
+ 0002:00000020       __imp__DeleteObject@4      1003b020     gdi32:GDI32.dll
+ 0002:00000024       __imp__SelectObject@8      1003b024     gdi32:GDI32.dll
+ 0002:00000028       __imp__CreateDIBSection@24 1003b028     gdi32:GDI32.dll
+ 0002:0000002c       __imp__GetDeviceCaps@8     1003b02c     gdi32:GDI32.dll
+ 0002:00000030       __imp__ExtCreateRegion@12  1003b030     gdi32:GDI32.dll
+ 0002:00000034       \177GDI32_NULL_THUNK_DATA  1003b034     gdi32:GDI32.dll
+ 0002:00000038       __imp__DisableThreadLibraryCalls@4 1003b038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__CreateThread@24     1003b03c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__LoadLibraryA@4      1003b040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__InitializeCriticalSection@4 1003b044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__GetProcAddress@8    1003b048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__LeaveCriticalSection@4 1003b04c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__EnterCriticalSection@4 1003b050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__GetModuleHandleA@4  1003b054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__GetTickCount@0      1003b058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__MultiByteToWideChar@24 1003b05c     kernel32:KERNEL32.dll
+ 0002:00000060       \177KERNEL32_NULL_THUNK_DATA 1003b060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__fclose              1003b064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp__close               1003b068     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp___close              1003b068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp___onexit             1003b06c     MSVCRT:MSVCR71.dll
+ 0002:00000070       __imp____dllonexit         1003b070     MSVCRT:MSVCR71.dll
+ 0002:00000074       __imp___except_handler3    1003b074     MSVCRT:MSVCR71.dll
+ 0002:00000078       __imp____CppXcptFilter     1003b078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp___adjust_fdiv        1003b07c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp___initterm           1003b080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp__getenv              1003b084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp__sscanf              1003b088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp__exit                1003b08c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp__isgraph             1003b090     MSVCRT:MSVCR71.dll
+ 0002:00000094       __imp__strcat              1003b094     MSVCRT:MSVCR71.dll
+ 0002:00000098       __imp__fputc               1003b098     MSVCRT:MSVCR71.dll
+ 0002:0000009c       __imp__rewind              1003b09c     MSVCRT:MSVCR71.dll
+ 0002:000000a0       __imp__fseek               1003b0a0     MSVCRT:MSVCR71.dll
+ 0002:000000a4       __imp__fflush              1003b0a4     MSVCRT:MSVCR71.dll
+ 0002:000000a8       __imp__vsprintf            1003b0a8     MSVCRT:MSVCR71.dll
+ 0002:000000ac       __imp__fwrite              1003b0ac     MSVCRT:MSVCR71.dll
+ 0002:000000b0       __imp__sprintf             1003b0b0     MSVCRT:MSVCR71.dll
+ 0002:000000b4       __imp__strcpy              1003b0b4     MSVCRT:MSVCR71.dll
+ 0002:000000b8       __imp___errno              1003b0b8     MSVCRT:MSVCR71.dll
+ 0002:000000bc       __imp___fdopen             1003b0bc     MSVCRT:MSVCR71.dll
+ 0002:000000bc       __imp__fdopen              1003b0bc     MSVCRT:MSVCR71.dll
+ 0002:000000c0       __imp__ftell               1003b0c0     MSVCRT:MSVCR71.dll
+ 0002:000000c4       __imp__putc                1003b0c4     MSVCRT:MSVCR71.dll
+ 0002:000000c8       __imp__calloc              1003b0c8     MSVCRT:MSVCR71.dll
+ 0002:000000cc       __imp___iob                1003b0cc     MSVCRT:MSVCR71.dll
+ 0002:000000d0       __imp__fprintf             1003b0d0     MSVCRT:MSVCR71.dll
+ 0002:000000d4       __imp__realloc             1003b0d4     MSVCRT:MSVCR71.dll
+ 0002:000000d8       __imp__malloc              1003b0d8     MSVCRT:MSVCR71.dll
+ 0002:000000dc       __imp__free                1003b0dc     MSVCRT:MSVCR71.dll
+ 0002:000000e0       __imp__memcpy              1003b0e0     MSVCRT:MSVCR71.dll
+ 0002:000000e4       __imp__memcmp              1003b0e4     MSVCRT:MSVCR71.dll
+ 0002:000000e8       __imp__memset              1003b0e8     MSVCRT:MSVCR71.dll
+ 0002:000000ec       __imp__fopen               1003b0ec     MSVCRT:MSVCR71.dll
+ 0002:000000f0       __imp__fread               1003b0f0     MSVCRT:MSVCR71.dll
+ 0002:000000f4       __imp__ungetc              1003b0f4     MSVCRT:MSVCR71.dll
+ 0002:000000f8       __imp__fgetc               1003b0f8     MSVCRT:MSVCR71.dll
+ 0002:000000fc       __imp___open               1003b0fc     MSVCRT:MSVCR71.dll
+ 0002:000000fc       __imp__open                1003b0fc     MSVCRT:MSVCR71.dll
+ 0002:00000100       __imp___setjmp3            1003b100     MSVCRT:MSVCR71.dll
+ 0002:00000104       __imp__longjmp             1003b104     MSVCRT:MSVCR71.dll
+ 0002:00000108       __imp__strlen              1003b108     MSVCRT:MSVCR71.dll
+ 0002:0000010c       __imp__strncpy             1003b10c     MSVCRT:MSVCR71.dll
+ 0002:00000110       __imp__abort               1003b110     MSVCRT:MSVCR71.dll
+ 0002:00000114       __imp__fabs                1003b114     MSVCRT:MSVCR71.dll
+ 0002:00000118       __imp__pow                 1003b118     MSVCRT:MSVCR71.dll
+ 0002:0000011c       __imp__strncmp             1003b11c     MSVCRT:MSVCR71.dll
+ 0002:00000120       \177MSVCR71_NULL_THUNK_DATA 1003b120     MSVCRT:MSVCR71.dll
+ 0002:00000124       __imp__SetTimer@16         1003b124     user32:USER32.dll
+ 0002:00000128       __imp__SetCursor@4         1003b128     user32:USER32.dll
+ 0002:0000012c       __imp__LoadCursorA@8       1003b12c     user32:USER32.dll
+ 0002:00000130       __imp__SetCursorPos@8      1003b130     user32:USER32.dll
+ 0002:00000134       __imp__WindowFromPoint@8   1003b134     user32:USER32.dll
+ 0002:00000138       __imp__GetCursorPos@4      1003b138     user32:USER32.dll
+ 0002:0000013c       __imp__ShowWindow@8        1003b13c     user32:USER32.dll
+ 0002:00000140       __imp__IsWindowVisible@4   1003b140     user32:USER32.dll
+ 0002:00000144       __imp__UpdateWindow@4      1003b144     user32:USER32.dll
+ 0002:00000148       __imp__SetWindowRgn@12     1003b148     user32:USER32.dll
+ 0002:0000014c       __imp__InvalidateRect@12   1003b14c     user32:USER32.dll
+ 0002:00000150       __imp__ReleaseDC@8         1003b150     user32:USER32.dll
+ 0002:00000154       __imp__GetWindowRect@8     1003b154     user32:USER32.dll
+ 0002:00000158       __imp__GetDC@4             1003b158     user32:USER32.dll
+ 0002:0000015c       __imp__PostMessageA@16     1003b15c     user32:USER32.dll
+ 0002:00000160       __imp__GetMessageA@16      1003b160     user32:USER32.dll
+ 0002:00000164       __imp__TranslateMessage@4  1003b164     user32:USER32.dll
+ 0002:00000168       __imp__DispatchMessageA@4  1003b168     user32:USER32.dll
+ 0002:0000016c       __imp__DestroyWindow@4     1003b16c     user32:USER32.dll
+ 0002:00000170       __imp__GetWindowLongA@8    1003b170     user32:USER32.dll
+ 0002:00000174       __imp__BeginPaint@8        1003b174     user32:USER32.dll
+ 0002:00000178       __imp__EndPaint@8          1003b178     user32:USER32.dll
+ 0002:0000017c       __imp__PostQuitMessage@4   1003b17c     user32:USER32.dll
+ 0002:00000180       __imp__DefWindowProcA@16   1003b180     user32:USER32.dll
+ 0002:00000184       __imp__RegisterClassExA@4  1003b184     user32:USER32.dll
+ 0002:00000188       __imp__CreateWindowExA@48  1003b188     user32:USER32.dll
+ 0002:0000018c       __imp__SetWindowLongA@12   1003b18c     user32:USER32.dll
+ 0002:00000190       __imp__KillTimer@8         1003b190     user32:USER32.dll
+ 0002:00000194       __imp__GetSystemMetrics@4  1003b194     user32:USER32.dll
+ 0002:00000198       __imp__MoveWindow@24       1003b198     user32:USER32.dll
+ 0002:0000019c       \177USER32_NULL_THUNK_DATA 1003b19c     user32:USER32.dll
+ 0002:000001c0       _baseDitherMatrix          1003b1c0     splashscreen_gfx_impl.obj
+ 0002:000002f0       __real@400199999999999a    1003b2f0     splashscreen_png.obj
+ 0002:000002f8       _png_libpng_ver            1003b2f8     png.obj
+ 0002:0000030c       _png_sig                   1003b30c     png.obj
+ 0002:00000314       _png_IHDR                  1003b314     png.obj
+ 0002:0000031c       _png_IDAT                  1003b31c     png.obj
+ 0002:00000324       _png_IEND                  1003b324     png.obj
+ 0002:0000032c       _png_PLTE                  1003b32c     png.obj
+ 0002:00000334       _png_bKGD                  1003b334     png.obj
+ 0002:0000033c       _png_cHRM                  1003b33c     png.obj
+ 0002:00000344       _png_gAMA                  1003b344     png.obj
+ 0002:0000034c       _png_hIST                  1003b34c     png.obj
+ 0002:00000354       _png_iCCP                  1003b354     png.obj
+ 0002:0000035c       _png_iTXt                  1003b35c     png.obj
+ 0002:00000364       _png_oFFs                  1003b364     png.obj
+ 0002:0000036c       _png_pCAL                  1003b36c     png.obj
+ 0002:00000374       _png_sCAL                  1003b374     png.obj
+ 0002:0000037c       _png_pHYs                  1003b37c     png.obj
+ 0002:00000384       _png_sBIT                  1003b384     png.obj
+ 0002:0000038c       _png_sPLT                  1003b38c     png.obj
+ 0002:00000394       _png_sRGB                  1003b394     png.obj
+ 0002:0000039c       _png_tEXt                  1003b39c     png.obj
+ 0002:000003a4       _png_tIME                  1003b3a4     png.obj
+ 0002:000003ac       _png_tRNS                  1003b3ac     png.obj
+ 0002:000003b4       _png_zTXt                  1003b3b4     png.obj
+ 0002:000003bc       _png_pass_start            1003b3bc     png.obj
+ 0002:000003d8       _png_pass_inc              1003b3d8     png.obj
+ 0002:000003f4       _png_pass_ystart           1003b3f4     png.obj
+ 0002:00000410       _png_pass_yinc             1003b410     png.obj
+ 0002:0000042c       _png_pass_mask             1003b42c     png.obj
+ 0002:00000448       _png_pass_dsp_mask         1003b448     png.obj
+ 0002:00000474       __real@00000000            1003b474     pngget.obj
+ 0002:00000478       __real@3fa999999999999a    1003b478     pngrtran.obj
+ 0002:00000480       __real@3ff0000000000000    1003b480     pngrtran.obj
+ 0002:00000488       __real@40efffe000000000    1003b488     pngrtran.obj
+ 0002:00000490       __real@4070000000000000    1003b490     pngrtran.obj
+ 0002:00000498       __real@3fe0000000000000    1003b498     pngrtran.obj
+ 0002:000004a0       __real@406fe00000000000    1003b4a0     pngrtran.obj
+ 0002:000004a8       __real@3eb0c6f7a0b5ed8d    1003b4a8     pngrtran.obj
+ 0002:000004b0       __real@0000000000000000    1003b4b0     pngrtran.obj
+ 0002:000004b8       __real@47c35000            1003b4b8     pngrutil.obj
+ 0002:000004c0       __real@40f86a0000000000    1003b4c0     pngset.obj
+ 0002:000004c8       __real@40d4f8b51eb851ec    1003b4c8     pngset.obj
+ 0002:000004d0       _deflate_copyright         1003b4d0     deflate.obj
+ 0002:000005d0       _inflate_copyright         1003b5d0     inftrees.obj
+ 0002:00000e38       __dist_code                1003be38     trees.obj
+ 0002:00001038       __length_code              1003c038     trees.obj
+ 0002:000017e8       _jMsgTable                 1003c7e8     jerror.obj
+ 0002:000019dc       __real@c0273d75            1003c9dc     jidctflt.obj
+ 0002:000019e0       __real@3f8a8bd4            1003c9e0     jidctflt.obj
+ 0002:000019e4       __real@3fec835e            1003c9e4     jidctflt.obj
+ 0002:000019e8       __real@3fb504f3            1003c9e8     jidctflt.obj
+ 0002:00001b10       _jZAGTable                 1003cb10     jutils.obj
+ 0002:00001d10       __real@4020000000000000    1003cd10     jcdctmgr.obj
+ 0002:00001d18       __real@46800100            1003cd18     jcdctmgr.obj
+ 0002:000020d4       __real@3fa73d75            1003d0d4     jfdctflt.obj
+ 0002:000020d8       __real@3f0a8bd4            1003d0d8     jfdctflt.obj
+ 0002:000020dc       __real@3ec3ef15            1003d0dc     jfdctflt.obj
+ 0002:000020e0       __real@3f3504f3            1003d0e0     jfdctflt.obj
+ 0002:00002118       __load_config_used         1003d118     MSVCRT:loadcfg.obj
+ 0002:000021e0       ___safe_se_handler_table   1003d1e0     <linker-defined>
+ 0002:000021e4       ___rtc_iaa                 1003d1e4     MSVCRT:initsect.obj
+ 0002:000021e8       ___rtc_izz                 1003d1e8     MSVCRT:initsect.obj
+ 0002:000021ec       ___rtc_taa                 1003d1ec     MSVCRT:initsect.obj
+ 0002:000021f0       ___rtc_tzz                 1003d1f0     MSVCRT:initsect.obj
+ 0002:000021f4       __IMPORT_DESCRIPTOR_KERNEL32 1003d1f4     kernel32:KERNEL32.dll
+ 0002:00002208       __IMPORT_DESCRIPTOR_USER32 1003d208     user32:USER32.dll
+ 0002:0000221c       __IMPORT_DESCRIPTOR_GDI32  1003d21c     gdi32:GDI32.dll
+ 0002:00002230       __IMPORT_DESCRIPTOR_MSVCR71 1003d230     MSVCRT:MSVCR71.dll
+ 0002:00002244       __NULL_IMPORT_DESCRIPTOR   1003d244     kernel32:KERNEL32.dll
+ 0003:00000000       ___xc_a                    1003e000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    1003e004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    1003e008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1003e00c     MSVCRT:cinitexe.obj
+ 0003:00001cc8       _inflate_mask              1003fcc8     infutil.obj
+ 0003:00002084       _z_errmsg                  10040084     zutil.obj
+ 0003:00003360       ___security_cookie         10041360     MSVCRT:seccook.obj
+ 0003:000060dc       _splashIsVisible           100440dc     splashscreen_impl.obj
+ 0003:00006168       __GifError                 10044168     gif_err.obj
+ 0003:00006178       _z_verbose                 10044178     zutil.obj
+ 0003:00006180       __adjust_fdiv              10044180     <common>
+ 0003:00006184       ___onexitend               10044184     <common>
+ 0003:00006188       ___onexitbegin             10044188     <common>
+ 0003:0000618c       __pRawDllMain              1004418c     <common>
+
+ entry point at        0001:00038ecc
+
+ Static symbols
+
+ 0001:00002990       _SplashLoadStream          10003990 f   splashscreen_impl.obj
+ 0001:00002b90       _readFile                  10003b90 f   splashscreen_impl.obj
+ 0001:00002bc0       _peekFile                  10003bc0 f   splashscreen_impl.obj
+ 0001:00002c10       _closeFile                 10003c10 f   splashscreen_impl.obj
+ 0001:00002c70       _readMem                   10003c70 f   splashscreen_impl.obj
+ 0001:00002cd0       _peekMem                   10003cd0 f   splashscreen_impl.obj
+ 0001:00002d00       _closeMem                  10003d00 f   splashscreen_impl.obj
+ 0001:000030b0       _set_stream_src            100040b0 f   splashscreen_jpeg.obj
+ 0001:00003160       _stream_init_source        10004160 f   splashscreen_jpeg.obj
+ 0001:00003180       _stream_fill_input_buffer  10004180 f   splashscreen_jpeg.obj
+ 0001:00003240       _stream_skip_input_data    10004240 f   splashscreen_jpeg.obj
+ 0001:000032a0       _stream_term_source        100042a0 f   splashscreen_jpeg.obj
+ 0001:000032b0       _my_error_exit             100042b0 f   splashscreen_jpeg.obj
+ 0001:00004260       _SplashWndProc@16          10005260 f   splashscreen_sys.obj
+ 0001:000050b0       _png_format_buffer         100060b0 f   pngerror.obj
+ 0001:00005210       _png_default_error         10006210 f   pngerror.obj
+ 0001:00005230       _png_default_warning       10006230 f   pngerror.obj
+ 0001:0000fa60       _DGifGetWord               10010a60 f   dgif_lib.obj
+ 0001:0000fc50       _DGifSetupDecompress       10010c50 f   dgif_lib.obj
+ 0001:0000fd80       _DGifDecompressLine        10010d80 f   dgif_lib.obj
+ 0001:000100e0       _DGifGetPrefixChar         100110e0 f   dgif_lib.obj
+ 0001:000101e0       _DGifDecompressInput       100111e0 f   dgif_lib.obj
+ 0001:000102e0       _DGifBufferedInput         100112e0 f   dgif_lib.obj
+ 0001:00011850       _putShortMSB               10012850 f   deflate.obj
+ 0001:000118a0       _flush_pending             100128a0 f   deflate.obj
+ 0001:00011ce0       _lm_init                   10012ce0 f   deflate.obj
+ 0001:00011dd0       _deflate_stored            10012dd0 f   deflate.obj
+ 0001:000120c0       _fill_window               100130c0 f   deflate.obj
+ 0001:00012300       _read_buf                  10013300 f   deflate.obj
+ 0001:000123a0       _deflate_fast              100133a0 f   deflate.obj
+ 0001:00012810       _longest_match             10013810 f   deflate.obj
+ 0001:00012bc0       _check_match               10013bc0 f   deflate.obj
+ 0001:00012cf0       _deflate_slow              10013cf0 f   deflate.obj
+ 0001:00013300       _gz_open                   10014300 f   gzio.obj
+ 0001:00013790       _check_header              10014790 f   gzio.obj
+ 0001:00013980       _get_byte                  10014980 f   gzio.obj
+ 0001:00013a40       _destroy                   10014a40 f   gzio.obj
+ 0001:00014170       _do_flush                  10015170 f   gzio.obj
+ 0001:000145c0       _getLong                   100155c0 f   gzio.obj
+ 0001:000146d0       _putLong                   100156d0 f   gzio.obj
+ 0001:000183d0       _huft_build                100193d0 f   inftrees.obj
+ 0001:00019040       _tr_static_init            1001a040 f   trees.obj
+ 0001:00019050       _init_block                1001a050 f   trees.obj
+ 0001:00019180       _send_bits                 1001a180 f   trees.obj
+ 0001:00019730       _build_tree                1001a730 f   trees.obj
+ 0001:00019ad0       _pqdownheap                1001aad0 f   trees.obj
+ 0001:00019c60       _gen_bitlen                1001ac60 f   trees.obj
+ 0001:00019fd0       _gen_codes                 1001afd0 f   trees.obj
+ 0001:0001a150       _build_bl_tree             1001b150 f   trees.obj
+ 0001:0001a240       _scan_tree                 1001b240 f   trees.obj
+ 0001:0001a3e0       _send_all_trees            1001b3e0 f   trees.obj
+ 0001:0001a5c0       _send_tree                 1001b5c0 f   trees.obj
+ 0001:0001aa40       _compress_block            1001ba40 f   trees.obj
+ 0001:0001ad10       _set_data_type             1001bd10 f   trees.obj
+ 0001:0001adc0       _bi_reverse                1001bdc0 f   trees.obj
+ 0001:0001ae00       _bi_flush                  1001be00 f   trees.obj
+ 0001:0001aef0       _bi_windup                 1001bef0 f   trees.obj
+ 0001:0001afc0       _copy_block                1001bfc0 f   trees.obj
+ 0001:0001bb30       _default_decompress_parms  1001cb30 f   jdapimin.obj
+ 0001:0001c150       _output_pass_setup         1001d150 f   jdapistd.obj
+ 0001:0001c790       _start_input_pass          1001d790 f   jdcoefct.obj
+ 0001:0001c7b0       _start_iMCU_row            1001d7b0 f   jdcoefct.obj
+ 0001:0001c830       _start_output_pass         1001d830 f   jdcoefct.obj
+ 0001:0001c890       _decompress_onepass        1001d890 f   jdcoefct.obj
+ 0001:0001cb40       _dummy_consume_data        1001db40 f   jdcoefct.obj
+ 0001:0001cb50       _consume_data              1001db50 f   jdcoefct.obj
+ 0001:0001cd90       _decompress_data           1001dd90 f   jdcoefct.obj
+ 0001:0001cfb0       _smoothing_ok              1001dfb0 f   jdcoefct.obj
+ 0001:0001d120       _decompress_smooth_data    1001e120 f   jdcoefct.obj
+ 0001:0001df70       _build_ycc_rgb_table       1001ef70 f   jdcolor.obj
+ 0001:0001e0a0       _ycc_rgb_convert           1001f0a0 f   jdcolor.obj
+ 0001:0001e1f0       _null_convert              1001f1f0 f   jdcolor.obj
+ 0001:0001e2a0       _grayscale_convert         1001f2a0 f   jdcolor.obj
+ 0001:0001e2d0       _gray_rgb_convert          1001f2d0 f   jdcolor.obj
+ 0001:0001e370       _ycck_cmyk_convert         1001f370 f   jdcolor.obj
+ 0001:0001e4f0       _start_pass_dcolor         1001f4f0 f   jdcolor.obj
+ 0001:0001e5b0       _start_pass                1001f5b0 f   jddctmgr.obj
+ 0001:0001f080       _start_pass_huff_decoder   10020080 f   jdhuff.obj
+ 0001:0001f270       _decode_mcu                10020270 f   jdhuff.obj
+ 0001:0001f880       _process_restart           10020880 f   jdhuff.obj
+ 0001:0001f9b0       _start_input_pass          100209b0 f   jdinput.obj
+ 0001:0001fa10       _per_scan_setup            10020a10 f   jdinput.obj
+ 0001:0001fcc0       _latch_quant_tables        10020cc0 f   jdinput.obj
+ 0001:0001fda0       _finish_input_pass         10020da0 f   jdinput.obj
+ 0001:0001fdc0       _consume_markers           10020dc0 f   jdinput.obj
+ 0001:0001fed0       _initial_setup             10020ed0 f   jdinput.obj
+ 0001:000201f0       _reset_input_controller    100211f0 f   jdinput.obj
+ 0001:000203a0       _alloc_funny_pointers      100213a0 f   jdmainct.obj
+ 0001:000204c0       _start_pass_main           100214c0 f   jdmainct.obj
+ 0001:00020580       _make_funny_pointers       10021580 f   jdmainct.obj
+ 0001:00020700       _process_data_simple_main  10021700 f   jdmainct.obj
+ 0001:000207b0       _process_data_context_main 100217b0 f   jdmainct.obj
+ 0001:00020990       _set_wraparound_pointers   10021990 f   jdmainct.obj
+ 0001:00020ac0       _set_bottom_pointers       10021ac0 f   jdmainct.obj
+ 0001:00020bb0       _process_data_crank_post   10021bb0 f   jdmainct.obj
+ 0001:00020d60       _next_marker               10021d60 f   jdmarker.obj
+ 0001:00021030       _get_interesting_appn      10022030 f   jdmarker.obj
+ 0001:00021250       _examine_app0              10022250 f   jdmarker.obj
+ 0001:000215f0       _examine_app14             100225f0 f   jdmarker.obj
+ 0001:00021740       _save_marker               10022740 f   jdmarker.obj
+ 0001:00021b00       _skip_variable             10022b00 f   jdmarker.obj
+ 0001:00021c40       _read_markers              10022c40 f   jdmarker.obj
+ 0001:00022080       _get_soi                   10023080 f   jdmarker.obj
+ 0001:000221b0       _get_sof                   100231b0 f   jdmarker.obj
+ 0001:000227a0       _get_sos                   100237a0 f   jdmarker.obj
+ 0001:00022cb0       _get_dht                   10023cb0 f   jdmarker.obj
+ 0001:00023150       _get_dqt                   10024150 f   jdmarker.obj
+ 0001:00023590       _get_dri                   10024590 f   jdmarker.obj
+ 0001:00023770       _first_marker              10024770 f   jdmarker.obj
+ 0001:000238a0       _read_restart_marker       100248a0 f   jdmarker.obj
+ 0001:00023970       _reset_marker_reader       10024970 f   jdmarker.obj
+ 0001:00023eb0       _use_merged_upsample       10024eb0 f   jdmaster.obj
+ 0001:000240d0       _master_selection          100250d0 f   jdmaster.obj
+ 0001:00024450       _prepare_range_limit_table 10025450 f   jdmaster.obj
+ 0001:00024540       _prepare_for_output_pass   10025540 f   jdmaster.obj
+ 0001:00024740       _finish_output_pass        10025740 f   jdmaster.obj
+ 0001:00024840       _build_ycc_rgb_table       10025840 f   jdmerge.obj
+ 0001:00024970       _start_pass_merged_upsample 10025970 f   jdmerge.obj
+ 0001:000249a0       _merged_2v_upsample        100259a0 f   jdmerge.obj
+ 0001:00024ac0       _merged_1v_upsample        10025ac0 f   jdmerge.obj
+ 0001:00024b20       _h2v1_merged_upsample      10025b20 f   jdmerge.obj
+ 0001:00024d50       _h2v2_merged_upsample      10025d50 f   jdmerge.obj
+ 0001:00025150       _start_pass_phuff_decoder  10026150 f   jdphuff.obj
+ 0001:000254e0       _decode_mcu_DC_first       100264e0 f   jdphuff.obj
+ 0001:000257d0       _process_restart           100267d0 f   jdphuff.obj
+ 0001:000258a0       _decode_mcu_AC_first       100268a0 f   jdphuff.obj
+ 0001:00025c00       _decode_mcu_DC_refine      10026c00 f   jdphuff.obj
+ 0001:00025d50       _decode_mcu_AC_refine      10026d50 f   jdphuff.obj
+ 0001:000264e0       _start_pass_dpost          100274e0 f   jdpostct.obj
+ 0001:00026600       _post_process_1pass        10027600 f   jdpostct.obj
+ 0001:000266b0       _post_process_prepass      100276b0 f   jdpostct.obj
+ 0001:000267b0       _post_process_2pass        100277b0 f   jdpostct.obj
+ 0001:00026b90       _start_pass_upsample       10027b90 f   jdsample.obj
+ 0001:00026bc0       _sep_upsample              10027bc0 f   jdsample.obj
+ 0001:00026d20       _fullsize_upsample         10027d20 f   jdsample.obj
+ 0001:00026d30       _noop_upsample             10027d30 f   jdsample.obj
+ 0001:00026d40       _int_upsample              10027d40 f   jdsample.obj
+ 0001:00026e60       _h2v1_upsample             10027e60 f   jdsample.obj
+ 0001:00026f00       _h2v2_upsample             10027f00 f   jdsample.obj
+ 0001:00026fd0       _h2v1_fancy_upsample       10027fd0 f   jdsample.obj
+ 0001:00027120       _h2v2_fancy_upsample       10028120 f   jdsample.obj
+ 0001:000273b0       _error_exit                100283b0 f   jerror.obj
+ 0001:000273d0       _output_message            100283d0 f   jerror.obj
+ 0001:00027420       _emit_message              10028420 f   jerror.obj
+ 0001:00027480       _format_message            10028480 f   jerror.obj
+ 0001:00027490       _reset_error_mgr           10028490 f   jerror.obj
+ 0001:00029e00       _alloc_small               1002ae00 f   jmemmgr.obj
+ 0001:00029fd0       _out_of_memory             1002afd0 f   jmemmgr.obj
+ 0001:0002a000       _alloc_large               1002b000 f   jmemmgr.obj
+ 0001:0002a0f0       _alloc_sarray              1002b0f0 f   jmemmgr.obj
+ 0001:0002a200       _alloc_barray              1002b200 f   jmemmgr.obj
+ 0001:0002a310       _request_virt_sarray       1002b310 f   jmemmgr.obj
+ 0001:0002a3c0       _request_virt_barray       1002b3c0 f   jmemmgr.obj
+ 0001:0002a470       _realize_virt_arrays       1002b470 f   jmemmgr.obj
+ 0001:0002a750       _access_virt_sarray        1002b750 f   jmemmgr.obj
+ 0001:0002a940       _do_sarray_io              1002b940 f   jmemmgr.obj
+ 0001:0002aa90       _access_virt_barray        1002ba90 f   jmemmgr.obj
+ 0001:0002ac80       _do_barray_io              1002bc80 f   jmemmgr.obj
+ 0001:0002add0       _free_pool                 1002bdd0 f   jmemmgr.obj
+ 0001:0002af90       _self_destruct             1002bf90 f   jmemmgr.obj
+ 0001:0002b1b0       _create_colormap           1002c1b0 f   jquant1.obj
+ 0001:0002b370       _select_ncolors            1002c370 f   jquant1.obj
+ 0001:0002b4f0       _output_value              1002c4f0 f   jquant1.obj
+ 0001:0002b510       _create_colorindex         1002c510 f   jquant1.obj
+ 0001:0002b6c0       _largest_input_value       1002c6c0 f   jquant1.obj
+ 0001:0002b6e0       _alloc_fs_workspace        1002c6e0 f   jquant1.obj
+ 0001:0002b750       _start_pass_1_quant        1002c750 f   jquant1.obj
+ 0001:0002b8b0       _create_odither_tables     1002c8b0 f   jquant1.obj
+ 0001:0002b960       _make_odither_array        1002c960 f   jquant1.obj
+ 0001:0002ba20       _color_quantize            1002ca20 f   jquant1.obj
+ 0001:0002bb00       _color_quantize3           1002cb00 f   jquant1.obj
+ 0001:0002bc00       _quantize_ord_dither       1002cc00 f   jquant1.obj
+ 0001:0002bd40       _quantize3_ord_dither      1002cd40 f   jquant1.obj
+ 0001:0002bec0       _quantize_fs_dither        1002cec0 f   jquant1.obj
+ 0001:0002c100       _finish_pass_1_quant       1002d100 f   jquant1.obj
+ 0001:0002c110       _new_color_map_1_quant     1002d110 f   jquant1.obj
+ 0001:0002c300       _init_error_limit          1002d300 f   jquant2.obj
+ 0001:0002c400       _start_pass_2_quant        1002d400 f   jquant2.obj
+ 0001:0002c5a0       _prescan_quantize          1002d5a0 f   jquant2.obj
+ 0001:0002c680       _pass2_no_dither           1002d680 f   jquant2.obj
+ 0001:0002c7a0       _fill_inverse_cmap         1002d7a0 f   jquant2.obj
+ 0001:0002c980       _find_nearby_colors        1002d980 f   jquant2.obj
+ 0001:0002cdb0       _find_best_colors          1002ddb0 f   jquant2.obj
+ 0001:0002d070       _pass2_fs_dither           1002e070 f   jquant2.obj
+ 0001:0002d440       _finish_pass1              1002e440 f   jquant2.obj
+ 0001:0002d480       _select_colors             1002e480 f   jquant2.obj
+ 0001:0002d580       _update_box                1002e580 f   jquant2.obj
+ 0001:0002da70       _median_cut                1002ea70 f   jquant2.obj
+ 0001:0002dc50       _find_biggest_color_pop    1002ec50 f   jquant2.obj
+ 0001:0002dcc0       _find_biggest_volume       1002ecc0 f   jquant2.obj
+ 0001:0002dd20       _compute_color             1002ed20 f   jquant2.obj
+ 0001:0002dec0       _finish_pass2              1002eec0 f   jquant2.obj
+ 0001:0002ded0       _new_color_map_2_quant     1002eed0 f   jquant2.obj
+ 0001:0002e9e0       _start_pass_coef           1002f9e0 f   jccoefct.obj
+ 0001:0002ead0       _start_iMCU_row            1002fad0 f   jccoefct.obj
+ 0001:0002eb50       _compress_data             1002fb50 f   jccoefct.obj
+ 0001:0002ee10       _compress_first_pass       1002fe10 f   jccoefct.obj
+ 0001:0002f0c0       _compress_output           100300c0 f   jccoefct.obj
+ 0001:0002f660       _rgb_ycc_start             10030660 f   jccolor.obj
+ 0001:0002f780       _rgb_ycc_convert           10030780 f   jccolor.obj
+ 0001:0002f8e0       _rgb_gray_convert          100308e0 f   jccolor.obj
+ 0001:0002f9c0       _cmyk_ycck_convert         100309c0 f   jccolor.obj
+ 0001:0002fb50       _grayscale_convert         10030b50 f   jccolor.obj
+ 0001:0002fbe0       _null_convert              10030be0 f   jccolor.obj
+ 0001:0002fc90       _null_method               10030c90 f   jccolor.obj
+ 0001:0002fd90       _start_pass_fdctmgr        10030d90 f   jcdctmgr.obj
+ 0001:00030020       _forward_DCT               10031020 f   jcdctmgr.obj
+ 0001:000303d0       _forward_DCT_float         100313d0 f   jcdctmgr.obj
+ 0001:00030ea0       _start_pass_huff           10031ea0 f   jchuff.obj
+ 0001:000310b0       _encode_mcu_huff           100320b0 f   jchuff.obj
+ 0001:00031280       _encode_one_block          10032280 f   jchuff.obj
+ 0001:000314d0       _emit_bits                 100324d0 f   jchuff.obj
+ 0001:00031620       _dump_buffer               10032620 f   jchuff.obj
+ 0001:00031670       _emit_restart              10032670 f   jchuff.obj
+ 0001:00031760       _flush_bits                10032760 f   jchuff.obj
+ 0001:000317a0       _finish_pass_huff          100327a0 f   jchuff.obj
+ 0001:00031870       _encode_mcu_gather         10032870 f   jchuff.obj
+ 0001:00031990       _htest_one_block           10032990 f   jchuff.obj
+ 0001:00031b10       _finish_pass_gather        10032b10 f   jchuff.obj
+ 0001:00031e40       _start_pass_main           10032e40 f   jcmainct.obj
+ 0001:00031ec0       _process_data_simple_main  10032ec0 f   jcmainct.obj
+ 0001:00032030       _write_marker_header       10033030 f   jcmarker.obj
+ 0001:00032080       _emit_marker               10033080 f   jcmarker.obj
+ 0001:000320b0       _emit_byte                 100330b0 f   jcmarker.obj
+ 0001:00032120       _emit_2bytes               10033120 f   jcmarker.obj
+ 0001:00032160       _write_marker_byte         10033160 f   jcmarker.obj
+ 0001:00032180       _write_file_header         10033180 f   jcmarker.obj
+ 0001:000321e0       _emit_jfif_app0            100331e0 f   jcmarker.obj
+ 0001:000322e0       _emit_adobe_app14          100332e0 f   jcmarker.obj
+ 0001:000323c0       _write_frame_header        100333c0 f   jcmarker.obj
+ 0001:00032540       _emit_dqt                  10033540 f   jcmarker.obj
+ 0001:00032680       _emit_sof                  10033680 f   jcmarker.obj
+ 0001:000327b0       _write_scan_header         100337b0 f   jcmarker.obj
+ 0001:000328d0       _emit_dht                  100338d0 f   jcmarker.obj
+ 0001:00032a20       _emit_dac                  10033a20 f   jcmarker.obj
+ 0001:00032a30       _emit_dri                  10033a30 f   jcmarker.obj
+ 0001:00032a70       _emit_sos                  10033a70 f   jcmarker.obj
+ 0001:00032bd0       _write_file_trailer        10033bd0 f   jcmarker.obj
+ 0001:00032bf0       _write_tables_only         10033bf0 f   jcmarker.obj
+ 0001:00032de0       _initial_setup             10033de0 f   jcmaster.obj
+ 0001:00033120       _validate_script           10034120 f   jcmaster.obj
+ 0001:000337d0       _prepare_for_pass          100347d0 f   jcmaster.obj
+ 0001:00033a70       _select_scan_parameters    10034a70 f   jcmaster.obj
+ 0001:00033bf0       _per_scan_setup            10034bf0 f   jcmaster.obj
+ 0001:00033ee0       _pass_startup              10034ee0 f   jcmaster.obj
+ 0001:00033f20       _finish_pass_master        10034f20 f   jcmaster.obj
+ 0001:00034350       _std_huff_tables           10035350 f   jcparam.obj
+ 0001:000343d0       _add_huff_table            100353d0 f   jcparam.obj
+ 0001:00034e20       _fill_a_scan               10035e20 f   jcparam.obj
+ 0001:00034e70       _fill_scans                10035e70 f   jcparam.obj
+ 0001:00034ee0       _fill_dc_scans             10035ee0 f   jcparam.obj
+ 0001:00035000       _start_pass_phuff          10036000 f   jcphuff.obj
+ 0001:00035220       _encode_mcu_DC_first       10036220 f   jcphuff.obj
+ 0001:00035410       _emit_bits                 10036410 f   jcphuff.obj
+ 0001:00035560       _dump_buffer               10036560 f   jcphuff.obj
+ 0001:000355d0       _emit_symbol               100365d0 f   jcphuff.obj
+ 0001:00035640       _emit_restart              10036640 f   jcphuff.obj
+ 0001:00035750       _flush_bits                10036750 f   jcphuff.obj
+ 0001:00035780       _emit_eobrun               10036780 f   jcphuff.obj
+ 0001:00035850       _emit_buffered_bits        10036850 f   jcphuff.obj
+ 0001:00035890       _encode_mcu_AC_first       10036890 f   jcphuff.obj
+ 0001:00035b00       _encode_mcu_DC_refine      10036b00 f   jcphuff.obj
+ 0001:00035c30       _encode_mcu_AC_refine      10036c30 f   jcphuff.obj
+ 0001:00036080       _finish_pass_phuff         10037080 f   jcphuff.obj
+ 0001:000360f0       _finish_pass_gather_phuff  100370f0 f   jcphuff.obj
+ 0001:00036310       _start_pass_prep           10037310 f   jcprepct.obj
+ 0001:00036380       _pre_process_data          10037380 f   jcprepct.obj
+ 0001:00036590       _expand_bottom_edge        10037590 f   jcprepct.obj
+ 0001:000365e0       _pre_process_context       100375e0 f   jcprepct.obj
+ 0001:00036850       _create_context_buffer     10037850 f   jcprepct.obj
+ 0001:00036bd0       _start_pass_downsample     10037bd0 f   jcsample.obj
+ 0001:00036be0       _sep_downsample            10037be0 f   jcsample.obj
+ 0001:00036c70       _int_downsample            10037c70 f   jcsample.obj
+ 0001:00036de0       _expand_right_edge         10037de0 f   jcsample.obj
+ 0001:00036e60       _fullsize_downsample       10037e60 f   jcsample.obj
+ 0001:00036ec0       _h2v1_downsample           10037ec0 f   jcsample.obj
+ 0001:00036f90       _h2v2_downsample           10037f90 f   jcsample.obj
+ 0001:000370a0       _h2v2_smooth_downsample    100380a0 f   jcsample.obj
+ 0001:00037430       _fullsize_smooth_downsample 10038430 f   jcsample.obj
+ 0001:00037a40       _transencode_master_selection 10038a40 f   jctrans.obj
+ 0001:00037af0       _transencode_coef_controller 10038af0 f   jctrans.obj
+ 0001:00037b90       _start_pass_coef           10038b90 f   jctrans.obj
+ 0001:00037be0       _start_iMCU_row            10038be0 f   jctrans.obj
+ 0001:00037c60       _compress_output           10038c60 f   jctrans.obj
+ 0001:00038050       _transdecode_master_selection 10039050 f   jdtrans.obj

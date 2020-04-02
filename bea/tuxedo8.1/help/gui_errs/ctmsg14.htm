@@ -1,0 +1,2235 @@
+<!-- .if n .pH errman.h.ctmsg14.htm @(#)ctmsg14.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1400-1499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1401"></A>
+<H3>CMDTUX MESSAGE #1401</H3>
+<H2> ERROR: buildclient cannot open the temporary output file, <I>srcfile</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+buildclient
+cannot open the temporary output file, srcfile.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the file exists and has write permissions,
+and that the file system has sufficient resources for a new file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclient (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1402"></A>
+<H3>CMDTUX MESSAGE #1402</H3>
+<H2> INFO: SRVID = <I>srvid,</I> SRVGRP = <I>grpname,</I> SIGKILL sent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+SIGKILL
+signal was sent to a server in response to a
+"tmshutdown -w"
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1403"></A>
+<H3>CMDTUX MESSAGE #1403</H3>
+<H2> INFO: SRVID = <I>srvid,</I> SRVGRP = <I>grpname,</I> SIGKILL send failed (tperrno = <I>tperrno_val</I> NETerr = <I>number</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+SIGKILL
+signal could not be sent to a server in response to a
+"tmshutdown -w"
+command.
+A likely cause is that the server has already exited due to
+tmshutdown 's
+message or previously sent
+SIGTERM
+signal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1407"></A>
+<H3>CMDTUX MESSAGE #1407</H3>
+<H2> INFO: SRVID = <I>srvid,</I> SRVGRP = <I>grpname,</I> SIGTERM sent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+SIGTERM
+signal was sent to a server in response to a
+"tmshutdown -w"
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1408"></A>
+<H3>CMDTUX MESSAGE #1408</H3>
+<H2> INFO: SRVID = <I>srvid,</I> SRVGRP = <I>grpname,</I> SIGTERM send failed (tperrno = <I>tperrno_val,</I> NETerr = <I>number</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+SIGTERM
+signal could not be sent to a server in response to a
+"tmshutdown -w"
+command.
+A likely cause is that the server has already exited due to
+tmshutdown 's
+previously sent message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1409"></A>
+<H3>CMDTUX MESSAGE #1409</H3>
+<H2> WARN: Could not mark receive queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process could not mark its receive message queue,
+probably because the
+BSBRIDGE
+did not exit as expected after helping
+boot the
+BBL.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+BRIDGE
+will continue running, and the system
+should recover automatically.
+Kill the
+BSBRIDGE
+process manually if it is still running.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1410"></A>
+<H3>CMDTUX MESSAGE #1410</H3>
+<H2> ERROR: Could not mark receive queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BSBRIDGE
+process determined that another process is unexpectedly
+reading from its request message queue.
+Perhaps there is another
+BSBRIDGE
+or
+BRIDGE
+running.
+A
+BSBRIDGE
+experiencing this error will fail its initialization
+routine, and will exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the machine fails to boot, run
+tmboot
+to try again, or run
+tmshutdown
+to clean up.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1411"></A>
+<H3>CMDTUX MESSAGE #1411</H3>
+<H2> ERROR: Could not reattach to bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+BRIDGE
+or
+BSBRIDGE
+was unexpectedly booted with
+PROTECTED
+access to its bulletin board area of shared memory.
+It could not reattach in
+FASTPATH
+mode.
+It will fail initialization, and then exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1412"></A>
+<H3>CMDTUX MESSAGE #1412</H3>
+<H2> ERROR: Connections structure initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+BRIDGE
+or
+BSBRIDGE
+system process could not initialize a data structure related to networking.
+It will fail initialization, and then exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1413"></A>
+<H3>CMDTUX MESSAGE #1413</H3>
+<H2> ERROR: Could not get network device name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+BRIDGE
+or
+BSBRIDGE
+system process could not
+find a networking device name:
+the
+BRIDGE
+parameter in the *NETWORK section.
+It will fail initialization, and then exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the *NETWORK section of the system configuration file.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1414"></A>
+<H3>CMDTUX MESSAGE #1414</H3>
+<H2> ERROR: Could not shut down BSBRIDGE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+system process could not send a message to the
+BSBRIDGE
+telling it to shut down.
+The
+BRIDGE
+will fail its initialization, and then exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+tmshutdown
+on the machine to remove the
+BSBRIDGE .
+If this does not work, kill it manually.
+Then attempt another
+tmboot .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1415"></A>
+<H3>CMDTUX MESSAGE #1415</H3>
+<H2> ERROR: No BRIDGE found on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+or
+BSBRIDGE
+could not find a
+BRIDGE
+system process on the machine specified by
+<I>machine</I>.
+One possible cause is
+<I>machine</I>
+has been marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that a
+BRIDGE
+is running on machine
+<I>machine</I>.
+If not, use
+"tmboot -B"
+to boot one.
+Resolve a partitioning problem, if one exists (see message 1394).
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1417"></A>
+<H3>CMDTUX MESSAGE #1417</H3>
+<H2> ERROR: Cannot check BBL, Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to check the local
+BBL 's
+sanity, the
+BRIDGE
+system process could not dynamically allocate memory from
+the operating system using
+malloc ().
+The
+BRIDGE
+will continue running, but the
+BBL
+will not be restarted if it dies.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1418"></A>
+<H3>CMDTUX MESSAGE #1418</H3>
+<H2> ERROR: Cannot retrieve BBL server table entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to check the local
+BBL 's
+sanity, the
+BRIDGE
+could not find a server table entry for it.
+The
+BRIDGE
+will continue running, but the
+BBL
+will not be restarted if it dies.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+tmshutdown
+and
+tmboot
+for this machine.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1419"></A>
+<H3>CMDTUX MESSAGE #1419</H3>
+<H2> ERROR: Cannot retrieve local BBL's queue table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to check the local
+BBL 's
+sanity, the
+BRIDGE
+could not find a queue table entry for it.
+The
+BRIDGE
+will continue running, but the
+BBL
+will not be restarted if it dies.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+tmshutdown
+and
+tmboot
+for this machine.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1420"></A>
+<H3>CMDTUX MESSAGE #1420</H3>
+<H2> ERROR: Cannot restart local BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to check the local
+BBL 's
+sanity, the
+BRIDGE
+detected that it is dead, and attempted a restart.
+The restart failed.
+The
+BRIDGE
+will continue running, and will continue to attempt to
+restart the
+BBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+tmshutdown
+and
+tmboot
+for this machine.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1421"></A>
+<H3>CMDTUX MESSAGE #1421</H3>
+<H2> ERROR: Can allow only release 4.2.1 (or later) BBLs to join system with a configuration of 50 machines or more</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+BBL
+for a machine that is running a release of the software prior to
+4.2.1 is trying to join the application.
+This will fail because the configuration has more than 50 machines,
+which is not supported for earlier versions of the software.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Upgrade the software on the machine to Release 4.2.1 or later.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1422"></A>
+<H3>CMDTUX MESSAGE #1422</H3>
+<H2> ERROR: failed to restart administrative server, rescheduling restart.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+command was unable to restart an administrative server
+(BBL or <Font>BRIDGE).
+The command has been scheduled to be restarted during the next cycle.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for subsequent userlog messages indicating whether or not
+the server was restarted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1423"></A>
+<H3>CMDTUX MESSAGE #1423</H3>
+<H2> ERROR: Pipe error, assume failed.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While restarting a TUXEDO System process,
+restartsrv
+received a pipe signal and the system issues this message to point out
+that it is not aware of
+the process status.
+Normally, this indicates that the process was not started successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating the status
+of the process being restarted.
+If this is an application server, check for application messages
+and/or a core dump in the APPDIR directory.
+If this is a system server,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1424"></A>
+<H3>CMDTUX MESSAGE #1424</H3>
+<H2> ERROR: Failed to start BSBRIDGE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+command failed to restart the boot-strap bridge server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for prior messages indicating the nature of the failure.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1425"></A>
+<H3>CMDTUX MESSAGE #1425</H3>
+<H2> ERROR: Could not get own networking parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+or
+BSBRIDGE
+was unable to get its networking parameters from the *NETWORK section
+of the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1426"></A>
+<H3>CMDTUX MESSAGE #1426</H3>
+<H2> ERROR: Connection failure to <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process could not establish a connection
+to the remote machine specified by
+<I>machine</I>.
+There may be networking problems, or
+<I>machine</I>
+may have crashed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check that
+<I>machine</I>
+is up.
+<LI><P>
+Check network connectivity between the machines.
+<LI><P>
+Check that the TUXEDO System is running on
+<I>machine</I>.
+</UL>
+<P>
+The
+BRIDGE
+processes will automatically reestablish a
+connection between the machines on demand, when possible.
+To prevent thrashing, the link will be suspended for five minutes
+if an automatic reconnect attempt fails.
+No further automatic reconnection attempts are made during this interval.
+If desired, use tmadmin(1)'s <Font>reconnect command to
+initiate a reconnection attempt manually.
+Manual attempts are allowed during the five-minute suspension interval.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)'s
+reconnect
+command.
+Check messages 1370, 1371, 1373, 1374, 1375, and 1376
+above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1427"></A>
+<H3>CMDTUX MESSAGE #1427</H3>
+<H2> ERROR: Shutting down BBL due to removal of message queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX System message queue used by the
+BBL
+process to receive messages has been removed.
+Since retrying the failed message receive
+operation will not correct this error, the
+BBL
+is exiting.
+This condition can occur if the TUXEDO System/T administrator or a UNIX System
+privileged user has manually removed
+IPC
+resources using the UNIX System
+ipcrm (1)
+command.
+Depending upon the extent of
+IPC
+resources which were removed, other
+TUXEDO System system process may also print similar messages in the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The administrator should use
+tmboot
+to reboot the TUXEDO System/T configuration on the node where
+IPC
+resources were removed.
+If only a subset of the TUXEDO System/T
+IPC
+resources have been removed,
+it is possible that the reboot will fail.
+In this case, it will be necessary to manually kill
+the remaining TUXEDO System/T processes and to manually remove any
+IPC
+resources with a key equal to the value specified for
+IPCKEY
+in the TUXEDO System/T configuration file.
+The UNIX System
+ipcrm (1)
+command may be used to manually remove
+IPC
+resources.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot (1),
+kill (1),
+and
+ipcrm (1)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1428"></A>
+<H3>CMDTUX MESSAGE #1428</H3>
+<H2> ERROR: Bad header from network, mid=0x<I>midval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process received a network message that is directed toward another
+machine,
+<I>midval</I>,
+or the message header was corrupted.
+The network connection will be dropped.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The connection will be re-established when needed.
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1429"></A>
+<H3>CMDTUX MESSAGE #1429</H3>
+<H2> INFO: Forcing check of all BBLs</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+got a
+bbclean
+request to check the sanity of all
+BBL
+processes on all machines.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1430"></A>
+<H3>CMDTUX MESSAGE #1430</H3>
+<H2> ERROR: Failed to suspend local BRIDGE(s) for partitioned shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to suspend the local
+BRIDGE
+process during a partitioned shutdown request, an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for error messages to clarify the problem.
+If the cause cannot be discerned, contact your TUXEDO System Technical
+Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1431"></A>
+<H3>CMDTUX MESSAGE #1431</H3>
+<H2> ERROR: -P option cannot specify remote LMID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmshutdown ,
+a remote
+LMID
+value was specified for the -P option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command using a local
+LMID
+for the -P option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1432"></A>
+<H3>CMDTUX MESSAGE #1432</H3>
+<H2> INFO: pclean - <I>lmid</I> now reachable and not removed from bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to clean up the specified
+<I>lmid</I>
+was processed by the
+DBBL
+and found that the machine that had been partitioned can now
+be contacted and the
+BBL
+process on the machine is alive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The entries for the machine will not be removed from the Bulletin Board.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1433"></A>
+<H3>CMDTUX MESSAGE #1433</H3>
+<H2> INFO: pclean - <I>lmid</I> not partitioned and not removed from bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to clean up the specified
+<I>lmid</I>
+was processed by the
+DBBL
+and found that the machine was not marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The entries for the machine will not be removed from the Bulletin Board.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1434"></A>
+<H3>CMDTUX MESSAGE #1434</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while allocating space to hold the compilation parameters
+in
+buildclient
+or
+buildclt .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1435"></A>
+<H3>CMDTUX MESSAGE #1435</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while allocating space to hold the compilation parameters
+in
+buildclient
+or
+buildclt .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1436"></A>
+<H3>CMDTUX MESSAGE #1436</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+allocating space to hold the command line parameters in
+buildserver .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1437"></A>
+<H3>CMDTUX MESSAGE #1437</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+trying to generate the command line to compile the server in
+buildserver .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1438"></A>
+<H3>CMDTUX MESSAGE #1438</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> - only VIEW, FML, X_C_TYPE, or X_COMMON type is allowed in ROUTING section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configuration file ROUTING
+section entry named in the error message
+specified a
+BUFTYPE
+entry of a buffer type that is not
+VIEW ,
+FML ,
+X_C_TYPE ,
+or
+X_COMMON .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the ROUTING
+section entry in error to specify a valid type.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1439"></A>
+<H3>CMDTUX MESSAGE #1439</H3>
+<H2> ERROR: <I>section</I> entry <I>name</I>: Must have subtype for VIEW, X_C_TYPE, and X_COMMON</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an entry for
+<I>name</I>
+in the ROUTING or SERVICES section as indicated by
+<I>section</I>
+has a
+BUFTYPE
+value with type
+VIEW ,
+X_C_TYPE ,
+or
+X_COMMON
+that does not have a subtype specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+BUFTYPE
+parameter on the entry and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1440"></A>
+<H3>CMDTUX MESSAGE #1440</H3>
+<H2> ERROR: <I>section</I> entry <I>name</I>: Can't have subtype for FML, STRING, CARRAY, or X_OCTET</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an entry for
+<I>name</I>
+in the ROUTING or SERVICES section as indicated by
+<I>section</I>
+has a
+BUFTYPE
+value with type
+FML ,
+STRING ,
+CARRAY ,
+or
+X_OCTET
+that has a subtype specified.
+This is not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+BUFTYPE
+parameter on the entry and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1443"></A>
+<H3>CMDTUX MESSAGE #1443</H3>
+<H2> ERROR: can't attach to BB</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to shut down the DBBL in an MP configuration,
+tmshutdown
+was unable to properly set up a private copy of the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1444"></A>
+<H3>CMDTUX MESSAGE #1444</H3>
+<H2> ERROR: TUXCONFIG environment variable must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmboot
+or
+tmshutdown ,
+the
+TUXCONFIG
+environment variable was not set and exported, or was not
+set to an absolute pathname (starting with /).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXCONFIG
+environment variable
+and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1445"></A>
+<H3>CMDTUX MESSAGE #1445</H3>
+<H2> ERROR: TUXCONFIG environment variable must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the
+TUXCONFIG
+environment variable was not set and exported, or was not
+set to an absolute pathname (starting with /).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXCONFIG
+environment variable
+and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1446"></A>
+<H3>CMDTUX MESSAGE #1446</H3>
+<H2> ERROR: TUXCONFIG environment variable must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmunloadcf ,
+the
+TUXCONFIG
+environment variable was not set and exported, or was not
+set to an absolute pathname (starting with /).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXCONFIG
+environment variable
+and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1447"></A>
+<H3>CMDTUX MESSAGE #1447</H3>
+<H2> ERROR: Cannot open TLOG temporary dump file <I>pathname,</I> errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary file necessary for loading data into
+the TLOG device could not be
+opened (for creation).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the permissions, free disk blocks, and
+free inodes for the directory where the temporary file was to be created.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1448"></A>
+<H3>CMDTUX MESSAGE #1448</H3>
+<H2> ERROR: Cannot write TLOG temporary dump file <I>pathname,</I> errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary file necessary for loading data into
+the TLOG device could not be written.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the permissions, free disk blocks, and
+free inodes for the directory where the temporary file was to be
+written.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1449"></A>
+<H3>CMDTUX MESSAGE #1449</H3>
+<H2> ERROR: Cannot close TLOG temporary dump file <I>pathname,</I> errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary file necessary for loading data into
+the TLOG device could not be closed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the permissions, free disk blocks, and
+free inodes for the directory where
+<I>pathname</I>
+resides.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1450"></A>
+<H3>CMDTUX MESSAGE #1450</H3>
+<H2> ERROR: Cannot open temporary TLOG dump file <I>pathname,</I> errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary file necessary for loading data into
+the TLOG device could not be
+opened (for reading).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the file and directory permissions.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1451"></A>
+<H3>CMDTUX MESSAGE #1451</H3>
+<H2> ERROR: MAXACCESSERS parameter must be greater than MAXWSCLIENTS</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXACCESSERS
+as specified in the *RESOURCES or *MACHINES section of the
+UBBCONFIG
+file, is less than or equal to
+MAXWSCLIENTS .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXACCESSERS
+or
+MAXWSCLIENTS .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1452"></A>
+<H3>CMDTUX MESSAGE #1452</H3>
+<H2> ERROR: Unexpected end-of-input - exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+end-of-input was encounted (for example, end of file or control-D)
+and the program exits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the program providing the correct input.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1453"></A>
+<H3>CMDTUX MESSAGE #1453</H3>
+<H2> ERROR: Invalid input - exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+an invalid input value was entered and the program is not
+attached to a terminal (that is, the standard input and output are
+not associated with a terminal).
+The program will exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the input stream or file and re-run the program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1454"></A>
+<H3>CMDTUX MESSAGE #1454</H3>
+<H2> ERROR: tpchkauth failed - Uunixerr = <I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+ud ,
+an operating system error occurred while attempting to determine the level
+of authentication required by the application configuration.
+A
+<I>code</I>
+is printed indicating the specific UNIX System call which failed.
+These codes may be referenced in the header file &lt;Uunix.h>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the UNIX System call is failing.
+Often, this error will occur if the
+TUXCONFIG
+shell variable is not set consistently in this process and the rest of
+the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpchkauth (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1455"></A>
+<H3>CMDTUX MESSAGE #1455</H3>
+<H2> ERROR: can't create buffer - tpalloc() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+ud ,
+tpalloc
+failed to allocate a typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1456"></A>
+<H3>CMDTUX MESSAGE #1456</H3>
+<H2> ERROR: can't become a client - tpinit() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+ud ,
+tpinit
+failed in trying to join the application.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpinit(3)
+manual page lists the specific reasons why
+tpinit
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1457"></A>
+<H3>CMDTUX MESSAGE #1457</H3>
+<H2> ERROR: tpalloc for TPINIT failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+ud ,
+tpalloc
+failed to allocate a TPINIT typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1458"></A>
+<H3>CMDTUX MESSAGE #1458</H3>
+<H2> ERROR: Can't start a transaction - tpbegin() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+ud
+attempted to start a transaction and was unsuccessful.
+Further information is indicated by the string <I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpbegin(3)
+manual page contains a description of each error value returned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpbegin (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1459"></A>
+<H3>CMDTUX MESSAGE #1459</H3>
+<H2> ERROR: Can't commit transaction, tpcommit() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+ud
+encountered an error while attempting to commit a transaction.
+Quite often, the failure of the transaction commit
+is due to the failure of one or more of the service participants, or
+due to transaction timeout.
+Further information is indicated by the
+errmsg
+string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpbegin(3)
+manual page lists the specific reasons why
+tpcommit
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpbegin (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1460"></A>
+<H3>CMDTUX MESSAGE #1460</H3>
+<H2> ERROR: tpalloc for TPINIT failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+tpalloc
+failed to allocate a TPINIT typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1461"></A>
+<H3>CMDTUX MESSAGE #1461</H3>
+<H2> ERROR: can't become a client - tpinit() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+tpinit
+failed in trying to join the application.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpinit(3)
+manual page lists the specific reasons why
+tpinit
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1462"></A>
+<H3>CMDTUX MESSAGE #1462</H3>
+<H2> ERROR: can't create buffer - tpalloc() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+tpalloc
+failed to allocate an FML typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1467"></A>
+<H3>CMDTUX MESSAGE #1467</H3>
+<H2> ERROR: System unstable - reboot recommended</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+got an error while dispatching an administrative service.
+This usually indicates an internal problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reboot the application.
+If the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1468"></A>
+<H3>CMDTUX MESSAGE #1468</H3>
+<H2> INFO: Listener Process Started</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process was able to start and establish a listening
+endpoint on the network.
+The user may check the
+tlisten
+log file for log connections and services data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1469"></A>
+<H3>CMDTUX MESSAGE #1469</H3>
+<H2> ERROR: realloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an attempt dynamically to re-allocate memory from the operating
+system using
+realloc ()
+failed in the lexical analyzer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX reference manuals,
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1470"></A>
+<H3>CMDTUX MESSAGE #1470</H3>
+<H2> WARN: Function name must be &lt;= <I>len</I> characters in length; <I>name</I> will be truncated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The function name,
+<I>name</I>,
+specified using the
+-s
+option on the command line of
+buildserver ,
+is greater than the allowed function name length,
+<I>len</I>,
+and will be truncated.
+This will restrict the ability of this service to be dynamically
+advertised at run-time.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Choose a shorter function name if this function will be
+dynamically advertised at run-time.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1472"></A>
+<H3>CMDTUX MESSAGE #1472</H3>
+<H2> ERROR: MIN is greater than MAX on server entry <I>servername</I>; MAX is set to the same value as MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an entry for
+<I>servername</I>
+in the SERVERS section
+has a
+MIN
+value that is greater than the
+MAX
+value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+MIN
+or
+MAX
+parameter
+on the entry and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1473"></A>
+<H3>CMDTUX MESSAGE #1473</H3>
+<H2> ERROR: -c and {A|B|D|M|S|T|e|g|i|l|o|s|w|y}</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmboot ,
+the -c option was specified with another option.
+The -c option should normally be specified by itself.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command with the correct command line options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1478"></A>
+<H3>CMDTUX MESSAGE #1478</H3>
+<H2> WARN: ROUTING <I>routingname</I> (for SERVICE <I>servicename</I>) is not defined in the ROUTING section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An entry for
+service
+<I>servicename</I>
+in the *(Us section of the
+UBBCONFIG
+file has a
+ROUTING
+value of
+<I>routingname</I>
+that does not appear in the *RESOURCES section of
+the configuration file.
+This situation is allowed if the application is providing its
+own buffer-type routing function for the associated service.
+Messages will fail to be sent to the service if the application
+does not provide a routing function.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is needed if an application-provided routing function
+exists.  Otherwise, an entry should be added in the
+ROUTING section of the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1479"></A>
+<H3>CMDTUX MESSAGE #1479</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an attempt dynamically to allocate memory from the operating
+system using
+realloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX reference manuals,
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1480"></A>
+<H3>CMDTUX MESSAGE #1480</H3>
+<H2> WARN: MIN/MAX greater than 1 and RQADDR not specified on conversational server entry <I>servername</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An entry in the (US section of the
+UBBCONFIG
+file for a conversational server,
+<I>servername</I>,
+has a
+MIN
+or
+MAX
+value that is greater than 1, but the
+RQADDR
+value is not specified.
+Normally, a set of conversational servers are used in an MSSQ set,
+that is, they share a request queue, and this is configured by
+specifying an
+RQADDR
+value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If an MSSQ set is desired, then specify an
+RQADDR
+value for the server entry in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1481"></A>
+<H3>CMDTUX MESSAGE #1481</H3>
+<H2> ERROR: Can't have *NETWORK section in SHM mode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A *NETWORK section exists in a
+UBBCONFIG
+file that has
+SHM
+specified for the
+MODEL
+in the *RESOURCES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+MODEL
+to
+MP
+if the application consists of multiple machines connected via a network,
+or delete the *NETWORK section from the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1482"></A>
+<H3>CMDTUX MESSAGE #1482</H3>
+<H2> WARN: OPENINFO/CLOSEINFO ignored for GROUP <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An entry for group
+<I>groupname</I>
+in the *GROUPS section of the
+UBBCONFIG
+file has
+OPENINFO
+and/or
+CLOSEINFO
+but the group
+is not associated with a resource manager
+(that is,
+TMSNAME
+is "TMS" or not specified).
+The
+OPENINFO
+and
+CLOSEINFO
+parameter value will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1483"></A>
+<H3>CMDTUX MESSAGE #1483</H3>
+<H2> WARN: can't contact local tlisten process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting a configuration with
+tmboot ,
+the local
+tlisten
+process could not be contacted.
+This probably means that
+tlisten
+is not running on the
+MASTER
+machine.
+In this case,
+tmadmin
+can run only in read-only mode on remote machines
+and it will not be possible for the backup site
+to become the master site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Start
+tlisten
+on the
+MASTER
+machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1484"></A>
+<H3>CMDTUX MESSAGE #1484</H3>
+<H2> ERROR: end of input reached without terminating double quote</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a
+UBBCONFIG
+file with
+tmloadcf ,
+the end of the file was reached with a double-quoted
+string not terminated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Go to the last unescaped, double quote in the file and add
+a matching double quote at the end of the string.
+Re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1485"></A>
+<H3>CMDTUX MESSAGE #1485</H3>
+<H2> ERROR: end of input reached without terminating double quote</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a
+UBBCONFIG
+file with
+tmloadcf ,
+the end of the file was reached without terminating a double-quoted
+string (that is, the string was started with a double quote but
+the matching double quote was not found).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Go to the last unescaped, double quote in the file and add
+a matching double quote at the end of the string.
+Re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1486"></A>
+<H3>CMDTUX MESSAGE #1486</H3>
+<H2> ERROR: AUTOTRAN specified for SERVICE <I>servicename</I> SRVGRP <I>groupname</I> with no TMS.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An entry for service
+<I>servicename</I>
+with group name
+<I>groupname</I>
+in the SERVICES section of the
+UBBCONFIG
+file has the
+AUTOTRAN
+parameter set to
+Y
+but the group is not associated with a resource manager
+(that is,
+TMSNAME
+is not set).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either set the
+AUTOTRAN
+parameter to
+N
+or associate the service with a group
+that has a resource manager.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1487"></A>
+<H3>CMDTUX MESSAGE #1487</H3>
+<H2> WARN: AUTOTRAN specified for SERVICE <I>servicename</I> with TRANTIME=0.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An entry for service
+<I>servicename</I>
+in the SERVICES section of the
+UBBCONFIG
+file has the
+AUTOTRAN
+parameter set to
+Y
+but an unlimited transaction timeout value.
+This can be dangerous because the automatically started transactions
+will not timeout in the event of failures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+It is recommended that a transaction timeout value be specified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1488"></A>
+<H3>CMDTUX MESSAGE #1488</H3>
+<H2> WARN: REPLYQ=Y not specified for MSSQ server <I>servername</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An entry for server
+<I>servername</I>
+in the SERVERS section of the
+UBBCONFIG
+file has an
+RQADDR
+value specified forming an MSSQ set,
+but does not have a
+reply queue specified (REPLYQ
+is set to N or not specified).
+Normally, all servers in an MSSQ need their own reply queue such
+that they share the input request queue but each gets back responses to
+outgoing requests on its own reply queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+It is recommended that
+REPLYQ=Y
+be added to the server entry.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1489"></A>
+<H3>CMDTUX MESSAGE #1489</H3>
+<H2> WARN: dubious escape <I>character</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a string or character constant in a
+UBBCONFIG
+file, a backslash followed by
+<I>character</I>
+was found which
+is not one of the recognized escape sequences
+(for example, backspace, form feed, tab, newline, or octal value).
+The character will be treated as itself and the backslash
+is ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1490"></A>
+<H3>CMDTUX MESSAGE #1490</H3>
+<H2> WARN: character escape <I>octal_value</I> does not fit in character</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a string or character constant in a
+UBBCONFIG
+file, a backslash followed by an octal value,
+<I>octal_value</I>,
+was found whose value
+is greater than the value that can fit into a character
+(that is, e377).
+The value will be truncated (that is, octal_value&e377).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1491"></A>
+<H3>CMDTUX MESSAGE #1491</H3>
+<H2> ERROR: UID parameter must be >= 0 and &lt;= 2147483647</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+UID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file is less than 0 or greater than 2147483647.
+UID
+must be greater than or equal to 0 and less than or equal to 2147483647.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+UID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than or equal to 0 and less than or equal
+to 2147483647.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1492"></A>
+<H3>CMDTUX MESSAGE #1492</H3>
+<H2> ERROR: GID parameter must be >= 0 and &lt;= 2147483647</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+GID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file is less than 0 or greater than 2147483647.
+GID
+must be greater than or equal to 0 and less than or equal to 2147483647.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+GID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than or equal to 0 and less than or equal
+to 2147483647.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1493"></A>
+<H3>CMDTUX MESSAGE #1493</H3>
+<H2> ERROR: UID parameter must be >= 0 and &lt;= 2147483647</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+UID
+as specified in the *MACHINES section of the
+UBBCONFIG
+file is less than 0 or greater than 2147483647.
+UID
+must be greater than or equal to 0 and less than or equal to 2147483647.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+UID
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than or equal to 0 and less than or equal
+to 2147483647.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1494"></A>
+<H3>CMDTUX MESSAGE #1494</H3>
+<H2> ERROR: GID parameter must be >= 0 and &lt;= 2147483647</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+GID
+as specified in the *MACHINES section of the
+UBBCONFIG
+file is less than 0 or greater than 2147483647.
+GID
+must be greater than or equal to 0 and less than or equal to 2147483647.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+GID
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than or equal to 0 and less than or equal
+to 2147483647.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

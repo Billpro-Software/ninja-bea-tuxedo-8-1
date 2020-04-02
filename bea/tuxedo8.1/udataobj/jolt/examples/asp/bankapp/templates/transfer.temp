@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<TITLE>TRANSFER Result</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>The Result of the TRANSFER Service is:</H2>
+<SCRIPT>document.write(new Date())</SCRIPT>
+<P>
+<TABLE BORDER=1>
+<TR><TD></TD><TD ALIGN=CENTER><B>Account #</B></TD><TD ALIGN=CENTER><B>Balance</B></TR>
+<TR><TD ALIGN=RIGHT><B>From:</B></TD><TD><%=ACCOUNT_ID[0]%></TD><TD><%=SBALANCE[0]%></TR>
+<TR><TD ALIGN=RIGHT><B>To:</B></TD><TD><%=ACCOUNT_ID[1]%></TD><TD><%=SBALANCE[1]%></TR>
+</TABLE>
+<FORM>
+<INPUT TYPE="button" VALUE="Back" OnClick="history.go(-1)">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,114 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/STOCKAPP/STKVAR	$Revision: 1.5 $"
+#
+# This file sets all the environment variables needed by the TUXEDO software
+# to run the STOCKAPP
+#
+# This directory contains all the TUXEDO software
+# System administrator must set this variable
+#
+#TUXDIR=${TUXDIR:?}
+#
+# This directory contains all the user written code
+#
+# Contains the full path name of the directory that the application
+# generator should place the files it creates
+#
+APPDIR=${HOME}/STOCKAPP
+#
+# Environment file to be used by tmloadcf
+#
+COBDIR=${COBDIR:?}
+#
+# This directory contains the cobol files needed
+# for compiling and linking. 
+#
+LD_LIBRARY_PATH=$COBDIR/coblib:${LD_LIBRARY_PATH}
+SHLIB_PATH=$COBDIR/coblib:${SHLIB_PATH}
+LIBPATH=$COBDIR/coblib:${LIBPATH}
+#
+# Add coblib to LD_LIBRARY_PATH, SHLIB_PATH, LIBPATH
+#
+ENVFILE=${APPDIR}/ENVFILE
+#
+# List of field table files to be used by CBLVIEWC, tmloadcf, etc.
+#
+FIELDTBLS=fields,Usysflds
+#
+# List of directories to search to find field table files
+#
+FLDTBLDIR=${TUXDIR}/udataobj:${APPDIR}
+#
+# Set device for the transaction log; this should match the TLOGDEVICE
+# parameter under this site's LMID in the *MACHINES section of the
+# UBBCBSHM file
+#
+TLOGDEVICE=${APPDIR}/TLOG
+#
+# Device for the configuration file
+#
+UBBCBSHM=$APPDIR/UBBCBSHM 
+#
+# Device for binary file that gives /T all its information
+#
+TUXCONFIG=${APPDIR}/TUXCONFIG
+#
+# Set the prefix of the file which is to contain the central user log;
+# this should match the ULOGPFX parameter under this site's LMID in the
+# *MACHINES section of the UBBCONFIG file
+#
+ULOGPFX=${APPDIR}/ULOG
+#
+# List of directories to search to find view files
+#
+VIEWDIR=${APPDIR}
+#
+# List of view files to be used by CBLVIEWC, tmloadcf, etc.
+#
+VIEWFILES=quote.V,cust.V
+#
+# Set the COBCPY
+#
+COBCPY=$TUXDIR/cobinclude
+#
+# Set the COBOPT
+#
+COBOPT="-C ANS85 -C ALIGN=8 -C NOIBMCOMP -C TRUNC=ANSI -C OSEXT=cbl"
+#
+# Set the CFLAGS
+#
+CFLAGS="-I$TUXDIR/include -I$TUXDIR/sysinclude"
+#
+# Export all variables just set
+#
+export TUXDIR APPDIR ENVFILE
+export FIELDTBLS FLDTBLDIR TLOGDEVICE
+export UBBCBSHM TUXCONFIG ULOGPFX LD_LIBRARY_PATH SHLIB_PATH LIBPATH
+export VIEWDIR VIEWFILES COBDIR COBCPY COBOPT CFLAGS 
+#
+# Add TUXDIR/bin to PATH if not already there
+#
+a="`echo $PATH | grep ${TUXDIR}/bin`"
+if [ x"$a" = x ]
+then
+	PATH=${TUXDIR}/bin:${PATH}
+	export PATH
+	fi
+#
+# Add APPDIR to PATH if not already there
+#
+a="`echo $PATH | grep ${APPDIR}`"
+if [ x"$a" = x ]
+then
+	PATH=${PATH}:${APPDIR}
+	export PATH
+	fi
+#
+# Add COBDIR to PATH if not already there
+#
+a="`echo $PATH | grep ${COBDIR}`"
+if [ x"$a" = x ]
+then
+	PATH=${PATH}:${COBDIR}
+	export PATH
+	fi

@@ -1,0 +1,56 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1992 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/qsample/ubb.sample	$Revision: 1.5 $"
+#
+*RESOURCES
+IPCKEY		52617
+DOMAINID	qsample
+MASTER		SITE1
+MODEL		SHM
+#
+*MACHINES
+#
+<uname -n>
+	LMID = SITE1 
+	TUXDIR ="<full path of TUXEDO software>"
+	TUXCONFIG = "<full path of APPDIR>/tuxconfig"
+	TLOGDEVICE ="<full path of APPDIR>/TLOG"
+	TLOGSIZE=10
+	APPDIR = "<full path of APPDIR>"
+	ULOGPFX = "<full path of APPDIR>/ULOG"
+# On Windows NT replace '/' character with '\' in paths.
+# So use instead:
+#	TUXCONFIG = "<full path of APPDIR>\tuxconfig"
+#	TLOGDEVICE ="<full path of APPDIR>\TLOG"
+#	ULOGPFX = "<full path of APPDIR>\ULOG"
+
+#
+*GROUPS
+
+GROUP1
+	LMID = SITE1  GRPNO = 1
+	TMSNAME=TMS TMSCOUNT=2
+QUE1
+	LMID = SITE1  GRPNO = 2
+	TMSNAME = TMS_QM TMSCOUNT = 2
+	OPENINFO = "TUXEDO/QM:<full path of APPDIR>/QUE:QSPACE"
+# For Windows NT delete previous line, uncomment next line
+#	OPENINFO = "TUXEDO/QM:<full path of APPDIR>\QUE;QSPACE"
+
+#
+*SERVERS
+#
+DEFAULT:	CLOPT="-A"
+server		SRVGRP=GROUP1 SRVID=1
+
+TMQUEUE
+	SRVGRP = QUE1  SRVID = 1
+	GRACE = 0  RESTART = Y CONV = N MAXGEN=10
+	CLOPT = "-s QSPACE:TMQUEUE --  "
+
+TMQFORWARD
+	SRVGRP=QUE1	SRVID= 5 GRACE=0 RESTART=Y CONV=N MAXGEN=10
+	CLOPT="-- -i 2 -q STRING"
+*SERVICES

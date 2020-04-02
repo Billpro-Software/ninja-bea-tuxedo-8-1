@@ -1,0 +1,53 @@
+//--------------------------------------------------------------------
+//
+// Copyright (c) 1999 BEA Systems, Inc.
+// All rights reserved
+//
+// THIS IS UNPUBLISHED PROPRIETARY
+// SOURCE CODE OF BEA Systems, Inc.
+// The copyright notice above does not
+// evidence any actual or intended
+// publication of such source code.
+//
+// #ident "@(#)nts/idl/CosEventComm.idl $Revision: 1.2 $"
+//
+//--------------------------------------------------------------------
+
+#ifndef _COS_EVENT_COMM_IDL_
+#define _COS_EVENT_COMM_IDL_
+
+#pragma prefix      "omg.org"
+#pragma javaPackage "org.omg"
+
+module CosEventComm
+{
+  exception Disconnected {};
+
+  interface PushConsumer
+  {
+    void push(in any data) raises (Disconnected);
+
+    void disconnect_push_consumer();
+  };
+
+  interface PushSupplier
+  {
+    void disconnect_push_supplier();
+  };
+
+  interface PullSupplier
+  {
+    any pull() raises (Disconnected);
+
+    any try_pull (out boolean has_event) raises(Disconnected);
+
+    void disconnect_pull_supplier();
+  };
+
+  interface PullConsumer
+  {
+    void disconnect_pull_consumer();
+  };
+};
+
+#endif

@@ -1,0 +1,2452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the Server console pages in the
+    WebLogic Server administration console.
+
+    There are several main stuctures in this book:
+
+     - ServerChannelPages - the network channel pages
+     - ServerExecuteQueuePages - the execute queue pages
+     - CoreServerPages - the server pages
+     - CoreServerServerTablePage - the domain-wide server table
+     - the lifecycle and control assistants related to servers.
+
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book hidden="true" definitionLabel="ServerBook" title="book.title" markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="CoreServerBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.ServerPageBacking"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <!-- Definition for the ServerChannel Pages -->
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerChannelPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="ServerChannelBook"
+                               title="ServerChannelBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the configuration tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerChannelConfigurationPage"
+                                   title="tab.configuration.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerChannelConfigGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.server.channelconfiggeneral.title;core"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:meta name="configuration-page" content="NetworkAccessPoint"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerChannelConfigGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/server/ChannelConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the security tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerChannelConfigSecurityPage"
+                                       presentationClass="page-content"
+                                       title="tab.security.label">
+                            <netuix:meta name="helpid" content="Core.core.server.channelconfigsecurity.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerChannelConfigSecurityPortlet"
+                                                          contentUri="/PortalConfig/core/server/ChannelConfigSecurity.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ServerChannelMonitorPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the overview tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerChannelMonitorOverviewPage"
+                                       presentationClass="page-content"
+                                       title="tab.overview.label">
+                            <netuix:meta name="helpid" content="Core.core.server.channelmonitoroverview.title;core"/>
+                            <netuix:meta name="monitoring" content="NetworkAccessPoint"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerChannelMonitorOverviewPortlet"
+                                                          contentUri="/PortalConfig/core/server/ChannelMonitorOverview.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the connections tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerChannelMonitorConnectionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.connections.label">
+                            <netuix:meta name="helpid" content="Core.core.server.channelmonitorconnections.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerChannelMonitorConnectionsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ChannelMonitorConnections.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <!-- Definition for the ServerChannelRuntime Pages -->
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerChannelRuntimePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="ServerChannelRuntimeBook"
+                               title="ServerChannelBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                           <!-- Definition for the connections tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerChannelRuntimeMonitorConnectionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.connections.label">
+                            <netuix:meta name="helpid" content="Core.core.server.channelmonitorconnections.title;core"/>
+                            <netuix:meta name="monitoring" content="ServerChannelRuntime"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerChannelRuntimeMonitorConnectionsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ChannelMonitorConnections.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <!-- Definition for the ExecuteQueue Pages -->
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerExecuteQueuePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="ServerExecuteQueueBook"
+                               title="CoreExecuteQueueBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the configuration tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="ServerExecuteQueueConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.server.executequeueconfig.title;core"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="ServerExecuteQueueConfigPortlet"
+                                                      contentUri="/PortalConfig/core/server/ExecuteQueueConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerExecuteQueueMonitorPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the overview tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerExecuteQueueMonitorOverviewPage"
+                                       presentationClass="page-content"
+                                       title="tab.overview.label">
+                            <netuix:meta name="helpid" content="Core.core.server.executequeuemonitoroverview.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerExecuteQueueMonitorOverviewPortlet"
+                                                          contentUri="/PortalConfig/core/server/ExecuteQueueMonitorOverview.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the threads tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerExecuteQueueMonitorThreadsPage"
+                                       presentationClass="page-content"
+                                       title="tab.threads.label">
+                            <netuix:meta name="helpid" content="Core.core.server.executequeuemonitorthreads.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerExecuteQueueMonitorThreadsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ExecuteQueueMonitorThreads.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="ServerExecuteQueueNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.server.executequeuenotes.title;core"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="ServerExecuteQueueNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <!-- Definition for the ExecuteQueue Threads table page -->
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerExecuteThreadsPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Core.core.server.executequeuemonitorthreads.title;core"/>
+            <netuix:meta name="breadcrumb" content="queues.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerExecuteThreadsPortlet"
+                                          contentUri="/PortalConfig/core/server/ExecuteQueueMonitorThreads.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <!-- Definition for the Server Pages -->
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="CoreServerTabsBook"
+                               title="CoreServerTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerConfigTabconfigTabPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigGeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfiggeneral.title;core"/>
+                            <netuix:meta name="configuration-page" content="Server"/>
+                            <netuix:meta name="configuration-page" content="ServerRuntime"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the cluster tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigTabclusterTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.cluster.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigcluster.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigClusterPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigCluster.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the queues tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerConfigQueuesPage"
+                                       presentationClass="page-content"
+                                       title="tab.queues.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigqueues.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerConfigQueuesPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigQueues.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the services tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerConfigServicesPage"
+                                       presentationClass="page-content"
+                                       title="tab.services.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigservices.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerConfigServicesPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigServices.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the keystore tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigTabkeystoreTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.keystore.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigkeystore.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigKeystorePortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigKeystore.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the ssl tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerConfigTabSSLTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.ssl.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigssl.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigSSLPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigSSL.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the FederationServices book -->
+                          <netuix:book markupName="book" markupType="Book"
+                                       definitionLabel="ServerConfigFederationServicesTabBook"
+                                       title="tab.federationservices.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- Definition for the SAML 1.1 SSO Source Site tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigFederationServicesSourceSiteTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.saml11ssosourcesite.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigfederationservices.sourcesite.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigFederationServicesSourceSitePortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigFederationServicesSourceSite.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the SAML 1.1 SSO Source Site tab -->
+                              <!-- Definition for the SAML 1.1 SSO Destination Site tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigFederationServicesDestinationSiteTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.saml11ssodestinationsite.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigfederationservices.destinationsite.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigFederationServicesDestinationSitePortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigFederationServicesDestinationSite.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the SAML 1.1 SSO Destination Site tab -->
+                              <!-- Definition for the SAML 2.0 General tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigFederationServicesSAML20GeneralTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.saml20.general.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigfederationservices.saml20.general.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigFederationServicesSAML20GeneralPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigFederationServicesSAML20General.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the SAML 2.0 General tab -->
+                              <!-- Definition for the SAML 2.0 Identity Provider tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigFederationServicesSAML20IdentityProviderTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.saml20.identityprovider.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigfederationservices.saml20.identityprovider.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigFederationServicesSAML20IdentityProviderPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigFederationServicesSAML20IdentityProvider.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the SAML 2.0 Identity Provider tab -->
+                              <!-- Definition for the SAML 2.0 Service Provider tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigFederationServicesSAML20ServiceProviderTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.saml20.serviceprovider.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigfederationservices.saml20.serviceprovider.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigFederationServicesSAML20ServiceProviderPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigFederationServicesSAML20ServiceProvider.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the SAML 2.0 Service Provider tab -->
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- End Definition for the FederationServices book -->
+                          <!-- Definition for the deployment tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigTabdeploymentTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.deployment.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigdeployment.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigDeploymentPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigDeployment.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerConfigMigrationPage"
+                                       presentationClass="page-content"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigmigration.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerConfigMigrationPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigMigration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the tuning tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigTabtuningTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.tuning.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigtuning.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigTuningPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigTuning.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the overload protection tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerConfigOverloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.overload.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigoverload.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerConfigOverloadPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigOverload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the healthmonitoring tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigTabhealthmonitoringTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.healthmonitoring.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.server.serverconfighealthmonitoring.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="CoreServerServerConfigHealthmonitoringPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigHealthmonitoring.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the serverstart tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerConfigServerstartTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.serverstart.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverconfigserverstart.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerConfigServerstartPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerConfigServerstart.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the WebServices book -->
+                          <netuix:book markupName="book" markupType="Book"
+                                       definitionLabel="ServerConfigWebServicesBook"
+                                       title="tab.webservices.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- Definition for the WebServices Buffering tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigWebServicesBufferingPage"
+                                           presentationClass="page-content"
+                                           title="tab.webservicesbuffering.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigwebservices.buffering.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigWebServicesBufferingPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigWebServicesBuffering.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the WebServices Buffering tab -->
+                              <!-- Definition for the WebServices Reliability tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerConfigWebServicesReliabilityPage"
+                                           presentationClass="page-content"
+                                           title="tab.webservicesreliablemessage.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigwebservices.reliability.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerConfigWebServicesReliabilityPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigWebServicesReliability.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the WebServices Reliability tab -->
+                              <!-- Definition for the WebServices LogicalStores tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerWebServicesLogicalStoresTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.webserviceslogicalstores.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.serverconfigwebservices.logicalstores.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerWebServicesLogicalStoresTablePortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerConfigWebServicesLogicalStoresTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the WebServices LogicalStores tab -->
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- End Definition for the WebServices book -->
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the protocols tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerProtocolsTabprotocolsTabPage"
+                                   title="tab.protocols.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerProtocolsTabgeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverprotocolsgeneral.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerProtocolsGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerProtocolsGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the http tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerProtocolsTabhttpTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.http.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverprotocolshttp.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerProtocolsHttpPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerProtocolsHttp.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jcom tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerProtocolsTabjcomTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.jcom.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverprotocolsjcom.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerProtocolsJcomPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerProtocolsJcom.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the iiop tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerProtocolsTabiiopTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.iiop.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverprotocolsiiop.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerProtocolsIiopPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerProtocolsIiop.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the channels tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerProtocolsChannelsPage"
+                                       presentationClass="page-content"
+                                       title="tab.channels.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverprotocolschannels.title;core"/>
+                            <netuix:meta name="breadcrumb" content="Channels"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerProtocolsChannelsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerProtocolsChannels.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the logging tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerLoggingTabloggingTabPage"
+                                   title="tab.logging.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerLoggingTabgeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverlogginggeneral.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerLoggingGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerLoggingGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the http tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerLoggingTabhttpTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.http.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverlogginghttp.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerLoggingHttpPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerLoggingHttp.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the debug tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ServerDebugTabPage"
+                                   title="tab.debug.label">
+                        <netuix:content>
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerDebugPage"
+                                       presentationClass="page-content"
+                                       title="tab.debug.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverdebug.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerDebugPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerDebug.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerMonitoringTabmonitoringTabPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringTabgeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringgeneral.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerMonitoringGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the health tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringHealthPage"
+                                       presentationClass="page-content"
+                                       title="tab.health.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringhealth.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringHealthPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringHealth.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the channels tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringChannelsPage"
+                                       presentationClass="page-content"
+                                       title="tab.channels.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringchannels.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringChannelsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringChannels.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the performance tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringPerformancePage"
+                                       presentationClass="page-content"
+                                       title="tab.performance.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringperformance.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="CoreServerServerMonitoringPerformancePortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringPerformance.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the threads tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringThreadsPage"
+                                       presentationClass="page-content"
+                                       title="tab.threads.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitorthreads.title;core"/>
+                            <netuix:meta name="configuration-page" content="ThreadPoolRuntime"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringThreadsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringThreads.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the threads tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringQueuesPage"
+                                       presentationClass="page-content"
+                                       title="tab.threads.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringqueues.title;core"/>
+                            <netuix:meta name="configuration-page" content="ThreadPoolRuntime"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringThreadsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringQueues.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the timers tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringTimersPage"
+                                       presentationClass="page-content"
+                                       title="tab.timers.label">
+                            <netuix:meta name="helpid" content="Core.core.server.monitoringtimers.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringTimersPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringTimers.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the workload tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringworkload.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringWorkloadPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringWorkload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jobs tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerMonitoringJobsPage"
+                                       presentationClass="page-content"
+                                       title="tab.jobs.label">
+                            <netuix:meta name="helpid" content="Core.core.server.monitoringjobs.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJobsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringJobs.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the security tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringTabsecurityTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.security.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringsecurity.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerMonitoringSecurityPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringSecurity.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <netuix:book markupName="book" markupType="Book" definitionLabel="ServerDefaultStoreTabPage"
+                                       title="tab.defaultstore.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- Definition for the default store tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringTabDefaultStoreTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.statistics.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.servermonitoringdefaultstore.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="CoreServerServerMonitoringDefaultStorePortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringDefaultStore.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the default store tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringTabDefaultStoreConnectionsTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.defaultstore.connections.label">
+                                <netuix:meta name="helpid" content="Core.core.server.defaultstore.connections.title;core"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerDefaultStoreConnectionPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringDefaultStoreConnections.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- Definition for the jms tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringTabjmsTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.jms.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringjms.title;core"/>
+                            <netuix:meta name="configuration-page" content="JMSRuntime"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerMonitoringJmsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringJms.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the saf tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringTabsafTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.saf.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringsaf.title;core"/>
+                            <netuix:meta name="configuration-page" content="SAFRuntime"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerMonitoringSafPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringSaf.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jdbc tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerMonitoringTabjdbcTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.jdbc.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servermonitoringjdbc.title;core"/>
+                            <netuix:meta name="configuration-page" content="JDBCServiceRuntime"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerMonitoringJdbcPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerMonitoringJdbc.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jta tab -->
+                          <netuix:book markupName="book" markupType="Book" definitionLabel="ServerMonitoringJtaPage"
+                                       title="tab.jta.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- Definition for the jta summary tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringJtaSummaryPage"
+                                           presentationClass="page-content"
+                                           title="tab.summary.label">
+                                <netuix:meta name="helpid" content="Core.core.server.servermonitoringjtasummary.title;core"/>
+                                <netuix:meta name="configuration-page" content="JTARuntime"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJtaSummaryPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringJtaSummary.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the jta names tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringJtaTransactionNamesPage"
+                                           presentationClass="page-content"
+                                           title="tab.transactionnames.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.servermonitoringjtatransactionnames.title;core"/>
+                                <netuix:meta name="configuration-page" content="JTARuntime"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJtaTransactionNamesPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringJtaTransactionNames.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the jta xaresources tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringJtaXAResourcesPage"
+                                           presentationClass="page-content"
+                                           title="tab.xaresources.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.servermonitoringjtaxaresources.title;core"/>
+                                <netuix:meta name="configuration-page" content="JTARuntime"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJtaResourcesPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringJtaResources.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the jta non-xa resources tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringJtaNonXAResourcesPage"
+                                           presentationClass="page-content"
+                                           title="tab.nonxaresources.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.servermonitoringjtanonxaresources.title;core"/>
+                                <netuix:meta name="configuration-page" content="JTARuntime"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJtaNonXAResourcesPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringJtaNonXAResources.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the jta transactions tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringJtaTransactionsPage"
+                                           presentationClass="page-content"
+                                           title="tab.transactions.label">
+                                <netuix:meta name="helpid"
+                                             content="Core.core.server.servermonitoringjtatransactions.title;core"/>
+                                <netuix:meta name="configuration-page" content="JTARuntime"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJtaTransactionsPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringJtaTransactions.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the jta recovery tab -->
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="ServerMonitoringJtaRecoveryPage"
+                                           presentationClass="page-content"
+                                           title="tab.recovery.label">
+                                <netuix:meta name="helpid" content="Core.core.server.servermonitoringjtarecovery.title;core"/>
+                                <netuix:meta name="configuration-page" content="JTARuntime"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="ServerMonitoringJtaRecoveryPortlet"
+                                                              contentUri="/PortalConfig/core/server/ServerMonitoringJtaRecovery.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerControlTabcontrolTabPage"
+                                   title="tab.control.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the startstop tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerControlServersPage"
+                                       presentationClass="page-content"
+                                       title="tab.startstop.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servercontrolstartstop.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerControlServersPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerControlStartstop.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the remotestartoutput tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerControlTabremotestartoutputTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.remotestartoutput.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.server.servercontrolremotestartoutput.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="CoreServerServerControlRemotestartoutputPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerControlRemotestartoutput.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerControlMigrationPage"
+                                       presentationClass="page-content"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid" content="Core.core.server.servercontrolmigration.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerControlMigrationPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerControlMigration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jobs tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerControlJobsPage"
+                                       presentationClass="page-content"
+                                       title="tab.jobs.label">
+                            <netuix:meta name="helpid" content="Core.core.server.controljobs.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerControlJobsPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerControlJobs.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the deployments tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="ServerDeploymentsPage"
+                                   presentationClass="page-content"
+                                   title="tab.deployments.label">
+                        <netuix:meta name="helpid" content="Core.core.server.serverdeployments.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="ServerDeploymentsPortlet"
+                                                      contentUri="/PortalConfig/core/server/ServerDeployments.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the services tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="ServerServicesTabservicesTabPage"
+                                   title="tab.services.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the jdbc tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesJDBCPage"
+                                       presentationClass="page-content"
+                                       title="tab.jdbc.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesjdbc.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesJDBCPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesJdbc.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jms tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesJMSPage"
+                                       presentationClass="page-content"
+                                       title="tab.jms.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesjms.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesJMSPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesJms.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the workmanager tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerServicesWorkManagerPage"
+                                       presentationClass="page-content"
+                                       title="tab.workmanager.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesworkmanager.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesWorkManagerPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesWorkManager.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the classes tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesClassesPage"
+                                       presentationClass="page-content"
+                                       title="tab.classes.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesclasses.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesClassesPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesClasses.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the bridge tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ServerServicesMessagingBridgePage"
+                                       presentationClass="page-content"
+                                       title="tab.bridge.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesbridge.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesMessagingBridgePortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesBridge.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the snmp tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesSNMPPage"
+                                       presentationClass="page-content"
+                                       title="tab.snmp.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicessnmp.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesSNMPPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesSNMP.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the xml tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesXMLPage"
+                                       presentationClass="page-content"
+                                       title="tab.xml.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesxml.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesXMLPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesXml.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the mail tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesMailPage"
+                                       presentationClass="page-content"
+                                       title="tab.mail.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesmail.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesMailPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesMail.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the filet3 tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerServicesFileT3Page"
+                                       presentationClass="page-content"
+                                       title="tab.filet3.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverservicesfilet3.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerServicesFileT3Portlet"
+                                                          contentUri="/PortalConfig/core/server/ServerServicesFilet3.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- definition for Security tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ServerSecurityTabPage"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- definition for server roles page -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerRolesTableTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.roles.label">
+                            <netuix:meta name="helpid" content="Core.core.server.role.table.page.title;core"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerRolesTablePortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerRolesTable.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for server policies page -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerPoliciesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.policies.label">
+                            <netuix:meta name="helpid" content="Core.core.server.serverpolicies.page.title;core"/>
+                            <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerPoliciesPortlet"
+                                                          contentUri="/PortalConfig/core/server/ServerPolicies.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="ServerNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.server.servernotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="ServerNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Server table page -->
+      <netuix:book definitionLabel="ServerTableBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="servers.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerServerTablePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="ServerTablePagesBook"
+                               title="servers.title">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the CoreServerServerTablePage page -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerServerTablePage"
+                                   presentationClass="page-content"
+                                   title="tab.configuration.label">
+                        <netuix:meta name="helpid" content="Core.core.server.server.title;core"/>
+                        <netuix:meta name="breadcrumb" content="servers.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerTablePortlet"
+                                                      contentUri="/PortalConfig/core/server/ServersConfigTable.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the WLSServerControlTablePage page -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="WLSServerControlTablePage"
+                                   presentationClass="page-content"
+                                   title="tab.control.label">
+                        <netuix:meta name="helpid" content="Core.core.server.serverscontroltable.title;core"/>
+                        <netuix:meta name="breadcrumb" content="servers.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WLSServerControlTablePortlet"
+                                                      contentUri="/PortalConfig/core/server/ServersControlTable.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Server creation assistant page -->
+      <netuix:book definitionLabel="ServerCreateBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.server.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+                  </netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerCreateServer"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.createserver.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerCreateServerPortlet"
+                                          contentUri="/PortalConfig/core/server/CreateServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Server clone assistant page -->
+      <netuix:book definitionLabel="ServerCloneBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.clone.server.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+                  </netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerCloneServer"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.createserver.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerCloneServerPortlet"
+                                          contentUri="/PortalConfig/core/server/CloneServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Server deletion assistant page -->
+      <netuix:book definitionLabel="ServerDeleteBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.server.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerDeleteServer"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.deleteserver.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerDeleteServerPortlet"
+                                          contentUri="/PortalConfig/core/server/DeleteServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Start Server assistant -->
+      <netuix:book definitionLabel="ServerStartBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerStartServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerStartServerPortlet"
+                                          contentUri="/PortalConfig/core/server/StartServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Shutdown Server assistant -->
+      <netuix:book definitionLabel="CoreServerShutdownServerBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerShutdownServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerShutdownServerPortlet"
+                                          contentUri="/PortalConfig/core/server/ShutdownServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Shutdown Server assistant -->
+      <netuix:book definitionLabel="CoreServerForceShutdownServerBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerForceShutdownServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerForceShutdownServerPortlet"
+                                          contentUri="/PortalConfig/core/server/ForceShutdownServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Suspend Server assistant -->
+      <netuix:book definitionLabel="ServerShutdownSuspendBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerSuspendServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerSuspendServerPortlet"
+                                          contentUri="/PortalConfig/core/server/SuspendServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Suspend Server assistant -->
+      <netuix:book definitionLabel="CoreServerForceSuspendServerBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerForceSuspendServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerForceSuspendServerPortlet"
+                                          contentUri="/PortalConfig/core/server/ForceSuspendServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Resume Server assistant -->
+      <netuix:book definitionLabel="ServerShutdownResumeBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerResumeServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerResumeServerPortlet"
+                                          contentUri="/PortalConfig/core/server/ResumeServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Restart SSL channels assistant -->
+      <netuix:book definitionLabel="ServerRestartSSLBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerRestartSSLChannels"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerRestartSSLChannelsPortlet"
+                                          contentUri="/PortalConfig/core/server/RestartSSLChannels.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Start Server assistant -->
+      <netuix:book definitionLabel="WLSServersControlStartServersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlStartServers"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WLSServersControlStartServersPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlStartServers.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Shutdown Server assistant -->
+      <netuix:book definitionLabel="WLSServersControlShutdownServersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlShutdownServers"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WLSServersControlShutdownServersPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlShutdownServers.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Shutdown Server assistant -->
+      <netuix:book definitionLabel="WLSServersControlForceShutdownServersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlForceShutdownServers"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="WLSServersControlForceShutdownServersPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlForceShutdownServers.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Suspend Server assistant -->
+      <netuix:book definitionLabel="WLSServersControlSuspendServersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlSuspendServers"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WLSServersControlSuspendServersPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlSuspendServers.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Suspend Server assistant -->
+      <netuix:book definitionLabel="WLSServersControlForceSuspendServersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlForceSuspendServers"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="WLSServersControlForceSuspendServersPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlForceSuspendServers.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Resume Server assistant -->
+      <netuix:book definitionLabel="WLSServersControlResumeServersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlResumeServers"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WLSServersControlResumeServersPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlResumeServers.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Restart SSL channels assistant -->
+      <netuix:book definitionLabel="WLSServersControlRestartSSLChannelsBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WLSServersControlRestartSSLChannels"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WLSServersControlRestartSSLChannelsPortlet"
+                                          contentUri="/PortalConfig/core/server/ServersControlRestartSSLChannels.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Channel creation assistant page -->
+      <netuix:book definitionLabel="ServerCreateChannelBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.channel.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerCreateChannelPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.createchannel.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerCreateChannelPortlet"
+                                          contentUri="/PortalConfig/core/server/CreateChannel.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Channel clone assistant page -->
+      <netuix:book definitionLabel="ServerCloneChannelBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.clone.channel.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerCloneChannelPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.createchannel.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerCloneChannelPortlet"
+                                          contentUri="/PortalConfig/core/server/CloneChannel.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Channel deletion assistant page -->
+      <netuix:book definitionLabel="ServerDeleteChannelBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.channel.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerDeleteChannelPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.deletechannels.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerDeleteChannelPortlet"
+                                          contentUri="/PortalConfig/core/server/DeleteChannel.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ExecuteQueue creation assistant page -->
+      <netuix:book definitionLabel="ServerCreateExecuteQueueBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="ServerCreateExecuteQueuePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.createexecutequeue.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerCreateExecuteQueuePortlet"
+                                          contentUri="/PortalConfig/core/server/CreateExecuteQueue.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ExecuteQueue deletion assistant page -->
+      <netuix:book definitionLabel="ServerDeleteExecuteQueueBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="ServerDeleteExecuteQueuePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.deletequeues.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ServerDeleteExecuteQueuePortlet"
+                                          contentUri="/PortalConfig/core/server/DeleteExecuteQueue.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the server roles edit pageflow -->
+      <netuix:book definitionLabel="ServerEditRolesBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerRolesTabPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.role.manage.page.title;core"/>
+            <netuix:meta name="breadcrumb" content="assistant.server.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerRolesPortlet"
+                                          contentUri="/PortalConfig/core/server/ServerRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete server roles assistant -->
+      <netuix:book definitionLabel="ServerDeleteRolesBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.server.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerDeleteRolesTabPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.role.delete.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerDeleteRolesPortlet"
+                                          contentUri="/PortalConfig/core/server/DeleteServerRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create server roles assistant -->
+      <netuix:book definitionLabel="ServerCreateRolesBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.server.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="ServerCreateRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.role.create.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerServerCreateRolesPortlet"
+                                          contentUri="/PortalConfig/core/server/CreateServerRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ExecuteQueue dispatcher page -->
+      <netuix:book definitionLabel="CoreExecuteQueueDispatcher" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deployments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreExecuteQueueDispatcherPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreExecuteQueueDispatcherPortlet"
+                                          contentUri="/PortalConfig/core/server/ExecuteQueueDispatcher.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the Garbage Collection assistant -->
+      <netuix:book definitionLabel="CoreServerGarbageCollection" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.garbagecollection.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerGarbageCollectionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.garbagecollection.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerGarbageCollectionPortlet"
+                                          contentUri="/PortalConfig/core/server/GarbageCollection.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the ThreadStackDump assistant -->
+      <netuix:book definitionLabel="CoreServerThreadStackDump" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="server.threadstackdump.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerThreadStackDumpPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.threadstackdump.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerThreadStackDumpPortlet"
+                                          contentUri="/PortalConfig/core/server/ThreadStackDump.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the PauseTime assistant -->
+      <netuix:book definitionLabel="CoreServerGCPauseTime" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.gcpausetime.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerGCPauseTimePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.gcpausetime.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerGCPauseTimePortlet"
+                                          contentUri="/PortalConfig/core/server/GCPauseTime.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the JTA Local Commit assistant -->
+      <netuix:book definitionLabel="JTAForceLocalCommit" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.forcetransactioncommit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="JTAForceLocalCommitPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.jtalocalcommit.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JTAForceLocalCommitPortlet"
+                                          contentUri="/PortalConfig/core/server/JTAForceLocalCommit.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the JTA Local Rollback assistant -->
+      <netuix:book definitionLabel="JTAForceLocalRollback" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.forcetransactionrollback.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="JTAForceLocalRollbackPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.jtalocalrollback.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JTAForceLocalRollbackPortlet"
+                                          contentUri="/PortalConfig/core/server/JTAForceLocalRollback.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the JTA Global Commit assistant -->
+      <netuix:book definitionLabel="JTAForceGlobalCommit" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.forcetransactioncommit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="JTAForceGlobalCommitPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.jtaglobalcommit.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JTAForceGlobalCommitPortlet"
+                                          contentUri="/PortalConfig/core/server/JTAForceGlobalCommit.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the JTA Global Rollback assistant -->
+      <netuix:book definitionLabel="JTAForceGlobalRollback" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.forcetransactionrollback.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JTAForceGlobalRollbackPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.jtaglobalrollback.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JTAForceGlobalRollbackPortlet"
+                                          contentUri="/PortalConfig/core/server/JTAForceGlobalRollback.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the Cancel Job assistant -->
+      <netuix:book definitionLabel="CoreServerCancelJobs" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.canceljobs.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerCancelJobsPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.canceljobs.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerCancelJobsPortlet"
+                                          contentUri="/PortalConfig/core/server/CancelJobs.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the Enable DebugScope/Attributes assistant -->
+      <netuix:book definitionLabel="CoreServerEnableDebug" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.serverdebug.enable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerEnableDebugPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.serverdebug.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerEnableDebugPortlet"
+                                          contentUri="/PortalConfig/core/server/CoreServerEnableDebug.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the Disable DebugScope/Attributes assistant -->
+      <netuix:book definitionLabel="CoreServerDisableDebug" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.serverdebug.disable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerDisableDebugPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.serverdebug.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerDisableDebugPortlet"
+                                          contentUri="/PortalConfig/core/server/CoreServerDisableDebug.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the clear DebugScope/Attributes assistant -->
+      <netuix:book definitionLabel="CoreServerClearDebug" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.serverdebug.clear.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerClearDebugPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.serverdebug.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerClearDebugPortlet"
+                                          contentUri="/PortalConfig/core/server/CoreServerClearDebug.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for SAML20 PublishMetaData assistant -->
+      <netuix:book definitionLabel="CoreServerSAML20PublishMetaDataBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.saml20.publishmetadata.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreServerSAML20PublishMetaDataPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Core.core.server.saml20.publishmetadata.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerSAML20PublishMetaDataPortlet"
+                                          contentUri="/PortalConfig/core/server/CoreServerSAML20PublishMetaData.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the Server WebService Logical Store creation assistant page -->
+      <netuix:book definitionLabel="CoreServerCreateLogicalStoreBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.logicalstore.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+                  </netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerCreateLogicalStore"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.createlogicalstore.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerCreateLogicalStorePortlet"
+                                          contentUri="/PortalConfig/core/server/ServerConfigWebServicesCreateLogicalStore.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the LogicalStore deletion assistant page -->
+      <netuix:book definitionLabel="CoreServerDeleteLogicalStoreBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.logicalstore.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerDeleteLogicalStore"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.serverconfigwebservices.deletelogicalstore.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerDeleteLogicalStorePortlet"
+                                          contentUri="/PortalConfig/core/server/ServerConfigWebServicesDeleteLogicalStore.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the LogicalStore configuration page -->
+      <netuix:book definitionLabel="CoreServerLogicalStoreConfigBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="book.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+                  </netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreServerLogicalStoreConfig"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.server.serverconfigwebservices.logicalstoreconfig.title;core"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>
+            <netuix:meta name="configuration-page" content="WebServiceLogicalStore"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreServerLogicalStoreConfigPortlet"
+                                          contentUri="/PortalConfig/core/server/ServerConfigWebServicesLogicalStore.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

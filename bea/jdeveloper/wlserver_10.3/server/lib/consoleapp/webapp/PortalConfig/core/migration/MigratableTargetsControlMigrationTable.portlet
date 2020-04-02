@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Portlet definition file for the MigratableTargetsControlMigrationTable page in
+  the WebLogic Server administration console. This table displays all
+  of the configured migratable targets and allows an administrator to
+  select one or more for migration.
+  
+  Copyright (c) 2006,2009, Oracle and/or its affiliates. All rights reserved. 
+-->
+<portal:root
+  xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+  xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+  xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+  <netuix:portlet definitionLabel="MigratableTargetsControlMigrationTablePortlet">
+    <netuix:strutsContent
+      module="/core"
+      action="MigratableTargetsControlMigrationTable"
+      refreshAction="MigratableTargetsControlMigrationTable" />
+  </netuix:portlet>
+</portal:root>

@@ -1,0 +1,367 @@
+#
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+# Copyright 1996 BEA Systems, Inc.
+# All rights reserved
+#
+# THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE
+# OF BEA Systems, Inc.
+# The copyright notice above does not evidence
+# any actual or intended publication of such
+# source code
+#
+#ident	"@(#) samples/atmi/bankapp/README2.nt	$Revision: 1.4 $"
+#
+
+This file contains the following information:
+    A. New features added to bankapp.
+    B. How to activate the event processing mechanism.
+    C. How to activate ACL based authentication.
+    D. List of new files added with a brief description of each.
+    E. Inspecting the new features in bankapp.
+    F. Some helpful Tips.
+
+A. NEW FEATURES IN BANKAPP DEMO
+Bankapp, the distributed banking demo application provided with the TUXEDO
+System has been enhanced in System 6 to demonstrate the following features.
+
+	1. Managing user events using an Event Broker	(new in version 6)
+	2. Authentication using Access Control Lists	(new in version 6)
+	3. Application Queues
+
+The procedure for installing bankapp as described in the "README.nt" file
+remains unchanged. Following this procedure builds the bankapp application
+with the same functionality as it had in System 5. The bankapp in this new
+release comes armed with the features listed above, but the functionality
+is not activated. To activate it, requires a few simple steps outlined below.
+
+NOTE: Prior to these steps, the bankapp application must have been
+installed and configured as outlined in the README file.
+
+--------------------------------------------------------------------------------
+
+B. HOW TO ACTIVATE THE EVENT PROCESSING MECHANISM:
+
+    1. Shutdown the active node if running.
+	    c:> runmast
+		    choose Shutdown and Exit
+
+    2. Set up the environment
+	    c:> bankvar.mp1
+
+    3. Create queues used by event subscribers
+	    c:> crqueue
+
+    4. Uncomment the following commented lines in the ubbconfig file "UBB".
+       To uncomment, delete the '##' characters that appear at the beginning
+       of the line.
+	
+................................................................................
+
+*GROUPS section
+##QGRP1	LMID=SITE1	GRPNO=12
+##	TMSNAME=TMS_QM	TMSCOUNT=2
+##	OPENINFO="TUXEDO/QM:<APPDIR1>/qdevice:QSP_BANKAPP"
+ 
+##MGRGRP1	LMID=SITE1      GRPNO=13
+ 
+##EVBGRP1	LMID=SITE1      GRPNO=14
+
+
+*SERVERS
+##TMQUEUE	SRVGRP=QGRP1	SRVID=1	CONV=N	GRACE=0
+##	CLOPT="-s QSP_BANKAPP:TMQUEUE"
+ 
+##TMQFORWARD	SRVGRP=QGRP1	SRVID=2	CONV=N	REPLYQ=N GRACE=0
+##	CLOPT="-- -e -n -d -q Q_OPENACCT_LOG"
+
+##TMUSREVT        SRVGRP=EVBGRP1	SRVID=1	GRACE=3600
+##		ENVFILE="tmusrevt.env"
+##		CLOPT="-e tmusrevt.out -o tmusrevt.out -A --
+##			-f <APPDIR1>/tmusrevt.dat"
+##		SEQUENCE=11
+
+##ACCTMGR SRVGRP=MGRGRP1	SRVID=1
+##	CLOPT="-A -o ACCTMGR.LOG -- -w 1000.00"
+##		SEQUENCE=12
+................................................................................
+
+    5. Generate the 'tuxconfig' file
+	    c:> tmloadcf -y UBB
+
+    6. Boot the application
+	    c:> runmast
+		    choose Boot
+
+    7. Generate events
+	    From the menu, choose Launch Client and Open at least 5 accounts
+	    each with a starting balance greater than $10,000.00. Note down
+	    the account numbers returned. Withdraw or Deposit amounts greater
+	    than $10,000.00 from one or more of these accounts. Events are
+	    generated for accounts opened as well as deposits and withdrawals
+	    above $10,000.00. For a detailed explanation refer to the "The
+	    Event Processing Mechanism" under section E below.
+
+	    From another window, at the shell prompt, run the bankapp client
+	    that subscribes to and receives notification of certain events.
+		c:> bankmgr
+	    Open 5 more accounts with starting balances greater than $10,000.00
+	    as above. Withdraw amounts greater than $10,000.00 from one or 
+	    more of these accounts. Events are generated for accounts opened
+	    as well as withdrawals above $10,000.00. The notifications for
+	    these events generated are received by the "bankmgr" client and
+	    logged onto the terminal (stdout).
+
+
+--------------------------------------------------------------------------------
+
+C. HOW TO ACTIVATE ACL BASED AUTHENTICATION :
+
+    1. Shutdown the active node if running.
+	    c:> runmast
+		    choose Shutdown and Exit
+
+    2. Set up the environment
+	    c:> bankvar.mp1
+
+    3. Uncomment the following commented lines in the ubbconfig file "UBB"
+       To uncomment, delete the '##' charecters that appear at the beginning
+       of the line.
+	
+................................................................................
+
+*RESOURCES
+##SECURITY	ACL
+##AUTHSVC	"..AUTHSVC"
+
+
+*GROUPS
+##AUTHGRP	LMID=SITE1	GRPNO=11
+ 
+
+*SERVERS
+##AUTHSVR	SRVGRP=AUTHGRP	SRVID=1	RESTART=Y  GRACE=0  MAXGEN=2
+##	CLOPT="-A"
+................................................................................
+ 
+    4. Generate the 'tuxconfig' file. Specify an application password
+       when requested.
+	    c:> tmloadcf -y UBB
+
+    5. Execute the following scripts in the order below. While creating
+       users, user names and passwords will be requested.
+	    c:> crusers
+	    c:> cracl
+
+    6. If the database has already been populated (runmast, choose Boot,
+       Populate from the main menu or run the "populate" script from the
+       command line), go to the next step.
+       If not, you will need to populate it to run the demo. The Populate
+       and Generate Transactions menu items use a TUXEDO /T driver
+       program %TUXDIR%\bin\ud.exe With security level of APP_PW or higher
+       configured, it looks for the application password in the environment
+       variable APP_PW. 
+	 To set this environment variable:
+	    c:> set APP_PW=<your-pw>
+
+	    where <your-pw> must be whatever was supplied in step 4 above.
+
+    7. Boot the application
+	    c:> runmast
+		    choose Boot
+		    If database is NOT YET populated, choose Populate
+
+    8. Verifying the ACL mechanism
+       Run the audit client "audit.exe".
+       Since the ACLs for the audit services list only the bank auditor
+       group "bankaud", specifying "bankaud1" (member of "bankaud" group)
+       at the user name prompt and supplying the password will permit
+       auditing to be performed. Auditing services will be refused for any
+       other user.
+ 
+--------------------------------------------------------------------------------
+
+D. LIST OF NEW FILES ADDED
+A few new files were added to demonstrate the above features.  A brief
+description of each file follows.
+
+ACCTMGR.c	A bankapp application server that subscribes to some events
+		and logs them when notifications are received. Contains
+		WATCHDOG and Q_OPENACCT_LOG services which are invoked when
+		event notifications BANK_TLR_.* and BANK_CTR_.*  respectively
+		are received. The events are subscribed and unsubscribed in 
+		functions tpsvrinit() and tpsvrdone() respectively of the
+		ACCTMGR server.
+
+bankmgr.c	A TUXEDO native client that subscribes to some events and 
+		is alerted when those events occur. The client is a bank
+		manager who requests notifications of "interesting" events
+		posted. The events are BANK_TLR_WITHDRAWAL for withdrawal
+		of large amounts and BANK_CTR_OPENACCT for accounts opened
+		with large amounts.
+
+nt\cracl.c	A C program that creates ACLs for services, queues etc.
+		for use by the ACL authentication security level. The ACLs
+		can be found in the file "tpacl".
+
+nt\crqueue.c	A C program that creates application queues used by event
+		subscribers requesting queue based notification.
+
+nt\crusers.c	A C program that creates groups and users for use by a
+		security authentication mechanism. The groups and users
+		created can be found in the files "tpgrp" and "tpusr".
+
+eventflds	A field table used by the application for event related
+		fields.
+
+nt\showq.c	A C program that displays the status and contents of a
+		named queue.
+
+nt\usrevtf.cmd	Creates an ENVFILE (TMUSREVT.ENV) for use by the TUXEDO
+		System server TMUSREVT.
+
+--------------------------------------------------------------------------------
+
+E. INSPECTING THE NEW FEATURES IN BANKAPP
+
+1. The Event Processing mechanism:
+   Events are posted under the following conditions. When a new account is
+   opened, a BANK_CTR_OPENACCT event is posted in the service OPEN_ACCT
+   (translation unit ACCT.ec). Also, when deposits and withdrawals of amounts
+   greater then $10,000.00 occur, events BANK_TLR_DEPOSIT and
+   BANK_TLR_WITHDRAWAL are posted in the services DEPOSIT and WITHDRAWAL
+   (translation unit TLR.ec) respectively.
+
+   A bankapp application server ACCTMGR (translation unit ACCTMGR.c) is
+   a TUXEDO server that subscribes to two sets of events. It requests that
+   notifications for events "BANK_CTR_.*" be queued into the application
+   queue Q_OPENACCT_LOG and notifications for events "BANK_TLR_.*" be done
+   by calling the TUXEDO service routine WATCHDOG. Messages queued in queue
+   Q_OPENACCT_LOG are set up to be forwarded by a TUXEDO system server,
+   TMQFORWARD(5), to a service by the same name, Q_OPENACCT_LOG, when the 
+   number of queued messages for this queue reaches 5. Both service
+   functions Q_OPENACCT_LOG and WATCHDOG are implemented in server ACCTMGR.
+   All events received by the ACCTMGR server are logged one per line into
+   the file ACCTMGR.LOG in the %APPDIR% directory. The format of the entry is:
+	<event-name>|<event-time>|<account-id>|<amount>
+
+   Event subscriptions are held in the file tmusrevt.dat and managed by the
+   TUXEDO System server TMUSREVT(5). Notice that this filename is specified
+   for the -f option under CLOPT for the server TMUSREVT (in the *SERVERS
+   section of the file UBB). This file holds a list of all current user
+   events' subscriptions.
+
+   A bankapp client "bankmgr.exe" (translation unit bankmgr.c) by default
+   subscribes to two events. One is BANK_TLR_WITHDRAWAL with the filter
+   condition being "AMOUNT > 10000.00" (both event and filter may be over-
+   ridden by using command line options) requesting that the event
+   be notified as an unsolicited message (via the unsolicited message
+   handler). The other is BANK_CTR_OPENACCT requesting that the event
+   notifications be queued on the application queue Q_OPENACCT. There are
+   no options to over-ride this subscription. This client (run from the
+   shell prompt) runs forever logging all events received on stdout. The
+   format of each entry is the same as in the file ACCTMGR.LOG. Run
+   without arguments, it uses defaults for event subscriptions and prints out
+   the usage syntax.
+
+
+2. ACL based authentication:
+   When using ACL based security, the resources SECURITY and AUTHSVC needs to
+   be specified in the *RESOURCES section of the ubbconfig(5) file. In
+   addition the authentication server AUTHSVR(5) also needs to be specified
+   in the *SERVERS section of the ubbconfig file.
+
+   The script "crusers" creates groups using tpgrpadd(1) and users within
+   groups using tpusradd(1). Groups appear in the file %APPDIR%\tpgrp and
+   users in the file %APPDIR%\tpusr. These files are similar to the UNIX
+   group and password files respectively.
+
+   When ACL level of security is specified, users attempting to become an
+   application client will be authenticated before they can join TUXEDO as a
+   client. If a user who has joined TUXEDO requests use of an entity which
+   has an associated ACL, the request will be authenticated against the ACL
+   for that entity.
+
+   The script "cracl" creates access control lists using tpacladd(1), to
+   control access to named entities such as services, queues and events. The
+   ACL entries appear in the file %APPDIR%\tpacl. Each entry in the file
+   records the named entity and the groups allowed access to it.
+
+   Notice that the %APPDIR%\tpusr file generated has the bank manager (default
+   bankmgr1) with a client name of "tpsysadm" and the bank auditor (default
+   bankaud1) with a client name of "*". See AUTHSVR(5) for an explanation of
+   how these affect authentication. It has been set up such that only the
+   bank manager (bankmgr1) can successfully run the "bankmgr" client. Notice
+   here, the bank manager is also the TUXEDO system administrator in which
+   case no authentication is performed. The reason the bank manager is play-
+   ing the role of the TUXEDO system administrator is that only a "tpsysadm"
+   client may dequeue messages (from a queue) that arrived there as a result
+   of an event notification (due to a previous subscription). It has also
+   been set up such that only the bank auditor (bankaud1) can successfully
+   run the auditing clients "audit" and "auditcon". The bank user (default
+   yourself) can run the script "run" which will invoke the mio client that
+   provides ATM services.
+
+
+Examine the individual scripts for brief descriptions of the steps involved.
+
+Note that to use this demo effectively the user must have access to more than
+one "window" into the machine running the bankapp application. The following
+might be a typical scenario:
+    i.   Running a Bankapp client requesting banking services (script "run"
+	 if running from the command line)
+    ii.  Running a "tail -f %APPDIR%\ACCTMGR.LOG" to see events as they are
+	 received and logged by the ACCTMGR server.
+    iii. Running the "bankmgr" client to receive events.
+    iv.  Browsing through event subscriptions in %APPDIR%\tmusrevt.dat, or
+	 any other file.
+
+--------------------------------------------------------------------------------
+
+F. SOME HELPFUL TIPS
+................................................................................
+
+To delete and re-create the bankapp database:
+
+    Go to %APPDIR% and:
+    1. Shutdown the active node if running.
+	    c:> runmast
+		    choose Shutdown and Exit
+
+    On each site that the database is to be re-created, go to %APPDIR% and:
+    2. Set up the environment
+	    c:> bankvar.mp?		(bankvar.mp1, bankvar.mp2, ...)
+
+    3. Remove IPC resources associated with the database
+	    c:> rmskill		-- Ref. rmskill (1)
+
+    4. Delete the database
+	    c:> del bankdl?		(bankdl1, bankdl2, ...)
+
+    5. Create the database
+	    c:> crbankdb
+
+................................................................................
+
+To delete and re-create the /Q device.
+
+    Go to %APPDIR% and:
+    1. Shutdown the active node if running.
+	    c:> runmast
+		    choose Shutdown and Exit
+
+    2. Set up the environment (MASTER machine only)
+	    c:> bankvar.mp1
+
+    3. Remove the IPC resources associated with the /Q device
+	    c:> qmadmin			- Ref. qmadmin (1)
+		> ipcrm -y QSP_BANKAPP
+		> quit
+	    c:>
+
+    4. Delete the /Q device
+	    c:> del qdevice
+	    
+    5. Re-create the /Q device
+	    c:> crqueue
+
+................................................................................

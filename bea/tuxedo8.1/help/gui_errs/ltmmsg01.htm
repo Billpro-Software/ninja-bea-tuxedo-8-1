@@ -1,0 +1,5171 @@
+<!-- .if n .pH errman.h.ltmmsg01.htm @(#)ltmmsg01.htm	60.4 of 3/12/97 --> 
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTMIB MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1>
+<H1>LIBTMIB MESSAGES 1-99</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1"></A>
+<H3>LIBTMIB MESSAGE #1</H3>
+<H2> INFO: Abortively terminating client process <I>pid</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request to change the state of a client to
+DEAD
+has caused the system to attempt termination of the process <I>pid</I>
+with the
+SIGKILL
+signal.
+<H3>ACTION</H3>
+Informational message only, no action required.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2"></A>
+<H3>LIBTMIB MESSAGE #2</H3>
+<H2> ERROR: Server group name does not match existing group</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The server group name,
+TA_SRVGRP,
+specified on a
+SET
+request for the
+T_SERVER
+class, is not a recognized server group.
+<H3>ACTION</H3>
+Correct the server group name and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3"></A>
+<H3>LIBTMIB MESSAGE #3</H3>
+<H2> ERROR: Invalid class name (<I>class</I>) presented to /Admin service <I>svc</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The class name <I>class</I> is not recognized by the administrative service
+<I>svc</I>.
+<H3>ACTION</H3>
+Correct the service name and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4"></A>
+<H3>LIBTMIB MESSAGE #4</H3>
+<H2> ERROR: SYSTEM_ACCESS mismatch with NO_OVERRIDE set in T_DOMAIN class</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVER
+class object with the
+TA_SYSTEM_ACCESS
+attribute being updated specified a value different than that set in the
+T_DOMAIN
+class object and the
+NO_OVERRIDE
+modifier is also set in the
+T_DOMAIN
+class object.
+<H3>ACTION</H3>
+Remove the change to the
+TA_SYSTEM_ACCESS
+value from the
+SET
+request or remove the
+NO_OVERRIDE
+modifier from the
+T_DOMAIN
+class object.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5"></A>
+<H3>LIBTMIB MESSAGE #5</H3>
+<H2> ERROR: TA_MAX(<I>max</I>) not set >= TA_MIN(<I>min</I>)</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The maximum number of server instances <I>max</I> specified on a
+T_SERVER
+class
+SET
+request was less than the specified minimum number of instance <I>min</I>.
+<H3>ACTION</H3>
+Lower <I>min</I> or raise <I>max</I> to be in accordance with the
+restriction and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="6"></A>
+<H3>LIBTMIB MESSAGE #6</H3>
+<H2> ERROR: SET operation violates restrictions on servers with same TA_RQADDR</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The request queue address name for a
+T_SERVER
+class object is being
+SET
+to a value matching an existing server that is either a different server
+name or a different server group.
+<H3>ACTION</H3>
+Either set the request queue address name to something different than
+the matching servers name or change the server name and/or server group
+to match the desired existing servers attribute values and regenerate
+the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="7"></A>
+<H3>LIBTMIB MESSAGE #7</H3>
+<H2> ERROR: Overlapping range for TA_SRVGRP, TA_SRVID and TA_MAX</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVER
+class object violated the restriction that within a particular server
+group, servers may not have overlapping server identifiers.  This restriction
+takes into account the base server identifier as well as the setting for
+the maximum number of server instances.
+<H3>ACTION</H3>
+Lower the maximum number of server instances to eliminate the overlap or
+shift the base server identifier to avoid the overlap and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="8"></A>
+<H3>LIBTMIB MESSAGE #8</H3>
+<H2> ERROR: SET of TA_STATE to NEW matches existing class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt was made to create a new object via the /AdminAPI, but the
+object keys specified in the request match an existing class object.
+<H3>ACTION</H3>
+Correct the keys used and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="9"></A>
+<H3>LIBTMIB MESSAGE #9</H3>
+<H2> ERROR: Global /Admin update failed processing on LMID(<I>lmid</I>) with error code(<I>num</I>) and status(<I>status</I>)</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation that required global updates in a distribute application
+failed on one of the logical machines <I>lmid</I> with the /AdminAPI
+error code <I>num</I> and a status of <I>status</I>.
+<H3>ACTION</H3>
+The system will automatically refresh the remote site bulletin board and/or
+configuration file as necessary after detecting the failure.
+The status message should be examined for possible causes of the remote
+failure.  This status message will contain a catalog name and message
+number that can be referenced in this manual for further information.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="10"></A>
+<H3>LIBTMIB MESSAGE #10</H3>
+<H2> WARN: Could not find registry table entry for server <I>svrgrp</I>/<I>svrid</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for the indicated server (<I>svrgrp</I>/<I>svrid</I>) attempted
+to update local attributes but could not locate the registry table
+entry on the servers logical machine.
+<H3>ACTION</H3>
+This message is indicative of other problems that may cause the registry
+table problem.  The userlog on the servers logical machine should be examined
+for clues as to any problems that may have occurred leading up to this
+message.  If the cause of the problem is still not clear, then
+contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="11"></A>
+<H3>LIBTMIB MESSAGE #11</H3>
+<H2> ERROR: Cannot update T_SERVICE class with active T_SVCGRP instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request to
+SET
+attribute values for a
+T_SERVICE
+class object could not be satisfied because a corresponding
+T_SVCGRP
+class object (matching
+TA_SERVICENAME
+values) is currently
+ACTIVE.
+<H3>ACTION</H3>
+Defer the update of the
+T_SERVICE
+class object until all of the
+corresponding
+T_SVCGRP
+objects are deactivated.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="12"></A>
+<H3>LIBTMIB MESSAGE #12</H3>
+<H2> WARN: AUTOTRAN specified for SERVICE <I>svc</I> with TRANTIME=0</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI
+SET
+request resulted in an
+TA_AUTOTRAN
+attribute value for the service <I>svc</I> of Y and a
+TA_TRANTIME
+attribute value for the service <I>svc</I> of 0.
+This indicates an infinite timeout for transactions started in the server
+by virtue of the autotran characteristic and may result in "hung" servers
+if application failures result in transactions that do not complete.
+This setting should be made only with great care and the understanding
+of the administrator as to its possible side effects.
+<H3>ACTION</H3>
+Examine the object to be sure that the settings are what is intended
+and correct them if necessary.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="13"></A>
+<H3>LIBTMIB MESSAGE #13</H3>
+<H2> ERROR: SET operation did not specify unique class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The indicated /AdminAPI
+SET
+request did not match a unique class object.  The key fields provided
+match more than one object and are ambiguous as to which should be affected.
+<H3>ACTION</H3>
+Provide sufficient key fields to restrict the request to exactly one object
+and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="14"></A>
+<H3>LIBTMIB MESSAGE #14</H3>
+<H2> ERROR: Invalid class name (<I>class</I>) presented to /Admin service <I>svc</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The class name <I>class</I> is not recognized by the administrative service
+<I>svc</I>.
+<H3>ACTION</H3>
+Correct the service name and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3>LIBTMIB MESSAGE #15</H3>
+<H2> WARN: ROUTING <I>criteria</I> (for SERVICE <I>svc</I>) is not defined in the ROUTING section</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_ROUTINGNAME
+value <I>criteria</I> being set for a
+T_SERVICE
+class object with service name <I>svc</I> is not currently
+configured as a
+T_ROUTING
+class object.
+<H3>ACTION</H3>
+This situation will cause an error for types which have system support
+for routing such as
+FML
+and
+VIEWS.
+However, application types or types for which the application supplies their
+own customized routing function may function fine.  These functions are
+passed the routing criteria name and process in their own way.
+The action to be taken depends on whether the application is relying
+on system support for routing.  If they are, then a
+T_ROUTING
+object with a matching criteria name should be defined.
+Otherwise, no action is necessary.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3>LIBTMIB MESSAGE #16</H3>
+<H2> ERROR: SET keys do not match existing class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request to
+SET
+attributes did not match an existing class instance.
+All requests other than a state change to
+NEW
+must match exactly one existing class object to be processed.
+<H3>ACTION</H3>
+Correct the request to address an existing class object and regenerate.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3>LIBTMIB MESSAGE #17</H3>
+<H2> ERROR: TA_SVCRNAM may be set only when Activating service</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SVCGRP
+class object attempted to set the value for the
+TA_SVCRNAM
+attribute value without including a state change to the
+ACTIVE
+state.
+This is an invalid combination of attribute changes for this class.
+<H3>ACTION</H3>
+Include the setting of
+TA_SVCRNAM
+in an activation request for the object in question and remove
+it from other types of updates to this class.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+eH 4 "18 WARN: AUTOTRAN specified for SERVICE <I>svc</I> with TRANTIME=0"
+<H3>DESCRIPTION</H3>
+An /AdminAPI
+SET
+request resulted in an
+TA_AUTOTRAN
+attribute value for the service <I>svc</I> of Y and a
+TA_TRANTIME
+attribute value for the service <I>svc</I> of 0.
+This indicates an infinite timeout for transactions started in the server
+by virtue of the autotran characteristic and may result in "hung" servers
+if application failures result in transactions that do not complete.
+This setting should be made only with great care and the understanding
+of the administrator as to its possible side effects.
+<H3>ACTION</H3>
+Examine the object to be sure that the settings are what is intended
+and correct them if necessary.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3>LIBTMIB MESSAGE #19</H3>
+<H2> ERROR: TA_AUTHSVC specified without security turned on</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object specified a value for the
+TA_AUTHSVC
+attribute without having security turned on via the
+TA_SECURITY
+attribute.
+This is an invalid combination of attribute values.
+<H3>ACTION</H3>
+Either turn on security before or with the request to set the
+TA_AUTHSVC
+attribute or remove the value for
+TA_AUTHSVC
+from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="20"></A>
+<H3>LIBTMIB MESSAGE #20</H3>
+<H2> ERROR: LAN or MIGRATE option specified without MP TA_MODEL value</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object set either the
+LAN
+or
+MIGRATE
+option without setting the
+TA_MODEL
+attribute value to
+MP.
+This is an invalid combination of attribute values.
+<H3>ACTION</H3>
+Either set the
+TA_MODEL
+value to
+MP
+before or with the request to set the options as specified
+or eliminate the use of the offending options.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="21"></A>
+<H3>LIBTMIB MESSAGE #21</H3>
+<H2> ERROR: Backup TA_MASTER allowed only for MP TA_MODEL</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A backup master logical machine was specified in the
+TA_MASTER
+attribute value on a
+SET
+request for the
+T_DOMAIN
+class object without having the
+TA_MODEL
+set to
+MP.
+This is an invalid combination of attribute values.
+<H3>ACTION</H3>
+Either set the
+TA_MODEL
+value to
+MP
+before or with the change to the
+TA_MASTER
+attribute value or eliminate the setting of the backup master logical machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="22"></A>
+<H3>LIBTMIB MESSAGE #22</H3>
+<H2> ERROR: Invalid master machine specified in TA_MASTER</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The master logical machine identifier in the
+TA_MASTER
+attribute value for a
+SET
+operation on the
+T_DOMAIN
+class object is invalid.  It either represents a logical machine other than
+the actual master machine or it represents an unconfigured logical machine
+identifier.
+<H3>ACTION</H3>
+Correct the logical machine identifiers used in the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="23"></A>
+<H3>LIBTMIB MESSAGE #23</H3>
+<H2> ERROR: Invalid backup machine specified in TA_MASTER</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The logical machine identifier specified in the
+TA_MASTER
+attribute value on a
+SET
+operation for the
+T_DOMAIN
+class object does not match any configured logical machines.
+<H3>ACTION</H3>
+Correct the logical machine identifier used for the backup machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="24"></A>
+<H3>LIBTMIB MESSAGE #24</H3>
+<H2> ERROR: TA_SYSTEM_ACCESS value set with NO_OVERRIDE contradicts T_SERVER settings</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt was made to set the
+NO_OVERRIDE
+modifier on the
+TA_SYSTEM_ACCESS
+attribute value for the
+T_DOMAIN
+class object with a primary
+TA_SYSTEM_ACCESS
+attribute value that does not match all of the currently configured
+T_SERVER
+class objects.
+<H3>ACTION</H3>
+Either remove the
+NO_OVERRIDE
+modifier so that the primary attribute value may be set or reset the
+TA_SYSTEM_ACCESS
+values for all configured
+T_SERVER
+class objects prior to setting the
+T_DOMAIN
+TA_SYSTEM_ACCESS
+value with the
+NO_OVERRIDE
+modifier.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="25"></A>
+<H3>LIBTMIB MESSAGE #25</H3>
+<H2> ERROR: AUTOTRAN specified for SERVICE <I>svc</I> SRVGRP <I>group</I> with no TMS</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SVCGRP
+class object attempted to set the
+TA_AUTOTRAN
+attribute value to
+Y
+for service <I>svc</I> in server group <I>group</I> where the
+indicated server group does not have a
+TMS
+associated with it and can therefore not support transactions.
+<H3>ACTION</H3>
+Change the
+TA_AUTOTRAN
+attribute value to
+N
+or eliminate the setting of this attribute from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="26"></A>
+<H3>LIBTMIB MESSAGE #26</H3>
+<H2> ERROR: TA_LMID value <I>lmid</I> already exists</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt to
+SET
+a new
+T_MACHINE
+class object was made with a logical machine identifier <I>lmid</I>
+that matches an existing class object.
+<H3>ACTION</H3>
+Change the logical machine identifier and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="27"></A>
+<H3>LIBTMIB MESSAGE #27</H3>
+<H2> ERROR: TA_LMID value <I>lmid</I> conflicts with existing T_GROUP class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt to
+SET
+a new
+T_MACHINE
+class object was made with a logical machine identifier <I>lmid</I>
+that matches an existing
+T_GROUP
+class object group name (TA_SRVGRP).
+This is an invalid combination.
+<H3>ACTION</H3>
+Change the logical machine identifier and regenerate the request or
+invalidate the server group and reuse the current logical machine identifier.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="28"></A>
+<H3>LIBTMIB MESSAGE #28</H3>
+<H2> ERROR: TA_PMID value <I>pmid</I> already exists</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt to
+SET
+a new
+T_MACHINE
+class object was made with a physical machine identifier <I>pmid</I>
+that matches an existing class object.
+<H3>ACTION</H3>
+Change the physical machine identifier and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="29"></A>
+<H3>LIBTMIB MESSAGE #29</H3>
+<H2> ERROR: Cannot create new T_MACHINE class instances in SHM mode</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_MACHINE
+class object was made in a
+SHM
+mode application as identified in the
+T_DOMAIN
+TA_MODEL
+attribute value.
+Only one machine is allowed in
+SHM
+mode and the creation of
+NEW
+machines is therefore disallowed.
+<H3>ACTION</H3>
+If an additional machine needs to be added to the application, then you
+must shut down the application, change the model to
+MP,
+set the
+LAN
+TA_OPTIONS
+value in the
+T_DOMAIN
+class object and only then can you add the additional machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="30"></A>
+<H3>LIBTMIB MESSAGE #30</H3>
+<H2> ERROR: Cannot create new T_MACHINE class instances, full machine table</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation to create a
+NEW
+T_MACHINE
+class object could not be satisfied because the machine tables have been
+filled.  These tables are sized based on the
+T_DOMAIN
+TA_MAXMACHINES
+attribute value.
+<H3>ACTION</H3>
+Shut down the application, reconfigure the
+T_DOMAIN
+TA_MAXMACHINES
+attribute value and then the new machine may be added to the application.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="31"></A>
+<H3>LIBTMIB MESSAGE #31</H3>
+<H2> ERROR: Insufficient networking information, TA_NADDR or TA_NLSADDR missing</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation either creating a
+NEW
+T_MACHINE
+class object or adding networking information to an existing object
+did not supply sufficient networking information.
+The presence of either the
+TA_BRIDGE
+or
+TA_NADDR
+attribute on a
+T_MACHINE
+class object indicates that the machine is network enabled.  A network
+enabled machine must have non-0 length string values specified for
+both
+TA_NADDR
+and
+TA_NLSADDR.
+<H3>ACTION</H3>
+Supply either or both of the missing
+TA_NADDR
+and
+TA_NLSADDR
+values.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="32"></A>
+<H3>LIBTMIB MESSAGE #32</H3>
+<H2> ERROR: Networking information may not be specified without LAN option set</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_MACHINE
+class object or modifying an existing object attempted
+to add one or more of the networking attributes
+in an application where the
+T_DOMAIN
+TA_OPTIONS
+value
+LAN
+is not set.
+<H3>ACTION</H3>
+Add the
+LAN
+option to the
+T_DOMAIN
+TA_OPTIONS
+value before adding the networking information for the machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="33"></A>
+<H3>LIBTMIB MESSAGE #33</H3>
+<H2> ERROR: One of both of the LMIDs in TA_LMID do not match configured machines</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for a
+T_GROUP
+class object specified a
+TA_LMID
+value where either the primary or secondary logical machine identifier
+did not match a configured machine.
+<H3>ACTION</H3>
+Check both logical machine identifiers and change the invalid identifier
+to one for a configured machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="34"></A>
+<H3>LIBTMIB MESSAGE #34</H3>
+<H2> ERROR: LMIDs not distinct in TA_LMID for T_GROUP</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for a
+T_GROUP
+class object specified identical logical machines for both the primary
+and secondary logical machine values in the
+TA_LMID
+attribute.
+<H3>ACTION</H3>
+Either change one of the logical machine identifiers to a different
+machine or set the server group to have only a primary machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="35"></A>
+<H3>LIBTMIB MESSAGE #35</H3>
+<H2> ERROR: TA_SRVGRP matches defined logical machine name</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_GROUP
+class object specified a
+TA_SRVGRP
+attribute value that conflicts with a configured
+T_MACHINE
+TA_LMID
+value.
+This is an invalid combination of attribute values.
+<H3>ACTION</H3>
+Change the
+TA_SRVGRP
+value for the group being created to a value distinct from configured
+logical machine identifiers.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="36"></A>
+<H3>LIBTMIB MESSAGE #36</H3>
+<H2> ERROR: TA_SRVGRP or TA_GRPNO not unique</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_GROUP
+class object specified a value for either the
+TA_SRVGRP
+or
+TA_GRPNO
+attribute that is not unique within the class.
+<H3>ACTION</H3>
+Change the server group name and/or the server group number to
+eliminate the conflict.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="37"></A>
+<H3>LIBTMIB MESSAGE #37</H3>
+<H2> ERROR: T_GROUP class instance cannot be added, table full</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation to create a
+NEW
+T_GROUP
+class object could not be satisfied because the group tables have been
+filled.  These tables are sized based on the
+T_DOMAIN
+TA_MAXGROUPS
+attribute value.
+<H3>ACTION</H3>
+Shut down the application, reconfigure the
+T_DOMAIN
+TA_MAXGROUPS
+attribute value and then the new server group may be added to the application.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="38"></A>
+<H3>LIBTMIB MESSAGE #38</H3>
+<H2> WARN: TA_OPENINFO/TA_CLOSEINFO ignored for group(<I>group</I>) with no TMS</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object specified non-0 length values for either or both of
+TA_OPENINFO
+and
+TA_CLOSEINFO
+for a server group with no associated
+TA_TMSNAME
+value.
+The values specified for
+TA_OPENINFO
+and
+TA_CLOSEINFO
+are ignored in this case when configuring the group.
+<H3>ACTION</H3>
+If the server group is intended to be associated with a resource manager,
+then the groups attributes should be modified to include the appropriate
+TA_TMSNAME
+value and the values for
+TA_OPENINFO
+and
+TA_CLOSEINFO
+may be configured at that time.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="39"></A>
+<H3>LIBTMIB MESSAGE #39</H3>
+<H2> ERROR: Machine associated with server group does not have a TLOG device</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for a
+T_GROUP
+class object specified either a primary or secondary logical machine for
+the group without an associated
+TA_TLOGDEVICE
+even though the group is being configured with a non-NULL
+TA_TMSNAME
+value.
+A non-NULL value is one which is non-0 length and is not "TMS".
+<H3>ACTION</H3>
+Either associate
+TA_TLOGDEVICE
+values with the selected machines or change the group to not have
+a non-NULL
+TA_TMSNAME
+associated with it.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="40"></A>
+<H3>LIBTMIB MESSAGE #40</H3>
+<H2> ERROR: Multiple LMIDs disallowed, MIGRATE option not set</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object
+specified both primary and secondary logical machine identifiers and the
+T_DOMAIN
+MIGRATE
+TA_OPTIONS
+value is not set.
+This is an invalid combination of attribute values.
+<H3>ACTION</H3>
+Add the
+MIGRATE
+option to the
+T_DOMAIN
+TA_OPTIONS
+attribute value and reconfigure the group with the primary and secondary
+logical machine identifiers.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="41"></A>
+<H3>LIBTMIB MESSAGE #41</H3>
+<H2> ERROR: TA_GSTATE without TA_GRPNO on T_TRANSACTION group state change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_TRANSACTION
+class object specified a
+TA_GSTATE
+attribute value change without a corresponding
+TA_GRPNO
+value.
+<H3>ACTION</H3>
+Correct the request to include the appropriate
+TA_GRPNO
+value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="42"></A>
+<H3>LIBTMIB MESSAGE #42</H3>
+<H2> ERROR: TA_GSTATE and TA_STATE specified on T_TRANSACTION group state change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_TRANSACTION
+class object specified changes to both the
+TA_STATE
+and
+TA_GSTATE
+attribute values.
+Only one of these attribute values may be changed on any one request.
+<H3>ACTION</H3>
+Remove one of the attribute updates from the request buffer and regenerate.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="43"></A>
+<H3>LIBTMIB MESSAGE #43</H3>
+<H2> ERROR: Permissions violation on SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+request contained an update to an attribute value
+that is not allowed for the initiating user in the current object state.
+The particular attribute violating the permissions is indicated
+in the field
+TA_BADFLD.
+<H3>ACTION</H3>
+Remove the update to the offending attribute from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="44"></A>
+<H3>LIBTMIB MESSAGE #44</H3>
+<H2> ERROR: Invalid GTRID for T_TRANSACTION state change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_TRANSACTION
+class object specified a
+TA_GTRID
+value that does not match any outstanding transactions.
+<H3>ACTION</H3>
+Check to be sure that the correct
+TA_GTRID
+value was used and correct if necessary.
+This situation may occur if the transaction is resolved before the
+request for the state change is generated in which case no action
+is necessary.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="45"></A>
+<H3>LIBTMIB MESSAGE #45</H3>
+<H2> ERROR: TA_GRPNO not found for T_TRANSACTION class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_TRANSACTION
+class object specifying a
+TA_GSTATE
+change has specified a corresponding
+TA_GRPNO
+value that is not currently part of the indicated transaction.
+<H3>ACTION</H3>
+Correct the
+TA_GRPNO
+value and regenerate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="46"></A>
+<H3>LIBTMIB MESSAGE #46</H3>
+<H2> ERROR: Cannot destroy device entry specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation to invalidate a
+T_DEVICE
+class object could not be processed because of an internal failure
+to delete the device.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="47"></A>
+<H3>LIBTMIB MESSAGE #47</H3>
+<H2> ERROR: TA_TLOGCOUNT required to write new log records</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation to add transaction log records failed to specify
+a value for
+TA_TLOGCOUNT.
+This attribute is used to determine how many records from the corresponding
+request should be added to the log.
+<H3>ACTION</H3>
+Add the appropriate value for
+TA_TLOGCOUNT
+to the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="48"></A>
+<H3>LIBTMIB MESSAGE #48</H3>
+<H2> ERROR: TA_CFGDEVICE required on T_DEVICE GET operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+GET
+operation on the
+T_DEVICE
+class failed to provide a value for the attribute key field
+TA_CFGDEVICE
+as required.
+<H3>ACTION</H3>
+Provide a value for
+TA_CFGDEVICE
+that points to a configured TUXEDO System device file name.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="49"></A>
+<H3>LIBTMIB MESSAGE #49</H3>
+<H2> ERROR: Invalid input to T_DEVICE SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_DEVICE
+class object did not specify the required change in
+TA_STATE
+value to either
+NEW
+or
+INV.
+<H3>ACTION</H3>
+Correct the request to include the appropriate state change.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="50"></A>
+<H3>LIBTMIB MESSAGE #50</H3>
+<H2> ERROR: Could not create device entry specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation to create a
+T_DEVICE
+class object could not be processed because of an internal failure.
+Possible causes are
+1) a non-zero offset (TA_DEVOFFSET) was specified
+for the first device list entry (TA_DEVICE)
+in the TUXEDO System device file (TA_CFGDEVICE);
+2) control information in the TUXEDO System device file is corrupted;
+3) the specified offset and size
+overlap with the storage already allocated to another device list entry (TA_DEVICE);
+4) the maximum number of devices allowed
+in a TUXEDO System device file (TA_CFGDEVICE) was exceeded;
+5) the TUXEDO System device file could not be locked;
+6) an operating system error occurred.
+<H3>ACTION</H3>
+Correct the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="51"></A>
+<H3>LIBTMIB MESSAGE #51</H3>
+<H2> ERROR: Cannot destroy device entry 0 while other entries are in UDL</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation to delete a
+T_DEVICE
+class object attempted to delete device index 0 without it being the
+last configured device for this TUXEDO System file system.
+<H3>ACTION</H3>
+Delete the non-0 index devices from the file system before deleting
+device index 0.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="52"></A>
+<H3>LIBTMIB MESSAGE #52</H3>
+<H2> ERROR: Invalid TA_OPTIONS modification in active system</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object in an active application changed the existing settings
+for the
+TA_OPTIONS
+value with respect to the
+LAN
+and/or
+MIGRATE
+options.
+These options may only be changed in an inactive system.
+<H3>ACTION</H3>
+Shut down the application before attempting to change these options values.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="53"></A>
+<H3>LIBTMIB MESSAGE #53</H3>
+<H2> ERROR: ACCSTATS may not be set in MP model application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object attempted to set the
+TA_OPTIONS
+attribute value
+ACCSTATS.
+This attribute value may only be set in
+SHM
+mode application.
+<H3>ACTION</H3>
+Convert the application to
+SHM
+mode before setting this option value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="54"></A>
+<H3>LIBTMIB MESSAGE #54</H3>
+<H2> ERROR: Missing or invalid LMID for SET operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation modifying information local to only one site did not have
+the necessary information to route the request to the appropriate logical
+machine for processing.
+<H3>ACTION</H3>
+Add the correct
+TA_LMID
+attribute or other site identifying attribute to the originating request
+so that the request can be routed correctly.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="55"></A>
+<H3>LIBTMIB MESSAGE #55</H3>
+<H2> ERROR: TA_MASTER migration combined with other T_DOMAIN changes</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class specified both a master machine migration and other attribute changes.
+These activities may not be combined in a single request.
+<H3>ACTION</H3>
+Split the request into a master machine migration and the other changes
+being requested and make 2 requests instead of the one original request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="56"></A>
+<H3>LIBTMIB MESSAGE #56</H3>
+<H2> ERROR: Could not perform TA_MASTER migration</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation requested master machine migration.
+This operation could not be satisfied due to an internal system error.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="57"></A>
+<H3>LIBTMIB MESSAGE #57</H3>
+<H2> ERROR: Backup machine minor release (<I>b_minor</I>) differs from current master (<I>m_minor</I>)</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object resetting the backup logical machine identifier in the
+TA_MASTER
+attribute specified a logical machine with a minor release number <I>b_minor</I>
+that is different from the master machine minor release number <I>m_minor</I>.
+The backup and master logical machines must be the same major and minor
+TUXEDO System release numbers.
+<H3>ACTION</H3>
+Either upgrade the new backup logical machine to the same minor release
+or select a different logical machine as your backup machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="58"></A>
+<H3>LIBTMIB MESSAGE #58</H3>
+<H2> ERROR: T_SVCGRP state change INA to ACT without corresponding active server</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SVCGRP
+class object to set the state from
+INACTIVE
+to
+ACTIVE
+did not specify sufficient additional key fields to map the request to
+a active server or queue within the application.
+<H3>ACTION</H3>
+Provide either the
+TA_RQADDR
+or the
+TA_SRVGRP
+and
+TA_SRVID
+attribute values to map the request to an active server for processing.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="59"></A>
+<H3>LIBTMIB MESSAGE #59</H3>
+<H2> ERROR: Alternate LMID not specified for group</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation changing the state of a
+T_GROUP
+class object from
+ACTIVE
+to
+MIGRATING
+was applied to a server group without a configured backup logical machine
+configured.
+<H3>ACTION</H3>
+Configure a backup logical machine for the server group before requesting
+migration.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="60"></A>
+<H3>LIBTMIB MESSAGE #60</H3>
+<H2> ERROR: Group does not have an alternate location defined</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation changing the state of a
+T_GROUP
+class object from
+MIGRATING
+to
+ACTIVE
+or
+REACTIVATE
+was applied to a server group without a configured backup logical machine
+configured.
+<H3>ACTION</H3>
+Configure a backup logical machine for the server group before requesting
+activation.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="61"></A>
+<H3>LIBTMIB MESSAGE #61</H3>
+<H2> ERROR: Alternate location for group (<I>lmid</I>) is not active</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object requesting a state change from
+MIGRATING
+to
+ACTIVE
+or
+REACTIVATE
+could not be satisfied because the secondary logical machine identifier
+<I>lmid</I> is not currently active.
+<H3>ACTION</H3>
+Activate the secondary logical machine and then retry the server group
+state change.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="62"></A>
+<H3>LIBTMIB MESSAGE #62</H3>
+<H2> ERROR: Server group <I>group</I> cannot migrate, server id <I>svrid</I> in an improper state</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation changing the state of a
+T_GROUP
+class object from
+MIGRATING
+to
+ACTIVE
+or
+REACTIVATE
+could not be satisfied because the server indicated by <I>group</I> and
+<I>svrid</I> is not in the
+MIGRATING
+state.
+<H3>ACTION</H3>
+Either the migration can be canceled (state change from
+MIGRATING
+to
+INACTIVE)
+or the offending server can be deactivated prior to retrying the migration.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="63"></A>
+<H3>LIBTMIB MESSAGE #63</H3>
+<H2> ERROR: Could not update group location information</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object requesting a state change from
+MIGRATING
+to
+ACTIVE
+or
+REACTIVATE
+could not be completed because of an internal system error updating the
+current group location in the bulletin board.
+<H3>ACTION</H3>
+Consult the userlog on the master site for any indication of the cause
+of the problem and
+contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="64"></A>
+<H3>LIBTMIB MESSAGE #64</H3>
+<H2> WARN: Server could not be migrated and was removed from BB</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+TA_STATUS
+message indicating that the associated server could not be migrated
+as requested and has been deactivated.
+<H3>ACTION</H3>
+Consult the userlog on the server groups new site for information on why
+the server failed to migrate.  If the problem can be resolved, the server
+can be brought back up by activating it normally.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="65"></A>
+<H3>LIBTMIB MESSAGE #65</H3>
+<H2> WARN: Terminating process <I>pid</I> via SIGTERM</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request to change the state of a
+T_SERVER
+class object from
+ACTIVE
+or
+SUSPENDED
+to
+DEAD
+has caused the system to send a
+SIGTERM
+signal to the process in an attempt to allow the server to gracefully
+exit.  If the server fails to shut down gracefully within the timeout
+period for the /AdminAPI request (
+TA_MIBTIMEOUT
+), then the server will be abortively terminated with a
+SIGKILL
+signal.
+<H3>ACTION</H3>
+Informational message only, no action required.
+<H3>SEE ALSO</H3>
+ Usignal (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="66"></A>
+<H3>LIBTMIB MESSAGE #66</H3>
+<H2> WARN: Terminating process <I>pid</I> via SIGKILL</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request to change the state of a
+T_SERVER
+class object from
+ACTIVE
+or
+SUSPENDED
+to
+DEAD
+has caused the system to send a
+SIGKILL
+signal to the process to abortively terminate the server.
+<H3>ACTION</H3>
+Informational message only, no action required.
+<H3>SEE ALSO</H3>
+ Usignal (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="67"></A>
+<H3>LIBTMIB MESSAGE #67</H3>
+<H2> ERROR: Cannot change primary LMID for an active T_GROUP class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for a
+T_GROUP
+class object attempted to change the primary logical machine identifier
+for an active server group.
+<H3>ACTION</H3>
+Server group migration is achieved by setting the
+TA_STATE
+of the group to
+MIGRATING
+followed by completing any group specific migration activities and finally
+by setting the
+TA_STATE
+of the group to
+ACTIVE.
+Once this sequence is completed, the primary and backup logical machines
+for the group will be reversed.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="68"></A>
+<H3>LIBTMIB MESSAGE #68</H3>
+<H2> ERROR: Cannot delete a T_MACHINE class instance with a pre-5.0 release site active</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+operation to delete a
+T_MACHINE
+class instance could not be satisfied because one or more machines in
+the configuration is running a release prior to 5.0.
+<H3>ACTION</H3>
+TUXEDO System sites running releases prior to 5.0 do not have the /AdminAPI
+service and the requested global update cannot be done while those systems
+are active within the application.
+Otherwise, the indicated machines userlog file should be examined for
+possible causes of the missing service.  The indicated machine can be
+deactivated and reactivated in an attempt to make the required service
+available.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="69"></A>
+<H3>LIBTMIB MESSAGE #69</H3>
+<H2> ERROR: Cannot invalidate T_MACHINE class instance specified in T_DOMAIN TA_MASTER attribute</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_MACHINE
+class object to set the
+TA_STATE
+from
+INACTIVE
+to
+INVALID
+could not be satisfied because the logical machine identifier is referenced
+in the
+T_DOMAIN
+TA_MASTER
+attribute value.
+<H3>ACTION</H3>
+Change the
+T_DOMAIN
+TA_MASTER
+value to reference other machines before attempting to invalidate this machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="70"></A>
+<H3>LIBTMIB MESSAGE #70</H3>
+<H2> ERROR: Cannot invalidate T_MACHINE class instance specified in T_GROUP TA_LMID attribute</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_MACHINE
+class object to set the
+TA_STATE
+from
+INACTIVE
+to
+INVALID
+could not be satisfied because the logical machine identifier is referenced
+in a
+T_GROUP
+TA_LMID
+attribute value.
+<H3>ACTION</H3>
+Change the
+T_GROUP
+TA_LMID
+values to reference other machines before attempting to invalidate this machine.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="71"></A>
+<H3>LIBTMIB MESSAGE #71</H3>
+<H2> ERROR: Cannot invalidate T_GROUPS class instance with servers configured in group</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object to set the
+TA_STATE
+from
+INACTIVE
+to
+INVALID
+could not be satisfied because their are currently configured
+T_SERVER
+class objects
+associated with the server group.
+<H3>ACTION</H3>
+Invalidate the individual
+T_SERVER
+class objects in the group before attempting
+to invalidate the server group itself.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="72"></A>
+<H3>LIBTMIB MESSAGE #72</H3>
+<H2> ERROR: Cannot invalidate T_GROUPS class instance with services configured in group</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object to set the
+TA_STATE
+from
+INACTIVE
+to
+INVALID
+could not be satisfied because their are currently configured
+T_SVCGRP
+class objects
+associated with the server group.
+<H3>ACTION</H3>
+Invalidate the individual
+T_SVCGRP
+class objects associated with the group before attempting
+to invalidate the server group itself.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="73"></A>
+<H3>LIBTMIB MESSAGE #73</H3>
+<H2> ERROR: Cannot invalidate T_SERVICE class instance with a corresponding configured T_SVCGRP class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVICE
+class object to set the
+TA_STATE
+from
+INACTIVE
+to
+INVALID
+could not be satisfied because their are currently configured
+T_SVCGRP
+class objects
+associated with the same
+TA_SERVICENAME
+attribute value.
+<H3>ACTION</H3>
+Invalidate all
+T_SVCGRP
+class objects for a particular
+TA_SERVICENAME
+value before attempting to invalidate the
+T_SERVICE
+class object for that
+TA_SERVICENAME.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="74"></A>
+<H3>LIBTMIB MESSAGE #74</H3>
+<H2> ERROR: Failed to advertise dynamic /Admin service <I>svc</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The administrative service <I>svc</I> could not be offered by the
+administrative server generating the userlog message during server
+initialization.  This message is generated by one of the following
+administrative servers:
+DBBL,
+BBL
+or
+BRIDGE.
+In the case of a
+BRIDGE
+server, the error is non-fatal and the server will boot and continue
+to function.
+For the other servers, the error causes server initialization to fail
+and the server fails to boot.
+<H3>ACTION</H3>
+In most cases, this problem is encountered when the configured size of the
+services table in the bulletin board is too small.  In this case, shut down
+the application and increase the value for the
+T_DOMAIN
+TA_MAXSERVICES
+attribute before attempting to reboot the application.
+If this does not solve the problem, then
+consult the userlog messages immediately preceding and following this
+message for more information on the failure.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="75"></A>
+<H3>LIBTMIB MESSAGE #75</H3>
+<H2> ERROR: /Admin service input buffer not FML32</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request was received that was not an
+FML32
+typed buffer.
+/AdminAPI services process only
+FML32
+typed buffers.
+<H3>ACTION</H3>
+Change the administrative program to generate
+FML32
+requests only.
+<H3>SEE ALSO</H3>
+ Fintro (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="76"></A>
+<H3>LIBTMIB MESSAGE #76</H3>
+<H2> ERROR: /Admin service input buffer does not include class</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An administrative request received by an /AdminAPI service did not
+contain a
+TA_CLASS
+value.
+A
+TA_CLASS
+value is required as defined in MIB (5).
+<H3>ACTION</H3>
+Correct the request message to include a
+TA_CLASS
+value.
+<H3>SEE ALSO</H3>
+ Fintro (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="78"></A>
+<H3>LIBTMIB MESSAGE #78</H3>
+<H2> ERROR: Invalid class specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_CLASS
+value for an /AdminAPI request is either invalid (does not match any
+classes known by the system) or is missing.
+<H3>ACTION</H3>
+Examine the original input buffer (also contained with the reply buffer)
+to see if the
+TA_CLASS
+value is missing or invalid.  If it is missing, then add the appropriate
+class value to the buffer.  If it is invalid, then check manual pages and
+spelling and correct the class name in the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="79"></A>
+<H3>LIBTMIB MESSAGE #79</H3>
+<H2> ERROR: Invalid operation specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Missing or invalid value for
+TA_OPERATION
+included in /AdminAPI request buffer.
+This is a required input parameter on all /AdminAPI requests and must
+have a value of
+GET,
+SET
+or
+GETNEXT.
+<H3>ACTION</H3>
+Correct the input buffer to include an appropriate value for the
+TA_OPERATION
+attribute.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="80"></A>
+<H3>LIBTMIB MESSAGE #80</H3>
+<H2> ERROR: Missing cursor on GETNEXT operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+TA_CURSOR
+was not included in a
+GETNEXT
+request.
+GETNEXT
+operations require a
+TA_CURSOR
+value be included with the request.
+TA_CURSOR
+values are returned from both
+GET
+and
+GETNEXT
+operations when there are additional objects matching the request criteria
+that have not yet been returned.
+<H3>ACTION</H3>
+The required
+TA_CURSOR
+value should be extracted from a previous
+GET
+or
+GETNEXT
+reply message and included in the
+GETNEXT
+request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="81"></A>
+<H3>LIBTMIB MESSAGE #81</H3>
+<H2> ERROR: Invalid cursor (<I>cursor</I>) specified on GETNEXT operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_CURSOR
+value provided with a
+GETNEXT
+request is invalid.  Cursor values have a specific internally defined
+format and the provided cursor does not match that format.
+<H3>ACTION</H3>
+Insure that cursor values are extracted from previous
+GET
+or
+GETNEXT
+reply messages and that they are not modified in any way before
+using them on subsequent
+GETNEXT
+requests.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="82"></A>
+<H3>LIBTMIB MESSAGE #82</H3>
+<H2> ERROR: SET operation on readonly class <I>class</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+request on the class <I>class</I> failed because the indicated
+class has no writable attributes.
+<H3>ACTION</H3>
+Consult the appropriate manual page for the class in question to see
+if any attributes are defined as writable in any instance.  If not, then
+the administrative tool being used should be changed to keep from generating
+SET
+requests for this class.
+Otherwise, the permissions for attributes in the class have been changed
+dynamically (see
+T_CLASSATT
+class definition in MIB (5)) to make it a read only class.  In this case,
+the application administrator should be consulted to see if the appropriate
+action is to change the class permissions or to change the administrative
+tool to eliminate the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="83"></A>
+<H3>LIBTMIB MESSAGE #83</H3>
+<H2> ERROR: Conflicting key values in SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+request on a class with local information only contained conflicting
+key values with respect to mapping the request to a particular logical
+machine.  The key values in question may be any of the following
+depending on the class in question;
+TA_LMID,
+TA_PMID,
+TA_SRVGRP,
+TA_CLIENTID,
+TA_SOURCE
+or
+TA_GTRID.
+<H3>ACTION</H3>
+Correct the key values on the request to be consistent.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="84"></A>
+<H3>LIBTMIB MESSAGE #84</H3>
+<H2> ERROR: Invalid operation specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Missing or invalid value for
+TA_OPERATION
+included in /AdminAPI request buffer.
+This is a required input parameter on all /AdminAPI requests and must
+have a value of
+GET,
+SET
+or
+GETNEXT.
+<H3>ACTION</H3>
+Correct the input buffer to include an appropriate value for the
+TA_OPERATION
+attribute.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="85"></A>
+<H3>LIBTMIB MESSAGE #85</H3>
+<H2> ERROR: Internal System/T failure (<I>tperrno</I>)</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Internal TUXEDO System/T error <I>tperrno</I> encountered while
+attempting to process master migration.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="86"></A>
+<H3>LIBTMIB MESSAGE #86</H3>
+<H2> ERROR: Invalid TA_MASTER (<I>string</I>) specified on SET operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An invalid <I>string</I> value for the
+TA_MASTER
+attribute was specified on a
+SET
+request for the
+T_DOMAIN
+class object.
+<H3>ACTION</H3>
+Correct the
+TA_MASTER
+value in the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="87"></A>
+<H3>LIBTMIB MESSAGE #87</H3>
+<H2> ERROR: Invalid TA_MASTER (<I>new_mast,new_back</I>) specified on SET operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_MASTER
+value provided on a
+SET
+request for the
+T_DOMAIN
+class was invalid.
+The problem is caused either by the new master logical machine <I>new_mast</I>
+not matching the previous backup logical machine value or by
+the new backup logical machine <I>new_back</I> not matching the previous
+master logical machine value.
+<H3>ACTION</H3>
+Correct the request to contain a valid change to the
+TA_MASTER
+attribute value as defined in the TM_MIB (5) manual page.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="88"></A>
+<H3>LIBTMIB MESSAGE #88</H3>
+<H2> ERROR: Invalid logical machine identifier (<I>lmid</I>) specified for master</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The backup logical machine identifier <I>lmid</I> specified for the
+TA_MASTER
+attribute on a
+SET
+request for the
+T_DOMAIN
+class does not match a configured logical machine.
+<H3>ACTION</H3>
+Correct the request to include a valid logical machine on the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="89"></A>
+<H3>LIBTMIB MESSAGE #89</H3>
+<H2> ERROR: Missing /Admin API key field(s) on SET</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI
+SET
+request on a class with local attributes only did not specify sufficient
+key fields to route the request to the logical machine where the object
+is resident.
+<H3>ACTION</H3>
+Consult the manual page to determine what key fields are available for
+the class in question and provide sufficient key fields for logical
+machine mapping.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="90"></A>
+<H3>LIBTMIB MESSAGE #90</H3>
+<H2> ERROR: Class <I>class</I> is not readable to this user</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+GET
+request for <I>class</I> could not be satisfied because the class
+contains no readable attributes for the invoking user.
+<H3>ACTION</H3>
+In cases where the information is not intended to be available to the
+invoking user, this message is informational only and there is no action to
+be taken.
+If the administrator intended the user to have access to the indicated class,
+then the permissions on the class need to be relaxed by setting appropriate
+permissions values via the
+T_CLASSATT
+class or by resetting the
+T_DOMAIN
+TA_MIBMASK
+attribute value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="91"></A>
+<H3>LIBTMIB MESSAGE #91</H3>
+<H2> ERROR: Missing required key field <I>keyfield</I> on T_DEVICE GET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The key field <I>keyfield</I> is missing on a
+GET
+request for the
+T_DEVICE
+class.
+The key field <I>keyfield</I> is required for
+GET
+access to the
+T_DEVICE
+class as defined in the TM_MIB (5) manual page.
+<H3>ACTION</H3>
+Add the necessary key field value to the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="92"></A>
+<H3>LIBTMIB MESSAGE #92</H3>
+<H2> ERROR: Invalid service name (<I>svc</I>) presented to /Admin service</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An invalid service name <I>svc</I> has been presented to the /AdminAPI
+service processing routine.
+<H3>ACTION</H3>
+Correct the requested service on the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="93"></A>
+<H3>LIBTMIB MESSAGE #93</H3>
+<H2> ERROR: Invalid service name (<I>svc</I>) presented to /Admin service</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An invalid service name <I>svc</I> has been presented to the /AdminAPI
+service processing routine.
+<H3>ACTION</H3>
+Correct the requested service on the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="94"></A>
+<H3>LIBTMIB MESSAGE #94</H3>
+<H2> ERROR: Failed to update FML and VIEW environment variables</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+/AdminAPI service initialization for the administrative process logging
+the message failed because the indicated environment variables could
+not be dynamically updated to include references to directories and
+files necessary for /AdminAPI processing.  This error is caused by
+a failure to allocate sufficient memory from the system.
+<H3>ACTION</H3>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H3>SEE ALSO</H3>
+ malloc (3)
+in Unix System reference manuals,
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="95"></A>
+<H3>LIBTMIB MESSAGE #95</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt dynamically to allocate memory from the operating system using
+ malloc ()
+failed while adding
+FML
+and
+VIEW
+environment variables to the process memory.
+<H3>ACTION</H3>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H3>SEE ALSO</H3>
+ malloc (3)
+in Unix System reference manuals,
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="97"></A>
+<H3>LIBTMIB MESSAGE #97</H3>
+<H2> ERROR: Invalid logical machine specification and/or conflict in search criteria</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+GET
+request contained conflicting
+key values with respect to mapping the request to a particular logical
+machine.  The key values in question may be any of the following
+depending on the class in question;
+TA_LMID,
+TA_PMID,
+TA_SRVGRP,
+TA_CLIENTID,
+TA_SOURCE
+or
+TA_GTRID.
+<H3>ACTION</H3>
+Correct the key values on the request to be consistent.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="98"></A>
+<H3>LIBTMIB MESSAGE #98</H3>
+<H2> WARN: Stray reply during fanout processing, ignored</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+GET
+or
+SET
+that required the
+DBBL
+to fanout the processing received a stray reply from a previous such request.
+The stray reply is ignored and processing continues.
+<H3>ACTION</H3>
+This condition may be caused by a number of different conditions.
+A temporary disruption of network service may cause
+replies to be delayed past the timeout period.
+Timeout periods that are too small may cause fanout processing to abandon
+polling for replies before a reasonable amount of time has passed.
+Excessive administrative traffic may be clogging the network causing
+undue delays.
+If the condition occurs infrequently and is not attributable to a particular
+request, then no action is indicated.  If the condition occurs consistently
+after a particular request, then examine requests made just previously to
+see if their timeout values are too small.
+If the condition occurs frequently, then the
+T_DOMAIN
+timer attribute values (
+TA_SCANUNIT,
+TA_BBLQUERY,
+TA_BLOCKTIME,
+TA_DBBLWAIT
+and
+TA_SANITYSCAN)
+may need to be raised to reduce administrative traffic on the network.
+Additionally, the administrative tools being used to monitor the system
+may need to be examined to identify excessive traffic they may be injecting
+into the system.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="99"></A>
+<H3>LIBTMIB MESSAGE #99</H3>
+<H2> ERROR: Invalid operation (<I>op</I>) specified for /Admin request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Missing or invalid value for
+TA_OPERATION
+included in /AdminAPI request buffer.
+This is a required input parameter on all /AdminAPI requests and must
+have a value of
+GET,
+SET
+or
+GETNEXT.
+<H3>ACTION</H3>
+Correct the input buffer to include an appropriate value for the
+TA_OPERATION
+attribute.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT1>
+<H1>LIBTMIB MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="100"></A>
+<H3>LIBTMIB MESSAGE #100</H3>
+<H2> ERROR: Class <I>class</I> is not writable by this user</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+request for <I>class</I> could not be satisfied because the class
+contains no writable attributes for the invoking user.
+<H3>ACTION</H3>
+In cases where the information is not intended to be writable by the
+invoking user, this message is informational only and there is no action to
+be taken.
+If the administrator intended the user to have write access to the indicated class,
+then the permissions on the class need to be relaxed by setting appropriate
+permissions values via the
+T_CLASSATT
+class or by resetting the
+T_DOMAIN
+TA_MIBMASK
+attribute value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="102"></A>
+<H3>LIBTMIB MESSAGE #102</H3>
+<H2> ERROR: Unrecognized flags bits set on request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Flag values other than those documented in the manual pages have
+been specified.
+<H3>ACTION</H3>
+Correct the request to contain only documented flag values.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="103"></A>
+<H3>LIBTMIB MESSAGE #103</H3>
+<H2> ERROR: Could not create child process to perform blocking admin function</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The UNIX System call
+ fork ()
+failed to create a child process.
+The /AdminAPI uses this mechanism to implement blocking functionality such
+as server activation and deactivation that might otherwise impact the
+performance of the core application.
+<H3>ACTION</H3>
+Check the operating system tunable parameters to make sure a sufficient
+number of processes may be started overall and by one user.  Reconfigure
+the kernel if necessary.
+<H3>SEE ALSO</H3>
+ fork (2)
+in UNIX reference manuals,
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="104"></A>
+<H3>LIBTMIB MESSAGE #104</H3>
+<H2> ERROR: Invalid or unspecified TUXCONFIG environment value</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TUXCONFIG
+environment variable was either not set or set to an invalid value
+prior to calling tpadmcall (3).
+<H3>ACTION</H3>
+Set or correct the value for the
+TUXCONFIG
+environment variable.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="105"></A>
+<H3>LIBTMIB MESSAGE #105</H3>
+<H2> ERROR: Unable to map machine identifiers in configuration file <I>tuxconfig</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TUXCONFIG
+file has been corrupted or is being accessed from a machine not configured
+in the application.
+<H3>ACTION</H3>
+Be sure that the file is being accessed from a machine that is configured
+in the application.  If it is, then the file has likely become corrupted.
+In this case, remove the configuration file and regenerate it before
+continuing.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="106"></A>
+<H3>LIBTMIB MESSAGE #106</H3>
+<H2> ERROR: Unbooted configuration attempted on non-master site</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Unbooted configuration via the tpadmcall (3) interface was attempted
+from a site other than the configuration master machine.
+<H3>ACTION</H3>
+Login to the master machine to do unbooted configuration or wait until
+the local machine is activated and access the /AdminAPI via tpcall (3).
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ tpcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="107"></A>
+<H3>LIBTMIB MESSAGE #107</H3>
+<H2> ERROR: Configuration file <I>tuxconfig</I> is in an invalid state</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The <I>tuxconfig</I> file accessed by tpadmcall (3) has become
+corrupted.  The internal table representing the
+*RESOURCES
+section of the ubbconfig (5) file is missing but other tables
+are present.
+<H3>ACTION</H3>
+Remove the <I>tuxconfig</I> file and regenerate it from scratch before
+continuing.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ ubbconfig (5),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="108"></A>
+<H3>LIBTMIB MESSAGE #108</H3>
+<H2> ERROR: May not SET classes other than T_DOMAIN in an unconfigured application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a class other than
+T_DOMAIN
+failed because the application has not yet been configured.
+The only permissible
+SET
+operation on an unconfigured application is a
+SET
+of the
+T_DOMAIN
+class object to the
+TA_STATE
+NEW.
+<H3>ACTION</H3>
+Configure the
+T_DOMAIN
+class object first and then other operations may be requested.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="109"></A>
+<H3>LIBTMIB MESSAGE #109</H3>
+<H2> ERROR: Failed to initialize internal MIB data structures</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A call to tpadmcall (3) could not be processed because the necessary
+internal data structures could not be initialized.
+<H3>ACTION</H3>
+Consult the local userlog file for additional information on the failure.
+Messages found there will have catalog names and numbers that will
+indicate the cause and action for the underlying failure.
+<H3>SEE ALSO</H3>
+ tpadmcall(3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="110"></A>
+<H3>LIBTMIB MESSAGE #110</H3>
+<H2> ERROR: Could not open temporary file <I>tmpfile</I> for writing</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The temporary file name <I>tmpfile</I> could not be opened for writing
+while attempting to process a tpadmcall (3) call to
+SET
+a
+NEW
+T_DOMAIN
+class object.
+<H3>ACTION</H3>
+Check the temporary file directory to be sure it is writable by the calling
+user and change the mode on the directory if necessary.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="111"></A>
+<H3>LIBTMIB MESSAGE #111</H3>
+<H2> ERROR: Could not write to temporary file <I>tmpfile</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The temporary file name <I>tmpfile</I> could not be written to
+while attempting to process a tpadmcall (3) call to
+SET
+a
+NEW
+T_DOMAIN
+class object.
+<H3>ACTION</H3>
+Make sure that sufficient disk space is available on the filesystem
+where the temporary file is being written.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="112"></A>
+<H3>LIBTMIB MESSAGE #112</H3>
+<H2> ERROR: Cannot set backup master on initial configuration</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_DOMAIN
+class object specified a backup master logical machine identifier.
+This is not allowed in initial configuration since no logical machines
+are yet defined.
+<H3>ACTION</H3>
+Create the configuration with only a master machine (no backup specified),
+then configure the machine you want to be the backup machine and then
+you can change the setting of
+TA_MASTER
+to include the newly configured machine as the backup master.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="113"></A>
+<H3>LIBTMIB MESSAGE #113</H3>
+<H2> ERROR: ACCSTATS may not be set in an inactive application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object attempted to set the
+ACCSTATS
+TA_OPTIONS
+attribute value in an inactive application.
+<H3>ACTION</H3>
+Activate the application before attempting to set this attribute value.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="114"></A>
+<H3>LIBTMIB MESSAGE #114</H3>
+<H2> WARN: Partial deletion of configuration tables</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class changing the
+TA_STATE
+form
+INACTIVE
+to
+INVALID
+partially completed.  Some configuration file tables could not be deleted.
+<H3>ACTION</H3>
+Remove the binary configuration file manually.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="115"></A>
+<H3>LIBTMIB MESSAGE #115</H3>
+<H2> ERROR: Cannot invalidate T_ROUTING instance with matching configured T_SERVICE instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation changing the
+TA_STATE
+of a
+T_ROUTING
+class object from
+INACTIVE
+to
+INVALID
+failed because the
+TA_ROUTINGNAME
+is referenced from a configured
+T_SERVICE
+or
+T_SVCGRP
+entry.
+<H3>ACTION</H3>
+Invalidate the
+T_SERVICE
+and
+T_SVCGRP
+entries that map to this
+TA_ROUTINGNAME
+or change them to not have an associated
+TA_ROUTINGNAME.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="116"></A>
+<H3>LIBTMIB MESSAGE #116</H3>
+<H2> ERROR: Cannot set overlapping buffer types on identical range criteria name</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_ROUTING
+class object specified a
+TA_BUFTYPE
+value that contains overlapping buffer types with another configured
+T_ROUTING
+class object.
+<H3>ACTION</H3>
+Eliminate the overlapping buffer types from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="117"></A>
+<H3>LIBTMIB MESSAGE #117</H3>
+<H2> ERROR: TA_CLASS/TA_OPERATION combination invalid for current system state</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request passed to tpadmcall (3) contained a
+TA_CLASS/TA_OPERATION
+combination that is not allowed in the current state of the application.
+This usually indicates the caller is not attached to the system (has
+called tpinit ()) which is required to access certain classes.
+<H3>ACTION</H3>
+Call tpinit (3) before making the request.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ tpinit (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="118"></A>
+<H3>LIBTMIB MESSAGE #118</H3>
+<H2> ERROR: TA_PASSWORD not correctly preprocessed</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object failed because an update to the
+TA_PASSWORD
+attribute was requested but the request buffer was not preprocessed
+by the call using tpcryptpw(3).
+<H3>ACTION</H3>
+Call tpcryptpw(3) before invoking the /AdminAPI.
+<H3>SEE ALSO</H3>
+ tpcryptpw (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="119"></A>
+<H3>LIBTMIB MESSAGE #119</H3>
+<H2> ERROR: TA_PASSWORD specified without TA_SECURITY set</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class object contained a value for
+TA_PASSWORD
+without the
+TA_SECURITY
+attribute being set to indicate a security level for the application.
+<H3>ACTION</H3>
+Either turn on
+TA_SECURITY
+for the application or remove the update to
+TA_PASSWORD
+from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="120"></A>
+<H3>LIBTMIB MESSAGE #120</H3>
+<H2> ERROR: TA_SECURITY set without TA_PASSWORD</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for the
+T_DOMAIN
+class object specified a
+TA_SECURITY
+level but failed to include a
+TA_PASSWORD value for the secure application.
+<H3>ACTION</H3>
+Add a
+TA_PASSWORD
+value to the request and preprocess the buffer using tpcryptpw(3)
+before regenerating the request.
+<H3>SEE ALSO</H3>
+ tpcryptpw (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="121"></A>
+<H3>LIBTMIB MESSAGE #121</H3>
+<H2> ERROR: Invalid system field value specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An invalid value for a system generated field was included in the
+request buffer.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="122"></A>
+<H3>LIBTMIB MESSAGE #122</H3>
+<H2> ERROR: Could not validate security information</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on the
+T_DOMAIN
+class updating the security information failed because the system
+could not validate the security information passed on the master logical
+machine.
+<H3>ACTION</H3>
+Consult the userlog on the master logical machine for more information
+on the failure and contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="123"></A>
+<H3>LIBTMIB MESSAGE #123</H3>
+<H2> ERROR: Inconsistent password information passed</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation for the
+T_DOMAIN
+class object setting security information provided inconsistent password
+information to the master site logical machine.
+<H3>ACTION</H3>
+Make sure that the request buffer is properly preprocessed by
+tpcryptpw(3) before the request is made.
+<H3>SEE ALSO</H3>
+ tpcryptpw (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="124"></A>
+<H3>LIBTMIB MESSAGE #124</H3>
+<H2> ERROR: Could not set password information for tmloadcf</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_DOMAIN
+class object could not create the necessary keys and environment variables
+for initializing the security information for the application.
+<H3>ACTION</H3>
+Consult the local userlog file for more information on the failure.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="126"></A>
+<H3>LIBTMIB MESSAGE #126</H3>
+<H2> WARN: MIB mapping file <I>file</I> contains invalid data</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+<I>file</I> was found in the ${TUXDIR}/addonclasses directory
+but did not conform to the expected format for such a file.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support as to whether this file should be removed
+or replaced.  In the meantime, the reported failure does not affect core
+administration of the system.  It may affect administration of the related
+add-on product temporarily until a replacement file is available.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="127"></A>
+<H3>LIBTMIB MESSAGE #127</H3>
+<H2> WARN: Could not add class <I>class</I> to mapping tables, tables full</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The add-on class <I>class</I> could not be added because the internal
+class mapping tables are full.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="128"></A>
+<H3>LIBTMIB MESSAGE #128</H3>
+<H2> WARN: Failed to load add-on MIB mappings</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+One or more failures were encountered while attempting to load
+add-on class mappings into the internal tables.
+<H3>ACTION</H3>
+Consult instance specific userlog messages for more details and
+contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="129"></A>
+<H3>LIBTMIB MESSAGE #129</H3>
+<H2> ERROR: Unknown class referenced</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_CLASSATT
+class object specified an unknown
+TA_CLASSNAME
+attribute value.
+<H3>ACTION</H3>
+Correct the
+TA_CLASSNAME
+value in the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="130"></A>
+<H3>LIBTMIB MESSAGE #130</H3>
+<H2> ERROR: Cannot set NEW instance for known class with known attributes</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_CLASSATT
+class object a core class with an already known list of attributes.
+New attributes may be created only for add-on classes.
+<H3>ACTION</H3>
+The permissions for existing attributes may be changed by removing
+the state change attribute from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="131"></A>
+<H3>LIBTMIB MESSAGE #131</H3>
+<H2> WARN: MIB mapping file <I>file</I> contains duplicate class <I>class</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The add-on class /AdminAPI mapping file <I>file</I> in the
+${TUXDIR}/addonclasses directory specified a duplicate
+class <I>class</I> for which mappings and possible attribute specifications
+already exist.
+<H3>ACTION</H3>
+The duplicate entry is ignored.  The file should be replaced or removed
+as recommended by your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="132"></A>
+<H3>LIBTMIB MESSAGE #132</H3>
+<H2> ERROR: Memory allocation failure processing /Admin request <I>svc</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt dynamically to allocate memory from the operating system using
+ malloc ()
+failed while adding error information to an /AdminAPI response for the
+administrative service <I>svc</I>.
+<H3>ACTION</H3>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H3>SEE ALSO</H3>
+ malloc (3)
+in Unix System reference manuals,
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="133"></A>
+<H3>LIBTMIB MESSAGE #133</H3>
+<H2> ERROR: Fielded buffer access error <I>Ferror</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Fielded buffer access error <I>Ferror</I> occurred while adding error
+information to an /AdminAPI reply buffer.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ Fintro (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="134"></A>
+<H3>LIBTMIB MESSAGE #134</H3>
+<H2> ERROR: TA_OPERATION not found in FML32 typed buffer</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Missing value for
+TA_OPERATION
+in /AdminAPI request buffer.
+This is a required input parameter on all /AdminAPI requests and must
+have a value of
+GET,
+SET
+or
+GETNEXT.
+<H3>ACTION</H3>
+Correct the input buffer to include an appropriate value for the
+TA_OPERATION
+attribute.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="135"></A>
+<H3>LIBTMIB MESSAGE #135</H3>
+<H2> ERROR: TA_OPERATION specified (<I>op</I>) is invalid</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Invalid value <I>op</I> for
+TA_OPERATION
+included in /AdminAPI request buffer.
+This is a required input parameter on all /AdminAPI requests and must
+have a value of
+GET,
+SET
+or
+GETNEXT.
+<H3>ACTION</H3>
+Correct the input buffer to include an appropriate value for the
+TA_OPERATION
+attribute.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="136"></A>
+<H3>LIBTMIB MESSAGE #136</H3>
+<H2> ERROR: Invalid state change specified (<I>old</I> to <I>new</I>)</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation requested an invalid state change from <I>old</I> to <I>new</I>.
+<H3>ACTION</H3>
+Consult the appropriate MIB manual page for the class in question
+for tables defining the valid state changes for that class and correct
+the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5),
+ WS_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="137"></A>
+<H3>LIBTMIB MESSAGE #137</H3>
+<H2> ERROR: Invalid field type <I>fldtype</I> for field <I>fldid</I> in internal structures</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The internal /AdminAPI structures contain an invalid field type <I>fldtype</I>
+for the field identifier <I>fldid</I>.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="138"></A>
+<H3>LIBTMIB MESSAGE #138</H3>
+<H2> ERROR: FML32 error (<I>Ferror</I>) populating /Admin service reply buffer</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An
+FML32
+error <I>Ferror</I> occurred while populating the reply buffer
+for an /AdminAPI request.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="139"></A>
+<H3>LIBTMIB MESSAGE #139</H3>
+<H2> ERROR: System error (<I>error</I>) processing /Admin service request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An internal TUXEDO System/T <I>error</I> occurred while processing
+an /AdminAPI request.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="140"></A>
+<H3>LIBTMIB MESSAGE #140</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt dynamically to allocate memory from the operating system using
+ malloc ()
+failed while processing an /AdminAPI request.
+<H3>ACTION</H3>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H3>SEE ALSO</H3>
+ malloc (3)
+in Unix System reference manuals,
+ MIB (5),
+ TM_MIB (5),
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="141"></A>
+<H3>LIBTMIB MESSAGE #141</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An attempt dynamically to allocate memory from the operating system using
+ malloc ()
+failed while processing an /AdminAPI request.
+<H3>ACTION</H3>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H3>SEE ALSO</H3>
+ malloc (3)
+in Unix System reference manuals,
+ MIB (5),
+ TM_MIB (5),
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="142"></A>
+<H3>LIBTMIB MESSAGE #142</H3>
+<H2> ERROR: Error accessing <I>table</I> table of TUXCONFIG file</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An error occurred accessing the <I>table</I> table in the
+binary configuration file while processing an /AdminAPI request.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="143"></A>
+<H3>LIBTMIB MESSAGE #143</H3>
+<H2> ERROR: Error expanding <I>table</I> table of TUXCONFIG file</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An error occurred while attempting to expand the <I>table</I> table
+in the binary configuration file as part of processing an /AdminAPI request.
+<H3>ACTION</H3>
+If the configuration file is stored in a UNIX System file, then clean up
+the UNIX System filesystem to create additional space for the file to grow.
+If the configuration file is stored on a raw device, then additional
+extents may need to be added to allow for table expansion.
+<H3>SEE ALSO</H3>
+"Transaction Monitor Administrator's Guide"
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="144"></A>
+<H3>LIBTMIB MESSAGE #144</H3>
+<H2> ERROR: Fielded buffer access error (<I>Ferror</I>) processing /Admin request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An operation and/or value change that is not yet supported has been requested
+via the /AdminAPI.
+<H3>ACTION</H3>
+Modify the request to use only supported features.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="145"></A>
+<H3>LIBTMIB MESSAGE #145</H3>
+<H2> ERROR: Unsupported operation/value specified</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An operation and/or value change that is not yet supported has been requested
+via the /AdminAPI.
+<H3>ACTION</H3>
+Modify the request to use only supported features.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="146"></A>
+<H3>LIBTMIB MESSAGE #146</H3>
+<H2> ERROR: Preimage failure for SET operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation failed because the preimage specified with the request did
+not match the current image of the class object.
+Preimage processing is discussed in detail in MIB (5).
+<H3>ACTION</H3>
+Modify the specified preimage to match the current class object or
+turn off preimage processing.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="147"></A>
+<H3>LIBTMIB MESSAGE #147</H3>
+<H2> ERROR: Permissions violation on SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A permissions violation has occurred while attempting to process an
+/AdminAPI
+SET
+request on the indicated class object.
+The attribute
+TA_BADFLD
+is set on the reply to indicate the field that is in violation of permissions.
+<H3>ACTION</H3>
+The administrator can tune permissions for any attribute user combination
+to the maximum supported by the system.  However, write access is not
+supported on all attributes in all class object states.  Therefore, the
+update may need to be delayed until the class object is in a different
+state.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="148"></A>
+<H3>LIBTMIB MESSAGE #148</H3>
+<H2> ERROR: Invalid attribute value on SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The value specified on a
+SET
+request for the attribute indicated by the
+TA_BADFLD
+attribute in the reply buffer is invalid.
+Valid values for writable attributes are specified on the MIB manual
+page for the appropriate class.
+<H3>ACTION</H3>
+Correct the attribute value in question to a valid value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="149"></A>
+<H3>LIBTMIB MESSAGE #149</H3>
+<H2> ERROR: TA_STATE specified on a SET with other changing attributes</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+request included both an update to the
+TA_STATE
+attribute and an update to other attributes in the class as well.
+The /AdminAPI allows for only one of these actions in any one
+SET
+request.
+<H3>ACTION</H3>
+Split the request into one that changes the non-state attributes and
+one that changes the state.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="150"></A>
+<H3>LIBTMIB MESSAGE #150</H3>
+<H2> ERROR: Key fields specified do not match any class instance</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The key fields specified on a non state change
+SET
+request do not uniquely identify exactly one existing class object.
+<H3>ACTION</H3>
+Check that the key fields specified are correct.
+Sometimes transient objects (those that automatically disappear when
+they deactivate) such as
+T_CLIENT
+objects can cause this symptom.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="151"></A>
+<H3>LIBTMIB MESSAGE #151</H3>
+<H2> WARN: Extra field present on /Admin SET request ignored, <I>class</I>/<I>fldname</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a <I>class</I> object contained an extraneous attribute
+<I>fldname</I> for update.  The value for <I>fldname</I> is ignored.
+<H3>ACTION</H3>
+Informational message only, no action required.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="152"></A>
+<H3>LIBTMIB MESSAGE #152</H3>
+<H2> ERROR: Required field not present on SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+class object failed to include a value for a required attribute.
+The missing required field identifier is returned as the value
+of the
+TA_BADFLD
+field in the reply buffer.
+<H3>ACTION</H3>
+Supply a value for the missing required field before regenerating the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="153"></A>
+<H3>LIBTMIB MESSAGE #153</H3>
+<H2> ERROR: VTOC error accessing <I>device</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An error occurred while accessing the VTOC (Volume Table Of Contents)
+on the TUXEDO System device <I>device</I>.
+<H3>ACTION</H3>
+<I>device</I> has been corrupted and needs to be destroyed and reinitialized
+before continuing.  The device can be destroyed using
+SET
+requests on the
+T_DEVICE
+class to set the device state to
+INVALID.
+If this fails to clear the device, then manual interaction may be required.
+Consult your operating specific manuals for methods of clearing data in
+a device file.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="154"></A>
+<H3>LIBTMIB MESSAGE #154</H3>
+<H2> WARN: Timeout period expired on /Admin blocking request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A blocking /AdminAPI request timed out before the operation could be completed.
+The status of the operation is uncertain.
+<H3>ACTION</H3>
+Increase the time out interval (TA_MIBTIMEOUT) before generating the request.
+A subsequent query on the object being updated may be used to determine
+the final result of the timed out operation.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="155"></A>
+<H3>LIBTMIB MESSAGE #155</H3>
+<H2> ERROR: Unbooted configuration update attempted in active application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation was attempted using tpadmcall (3) from an unattached
+client (has not executed tpinit (3)) in an active application.
+<H3>ACTION</H3>
+Either defer the update until the application is inactive or
+attach to the application using tpinit (3) before requesting
+the update using tpcall (3).
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ tpcall (3),
+ tpinit (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="156"></A>
+<H3>LIBTMIB MESSAGE #156</H3>
+<H2> ERROR: Could not create temporary file name</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A temporary file name could not be generated for /AdminAPI processing.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ tmpnam (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="157"></A>
+<H3>LIBTMIB MESSAGE #157</H3>
+<H2> ERROR: Cannot activate class instance in an inactive application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation requesting a
+TA_STATE
+change to the
+ACTIVE
+state for a
+T_GROUP,
+T_MACHINE,
+T_SERVER
+or
+T_SVCGRP
+class object was requested via tpadmcall (3) in an inactive
+application.
+<H3>ACTION</H3>
+Defer activation of these class objects until the application is
+activated and the invoking administrative process has joined the
+application using tpinit (3).  At that point these class objects
+may be activated using tpcall (3).
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ tpcall (3),
+ tpinit (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="158"></A>
+<H3>LIBTMIB MESSAGE #158</H3>
+<H2> ERROR: TMIB service not available on site <I>lmid</I> for global SET operation</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation could not be satisfied because global update of all bulletin
+boards is required and the required /AdminAPI service is not
+available for logical machine <I>lmid</I>.
+<H3>ACTION</H3>
+TUXEDO System sites running releases prior to 5.0 do not have the /AdminAPI
+service and the requested global update cannot be done while those systems
+are active within the application.
+Otherwise, the indicated machines userlog file should be examined for
+possible causes of the missing service.  The indicated machine can be
+deactivated and reactivated in an attempt to make the required service
+available.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="159"></A>
+<H3>LIBTMIB MESSAGE #159</H3>
+<H2> ERROR: Cannot set multiple type/subtype combinations in T_ROUTING class for an active application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation creating a
+NEW
+T_ROUTING
+class object in an active application specified multiple type/subtype
+combinations as part of the value for the
+TA_BUFTYPES
+attribute.
+<H3>ACTION</H3>
+Split the request into one request per buffer type/subtype combination
+or defer the update until the application is completely deactivated.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="160"></A>
+<H3>LIBTMIB MESSAGE #160</H3>
+<H2> ERROR: MIB_SELF not allowed for non-client/server process</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_FLAGS
+value
+MIB_SELF
+was set on a call to tpadmcall (3) from
+an unattached process.
+<H3>ACTION</H3>
+Remove the setting of the
+MIB_SELF
+flag value or defer the request until the process is attached as a client
+or server.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="161"></A>
+<H3>LIBTMIB MESSAGE #161</H3>
+<H2> ERROR: Could not read RESOURCES section in configuration file <I>tuxconfig</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+RESOURCES
+section of the binary configuration file <I>tuxconfig</I> could
+not be read.
+<H3>ACTION</H3>
+Remove and regenerate the binary configuration file before continuing.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="162"></A>
+<H3>LIBTMIB MESSAGE #162</H3>
+<H2> ERROR: Unable to map machine identifiers in configuration file <I>tuxconfig</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TUXCONFIG
+file has been corrupted or is being accessed from a machine not configured
+in the application.
+<H3>ACTION</H3>
+Be sure that the file is being accessed from a machine that is configured
+in the application.  If it is, then the file has likely become corrupted.
+In this case, remove the configuration file and regenerate it before
+continuing.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="163"></A>
+<H3>LIBTMIB MESSAGE #163</H3>
+<H2> ERROR: Configuration file <I>tuxconfig</I> is in an invalid state</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The <I>tuxconfig</I> file accessed by tpadmcall (3) has become
+corrupted.  The internal table representing the
+*RESOURCES
+section of the ubbconfig (5) file is missing but other tables
+are present.
+<H3>ACTION</H3>
+Remove the <I>tuxconfig</I> file and regenerate it from scratch before
+continuing.
+<H3>SEE ALSO</H3>
+ tpadmcall (3),
+ ubbconfig (5),
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="164"></A>
+<H3>LIBTMIB MESSAGE #164</H3>
+<H2> ERROR: May not decrease TA_MAX with active servers above new maximum</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVER
+class object request a decrease in the setting for the
+TA_MAX
+attribute with active servers beyond the new setting.
+<H3>ACTION</H3>
+Deactivate the associated servers above the new setting for
+TA_MAX
+before attempting to change the value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="166"></A>
+<H3>LIBTMIB MESSAGE #166</H3>
+<H2> ERROR: Cannot change workstation handler state to DEAD</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_CLIENT
+class object representing a workstation handler (WSH)
+changing the
+TA_STATE
+to
+DEAD
+failed.  Workstation handlers may only be set to a
+TA_STATE
+of
+DEAD
+through their
+T_WSH
+class object.
+<H3>ACTION</H3>
+Use the
+T_WSH
+class to set the state for the workstation handler.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5),
+ WS_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="167"></A>
+<H3>LIBTMIB MESSAGE #167</H3>
+<H2> ERROR: TA_MINHANDLERS(<I>min</I>) must be less than or equal to TA_MAXHANDLERS(<I>max</I>)</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_WSL
+class object set the value for the minimum number of workstation handlers
+(<I>min</I>) greater than the value for the maximum number of handlers
+(<I>max</I>).
+<H3>ACTION</H3>
+Correct the request to specify a minimum value less than or equal to the
+maximum value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ WS_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="168"></A>
+<H3>LIBTMIB MESSAGE #168</H3>
+<H2> ERROR: Failed to advertise dynamic /Admin service, no service name</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The dynamic /AdminAPI service could not be advertised because the internal
+routines did not supply a service name to be associated with the function.
+<H3>ACTION</H3>
+Contact your TUXEDO System Technical Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="169"></A>
+<H3>LIBTMIB MESSAGE #169</H3>
+<H2> ERROR: TA_MINHANDLERS may not be increased for an active T_WSL object with a TA_MAXHANDLERS value of 0</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on an active
+T_WSL
+class object attempted to increase the value for
+TA_MINHANDLERS
+with a configured value for
+TA_MAXHANDLERS
+of 0.
+<H3>ACTION</H3>
+Deactivate the
+T_WSL
+class object before attempting to increase the
+TA_MINHANDLERS
+value.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ WS_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="170"></A>
+<H3>LIBTMIB MESSAGE #170</H3>
+<H2> ERROR: /Admin service <I>svc</I> on machine <I>lmid</I> unavailable</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The /AdminAPI service <I>svc</I> is not available on logical machine
+<I>lmid</I> to satisfy the request.
+<H3>ACTION</H3>
+This error usually indicates that information specific to a particular site
+is referenced but the site is not currently active.  In this case, the
+request should be redirected to an active site or deferred until the site
+in question is active.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="171"></A>
+<H3>LIBTMIB MESSAGE #171</H3>
+<H2> ERROR: /Admin service <I>svc</I> unavailable</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The /AdminAPI service <I>svc</I> is not available to satisfy the current
+request.
+<H3>ACTION</H3>
+TUXEDO System sites running releases prior to 5.0 do not have the /AdminAPI
+service and the requested service cannot be done while those systems
+are active within the application.
+Pre-5.0 machines can be deactivated so that the request can be
+completed.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="172"></A>
+<H3>LIBTMIB MESSAGE #172</H3>
+<H2> INFO: Abortively terminating WSH process <I>pid</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+An /AdminAPI request to change the state of a WSH to
+DEAD
+has caused the system to terminate the process <I>pid</I>
+with the
+SIGKILL
+signal.
+<H3>ACTION</H3>
+Informational message only, no action required.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="173"></A>
+<H3>LIBTMIB MESSAGE #173</H3>
+<H2> ERROR: TA_GRPNO may not be changed because of active servers in group</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_GROUP
+class object attempted to change the
+TA_GRPNO
+value while some server(s) in the server group were active.
+<H3>ACTION</H3>
+Deactivate the remaining servers in the server group before attempting
+the modification.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="175"></A>
+<H3>LIBTMIB MESSAGE #175</H3>
+<H2> WARN: Server RESTART set to Y and MAXGEN set &lt; 2</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVER
+class object set the RESTART option but the
+TA_MAXGEN
+value was set to a value less than 2 so that the
+server will never be restarted.
+<H3>ACTION</H3>
+No action is required.  Normally, the TA_MAXGEN value should be set higher
+so that the server will restart.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT1>
+<H1>LIBTMIB MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="200"></A>
+<H3>LIBTMIB MESSAGE #200</H3>
+<H2> ERROR: Class instance specification is not unique</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The specification given for a new or modified class was not unique.
+<H3>ACTION</H3>
+Ensure that the class specification presented to the MIB is unique.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="203"></A>
+<H3>LIBTMIB MESSAGE #203</H3>
+<H2> ERROR: Unable to mark invalid record for principal <I>principal</I>.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When marking an entry as invalid in the principal file, an error writing the
+principal file occurred.  This error can occur when deleting a principal from
+the T_ACLPRINCIPAL class. This error usually occurs because of
+disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="204"></A>
+<H3>LIBTMIB MESSAGE #204</H3>
+<H2> ERROR: Could not find principal.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The principal which the T_ACLPRINCIPAL MIB is attempting to delete has already
+been deleted.  This error can only occur if two or more administrators
+are attempting to delete a principal at the same time.
+<H3>ACTION</H3>
+Make sure that only one person is accessing the ACL MIB at any one time.
+You can use the MIB to see if the principal in question has been properly
+removed.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="205"></A>
+<H3>LIBTMIB MESSAGE #205</H3>
+<H2> ERROR: Unable to append to file <I>filename</I>.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to open a file, an error
+occurred.  This error happens when using the T_ACLPRINCIPAL class.
+<H3>ACTION</H3>
+There are several kernel parameters which could cause this error.  Two
+obvious ones include the maximum allowed size for files and the number
+of allowable open file descriptors.  Disk space could also be a problem.
+Increase the appropriate kernel parameters or buy a new disk, then try the
+command again.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="207"></A>
+<H3>LIBTMIB MESSAGE #207</H3>
+<H2> ERROR: Unable to mark invalid record for principal <I>name</I>.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While modifying a principal in the T_ACLPRINCIPAL class, an error occurred when
+removing the old principal entry.  This error is usually due to disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="212"></A>
+<H3>LIBTMIB MESSAGE #212</H3>
+<H2> ERROR: Unable to mark invalid record.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When marking an entry as invalid in the group file, an error writing the
+group file occurred.  This error can occur when deleting a group from
+the T_ACLGROUP class. This error usually occurs because of
+disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="213"></A>
+<H3>LIBTMIB MESSAGE #213</H3>
+<H2> ERROR: Could not find group.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The group which the T_ACLGROUP MIB is attempting to delete has already
+been deleted.  This error can only occur if two or more administrators
+are attempting to delete a group at the same time.
+<H3>ACTION</H3>
+Make sure that only one person is accessing the ACL MIB at any one time.
+You can use the MIB to see if the principal in question has been properly
+removed.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="214"></A>
+<H3>LIBTMIB MESSAGE #214</H3>
+<H2> ERROR: Unable to append to file <I>filename</I>.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to open the given file, an error
+occurred.  This happens when updating the T_ACLGROUP class.
+<H3>ACTION</H3>
+There are several kernel parameters which could cause this error.  Two
+obvious ones include the maximum allowed size for files and the number
+of allowable open file descriptors.  Disk space could also be a problem.
+Increase the appropriate kernel parameters or buy a new disk, then try the
+command again.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="217"></A>
+<H3>LIBTMIB MESSAGE #217</H3>
+<H2> ERROR: Unable to mark invalid record.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When marking an entry as invalid in the group file, an error writing the
+group file occurred.  This error can occur when modifying a group from
+the T_ACLGROUP class. This error usually occurs because of disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="219"></A>
+<H3>LIBTMIB MESSAGE #219</H3>
+<H2> ERROR: Unable to change attributes of the other group.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The other group is a group that always exists and which cannot
+be altered.
+<H3>ACTION</H3>
+Do not attempt to alter the other group.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="220"></A>
+<H3>LIBTMIB MESSAGE #220</H3>
+<H2> ERROR: Unable to change state of the other group.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The other group is a group that always exists and which cannot
+be altered.  Hence this group cannot be removed.
+<H3>ACTION</H3>
+Do not attempt to remove the other group.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="222"></A>
+<H3>LIBTMIB MESSAGE #222</H3>
+<H2> ERROR: Unable to append to file <I>filename</I>.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to open the given file, an error occurred.
+This happens when updating the T_ACLPERM class.
+<H3>ACTION</H3>
+There are several kernel parameters which could cause this error.
+Two obvious ones include the maximum allowed size for files and the
+number of allowable open file descriptors.
+Disk space could also be a problem.
+Increase the appropriate kernel parameters or buy a new disk, then try
+the command again.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="224"></A>
+<H3>LIBTMIB MESSAGE #224</H3>
+<H2> ERROR: Unable to mark invalid record.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When marking an entry as invalid in the access file, an error writing the
+access file occurred.  This error can occur when deleting a permission from
+the T_ACLPERM class. This error usually occurs because of disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="226"></A>
+<H3>LIBTMIB MESSAGE #226</H3>
+<H2> ERROR: Unable to find the end of the acl file.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When attempting to find the end of the acl file, an error occurred.
+<H3>ACTION</H3>
+There are several kernel parameters which could cause this error.  Two
+obvious ones include the maximum allowed size for files and the number
+of allowable open file descriptors.  Disk space could also be a problem.
+Increase the appropriate kernel parameters or buy a new disk, then try the
+command again.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="227"></A>
+<H3>LIBTMIB MESSAGE #227</H3>
+<H2> ERROR: Unable to mark invalid record.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When marking an entry as invalid in the access file, an error writing the
+access file occurred.  This error can occur when modifying a permission in
+the T_ACLPERM class. This error usually occurs because of disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="229"></A>
+<H3>LIBTMIB MESSAGE #229</H3>
+<H2> ERROR: Unable to print in the principal file.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to write into the principal
+file, an error occurred.  This error is usually caused by disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="230"></A>
+<H3>LIBTMIB MESSAGE #230</H3>
+<H2> ERROR: Missing key field(s) in /Admin service request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+One or more required key fields is missing from an /AdminAPI request.
+The identifier of the first missing key field is supplied in the
+TA_BADFLD
+attribute in the reply buffer.
+<H3>ACTION</H3>
+Using
+ APPQ_MIB (5),
+determine which key fields are required,
+then supply the missing field(s).
+<H3>SEE ALSO</H3>
+ MIB (5),
+ APPQ_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="231"></A>
+<H3>LIBTMIB MESSAGE #231</H3>
+<H2> ERROR: Inappropriate key field(s) for /Admin service request for unconfigured application</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_LMID
+attribute was specified in an /AdminAPI request
+for a
+T_APPQ ,
+T_APPQMSG ,
+T_APPQSPACE ,
+or
+T_APPQTRANS
+object
+but the application is not configured
+(i.e., the
+TUXCONFIG
+environment variable is not defined).
+Because the application is not configured, there are no known
+logical machine identifiers,
+and specifying the
+TA_LMID
+attribute is inappropriate.
+<H3>ACTION</H3>
+Resubmit the /AdminAPI request, but omit the
+TA_LMID
+attribute from the request.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ APPQ_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="232"></A>
+<H3>LIBTMIB MESSAGE #232</H3>
+<H2> ERROR: TA_MIN is greater than TA_MAX</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVER
+class object set the
+TA_MIN
+value greater than the new, existing, or default
+TA_MAX
+value.
+<H3>ACTION</H3>
+Correct the values of
+TA_MIN
+and/or
+TA_MAX
+and re-try the operation.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="233"></A>
+<H3>LIBTMIB MESSAGE #233</H3>
+<H2> ERROR: TA_SRVID plus TA_MAX yields server identifier greater than 30,000</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A
+SET
+operation on a
+T_SERVER
+class object set the
+TA_SRVID
+and
+TA_MAX
+values such that their sum is greater than 30,000.
+Server identifiers must be less than or equal to 30,000.
+<H3>ACTION</H3>
+Correct the values of
+TA_SRVID
+and/or
+TA_MAX
+and re-try the operation.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="234"></A>
+<H3>LIBTMIB MESSAGE #234</H3>
+<H2> ERROR: TA_LMID value does not match local machine</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_LMID
+value specified on an /AdminAPI
+SET
+request for a
+T_DEVICE
+ object does not match the configured logical machine
+identifier for the local machine.
+<H3>ACTION</H3>
+Correct the /AdminAPI request to use the local logical machine identifier.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="235"></A>
+<H3>LIBTMIB MESSAGE #235</H3>
+<H2> INFO: .SysResourceConfig: system configuration change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that parameters in the T_DOMAIN class have been
+updated.
+A complete listing of the current parameters are sent along in the
+posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="236"></A>
+<H3>LIBTMIB MESSAGE #236</H3>
+<H2> ERROR: SET operation did not specify required key field</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+If a class contains any key fields necessary for a SET, then at least
+one of these fields must be present in a the SET buffer.  This requirement
+protects against the case of a class which has one and only one instance,
+and the SET buffer contains no fields at all (matching the one instance).
+This one instance may or may not be a proper match for the required action.
+<H3>ACTION</H3>
+Add one of the required SET keys to the input buffer such that the SET keys
+match one and only one instance of the class.  Rerun the request against the
+MIB.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="237"></A>
+<H3>LIBTMIB MESSAGE #237</H3>
+<H2> ERROR: Unable to add to the access control file.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+When modifying the T_ACLPERM class, an error occurred
+when writing the access control list file.  This error is usually caused
+by disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="240"></A>
+<H3>LIBTMIB MESSAGE #240</H3>
+<H2> INFO: .SysMachineConfig: <I>LMID</I> configuration change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that parameters in the T_MACHINE class
+for the given <I>LMID</I> have been updated.
+A complete listing of the current parameters
+for the given <I>LMID</I> are sent along in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="243"></A>
+<H3>LIBTMIB MESSAGE #243</H3>
+<H2> ERROR: TA_LMID value does not match local machine</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The
+TA_LMID
+value specified on an /AdminAPI
+SET
+request for a
+T_APPQ ,
+T_APPQMSG ,
+T_APPQSPACE ,
+or
+T_APPQTRANS
+object does not match the configured logical machine
+identifier for the local machine.
+<H3>ACTION</H3>
+Resubmit the /AdminAPI request and use the correct logical machine identifier.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ APPQ_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="245"></A>
+<H3>LIBTMIB MESSAGE #245</H3>
+<H2> ERROR: There are no more valid group identifiers</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+Group identifiers can only be in the range 0 through 16383.  If all group
+identifiers have been used, then it is impossible to add a new group to
+the system.
+<H3>ACTION</H3>
+Remove a group, then add a new group.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="246"></A>
+<H3>LIBTMIB MESSAGE #246</H3>
+<H2> ERROR: There are no more valid user identifiers</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+User identifiers can only be in the range 1 through 131,071.  If all user
+identifiers have been used, then it is impossible to add a new user to
+the system.
+<H3>ACTION</H3>
+Remove a user, then add a new user.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="248"></A>
+<H3>LIBTMIB MESSAGE #248</H3>
+<H2> INFO: .SysMachineState: <I>LMID</I> state change to <I>state</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message states that the specified machine changed to a new state as
+mentioned in the message.
+A complete listing of the current parameters
+are sent along in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="249"></A>
+<H3>LIBTMIB MESSAGE #249</H3>
+<H2> INFO: .SysServerConfig: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> configuration change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that the configuration parameters for the server
+specified above have been updated.
+A complete listing of the attributes
+of the server are sent along in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="250"></A>
+<H3>LIBTMIB MESSAGE #250</H3>
+<H2> INFO: .SysServerState: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> state change to <I>state</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that the server specified above changed to a new
+state.
+A complete listing of the server attributes
+are sent in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="251"></A>
+<H3>LIBTMIB MESSAGE #251</H3>
+<H2> INFO: .SysClientState: User <I>usrname</I> on <I>LMID</I> state change to <I>state</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that the client specified above
+changed to a new state.
+A complete listing of the current attributes
+of the client are sent in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="252"></A>
+<H3>LIBTMIB MESSAGE #252</H3>
+<H2> INFO: .SysGroupState: Group <I>groupname</I> on <I>lmid</I> state change to <I>state</I></H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that the group specified above changed to a new
+state.
+A complete listing of the group attributes
+are sent in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="253"></A>
+<H3>LIBTMIB MESSAGE #253</H3>
+<H2> INFO: .SysClientConfig: User <I>usrname</I> on <I>LMID</I> configuration change</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This message indicates that the attributes on the client specified above
+have been changed.
+A complete listing of the current attributes
+of the client are sent in the posted buffer.
+<H3>ACTION</H3>
+This is an informational message.
+<H3>SEE ALSO</H3>
+ EVENT_MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="254"></A>
+<H3>LIBTMIB MESSAGE #254</H3>
+<H2> ERROR: Required field not present on SET request</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+The field indicated by TA_BADFLD is required for the current /AdminAPI
+request and was not present.
+<H3>ACTION</H3>
+Regenerate the request using an appropriate value for the indicated field.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="255"></A>
+<H3>LIBTMIB MESSAGE #255</H3>
+<H2> ERROR: Class only valid on security levels greater than APP_PW.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+This class is only valid if the security level in the ubbconfig(5) is
+set to USER_AUTH, ACL, or MANDATORY_ACL.
+<H3>ACTION</H3>
+Change the SECURITY level in your ubbconfig(5) to USER_AUTH, ACL, or
+MANDATORY_ACL.  Then run tmloadcf(1) on your new ubbconfig file.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="256"></A>
+<H3>LIBTMIB MESSAGE #256</H3>
+<H2> ERROR: Unable to seek in group file.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to manipulate the file position indicator in the group
+file, an error occurred.  This error is usually caused by disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="257"></A>
+<H3>LIBTMIB MESSAGE #257</H3>
+<H2> ERROR: Unable to print in group file.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to write into the group
+file, an error occurred.  This error is usually caused by disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="258"></A>
+<H3>LIBTMIB MESSAGE #258</H3>
+<H2> ERROR: Unable to seek in principal file.</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+While attempting to manipulate the file position indicator in the principal
+file, an error occurred.  This error is usually caused by disk corruption.
+<H3>ACTION</H3>
+Run a diagnostic on the disk to see whether the disk is corrupted.
+If it is corrupted, buy a new disk and run the command again.  If it is not,
+then contact TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="260"></A>
+<H3>LIBTMIB MESSAGE #260</H3>
+<H2> ERROR: Cannot create NEW T_DOMAIN in MP/LAN mode without networking information</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+A SET TA_STATE NEW /AdminAPI request on the T_DOMAIN class
+attempted to create a networked application (MP model, LAN option)
+without specifying required networking addresses.
+<H3>ACTION</H3>
+Regenerate the request specifying the required networking addresses.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<H3>DESCRIPTION</H3>
+An internal error occurred.
+Either insufficient user fields were passed to the operation,
+or the incorrect ACL name or ACL type are provided
+<H3>ACTION</H3>
+Contact TUXEDO Support.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<H3>DESCRIPTION</H3>
+The creation of a WSL server conflicts with an existing server
+with the same group and server identifier.
+<H3>ACTION</H3>
+Choose a different group name or server identifier for the WSL.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<H3>DESCRIPTION</H3>
+When creating a service associated with a server group, the
+server group does not exist.
+<H3>ACTION</H3>
+Either create the server group or change the specified server
+group to an existing group.
+<H3>SEE ALSO</H3>
+ MIB (5),
+ TM_MIB (5)
+<H3>DESCRIPTION</H3>
+A server is being migrated to the configured backup location.
+<H3>ACTION</H3>
+Information message - no action needed.
+<H3>SEE ALSO</H3> 
+ MIB (5),
+ TM_MIB (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="265"></A>
+<H3>LIBTMIB MESSAGE #265</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process during a
+pclean operation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.  If it seems that
+there should be enough file descriptors and disk space for this operation,
+contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="266"></A>
+<H3>LIBTMIB MESSAGE #266</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process during a
+pclean operation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="267"></A>
+<H3>LIBTMIB MESSAGE #267</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while setting
+a server state to DEAD.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="268"></A>
+<H3>LIBTMIB MESSAGE #268</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while setting
+a server state to DEAD.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="269"></A>
+<H3>LIBTMIB MESSAGE #269</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while setting
+a server group state to INACTIVE.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="270"></A>
+<H3>LIBTMIB MESSAGE #270</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while setting
+a server group state to INACTIVE.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="271"></A>
+<H3>LIBTMIB MESSAGE #271</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while migrating
+a group.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="272"></A>
+<H3>LIBTMIB MESSAGE #272</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while migrating
+a group.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="273"></A>
+<H3>LIBTMIB MESSAGE #273</H3>
+<H2> ERROR: sbblrtn could not send reply <I>error-code</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The sbbl process could not send a reply to the requestor.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The code in <I>error-code</I> may provide clues as to the cause of this
+problem.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="274"></A>
+<H3>LIBTMIB MESSAGE #274</H3>
+<H2> ERROR: Failed to get information on the migrating server group</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A tpcall</> to the MIB from the sbbl process did not complete successfully.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the log for related messages.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="275"></A>
+<H3>LIBTMIB MESSAGE #275</H3>
+<H2> ERROR: Failed to get information on the service group</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A tpcall</> to the MIB from the sbbl process did not complete successfully.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the log for related messages.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="276"></A>
+<H3>LIBTMIB MESSAGE #276</H3>
+<H2> ERROR: TA_MINENCRYPTBITS(<I>min</I>) must be less than or equal to TA_MAXENCRYPTBITS(<I>max</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt has been made to change the TA_MINENCRYPTBITS field in the T_WSL
+class to a value greater than TA_MAXENCRYPTBITS.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The value of <I>min</I> must be less than or equal to the value of <I>max</I>.
+Change the MIB request to comply with this requirement.  You may need to change
+the command line options -z or -Z on the CLOPT line of your WSL process.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="277"></A>
+<H3>LIBTMIB MESSAGE #277</H3>
+<H2> ERROR: TA_MINENCRYPTBITS(<I>min</I>) must be less than or equal to TA_MAXENCRYPTBITS(<I>max</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt has been made to change the TA_MINENCRYPTBITS field in the T_MACHINE
+class to a value greater than TA_MAXENCRYPTBITS.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The value of <I>min</I> must be less than or equal to the value of <I>max</I>.
+Change the MIB request to comply with this requirement.  You may need to
+change the value of MINENCRYPTBITS or MAXENCRYPTBITS in your ubbconfig file.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="278"></A>
+<H3>LIBTMIB MESSAGE #278</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while
+getting information from an application queue space.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="279"></A>
+<H3>LIBTMIB MESSAGE #279</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while
+getting information from an application queue space.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="280"></A>
+<H3>LIBTMIB MESSAGE #280</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while
+getting information from an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="281"></A>
+<H3>LIBTMIB MESSAGE #281</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while
+getting information from an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="282"></A>
+<H3>LIBTMIB MESSAGE #282</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while
+getting information about a message on an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="283"></A>
+<H3>LIBTMIB MESSAGE #283</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while
+getting information about a message on an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="284"></A>
+<H3>LIBTMIB MESSAGE #284</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while
+getting information about a transaction on an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="285"></A>
+<H3>LIBTMIB MESSAGE #285</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while
+getting information about a transaction on an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="286"></A>
+<H3>LIBTMIB MESSAGE #286</H3>
+<H2> ERROR: Cannot open file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to open a file to pass to the sbbl process while
+setting information about an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the host operating system has a limit on the number of open files, or the
+number of open files per user or the number of open files per process, then
+you may need to increase that limit.  The file system /tmp may be full.  The
+directory where temporary files are placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="287"></A>
+<H3>LIBTMIB MESSAGE #287</H3>
+<H2> ERROR: Cannot write to file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The MIB has failed to write to a file for the sbbl process while
+setting information about an application queue.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The file system /tmp may be full.  The directory where temporary files are
+placed may be full.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="288"></A>
+<H3>LIBTMIB MESSAGE #288</H3>
+<H2> ERROR: can't SET Internet type of network address(es).</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Internet addresses cannot be used in a configuration which contains releases
+older than the TUXEDO System 6.3 release.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Since older sites cannot properly interpret internet addresses, intenet
+addresses cannot be used when interoperating with a release of the TUXEDO
+System older than 6.3.  Change the address in the MIB request packet to
+conform to the older style of network addressing.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="289"></A>
+<H3>LIBTMIB MESSAGE #289</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to determine the license information for the TUXEDO
+System failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the log for related messages.
+Ensure that the TUXEDO System has been properly installed and licensed.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="290"></A>
+<H3>LIBTMIB MESSAGE #290</H3>
+<H2> ERROR: SET operation is not allowed on ADMGRP server</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to perform a SET operation on a T_SERVER class
+object which has TA_GRPNO larger than 30,000.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB</>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="291"></A>
+<H3>LIBTMIB MESSAGE #291</H3>
+<H2> ERROR: Cannot change own state to DEAD</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A SET operation on a T_CLIENT class object changing the TA_STATE of the
+object to DEAD failed because the client id of the requesting client was
+equal to the client id of the client to be killed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure that the client id you specify is not your own.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="292"></A>
+<H3>LIBTMIB MESSAGE #292</H3>
+<H2> ERROR: Cannot change own state to SUSPENDED</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A SET operation on a T_CLIENT class object changing the TA_STATE of the
+object to SUSPENDED failed because the client id of the requesting client
+was equal to the client id of the client to be suspended.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure that the client id you specify is not your own.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

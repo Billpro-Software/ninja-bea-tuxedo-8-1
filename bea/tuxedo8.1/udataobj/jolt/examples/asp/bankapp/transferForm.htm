@@ -1,0 +1,30 @@
+<!--
+--	Copyright (c) 1998-99 BEA Systems, Inc.  All rights reserved
+--	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF BEA Systems, Inc.
+--	The copyright notice above does not evidence any actual or intended
+--	publication of such source code.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Transfer Fund between Accounts</TITLE>
+</HEAD>
+<BODY>
+<H2>Enter the Account Numbers and the Amount:</H2>
+<FORM NAME="teller" ACTION="tlr.asp" METHOD="POST">
+<TABLE>
+<TR><TD ALIGN=RIGHT>From Account Number: </TD>
+    <TD><INPUT TYPE="text" NAME="ACCOUNT_ID_0"></TD></TR>
+<TR><TD ALIGN=RIGHT>To Account Number: </TD>
+    <TD><INPUT TYPE="text" NAME="ACCOUNT_ID_1"></TD></TR>
+<TR><TD ALIGN=RIGHT>Amount: $</TD>
+    <TD><INPUT TYPE="text" NAME="SAMOUNT"></TD></TR>
+</TABLE>
+<CENTER>
+<INPUT TYPE="hidden" NAME="SVCNAME" VALUE="TRANSFER">
+<INPUT TYPE="submit" VALUE="Transfer">
+<INPUT TYPE="reset" VALUE="Clear">
+</CENTER>
+</FORM>
+</BODY>
+</HTML>

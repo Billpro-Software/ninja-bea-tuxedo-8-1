@@ -1,0 +1,87 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+#Copyright (c) 1991 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/CSIMPAPP/README	$Revision: 1.5 $"
+
+
+This is a brief description of the TUXEDO COBOL Simple Application.
+A more comprehensive look can be found TUXEDO System Transaction Monitor 
+COBOL Guide.
+
+The Simple Application consists of a single server offering a single
+service.  The client is run with a single argument, which is a string
+to convert to upper case.  The client calls the service, which returns
+the converted string.  The client then prints that string.
+
+Example: CSIMPCL "Hello World"
+
+ Returned string is: HELLO WORLD
+
+This application runs a single server on a single machine.  It is
+designed so that it can be up and running within minutes after
+installing the TUXEDO COBOL software.
+
+You should probably copy the CSIMPAPP files to your own directory,
+since the configuration file must be edited and you might also
+want to experiment with the client and server code.
+
+The sample configuration file, UBBCSIMPLE, must be edited to replace
+the bracketed items with values appropriate to your installation.
+Your TUXDIR and TUXCONFIG environment variables must match the
+values in the configuration file.  $TUXDIR/bin should be added
+to your PATH variable.  On a SUN machine, make sure that /usr/5bin
+appears at the beginning of your PATH.
+
+Set the COBDIR environment variable to the installed COBOL directory
+and export it.  Set the COBCPY environment variable to 
+$TUXDIR/cobinclude and export it.
+
+If you are using a version of the TUXEDO System that is built with
+shared libraries (look for *.so* files in $TUXDIR/lib), you will need
+to modify the envfile to set the environment variable LD_LIBRARY_PATH,
+SHLIB_PATH, and LIBPATH.
+If you already have this variable set, append ":$TUXDIR/lib" to it.
+(That's the expanded version of $TUXDIR, not the string '$TUXDIR'.)
+If LD_LIBRARY_PATH, SHLIB_PATH, and LIBPATH are not yet set, set them to:
+     $TUXDIR/lib:<PATH to COBOL installed directory>/coblib:/lib
+
+After editing "UBBCSIMPLE", create the binary TUXCONFIG file with the command:
+
+	tmloadcf UBBCSIMPLE
+	(Answer "y" if it asks you whether it should proceed)
+
+The client can be built with the command:
+
+	buildclient -C -o CSIMPCL  -f CSIMPCL.cbl 
+
+The server can be built with the command:
+
+	buildserver -C -o CSIMPSRV -s CSIMPSRV -f CSIMPSRV.cbl -f TPSVRINIT.cbl
+
+The Simple Application can be booted with the command:
+
+	tmboot -y
+
+Then you can run "CSIMPCL" as shown in the example above.
+CSIMPCL can be run as many times as you wish.
+
+When you are done, you can shut down the Simple Application with
+the command:
+
+	tmshutdown -y
+
+
+
+Suggested next steps:
+
+	Run more than one copy of the "simpserv" server, all operating
+	from a single queue (Hint: See the RQADDR parameter in ubbconfig(5)).
+
+	Configure a networked application, where the client and server
+	run on different machines.
+
+	Try the administrative command, "tmadmin", to display and
+	modify the parameters of the running application.  (Try
+	suspending the service, and then running the client.)
+

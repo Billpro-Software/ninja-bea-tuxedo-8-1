@@ -1,0 +1,1614 @@
+<TITLE>LIBWSC </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBWSC MESSAGES 1400-1499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1417"></A>
+<H3>LIBWSC MESSAGE #1417</H3>
+<H2> ERROR: Cannot use the -d and -r options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-d
+and
+-r
+options to
+ud
+are mutually exclusive.
+The
+-d
+option specifies the maximum delay in receiving a reply
+before timeout.
+The
+-r
+option states that no reply is expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-d
+and
+-r
+options are not both specified, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1420"></A>
+<H3>LIBWSC MESSAGE #1420</H3>
+<H2> ERROR: Unable to get user id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ud
+command was unable to find the user name associated with the numeric user ID
+of the process invoking
+ud
+in the
+/etc/passwd
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Have the UNIX System administrator correct any problems related to the
+entry of the user invoking
+ud
+in the
+/etc/passwd
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+getpwent (3C)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1422"></A>
+<H3>LIBWSC MESSAGE #1422</H3>
+<H2> ERROR: Cannot determine authentication level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpchkauth()
+function returned an error when called by
+ud
+to determine the level of authentication required by the application
+configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the
+tpchkauth()
+function call is failing.
+Often, this will be due to an incorrect
+setting of the
+TUXCONFIG
+shell variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1424"></A>
+<H3>LIBWSC MESSAGE #1424</H3>
+<H2> ERROR: Unable to obtain application password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ud
+command was unable to obtain a value for the application password.
+This value is entered at the terminal if
+ud
+is being invoked interactively, and is gotten from the
+APP_PW
+environment variable if the standard input to the
+ud
+process is not a terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+ud
+command is being invoked in the background, be sure to set
+and export the
+APP_PW
+environment variable.
+If
+ud
+is being invoked at a terminal, be sure that the user enters a
+value at the
+Enter
+Application
+Password :
+prompt.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1425"></A>
+<H3>LIBWSC MESSAGE #1425</H3>
+<H2> ERROR: Handle entry not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The handle in the
+tpgetrply ()
+argument list is not a valid handle.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the application code to make sure that only handles obtained
+from the return of
+tpacall ()
+are used.
+If the handle is valid, then this would indicate an internal problem.
+In this case, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1426"></A>
+<H3>LIBWSC MESSAGE #1426</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to reallocate memory failed during a call to
+tprealloc().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that size requested is not inappropriately large.
+If that is not the problem, check that the
+application is freeing unneeded buffers
+before attempting to allocate new buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1427"></A>
+<H3>LIBWSC MESSAGE #1427</H3>
+<H2> ERROR: Cannot join application - permission denied</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An
+ATMI
+function was called in a client before calling
+tpinit (),
+and an attempt to join the application failed.
+The client cannot join the application because it
+does not have permission to do so or because it did
+not supply the correct application password.
+Permission may be denied based on an invalid
+application password, failure to pass application
+specific authentication, or use of restricted names.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an application error.
+If the application has security turned on, then
+tpinit ()
+must be called explicitly with a
+TPINIT
+buffer supplying a valid password before calling any other
+ATMI
+functions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1428"></A>
+<H3>LIBWSC MESSAGE #1428</H3>
+<H2> ERROR: Cannot join application - accesser limit exceeded</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An
+ATMI
+function was called in a client before calling
+tpinit (),
+and an attempt to join the application failed.
+The client cannot join the application because of space
+limitations.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a application configuration problem.
+The number of accessers is too small and must be reconfigured to
+allow more clients.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1429"></A>
+<H3>LIBWSC MESSAGE #1429</H3>
+<H2> ERROR: Could not access file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to get the status of a file failed.
+This file was created for temporary storage of a reply message.
+This is an operating system error that
+could be a result of an accidental deletion of the
+file, a change in file permissions, or a hardware problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Files created for this purpose have a prefix of
+W .
+Check for the existence of such files in the specified
+directory.
+If none are found, restart the client.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1430"></A>
+<H3>LIBWSC MESSAGE #1430</H3>
+<H2> ERROR: Unable to retrieve stored reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to retrieve a stored conversation reply failed.
+This message was either stored in memory or in a
+temporary file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the message was stored in memory, then this indicates an
+internal TUXEDO System problem.
+In this case the client should be shut down and restarted.
+Your TUXEDO System Technical Support should be informed.
+If the message was stored in a temporary file, this could
+indicate a permissions problem or a hardware failure.
+Consult your UNIX system administrator in this case.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1431"></A>
+<H3>LIBWSC MESSAGE #1431</H3>
+<H2> ERROR: Received conversational message not stored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application has asked for a conversational reply with a connection
+descriptor unknown
+to the system.
+This error should have been detected in
+tprecv ().
+If the descriptor is valid, this indicates an internal TUXEDO System error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application should be restarted.
+If the problem still occurs, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1432"></A>
+<H3>LIBWSC MESSAGE #1432</H3>
+<H2> ERROR: Send of OWS_RECV message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed.
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1433"></A>
+<H3>LIBWSC MESSAGE #1433</H3>
+<H2> ERROR: Unable to save a conversational message reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to save a conversational message reply failed.
+There are two possible causes.
+The first is that the environment variable
+WSRPLYMAX
+was set too high and an attempt to allocate space for the message failed.
+The second is an attempt to write to a file opened
+for temporary storage of a reply message failed.
+This is an operating system error that
+could be a result of insufficient space in the file system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+In the first case, the value of
+WSRPLYMAX
+should be lowered.
+The client must be restarted to get the new value.
+In the second case, the amount of the space on
+the specified device should be checked.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1434"></A>
+<H3>LIBWSC MESSAGE #1434</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory to save a conversational message reply failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The value of
+WSRPLYMAX
+should be lowered so that
+messages are stored in temporary files
+rather than memory.
+The client must be restarted to get the new value.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1435"></A>
+<H3>LIBWSC MESSAGE #1435</H3>
+<H2> ERROR: Unable to store conversational message in temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to save a conversational reply message in a temporary file
+has failed.
+If the application has the necessary permissions,
+then the device must be full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the setting of the environment variable
+TMPDIR .
+This may be set to a file system with restrictive permissions,
+or it may be full.
+Resetting this variable to a file system with sufficient
+space may solve the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1436"></A>
+<H3>LIBWSC MESSAGE #1436</H3>
+<H2> ERROR: Invalid connection descriptor</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to retrieve a message
+with an invalid connection descriptor.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for an application error that would cause this situation.
+If no errors are found, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1437"></A>
+<H3>LIBWSC MESSAGE #1437</H3>
+<H2> ERROR: Unable to read conversational message from temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to process a conversational reply failed.
+Earlier messages indicate the exact nature of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look for earlier messages in the log file (e.g., 1429, 1016, 1077, or 1017).
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1438"></A>
+<H3>LIBWSC MESSAGE #1438</H3>
+<H2> ERROR: Invalid connection descriptor</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to retrieve a message
+with an invalid connection descriptor.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for an application error that would cause this situation.
+If no errors are found, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1439"></A>
+<H3>LIBWSC MESSAGE #1439</H3>
+<H2> ERROR: tpconnect() message send failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpconnect ().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1440"></A>
+<H3>LIBWSC MESSAGE #1440</H3>
+<H2> ERROR: tpconnect() get reply failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive an acknowledgment to a
+tpconnect ()
+request failed.
+This could be the result of the network
+going down, the Workstation Handler process not running, or the site of the
+Workstation Handler going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1441"></A>
+<H3>LIBWSC MESSAGE #1441</H3>
+<H2> ERROR: Unable to send message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpsend ().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1442"></A>
+<H3>LIBWSC MESSAGE #1442</H3>
+<H2> ERROR: Unable to get reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive an acknowledgment to a
+tpsend ()
+request failed.
+This could be the result of the network
+going down, the Workstation Handler process not running, or the site of the
+Workstation Handler going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1443"></A>
+<H3>LIBWSC MESSAGE #1443</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while allocating space to hold the compilation parameters
+in
+buldclient
+or
+buildclt .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1444"></A>
+<H3>LIBWSC MESSAGE #1444</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while allocating space to hold the compilation parameters
+in
+buldclient
+or
+buildclt .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1445"></A>
+<H3>LIBWSC MESSAGE #1445</H3>
+<H2> ERROR: tpchkauth failed - Uunixerr = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An operating system error occurred while attempting to determine the level
+of authentication required by the application configuration.
+A code is printed indicating the specific UNIX System call that failed.
+These codes may be referenced in the header file &lt;Uunix.h>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the UNIX System call is failing.
+Often, this error will occur if the
+TUXCONFIG
+shell variable is not set consistently in this process and in the rest of
+the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1446"></A>
+<H3>LIBWSC MESSAGE #1446</H3>
+<H2> ERROR: Cannot create buffer - tpalloc() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wud ,
+tpalloc
+failed to allocate a typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wud (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1447"></A>
+<H3>LIBWSC MESSAGE #1447</H3>
+<H2> ERROR: Cannot become a client - tpinit() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+wud
+program was unable to attach to the TUXEDO System/T bulletin board as a client.
+Further information is contained in the
+errmsg
+message associated with tperrno printed as part of the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpinit(3)
+manual page contains a description of each error value returned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wud (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1448"></A>
+<H3>LIBWSC MESSAGE #1448</H3>
+<H2> ERROR: tpalloc for TPINIT failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wud ,
+tpalloc
+failed to allocate a TPINIT typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wud (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1449"></A>
+<H3>LIBWSC MESSAGE #1449</H3>
+<H2> ERROR: Cannot start a transaction - tpbegin() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+ud
+attempted to start a transaction and was unsuccessful.
+Further information is indicated by the
+errmsg .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpbegin(3)
+manual page contains a description of each error value returned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpbegin (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1450"></A>
+<H3>LIBWSC MESSAGE #1450</H3>
+<H2> ERROR: Cannot commit transaction - tpcommit() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+wud
+encountered an error while attempting to commit a transaction.
+Quite often, the failure of the transaction commit
+is due to the failure of one or more of the service participants, or
+due to transaction timeout.
+Further information is indicated by the value of
+errmsg .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpbegin(3)
+manual page lists the specific reasons why
+tpcommit
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wud (1),
+tpbegin (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1451"></A>
+<H3>LIBWSC MESSAGE #1451</H3>
+<H2> ERROR: tpalloc for TPINIT failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wtmconfig ,
+tpalloc
+failed to allocate a TPINIT typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1452"></A>
+<H3>LIBWSC MESSAGE #1452</H3>
+<H2> ERROR: Cannot become a client - tpinit() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wtmconfig ,
+tpinit
+failed in trying to join the application.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpinit(3)
+manual page lists the specific reasons why
+tpinit
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1453"></A>
+<H3>LIBWSC MESSAGE #1453</H3>
+<H2> ERROR: Cannot create buffer - tpalloc() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wtmconfig ,
+tpalloc
+failed to allocate an FML typed buffer.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpalloc (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1458"></A>
+<H3>LIBWSC MESSAGE #1458</H3>
+<H2> ERROR: Invalid installation - can't find <I>file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is an unauthorized TUXEDO System installation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For a valid installation, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1460"></A>
+<H3>LIBWSC MESSAGE #1460</H3>
+<H2> ERROR: SJIS conversion failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an unsolicited message from SJIS to EUC format failed.
+This indicates that the input data was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the application is generating valid SJIS format.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1461"></A>
+<H3>LIBWSC MESSAGE #1461</H3>
+<H2> ERROR: EUC conversion failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Restoring an unsolicited message from EUC to SJIS format failed.
+This indicates that the input data was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since this is undoing the earlier action, this error should not
+occur.
+Call TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1462"></A>
+<H3>LIBWSC MESSAGE #1462</H3>
+<H2> ERROR: EUC conversion failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting a received message from EUC to SJIS format failed.
+This indicates that the input data was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the application server is generating valid EUC format.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1463"></A>
+<H3>LIBWSC MESSAGE #1463</H3>
+<H2> ERROR: SJIS conversion failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an unsolicited message to be transmitted from SJIS
+to EUC format failed.
+This indicates that the input data was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the application is generating valid SJIS format.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1464"></A>
+<H3>LIBWSC MESSAGE #1464</H3>
+<H2> ERROR: SJIS conversion failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting a message to be transmitted from SJIS to EUC format failed.
+This indicates that the input data was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the application is generating valid SJIS format.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1465"></A>
+<H3>LIBWSC MESSAGE #1465</H3>
+<H2> ERROR: EUC conversion failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Restoring a converted message from EUC to SJIS format failed.
+This indicates that the input data was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since this is undoing the earlier action, this error should not
+occur.
+Call TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1466"></A>
+<H3>LIBWSC MESSAGE #1466</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the
+operating system using
+malloc ()
+failed while
+performing a
+"post receive"
+operation on a typed buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1467"></A>
+<H3>LIBWSC MESSAGE #1467</H3>
+<H2> ERROR: Unable to initialize type switch</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the /WS client type switch failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look for earlier messages in the event log for more details
+(e.g., memory allocation failure).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1468"></A>
+<H3>LIBWSC MESSAGE #1468</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while processing an AEWaddtypesw() call.
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1470"></A>
+<H3>LIBWSC MESSAGE #1470</H3>
+<H2> ERROR: tpcall() failed, <I>tperrmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The command tmconfig(1) received a failure return from <Font>tpcall(3)
+while processing the requested dynamic configuration request.
+The specific cause of the failure is indicated in <I>tperrmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine from the specific cause of the error if the problem can be
+corrected administratively or is a transient problem
+(for example, a timeout).
+Contact your TUXEDO System Technical Support for assistance if unsure of how
+to resolve the situation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1472"></A>
+<H3>LIBWSC MESSAGE #1472</H3>
+<H2> ERROR: Cannot map XID to string, invalid mchidshift setting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when mapping an XID to string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error should not normally occur.
+Call TUXEDO support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcvt(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1473"></A>
+<H3>LIBWSC MESSAGE #1473</H3>
+<H2> ERROR: Cannot map XID string to structure on /WS platforms</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /WS client called tpcvt() to convert an XID to a structure.
+This feature is not supported of /WS clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write the client so that it no longer does this operation.
+If needed, write a service that does this operation on behalf
+of the client.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcvt(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1474"></A>
+<H3>LIBWSC MESSAGE #1474</H3>
+<H2> WARN: Trace specification contains pattern; ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A trace specification includes a regular expression pattern.
+This feature is not supported on MAC workstations.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write the client to not use regular expressions in the
+trace specification.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+trace(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1475"></A>
+<H3>LIBWSC MESSAGE #1475</H3>
+<H2> ERROR: Cannot convert message with unknown protocol <I>num</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /WS client received a message from a /WS Handler, WSH
+with an unknown protocol number, <I>num</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the WSTYPE environment variable is correctly set so that
+encoding is done if necessary.
+Validate that the correct /WS software is being used with the associated
+WSH.
+You may need to contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1476"></A>
+<H3>LIBWSC MESSAGE #1476</H3>
+<H2> ERROR: Cannot convert message from protocol <I>num1</I> to <I>num2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /WS client received a message to or from a /WS Handler, WSH, with
+a protocol version that cannot be converted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1477"></A>
+<H3>LIBWSC MESSAGE #1477</H3>
+<H2> INFO: WS Handler has been shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /WS client received a shutdown message from the /WS Handler.
+Further operations will fail until the client re-joins the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1500"></A>
+<H3>LIBWSC MESSAGE #1500</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decompressing a received message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1501"></A>
+<H3>LIBWSC MESSAGE #1501</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while compressing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1502"></A>
+<H3>LIBWSC MESSAGE #1502</H3>
+<H2> ERROR: Invalid buffer <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid buffer was passed to tpfree().
+The buffer must be allocated with tpalloc().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application so that a valid typed buffer is used.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+tpfree(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1503"></A>
+<H3>LIBWSC MESSAGE #1503</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decoding a received message.
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1504"></A>
+<H3>LIBWSC MESSAGE #1504</H3>
+<H2> ERROR: Invalid buffer <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid buffer was received by the /WS client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error should not occur.
+Contact TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1505"></A>
+<H3>LIBWSC MESSAGE #1505</H3>
+<H2> ERROR: Type switch uninitialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a received message in the client,
+the buffer unintialization function, _tmuninitbuf(), returned
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the buffer type switch to see that it is correctly set up
+(that the right uninitialization function is associated with
+the correct buffer type).
+If an application-defined buffer type, check the uninitialization
+function to see that it is coded correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer(3),
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1507"></A>
+<H3>LIBWSC MESSAGE #1507</H3>
+<H2> ERROR: MINENCRYPTBITS (<I>minval</I>) is greater than 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The minimum number of encryption bits was greater than zero, but there
+is no link level encryption add-on package installed on this machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Install the link level encryption package or change the minimum encryption
+bits to be zero.  The minimum encryption strength can be changed with the
+environment variable TMMINENCRYPTBITS on workstation clients.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1508"></A>
+<H3>LIBWSC MESSAGE #1508</H3>
+<H2> ERROR: MINENCRYPTBITS (<I>minval</I>) is greater than 40</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The minimum number of encryption bits was greater than fourty, but only
+the 40-bit link level encryption add-on package is installed on this machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Install the 128-bit link level encryption package or change the
+minimum encryption bits to be zero or fourty.  The minimum encryption strength
+can be changed with the environment variable TMMINENCRYPTBITS on workstation
+clients.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1509"></A>
+<H3>LIBWSC MESSAGE #1509</H3>
+<H2> ERROR: Encryption negotiation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation client and the workstation listener could not agree on
+an encryption strength.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+When workstation clients log into the system, they negotiate an encryption
+strength with the workstation listener.  If the client and listener cannot
+agree on the level of encryption (for example, if the workstation listener
+demands 128-bit encryption and the client can only speak 40-bits encryption)
+then this message will appear.  The administrator can either change the
+encryption policy of the workstation listener or workstation client.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1510"></A>
+<H3>LIBWSC MESSAGE #1510</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A workstation client ran out of memory while attempting a Diffie-Hellman
+exchange.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the workstation handler resides.
+If it seems that there should be enough memory for this operation, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1511"></A>
+<H3>LIBWSC MESSAGE #1511</H3>
+<H2> ERROR: Unable to allocate encryption handle</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While negotiating the Diffie-Hellman parameters, the workstation client
+had an error while attempting to get an encryption handle.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1512"></A>
+<H3>LIBWSC MESSAGE #1512</H3>
+<H2> ERROR: Unable to generate first diffie-hellman packet</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While negotiating the Diffie-Hellman parameters, the workstation client
+had an error while attempting to generate the initial Diffie-Hellman
+parameters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1513"></A>
+<H3>LIBWSC MESSAGE #1513</H3>
+<H2> ERROR: Unable to send first diffie-hellman packet</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While negotiating the Diffie-Hellman parameters, the workstation client
+had an error while attempting to send the initial Diffie-Hellman
+parameters to the workstation handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The network may have experienced an error, or the handler waiting for the
+security packet may have been killed.  If neither of these events has
+occured, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1514"></A>
+<H3>LIBWSC MESSAGE #1514</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A workstation client ran out of memory while attempting a Diffie-Hellman
+exchange.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1515"></A>
+<H3>LIBWSC MESSAGE #1515</H3>
+<H2> ERROR: Did not get diffie-hellman return package</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation client did not receive the expected reply from the
+handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1516"></A>
+<H3>LIBWSC MESSAGE #1516</H3>
+<H2> ERROR: Diffie-hellman return packet is bad</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The return packet from the network was corrupted or invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1517"></A>
+<H3>LIBWSC MESSAGE #1517</H3>
+<H2> ERROR: Encryption negotiation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation client and the workstation listener could not agree on
+an encryption strength.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+When workstation clients log into the system, they negotiate an encryption
+strength with the workstation listener.  If the client and listener cannot
+agree on the level of encryption (for example, if the workstation listener
+demands 128-bit encryption and the client can only speak 40-bits encryption)
+then this message will appear.  The administrator can either change the
+encryption policy of the workstation listener or workstation client.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1518"></A>
+<H3>LIBWSC MESSAGE #1518</H3>
+<H2> ERROR: Cannot create buffer - tpalloc() failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A memory allocation failure occured in tmconfig
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1519"></A>
+<H3>LIBWSC MESSAGE #1519</H3>
+<H2> ERROR: tpcall() failed, <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While tmconfig was processing a request, tpcall failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the tperrno which the tpcall returned.  Check the userlog to see if
+any more information is available.  Contact your TUXEDO System Technical
+Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1520"></A>
+<H3>LIBWSC MESSAGE #1520</H3>
+<H2> ERROR: Invalid network address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The WSNADDR environment variable was not in the correct format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address in the WSNADDR environment variable which begins with // must be
+a valid internet address.  The following formats are recognized by the system:
+//host.name:port_number and //#.#.#.#:port_number.  Other formats may be
+recognized.  Change the NADDR field to comply with the known formats.  If you
+believe that your address is in the proper format, contact your TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1521"></A>
+<H3>LIBWSC MESSAGE #1521</H3>
+<H2> ERROR: Cannot put FIELDTBLS32 into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while tmconfig32 was setting the FIELDTBLS32 variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1522"></A>
+<H3>LIBWSC MESSAGE #1522</H3>
+<H2> ERROR: Cannot put FLDTBLDIR32 into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while tmconfig32 was setting the FLDTBLDIR32 variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your Tuxedo System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

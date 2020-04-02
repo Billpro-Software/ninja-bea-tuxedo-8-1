@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>System Error</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H3><FONT COLOR="#FF0000">System Error</FONT></H3>
+</CENTER>
+<TABLE BORDER=0>
+<TR>
+	<TD ALIGN=RIGHT><B>Error Message:</B></TD>
+	<TD><FONT COLOR="#0000FF"><%=ERRMSG%></FONT></TD>
+</TR>
+<TR>
+	<TD ALIGN=RIGHT><B>Error Number:</B></TD>
+	<TD><FONT COLOR="#0000FF"><%=ERRNO%></FONT></TD>
+</TR>
+</TABLE>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Back" OnClick="history.go(-1)">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

@@ -1,0 +1,1210 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>CMDTUX MESSAGE #1110</H3>
+<H2> ERROR: TUXDIR environment variable not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXDIR
+environment variable was not set.
+Because of this, the
+boot
+command will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXDIR
+environment variable to the base directory of the TUXEDO System software, and
+export this variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>CMDTUX MESSAGE #1111</H3>
+<H2> ERROR: Could not allocate internal TPINIT typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During shutdown, memory could not be allocated for an internal
+data structure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application ipc key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1112"></A>
+<H3>CMDTUX MESSAGE #1112</H3>
+<H2> ERROR: Could not find entry for user</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving user information from the
+getpwuid
+system call produced a failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Validate your login and contact your System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1113"></A>
+<H3>CMDTUX MESSAGE #1113</H3>
+<H2> ERROR: Must be the administrator to execute this command</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A user other than
+root
+or the system administrator for the application is making a boot or
+shutdown request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The user must be the system administrator (or
+root) to issue these commands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1126"></A>
+<H3>CMDTUX MESSAGE #1126</H3>
+<H2> WARN: Can't shutdown servers, Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Space cannot be allocated to hold server group information used
+in the shutdown procedure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Kill extraneous processes and resubmit
+tmshutdown .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1130"></A>
+<H3>CMDTUX MESSAGE #1130</H3>
+<H2> ERROR: Argument <I>arg_value</I> to option -e is not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-e
+option to
+ud
+specifies the maximum number of allowable errors before the process exits.
+This option requires a numeric argument.
+The argument specified was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to the
+ud
+command so that the
+-e
+option has a numeric subargument, and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1133"></A>
+<H3>CMDTUX MESSAGE #1133</H3>
+<H2> ERROR: Cannot determine authentication level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpchkauth()
+function returned an error when called by
+ud
+to determine the level of authentication required by the application
+configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the
+tpchkauth()
+function call is failing.
+Often, this will be due to an incorrect
+setting of the
+TUXCONFIG
+shell variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1134"></A>
+<H3>CMDTUX MESSAGE #1134</H3>
+<H2> ERROR: Unable to get user id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ud
+command was unable to find the user name associated with the numeric user ID
+of the process invoking
+ud
+in the
+/etc/passwd
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Have the UNIX System administrator correct any problems related to the
+entry of the user invoking
+ud
+in the
+/etc/passwd
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+getpwent (3C)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1135"></A>
+<H3>CMDTUX MESSAGE #1135</H3>
+<H2> ERROR: Unable to obtain application password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ud
+command was unable to obtain a value for the application password.
+This value is entered at the terminal if
+ud
+is being invoked interactively, and is gotten from the
+APP_PW
+environment variable if the standard input to the
+ud
+process is not a terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+ud
+command is being invoked in the background, be sure to set
+and export the
+APP_PW
+environment variable.
+If
+ud
+is being invoked at a terminal, be sure that the user enters a
+value at the
+Enter
+Application
+Password :
+prompt.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1138"></A>
+<H3>CMDTUX MESSAGE #1138</H3>
+<H2> ERROR: Can't process a message with an unknown release, <I>relnum</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System provides a means for converting a message from
+one release to another.
+It will convert messages from a previous release to the current one
+and vice versa.
+For example, TUXEDO System Release 4.1.x will interoperate with
+Release 4.2.x and vice versa.
+The message received was not one from the current release or the
+previous one but from release
+<I>relnum</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the releases of the TUXEDO System software installed are valid.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1139"></A>
+<H3>CMDTUX MESSAGE #1139</H3>
+<H2> ERROR: Memory allocation failure, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to allocate additional memory while attempting to create an
+internal table.
+This table was to be used for storing client information when
+forwarding unsolicited messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>errno_val</I>
+against the error numbers in the UNIX System header
+file
+errno.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1140"></A>
+<H3>CMDTUX MESSAGE #1140</H3>
+<H2> WARN: WSH (<I>pid</I>) should not be ignoring unsolicited messages</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+has found a Workstation handler (WSH) that will not accept
+unsolicited messages on behalf of its /WS clients.
+The process id of the WSH is
+<I>pid</I>.
+/WS clients connected to this WSH will not be able to receive
+unsolicited messages regardless of the notification method
+they will have selected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1141"></A>
+<H3>CMDTUX MESSAGE #1141</H3>
+<H2> ERROR: Memory allocation failure, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to allocate additional memory while attempting to create an
+internal table.
+This table was to be used for storing Workstation handler (WSH)
+information when forwarding unsolicited messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>errno_val</I>
+against the error numbers in the UNIX System header
+file
+errno.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1142"></A>
+<H3>CMDTUX MESSAGE #1142</H3>
+<H2> ERROR: Memory reallocation failure, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to reallocate additional memory while attempting to increase
+the size of an internal table.
+This table was to be used for storing client information when
+forwarding broadcast messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>errno_val</I>
+against the error numbers in the UNIX System header
+file
+errno.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1143"></A>
+<H3>CMDTUX MESSAGE #1143</H3>
+<H2> ERROR: Unable to find WSH (<I>pid</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to locate the Workstation handler (WSH) that was going to be
+used to forward a broadcast messages to one or more Workstation clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+"tmadmin printclient"
+command can be used to determine the status
+of the WSH.
+The TUXEDO System administrator may also verify whether or not the WSH,
+with a process id
+<I>pid</I>,
+is still alive.
+Finally, the userlog file should be consulted for additional information
+regarding the possible termination of the WSH.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1144"></A>
+<H3>CMDTUX MESSAGE #1144</H3>
+<H2> ERROR: Memory reallocation failure, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to reallocate additional memory while attempting to increase
+of size of an internal table.
+This table was to be used for storing client information when
+forwarding broadcast messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>errno_val</I>
+against the error numbers in the UNIX System header
+file
+errno.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1145"></A>
+<H3>CMDTUX MESSAGE #1145</H3>
+<H2> ERROR: Unable to send broadcast due to lack of system resources</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL)
+process failed to forward the unsolicited message to a Workstation
+handler due to a blocking condition.
+The BBL
+will write this error message to the userlog and return an error.
+The BBL
+will only log this error message if several blocking conditions have
+occurred.
+Otherwise a warning message is posted in the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application administrator will need to determine whether
+there are sufficient inter-process communication (IPC)
+resources available on the UNIX system.
+The UNIX command
+ipcs
+can be used to report the IPC
+facilities status.
+The
+"tmadmin printqueue"
+command can also assist in monitoring the
+application usage of system queues.
+The UNIX System IPC
+tunable parameters may have to be updated.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1146"></A>
+<H3>CMDTUX MESSAGE #1146</H3>
+<H2> WARN: Unable to send broadcast to WSH (<I>pid</I>), tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to forward the unsolicited message to a Workstation handler
+with a process id of
+<I>pid</I>.
+The BBL will write this message to the user log and attempt to
+send the unsolicited message to the next targeted
+Workstation handler, or native client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>tperrno_val</I>
+against the error numbers in the TUXEDO System
+header file
+atmi.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1147"></A>
+<H3>CMDTUX MESSAGE #1147</H3>
+<H2> ERROR: Could not allocate unsolicited message, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to allocate additional space for internal use.
+The BBL will log this message in the user log and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>tperrno_val</I>
+against the error numbers in the TUXEDO System header
+file
+atmi.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1149"></A>
+<H3>CMDTUX MESSAGE #1149</H3>
+<H2> ERROR: Unable to send broadcast due to lack of system resources, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to send the unsolicited message to a client process
+due to a blocking condition.
+The BBL will write this error message to the user log and return an error.
+The BBL will only return an error if several blocking conditions have
+occurred.
+Otherwise a warning message is posted in the user log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application administrator will need to determine whether or not
+there are sufficient inter-process communication (IPC) resources
+available on the machine.
+The UNIX command
+ipcs
+can be used to report the IPC facilities status.
+The tmadmin printqueue command can also assist in monitoring the
+TUXEDO application usage of system queues.
+The UNIX IPC tunable parameters may have to be updated.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1150"></A>
+<H3>CMDTUX MESSAGE #1150</H3>
+<H2> WARN: Unable to send broadcast to client (<I>pid</I>) tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to send the unsolicited message to a client with a process id of
+<I>pid</I>.
+The BBL will write this message to the user log and attempt to
+send the unsolicited message to the next targeted client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>tperrno_val</I>
+against the error numbers in the TUXEDO System
+header file
+atmi.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1158"></A>
+<H3>CMDTUX MESSAGE #1158</H3>
+<H2> ERROR: Unable to send unsolicited message to client (<I>pid</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to send the unsolicited message to a client
+with a process id of
+<I>pid</I>.
+The BBL failed due to a TUXEDO System error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1159"></A>
+<H3>CMDTUX MESSAGE #1159</H3>
+<H2> ERROR: Invalid USIGNAL parameter in Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+may only send one of two signals to a Workstation handler or native client:
+SIGUSR1
+or
+SIGUSR2 .
+The BBL has determined that the Bulletin Board is specifying a
+signal other than
+SIGUSR1
+or
+SIGUSR2 .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The administrator of the TUXEDO System application should verify that
+the
+USIGNAL
+parameter in the configuration file is set to
+SIGUSR1
+or
+SIGUSR2 .
+SIGUSR2
+is the default for this parameter.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1160"></A>
+<H3>CMDTUX MESSAGE #1160</H3>
+<H2> ERROR: Unable to send signal to client, pid = <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to send a signal to process
+<I>pid</I>.
+Clients that have selected
+SIGNAL -based
+notification are automatically
+converted to
+DIPIN
+mode if the user id of the client that selected
+SIGNAL -based
+notification does not match the user id of the
+TUXEDO System application administrator.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1161"></A>
+<H3>CMDTUX MESSAGE #1161</H3>
+<H2> ERROR: Memory allocation failure, errno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to allocate additional memory while attempting to create an
+internal table.
+This table was to be used for storing Workstation handler (WSH)
+information when forwarding unsolicited messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>tperrno_val</I>
+against the error numbers in the UNIX System header
+file
+errno.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1162"></A>
+<H3>CMDTUX MESSAGE #1162</H3>
+<H2> ERROR: Memory reallocation failure, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to reallocate additional memory while attempting to increase
+the size of an internal table.
+This table was to be used for storing Workstation handler information when
+forwarding broadcast messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>errno_val</I>
+against the error numbers in the UNIX System header file
+errno.h
+for more details.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1163"></A>
+<H3>CMDTUX MESSAGE #1163</H3>
+<H2> ERROR: invalid option - argument to -u not n, u, or j</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The command option -u was specified
+for
+ud
+but the argument was not n, u, or j.
+This option specifies how the request buffer is modified before reading each
+new packet.
+The n argument indicates that the buffer should be
+re-initialized (treated as new).
+The u argument indicates that
+the buffer should be updated with the reply buffer using
+Fupdate (3).
+The j argument indicates that the reply buffer should
+be joined with the request buffer using
+Fojoin (3).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command using a valid -u argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1165"></A>
+<H3>CMDTUX MESSAGE #1165</H3>
+<H2> ERROR: Machine <I>name</I> must be a valid identifier.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid identifier was used as a symbolic name for a machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use a valid identifier as a symbolic name for that machine.
+This name cannot contain a period or comma, and must be 30 characters
+or less.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1166"></A>
+<H3>CMDTUX MESSAGE #1166</H3>
+<H2> ERROR: MAXWSCLIENTS value (<I>val</I>) exceeds system limit (<I>lim</I>) for this site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+MAXWSCLIENTS
+was set to exceed the system limit,
+<I>lim</I>.
+Only
+<I>lim</I>
+number of workstation clients can be supported on this site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reset
+MAXWSCLIENTS
+so that is does not exceed the system limit,
+<I>lim</I>.
+If the system limit for that site is inadequate, contact your TUXEDO System
+Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig( 5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1168"></A>
+<H3>CMDTUX MESSAGE #1168</H3>
+<H2> ERROR:  UID is not effective user ID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmunloadcf
+command will not attempt to unload the binary
+TUXCONFIG
+configuration when the effective user id (UID) of
+the user invoking tmunloadcf does not match the UID of
+application administrator in the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the effective user id of the user invoking
+tmunloadcf
+is valid.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1169"></A>
+<H3>CMDTUX MESSAGE #1169</H3>
+<H2> ERROR: Could not allocate unsolicited message, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative Bulletin Board Liaison (BBL) process
+failed to allocate additional space for internal use.
+The BBL will log this message in the user log and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check
+<I>tperrno_val</I>
+against the error numbers in the TUXEDO System header
+file
+atmi.h
+for more details.
+<SECT2><P>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative tlisten process failed to
+dynamically allocate memory from the operating system
+using
+malloc().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount
+of memory that can be used by a process.
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1175"></A>
+<H3>CMDTUX MESSAGE #1175</H3>
+<H2> WARN: *RESOURCES SYSTEM_ACCESS setting cannot be overridden in *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to override the setting of the *RESOURCES section
+SYSTEM_ACCESS
+parameter in the SERVERS section even though
+NO_OVERRIDE
+was specified.
+NO_OVERRIDE
+indicates that the *RESOURCES section
+SYSTEM_ACCESS
+setting can not be overridden in the SERVERS section.
+The
+SYSTEM_ACCESS
+setting in the SERVERS
+section will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+SYSTEM_ACCESS
+parameter settings in the SERVERS section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1176"></A>
+<H3>CMDTUX MESSAGE #1176</H3>
+<H2> WARN: *RESOURCES SYSTEM_ACCESS setting cannot be overridden in *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to override the setting of the *RESOURCES section
+SYSTEM_ACCESS
+parameter in the SERVERS section even though
+NO_OVERRIDE
+was specified.
+NO_OVERRIDE
+indicates that the *RESOURCES section
+SYSTEM_ACCESS
+setting can not be overridden in the SERVERS section.
+The
+SYSTEM_ACCESS
+setting in the SERVERS section will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+SYSTEM_ACCESS
+parameter settings in the SERVERS section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1178"></A>
+<H3>CMDTUX MESSAGE #1178</H3>
+<H2> ERROR: Mismatch on uid/gid from connecting bridge</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System pre-4.2
+BRIDGE
+process will send its own uid and gid when
+identifying itself to another
+BRIDGE
+process rather than send what
+it thinks is the uid and gid of the
+BRIDGE
+process it is communicating with.
+The information passed does not match the uid and gid stored in the
+configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+UID
+and
+GID
+parameter settings in the configuration file for the
+machine whose
+BRIDGE
+process failed to boot.
+Ensure that the
+BRIDGE
+process being booted has the correct effective
+uid and gid.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1183"></A>
+<H3>CMDTUX MESSAGE #1183</H3>
+<H2> ERROR: Group name <I>grpname</I> must not contain *, comma, or colon</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A group name specified starting in the first column of a line
+in the GROUPS section of the UBBCONFIG file contained an asterisk,
+comma, or colon.
+This is not allowed.
+It is also possible for this error to occur if the
+tmloadcf
+program interprets some other parameter as a group name due to
+earlier errors in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the configuration file has the proper syntax.
+If necessary, choose a new name for the
+group which meets the syntax restrictions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1186"></A>
+<H3>CMDTUX MESSAGE #1186</H3>
+<H2> ERROR: Invalid setting of SYSTEM_ACCESS</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid value was specified for the
+SYSTEM_ACCESS
+parameter in the *RESOURCES section of the configuration file.
+Valid values are
+FASTPATH ,
+PROTECTED ,
+or
+NO_OVERRIDE .
+NO_OVERRIDE
+may be combined with
+FASTPATH
+or
+PROTECTED
+by specifying both values separated by a comma.
+FASTPATH
+may not be combined with
+PROTECTED .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file to conform to the syntax guidelines
+and reexecute
+tmloadcf .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1188"></A>
+<H3>CMDTUX MESSAGE #1188</H3>
+<H2> ERROR: Invalid setting of SYSTEM_ACCESS</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1186 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1186 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1190"></A>
+<H3>CMDTUX MESSAGE #1190</H3>
+<H2> ERROR: Invalid setting of SYSTEM_ACCESS</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1186 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1186 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1191"></A>
+<H3>CMDTUX MESSAGE #1191</H3>
+<H2> ERROR: *ROUTING entry <I>routing_name</I> has more than one default range</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ROUTING table entry
+<I>routing_name</I>
+was specified with more than one default range specification.
+This is not allowed.
+A default range specification is one which has the meta-character
+"*" (wild-card) in the position of a range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Recode the
+RANGES
+entry specified as being in error so that at most one entry specifies
+the meta-character "*" in the position of a range.
+If such a wild-card character is used,
+it should be the last range in the entry,
+since ranges following it will be ignored.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1193"></A>
+<H3>CMDTUX MESSAGE #1193</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> has both numeric and character values in the RANGES statement</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ROUTING entry
+<I>entry_name</I>
+has both numeric and character values in the
+RANGES
+statement.
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The values specified in the
+RANGES
+statement must be appropriate to the type of
+the field on which routing is being conducted.
+Look in the field tables to determine the type of the field listed for this
+routing entry and change any routing values which are inappropriate for this
+field type.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1196"></A>
+<H3>CMDTUX MESSAGE #1196</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> lacks a single quote at the end of a character string or lacks a backslash to escape a double quote</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing entry
+<I>entry_name</I>
+lacks a single quote
+at the end of a character string, or lacks a backslash to escape a
+double quote within a character string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the routing field flagged as being in error.
+Make sure that the
+RANGES
+string starts and ends with a double quote, and that
+the previous string in the configuration file was properly terminated with
+a double quote.
+Remember that any double quote character to be taken literally
+as part of a range limit must be preceded by a backslash.
+Examine each string range value within the
+RANGES
+field, and verify that it starts and ends with a single quote.
+Remember that any single quote character to be taken literally as part of a
+range limit must be preceded by two backslashes.
+Correct all errors in the format of the routing information, and reload
+the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1197"></A>
+<H3>CMDTUX MESSAGE #1197</H3>
+<H2> ERROR: or a backslash to escape a double quote.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is printed as the second part of message 1196.
+See message 1196 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message is printed as the second part of message 1196.
+See message 1196 for an explanation.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1198"></A>
+<H3>CMDTUX MESSAGE #1198</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> has both numeric and character values in the RANGES statement</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1193 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1193 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1199"></A>
+<H3>CMDTUX MESSAGE #1199</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> has both numeric and character values in the RANGES statement</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1193 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1193 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

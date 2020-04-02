@@ -1,0 +1,2121 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:47:31">
+<title>Administration Tasks</title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>Administration Tasks</b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="acmainw.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="accore.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="649728">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Administration Tasks</font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console simplifies the task of managing your BEA Tuxedo application resources. The BEA Tuxedo Administration Console enables you to quickly and easily perform the administrative tasks associated with managing mission-critical applications. With the BEA Tuxedo Administration Console, you can create domains and administrative class objects (such as machines and services), as well as manage Tuxedo CORBA interfaces, factories, and interface queues. The BEA Tuxedo Administration Console provides a browser-based solution for remote system administration.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This topic describes the administration tasks you can perform using the BEA Tuxedo Administration Console. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This topic includes the following sections:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#594213">Setting Up Your BEA Tuxedo Administration Console</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#544855">Creating Administrative Class Objects</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#625186">Configuring Administrative Objects</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#621784">Connecting to and Disconnecting from a Domain</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#642249">Activating Your Domain and Domain Resources</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#561178">Deactivating Your Domain</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#632475">Migrating Tree Objects</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548736">Swapping the Master and Backup Machines</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548743">Cleaning a Machine</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548756">Advertising, Unadvertising, Suspending, and Resuming Services</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548804">Suspending, Resuming, and Killing Clients</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548848">Suspending, Resuming, and Killing Workstation Handlers</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548892">Opening and Closing Application Queue Spaces</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548901">Deleting Application Queue Messages</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548909">Aborting Transactions</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#548919">Creating Bridges Between Machines</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#592522">Security Administration</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#657731">Managing Tuxedo CORBA Resources</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#659234">Monitoring System Events</a></font></ul><p>
+<a name="594213"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="594213"></a>Setting Up Your BEA Tuxedo Administration Console
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console allows you to customize your administrative environment and set default parameters. Setting up and customizing the BEA Tuxedo Administration Console includes the following tasks:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#547443">Setting General Default Parameters</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#599110">Switching Edit and View Modes</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#600212">Controlling What the Tree Displays</a></font></ul><p>
+<a name="547443"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="547443"></a>Setting General Default Parameters</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To set general default parameters for your administrative session:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Settings--&gt;Defaults from the menu bar (or click the Settings toolbar 
+button). The Settings window is displayed as shown in <a href="actasks.htm#596730">Figure&nbsp;3-1</a>.
+</font><a name="596730"><p style="FONT-WEIGHT: Bold">Figure 3-1    Settings Window</p></a>
+
+<p>
+<p> <img src="images/options.gif">
+</p>
+
+<p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="actasks.htm#597439">Table&nbsp;3-1</a> explains the options available on the Settings window.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="597439"> </a>Table 3-1   Settings Window Options</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Field</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Documentation URL	 </font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specifies  the location of your BEA online documentation.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Sort Criteria	 </font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Indicates the criterion (name or state) by which administrative objects will be sorted. Here are two examples:</font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>If you choose to sort the objects in your domain, all the machines with names that begin with the same string (such as main1, main2, and main3) are grouped together in the BEA Tuxedo Administration Console display. </font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>If you choose to sort the objects in your domain by state, all the active machines are grouped together and all the inactive machines grouped together in the BEA Tuxedo Administration Console display.</font></ul><p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Default Work Mode (View or Edit)</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Indicates the default work mode (view-only or edit) for the current session as follows: </font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In View mode, you can look at information about your domain but you cannot change it. None of the attribute fields are editable.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In Edit mode, you can create and configure domains. Where appropriate, the attribute fields are editable. </font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> You can override this default setting for individual tree objects. For more information, see the section <a href="actasks.htm#599110">Switching Edit and View Modes</a>.</p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>When you have specified the settings you want, click OK to apply your changes 
+and close the window.
+</font></ol>
+<a name="599110"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="599110"></a>Switching Edit and View Modes</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can set the BEA Tuxedo Administration Console to the following default work modes:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>View mode--you can only view atttributes set in the Configuration tab pages; you cannot change the attributes.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Edit mode--you can change the attributes in the Configuration tab fields.</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">By default, your BEA Tuxedo Administration Console is set to Edit mode so that you can create or modify parameters by editing the appropriate fields in the configuration tab pages. (To change the default mode for the session, select Settings--&gt;Defaults from the menu bar and follow the steps in <a href="actasks.htm#547443">Setting General Default Parameters</a>.)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can momentarily <em>override</em> the default setting for individual tree items. Most likely you will use this feature to override a default View mode to edit an attribute on an object. If you return to the same object later in the session, it reverts to the default mode (in this case, View only) unless you override the default again.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To change the mode for a specific object in the Tree View:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select an object in the tree, and click the right mouse button to display the Quick 
+Menu.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select either the View or Edit from the Quick Menu. This momentarily overrides 
+the default mode setting for the selected tree object only. All of the other tree 
+objects retain the default setting.
+</font></ol>
+<a name="600212"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="600212"></a>Controlling What the Tree Displays</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can customize the configuration Tree View so that only the administrative classes (tree objects) you want to see are displayed. To control what class folders are displayed in the tree, follow these steps:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Right-click a domain or administrative class object in the tree, and then select 
+Quick Menu --&gt;Folders.
+</font><p style="MARGIN-LEFT: 0">As shown in <a href="actasks.htm#600877">Figure&nbsp;3-2</a>, the Select Folders window is displayed.</p><a name="600877"><p style="FONT-WEIGHT: Bold">Figure 3-2    Select Folders Dialog Box</p></a>
+
+<p>
+<p> <img src="images/selfold.gif">
+</p>
+
+<p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> The items listed in the Folders window will vary, depending on which type of tree object you select. <a href="actasks.htm#600877">Figure&nbsp;3-2</a> shows the Select Folders window displayed for the domain class object.</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To <em>select</em> a class object for display, click it to enter a check mark. (Clicking again  
+removes a check mark.) The Tree View will display only the selected classes 
+(those with check marks).
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>After selecting the classes you want to display, click OK to close the window.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the plus sign in front of the domain name to expand the tree and display the 
+selected class folders.
+</font></ol>
+<a name="544855"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="544855"></a>Creating Administrative Class Objects
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new domains and individual administrative class objects, you use the Create New Object window to define identifying attributes for the object such as name, location, and so on. The BEA Tuxedo Administration Console provides a class-specific Create New Object window for each class to which you can add an object. The fields on the Create New Object window vary, depending on the administrative class.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You cannot create new objects for all of the classes displayed in the Tree View. (For example, you cannot create new Client class objects.) For a complete list of the administrative resources you can create, see <a href="actasks.htm#625015">Table&nbsp;3-2</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section provides general instructions on how to create a new object via the BEA Tuxedo Administration Console, using domains as an example. For detailed information on how to fill in attribute fields for a specific type of object, refer to the help topics listed in <a href="actasks.htm#625015">Table&nbsp;3-2</a>.</p>
+<a name="553002"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="553002"></a>Adding New Administrative Objects</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create any new administrative object, use the following general procedure:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Right-click a folder in the tree that contains the type of object you want to create. 
+(Alternatively, you can also select another object of the same type as that you want 
+to create.)
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Quick Menu, click New.
+</font><a name="661446"><p style="FONT-WEIGHT: Bold">Figure 3-3    Quick Menu on a Device</p></a>
+
+<p>
+<p> <img src="images/quicknew.gif">
+</p>
+
+<p><a name="665897"><p style="FONT-WEIGHT: Bold">Figure 3-4    Quick Menu on a CORBA Interfaces Class Object</p></a>
+
+<p>
+<p> <img src="images/actask12.gif" height="92" width="204">
+</p>
+
+<p><p style="MARGIN-LEFT: 0">The Create New Object window is displayed as shown in <a href="actasks.htm#613024">Figure&nbsp;3-5</a>, prompting you for the identifying attributes needed to establish a new device object, or as shown in <a href="actasks.htm#663745">Figure&nbsp;3-6</a>, prompting you to establish a CORBA interface class object.</p><a name="613024"><p style="FONT-WEIGHT: Bold">Figure 3-5    Create New Object Window for a Device</p></a>
+
+<p>
+<p> <img src="images/newdev.gif">
+</p>
+
+<p><a name="663745"><p style="FONT-WEIGHT: Bold">Figure 3-6    Create New Object Window for the CORBA Interfaces Class Object</p></a>
+
+<p>
+<p> <img src="images/newobjif.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Fill in the fields as needed, and click Create. (For detailed information on how to 
+fill in the fields for a specific type of object, refer to the help topics listed in 
+<a href="actasks.htm#625015">Table&nbsp;3-2</a>.)
+</font><p style="MARGIN-LEFT: 0">The new object appears in the tree contained under the folder you selected originally. (Or, at the same level as whatever non-folder object you selected originally.) The new object automatically includes empty folders of the appropriate subclasses in which you can create new member objects if needed.</p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="actasks.htm#625015">Table&nbsp;3-2</a> lists topics that give detailed information on how to fill in the fields on the Create New Object window for a specific type of object.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="625015"> </a>Table 3-2   Creating New Class Objects</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Class Resource</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Help Topic</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domains</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1851641">Creating a New Domain</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Machines</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#920534">Creating Machines</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queues</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acappq.htm#949317">Creating Application Queues</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queue Spaces</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acappq.htm#946848">Creating Application Queue Spaces</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Groups</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#887038">Creating Groups</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Servers</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#888017">Creating Servers</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Services</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1572323">Creating Services</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Routing Tables</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1493358">Creating Routing Tables</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Service Defaults</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1503425">Creating Service Defaults</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">CORBA Interfaces</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Creating a New Interface</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Devices</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#894515">Creating Devices</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WS Listeners</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acwsl.htm#875183">Creating Workstation Listeners</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACL Groups</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acacls.htm#877167">Creating ACL Groups</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACL Principals</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acacls.htm#894785">Creating ACL Principals</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACLs</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acacls.htm#872302">Creating ACLs</a></font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="625186"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="625186"></a>Configuring Administrative Objects
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To configure a domain and its administrative objects shown in the Tree View, you use the Configuration Tool tab pages displayed on the right side of the main window. The tab pages (also called tab folders) show the current attribute settings for the administrative object selected in the tree.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Depending on the type of administrative object you select, anywhere from one to eight  tab pages is displayed--each page containing a set of attributes related to a particular administrative area for that object such as Networking, Security, Transactions, and so on. Many of the attribute fields on the tab pages are editable, so you can specify or change attributes as needed.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To configure an administrative object:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select an administrative object in the Tree View.
+</font><p style="MARGIN-LEFT: 0">The Configuration Tool tab pages for that administrative object are displayed on the right side of the main window, as shown in <a href="actasks.htm#615205">Figure&nbsp;3-7</a>.</p><a name="615205"><p style="FONT-WEIGHT: Bold">Figure 3-7    Selecting an Administrative Object</p></a>
+
+<p>
+<p> <strong><img src="images/admobj.gif">
+</strong></p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>If you are in View mode, switch to Edit mode. (By default, the BEA 
+Administration Console is set to Edit mode so that you can create or modify 
+parameters by editing the appropriate fields in the configuration tab pages.)
+</font><p class="listpara"><strong>Note:	</strong> For more information about setting your default configuration mode or switching from one mode to another, see the section <a href="actasks.htm#599110">Switching Edit and View Modes</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the various tab pages you want to work in by clicking on the topic-labeled 
+tabs. Enter the appropriate information in the attribute fields. (To change an 
+attribute, simply highlight its current value and enter a new one. If an attribute 
+field is empty, enter a value for that attribute or press the Enter key on your 
+keyboard to accept the default.)
+</font><p class="listpara"><strong>Note:	</strong> Defaults are only available for some fields.  The defaults are listed in the help topic for the specific field.  If you use the default, you need to click the Refresh button to display the default value.</p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Not all the fields on the tabbed folders can be edited; some information that cannot be changed, such as statistics for the current operation of the domain. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="actasks.htm#651570">Table&nbsp;3-3</a> lists topics that give detailed information on how to fill in attribute fields on the Configuration Tool tab pages for a specific type of object.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="651570"> </a>Table 3-3   Configuring Administrative Resources</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Class Resource</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Help Topic&nbsp;</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domains</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1076074">Configuring Domain Resources (T_DOMAIN Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Machines</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#463295">Configuring Machines (T_MACHINE Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queues</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acappq.htm#949206">Configuring Application Queues (T_APPQ Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queue Spaces</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acappq.htm#954064">Configuring Application Queue Spaces (T_APPQSPACE Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queue Messages</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acappq.htm#876623">Configuring Application Queue Messages (T_APPQMSG Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queue Transactions</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acappq.htm#876743">Configuring Application Queue Transactions (T_APPQTRANS Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Groups</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1396638">Configuring Groups (T_GROUP Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Servers</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1952265">Configuring Servers (T_SERVER Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Services</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1572089">Configuring Services (T_SVCGRP Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Routing Tables</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#892330">Configuring Routing Tables (T_ROUTING Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Service Defaults</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1918266">Configuring Service Defaults (T_SERVICE Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">CORBA Interfaces</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accorba.htm#1704933">CORBA Interfaces (T_INTERFACE)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">CORBA Interface Queues</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accorba.htm#1661604">CORBA Interface Queues (T_IFQUEUE)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Factories</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accorba.htm#1651093">CORBA Factories (T_FACTORY)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Devices</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#515971">Configuring Devices (T_DEVICE Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Clients</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#1919549">Configuring Clients (T_CLIENT Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WS Listeners</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acwsl.htm#907197">Configuring Workstation Listeners (T_WSL Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WS Handlers</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acwsl.htm#876517">Configuring Workstation Handlers (T_WSH Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Bridges</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="accore.htm#520218">Configuring Bridges (T_BRIDGE Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACL Groups</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acacls.htm#879772">Configuring ACL Groups (T_ACLGROUP Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACL Principals</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acacls.htm#518216">Configuring ACL Principals (T_ACLPRINCIPAL Class)</a></font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACLs</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acacls.htm#889917">Configuring ACLs (T_ACLPERM Class)</a></font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="621784"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="621784"></a>Connecting to and Disconnecting from a Domain
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">There are a number of operations that you can perform only when you are connected to a domain. These include:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Activating machines and other objects</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Modifying the BEA Tuxedo configuration</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Creating and using the Event Monitor</font></ul><p>
+<a name="548485"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548485"></a>How to Connect to a Domain</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You have two options for connecting to an existing domain.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To connect to a domain listed on the menu bar Domain list, select <em>Domain</em>--&gt;<em>Domain Name</em>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To open a domain not on the list:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Domain --&gt;Open from the menu bar.
+</font><p style="MARGIN-LEFT: 0">The Connect window is displayed as shown in <a href="actasks.htm#618325">Figure&nbsp;3-8</a>.</p><a name="618325"><p style="FONT-WEIGHT: Bold">Figure 3-8    Connect Window</p></a>
+
+<p>
+<p> <img src="images/connectd.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Fill in the fields as explained in <a href="actasks.htm#619421">Table&nbsp;3-4</a>.
+</font><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="619421"> </a>Table 3-4   Connecting to a Domain</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Field</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domain Name</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name of the domain you want to open.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">TUXCONFIG File</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The full path and filename of the <font face="Courier">TUXCONFIG</font> file.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click OK to connect to the requested domain.
+</font><p style="MARGIN-LEFT: 0">If the connection is successful, the Tree View displays the domain icon and name, and the Configuration Tool tab pages display information about the domain.</p></ol>
+<a name="565752"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="565752"></a>How to Disconnect from a Domain</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console automatically disconnects you from a domain whenever necessary (for example, when you select another domain name from the pull-down menu of Domains).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To disconnect from the domain to which you are currently connected, exit the GUI by selecting Domain--&gt;Exit Application from the menu bar.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><A name="A_0"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_4"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_2"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_3"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_5"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_6"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_7"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_8"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="A_9"></a></p>
+<a name="642249"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="642249"></a>Activating Your Domain and Domain Resources
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">As the system administrator, you are the only user who is authorized to activate the BEA Tuxedo domain and domain resources. You must perform the initial activation process on the Master machine on which the application configuration file is located.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can activate all or part of a  BEA Tuxedo domain. Specifically, you can activate:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>An entire domain</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Only administrative servers in a domain or on a machine</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Only specific machines, groups, servers, or workstation listeners</font></ul><p>
+<a name="623421"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="623421"></a>How to Activate a Domain</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To activate a domain:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Tools--&gt;Activate from the menu bar. (Alternatively, you can click the 
+Activate toolbar button or right-click the domain in the tree and select Quick 
+Menu--&gt;Activate.)
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Activate Objects window. Click the Domain tab to display the Domain information as shown in <a href="actasks.htm#636883">Figure&nbsp;3-9</a>.</p><a name="636883"><p style="FONT-WEIGHT: Bold">Figure 3-9    Activate Domain Tab Page</p></a>
+
+<p>
+<p> <img src="images/actdomob.gif">
+</p>
+
+<p><p style="MARGIN-LEFT: 0">The Domain tab page contains a single option that indicates whether you want to activate only administrative servers for the domain, or the entire domain.</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To select only administrative servers, click the check box (a check mark indicates the option is selected).  (For more information on this option, refer to <a href="actasks.htm#624896">Activating Only Administrative Servers</a>.)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To select the entire domain, leave the check box unselected (no check mark).</font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To start the activate process for the domain, click Activate.
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Progress of Activate window. For more information about this window, see <a href="actasks.htm#619890">How to Monitor the Progress of Activate</a>.</p></ol>
+<a name="636382"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="636382"></a>How to Activate Class Objects</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To activate domain and class objects: </p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Tools --&gt;Activate from the menu bar. (Alternatively, you can click the 
+Activate toolbar button or right-click an object in the tree and select Quick Menu--
+&gt;Activate.)
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Activate Objects window containing a set of class-specific tab pages (see <a href="actasks.htm#623208">Figure&nbsp;3-10</a>). Click a tab to display the page for the type of object you want to activate.</p><p style="MARGIN-LEFT: 0">The Activate Objects window contains six tab pages as shown in the following table.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Select the Tab</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>To Choose an Activation Policy for...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domain</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The entire domain. (Refer to <a href="actasks.htm#623421">How to Activate a Domain</a>.)</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Machine</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of machines.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Group</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of groups.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Server</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of servers.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WSL</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of workstation listeners.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WSH</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For future use.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click a tab to select the type of object that you want to activate, and then edit the 
+tab page as explained in the following:
+</font><p style="MARGIN-LEFT: 0">As shown in <a href="actasks.htm#623208">Figure&nbsp;3-10</a>, all Activate class objects tab pages include the following list boxes:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>ACTIVATE THESE. The BEA Tuxedo Administration Console objects in this list will be activated.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>DO NOT ACTIVATE THESE. The BEA Tuxedo Administration Console objects in this list will not be activated. </font><p style="MARGIN-LEFT: 0">All objects shown indicate their <em>current</em> state next to the object name.</p><a name="623208"><p style="FONT-WEIGHT: Bold">Figure 3-10    Activate Objects Window</p></a>
+
+<p>
+<p> <img src="images/actobj.gif">
+ </p>
+
+<p><p style="MARGIN-LEFT: 0">Move the object(s) you want to activate into the ACTIVATE THESE list and all other objects into the DO NOT ACTIVATE THESE list. (To move an object from one list (or column) to another, highlight the object name and click one of the arrow buttons between the two columns as shown in <a href="actasks.htm#669032">Table&nbsp;3-5</a>.)</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="669032"> </a>Table 3-5   Using Arrow Buttons to Modify Lists</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top" colspan=2 rowspan=1>
+			<b><p><strong>Selection</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Action</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><img src="images/arrow_ri.gif">
+<br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Right arrow button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Moves the highlighted item to the list:</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">DO NOT ACTIVATE THESE</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><img src="images/arrow_lf.gif">
+<br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Left arrow button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Moves the highlighted item to the list:</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACTIVATE THESE</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p style="MARGIN-LEFT: 0">The Machines tab page also contains an option to Only Activate Administrative Servers. For more information about this option, see <a href="actasks.htm#624896">Activating Only Administrative Servers</a>.</p></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To start the activate process <em>for the objects on a particular tab</em>, click Activate.
+</font><p class="listpara"><strong>Note:	</strong> When you click Activate, you are activating only the selected objects on the current tab, not on all tabs. To activate several types of objects (such as machines, groups, servers, and so on) you need to step through this procedure for each type of object--opening the Activate window, clicking on a particular tab, making your selections, and clicking Activate. </p><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Progress of Activate window. For more information about this window, see <a href="actasks.htm#619890">How to Monitor the Progress of Activate</a>.</p></ol>
+<a name="624896"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="624896"></a>Activating Only Administrative Servers</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Bulletin Board Liaison Processes (BBLs) and the Distinguished Bulletin Board Liaison Process (DBBL) are BEA Tuxedo administrative servers. Generally, these servers are activated first. If a BBL fails to activate, the other servers on that machine will not be activated. If the DBBL fails to activate, the entire application's activation process fails.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can choose whether to limit your activation to BBLs and the DBBL for the entire domain or for selected machines as follows:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Domain tab, choosing (with a check mark) the Only Activate Administrative Servers option means that only BBLs and the DBBL will be activated for the entire domain.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Machines tab, choosing (with a check mark) the Only Activate Administrative Servers option means that only BBLs and the DBBL will be activated on the selected machines (those in the ACTIVATE THESE list).</font></ul><p>
+<a name="619890"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="619890"></a>How to Monitor the Progress of Activate</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">As objects are activated, the Progress of Activate window is displayed (as shown in <a href="actasks.htm#571882">Figure&nbsp;3-11</a>). The Progress of Activate window tracks the status of the activation process as it occurs. You can:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>View the progress of the activation process</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Stop the activation process</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you do not want to view the Progress of Activate window during the activation process, click Dismiss to close the window. The activation process continues in the background.</p><a name="571882"><p style="FONT-WEIGHT: Bold">Figure 3-11    Progress of Activate Window </p></a>
+
+<p>
+<p> <img src="images/actprog.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> Alternatively, if you decide you do not want to activate the chosen objects, you can click Terminate to end the activation process at any time. However, because terminating the operation in mid-process could yield unexpected results, it is recommended that you allow the process to conclude and then <em>deactivate</em> the undesired objects.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_0"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_2"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_3"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_4"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_5"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_6"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_7"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_8"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="D_9"></a</p>
+<a name="561178"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="561178"></a>Deactivating Your Domain
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console enables you to deactivate all or parts of a  BEA Tuxedo domain. Specifically, you can deactivate:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>An entire domain</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Only administrative servers in a domain or on a machine</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Only specific machines, groups, servers, or workstation listeners</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> You can also deactivate bridges. For more information about deactivating bridges, see <a href="actasks.htm#548919">Creating Bridges Between Machines</a>.</p>
+<a name="637130"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="637130"></a>How to Deactivate a Domain</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To deactivate a domain:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Tools --&gt;Deactivate from the menu bar. (Alternatively, you can click the 
+Deactivate toolbar button or right-click an object in the tree and select Quick 
+Menu--&gt;Deactivate.)
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Deactivate Objects window. Click the Domain tab to display the Domain information as shown in <a href="actasks.htm#637730">Figure&nbsp;3-12</a>.</p><a name="637730"><p style="FONT-WEIGHT: Bold">Figure 3-12    Deactivate Domain Tab Page</p></a>
+
+<p>
+<p> <img src="images/deactdom.gif">
+ </p>
+
+<p><p style="MARGIN-LEFT: 0">The Domain tab page contains the following options:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Only Deactivate Administration Servers. (For more information, refer to <a href="actasks.htm#631649">Deactivating Only Application Servers</a>.)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Force deactivate even if clients remain. (For more information, refer to <a href="actasks.htm#631813">Forcing Deactivation</a>.)</font><p style="MARGIN-LEFT: 0">To select either of these options, click the check boxes. (A check mark indicates the associated action will be performed as a part of the deactivation).</p></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To start the deactivate process for the domain, click Deactivate.
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Progress of Deactivate window. For more information about this window, see <a href="actasks.htm#548688">How to Monitor the Progress of Deactivate</a>.</p></ol>
+<a name="638254"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="638254"></a>How to Deactivate Class Objects</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To deactivate class objects: </p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Tools --&gt;Deactivate from the menu bar. (Alternatively, you can click the 
+Deactivate toolbar button or right-click an object in the tree and select Quick 
+Menu--&gt;Deactivate.)
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Deactivate Objects window containing a set of class-specific tab pages (see <a href="actasks.htm#630858">Figure&nbsp;3-13</a>). Click a tab to display the page for the type of object you want to deactivate.</p><p style="MARGIN-LEFT: 0">The Deactivate Objects window contains six tab pages as shown in the following table.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Select the Tab</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>To Choose a Deactivation Policy for...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domain</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The entire domain. (Refer to <a href="actasks.htm#637130">How to Deactivate a Domain</a>.)</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Machine</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of machines.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Group</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of groups.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Server</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of servers.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WSL</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A selected list of workstation listeners.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WSH</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For future use.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click a tab to select the type of object you want to deactivate, and then edit the 
+tab page as explained in the following paragraphs:
+</font><p style="MARGIN-LEFT: 0">As shown in <a href="actasks.htm#630858">Figure&nbsp;3-13</a>, all Deactivate class objects tab pages include the following list boxes:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>DEACTIVATE THESE. The BEA Tuxedo Administration Console objects in this list will be deactivated.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>DO NOT DEACTIVATE THESE. The BEA Tuxedo Administration Console objects in this list will not be deactivated. </font><p style="MARGIN-LEFT: 0">All objects shown indicate their <em>current</em> state next to the object name.</p><a name="630858"><p style="FONT-WEIGHT: Bold">Figure 3-13    Deactivate Objects Window</p></a>
+
+<p>
+<p> <img src="images/deactive.gif">
+</p>
+
+<p><p style="MARGIN-LEFT: 0">Move the object(s) you want to deactivate into the DEACTIVATE THESE list and all other objects into the DO NOT DEACTIVATE THESE list. (To move an object from one list (or column) to another, highlight the object name and click one of the arrow buttons between the two columns as shown in <a href="actasks.htm#669032">Table&nbsp;3-5</a>.)</p><p style="MARGIN-LEFT: 0">The Machine tab page also contains options to:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Only Deactivate Administrative Servers (For more information, refer to <a href="actasks.htm#631649">Deactivating Only Application Servers</a>.)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Force deactivate even if clients remain. (For more information, refer to <a href="actasks.htm#631813">Forcing Deactivation</a>.)</font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To start the deactivate process <em>for the objects on a particular tab</em>, click 
+Deactivate.
+</font><p class="listpara"><strong>Note:	</strong> When you click Deactivate, you are deactivating only the selected objects on the current tab, not on all tabs. To deactivate several types of objects (such as machines, groups, servers, and so on) you need to step through this procedure for each type of object--opening the Deactivate window, clicking on a particular tab, making your selections, and clicking Deactivate. </p><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Progress of Deactivate window. For more information about this window, see <a href="actasks.htm#548688">How to Monitor the Progress of Deactivate</a>.</p></ol>
+<a name="631649"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="631649"></a>Deactivating Only Application Servers</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application servers are user-defined or BEA Tuxedo defined servers configured by the user in the UBBCONFIG file. You can deactivate only application servers for the entire domain or for selected machines as follows:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Domain tab, choosing (with a check mark) the Only Deactivate Application Servers option means that all application servers in the domain will be deactivated and only BBLs and the DBBL will remain active.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Machine tab, choosing (with a check mark) the Only Deactivate Application Servers option means that all application servers on the selected machines will be deactivated and only BBLs and the DBBL will remain active. (In this context, <em>selected machines</em> refers to those in the	  DEACTIVATE THESE list.)</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">See also <a href="actasks.htm#631813">Forcing Deactivation</a>.</p>
+<a name="631813"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="631813"></a>Forcing Deactivation</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you attempt to deactivate application servers for a domain or machine while there are clients still connected to the machine, the deactivation fails.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">However, you can force deactivation even if clients remain connected as follows:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Domain tab, choosing "Force deactivate even if clients remain" causes deactivation of all application servers in the domain even if there are clients still connected to some of the machines in the domain.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>On the Machine tab, choosing "Force deactivate even if clients remain" causes deactivation of all application servers on the selected machines even if there are clients still connected to some of these machines. (In this context, <em>selected machines</em> refers to those in the DEACTIVATE THESE list.)</font></ul><p>
+<a name="548688"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548688"></a>How to Monitor the Progress of Deactivate</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">As objects are deactivated, the Progress of Deactivate window is displayed (as shown in <a href="actasks.htm#561748">Figure&nbsp;3-14</a>). The Progress of Deactivate window tracks the status of the deactivation process as it occurs. You can:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>View the progress of the deactivation process</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Stop the deactivation process</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you do not want to view the Progress of Deactivate window during the deactivation process, click Dismiss to close the window. The deactivation process continues in the background.</p><a name="561748"><p style="FONT-WEIGHT: Bold">Figure 3-14    Progress of Deactivate Window </p></a>
+
+<p>
+<p> <img src="images/dactprog.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> Alternatively, if you decide you do not want to deactivate the chosen objects, you can click Terminate to end the deactivation process at any time. However, because terminating the operation in mid-process could yield unexpected results, it is recommended that you allow the process to conclude and then <em>activate</em> the objects again.</p>
+<a name="632475"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="632475"></a>Migrating Tree Objects
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Using the BEA Tuxedo Administration Console, you can migrate server groups and machines to alternate processors. This allows you to schedule maintenance for the original machine. You can also move groups of services from one machine to an alternate machine. By doing so you can schedule maintenance for the original machine. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> A server group is the smallest unit that can be migrated to an alternate location.</p>
+<a name="548703"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548703"></a>Before Starting a Migrate Task</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Before you can migrate server groups and machines, MIGRATE must be an option for the domain (see the Options field on the System Parameters folder for the domain) and a backup machine must be specified (see the Master, Backup Machine field on the General folder for the domain). </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">When you migrate a server group, the environment on the destination machine must duplicate the environment on the source machine, including all packages such as database software and any other application software necessary to run the application.</p>
+<a name="577558"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="577558"></a>Displaying the Migrate Objects Window</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You use the Migrate Objects window to select the object(s) you want to migrate. To display the Migrate Objects window, select Tools --&gt;Migrate from the menu bar. (Alternatively, you can click the Migrate toolbar button or right-click a Groups object in the tree and select Quick Menu--&gt;Migrate.)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console displays the Migrate Objects window containing a set of class-specific tab pages. Click a tab to display the page for the type of object you want to migrate.</p>
+<a name="646071"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="646071"></a>Migrating a Server Group from One Machine to Another</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To migrate a server group from one machine to another:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Display the Migrate Objects window and select the name of the server group you 
+want to move, using the drop-down menu in the Migrate Group field.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter the name of the machine on which that server group is currently located 
+(source) in the From Machine field.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter the name of the machine to which you want to migrate the server group 
+(destination) in the To Machine field.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Migrate. The Progress of Migrate window is displayed. For more 
+information about this window, refer to <a href="actasks.htm#576770">Monitoring the Progress of Migrate</a>.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Your next steps depend entirely on the applications you are running. To ensure an orderly migration, you might need to drain queues, shut down groups, migrate databases using tools provided by the database vendor, and so on.</p>
+<a name="577197"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="577197"></a>Migrating All Servers from One Machine to Another Machine</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To migrate all servers from one machine to another:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Display the Migrate Objects window and enter the name of the machine from 
+which you are migrating servers in the Migrate Servers From field.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter the name of the machine to which you want to migrate the servers in the To 
+Machine field.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Migrate. The Progress of Migrate window is displayed.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Your next steps depend entirely on the applications you have running. You may need to drain queues, shut down groups, migrate databases using tools provided by the database vendor, and so on, to ensure an orderly migration.</p>
+<a name="576770"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="576770"></a>Monitoring the Progress of Migrate</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">As objects are migrated, the Progress of Migrate window is displayed. The Progress of Migrate window tracks the status of the migration process as it occurs. You can:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>View the progress of the migration process</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Stop the migration process</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you do not want to view the Progress of Migrate window during the migration process, click Dismiss to close the window. The migration process continues in the background.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> Alternatively, if you decide you do not want to migrate the chosen objects, you can click Terminate to end the migration process at any time. However, because terminating the operation in mid-process could yield unexpected results, consider allowing the process to conclude and then migrating the undesired objects back to the original machine.</p>
+<a name="548736"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548736"></a>Swapping the Master and Backup Machines
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you have identified one machine as a Master and a second machine as a Backup, you can choose to run the BEA Tuxedo application from either machine. For example, you can swap the application from the Master to the Backup so that you can perform down-time maintenance on the Master machine. Or, if the Master processor loses the virtual circuit to other processors while the application is running, you can log in to the Backup machine. You can then bring up the DBBL on the backup node, and allow the application to continue running (although possibly in a degraded state).</p>
+<a name="644853"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="644853"></a>Setting up Master and Backup Machines</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To have the option to swap machines, you must have set the names of the machines that serve as the Master and Backup nodes of your system. You can set the Master and Backup machines, by either:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Specifying a Master and Backup machine name, when creating a new domain.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Changing the Master, Backup Machine field in the Configuration Tab for a Domain.</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For more information about the Master, Backup Machine field, see the section <a href="accore.htm#2078035">Master Machine (TA_MASTER)</a> in the section <a href="accore.htm#1076074">Configuring Domain Resources (T_DOMAIN Class)</a> and <a href="accore.htm#464328">Machine Role (TA_ROLE)</a> in the section <a href="accore.htm#463295">Configuring Machines (T_MACHINE Class)</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To swap a BEA Tuxedo domain from one machine to another:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the domain.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Right-click to select Quick Menu--&gt;Swap Master. (To be able to do this, you 
+must have already identified one machine as a Master and a second machine as a 
+Backup.)
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The Administration Console displays a confirmation window, indicating whether 
+the swap was successful.
+</font></ol>
+<a name="548743"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548743"></a>Cleaning a Machine
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can clean machines by removing dead, partitioned machines from the booted machine list or by checking for dead clients and servers if the machine is not partitioned.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select Clean to clean the bulletin board on the specified machine to restart or clean up any servers that may require it. If the machine in question is partitioned, entries for processes and services identified as running on that machine are removed from all non-partitioned bulletin boards.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Occasionally, you may find it necessary to clean your machine (e.g., when the network has gone down or when clients or servers have been killed). The clean operation has the following effects:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Checks the integrity of all accessers of the bulletin board residing on your machine, and the DBBL as well.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Removes dead servers and restarts them if they are marked as restartable.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Removes those resources no longer associated with any processes.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Causes the DBBL to check the status of each BBL. If any BBL does not respond within the specified time, it is marked as partitioned. </font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If the machine is partitioned, entries for processes and services identified as running on the machine are removed from all non-partitioned bulletin boards. If the machine is not partitioned, any processes or services that cannot be restarted or cleaned up are removed. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you clean a partitioned machine but the machine is still running, you have to kill the BEA Tuxedo system application and processes and remove all of the BEA Tuxedo system application shared memory, semaphores, and message queues by hand. A reboot is often faster.</p>
+<a name="548752"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">How to Clean a Machine</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To clean a machine:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select a machine in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Clean (right-click).
+</font><p style="MARGIN-LEFT: 0">A message is displayed indicating whether the Clean operation is successful or not.</p></ol>
+<a name="548756"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548756"></a>Advertising, Unadvertising, Suspending, and Resuming Services
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can perform the following service-related operations.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>To...</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>You can...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Make a service available </font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Advertise the service</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Make a currently advertised service unavailable </font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Unadvertise the service</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Prevent the application from accessing a service</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suspend the service</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Make a suspended service available to the application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume the service</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="548780"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Advertise a Service</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To advertise a service (either from an existing service or from a service default object), complete the following steps:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the server that contains the service you want to advertise.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Advertise (right-click).
+</font><p style="MARGIN-LEFT: 0">The Advertise Service window is displayed as shown in <a href="actasks.htm#559281">Figure&nbsp;3-15</a>.</p><a name="559281"><p style="FONT-WEIGHT: Bold">Figure 3-15    Advertise Service Window</p></a>
+
+<p>
+<p> <img src="images/svcadv.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter the name of the service to be advertised in the Service Name field.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Optionally, enter the name of the program function that will handle the service 
+request in the Function Name field. The function name must be one of the 
+functions that is allowed to receive service requests (see <font face="Courier">buildserver(1)</font> ). If 
+you leave this field blank, the entry in the Service Name field is used as the 
+Function Name.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click OK to close the dialog box and advertise the service.
+</font><p style="MARGIN-LEFT: 0">A confirmation message is displayed indicating whether the Advertise operation was successful or not.</p></ol>
+<a name="548791"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Unadvertise a Service</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To make a currently advertised service unavailable:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the server that contains the service you want to unadvertise.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Unadvertise (right-click).
+</font></ol>
+<a name="635846"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Suspend a Service</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend a service:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the service you want to suspend.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Suspend (right-click).
+</font><p style="MARGIN-LEFT: 0">If the Suspend is successful, a Result of Requested Change menu is displayed.</p><p style="MARGIN-LEFT: 0">If the service cannot be suspended, an error message is displayed specifying the reason.</p></ol>
+<a name="548798"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Resume a Suspended Service</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To reactivate a suspended service:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the suspended service you want to resume.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li> Select Quick Menu--&gt;Resume (right-click).
+</font><p style="MARGIN-LEFT: 0">A Result of Requested Change window is displayed, indicating whether the reactivation is successful.</p></ol>
+<a name="548804"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548804"></a>Suspending, Resuming, and Killing Clients
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can perform the following client-related tasks using the client Quick Menu.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>To...</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>You can...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Prevent a client from accessing the application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suspend the client</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Allow a suspended client to access the application again</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume the client</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Remove a client from the BEA Tuxedo application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Kill the client</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="548823"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Suspend a Client</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you want to isolate your client temporarily, you can suspend it. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend a client:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select a client in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Suspend (right-click).
+</font><p style="MARGIN-LEFT: 0">If suspension is successful, the BEA Tuxedo Administration Console displays a Result of Requested Change dialog box and the tree displays the suspended client icon.</p><p style="MARGIN-LEFT: 0">If the client cannot be suspended, the BEA Tuxedo Administration Console displays an error message.</p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">When you suspend a client, the client is prevented from performing the following tasks:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Making service requests using BEA Tuxedo <font face="Courier">tpcall</font>(3) or <font face="Courier">tpacall</font>(3)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Initiating conversations using BEA Tuxedo <font face="Courier">tpconnect</font>(3)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Beginning transactions using BEA Tuxedo <font face="Courier">tpbegin</font>(3)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enqueuing requests using BEA Tuxedo <font face="Courier">tpenqueue</font>(3)</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Clients within a transaction can make these calls until they abort or commit the current transaction, at which time they are suspended.</p>
+<a name="548835"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Resume a Suspended Client</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To reactivate a suspended client:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the suspended client you want to resume.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Resume (right-click).
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Result of Requested Change window, indicating whether the reactivation is successful.</p></ol>
+<a name="548838"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Kill a Client</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A client can be killed, or abortively deactivated, to remove it from the BEA Tuxedo application. The recommended method to kill a client is:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Suspend the desired client(s). (For more information about suspending clients, see 
+<a href="actasks.htm#548823">Suspend a Client</a>.)
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the suspended client and select Quick Menu--&gt;Kill 
+(right-click).
+</font><p style="MARGIN-LEFT: 0">If the abortive deactivation is successful, a Result of Requested Change window is displayed, and the client icon is displayed as dead (icon with an X). To remove any dead items from the tree view, you need to use the Quick Menu Clean option.</p><p style="MARGIN-LEFT: 0">If the client cannot be killed, an error message is displayed specifying the reason.<strong> </strong>Although the BEA Tuxedo Administration Console process will refuse to kill itself; one BEA Tuxedo Administration Console process can be used to kill another.</p><p style="MARGIN-LEFT: 0">The application may not be able to kill the client due to platform or signaling restrictions. In this case, a native client is abortively terminated at its next access to Application-to-Transaction Manager Interface (ATMI), and a Workstation client connection to a workstation handler (WSH) will be preemptively torn down. The connections to all clients attached to that WSH are terminated.</p></ol>
+<a name="548848"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548848"></a>Suspending, Resuming, and Killing Workstation Handlers
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can perform the following workstation handler-related tasks using the Client Quick Menu.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>To...</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>You can...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Prevent clients from accessing a workstation handler</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suspend the workstation handler</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Make a suspended workstation handler available to clients</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume the workstation handler</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Remove a workstation handler from the BEA Tuxedo application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Kill the workstation handler</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="548867"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548867"></a>Suspending Workstation Handlers</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you want to isolate the clients connected to a particular workstation handler temporarily, you can suspend it. When you suspend a workstation handler, the clients connected to it are prevented from performing any of the following tasks:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Making service requests using <font face="Courier">tpcall</font>(3) or <font face="Courier">tpacall</font>(3)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Initiating conversations using <font face="Courier">tpconnect</font>(3)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Beginning transactions using <font face="Courier">tpbegin</font>(3)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enqueuing requests using <font face="Courier">tpenqueue</font>(3)</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">In addition, the suspended workstation handler will not accept any new client connections.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> A workstation handler involved in a transaction when you suspend it is not actually suspended until the transaction is aborted or committed.</p>
+<a name="548876"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Suspend a Workstation Handler</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend a workstation handler:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the workstation handler you want to suspend.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Suspend (right-click).
+</font><p style="MARGIN-LEFT: 0">If suspend is successful, a Result of Requested Change dialog box is displayed. The WorkStation Handler icon changes to indicate the suspended state.</p><p style="MARGIN-LEFT: 0">If the workstation handler cannot be suspended, an error message is displayed specifying the reason.</p></ol>
+<a name="548880"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Resume a Suspended Workstation Handler</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To reactivate a suspended workstation handler:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the workstation handler you want to resume.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Resume (right-click).
+</font><p style="MARGIN-LEFT: 0">A Result of Requested Change dialog box is displayed, indicating if the reactivation is successful<strong>.</strong></p></ol>
+<a name="548883"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Kill a Workstation Handler</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A workstation handler can be killed, or abortively deactivated, to remove it from the BEA Tuxedo application. The recommended method to kill a workstation handler is as follows:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Suspend the desired workstation handlers.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select a suspended workstation handler.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Kill (right-click).
+</font><p style="MARGIN-LEFT: 0">If the abortive deactivation is successful, a Result of Requested Change dialog box is displayed and the object is displayed as dead (icon with an X) until you clean it out with the Quick Menu Clean option. The connections to all clients attached to that workstation handler are terminated.</p><p style="MARGIN-LEFT: 0">If you cannot kill the workstation handler, an error message is displayed, specifying the reason. The application may not be able to kill the workstation handler due to platform or signaling restrictions. In this case, a Workstation client connection to a workstation handler will be preemptively torn down.</p></ol>
+<a name="548892"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548892"></a>Opening and Closing Application Queue Spaces
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can use the BEA Tuxedo Administration Console to allocate and initialize shared memory and to remove shared memory and other IPC resources (for example, message queues and semaphores). The options that perform these functions are Open and Close.</p>
+<a name="548895"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Open an Application Queue Space</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To open an application queue space:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the application queue space.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Open (right-click).
+</font><p style="MARGIN-LEFT: 0">A message is displayed indicating whether the application queue space opened successfully.</p></ol>
+<a name="548898"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Close an Application Queue Space</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To close an application queue space:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the application queue space.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Close (right-click).
+</font><p style="MARGIN-LEFT: 0">A message is displayed to tell you whether the application queue space closed successfully.</p></ol>
+<a name="548901"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548901"></a>Deleting Application Queue Messages
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can delete an application queue message from its queue space if you do not need to keep it any longer.</p>
+<a name="548906"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Delete Application Queue Messages</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To delete the application queue message:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the queue message you want to delete. (The message must be in 
+the ACTIVE state to be deleted.)
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Delete (right-click).
+</font><p style="MARGIN-LEFT: 0"> A Result of Requested Change dialog box is displayed, indicating whether the application queue transaction was deleted successfully.</p></ol>
+<a name="548909"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548909"></a>Aborting Transactions
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you must stop a transaction before it is complete, you can abort the transaction. Any data that changed as a result of that transaction is rolled back to its value at the start of the transaction. The transaction must be in either the ACTIVE, ABORTONLY, or COMCALLED state.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Caution:	</strong> There is a very slight risk that the data roll back may not be successful. You can minimize the risk by aborting a transaction early in the process.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To abort a transaction:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the tree, select the transaction.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Abort (right-click).
+</font><p style="MARGIN-LEFT: 0">The Result of Requested Change dialog box is displayed, indicating whether the transaction aborted successfully.</p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you cannot abort the transaction, an error message is displayed specifying the reason.</p>
+<a name="548919"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="548919"></a>Creating Bridges Between Machines
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A bridge is a connection or <em>link</em> between two machines in a multi-processor domain. From the BEA Tuxedo Administration Console, you can perform the following tasks:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#639818">Create a Bridge</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#639870">Suspend a Bridge</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#639951">Resume a Suspended Bridge</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#640034">Deactivate a Bridge</a></font></ul><p>
+<a name="639818"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="639818"></a>Create a Bridge</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create a bridge between two machines, complete the following steps:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Right-click a machine in the tree and select Quick Menu--&gt;Connect to display the 
+Connect window.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>In the Connect window, enter the logical machine identifier (LMID) of the 
+machine to which you want to be connected.
+</font><p style="MARGIN-LEFT: 0">The LMID is the first of two strings (separated by a /) that identify a machine in the tree. The second string is the physical machine ID, or PMID. For example, suppose the Machines class in your tree includes the following entry: <font face="Courier">SITE1/rcuw9</font>. In this case, the LMID is <font face="Courier">SITE1</font> and the PMID is <font face="Courier">rcuw9</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click OK to close the window and create the bridge.
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays a message indicating whether the bridge was created successfully. If so, a bridge now connects the two sites.</p></ol>
+<a name="639870"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="639870"></a>Suspend a Bridge</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend a bridge:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the bridge in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Suspend (right-click).
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays a message indicating whether the bridge was suspended successfully. </p></ol>
+<a name="639951"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="639951"></a>Resume a Suspended Bridge</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To resume a bridge:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the suspended bridge in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Resume (right-click).
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays a message indicating whether the bridge resumed successfully. </p></ol>
+<a name="640034"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="640034"></a>Deactivate a Bridge</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To deactivate a bridge:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select an active bridge in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Deactivate (right-click).
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays a message indicating whether the bridge was deactivated successfully. </p></ol>
+<a name="592522"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="592522"></a>Security Administration
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can manage application security with the BEA Tuxedo Administration Console ACL objects. The BEA Tuxedo Administration Console allows you to create new ACL groups, set configuration parameters for ACLs, and ACL Principals. Domain ACLs also allow you to control access to an entire domain.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_ACLGROUP"></a></p>
+<a name="594742"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a href="/C:/achelp/achelpfm/actasks.htm#aclgsect"><a name="594742"></a>Creating ACL Groups </a></font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new ACL Groups, display the Create New Object form and enter values for the fields:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Right-click the ACL Groups folder in the tree, and then select Quick Menu<br>
+--&gt;New. 
+</font><p style="MARGIN-LEFT: 0">The Create New Object window is displayed.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Group Name</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Group ID</font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Create to close the window and create the new ACL group.
+</font><p style="MARGIN-LEFT: 0">(Or click Cancel to close the window without creating a new group.)</p></ol>
+<a name="657731"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Managing Tuxedo CORBA Resources
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">BEA Tuxedo system resources include CORBA interfaces, CORBA interface queues, and CORBA factories that are used in BEA Tuxedo client and server applications. You can use the BEA Tuxedo Administration Console to manage BEA Tuxedo resources during run time as follows:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#657759">Suspending and Resuming Interfaces</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#657800">Suspending and Resuming Interface Queues</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#657841">Viewing Attributes for Factories</a></font></ul><p>
+<a name="657759"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Suspending and Resuming Interfaces</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">During run time, you can perform the following actions on a CORBA interface:</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>To...</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>You can...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Prevent clients from accessing an interface on the application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suspend the interface</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Allow clients to access an interface on the application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume the interface</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="657776"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">S<a name="657776"></a>uspending a CORBA Interface</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you want to isolate your interface temporarily, you can suspend it.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend an interface:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the interface object in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Suspend (right-click).
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If the suspend is successful, the BEA Tuxedo Administration Console displays a Result of Requested Change dialog box and the tree represents the interface as suspended.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> If the interface cannot be suspended, the BEA Tuxedo Administration Console displays an error message.</p>
+<a name="657790"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="657790"></a>Resuming a Suspended CORBA Interface</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To reactivate a suspended interface:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the suspended interface object in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Resume (right-click).
+</font><p style="MARGIN-LEFT: 0">The BEA Tuxedo Administration Console displays the Result of Requested Change dialog box, indicating whether the reactivation was successful.</p></ol>
+<a name="657800"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Suspending and Resuming Interface Queues</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">During run time, you can perform the following actions on a CORBA interface queue: </p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>To...</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>You can...</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Prevent clients from accessing an interface queue on the application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suspend the interface queue</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Allow clients to access an interface queue on the application</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume the interface queue</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="657817"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="657817"></a>Suspending a CORBA Interface Queue</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you want to isolate your interface queue temporarily, you can suspend it. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend a CORBA interface queue:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the interface queue in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Suspend (right-click).
+</font><p style="MARGIN-LEFT: 0">If the suspend is successful, the BEA Tuxedo Administration Console displays a Result of Requested Change dialog box and the tree represents the interface queue as suspended.</p><p style="MARGIN-LEFT: 0">If the interface cannot be suspended, the BEA Tuxedo Administration Console displays an error message.</p></ol>
+<a name="657831"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="657831"></a>Resuming a Suspended CORBA Interface Queue</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To reactivate a suspended CORBA interface queue:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the suspended interface queue in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;Resume (right-click).
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console displays the Result of Requested Change dialog box, indicating whether the reactivation is successful.</p>
+<a name="657841"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Viewing <a name="657841"></a>Attributes for Factories</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console only allows you to view BEA Tuxedo CORBA factory information. You cannot make configuration changes to a factory and you cannot create new factories. You can use the Configuration Tool pane to view the interface name for a Factory, the Factory ID, and the object state.</p>
+<a name="659234"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="659234"></a>Monitoring System Events
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can use the BEA Tuxedo Administration Console to monitor and track system events. The following sections describe how to use the BEA Tuxedo Administration Console for:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#558710">Viewing System Statistics</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#579229">Viewing System Events</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="actasks.htm#634643">Viewing a ULOG File</a></font></ul><p>
+<a name="558710"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="558710"></a>Viewing System Statistics</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can use the BEA Tuxedo Administration Console to view current statistics for administrative class objects using the Statistics Tool window.</p>
+<a name="578445"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="578445"></a>Displaying the Statistics Tool Window</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Statistics Tool window provides statistics for domains, machines, servers, services, and clients. To display the Statistics Tool window, select Tools --&gt;Stats from the menu bar or click the Stats toolbar button. The BEA Tuxedo Administration Console displays the Statistics Tool window as shown in <a href="actasks.htm#581095">Figure&nbsp;3-16</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Statistics Tool displays the domain tab pages by default. You can click a tab to view the statistics for any of the other listed administrative class objects. The domain tab displays statistics for the following administrative classes in a domain:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Machines</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Groups</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Servers</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Services</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Clients</font><a name="581095"><p style="FONT-WEIGHT: Bold">Figure 3-16    Statistics Tool window</p></a>
+
+<p>
+<p> <img src="images/statbar.gif">
+</p>
+
+<p></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following table lists the parts of the Statistics Tool window.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr>
+		<td align="left" valign="top">
+			<p><strong>Part</font></strong></p>
+		</td>
+		<td align="left" valign="top">
+			<p><strong>Description</font></strong></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays the Select Objects dialog box containing a list of all the objects for which statistics are available. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Hold button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Temporarily stops your statistics from being updated. The bar graph remains unchanged until you resume the update. The Hold button label is replaced by the word Resume.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resumes updating statistics. The bar graph starts displaying the changing statistics, as your statistics are updated. The button is re-labeled Hold.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Refresh field</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Controls update rate for statistics. Intervals are specified in seconds.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Tab Pages</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays the statistics for a specific administrative class: Domain, Machine, Server, Service, and Client. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Bar graph</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays either a three-dimensional or two-dimensional bar graph of the statistics for an administrative object.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Color key</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Lists the color and label for specific statistics displayed in the bar graph.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="558757"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="558757"></a>Changing the Refresh Rate</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console updates statistics at a regular interval. You can specify this interval in the Refresh field at the top of the Statistics Tool window. The interval value represents the number of seconds between Refresh operations. The default interval for refreshing the statistics is 60 seconds.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To suspend updating statistics, enter a zero in the Refresh field. To resume updating statistics, enter a number greater than zero. When you enter a zero in the Refresh field, the Hold button is re-labeled Resume; when you enter a value greater than zero, the Resume button toggles back to Hold.</p>
+<a name="581707"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="581707"></a>Changing the Bar Graph View</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can display the statistics on any of the tab pages as either a two-dimensional or three-dimensional bar graph. To switch between these two types of graphs:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Place the cursor in the bar graph image.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Hold down the left mouse button and move the cursor around within the bar 
+graph.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Release the button to select the type of bar graph you prefer.
+</font></ol>
+<a name="581700"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="581700"></a>Displaying More Statistics</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console can display statistics for all of the available objects in a class. At the bottom of the Statistics Tool window, the status line displays the number of class objects for which statistics are currently being displayed and the total number of objects of this type for which statistics are available. <a href="actasks.htm#581095">Figure&nbsp;3-16</a> lists<font face="Courier"> [Domain] Displaying: 5 Total: 5</font>. This line indicates statistics are displayed for all five of five possible objects.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can select other available administrative objects and display their statistics using the Select Objects dialog box. To display this dialog box, click Select in the Statistics Tool window (upper left). As shown the following example, the Select Objects dialog box lists the available administrative objects for which you can display statistics.</p><p> <img src="images/statdial.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To select one or more items from the list, highlight the item. Click OK to show statistics for your selection and close the Select Objects dialog box. Click Apply to show statistics for your selection and keep the Select Objects dialog box open for further selections.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="EVENT"></a></p>
+<a name="579229"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="579229"></a>Viewing System Events</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If the system event broker server (TMSYSEVT) is configured, you can use the BEA Tuxedo Administration Console to monitor system-generated events.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To view system events via the Event Tool:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Tools--&gt;Event from the menu bar or on the Event toolbar button.
+</font><a name="558525"><p style="FONT-WEIGHT: Bold">Figure 3-17    Sample Initial Event Tool Window</p></a>
+
+<p>
+<p> <img src="images/evntool.gif">
+</p>
+
+<p></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The menu bar across the top of this window offers four options as shown in the following table.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Select This Button . . .</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>To . . .&nbsp;</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Subscribe</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Request notification of specified system events.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Unsubscribe</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Reject further notification of specified system events.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Snapshot</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Create a record of the data currently held by the Event Tool.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select Format</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Display the Format Options dialog box to select parameters for the information being collected by the Event Tool. See <a href="actasks.htm#558559">Figure&nbsp;3-18</a>.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Dismiss button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Closes the Event Tool window.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Help button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Provides help on this window.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>To set the format for the Event Tool display, click Select Format to display the 
+Event Tool Format Options window. Select (with a check mark) the options you 
+want by clicking on the choice boxes, then click OK to close the window and 
+apply your changes.
+</font><a name="558559"><p style="FONT-WEIGHT: Bold">Figure 3-18    Event Tool Format Options Window</p></a>
+
+<p>
+<p> <img src="images/evnformt.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Once the format options are set as needed, use the Subscribe, Unsubscribe, and 
+Snapshot options as desired.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Dismiss to close the Event Tool window.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ULOG"></a></p>
+<a name="634643"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="634643"></a>Viewing a ULOG File</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Using the BEA Tuxedo Administration Console, you can view the <font face="Courier">ULOG</font> file from a selected machine in the active domain. You use the Logfile Tool window to display a <font face="Courier">ULOG</font> file.</p>
+<a name="580407"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="580407"></a>Displaying the Logfile Tool Window</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To display the Logfile Tool window, select Tools --&gt;Logfile from the menu bar or click the Logfile toolbar button. The Logfile button displays the <font face="Courier">ULOG</font> file from a particular machine in the active domain.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Logfile Tool window is shown in <a href="actasks.htm#580548">Figure&nbsp;3-19</a>. The Logfile Tool initially displays a blank viewing area, a drop-down list box and several buttons. The following table describes the Logfile Tool window components.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Part</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Drop-down menu</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Contains a scrollable list of nodes for which you may view the log files.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select Format button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Invokes the Select Format pop-up dialog box that allows you to specify the type of information you want from the log file and how you want it to be displayed.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Snapshot button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Captures a record from a particular log as it is being displayed. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Plus sign button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Invokes other Logfile function-related buttons.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Dismiss button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Closes the Logfile Tool.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Help button</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Provides help on this window.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="588294"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="588294"></a>Selecting a Machine to View its ULOG File</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To view a <font face="Courier">ULOG</font> file for a specific object, select a machine from the drop-down menu in the top left corner of the window. (To display the menu, press and hold the left mouse button on the down arrow. To select a menu item, drag the cursor to highlight a menu item and release the the mouse button.) As shown in <a href="actasks.htm#580548">Figure&nbsp;3-19</a>, the Logfile Tool displays the <font face="Courier">ULOG</font> file for the selected machine.</p><a name="580548"><p style="FONT-WEIGHT: Bold">Figure 3-19    Sample ULOG File in Logfile Tool Window</p></a>
+
+<p>
+<p> <img src="images/logfile1.gif">
+</p>
+
+<p>
+<a name="588592"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="588592"></a>Taking a Snapshot of the ULOG File</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To save a record of the displayed <font face="Courier">ULOG</font> file, click Snapshot on the Logfile Tool window.</p>
+<a name="588588"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="588588"></a>Setting the Format for the ULOG file</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To modify the format of the <font face="Courier">ULOG</font> display:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Select Format on the Logfile Tool window.
+</font><p style="MARGIN-LEFT: 0">The Logfile Format window is displayed, as shown in <a href="actasks.htm#634830">Figure&nbsp;3-20</a>.</p><a name="634830"><p style="FONT-WEIGHT: Bold">Figure 3-20    Logfile Format OptionsWindow</p></a>
+
+<p>
+<p> <img src="images/logedit.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the check boxes to enable or disable the format options. (A check mark 
+indicates the option is selected.)
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click OK to close the window and save your changes.
+</font></ol>
+<a name="634846"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="634846"></a>Customizing the Logfile Tool Options</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">As shown in <a href="actasks.htm#588711">Figure&nbsp;3-21</a>, the Logfile Tool provides additional options. When you first invoke the Logfile Tool only a single row of buttons appears in the upper left corner of the Logfile Tool window. To display the additional Logfile Tool options, click the + sign button. The six fields that are then displayed allow you to select a <font face="Courier">ULOG</font> file and specify which parts of it you want to see.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong><strong>Use the . . .</strong></font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>To . . .&nbsp;</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Message Type scrollable menu</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Choose the types of messages (such as error messages and warnings) you want to view.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Date field</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specify the date of the <font face="Courier">ULOG</font> file you want to view. By default, the <font face="Courier">ULOG</font> file for the current day (on the server) is displayed.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Filter field</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Request a subset of entries (within the set of lines you request through the Initial Download Records field) that match a string that you specify in this field.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Search field</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Look for a particular record (in the portion of the <font face="Courier">ULOG</font> file that you are viewing) by matching a string that appears in that record. Enter the string to be matched in this field.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Initial download records field</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specify the number of records you want to view when you download the <font face="Courier">ULOG</font> file. (The default is 100.)</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Maximum lines in view field</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specify the highest number of lines you want to have available for display in the window at a given time. (The default is 1000.)</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><a name="588711"><p style="FONT-WEIGHT: Bold">Figure 3-21    Logfile Tool with All Options Displayed</p></a>
+
+<p>
+<p> <img src="images/logopts.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"></p>
+
+<p>
+  <a href="acmainw.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="accore.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

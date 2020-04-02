@@ -1,0 +1,1271 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:47:25">
+<title>A Tour of the Main Window</title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>A Tour of the Main Window</b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="acoview.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="actasks.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="509573">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">A Tour of the Main Window</font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console is a Java-based applet that you can download from your company Web server into your Java enabled Web browser. The BEA Tuxedo Administration Console enables you to manage your BEA Tuxedo system administrative resources with the convenience of Web access.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This topic includes the following sections:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acmainw.htm#481747">Main Window</a>--describes the structure of the main window</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acmainw.htm#453428">Parts of the Main Window</a>--defines main window components</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acmainw.htm#465436">The Tree View</a>--describes the hierarchical tree view of administrative objects</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acmainw.htm#467218">The Tree View Quick Menu</a>--explains how to use the Quick Menu to create and manipulate the administrative objects in the tree</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acmainw.htm#479091">The Configuration Tool Pane</a>--describes the attributes display for administrative objects</font></ul><p>
+<a name="481747"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="481747"></a>Main Window
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#489193">Figure&nbsp;2-1</a> illustrates the BEA Tuxedo Administration Console main window. The main window consists of the following views:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>A hierarchical tree of a BEA Tuxedo Management Information Base (MIB) objects</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Tabbed pages containing configuration information</font><a name="489193"><p style="FONT-WEIGHT: Bold">Figure 2-1    BEA Tuxedo Administration Console Main Window</p></a>
+
+<p>
+<p> <img src="images/mainwin.gif">
+</p>
+
+<p></ul><p>
+<a name="489212"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="489212"></a>Why Are the Main Window Items Blank or Inactive?</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The initial BEA Tuxedo Administration Console window may only display empty panes and some toolbar buttons and menu bar items may be disabled. To access the BEA Tuxedo system resources for system administration, you need to establish a connection to a domain or have domain connections specified in your initialization file. For more information refer to the section, <a href="acoview.htm#424213">"BEA Tuxedo Administration Console Product Overview" on page&nbsp;1-1</a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following items are unavailable until you establish a domain connection:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The Tree View pane and Configuration Tool pane</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>All the buttons in the toolbar (except Options and Help)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>All the commands on the Tools menu</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The CS Help and Help commands on the Help menu</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">As shown in <a href="acmainw.htm#489193">Figure&nbsp;2-1</a>, after you have set up and activated a domain, the BEA Tuxedo Administration Console populates the Tree View pane with labeled icons, representing the administrative class objects in a domain. When you start using the Configuration Tool, the BEA Tuxedo Administration Console displays tabbed pages in the Configuration Tool pane that enable you to specify configuration information.</p>
+<a name="456740"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="456740"></a>Resizing the Tree View and Configuration Tool Panes</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you want more display space for the Tree View pane or the Configuration Tool pane, you can adjust the width of either area by doing the following:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Using the mouse, point to the border that separates the two window panes 
+(immediately to the right of the scrollbar in the Tree View area).
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Pressing the mouse button changes the pointer to a double-headed arrow.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Drag the border to the right (to widen the Tree View pane) or to the left (to widen 
+the Configuration Tool area).
+</font></ol>
+<a name="453428"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="453428"></a>Parts of the Main Window
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes the parts of the main window and the actions available from the main window menus, toolbar buttons, Tree View objects, and Configuration Tool.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#489193">Figure&nbsp;2-1</a> shows an BEA Tuxedo Administration Console that has an established domain connection. <a href="acmainw.htm#495221">Table&nbsp;2-1</a> describes the major parts of the Main Window.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="495221"> </a>Table 2-1   Main Window</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Item</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Menu Bar</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Provides access to all actions.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Toolbar</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Provides a row of buttons that allow you to activate frequently used actions or administrative tools.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Tree View pane</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays a hierarchical representation of the administrative class objects (such as servers and clients) in a BEA Tuxedo domain. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Configuration Tool pane</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Provides a set of tab pages on which you can display, define, and modify the attributes of objects, such as the name of a machine.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Tab pages</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A set of pages and labeled tabs containing fields that only display configuration information and fields that let you specify configuration information.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Configuration Tool buttons</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Allow you to control the modifications you make to the configuration fields on the tab pages.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following topics describe each of these major parts in more detail.</p>
+<a name="430770"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="430770"></a>Menu Bar</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Menu bar appears at the top left side of the BEA Tuxedo Administration Console main window. <a href="acmainw.htm#494929">Table&nbsp;2-2</a> describes the available menu actions.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> Unless specified otherwise, the phrase <em>click </em>means to quickly press and release the left mouse button.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="494929"> </a>Table 2-2   Menu Bar Options</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Menu</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domain</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Domain menu contains options for specifying the domain (BEA Tuxedo application) you will work with. This menu has the following options:</font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>New--creates a new domain.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Open--opens an existing domain.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Exit--closes the current domain and exits the BEA Tuxedo Administration Console applet.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This menu also lists the names of all created domain names. To switch to a different domain, simply click the desired domain.</font></p></ul><p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Settings</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Settings menu lets you specify the following general default settings for the session:</font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The location (online) of your BEA Tuxedo documentation.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The method by which your data is sorted (by state or by name).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The default mode in which you want to work (Edit mode or View mode).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Settings menu provides the same function as the Settings toolbar button.</font></p></ul><p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Tools</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Tools menu contains the same options provided by the toolbar buttons. For more information, refer to the section <a href="acmainw.htm#490069">"Toolbar Buttons" on page&nbsp;2-7</a>.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Help</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Help menu provides access to the main help topics and Context-Sensitive (CS) Help. These same help options are also available on the toolbar as Help and CS Help, respectively.</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To use CS Help, click Help--&gt;CS Help to get the cross-hairs pointer, then click a field or specific area in the window to get information about the selected item.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Throughout this online help, a menu choice is indicated in the following form:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Menu--&gt;Menu Item</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For example, an instruction to "Click Domain--&gt;New" means click the Domain menu to display the menu items, and then click New to select the command.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_STOP"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_REFRESH"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_SEARCH"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_ACTIVATE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_DEACTIVATE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_MIGRATE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_ULOG"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_EVENT"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_STATS"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_SETTINGS"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="P_CSHELP"></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"></a> <a name="P_HELP"></a></p>
+<a name="490069"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="490069"></a>Toolbar Buttons</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The toolbar appears across the top of the main window, immediately below the menu bar.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#483674">Table&nbsp;2-3</a> describes the toolbar buttons available for frequently used administrative operations.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="483674"> </a>Table 2-3   Toolbar Buttons</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Button</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description&nbsp;</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_stops.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Interrupts the current process and returns control to the administrator (who can then request a new operation). The Stop button allows you to interrupt the process currently underway, thus regaining control of the BEA Tuxedo Administration Console. You can then start a new process.</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You cannot assume that a process you interrupt with the Stop button has been completed; it may or may not be completed before control of the BEA Tuxedo Administration Console is returned to you. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_refre.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Updates the tree view and configuration tool pane with the most up-to-date data.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_find.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Searches for a particular administrative object class or object in the expanded BEA Tuxedo Administration Console tree. Click the Search button to open the search pop-up window. Enter the name of the object for which you are searching. If necessary, the Tree View is scrolled to display your target object.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_activ.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Activates all or part of a BEA Tuxedo domain. The Activate button displays the Activate Objects window. This window contains a set of class-specific tab pages that enable you to activate all or part of a BEA Tuxedo domain. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_deact.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Deactivates all or a part of a BEA Tuxedo domain.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_migra.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Migrates a server group or machine to another location, or swaps the master and backup machines.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_ulog.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays the ULOG file from a particular machine in the active domain.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_event.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays the window for monitoring system-generated events. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_stats.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Displays the tab pages that allow you to view a graphical representation of BEA Tuxedo system activity.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_opton.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Provides the option to set the following default settings for the session:</font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The location (online) of your BEA Tuxedo documentation.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The method by which your data is sorted (by state or by name).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The default mode in which you want to work (edit mode or view mode).</font></ul><p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_cshlp.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Invokes Context-Sensitive (CS) Help. Click the CS Help button to get the cross-hairs cursor, then click a field or specific area in a GUI window to get information about the selected item.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong><img src="images/tb_gehlp.gif">
+</strong><br></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"> Opens the BEA Tuxedo Administration Console Online Help in a separate Web browser.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="465436"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="465436"></a>The <a name="465436"></a>Tree <a name="465436"></a>View
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Tree View pane appears in the left column of the main GUI window. The tree is a hierarchical representation of the administrative objects in a single BEA Tuxedo system domain. The GUI graphically depicts the relationship between each object and the others by showing its nesting level and parent objects. You can choose to view a complete tree (comprising all configurable objects of all types in the domain) or a subset of objects.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#465438">Table&nbsp;2-2</a> shows the Tree View displayed in the main window.</p><a name="465438"><p style="FONT-WEIGHT: Bold">Figure 2-2    The Tree in the Main GUI Window</p></a>
+
+<p>
+<p> .<img src="images/maintree.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can add or omit items from the Tree View. In addition, you can add or omit items from the display. By default, the Tree View displays all administrative classes available for a selected domain.</p>
+<a name="465457"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="465457"></a>Parts of the Tree View</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console Tree View contains multiple roots, one root for each administrative object. The first root consists of the application domain. The next root displays the object classes defined in the BEA Tuxedo TMIB. Each set of object classes is a part of an application domain. The third level represents an instance of an object belonging to an object class. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console can display only one domain at a time. The current domain is represented in the Tree View as multiple sets of object classes containing administrative objects. The BEA Tuxedo Administration Console gives you control over which object classes and objects are displayed for a domain through a combination of the collapsible tree structure and a Folders checklist dialog.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#465460">Figure&nbsp;2-3</a> shows the top part of the sample tree shown in <a href="acmainw.htm#465438">Figure&nbsp;2-2</a>. (Machines, Groups, Servers, Routing Tables, and so on, are examples of <em>object classes</em>. The FML and VIEW tables shown under Routing Tables are examples of <em>objects</em> belonging to the Routing Tables class.)</p><a name="465460"><p style="FONT-WEIGHT: Bold">Figure 2-3    Domain Tree Hierarchy</p></a>
+
+<p>
+<p> <img src="images/domtreev.gif">
+</p>
+
+<p>
+<a name="477007"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Tree View Hierarchy</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe all the administrative objects that can appear in the Tree View.</p><!---->
+<a name="482757"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">BEA Tuxedo System Domains and Classes</font></i>
+</h5>
+</a>
+<!---->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#486519">Table&nbsp;2-4</a> lists the domain and class parts of the Tree View, their associated icons, and briefly describes each part.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="486519"> </a>Table 2-4   Domain and Class Tree Icons</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Tree Item</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Icon</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domain</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/domain.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console displays the domain icon and the name of a domain (BEA Tuxedo system application) as the tree root. Domains can be connected, unconnected, and inactive.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Administrative Class</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/folders.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The folder icon and administrative name represent each object class (such as Machines, Servers, Clients, Factories, and so forth).</font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Closed folders with a plus sign (+) indicate the folders contain objects. </font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Open folders with a minus indicate all folder objects are displayed. </font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Tree View displays the individual objects that are part of a class below the class folder.</font></p></ul><p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><!---->
+<a name="482722"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">BEA Tuxedo Administration Console Class Objects</font></i>
+</h5>
+</a>
+<!---->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#486505">Table&nbsp;2-5</a> describes the individual objects contained within a BEA Tuxedo system TMIB class and their associated icons. </p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="486505"> </a>Table 2-5   Individual Class Objects&nbsp;</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Tree Items</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Icon</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Machines</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/machines.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Machines represent the machines on which the applications reside. The machines are listed in the Tree View by their configuration name and have three states: active, suspended, and unknown.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Groups</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/group.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Groups represent the administrative resources that are configured as groups and reside on a machine. These resources include servers. As an administrative unit, you can activate, deactivate, and migrate groups.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Servers</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/servers.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Servers represent the server-side of a client/server application pair. The servers respond to requests from clients. The server icons represent BEA Tuxedo system-based application servers. Servers correspond to an operating system (OS) process.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Routing Tables</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/actroute.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The routing tables enable a system administrator to set up a name and target service where messages and other data can be sent. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Service Defaults</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/svcdef.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Service defaults enable a system administrator to define standard settings for attributes for services such as priority, timeouts, loads, and routing.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Services</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/services.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Services represent modules of application code that carry out a service request. These are the BEA Tuxedo system services.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Devices</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/devices.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Devices represent BEA Tuxedo system files (<font face="Courier">TUXCONFIG</font>, <font face="Courier">TLOG</font>, and so on) that reside on physical storage devices.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Clients</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/clients.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Clients represent the processes that attach to the domain of the BEA Tuxedo servers.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WS Listeners</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/servers.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Workstation Listeners (WSL) are processes that act as the single point of contact for Workstation clients. They also handle the distribution of workstation connections to BEA Tuxedo Workstation Handlers (WSH). WSLs feature the same icons as servers.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">WS Handlers</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/wsh.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Workstation Handlers (WSH) are surrogate clients responsible for managing a set of Workstation client connections. These handlers are started dynamically by the workstation listener.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Bridges</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/bridge.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Bridges are used to maintain virtual circuits to other nodes participating in an application for the purpose of transferring application messages between nodes. </font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACLs </font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACL Principals</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ACL Groups<strong> </strong></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/acls.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Access Control List (ACLs) are the administrative resources used to manage standard <em>access control list</em> security. The following types of ACL objects are included:</font></p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>ACLs represent a list of groups allowed access to services, applications, queues, and events. This list is used to check authorization.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>ACL Principals refer to application administrators, application operators, clients, and remote domain names that can access a BEA Tuxedo system application.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>ACL Groups are a group or collection of principals who have access to a BEA Tuxedo system application. </font></ul><p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><!---->
+<a name="489735"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">BEA Tuxedo Administration Console Application Queue Class Objects</font></i>
+</h5>
+</a>
+<!---->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#485551">Table&nbsp;2-6</a> describes the individual application queue and related class objects contained within a BEA Tuxedo system TMIB class and their associated icons. </p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="485551"> </a>Table 2-6   Individual Application Queue and Related Class Objects</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Tree Items</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Icon</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queues<strong> </strong></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/appqs.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">An application queue represents the storage area where messages are queued.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Application Queue Messages, Spaces, and Transactions</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/appqus.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Application Queue Messages are messages stored in application queues.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Application Queue Spaces are storage spaces that contain one or more application queues.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Application Queue Transactions are transactions associated with a queue space.</font></ul><p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Transactions<strong> </strong></font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/trans.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A transaction is a unit of activity that a BEA Tuxedo system application handles in a distributed client-server context.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><!---->
+<a name="504344"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">BEA Tuxedo CORBA System Class Objects</font></i>
+</h5>
+</a>
+<!---->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#504358">Table&nbsp;2-7</a> lists the individual BEA Tuxedo CORBA administrative class objects and their associated icons.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="504358"> </a>Table 2-7   Individual Tuxedo CORBA Class Objects</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Label</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Icon</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Factory</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/factory.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A CORBA Factory is an interface used by a client to obtain an object reference to a CORBA object.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Interface</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/intface.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The interface icons represent CORBA IDL interfaces. In a CORBA development environment, an interface represents a contract with a client. Servers represent interfaces at startup. You can define the default attributes for interfaces at the domain and server group levels.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Interface Queue</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p> <img src="images/ifqu.gif">
+</p>
+
+<p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">An Interface Queue controls the activation of interfaces in a server. The Interface Queue represents run-time attributes as it pertains to a particular server queue.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="504304"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Expanding and Collapsing the Tree View</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#477768">Figure&nbsp;2-4</a> illustrates an expanded tree for the sample <font face="Courier">simpapp</font> domain. The Groups folder only contains one object GROUP1 and is fully expanded as shown by the minus (-) sign next to the Groups icon. However, GROUP1 contains more items as indicated by the plus (+) sign.</p><a name="477768"><p style="FONT-WEIGHT: Bold">Figure 2-4    Expanded Tree</p></a>
+
+<p>
+<p> <img src="images/treexp.gif">
+</p>
+
+<p><p> </p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To display a domain tree, on the menu bar click Domain --&gt;DomainName and select a domain. (You can also click Domain--&gt;Open to bring up the Connect window and enter a Domain Name and <font face="Courier">TUXCONFIG</font> path.) To expand the domain tree or any section of the domain tree, click the plus (+) sign next to the tree item. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> The plus (+) sign next to a tree icon changes to a minus (-) sign when the tree cannot be expanded further.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To collapse any section of the tree, click the minus sign beside any expanded tree item. Click the minus sign beside the domain icon and the Tree View displays only the domain icon and name.</p>
+<a name="477737"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="477737"></a>Searching for Objects in the Tree</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To find a specific object in the Tree View, click the Search toolbar button. The BEA Tuxedo Administration Console displays a Find dialog. Enter the name (or partial name) of the object you want to find and click the Next or Previous buttons to search forward or backward through the objects in the tree.</p>
+<a name="467218"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="467218"></a>The Tree View Quick Menu
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console Tree View contains a convenient shortcut menu that lets you quickly select frequently performed tasks. This Quick Menu includes options for creating new objects, activating and deactivating applications and application resources, as well as other administrative tasks.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To display the Quick Menu, right-click any object in the Tree View item (domain, class, or object) and the Quick Menu is displayed in the Tree View area.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you select an option from the Quick Menu, the Quick Menu closes and the window associated with the selected option is displayed.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To close the Quick Menu without selecting a menu item, click an area of the main window outside the Quick Menu. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#467221">Figure&nbsp;2-5</a> illustrates a sample pop-up Quick Menu.</p><a name="467221"><p style="FONT-WEIGHT: Bold">Figure 2-5    Quick Menu in the Main GUI Window</p></a>
+
+<p>
+<p> <img src="images/quickm.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console always displays the Quick Menu in the Tree View area. The Quick Menu options invoke windows and dialog boxes, or toggle between modes. What you see on the Quick Menu depends upon which item the pointer is positioned on the tree. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#493356">Table&nbsp;2-8</a> provides a quick list of what the Quick Menu displays for each type of tree item.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="493356"> </a>Table 2-8   Quick Menus for Types of Objects</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Your Object Selection</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Quick Menu Options </font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Domain</font></p>
+		</td>
+		<td align="left" valign="top">
+			<ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Edit and View</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>New</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Delete </font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Folders</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Activate and Deactivate</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Swap Master</font></ul><p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Folder (represents an object class)</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">New only.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Administrative object (such as a specific server or device)</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The options vary for each type of selected object. Each administrative object has a subset of all options. </font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#495641">Table&nbsp;2-9</a> contains a complete list of all possible Quick Menu options.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="493387"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="493387"></a>Quick Menu Options</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To perform most BEA Tuxedo system operations, you can select options from the Quick Menu that displays when you right-click a tree object. The options available in the Quick Menu vary depending upon the object class.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a href="acmainw.htm#495641">Table&nbsp;2-9</a> briefly describes all the menu options listed on the collective set of Quick Menus. No single Quick Menu offers all these operations; a single Quick Menu includes a subset of these options. Click the menu option to perform the operation for that domain, object class, or individual object.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4><a name="495641"> </a>Table 2-9   Quick Menu Options</h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong>Select...</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>To...&nbsp;</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">View</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Display the tab pages containing detailed configuration information about a selected object in read-only (or View) mode. For more information, refer to the section <a href="actasks.htm#599110">"Switching Edit and View Modes" on page&nbsp;3-5</a>.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Edit</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Display the tab pages containing detailed configuration information about a selected object in Edit mode. (You can use this option to override a default View mode setting for the session and change the attributes for the selected object. For more information, refer to <a href="actasks.htm#599110">"Switching Edit and View Modes" on page&nbsp;3-5</a>.)</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">New</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Add a new BEA Tuxedo system object.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Delete</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Delete a BEA Tuxedo system object. You cannot delete all BEA Tuxedo system objects in this fashion.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Folders</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Display a dialog box listing all available object classes for a domain and indicate which object classes to display in the tree.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Activate</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Activate a selected object.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Deactivate</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Deactivate a selected object.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Swap</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Migrate the master and backup servers in a distributed configuration.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Clean</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Detect and remove dead clients and servers; remove partitioned machines.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Migrate</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Move groups of servers to an alternate processor.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Connect</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Establish a connection (bridge) between two machines.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Advertise</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Advertise a service.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Unadvertise</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Hide a currently advertised object from other applications.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suspend</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Prevent the application from accessing a service.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Resume</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Make a currently suspended service available.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Kill</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Terminate a BEA Tuxedo system client or service.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Abort</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Stop a transaction that is currently in progress and roll back all affected data.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Open</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Allocate and initialize shared memory and semaphores for a /Q queue space.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Close</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Remove shared memory and other IPC resources for a /Q queue space.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+<a name="495732"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"> About the New Option</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create a new BEA Tuxedo system object, right-click the desired object class in the Tree View to display the Quick Menu, and then click New. The Create New Object window is displayed prompting you to enter required information about the new object. For detailed information about filling in these fields, see Chapter 3, "Creating New Domains and Administrative Class Objects."</p>
+<a name="481839"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="481839"></a>Using the Folders Option to Display or Hide Tree Items</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can use the Quick Menu Folders option to customize your view of the tree so that only the type(s) of objects you want to see are displayed.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can use the Quick Menu Folders option to do the following tasks:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Display all classes of objects</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Filter out types of objects that you do not want to view</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Limit the Tree View to only one class of object </font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To use the Folders option, complete the following steps:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Right-click a domain or administrative class object in the tree to display the Quick 
+Menu, and then select Folders to display the Select Folders window.
+</font><p class="listpara"><strong>Note:	</strong> The items shown in the Select Folders window will vary, depending on which type of object you have selected in the tree.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>The Select Folders window contains a list of all possible administrative classes 
+and a check box beside each class name. If the check box is selected, click it to 
+exclude that administrative class from the Tree View. If the check box is not 
+selected, click it to display that administrative class in the Tree View. 
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click OK at the bottom of the list to apply your changes.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"> <a href="acmainw.htm#481848">Figure&nbsp;2-6</a> shows the Select Folders window for domains.</p><a name="481848"><p style="FONT-WEIGHT: Bold">Figure 2-6    Select Folders Window </p></a>
+
+<p>
+<p> <img src="images/selfold.gif">
+</p>
+
+<p>
+<a name="479091"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">The Configuration Tool Pane
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool is a utility that lets you set or change the attributes for a selected class of BEA Tuxedo system objects. When you select an object in the tree, the Configuration Tool pane for that object is displayed on the right side of the main window. As illustrated in <a href="acmainw.htm#443070">Figure&nbsp;2-7</a>, the Configuration Tool pane keeps the attributes for each object in a set of tabbed pages.</p><a name="443070"><p style="FONT-WEIGHT: Bold">Figure 2-7    Configuration Tool </p></a>
+
+<p>
+<p> <img src="images/configvu.gif">
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool pane displays a set of tab pages for your application resources and for each class of objects and services shown in the BEA Tuxedo Administration Console Tree View.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Each collection of tabbed pages is a set of logically grouped attributes. For example, the Domains class Security tab pages contain the settings for user IDs, group IDs, and the type of security to be used in that domain.</p>
+<a name="440491"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="440491"></a>Accessing the Configuration Tool Information for a Tree Object</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To access the Configuration Tool from the tree:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the plus sign in front of the name of a class. The Tree View expands to display 
+a list of the objects available for that class.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the icon or name of an object. The Configuration Tool pane displays the 
+configuration tabs for the relevant class and the current settings for each class 
+attribute. (<a href="acmainw.htm#443070">Figure&nbsp;2-7</a> shows the Configuration Tool for the TOUPPER Service 
+Default.)
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool consists of a set of tab pages and a row of buttons for controlling the changes you make in the tab pages.</p>
+<a name="440664"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="440664"></a>The Tab Pages</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The tab pages in the Configuration Tool pane are electronic forms that display and solicit (from you) information about the attributes of an administrative object. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A set of tab pages is provided for each administrative class of objects (such as machines and servers). The number of attributes associated with a class varies, depending on the class. Therefore, anywhere from one to eight tab pages may be displayed when you invoke the Configuration Tool by selecting an object in the tree. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To display a set of tab pages select an object in the tree by clicking on it.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool pane displays the tab pages available for the object you have selected, as shown in <a href="acmainw.htm#442932">Figure&nbsp;2-8</a>.</p><a name="442932"><p style="FONT-WEIGHT: Bold">Figure 2-8    Tab Page in the Configuration Tool Pane</p></a>
+
+<p>
+<p> <img src="images/tabpage.gif">
+</p>
+
+<p>
+<a name="440676"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">The Configuration Tool Buttons</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Use the buttons at the bottom of the Configuration Tool pane to implement the changes you make in the tab pages.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name=T_GENERAL></a></p><p>  
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong><strong>Use This Button . . .</strong></font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>To . . .</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Change</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Implement the changes you have made in the tab pages.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Cancel</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Nullify changes you have made in the tab pages<br>(as long as you have not clicked Change).</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">New</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Add an administrative object to the current domain.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Delete</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Remove an object from the current domain.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p>
+
+<p>
+  <a href="acoview.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="actasks.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

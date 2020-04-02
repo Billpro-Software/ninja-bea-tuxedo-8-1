@@ -1,0 +1,192 @@
+<!--
+ This file contains sample command line tool parameter file contents. Examples are given
+ for various combinations as commented XML.
+--> 
+<!--
+Transfer documents from file MetadataStore to DB MetadataStore
+-->
+<parameters version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <source-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.file.FileMetadataStore">
+      <property name="metadata-path" value="e:\test"/>
+      <property name="partition-name" value="partitionName"/>
+    </metadata-store>
+  </source-store> 
+  <target-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.db.DBMetadataStore">
+      <property name="jdbc-userid" value="username"/>
+      <property name="jdbc-password" value="password"/>
+      <property name="jdbc-url" value="jdbc:oracle:thin:@<hostName>:<port>:<sid>"/>
+      <property name="partition-name" value="partitionName"/>
+    </metadata-store>
+  </target-store>
+  <!-- By default all associated documents will be processed. -->
+</parameters>
+
+<!--
+Transfer documents from file MetadataStore to DB MetadataStore along with associated documents such as 
+customization and translation documents and saving the references in the database repository.
+-->
+<!--
+<parameters version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <source-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.file.FileMetadataStore">
+      <property name="metadata-path" value="e:\test"/>
+      <property name="partition-name" value="partitionName"/>
+    </metadata-store>
+  </source-store> 
+  <target-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.db.DBMetadataStore">
+      <property name="jdbc-userid" value="username"/>
+      <property name="jdbc-password" value="password"/>
+      <property name="jdbc-url" value="jdbc:oracle:thin:@<hostName>:<port>:<sid>"/>
+      <property name="partition-name" value="partitionName"/>
+    </metadata-store>
+  </target-store>
+   
+  <!-- optional configuration for associated documents such as customization, translation and extended 
+       metadata documents to be processed 
+  -- >
+  <associated-docs>
+    <!-- Customization configuration to transfer the customization documents for the given 
+         Customization classes.
+    -- >
+    <customizations>
+      <cust-config>
+        <!-- Apply Apps layers to all oracle apps objects -- >
+        <match path="/oracle/apps/">
+          <customization-class name="oracle.apps.cust.FunctionCC"/>
+          <customization-class name="oracle.apps.cust.VerticalizationCC"/>
+        </match>
+        <!-- Apply only responsibility layer to all the "compname" metadata objects (ends with / 
+             to include sub folders) 
+        -- >
+        <match path="/compname/">
+          <customization-class name="compname.cust.RespCC"/>
+        </match>
+      </cust-config>
+    </customizations>  
+       
+    <!-- Translation configuration to transfer the translation documents for the given list of locales. 
+    -- >
+    <translations>
+      <locale-list>
+        <locale value="fr-FR"/>
+        <locale value="ja-JP"/>
+        <locale value="en-US"/>
+      </locale-list>
+    </translations> 
+    
+    <!-- Configuration to not transfer extended metadata document: Since we
+         have specified some particular associated documents, only those
+         specified will be transferred. We don't specify extended-metadata,
+         so no extended-metadata documents will be transferred. -- >
+    
+  </associated-docs>
+
+  <!-- Specify the type defintion files XSDs if the metadata references
+       in documents being transferred are to be stored in the database repository
+  -- >
+  <type-config>
+    <type-definitions>
+      <url>http://mycompany.com/refDefn1.xsd</url>
+      <file>D:/work/refDefn2.xsd</file>
+      <classpath>/mypkg/refDefn3.xsd</classpath>
+    </type-definitions>
+  </type-config>   
+</parameters>
+-->
+
+<!--
+Transfer documents from DB MetadataStore to a directory
+-->
+<!--
+<parameters version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <source-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.db.DBMetadataStore">
+      <property name="jdbc-userid" value="username"/>
+      <property name="jdbc-password" value="password"/>
+      <property name="jdbc-url" value="jdbc:oracle:thin:@<hostName>:<port>:<sid>"/>
+      <property name="partition-name" value="partitionName"/>
+   </metadata-store>
+  </source-store>  
+  <target-dir value="c:\temp"/>
+</parameters>
+-->
+
+<!--
+Transfer documents from a directory to DB MetadataStore
+-->
+<!--
+<parameters version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <source-dir value="c:\temp"/>
+  <target-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.db.DBMetadataStore">
+      <property name="jdbc-userid" value="username"/>
+      <property name="jdbc-password" value="password"/>
+      <property name="jdbc-url" value="jdbc:oracle:thin:@<hostName>:<port>:<sid>"/>
+      <property name="partition-name" value="partitionName"/>
+    </metadata-store>
+  </target-store> 
+  
+  <!-- optional configuration for associated documents such as customization, translation and extended metadata documents to be processed -- >
+  <associated-docs>
+    <!-- Transfer all customization documents for all Customization layers. -- >
+    <customizations>
+      <include-all-customizations value="true" />
+    </customizations>
+      
+    <!-- Transfer all translation documents for all locales.-- >
+    <translations> 
+      <include-all-translations value="true"/>
+    </translations>
+    
+    <!-- Transfer all extended metadata documents. -- >
+    <extended-metadata/>
+
+  </associated-docs>
+</parameters>
+-->
+
+<!--
+Transfer documents on classpath to DB MetadataStore 
+-->
+<!--
+<parameters version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <source-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.file.ClassPathMetadataStore">
+      <property name="class-path" value="d:\work\test.jar;d:\temp\foo"/>
+    </metadata-store>
+  </source-store>   
+  <target-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.db.DBMetadataStore">
+      <property name="jdbc-userid" value="username"/>
+      <property name="jdbc-password" value="password"/>
+      <property name="jdbc-url" value="jdbc:oracle:thin:@<hostName>:<port>:<sid>"/>
+      <property name="partition-name" value="partitionName"/>
+    </metadata-store>
+  </target-store>
+</parameters>
+-->
+
+<!--
+Param file snippet for deleting documents from DB MetadataStore by delete tool
+-->
+<!--
+<parameters version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <source-store>
+    <metadata-store class-name="oracle.mds.persistence.stores.db.DBMetadataStore">
+      <property name="jdbc-userid" value="username"/>
+      <property name="jdbc-password" value="password"/>
+      <property name="jdbc-url" value="jdbc:oracle:thin:@hostname:port:sid"/>
+      <property name="partition-name" value="partitionName"/>
+   </metadata-store>
+  </source-store>  
+  <associated-docs>
+    <customizations>
+      <include-all-customizations value="true" />
+    </customizations>
+	<!-- Translation and extended metadata documents are not processed. -- >
+  </associated-docs>
+</parameters>
+-->

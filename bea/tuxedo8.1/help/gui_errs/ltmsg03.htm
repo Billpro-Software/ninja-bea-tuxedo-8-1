@@ -1,0 +1,1634 @@
+<TITLE>LIBTUX_CAT 4.3</TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 500-599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="500"></A>
+<H3>LIBTUX MESSAGE #500</H3>
+<H2> ERROR: Invalid status given</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A status was passed to the the update routine that was neither
+suspended nor not suspended.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory or an invalid
+IPCKEY
+(wrong application).
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="501"></A>
+<H3>LIBTUX MESSAGE #501</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+malloc()
+failed when an attempt was made to acquire space for a table large
+enough to hold a long word entry for all the services in a server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory, inappropriate sysgen memory or process
+parameters, or if there are too many running processes.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="502"></A>
+<H3>LIBTUX MESSAGE #502</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+malloc()
+failed when an attempt was made to acquire space for a table large
+enough to hold a long word entry for each service in a
+MSSQ
+set.
+A status update was being attempted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory, inappropriate sysgen memory or process
+parameters, or if there are too many running processes.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="503"></A>
+<H3>LIBTUX MESSAGE #503</H3>
+<H2> ERROR: Cannot find DBBL</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to send a message to the
+DBBL ,
+and its whereabouts could not be ascertained either from the
+BB
+or from a
+BRIDGE
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, or if all
+administrative processes are running.
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="505"></A>
+<H3>LIBTUX MESSAGE #505</H3>
+<H2> ERROR: Send/receive error on remote procedure call</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message send failed.
+The message send failure may have resulted
+from a message type switch function failure, from an invalid message length,
+or from a low level message send failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, if all the
+administrative processes are running, or if the sysgen parameters for messages are
+appropriate.
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="506"></A>
+<H3>LIBTUX MESSAGE #506</H3>
+<H2> ERROR: Send/receive error on remote procedure call</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Two attempts were made to send a message to a
+D(BBL)
+and both attempts failed.
+Either the recipient was not active (alive), or the sending of the message
+send itself failed.
+The message send failure may have resulted from a message
+type switch function failure, from an invalid message length,
+or from a low level message send failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, if all the
+administrative processes are running, or if the sysgen parameters for messages are
+appropriate.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="515"></A>
+<H3>LIBTUX MESSAGE #515</H3>
+<H2> ERROR: Null message buffer, cannot dispatch service</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The run server function, which continually dequeues messages (service requests),
+called the server dispatch routine with a null message pointer.
+This means that the dequeuing of a message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+System message resources may be corrupted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="516"></A>
+<H3>LIBTUX MESSAGE #516</H3>
+<H2> ERROR: Unknown service request <I>name</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server dispatch function calls a high level service dispatch
+which attempts to find the entry point address of the service
+and cannot.
+The server dispatch function records this error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shared memory may be corrupted, or the ipc application key is not correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="517"></A>
+<H3>LIBTUX MESSAGE #517</H3>
+<H2> ERROR: Failed sending reply</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server dispatch function calls a high level service dispatch
+which attempts to find the entry point address of the service
+and cannot.
+The server dispatch function conveys this error to
+the caller via a message (reply).
+If the message send fails, this message appears.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+System message resources may be exhausted, the application may
+be partitioned, or shared memory is corrupted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="518"></A>
+<H3>LIBTUX MESSAGE #518</H3>
+<H2> ERROR: Service '<I>name</I>' failed to call tpreturn or tpforward</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server dispatch function calls the service.
+Control returning after this call is an indication that
+tpreturn
+failed (it does a longjmp and should
+never return after the call), or
+tpforward
+failed (it gives up control to another server).
+These are the only two ways a service can
+surrender control after processing a service.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The stack in the service became corrupted.
+Try running the service under a debugger.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsvrdone (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="521"></A>
+<H3>LIBTUX MESSAGE #521</H3>
+<H2> ERROR: Clients cannot call tpsvrdone</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process invoking the default server termination
+function is a client (should be a server).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The default server termination library function was linked into a process not
+identified in the SERVERS section of the configuration file,
+or shared memory is corrupted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpservice (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="522"></A>
+<H3>LIBTUX MESSAGE #522</H3>
+<H2> INFO: Default tpsvrdone() function used</H2><HR>
+<P>
+
+INFO
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the system-provided default server
+exit routine was used in stopping the server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpservice (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="523"></A>
+<H3>LIBTUX MESSAGE #523</H3>
+<H2> ERROR: tpclose failed</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpclose
+function failed in the default server exit
+function,
+tpsvrdone .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+An error occurred in closing the resource manager
+associated with this server's group.
+The
+CLOSEINFO
+parameter in the *GROUPS section of the configuration may not be correct,
+or the resource manager may not be available.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpservice (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="524"></A>
+<H3>LIBTUX MESSAGE #524</H3>
+<H2> ERROR: Only servers allowed to call tpsvrinit</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process invoking the default server initialization
+function is not a System/T server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The default server initialization library function was linked into a process not
+identified in the SERVERS section of the configuration file,
+or shared memory is corrupted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpservice (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="525"></A>
+<H3>LIBTUX MESSAGE #525</H3>
+<H2> INFO: Default tpsvrinit() function used</H2><HR>
+<P>
+
+INFO
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the system-provided default server
+initialization routine was used in starting the server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpservice (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="530"></A>
+<H3>LIBTUX MESSAGE #530</H3>
+<H2> ERROR: NULL service name, cannot dispatch service request</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service start routine, called by the start work routine
+(which is called by the service dispatch routine),
+failed because the dispatched message contained no service request name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the application ipc key is correct, or
+that not more than one application is using the same ipc key,
+or some other failure occurred with the associated message queues.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="531"></A>
+<H3>LIBTUX MESSAGE #531</H3>
+<H2> ERROR: Function address set to -1</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service start routine, called by the start work routine
+(which is called by the service dispatch routine),
+failed because the bulletin board entry for the requested service
+function address contains a zero.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the application ipc key is correct, or
+that not more than one application is using the same ipc key.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="532"></A>
+<H3>LIBTUX MESSAGE #532</H3>
+<H2> ERROR: Invalid message pointer given</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service dispatch routine passed the service start work routine
+a null pointer due to a
+TPESYSTEM
+error that occurred earlier.
+This occurred in either a (D)BBL or server
+and indicates that a corrupt or invalid message was received.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the correct machine types are set, or
+that the application ipc key is correct, or
+that not more than one application is using the same ipc key.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="533"></A>
+<H3>LIBTUX MESSAGE #533</H3>
+<H2> ERROR: Cannot execute service, address not known</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the service dispatch, the service start function returned
+null indicating a failure.
+This could be due to a null service name appearing
+in the dispatched message, or the requested service cannot be found,
+or the bulletin board could not be locked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the application ipc key is correct, or
+that not more than one application is using the same ipc key,
+or that the service is advertised.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="534"></A>
+<H3>LIBTUX MESSAGE #534</H3>
+<H2> ERROR: Work completed, cannot stop twice</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a service returns from dispatch, a flag is checked to see if
+the service was started successfully.
+If this flag is not set,
+the above error message appears.
+This flag is only turned on if the service starts,
+and turned off only when the service done function completes.
+Either the service never started or the
+service done function was called more than once.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the ulog for additional information about server failures.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="536"></A>
+<H3>LIBTUX MESSAGE #536</H3>
+<H2> ERROR: Unable to create request queue</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal function used to create a UNIX system message queue
+for Inter-Process Communications failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check with your UNIX System Administrator and increase the appropriate
+MSG parameter for your system.
+The possible parameters that may need to be increased are
+MSGMAX ,
+MSGMNB ,
+MSGMNI ,
+MSGSSZ ,
+and
+MSGSEG .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="537"></A>
+<H3>LIBTUX MESSAGE #537</H3>
+<H2> ERROR: Unable to create reply queue</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal function used to create a UNIX system message queue
+for Inter-Process Communications failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check with your UNIX System Administrator and increase the appropriate
+MSG parameter for your system.
+The possible parameters that may need to be increased are
+MSGMAX ,
+MSGMNB ,
+MSGMNI ,
+MSGSSZ ,
+and
+MSGSEG .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="538"></A>
+<H3>LIBTUX MESSAGE #538</H3>
+<H2> ERROR: Unable to remove request queue <I>queue_id</I> (errno=<I>err_val</I>)</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal function used to remove a UNIX system message queue
+for Inter-Process Communications failed.
+The UNIX system function
+msgctl()
+returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="539"></A>
+<H3>LIBTUX MESSAGE #539</H3>
+<H2> ERROR: Unable to remove reply queue <I>queue_id</I> (errno=<I>errno_val</I>)</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal function used to remove a UNIX System message queue
+for Inter-Process Communications failed.
+The UNIX System function
+msgctl()
+returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="540"></A>
+<H3>LIBTUX MESSAGE #540</H3>
+<H2> ERROR: TUXCONFIG environment value (<I>string</I>) does not match configuration file (<I>string</I>)</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+parameter defined in the TUXEDO System configuration file does not
+match the current
+TUXCONFIG
+shell environment variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXCONFIG
+variable in your current shell to match the value
+defined in the configuration file and then export it.
+Re-create the binary configuration file by executing
+tmloadcf
+and then
+tmboot .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="541"></A>
+<H3>LIBTUX MESSAGE #541</H3>
+<H2> WARN: Server <I>group_name</I>/<I>server_id</I> terminated</H2><HR>
+<P>
+
+INFO
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server has died.
+The TUXEDO System will attempt to clean or restart the server according
+to the specification of the server in the configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="542"></A>
+<H3>LIBTUX MESSAGE #542</H3>
+<H2> WARN: Bulletin Board update error <I>error_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server had died.
+The TUXEDO System was attempting to clean or restart the server according
+to the specification of the server in the configuration.
+The server was either non-restartable, or the generation count was exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine why the server is dying.
+If required, modify the configuration file to increase the generation count
+and/or make the server restartable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="543"></A>
+<H3>LIBTUX MESSAGE #543</H3>
+<H2> WARN: Bulletin Board update error <I>error_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server had died.
+The TUXEDO System was attempting to clean or restart the server according
+to the specification of the server in the configuration.
+The server was either non-restartable, or the generation count was exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine why the server is dying.
+If required, modify the configuration file to increase the generation count
+and/or make the server restartable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="544"></A>
+<H3>LIBTUX MESSAGE #544</H3>
+<H2> ERROR: Unable to delete server <I>group_name</I>/<I>server_id</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A non-restartable server had died.
+The TUXEDO System was attempting to clean up after the aforementioned
+incident, but both the clean-up as well the removal of resources allocated
+to the server failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="545"></A>
+<H3>LIBTUX MESSAGE #545</H3>
+<H2> ERROR: Unable to update Bulletin Board, error: <I>error_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to update the server table that resides in
+UNIX System shared memory.
+The update was not successful.
+Either the server information provided was invalid, or an attempted lock on
+the TUXEDO System bulletin board was unsuccessful.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="546"></A>
+<H3>LIBTUX MESSAGE #546</H3>
+<H2> ERROR: Unable to update Bulletin Board, error: <I>error_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to update the server table that resides in
+UNIX System shared memory.
+The update was not successful.
+Either the server information provided was invalid, or an attempted lock on
+the TUXEDO System bulletin board was unsuccessful.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="547"></A>
+<H3>LIBTUX MESSAGE #547</H3>
+<H2> ERROR: Unable to clean up BBL processes</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to clean up a system process, an action not
+permitted at that point.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="548"></A>
+<H3>LIBTUX MESSAGE #548</H3>
+<H2> ERROR: Unable to clean up BRIDGE processes</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to clean up a system process, an action not
+permitted at that point.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="549"></A>
+<H3>LIBTUX MESSAGE #549</H3>
+<H2> ERROR: Unable to clean up processes on remote node(s)</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to clean up processes that are running on
+a remote computer, and that operation is not permitted at that point.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="550"></A>
+<H3>LIBTUX MESSAGE #550</H3>
+<H2> WARN: Cleaning up restartable server <I>group_name</I>/<I>server_id</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System is about to clean up a server that was defined to be
+restartable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="551"></A>
+<H3>LIBTUX MESSAGE #551</H3>
+<H2> WARN: Cleaning up server <I>group_name</I>/<I>server_id</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System is about to clean up a server table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="552"></A>
+<H3>LIBTUX MESSAGE #552</H3>
+<H2> WARN: TUXDIR environment variable not set</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System environment variable
+TUXDIR
+was not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the environment variable
+TUXDIR
+and repeat the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="553"></A>
+<H3>LIBTUX MESSAGE #553</H3>
+<H2> ERROR: Multi-processor operation sysmulti failed \(em errno=<I>error_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was running on a multi-processor environment.
+While attempting to use the
+sysmulti()
+function, an error was detected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="554"></A>
+<H3>LIBTUX MESSAGE #554</H3>
+<H2> ERROR: Multi-processor operation sysmulti failed \(em errno=<I>error_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was running on a multi-processor environment.
+While attempting to use the
+sysmulti()
+function, an error was detected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="555"></A>
+<H3>LIBTUX MESSAGE #555</H3>
+<H2> ERROR: Unable to exec <I>command</I> \(em errno=<I>errno_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to execute the
+cleanupsrv
+process.
+The UNIX System library function
+system()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="556"></A>
+<H3>LIBTUX MESSAGE #556</H3>
+<H2> ERROR: Unable to determine ID of server to be removed</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to remove a server process, but was unable to
+determine its ID.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="557"></A>
+<H3>LIBTUX MESSAGE #557</H3>
+<H2> INFO: Server <I>group_name</I>/<I>server_id</I> being restarted</H2><HR>
+<P>
+
+INFO
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System is restarting a server process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="558"></A>
+<H3>LIBTUX MESSAGE #558</H3>
+<H2> ERROR: Restarting a remote server not permitted</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is trying to remote restart a server process.
+This operation is not permitted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="559"></A>
+<H3>LIBTUX MESSAGE #559</H3>
+<H2> ERROR: TUXDIR environment variable not set for restartsrv process</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System environment variable,
+TUXDIR ,
+is not set.
+As such, the
+restartsrv
+process cannot be executed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXDIR
+environment variable and repeat the operation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="561"></A>
+<H3>LIBTUX MESSAGE #561</H3>
+<H2> ERROR: Multi-processor operation sysmulti failed \(em errno=<I>errno_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was running on a multi-processor environment.
+While attempting to restart a server process, the TUXEDO System used the
+sysmulti()
+function, and an error was detected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="562"></A>
+<H3>LIBTUX MESSAGE #562</H3>
+<H2> ERROR: Multi-processor operation sysmulti failed \(em errno=<I>errno_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was running on a multi-processor environment.
+While attempting to restart a server process, the TUXEDO System used the
+sysmulti()
+function, and an error was detected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="563"></A>
+<H3>LIBTUX MESSAGE #563</H3>
+<H2> ERROR: Unable to exec <I>command</I> \(em errno=<I>errno_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to execute the
+restartsrv
+process.
+The UNIX System library function
+system()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="564"></A>
+<H3>LIBTUX MESSAGE #564</H3>
+<H2> ERROR: Unable to exec <I>command</I> application RCMD command \(em errno=<I>errno_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to execute the application-specified
+RCMD
+command associated with the server to be restarted.
+The UNIX System library function
+system()
+used for this operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="575"></A>
+<H3>LIBTUX MESSAGE #575</H3>
+<H2> ERROR: Unable to reset semaphore for sem <I>key_val</I>, errno <I>errno_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was in the process of cleaning up a registry slot for a
+process.
+While doing the aforementioned operation, the semaphore used for that
+process had to be reset.
+The semaphore operation semctl() failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="576"></A>
+<H3>LIBTUX MESSAGE #576</H3>
+<H2> ERROR: Unable to remove queue for process <I>pid</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was in the process of cleaning up a registry slot for a
+process.
+A part of this clean up involves removing queues used by that process.
+The operation used to remove the queue failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="577"></A>
+<H3>LIBTUX MESSAGE #577</H3>
+<H2> ERROR: Unable to register because the slot is already owned by another process</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While registering a process, a conflict arose with regard to a slot in
+the registry table.
+Another process already owned that slot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="578"></A>
+<H3>LIBTUX MESSAGE #578</H3>
+<H2> ERROR: Unable to register because the slot is already owned by another process</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While registering a process, a conflict arose with regard to a slot in
+the registry table.
+Another process already owned that slot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="579"></A>
+<H3>LIBTUX MESSAGE #579</H3>
+<H2> ERROR: Unable to obtain the registry slot owned by process</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was attempting to restart a server.
+In so doing, the system was unable to determine the registry table slot
+that was originally used by the restarting process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="580"></A>
+<H3>LIBTUX MESSAGE #580</H3>
+<H2> ERROR: Attempt to take over registry table entry of non-restarting process</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System attempted to use a registry table slot in a manner that is not
+permitted.
+Re-using a registry table slot is permitted for servers that are restarting,
+but not for a server that is defined to be non-restartable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="581"></A>
+<H3>LIBTUX MESSAGE #581</H3>
+<H2> ERROR: Migrating and given an old pid when none expected</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was attempting to find a registry table slot for a
+restarting server, but the server was set up to migrate.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="582"></A>
+<H3>LIBTUX MESSAGE #582</H3>
+<H2> ERROR: Unable to register, registry table full</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was attempting to find a registry table slot for a
+process, but the registry table was full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the
+MAXACCESSERS
+parameter in the
+UBBCONFIG
+file, rebuild the
+TUXCONFIG
+file, then reboot the application and try again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="583"></A>
+<H3>LIBTUX MESSAGE #583</H3>
+<H2> ERROR: Not a privileged user, incorrect permissions</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user attempted to execute TUXEDO System functions that are reserved
+for users with the correct permissions, but was not authorized to do so.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="584"></A>
+<H3>LIBTUX MESSAGE #584</H3>
+<H2> ERROR: Invalid registry table slot index passed, unable to register</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a process attempts to register with the TUXEDO System, the administrative
+process(es) supplied update the internal registry table.
+In this instance, the registry table index to be used exceeded the number
+of
+MAXACCESSERS
+specified in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the value of the
+MAXACCESSERS parameter in the
+UBBCONFIG
+file, rebuild the
+TUXCONFIG
+file, reboot the TUXEDO System application, and
+repeat the operation(s) again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="585"></A>
+<H3>LIBTUX MESSAGE #585</H3>
+<H2> ERROR: Invalid registry table slot index passed, unable to unregister</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative process attempted to unregister a
+process, but failed in doing so because the index into the registry
+table to be used was outside the bounds of the registry table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="586"></A>
+<H3>LIBTUX MESSAGE #586</H3>
+<H2> ERROR: Unable to unregister process <I>pid</I> \(em errno <I>errno_val</I> tperrno <I>tperror_val</I></H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative process attempted to unregister a
+process, but failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="587"></A>
+<H3>LIBTUX MESSAGE #587</H3>
+<H2> INFO: Process <I>pid</I> that is unregistering has ticket <I>ticket</I></H2><HR>
+<P>
+
+INFO
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process that is unregistering from the TUXEDO System application is holding
+a ticket for the user-level semaphore.
+The ticket value will be cleared as part of the unregistration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="588"></A>
+<H3>LIBTUX MESSAGE #588</H3>
+<H2> ERROR: Unable to open TUXCONFIG file</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative process was unable to open the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="589"></A>
+<H3>LIBTUX MESSAGE #589</H3>
+<H2> ERROR: Unable to read the *RESOURCES section of the TUXCONFIG file</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative process was unable to read the
+*RESOURCES section of the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="590"></A>
+<H3>LIBTUX MESSAGE #590</H3>
+<H2> ERROR: Unable to read the TUXCONFIG file, version type mismatch</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative process was unable to read the
+TUXCONFIG
+file because of a mismatch of version types.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="591"></A>
+<H3>LIBTUX MESSAGE #591</H3>
+<H2> ERROR: Unable to read the TUXCONFIG file, release mismatch</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System administrative process was unable to read the
+TUXCONFIG
+file because the TUXEDO System release number stored in the
+TUXCONFIG
+file did not match the release number compiled into the system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="592"></A>
+<H3>LIBTUX MESSAGE #592</H3>
+<H2> ERROR: Invalid model stored in the TUXCONFIG file, must be SHM or MP</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MODEL
+parameter value stored in the
+TUXCONFIG
+file was not
+MP
+or
+SHM .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file and ensure that the
+MODEL
+parameter value in the *RESOURCES section is
+MP
+or
+SHM .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="593"></A>
+<H3>LIBTUX MESSAGE #593</H3>
+<H2> ERROR: Unable to map ID of a PE to ipckey</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was unable to determine the
+PE
+and
+IPCKEY
+mapping for a particular
+PE .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="594"></A>
+<H3>LIBTUX MESSAGE #594</H3>
+<H2> ERROR: Unable to locate PE entry in the Bulletin Board</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was unable to locate information for a
+PE
+in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="595"></A>
+<H3>LIBTUX MESSAGE #595</H3>
+<H2> ERROR: No '<I>string</I>' entry in <I>table_name</I> table</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System was unable to locate information for the specified string in
+the Bulletin Board table specified.
+It may be that the server was built with an inappropriate
+"-b {shm|mp}"
+option; for example, a server built with
+"-b shm"
+will produce the message:
+<PRE><KBD>
+No 'MP' entry in model table.
+</KBD></PRE>
+when booted in a
+MP
+application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="596"></A>
+<H3>LIBTUX MESSAGE #596</H3>
+<H2> ERROR: [NULL service name used to get service information]</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System internal function was used to retrieve service information
+from the services table, but a
+NULL
+service name was used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="597"></A>
+<H3>LIBTUX MESSAGE #597</H3>
+<H2> ERROR: [Unable to open the *SERVICES section table]</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System internal function was used to retrieve service information
+from the services table, but the open failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="598"></A>
+<H3>LIBTUX MESSAGE #598</H3>
+<H2> ERROR: [Unable to read information from the *SERVICES section table]</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System internal function was used to retrieve service information
+from the services table, but the function used to retrieve information
+from the table failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="599"></A>
+<H3>LIBTUX MESSAGE #599</H3>
+<H2> ERROR: Maximum number of types/subtypes, <I>number</I>, has been exceeded</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The maximum number of types/subtypes permitted for a particular TUXEDO System
+service has been exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Review the configuration file,
+verify that all services use less than
+the maximum number of types/subtypes, and rebuild the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

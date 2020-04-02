@@ -1,0 +1,1932 @@
+<!-- .if n .pH errman.h.ltmsg08.htm @(#)ltmsg08.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1200"></A>
+<H3>LIBTUX MESSAGE #1200</H3>
+<H2> ERROR: Cannot re-attach BB - process lost its BB slot while detached</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is running with the
+TMPROTECTED
+SYSTEM_ACCESS
+value.
+After reattaching to the bulletin board, the context for the
+client or server does not match.
+This indicates that either the bulletin board is corrupted
+or the application was re-booted while the
+client or server was not attached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check with the administrator to see if the application was
+re-booted.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1201"></A>
+<H3>LIBTUX MESSAGE #1201</H3>
+<H2> ERROR: Cannot re-attach BB - magic number mismatch</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is running with the
+TMPROTECTED
+SYSTEM_ACCESS
+value.
+After reattaching to the bulletin board, the wrong magic number was found.
+This indicates that either the bulletin board is corrupted
+or a new release of the application was booted while the
+client or server was not attached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1202"></A>
+<H3>LIBTUX MESSAGE #1202</H3>
+<H2> ERROR: Cannot re-attach BB - wrong release of software</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is running with the
+TMPROTECTED
+SYSTEM_ACCESS
+value.
+After reattaching to the bulletin board, the wrong release was found.
+This indicates that either the bulletin board is corrupted
+or a new release of the application was booted while the
+client or server was not attached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1203"></A>
+<H3>LIBTUX MESSAGE #1203</H3>
+<H2> WARN: Cannot override system default access method PROTECTED</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application called
+tpinit
+with the TPSA_FASTPATH flag set, but the configuration has
+SYSTEM_ACCESS
+set to
+PROTECTED,NO_OVERRIDE .
+tpinit
+will ignore this flag and run in TPSA_PROTECTED mode.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the application to use TPSA_PROTECTED mode, or
+contact the administrator about allowing overriding of the
+SYSTEM_ACCESS
+mode.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1204"></A>
+<H3>LIBTUX MESSAGE #1204</H3>
+<H2> WARN: Cannot override system default access method FASTPATH</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application called
+tpinit
+with the TPSA_PROTECTED flag set, but the configuration has
+SYSTEM_ACCESS
+set to
+FASTPATH,NO_OVERRIDE .
+tpinit
+will ignore this flag and run in TPSA_FASTPATH mode.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the application to use TPSA_FASTPATH mode, or
+contact the administrator about allowing overriding of the
+SYSTEM_ACCESS
+mode.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1205"></A>
+<H3>LIBTUX MESSAGE #1205</H3>
+<H2> WARN: Unable to open MACHINE ENVFILE <I>filename</I> for reading</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In the process of booting a server, the
+ENVFILE
+specified in the MACHINES section on the configuration
+could not be opened for reading.
+The server will still be booted, but the environment will not
+be modified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the machine environment file to see that it exists
+in the correct directory with the right name and with read permission
+for the configuration administrator.
+It may be necessary to shut down the server and re-start it with the
+correct environment.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot(1),
+tmshutdown(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1214"></A>
+<H3>LIBTUX MESSAGE #1214</H3>
+<H2> ERROR: Cannot perform deferred type/subtype resolution in global tables (<I>type</I>/<I>subtype</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is running with the
+TMPROTECTED
+SYSTEM_ACCESS
+value.
+An operation was done on a typed buffer, but checking of the type/subtype
+was deferred.
+When the checking was finally done, the
+<I>type/subtype</I>
+was not recognized by the system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1219"></A>
+<H3>LIBTUX MESSAGE #1219</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid parameter was passed to an internal routine during
+security processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1220"></A>
+<H3>LIBTUX MESSAGE #1220</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed during security processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1222"></A>
+<H3>LIBTUX MESSAGE #1222</H3>
+<H2> ERROR: Unable to open TUXCONFIG file to Resources section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to read the configuration file during security processing,
+the program was unable to open the *RESOURCES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1223"></A>
+<H3>LIBTUX MESSAGE #1223</H3>
+<H2> ERROR: Unable to open Resources section of TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to read the configuration file during security processing,
+the program was unable to read the *RESOURCES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1224"></A>
+<H3>LIBTUX MESSAGE #1224</H3>
+<H2> ERROR: Possibly corrupted key in database</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system key created and stored in the file
+APPDIR/.adm/.keydb
+for use by the
+WSH
+in security applications has become corrupted.  This
+error disables the
+WSH
+from being able to handle new incoming connections
+from workstation clients.
+Note that current implementations of the security
+interfaces within System/T will not generate this error, but future
+ones may if they have more stringent requirements on the key characteristics
+used for encryption.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the application on the offending site, and remove the binary
+TUXCONFIG
+file and the key database APPDIR/.adm/.keydb.
+Then reboot the site; this will automatically re-create the security
+key information correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1225"></A>
+<H3>LIBTUX MESSAGE #1225</H3>
+<H2> ERROR: Error while decrypting password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The security information stored and accessed by TUXEDO System/T has
+become corrupted and cannot be processed correctly by the
+WSH
+in order to allow workstation clients to access the application.
+This error disables the
+WSH
+from being able to handle new incoming connections
+from workstation clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the application on the offending site, and remove the binary
+TUXCONFIG
+file and the key database APPDIR/.adm/.keydb.
+Then reboot the site; this will automatically re-create the security
+key information correctly.  If this does not clear the problem, then
+remove
+TUXCONFIG
+and security information from all sites and reboot.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1226"></A>
+<H3>LIBTUX MESSAGE #1226</H3>
+<H2> ERROR: Invalid password in TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The security information stored and accessed by TUXEDO System/T has
+become corrupted and cannot be processed correctly by the
+WSH
+in order to allow workstation clients to access the application.
+This error disables the
+WSH  from being able to handle new incoming connections
+from workstation clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the application on the offending site, and remove the binary
+TUXCONFIG
+file and the key database APPDIR/.adm/.keydb.
+Then reboot the site; this will automatically re-create the security
+key information correctly.  If this does not clear the problem, then
+remove
+TUXCONFIG
+and security information from all sites and reboot.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1227"></A>
+<H3>LIBTUX MESSAGE #1227</H3>
+<H2> ERROR: Unable to open TUXCONFIG file to read MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to read the application password, the program was unable
+to find the *MACHINES section in
+the configuration file.
+This should not occur.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>LIBTUX MESSAGE #1233</H3>
+<H2> ERROR: Unable to shutdown, clients/servers still attached</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+was unable to shut itself down because clients and/or servers
+are still attached to the Bulletin Board.
+It is the
+BBL 's
+responsibility to clean up and remove the Bulletin
+Board prior to terminating.
+However, the Bulletin Board was not removed since clients and/or
+servers were still attached to it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+First, make sure all application servers have been shut down prior to
+attempting to shut down the
+BBL .
+The tmadmin(1) <Font>printserver (<Font>psr)
+command can be used to print server statistics.
+Shut down all application servers on that site using using tmshutdown(1)
+with the -l option.
+Second, make sure all application clients have terminated.
+The tmadmin(1) <Font>printclient (<Font>pclt)
+command can be used to print client statistics.
+The application administrator can force the
+BBL
+to shut down, by invoking the
+tmshutdown (1)
+command with the
+-c
+option.
+The
+-c
+option will allow for the
+BBL
+to be shut down
+even if clients are still attached to the Bulletin Board.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1236"></A>
+<H3>LIBTUX MESSAGE #1236</H3>
+<H2> WARN: TMDEBUG contains non-numeric characters in first number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The format of the
+TMDEBUG
+variable is invalid.
+The allowable formats for
+TMDEBUG
+are:
+<PRE><KBD>
+number
+number:regular_expression
+number1-number2
+number1-number2:regular_expression
+</KBD></PRE>
+If number is specified, debugging messages with levels less than
+or equal to number will be printed.
+If number1 and <Font>number2 are specified, debugging messages with levels
+between number1 and <Font>number2, inclusive, will be printed.
+If regular_expression is appended to the numeric part of the argument,
+only those messages matching regular_expression will be printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+TMDEBUG
+variable is valid.
+TMDEBUG
+may be incorrectly set and exported in the environment.
+It may also be incorrectly set in an environment file
+using the
+ENVFILE
+parameter in the *MACHINES or SERVERS section
+of the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1237"></A>
+<H3>LIBTUX MESSAGE #1237</H3>
+<H2> WARN: TMDEBUG contains non-numeric characters in 2nd part of range</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message 1236 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message 1236 above.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1238"></A>
+<H3>LIBTUX MESSAGE #1238</H3>
+<H2> WARN: TMDEBUG regular expression invalid.  Ignoring regular expression.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message 1236 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message 1236 above.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1239"></A>
+<H3>LIBTUX MESSAGE #1239</H3>
+<H2> ERROR: Failed to change group via setgid()</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to change its group ID while trying to
+become the administrator.
+The effective user ID of the calling process is super-user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the calling process has permission to change its
+group ID to the group ID the TUXEDO System application administrator
+belongs to.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+setgid (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1240"></A>
+<H3>LIBTUX MESSAGE #1240</H3>
+<H2> ERROR: Failed to change user via setuid()</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to change its user ID while trying to
+become the administrator.
+The effective user ID of the calling process is super-user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the calling process has permission to change its
+user ID to the user ID the TUXEDO System application administrator
+belongs to.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+setuid (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1241"></A>
+<H3>LIBTUX MESSAGE #1241</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc() failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1242"></A>
+<H3>LIBTUX MESSAGE #1242</H3>
+<H2> ERROR: Invalid table type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to open a configuration table in the
+TUXCONFIG
+file.
+An invalid table type was passed to the system routine responsible
+for opening configuration tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1243"></A>
+<H3>LIBTUX MESSAGE #1243</H3>
+<H2> ERROR: Invalid table type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to close a configuration table in the
+TUXCONFIG
+file.
+An invalid table type was passed to the system routine responsible
+for closing configuration tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1244"></A>
+<H3>LIBTUX MESSAGE #1244</H3>
+<H2> ERROR: Invalid table type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to seek a configuration table in the
+TUXCONFIG
+file.
+An invalid table type was passed to the system routine responsible
+for seeking configuration tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1245"></A>
+<H3>LIBTUX MESSAGE #1245</H3>
+<H2> ERROR: Invalid table type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to write a configuration table in the
+TUXCONFIG
+file.
+An invalid table type was passed to the system routine responsible
+for writing configuration tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1246"></A>
+<H3>LIBTUX MESSAGE #1246</H3>
+<H2> ERROR: More than one wild card in entry <I>ranges</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process found more than one wild card in the ranges string,
+<I>ranges</I>,
+while parsing the string based on a packed decimal field type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure there is no more than one wild card in the ranges string
+<I>ranges</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1247"></A>
+<H3>LIBTUX MESSAGE #1247</H3>
+<H2> ERROR: Cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attaching to the Bulletin Board and loading all of the information
+that is in the
+TUXCONFIG
+file into the Bulletin Board, the calling process
+failed to get a data routing entry.
+The failure occurred while parsing a range string into data based on the
+field type information of one of the entries in the ROUTING section of
+the configuration file.
+The calling process was unable to create the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+RANGES
+parameter in the ROUTING section of the
+UBBCONFIG
+file is valid.
+The range strings may not contain a '-' in front of
+MIN
+or
+MAX .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1248"></A>
+<H3>LIBTUX MESSAGE #1248</H3>
+<H2> ERROR: Cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attaching to the Bulletin Board and loading all of the information
+that is in the
+TUXCONFIG
+file into the Bulletin Board, the calling process
+failed to get a data routing entry.
+The failure occurred while parsing a range string into data based on the
+field type information of one of the entries in the ROUTING section of
+the configuration file.
+The calling process was unable to create the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+RANGES
+parameter in the ROUTING section of the
+UBBCONFIG
+file is valid.
+The range strings may not contain a '-' in front of
+MIN
+or
+MAX .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1249"></A>
+<H3>LIBTUX MESSAGE #1249</H3>
+<H2> ERROR: Cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attaching to the Bulletin Board and loading all of the information
+that is in the
+TUXCONFIG
+file into the Bulletin Board, the calling process
+failed to get a data routing entry.
+The failure occurred while parsing a range string into data based on the
+field type information of one of the entries in the ROUTING section of
+the configuration file.
+The calling process was unable to create the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+RANGES
+parameter in the ROUTING section of the
+UBBCONFIG
+file is valid.
+The range strings may not contain a '-' in front of
+MIN
+or
+MAX .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1250"></A>
+<H3>LIBTUX MESSAGE #1250</H3>
+<H2> ERROR: Cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attaching to the Bulletin Board and loading all of the information
+that is in the
+TUXCONFIG
+file into the Bulletin Board, the calling process
+failed to get a data routing entry.
+The failure occurred while parsing a range string into data based on the
+field type information of one of the entries in the ROUTING section of
+the configuration file.
+The calling process was unable to create the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+RANGES
+parameter in the ROUTING section of the
+UBBCONFIG
+file is valid.
+The range strings may not contain a '-' in front of
+MIN
+or
+MAX .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1251"></A>
+<H3>LIBTUX MESSAGE #1251</H3>
+<H2> ERROR: Cannot have a '-' and a '+' sign in front of a number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attaching to the Bulletin Board and loading all of the information
+that is in the
+TUXCONFIG
+file into the Bulletin Board, the calling process
+failed to get a data routing entry.
+The failure occurred while parsing a range string into data based on the
+field type information of one of the entries in the ROUTING section of
+the configuration file.
+The calling process was unable to create the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+RANGES
+parameter in the ROUTING section of the
+UBBCONFIG
+file is valid.
+The range strings may not have '-+' in front of
+number.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1253"></A>
+<H3>LIBTUX MESSAGE #1253</H3>
+<H2> ERROR: shmat failure: errno = <I>errno</I>, key = <I>ipckey</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to create/attach to the Bulletin Board
+while invoking the
+shmat (2)
+system call.
+shmat (2)
+returned with errno set to
+<I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+shmat (2)
+will fail and not attach to the Bulletin Board if one or more
+of the following are true:
+<UL>
+<LI><P>
+An invalid argument was passed
+(EINVAL) .
+In this case contact your TUXEDO System Technical Support.
+<LI><P>
+The operation was denied to the calling process
+(EACCESS) .
+In this case make sure the calling process has permission
+to attach to the Bulletin Board.
+<LI><P>
+The available data space is not large enough to accommodate
+the shared memory segment
+(ENOMEM) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory space.
+<LI><P>
+The number of shared memory segments attached to the calling process
+would exceed the system-imposed limit
+(EMFILE) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory space.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+shmat (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1254"></A>
+<H3>LIBTUX MESSAGE #1254</H3>
+<H2> ERROR: shmget(creat) failure: errno = <I>errno</I>, key = <I>key</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to create/get to the Bulletin Board
+while invoking the
+shget (2)
+system call with key set to
+<I>key</I>
+and the
+IPC_CREAT
+flag set.
+shmget (2)
+returned with errno set to
+<I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+shmget (2)
+will fail if one or more of the following are true:
+<UL>
+<LI><P>
+An invalid argument was passed
+(EINVAL) .
+In this case contact your TUXEDO System Technical Support.
+One specific case where this occurs is if the OS value for SHMMIN
+is set too high (in general, it should always be set to 1).
+<LI><P>
+The operation was denied to the calling process
+(EACCESS) .
+In this case make sure the calling process has permission
+to create/attach to the Bulletin Board.
+<LI><P>
+A shared memory identifier does not exist for key
+(ENOENT) .
+In this case contact your TUXEDO System Technical Support.
+<LI><P>
+The system limit on shared memory identifiers was reached
+(ENOSPC) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory identifiers.
+<LI><P>
+The amount of available memory is not sufficient
+(ENOMEM) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory space.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+shmget (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1255"></A>
+<H3>LIBTUX MESSAGE #1255</H3>
+<H2> ERROR: shmctl(chown) failure: errno = <I>errno</I>, key = <I>key</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to perform a shared memory control operation on
+the Bulletin Board while invoking the
+shmctl (2)
+system call with the
+IPC_SET
+flag set.
+The calling process was unable to set the user ID, group ID, and mode of the
+Bulletin Board.
+shmctl (2)
+returned with errno set to
+<I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+shmctl (2)
+will fail if one or more of the following are true:
+<UL>
+<LI><P>
+An invalid argument was passed
+(EINVAL) .
+In this case contact your TUXEDO System Technical Support.
+<LI><P>
+The operation was denied to the calling process
+(EACCESS) .
+In this case make sure the calling process has permission
+to perform operations on the Bulletin Board.
+<LI><P>
+Not enough memory
+(ENOMEM) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory space.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+shmctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1256"></A>
+<H3>LIBTUX MESSAGE #1256</H3>
+<H2> ERROR: shmat failure: errno = <I>errno</I>, id = <I>id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to create/attach to the Bulletin Board
+while invoking the
+shmat (2)
+system call.
+shmat (2)
+was called with
+shmid
+set to
+<I>id</I>
+and returned with
+errno
+set to
+<I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+shmat (2)
+will fail and not attach to the Bulletin Board if one or more
+of the following are true:
+<UL>
+<LI><P>
+An invalid argument was passed
+(EINVAL) .
+In this case contact your TUXEDO System Technical Support.
+<LI><P>
+The operation was denied to the calling process
+(EACCESS) .
+In this case make sure the calling process has permission
+to attach to the Bulletin Board.
+<LI><P>
+The available data space is not large enough to accommodate
+the shared memory segment
+(ENOMEM) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory space.
+<LI><P>
+The number of shared memory segments attached to the calling process
+would exceed the system-imposed limit
+(EMFILE) .
+In this case the system administrator may have to reconfigure the
+UNIX kernel to allow for more shared memory space.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+shmat (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1257"></A>
+<H3>LIBTUX MESSAGE #1257</H3>
+<H2> ERROR: <I>func</I>: bad value of _gp_fsoffset variable or supplied offset</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid
+VTOC
+file system offset was passed to
+<I>func</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+FSOFFSET
+environment variable is set correctly.
+If the problem persists after resetting the
+FSOFFSET
+environment variable, contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1259"></A>
+<H3>LIBTUX MESSAGE #1259</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc() failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1260"></A>
+<H3>LIBTUX MESSAGE #1260</H3>
+<H2> ERROR: Service request problem: <I>func</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed in a TUXEDO System internal function called
+<I>func</I>
+while trying to add a new service table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look through the
+userlog
+for other messages related to this failure.
+If found, refer to the appropriate system messages.
+If not, consult your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1261"></A>
+<H3>LIBTUX MESSAGE #1261</H3>
+<H2> ERROR: Service request problem: <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed in a TUXEDO System internal function
+because of
+<I>string</I>
+while trying to add a new service table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look through the
+userlog
+for other messages related to this failure.
+If found, refer to the appropriate system messages.
+If not, consult your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1262"></A>
+<H3>LIBTUX MESSAGE #1262</H3>
+<H2> ERROR: Permission denied to boot server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When security is turned on, that is, the
+SECURITY
+parameter is specified
+in the *RESOURCES section of the application configuration file,
+a server may only be booted by the administrator of the application.
+This means that the user ID and group ID of the user attempting to
+boot the server should match the user ID and group ID of the application
+administrator.
+If they do not match, the server will fail to boot and exit gracefully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+TUXCONFIG
+environment variable is set correctly.
+If it is pointing to the right application, make sure that the
+UID
+and
+GID
+parameters are properly set in the *RESOURCES section of the
+configuration file.
+Also verify that the ID of the user that is attempting to boot the
+server is set correctly using the UNIX System
+id (1)
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1263"></A>
+<H3>LIBTUX MESSAGE #1263</H3>
+<H2> ERROR: tpsvrinit() returned in transaction mode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application server has been placed in transaction mode during its
+initialization in
+tpsvrinit ().
+tpsvrinit ()
+returned while still in transaction mode.
+The TUXEDO System will therefore abort the outstanding transaction
+and the application server will exit gracefully.
+Since
+tpsvrinit ()
+is called after the server has joined the application,
+transactions may be defined in this routine.
+However, the transaction must have completed prior to
+tpsvrinit ()
+returning.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that if a transaction is started in
+tpsvrinit (),
+it should also be completed prior to
+tpsvrinit ()
+returning.
+If
+tpbegin ()
+is called in
+tpsvrinit (),
+make sure that either
+tpabort ()
+or
+tpcommit ()
+is also called.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpservice (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1264"></A>
+<H3>LIBTUX MESSAGE #1264</H3>
+<H2> WARN: Ticket stuck high - retrying</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While monitoring the integrity of the Bulletin Board,
+the
+BBL
+found a TUXEDO System user level semaphore with no owner.
+In addition, another process was waiting to be served.
+The
+BBL
+must therefore become the owner of the semaphore
+and delegate it to the waiting process.
+While trying to do so, the
+BBL
+failed to lock the Bulletin Board,
+and will attempt to lock it again.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1265"></A>
+<H3>LIBTUX MESSAGE #1265</H3>
+<H2> WARN: Ticket stuck high - resetting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While monitoring the integrity of the Bulletin Board, the
+BBL
+found a TUXEDO System user level semaphore with no owner.
+In addition, another process was waiting to be served.
+The
+BBL
+must therefore become the owner of the semaphore
+and delegate it to the waiting process.
+The
+BBL
+managed to lock the Bulletin Board, transfer the ownership
+of the semaphore, and adjust the statistics.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1266"></A>
+<H3>LIBTUX MESSAGE #1266</H3>
+<H2> WARN: Ticket stuck high - retrying</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While monitoring the integrity of the Bulletin Board,
+the
+BBL
+found a TUXEDO System user level semaphore with no owner.
+In addition, another process was waiting to be served.
+The
+BBL
+must therefore become the owner of the semaphore
+and delegate it to the waiting process.
+While trying to do so, the
+BBL
+failed to lock the Bulletin Board,
+and will attempt to lock it again.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1274"></A>
+<H3>LIBTUX MESSAGE #1274</H3>
+<H2> ERROR: tpreturn xa_end TMFAIL returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During a call to
+tpreturn ()
+in transaction mode
+with the
+TPFAIL
+flag, a call to
+xa_end
+with the
+TMFAIL
+flag failed with the specified
+<I>errstring</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1275"></A>
+<H3>LIBTUX MESSAGE #1275</H3>
+<H2> ERROR: tpreturn TPESVCERR xa_end TMSUCCESS returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During a call to
+tpreturn ()
+in transaction mode
+with the
+TPSUCCESS
+flag, a call to
+xa_end
+with the
+TMSUCCESS
+flag failed with the specified
+<I>errstring</I>.
+A service error will be returned to the client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1276"></A>
+<H3>LIBTUX MESSAGE #1276</H3>
+<H2> WARN: Forcing deletion of table entries for server <I>group</I>/<I>id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server died and the administrative processes were unable to
+restart or clean up after the server.  The server and service
+entries for the server will be deleted from the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1277"></A>
+<H3>LIBTUX MESSAGE #1277</H3>
+<H2> ERROR: NULL input buffer not allowed for service '<I>service_name</I>', which uses routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An application program passed a
+NULL
+input buffer to the service
+<I>service_name</I>,
+which is defined in the configuration file as using routing.
+Since the null buffer is not a valid type to perform routing on,
+the service call was rejected with an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Recode the service call that resulted in the error so that the input buffer
+is of one of the types specified in the routing criterion that is associated
+with this service in the UBBCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcall (3),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1278"></A>
+<H3>LIBTUX MESSAGE #1278</H3>
+<H2> ERROR: Cannot join application - permission denied</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An ATMI function was called in a client before calling
+tpinit (),
+and an attempt to join the application failed.
+The client cannot join the application because it
+does not have permission to do so or because it did
+not supply the correct application password.
+Permission may be denied based on an invalid
+application password, failure to pass application
+specific authentication, or use of restricted names.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an application error.
+If the application has security turned on, then
+tpinit ()
+must be called explicitly with a
+TPINIT
+buffer supplying a valid password before calling
+any other ATMI functions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1279"></A>
+<H3>LIBTUX MESSAGE #1279</H3>
+<H2> ERROR: Cannot join application - accesser limit exceeded</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An ATMI function was called in a client before calling
+tpinit (),
+and an attempt to join the application failed.
+The client cannot join the application because of space
+limitations.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a application configuration problem.
+The number of accessers is too small and must be reconfigured to
+allow more clients.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+UBBCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1280"></A>
+<H3>LIBTUX MESSAGE #1280</H3>
+<H2> ERROR: Unable to decompress message due to memory allocation failure, size <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+or
+realloc ()
+failed while
+attempting to decompress an application message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1281"></A>
+<H3>LIBTUX MESSAGE #1281</H3>
+<H2> ERROR: Failed to decompress application message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Decompression of an application message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Turn off data compression for the application
+through the variable
+TMCMPLIMIT
+in the
+ENVFILE
+and report the failure to your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1285"></A>
+<H3>LIBTUX MESSAGE #1285</H3>
+<H2> WARN: tpreturn message send blocked, will try file transfer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server process encountered a message queue blocking
+condition when returning a message
+to the client via
+tpreturn ().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The system will automatically attempt to return the message
+using a temporary file.
+Performance may be degraded if this occurs frequently.
+Check the kernel parameters related to message queue size,
+and increase them if necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+and Message No. 1286 below.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1286"></A>
+<H3>LIBTUX MESSAGE #1286</H3>
+<H2> ERROR: tpreturn could not send reply <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server process encountered an error when returning a reply message
+to the client via
+tpreturn ().
+The reply message has been discarded, which
+may cause the client to time out or block forever waiting for the
+lost message.
+The cause may be that the message queue size is too small to receive
+the reply.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the kernel parameters related to message queue size,
+and increase them if necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1287"></A>
+<H3>LIBTUX MESSAGE #1287</H3>
+<H2> ERROR: Failure to allocate memory for file message transfer, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When receiving a message that was transferred in a file because
+it was too large to put on a message queue,
+tprealloc ()
+failed to allocate a typed buffer big enough to hold the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1288"></A>
+<H3>LIBTUX MESSAGE #1288</H3>
+<H2> ERROR: File transfer creat failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+creat ()
+failed on
+<I>filename</I>.
+This temporary file was being created to transfer a large message
+between two TUXEDO System processes on the same machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check temporary directory's permissions.
+Check disk space and inode counts for the temporary file system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1289"></A>
+<H3>LIBTUX MESSAGE #1289</H3>
+<H2> ERROR: File transfer write failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+write ()
+failed on
+<I>filename</I>.
+This temporary file was being written to transfer a large message
+between two TUXEDO System processes on the same machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check directory and file permissions for the temporary files.
+Check disk space and inode counts for the temporary file system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1290"></A>
+<H3>LIBTUX MESSAGE #1290</H3>
+<H2> ERROR: File transfer close failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+close ()
+failed on
+<I>filename</I>
+after it had been written.
+This temporary file was being used to transfer a large message
+between two TUXEDO System processes on the same machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check disk space and inode counts for the temporary file system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1291"></A>
+<H3>LIBTUX MESSAGE #1291</H3>
+<H2> ERROR: File transfer fstat failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+fstat ()
+failed on
+<I>filename</I>.
+This temporary file was being used to transfer a large message
+between two TUXEDO System processes on the same machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check directory and file permissions for the temporary files,
+disk space and inode counts for the temporary file system, the
+PERM
+parameter in the *RESOURCES section of the configuration file, and
+check for any cron job or other process that might be
+deleting files from the temporary file directory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1292"></A>
+<H3>LIBTUX MESSAGE #1292</H3>
+<H2> ERROR: File transfer open failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+open ()
+failed on
+<I>filename</I>.
+This temporary file was being used to transfer a large message
+between two TUXEDO System processes on the same machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check directory and file permissions for the temporary files, the
+PERM
+parameter in the *RESOURCES section of the configuration file, and
+check for any cron job or other process that might be
+deleting files from the temporary file directory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1293"></A>
+<H3>LIBTUX MESSAGE #1293</H3>
+<H2> ERROR: File transfer read failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+read ()
+failed on
+<I>filename</I>.
+This temporary file was being used to transfer a large message
+between two TUXEDO System processes on the same machine.
+It either could not be read, or the wrong number of bytes were read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check directory and file permissions for the temporary files,
+disk space and inode counts for the temporary file system, the
+PERM
+parameter in the *RESOURCES section of the configuration file, and
+for any cron job or other process that might be
+deleting files from the temporary file directory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1294"></A>
+<H3>LIBTUX MESSAGE #1294</H3>
+<H2> ERROR: File transfer close failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+close ()
+failed on
+<I>filename</I>
+after it had been read.
+This temporary file was being used to transfer a large message
+between two TUXEDO System processes on the same machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1295"></A>
+<H3>LIBTUX MESSAGE #1295</H3>
+<H2> WARN: File transfer unlink failed, file=<I>filename</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX kernel call
+unlink ()
+failed on
+<I>filename</I>
+after it had been read.
+This temporary file was being used to transfer a large message
+between two TUXEDO System processes on the same machine.
+Although the transfer succeeded,
+the file could not be unlinked (deleted), and still is present
+in the system's temporary file directory.
+This might cause the file system to fill up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check directory and file permissions for the temporary files.
+If the sticky bit is set for the directory, one user might not be
+able to delete another user's files.
+Check the
+PERM
+parameter in the *RESOURCES section of the configuration file.
+As a temporary measure, delete
+<I>filename</I>
+manually.
+It is no longer needed by the TUXEDO System.
+If there are many such files, schedule a
+cron
+job to periodically delete files older than
+a certain threshold.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1296"></A>
+<H3>LIBTUX MESSAGE #1296</H3>
+<H2> WARN: Cannot retrieve own server group table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting, a server was unable to retrieve its own server table entry.
+This particular failure by itself will not cause the server to be incapable
+of processing service requests, but may be indicative of problems elsewhere
+in the system.
+<P>
+If the output from
+tmboot (1)
+indicates that a prior attempt to boot this same server on a different
+node had failed, the location of the server group in the bulletin board
+and the
+TUXCONFIG
+file will not be updated to reflect the current location
+of this server.
+The server will still be active and able to receive requests,
+but the first subsequent attempt to migrate the server will restart
+the server on the same processor where it is now running.
+Once this first subsequent migration occurs,
+the server location will be stored consistently.
+Also, if the configuration is shut down and rebooted,
+tmboot (1)
+will first attempt to start this server group on the processor where it is
+not now running.
+(Note that the condition mentioned in this paragraph will
+not normally be the case.)
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+In the normal case, where
+tmboot (1)
+did not indicate that automatic server migration had occurred for this
+server's group, no action is required.
+However, this condition is likely
+to be indicative of problems elsewhere in the system.
+If
+tmboot (1)
+did indicate that automatic server group migration took place for this
+server's group,
+the administrator may wish to shut down and restart this
+server group so that the group location is stored consistently.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1297"></A>
+<H3>LIBTUX MESSAGE #1297</H3>
+<H2> INFO: Boot process migrating location of group <I>group_name</I> to machine <I>machine_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmboot (1)
+process was unable to successfully boot group
+<I>group_name</I>
+on its current machine.
+Therefore,
+tmboot (1)
+is migrating the location of this group to its alternate machine,
+<I>machine_name</I>.
+The first server in the group to be booted writes this message to the
+userlog.
+The group's migration is also noted in the output from
+tmboot (1).
+The group will remain located on
+<I>machine_name</I>
+until it is manually migrated to its former machine by the administrator,
+or until a subsequent
+tmboot (1)
+detects that the group is unable to run on machine
+<I>machine_name</I>,
+but is able to run on the original machine name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

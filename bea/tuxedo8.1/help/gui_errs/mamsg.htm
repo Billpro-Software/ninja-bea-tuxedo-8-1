@@ -1,0 +1,1747 @@
+<!-- .if n .pH errman.h.mamsg.htm @(#)mamsg.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>MAC MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3> MESSAGE #1000</H3>
+<H2> ERROR: USAGE: Set name value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You can set environment variables with TuxShell using the Set command.  The
+syntax for the Set command is "Set <I>name value</I>", which will set the
+environment variable <I>name</I> to the value <I>value</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the Set command in the script run by the TuxShell has the proper
+format.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3> MESSAGE #1001</H3>
+<H2> ERROR: Could not allocate memory for environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While creating an environment context, the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase the
+amount of memory which is allotted to TuxShell using the finder.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3> MESSAGE #1002</H3>
+<H2> ERROR: tuxputenv returns an error.  String not added to environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tuxputenv(3) returned an error while TuxShell was setting an environment
+variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase the
+amount of memory which is allotted to TuxShell using the finder.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3> MESSAGE #1003</H3>
+<H2> ERROR: Environment is full</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TuxShell process can only keep track of 255 environment variables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use fewer environment variables in your TuxShell script.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1004"></A>
+<H3> MESSAGE #1004</H3>
+<H2> ERROR: tuxputenv returns an error.  String not added to environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+<I>tuxputenv</I>(3) returned an error while TuxShell was setting an environment
+variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase the
+amount of memory which is allotted to TuxShell using the finder.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3> MESSAGE #1005</H3>
+<H2> ERROR: USAGE: Unset name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You can unset environment variables with TuxShell using the Unset command.  The
+syntax for the Unset command is "Unset <I>name</I>", which will unset the
+environment variable <I>name</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the Unset command in the script run by the TuxShell has the proper
+format.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3> MESSAGE #1007</H3>
+<H2> ERROR: Memory Full Error returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A high level event has been received by the process.  The Macintosh High
+Level Event API AEProcessAppleEvent has been called, in order to properly
+parse the event.  A <I>memFullErr</I> event code was returned by
+AEProcessAppleEvent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the process was running.  Increase the
+amount of memory which is allotted to the process using the finder.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3> MESSAGE #1008</H3>
+<H2> ERROR: Buffer is too small returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A high level event has been received by the process.  The Macintosh High
+Level Event API AEProcessAppleEvent has been called, in order to properly
+parse the event.  A <I>bufferIsSmall</I> event code was returned by
+AEProcessAppleEvent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The high level event returned by the system is improper.
+Contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3> MESSAGE #1009</H3>
+<H2> ERROR: Corrupt Data returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A high level event has been received by the process.  The Macintosh High
+Level Event API AEProcessAppleEvent has been called, in order to properly
+parse the event.  A <I>errAECorruptData</I> event code was returned by
+AEProcessAppleEvent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The high level event returned by the system is improper.
+Contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3> MESSAGE #1010</H3>
+<H2> ERROR: Newer Version returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A high level event has been received by the process.  The Macintosh High
+Level Event API AEProcessAppleEvent has been called, in order to properly
+parse the event.  A <I>errAENewerVersion</I> event code was returned by
+AEProcessAppleEvent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The high level event returned by the system is improper.
+Contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3> MESSAGE #1011</H3>
+<H2> ERROR: The directory {TUXDIR}lib is not present</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc(1) and <Font>viewc32 need to be able to find the {TUXDIR}lib
+directory on Macintosh, in order to find the Symantec Project VIEWC_DNR.prj.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that TUXDIR is set using the Set command.  Make sure that the
+{TUXDIR}lib directory exists as has the proper permissions.  Make sure
+that the project VIEWC_DNR.prj can be located in the {TUXDIR}lib directory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1012"></A>
+<H3> MESSAGE #1012</H3>
+<H2> ERROR: Error creating FSSpec record</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating an internal structure to represent the
+{TUXDIR}lib directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3> MESSAGE #1013</H3>
+<H2> ERROR: Error creating alias record</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating an internal structure to represent the
+{TUXDIR}lib directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3> MESSAGE #1014</H3>
+<H2> ERROR: Error creating descriptor list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating an internal structure to represent the
+{TUXDIR}lib directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3> MESSAGE #1015</H3>
+<H2> ERROR: The file VIEWC_DNR was removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc(1) and <Font>viewc32 need to be able to find the {TUXDIR}lib
+directory on Macintosh, in order to find the Symantec Project VIEWC_DNR.prj.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that TUXDIR is set using the Set command.  Make sure that the
+{TUXDIR}lib directory exists as has the proper permissions.  Make sure
+that the project VIEWC_DNR.prj can be located in the {TUXDIR}lib directory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3> MESSAGE #1016</H3>
+<H2> ERROR: Error creating FSSpec record</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating an internal structure to represent the
+{TUXDIR}lib:VIEWC_DNR.prj file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3> MESSAGE #1017</H3>
+<H2> ERROR: Error creating alias record</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating an internal structure to represent the
+{TUXDIR}lib:VIEWC_DNR.prj file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3> MESSAGE #1018</H3>
+<H2> ERROR: Error adding Alias record to list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while updating an internal structure to represent the
+{TUXDIR}lib:VIEWC_DNR.prj file, inside the {TUXDIR}lib directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3> MESSAGE #1019</H3>
+<H2> ERROR: Error Creating Finder Address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating an internal structure to represent the
+finder.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3> MESSAGE #1020</H3>
+<H2> ERROR: Error Creating High Level Event for Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating a high level event for the Symantec compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3> MESSAGE #1021</H3>
+<H2> ERROR: Error adding option to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while updating a high level event for the Symantec compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3> MESSAGE #1022</H3>
+<H2> ERROR: Error adding Alias List to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while updating a high level event for the Symantec compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3> MESSAGE #1023</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while sending a high level event to the Symantec compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3> MESSAGE #1024</H3>
+<H2> ERROR: Error Creating Target Compiler Address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating a high level event for the MPW compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3> MESSAGE #1025</H3>
+<H2> ERROR: Error getting the current working directory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to find the current working directory of the process, an
+error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the directory in which the process is working still exists.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3> MESSAGE #1026</H3>
+<H2> ERROR: Error Creating High Level Event for Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating a high level event for the MPW compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3> MESSAGE #1027</H3>
+<H2> ERROR: Error adding buildclient command to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  An error occurred while updating a high level event with
+the buildclient command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1028"></A>
+<H3> MESSAGE #1028</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  The MPW compiler may have taken too long to complete
+the compilation process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3> MESSAGE #1029</H3>
+<H2> ERROR: An error occurred getting the MPW Error Code</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  An error occurred while attempting to retrieve the status
+of the compilation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3> MESSAGE #1030</H3>
+<H2> WARN: An error has occurred compiling the file.  Usually a struct > 32K</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  The view compilation has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The usual cause of this error is a view structure which is greater than 32K.
+The MPW compiler cannot handle a structure this large, and hence this
+compilation will fail.  Decrease the number of elements in the view, or
+the number of occurrences of elements in the view.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3> MESSAGE #1031</H3>
+<H2> ERROR: Error creating Launch record for internal application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In the second phase of viewc and <Font>viewc32, an application which
+was generated in the first phase must be run.  An error occurred while
+generating a launch record for this application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3> MESSAGE #1032</H3>
+<H2> ERROR: Error launching internal application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In the second phase of viewc and <Font>viewc32, an application which
+was generated in the first phase must be run.  An error occurred while
+launching this application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3> MESSAGE #1033</H3>
+<H2> ERROR: Error waiting for launched application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In the second phase of viewc and <Font>viewc32, an application which
+was generated in the first phase must be run.  An error occurred while
+waiting for this application to finish execution.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1034"></A>
+<H3> MESSAGE #1034</H3>
+<H2> ERROR: TUXDIR is not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to initialize the Symantec THINK C compiler, it was found
+that TUXDIR was not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the Set command in your TuxShell script to set the appropriate
+value for TUXDIR.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3> MESSAGE #1035</H3>
+<H2> ERROR: Utility not handled</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unknown utility was requested in TuxShell.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3> MESSAGE #1036</H3>
+<H2> ERROR: Error Creating THINK Address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to create the address of the Symantec THINK C compiler,
+an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3> MESSAGE #1037</H3>
+<H2> ERROR: Error Creating High Level Event for THINK Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to create a high level event for the Symantec THINK C
+compiler, an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3> MESSAGE #1038</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While waiting for a high level event from the Symantec THINK C
+compiler, an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3> MESSAGE #1039</H3>
+<H2> ERROR: An error occurred making compiler nonInteractive</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while attempting to make the Symantec THINK C compiler
+noninteractive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3> MESSAGE #1040</H3>
+<H2> ERROR: viewc created file not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  While the Symantec THINK C Compiler was being used, TuxShell
+could not find the file generated by viewc or <Font>viewc32.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3> MESSAGE #1041</H3>
+<H2> ERROR: Error creating FSSpec record</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  While the Symantec THINK C Compiler was being used, TuxShell
+could create an FSSpec record for this file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3> MESSAGE #1042</H3>
+<H2> ERROR: Error Creating High Level Event for THINK Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating a high level event for the THINK compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3> MESSAGE #1043</H3>
+<H2> ERROR: Error adding file name to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  While the Symantec THINK C Compiler was being used, TuxShell
+could not add the file name to a high level apple event for the compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3> MESSAGE #1044</H3>
+<H2> ERROR: Error adding signature to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  While the Symantec THINK C Compiler was being used, TuxShell
+could not add the application signature to a high level apple event for
+the compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1045"></A>
+<H3> MESSAGE #1045</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  While the Symantec THINK C Compiler was being used, a timeout error
+occurred while waiting for the compiler to compile the file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3> MESSAGE #1046</H3>
+<H2> ERROR: An error occurred adding generated file to project</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  An error occurred while attempting to add the file to the VIEWC_DNR.prj
+project.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1047"></A>
+<H3> MESSAGE #1047</H3>
+<H2> ERROR: An error occurred getting obj specifier of file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be compiled in its first
+phase.  An error occurred while attempting to retrieve information about
+the file which has been added to the VIEWC_DNR.prj project.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3> MESSAGE #1048</H3>
+<H2> ERROR: Error Creating High Level Event for THINK Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  An error occurred while attempting to create an apple event to
+tell the Symantec THINK C compiler to run the project.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1049"></A>
+<H3> MESSAGE #1049</H3>
+<H2> ERROR: Error adding update options to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  An error occurred while attempting to create an update an apple event to
+tell the Symantec THINK C compiler to run the project.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1050"></A>
+<H3> MESSAGE #1050</H3>
+<H2> ERROR: Error adding save options to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  An error occurred while attempting to create an update an apple event to
+tell the Symantec THINK C compiler to run the project.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1051"></A>
+<H3> MESSAGE #1051</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  An error occurred while waiting for the VIEWC_DNR.prj project to
+run to completion.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3> MESSAGE #1052</H3>
+<H2> ERROR: Error running internal application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  The application did not run successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3> MESSAGE #1053</H3>
+<H2> ERROR: Error Creating High Level Event for THINK Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  We are attempting to clean the VIEWC_DNR.prj project by removing
+the file generated in the first phase.  However, an error occurred while
+generating a high level apple event for this purpose.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1054"></A>
+<H3> MESSAGE #1054</H3>
+<H2> ERROR: Error adding file name to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  We are attempting to clean the VIEWC_DNR.prj project by removing
+the file generated in the first phase.  An error occurred while
+adding the file name to a high level apple event.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3> MESSAGE #1055</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  We are attempting to clean the VIEWC_DNR.prj project by removing
+the file generated in the first phase.  A timeout error occurred while waiting
+for the Symantec THINK C Compiler to remove the file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3> MESSAGE #1056</H3>
+<H2> ERROR: An error occurred removing generated file from project</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 creates a file to be run in its second
+phase.  We are attempting to clean the VIEWC_DNR.prj project by removing
+the file generated in the first phase.  An error occurred while
+removing the file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3> MESSAGE #1057</H3>
+<H2> WARN: The utility returned an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+All the utilities which TuxShell runs return an error code.  One
+of the utilities run by TuxShell returned an error.  This occurs when
+<I>wud</I> or <I>wud32</I> is being used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the documentation on the utility which returned an error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3> MESSAGE #1058</H3>
+<H2> ERROR: Could not get utility menu Handle</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred reading the resource fork of the TuxShell.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3> MESSAGE #1059</H3>
+<H2> ERROR: An error occurred quitting project</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Symantec THINK C Compiler returned an error to TuxShell while quitting
+the VIEWC_DNR.prj project.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3> MESSAGE #1060</H3>
+<H2> ERROR: Error Creating THINK Address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to generate an address for the Symantec THINK C Compiler,
+an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3> MESSAGE #1061</H3>
+<H2> ERROR: CC is not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When using viewc or <Font>viewc32 through <Font>TuxShell,
+the environment variable CC must be set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set CC depending on the compiler which is being used.  If you are using the
+MPW compiler, set CC to applec.  If you are using the Symantec THINK C
+compiler, set CC to THINK_C.  If you are using the MetroWerks CodeWarrior
+compiler, set CC to mwerks.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1062"></A>
+<H3> MESSAGE #1062</H3>
+<H2> ERROR: Compiler <I>compiler</I> is not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The compiler <I>compiler</I> given via the CC environment variable is not
+supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set CC depending on the compiler which is being used.  If you are using the
+MPW compiler, set CC to applec.  If you are using the Symantec THINK C
+compiler, set CC to THINK_C.  If you are using the MetroWerks CodeWarrior
+compiler, set CC to mwerks.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3> MESSAGE #1063</H3>
+<H2> ERROR: Error Creating High Level Event for THINK Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 must run the Symantec THINK C compiler.  An
+error occurred while creating a High Level Event.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1064"></A>
+<H3> MESSAGE #1064</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc or <Font>viewc32 must run the Symantec THINK C compiler.
+A timeout error occurred while configuring the Symantec THINK C Compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1065"></A>
+<H3> MESSAGE #1065</H3>
+<H2> ERROR: Error Creating THINK Address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to generate an address for the Symantec THINK C Compiler,
+an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3> MESSAGE #1066</H3>
+<H2> ERROR: THINK C compile call returns an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Symantec THINK C compiler failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1067"></A>
+<H3> MESSAGE #1067</H3>
+<H2> ERROR: MPW compile call returns an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The MPW compiler failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1068"></A>
+<H3> MESSAGE #1068</H3>
+<H2> ERROR: Compiler not supported: <I>compiler</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+<I>compiler</I> is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set CC depending on the compiler which is being used.  If you are using the
+MPW compiler, set CC to applec.  If you are using the Symantec THINK C
+compiler, set CC to THINK_C.  If you are using the MetroWerks CodeWarrior
+compiler, set CC to mwerks.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1069"></A>
+<H3> MESSAGE #1069</H3>
+<H2> WARN: Utility not found: <I>utility</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell</I> does not run <I>utility</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure your TuxShell script invokes only those utilities which
+are available to it.  Utilities which are supported by TuxShell are
+gencat, <Font>mklanginfo, <Font>mkfldhdr, <Font>viewc, <Font>viewdis,
+viewc32, <Font>viewdis32, <Font>mkfldhdr32, <Font>set, and <Font>unset.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3> MESSAGE #1070</H3>
+<H2> WARN: Quoting Error. Skipping line</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+All double quoted elements must have a terminating double quote in
+TuxShell scripts.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you are using double quotes, make sure they are properly matched in your
+TuxShell script.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3> MESSAGE #1071</H3>
+<H2> WARN: Too many parameters.  Skipping line</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell can handle a maximum of 31 arguments per command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use fewer arguments.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1072"></A>
+<H3> MESSAGE #1072</H3>
+<H2> WARN: Could not start compiler. Skipping line</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell attempted to start a compiler for <Font>viewc or <Font>viewc32
+but was not successful.  TuxShell will skip the line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Analyze the cause of the compiler failure.  If you are using Symantec THINK
+C, be sure that the VIEWC_DNR.prj is located in TUXDIR:lib:.  Be sure that
+if you double click on VIEWC_DNR.prj, that the compiler launches properly.
+Be sure that the Symantec THINK C Compiler is not already active.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3> MESSAGE #1073</H3>
+<H2> WARN: An Error occurred in utility: <I>utility</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+All the utilities which TuxShell runs return an error code.  One
+of the utilities run by TuxShell returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the documentation on the utility which returned an error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3> MESSAGE #1074</H3>
+<H2> ERROR: A fatal error has occurred.  Aborting TuxShell</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Some fatal error has occurred during the TuxShell processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Restart TuxShell and try again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3> MESSAGE #1075</H3>
+<H2> ERROR: Could not get apple menu Handle</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred reading the resource fork of the TuxShell.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3> MESSAGE #1076</H3>
+<H2> ERROR: Could not get file menu Handle</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred reading the resource fork of the TuxShell.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3> MESSAGE #1077</H3>
+<H2> ERROR: Memory Full Error returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the TuxShell was processing a high level apple event, a memFullErr
+occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase
+the amount of memory which is allotted to TuxShell using the finder.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3> MESSAGE #1078</H3>
+<H2> ERROR: Buffer is too small returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the TuxShell was processing a high level apple event,
+a bufferIsSmall error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3> MESSAGE #1079</H3>
+<H2> ERROR: Corrupt Data returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the TuxShell was processing a high level apple event,
+a errAECorruptData error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3> MESSAGE #1080</H3>
+<H2> ERROR: Newer Version returned by AEProcessAppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the TuxShell was processing a high level apple event,
+a errAENewerVersion error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3> MESSAGE #1081</H3>
+<H2> ERROR: Unable to open TuxShell.stdout</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell attempt to write all output destined for stdout into a file
+called TuxShell.stdout.  However, TuxShell could not open the file
+in the working directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the working directory of the TuxShell exists and that
+it is writable.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3> MESSAGE #1082</H3>
+<H2> ERROR: Unable to open TuxShell.stderr</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell attempt to write all output destined for stderr into a file
+called TuxShell.stderr.  However, TuxShell could not open the file
+in the working directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the working directory of the TuxShell exists and that
+it is writable.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3> MESSAGE #1083</H3>
+<H2> ERROR: Error opening script file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell attempted to open a script for execution.  However,
+TuxShell could not open the file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the directory in which the script resides is writable by the
+user of TuxShell.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1084"></A>
+<H3> MESSAGE #1084</H3>
+<H2> ERROR: Error retrieving directory name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TuxShell attempted to open a script for execution.  However,
+TuxShell could not retrieve the name of the directory in which the
+file exists.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the directory in which the script resides is writable by the
+user of TuxShell.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3> MESSAGE #1085</H3>
+<H2> ERROR: Error initializing status dialog</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred reading the resource fork of the TuxShell.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1086"></A>
+<H3> MESSAGE #1086</H3>
+<H2> ERROR: Error updating status dialog</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred reading the resource fork of the TuxShell.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3> MESSAGE #1087</H3>
+<H2> INFO: User killed script</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user of TuxShell cancelled the script while in progress.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Do not hit the CANCAL button.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3> MESSAGE #1088</H3>
+<H2> ERROR: Unknown Error: <I>number</I> returned by RunScript</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal routine of TuxShell</I> returned unknown error code <I>number</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3> MESSAGE #1089</H3>
+<H2> ERROR: Memory is low.  Aborting TuxShell</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The memory low routine of TuxShell was invoked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase
+the amount of memory which is allotted to TuxShell using the finder.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3> MESSAGE #1090</H3>
+<H2> ERROR: Unable to allocate Handle for emergency memory. Aborting TuxShell</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The memory low routine of TuxShell was invoked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase
+the amount of memory which is allotted to TuxShell using the finder.  If
+it seems that there should be enough memory for this operation, contact your
+TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3> MESSAGE #1091</H3>
+<H2> INFO:  Could not add <I>variable</I> to environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Set command of TuxShell</I> could not add <I>variable</I> to the
+environment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the TuxShell was running.  Increase
+the amount of memory which is allotted to TuxShell using the finder.  If
+it seems that there should be enough memory for this operation, contact your
+TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3> MESSAGE #1092</H3>
+<H2> WARN: wud32 returns an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The wud32 command of TuxShell returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the files TuxShell.stdout and TuxShell.stderr for further information
+about the cause of failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1093"></A>
+<H3> MESSAGE #1093</H3>
+<H2> WARN: wud returns an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The wud command of TuxShell returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the files TuxShell.stdout and TuxShell.stderr for further information
+about the cause of failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3> MESSAGE #1094</H3>
+<H2> WARN: TuxShell file overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while reading the TuxShell script file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1095"></A>
+<H3> MESSAGE #1095</H3>
+<H2> ERROR: MWERKS_MPW must be set to the MPW component of Code Warrior</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If the MetroWerks compiler is used, then the environment variable MWERKS_MPW
+must be set to point to the directory where the MPW component of the
+MetroWerks compiler is installed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you are using the MetroWerks compiler, be sure to install the MPW portion
+of the compiler.  Set MWERKS_MPW to point to the directory where the MPW
+utilities are installed.  The ToolServer must also know where to find
+the MPW utilities.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3> MESSAGE #1096</H3>
+<H2> ERROR: Error Creating Target Compiler Address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred creating the address for the MetroWerks Compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3> MESSAGE #1097</H3>
+<H2> ERROR: TUXDIR is not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to initialize the MetroWerks compiler, it was found
+that TUXDIR was not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the Set command in your TuxShell script to set the appropriate
+value for TUXDIR.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3> MESSAGE #1098</H3>
+<H2> ERROR: Error getting the current working directory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to find the current working directory of the process, an
+error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the directory in which the process is working still exists.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3> MESSAGE #1099</H3>
+<H2> ERROR: Error Creating High Level Event for Compiler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while creating a high level event for the MetroWerks compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3> MESSAGE #1100</H3>
+<H2> ERROR: Error adding buildclient command to Apple Event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  An error occurred while updating a high level event with
+the buildclient command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3> MESSAGE #1101</H3>
+<H2> ERROR: TimeoutError Waiting for reply AppleEvent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while sending a high level event to the MetroWerks compiler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3> MESSAGE #1102</H3>
+<H2> ERROR: An error occurred getting the MPW Error Code</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  An error occurred while attempting to retrieve the status
+of the compilation.  For the MetroWerks compiler, the MPW versions of the
+compiler are used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1103"></A>
+<H3> MESSAGE #1103</H3>
+<H2> WARN: An error has occurred compiling the view file.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  An error occurred during the compilation of the file.
+For the MetroWerks compiler, the MPW versions of the compiler are used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3> MESSAGE #1104</H3>
+<H2> ERROR: MetroWerks compile call returns an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+viewc and <Font>viewc32 work by sending a buildclient command to
+ToolServer.  An error occurred during the compilation of the file.
+For the MetroWerks compiler, the MPW versions of the compiler are used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,21 @@
+TUXEDO/D:tuxd_switch:${TUXDIR}/lib/librms.a ${TUXDIR}/lib/libfs.a
+TUXEDO/SQL:tuxsql_switch:${TUXDIR}/lib/libsql.a ${TUXDIR}/lib/libusort.a ${TUXDIR}/lib/librms.a ${TUXDIR}/lib/libfs.a
+NONE:tmnull_switch: 
+TUXEDO/QM:tuxq_switch:${TUXDIR}/lib/libqm.a ${TUXDIR}/lib/libtmib.a
+#
+# BEA makes no attempt to keep the information in the following samples
+# up to date.  To make sure you have correct and complete information for
+# your platform and RM version, please consult your RM vendor.
+#
+# ORACLE 7
+Oracle_XA:xaosw:-L${ORACLE_HOME}/lib -lxa ${ORACLE_HOME}/lib/libsql.a -lora -lsqlnet -lcore -lnlsrtl -lcore ${ORACLE_HOME}/lib/osntab.o -lsqlnet -lcv6 -lora -lm -lsocket
+# INFORMIX-Online 5
+INFORMIX-OnLine:infx_xa_switch:${INFORMIXDIR}/lib/esql/libinfxxa.a -lx
+# INFORMIX-Online 6
+#INFORMIX-OnLine:infx_xa_switch:${INFORMIXDIR}/lib/esql/libinfxxa.a ${INFORMIXDIR}/lib/esql/libsql.a ${INFORMIXDIR}/lib/libasf.a ${INFORMIXDIR}/lib/netlib.a ${INFORMIXDIR}/lib/esql/libgen.a ${INFORMIXDIR}/lib/esql/libos.a -lsocket -lm
+#ident	"@(#) tuxedo/cmdtux/nt/RM	$Revision: 1.3 $"
+TUXEDO/D;tuxd_switch;%TUXDIR%\lib\librms.lib %TUXDIR%\lib\libfs.lib
+TUXEDO/SQL;tuxsql_switch;%TUXDIR%\lib\libsql.lib %TUXDIR%\lib\libusort.lib %TUXDIR%\lib\librms.lib %TUXDIR%\lib\libfs.lib
+NONE;tmnull_switch; 
+TUXEDO/QM;tuxq_switch;%TUXDIR%\lib\libqm.lib
+#ident	"@(#)RM	1.3"

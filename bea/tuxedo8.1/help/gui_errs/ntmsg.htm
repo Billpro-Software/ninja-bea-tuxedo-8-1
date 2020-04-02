@@ -1,0 +1,1551 @@
+<!-- .if n .pH errman.h.ntmsg.htm @(#)ntmsg.htm	60.4 of 3/12/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>NT MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1"></A>
+<H3> MESSAGE #1</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+An attempt to allocate memory for
+semaphore list
+from the operating system using <KBD>malloc()</KBD> failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2"></A>
+<H3> MESSAGE #2</H3>
+<H2> ERROR: Cannot open semaphore '<I>e</I>': <I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>OpenSemaphore()</KBD> system function call which returns a handle of
+an existing named semaphore object failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3"></A>
+<H3> MESSAGE #3</H3>
+<H2> ERROR: Cannot wakeup proc <I>d</I>: <I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>ReleaseSemaphore()</KBD> system function call
+to wake up a process failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4"></A>
+<H3> MESSAGE #4</H3>
+<H2> ERROR: Cannot access ipc server (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>WaitNamePipe()</KBD> system function call which waits forever on
+TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) until it is available to be
+connected to failed.  The TUXEDO IPC Server cannot be accessed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+Check to see if the TUXEDO IPC Helper service has been stopped by going
+into Control Panel Service applet.  If so, restart the TUXEDO IPC
+Helper service from the Control Panel of your machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5"></A>
+<H3> MESSAGE #5</H3>
+<H2> ERROR: Cannot access server pipe (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateFile()</KBD> system function call which is used to open
+the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) for read or write failed.
+INVALID_HANDLE_VALUE has been returned from <KBD>CreateFile()</KBD>.
+The TUXEDO IPC Server cannot be accessed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+Check to see if the TUXEDO IPC Helper service has been stopped by going
+into Control Panel Service applet.  If so, restart the TUXEDO IPC
+Helper service from the Control Panel of your machine.
+Also, check the permissions on the TUXEDO IPC Helper service.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="6"></A>
+<H3> MESSAGE #6</H3>
+<H2> ERROR: Cannot set pipe state (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>SetNamedPipeHandleState()</KBD> system function call which sets
+the read mode of the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+Data is set to be read from the pipe as a stream of messages.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="7"></A>
+<H3> MESSAGE #7</H3>
+<H2> ERROR: Cannot contact ipc server (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>TransactNamedPipe()</KBD> system function call which
+combines a write operation and a read operation
+into a single network operation from the
+the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+The TUXEDO IPC server cannot be contacted.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This function fails if the server did not create the pipe
+as a message-type pipe or if the pipe handle is not in
+message-read mode.
+Also, the function returns ERROR_MORE_DATA if the read buffer specified
+in the call is not large enough to hold the entire message.
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="8"></A>
+<H3> MESSAGE #8</H3>
+<H2> ERROR: Invalid reply length from server (<I>y</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The reply buffer from the TUXEDO IPC Server has invalid length
+after the <KBD>TransactNamedPipe()</KBD> system function call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Please check Microsoft documentation for details on
+<KBD>TransactNamedPipe()</KBD>.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="9"></A>
+<H3> MESSAGE #9</H3>
+<H2> WARN: Reusing existing shared memory segment '<I>G</I>'</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Existing shared memory segment will be reused.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="10"></A>
+<H3> MESSAGE #10</H3>
+<H2> WARN: Existing parameter <I>e</I> = <I>n</I>, cannot change to <I>l</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+When creating TUXEDO IPC, warning messages are issued if existing
+values do not match with default configuration values for all parameters
+of the TUXEDO IPC Helper service.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check your registry database for all your TUXEDO IPC parameters.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="11"></A>
+<H3> MESSAGE #11</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+An attempt to allocate memory for
+an anonymous security descriptor
+from the operating system using <KBD>malloc()</KBD> failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="12"></A>
+<H3> MESSAGE #12</H3>
+<H2> ERROR: Cannot initialize security descriptor (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>InitializeSecurityDescriptor()</KBD> system function call
+which initializes a security descriptor to have no system Access
+Control List (ACL), no discretionary Access Control List (ACL),
+no owner, no primary group and all control flags set to NULL failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="13"></A>
+<H3> MESSAGE #13</H3>
+<H2> ERROR: Cannot set ACL to security descriptor (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>SetSecurityDescriptorDacl()</KBD> system function call
+which sets information in a discretionary access-control list (ACL)
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="14"></A>
+<H3> MESSAGE #14</H3>
+<H2> ERROR: Cannot create IPC mutex (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateMutex()</KBD> system function call
+which creates the TUXEDO IPC mutex object
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3> MESSAGE #15</H3>
+<H2> ERROR: Cannot create shared memory '<I>G</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateFileMapping()</KBD> system function call
+which creates the TUXEDO shared memory
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3> MESSAGE #16</H3>
+<H2> ERROR: Cannot access Service Manager (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <KBD>OpenSCManager()</KBD> system function call
+which opens a connection to the Windows NT service control manager
+and the ServicesActive database
+failed.
+Possible errors are the requested access to the service control manager
+and ServicesActive database was denied, or the ServicesActive database does
+not exist.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3> MESSAGE #17</H3>
+<H2> ERROR: Cannot access service '<I>s</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <KBD>OpenService()</KBD> system function call
+which opens a handle to the TUXEDO IPC service
+failed.
+The TUXEDO IPC Helper service is not accessible.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error occurs usually because the TUXEDO IPC Helper service does not exist.
+You need to initially run the <I>p</I> program comes with the TUXEDO
+distribution media to install the software.  As part of the installation,
+the TUXEDO IPC Helper service will be created. Restart the TUXEDO IPC
+Helper service.
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="18"></A>
+<H3> MESSAGE #18</H3>
+<H2> ERROR: Cannot start service '<I>s</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <KBD>StartService()</KBD> system function call
+which starts the TUXEDO IPC service
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error occurs usually because the TUXEDO IPC Helper service does not exist.
+You need to initially run the <I>p</I> program comes with the TUXEDO
+distribution media to install the software.  As part of the installation,
+the TUXEDO IPC Helper service will be created.
+It is possible that the TUXEDO IPC Helper service binary
+(<I>e</I>) could not be found.  Check your path and registry
+values under
+\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\TUXEDO IPC Helper\\ImagePath.
+It is also possible that another instance of the TUXEDO IPC Helper is
+already running.  Other possible errors are the service database is locked
+or the TUXEDO IPC Helper service has been disabled.  Restart your
+TUXEDO IPC Helper service.
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3> MESSAGE #19</H3>
+<H2> ERROR: Cannot query service '<I>s</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <KBD>QueryServiceStatus()</KBD> system function call
+which retrieves the current status of the TUXEDO IPC service
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.  You might have to restart your TUXEDO IPC Helper service
+from your Control Panel Service applet.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="20"></A>
+<H3> MESSAGE #20</H3>
+<H2> WARN: Service 'TUXEDO IPC <KBD>Helper</KBD>' could not be started</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO IPC Helper service could not be started because Windows NT
+service manager could not be opened or the TUXEDO IPC Helper service
+is inaccessible.  The TUXEDO IPC Helper (<I>e</I>) will be started
+as a normal process rather than a service now.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="21"></A>
+<H3> MESSAGE #21</H3>
+<H2> WARN: All applications will exit when console user logs off</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO IPC Helper (<I>e</I>) is started
+as a normal process rather than a service.
+All applications will exit when console user logs off.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="22"></A>
+<H3> MESSAGE #22</H3>
+<H2> ERROR: Cannot create ipc server process '<I>e</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateProcess()</KBD> system function call
+which creates the TUXEDO IPC Helper (<I>e</I>) as a normal
+process rather than a service
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.  Check to see if you have <I>e</I> already
+running.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="23"></A>
+<H3> MESSAGE #23</H3>
+<H2> ERROR: Cannot create sleep semaphore '<I>e</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateSemaphore()</KBD> system function call
+which creates sleep semaphore object
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="24"></A>
+<H3> MESSAGE #24</H3>
+<H2> ERROR: Cannot access ipc server pipe '<I>E</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>WaitNamePipe()</KBD> system function call which waits forever on
+the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) until it is available to be
+connected to failed.  The TUXEDO IPC Server cannot be accessed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+Check to see if the TUXEDO IPC Helper service has been stopped by going
+into Control Panel Service applet.  If so, restart the TUXEDO IPC
+Helper service from the Control Panel of your machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="25"></A>
+<H3> MESSAGE #25</H3>
+<H2> WARN: Reopening existing segment '<I>d</I>'</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Unable to get a TUXEDO shared memory segment.
+The <KBD>CreateFileMapping()</KBD> system function call
+failed with ERROR_ALREADY_EXISTS.
+The shared memory segment was left open after <I>c</I> died.
+Existing shared memory segment <I>d</I> will be reopened.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="26"></A>
+<H3> MESSAGE #26</H3>
+<H2> ERROR: shmat: Missing segment '<I>d</I>'</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+Unable to attach a TUXEDO shared memory segment.
+The <KBD>OpenFileMapping()</KBD> system function call
+failed.
+The shared memory segment was missing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Restart your TUXEDO IPC Helper service or reboot your machine
+if the problem is persistent.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="27"></A>
+<H3> MESSAGE #27</H3>
+<H2> WARN: shmdt: Cannot unmap segment</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Unable to detach a TUXEDO shared memory segment.
+The <KBD>UnmapViewOfFile()</KBD> system function call
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="28"></A>
+<H3> MESSAGE #28</H3>
+<H2> ERROR: Cannot release semaphore (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>ReleaseSemaphore()</KBD> system function call which is used to
+wake up a thread failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="29"></A>
+<H3> MESSAGE #29</H3>
+<H2> ERROR: Cannot create timer event (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateEvent()</KBD> system function call which
+creates timer event failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="30"></A>
+<H3> MESSAGE #30</H3>
+<H2> ERROR: Cannot duplicate main thread handle (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>DuplicateHandle()</KBD> system function call
+to duplicate the main thread handle
+on current process failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="31"></A>
+<H3> MESSAGE #31</H3>
+<H2> ERROR: Cannot create pause event (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateEvent()</KBD> system function call
+to create pause event failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="32"></A>
+<H3> MESSAGE #32</H3>
+<H2> ERROR: Cannot create timer start event (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateEvent()</KBD> system function call
+to create timer start event failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="33"></A>
+<H3> MESSAGE #33</H3>
+<H2> ERROR: Cannot create timer thread (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateThread()</KBD> system function call
+to create timer thread failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="34"></A>
+<H3> MESSAGE #34</H3>
+<H2> ERROR: Cannot wait on start event (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>WaitForSingleObject()</KBD> system function call which waits forever
+failed on the timer start event.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="35"></A>
+<H3> MESSAGE #35</H3>
+<H2> ERROR: Cannot send message to timer thread <I>d</I> (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>PostThreadMessage()</KBD> system function call
+to send message to timer thread failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="39"></A>
+<H3> MESSAGE #39</H3>
+<H2> ERROR: Memory allocation error (line <I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory
+from the operating system using <KBD>malloc()</KBD> failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="40"></A>
+<H3> MESSAGE #40</H3>
+<H2> ERROR: Cannot create watchdog start event (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateEvent()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="41"></A>
+<H3> MESSAGE #41</H3>
+<H2> ERROR: Cannot create watchdog thread (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateThread()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="42"></A>
+<H3> MESSAGE #42</H3>
+<H2> ERROR: Removing invalid process <I>d</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+Process <I>d</I> is no longer alive, and it will be removed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="43"></A>
+<H3> MESSAGE #43</H3>
+<H2> ERROR: Watchdog wait failed (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+Waiting for the process to terminate has failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="44"></A>
+<H3> MESSAGE #44</H3>
+<H2> ERROR: Cannot create new process event (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateEvent()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="45"></A>
+<H3> MESSAGE #45</H3>
+<H2> ERROR: Cannot create ipc data (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+Creating the TUXEDO IPC data has failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="46"></A>
+<H3> MESSAGE #46</H3>
+<H2> ERROR: Cannot create server pipe '<I>E</I>' (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateNamedPipe()</KBD> system function call to
+create the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="47"></A>
+<H3> MESSAGE #47</H3>
+<H2> ERROR: Pipe connect failed (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>ConnectNamedPipe()</KBD> system function call to
+connect to the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="48"></A>
+<H3> MESSAGE #48</H3>
+<H2> ERROR: Cannot read pipe (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>ReadFile()</KBD> system function call to
+read the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="49"></A>
+<H3> MESSAGE #49</H3>
+<H2> ERROR: Unexpected read size <I>p</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>ReadFile()</KBD> system function call returned
+invalid number of bytes read.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="50"></A>
+<H3> MESSAGE #50</H3>
+<H2> ERROR: Unexpected request <I>n</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+Invalid IPC request was given to the TUXEDO IPC Helper.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="51"></A>
+<H3> MESSAGE #51</H3>
+<H2> ERROR: Cannot write to pipe (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>WriteFile()</KBD> system function call to
+write to the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="52"></A>
+<H3> MESSAGE #52</H3>
+<H2> ERROR: Unexpected write size <I>y</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>WriteFile()</KBD> system function call returned
+invalid number of bytes written.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="53"></A>
+<H3> MESSAGE #53</H3>
+<H2> ERROR: Cannot flush pipe (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>FlushFileBuffers()</KBD> system function call to clear the buffer
+and write all data to the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="54"></A>
+<H3> MESSAGE #54</H3>
+<H2> WARN: Cannot disconnect pipe (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>DisconnectNamedPipe()</KBD> system function call to
+disconnect the TUXEDO IPC Server Pipe (IPC_SERVER_PIPE) failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="55"></A>
+<H3> MESSAGE #55</H3>
+<H2> ERROR: Cannot start IPC services (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>StartServiceCtrlDispatcher()</KBD> system function call to
+start the TUXEDO IPC service failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.  Check to see if you have <I>e</I> already
+running.  Also, make sure that the ImagePath of the TUXEDO IPC Helper
+is set to %TUXDIR%\bin\tuxipc.exe in your registry.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="56"></A>
+<H3> MESSAGE #56</H3>
+<H2> ERROR: Cannot set service status (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>SetServiceStatus()</KBD> system function call to
+set the status for the TUXEDO IPC service failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="57"></A>
+<H3> MESSAGE #57</H3>
+<H2> ERROR: Cannot create worker thread (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateThread()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="58"></A>
+<H3> MESSAGE #58</H3>
+<H2> INFO: IPC server exiting</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO IPC Helper server is exiting.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="59"></A>
+<H3> MESSAGE #59</H3>
+<H2> ERROR: Cannot start process in background mode, cmdline=<I>l</I>, errno=<I>2</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+An attempt to start the current process in background mode failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="60"></A>
+<H3> MESSAGE #60</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+An attempt to allocate memory
+from the operating system using <KBD>malloc()</KBD> failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="61"></A>
+<H3> MESSAGE #61</H3>
+<H2> ERROR: Could not make pipe, errno=<I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreatePipe()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="62"></A>
+<H3> MESSAGE #62</H3>
+<H2> ERROR: Could not fork, errno=<I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateProcess()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="63"></A>
+<H3> MESSAGE #63</H3>
+<H2> ERROR: Child dup error, rc=<I>e</I>, errno=<I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <I>)</I> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="64"></A>
+<H3> MESSAGE #64</H3>
+<H2> ERROR: Parent dup error while saving stdout, errno=<I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <I>)</I> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="65"></A>
+<H3> MESSAGE #65</H3>
+<H2> WARN: <I>r</I>: wait status 0x<I>s</I>, errno=<I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <KBD>WaitForSingleObject()</KBD> system function call
+to wait for the child process to finish failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="66"></A>
+<H3> MESSAGE #66</H3>
+<H2> ERROR: Cannot create process (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateProcess()</KBD> system function call
+to spawn a new process by the TUXEDO IPC service
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="67"></A>
+<H3> MESSAGE #67</H3>
+<H2> ERROR: Could not allocate thread local storage, error number = <I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>TlsAlloc()</KBD> system function call
+which allocates a thread local storage (TLS) index for the TUXEDO IPC lock
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="68"></A>
+<H3> MESSAGE #68</H3>
+<H2> ERROR: Could not allocate thread local storage, error number = <I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>TlsAlloc()</KBD> system function call
+which allocates a thread local storage (TLS) index for the TUXEDO IPC
+signal processing failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="71"></A>
+<H3> MESSAGE #71</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory
+from the operating system using <KBD>malloc()</KBD> for buildclient failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="72"></A>
+<H3> MESSAGE #72</H3>
+<H2> ERROR: TUXDIR environment variable not set</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System environment variable <I>R</I> was not set.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Set the environment variable <I>R</I> and rerun the buildclient command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+TUXEDO Installation Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="73"></A>
+<H3> MESSAGE #73</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory
+from the operating system for buildclient failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="74"></A>
+<H3> MESSAGE #74</H3>
+<H2> ERROR: Unused arguments passed to <I>d</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Extra arguments were given to the <I>t</I> command for building
+TUXEDO clients.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Consult your TUXEDO documentation for valid arguments for <I>t</I>
+command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<I>)</I>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="75"></A>
+<H3> MESSAGE #75</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory
+from the operating system using <KBD>malloc()</KBD> for buildclient failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the memory usage on the machine or increase the
+amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="76"></A>
+<H3> MESSAGE #76</H3>
+<H2> ERROR: Can't open tempfile <I>e</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a temporary file using <I>)</I> failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the permissions of the file and repeat the operation.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<I>)</I>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="77"></A>
+<H3> MESSAGE #77</H3>
+<H2> ERROR: Can't execute <I>d</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <I>t</I> command was unable to execute the C compiler command.
+The C compiler command that <I>t</I> attempted to execute is
+given as part of this error message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Verify that the Microsoft Visual C++ compiler has been installed on the
+machine, that it is executable, and that the directory containing the
+compiler is included in your <I>H</I> environment variable.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<I>)</I>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="78"></A>
+<H3> MESSAGE #78</H3>
+<H2> ERROR: Can't execute <I>d</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The <I>t</I> command was unable to execute the C compiler command.
+The C compiler command that <I>t</I> attempted to execute is
+given as part of this error message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Verify that the Microsoft Visual C++ compiler has been installed on the
+machine, that it is executable, and that the directory containing the
+compiler is included in your <I>H</I> environment variable.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<I>)</I>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="94"></A>
+<H3> MESSAGE #94</H3>
+<H2> ERROR: Cannot open registry key</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Unable to open the registry key for the TUXEDO Performance Monitor:
+\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\TUXEDO IPC Helper\\Performance.
+The <KBD>RegOpenKeyEx()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error occurs usually because the registry key for the TUXEDO IPC Helper
+service does not exist or it was not created properly.
+You need to initially run the <I>p</I> program comes with the TUXEDO
+distribution media to install the software.  As part of the installation,
+the TUXEDO IPC Helper service will be created as well as the registry keys.
+Other possible errors are your registry database somehow got locked.
+You might need to reboot the machine if the problem is persistent.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="95"></A>
+<H3> MESSAGE #95</H3>
+<H2> ERROR: Cannot obtain 'First Counter' data</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Unable to retrieve the "First Counter" data from the registry for
+the TUXEDO Performance Monitor:
+\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\TUXEDO IPC Helper\\Performance.
+The <KBD>RegQueryValueEx()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error occurs usually because the registry key for the TUXEDO IPC Helper
+service does not exist or it was not created properly.
+You need to initially run the <I>p</I> program comes with the TUXEDO
+distribution media to install the software.  As part of the installation,
+the TUXEDO IPC Helper service will be created as well as the registry keys.
+Other possible errors are your registry database somehow got locked.
+You might need to reboot the machine if the problem is persistent.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="96"></A>
+<H3> MESSAGE #96</H3>
+<H2> ERROR: Cannot obtain 'First Help' data</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Unable to retrieve the "First Help" data from the registry for
+the TUXEDO Performance Monitor:
+\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\TUXEDO IPC Helper\\Performance.
+The <KBD>RegQueryValueEx()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error occurs usually because the registry key for the TUXEDO IPC Helper
+service does not exist or it was not created properly.
+You need to initially run the <I>p</I> program comes with the TUXEDO
+distribution media to install the software.  As part of the installation,
+the TUXEDO IPC Helper service will be created as well as the registry keys.
+Other possible errors are your registry database somehow got locked.
+You might need to reboot the machine if the problem is persistent.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="99"></A>
+<H3> MESSAGE #99</H3>
+<H2> ERROR: Cannot create process maintenance thread (<I>r</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+The <KBD>CreateThread()</KBD> system function call failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="100"></A>
+<H3> MESSAGE #100</H3>
+<H2> ERROR: Cannot create file mapping <I>d</I>: <I>r</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO IPC error has occurred.
+Unable to get a TUXEDO shared memory segment.
+The <KBD>CreateFileMapping()</KBD> system function call
+failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The extended error information is described in <I>r</I> by calling
+<KBD>GetLastError()</KBD>.  Please check Microsoft documentation for details
+on those errors.
+You might have to restart the TUXEDO IPC Helper service
+from the Control Panel of your machine if the problem is persistent.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="101"></A>
+<H3> MESSAGE #101</H3>
+<H2> ERROR: You do not have a valid TUXEDO SDK license.</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>buildclient</KBD>(1) was running without having a valid TUXEDO SDK
+license (e.g., only an RTK license was installed).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Buy a TUXEDO SDK license.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JRockit Runtime Analyzer
+Bundle-SymbolicName: com.jrockit.mc.jra.ui; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.jrockit.mc.jra.ui.JRAPlugin
+Bundle-Vendor: BEA Systems Inc. (JRPG)
+Bundle-Localization: plugin
+Export-Package: com.jrockit.mc.jra.ui,
+ com.jrockit.mc.jra.ui.actions,
+ com.jrockit.mc.jra.ui.common,
+ com.jrockit.mc.jra.ui.editors,
+ com.jrockit.mc.jra.ui.initialization,
+ com.jrockit.mc.jra.ui.sections
+Require-Bundle: com.jrockit.mc.core;visibility:=reexport,
+ org.eclipse.core.resources;visibility:=reexport,
+ org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.jface.text;visibility:=reexport,
+ org.eclipse.ui;visibility:=reexport,
+ org.eclipse.ui.forms,
+ org.eclipse.ui.workbench.texteditor,
+ com.jrockit.mc.browser;resolution:=optional,
+ com.jrockit.mc.jra.model,
+ org.eclipse.ui.views
+Eclipse-AutoStart: true
+Bundle-ClassPath: lib/jcchart-6.3.0.jar,
+ jra_plugin.jar

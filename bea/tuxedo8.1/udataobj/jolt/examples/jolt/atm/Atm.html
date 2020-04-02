@@ -1,0 +1,26 @@
+<HTML>
+<!--
+	The valid PIN's are: 100, 120, 121, 200, 911
+	PIN 100: checking account 10001, saving account 10002 
+	PIN 120: checking account 30001, saving account 30002 
+	PIN 121: checking account 40001, saving account 40003 
+	PIN 200: checking account 20001, saving account 20002 
+	PIN 911: invalid checking account, saving account 50001 
+--!>
+<title> JOLT Demo Program </title>
+<H1> Bank of BEA </H1>
+<applet
+	CODEBASE="../../../../jolt"
+	ARCHIVE="jolt.jar,joltatm.jar" 
+	code="examples.jolt.atm.Atm.class"
+	width=680 height=430>
+	<param name=port value=8000>
+	<param name=host value=localhost>
+	<param name=numpins value=5>
+	<param name=pin0 value=100,10001,10002>
+	<param name=pin1 value=120,30001,30002>
+	<param name=pin2 value=121,40001,40003>
+	<param name=pin3 value=200,20001,20002>
+	<param name=pin4 value=911,51234,50001>
+</applet>
+</HTML>

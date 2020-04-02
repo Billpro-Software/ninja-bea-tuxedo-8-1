@@ -1,0 +1,144 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/crdtvar	$Revision: 1.5 $"
+
+#
+# This file sets all the environment variables needed by the TUXEDO software
+# to run the bankapp
+#
+# This directory contains all the TUXEDO software
+# System administrator must set this variable
+#
+if [ -z "${TUXDIR}" ] ; then
+	if [ ! -z "${ROOTDIR}" ] ; then
+		TUXDIR=$ROOTDIR
+		export TUXDIR
+	fi
+fi
+TUXDIR=${TUXDIR:?}
+#
+# This directory contains all the user written code
+#
+# Contains the full path name of the directory that the application
+# generator should place the files it creates
+#
+APPDIR=<full path for application>
+#
+# This path contains the shared objects that are dynamically linked at
+# runtime in certain environments, e.g., SVR4.
+#
+LD_LIBRARY_PATH=${TUXDIR}/lib:${LD_LIBRARY_PATH}
+SHLIB_PATH=${TUXDIR}/lib:${SHLIB_PATH}
+LIBPATH=${TUXDIR}/lib:${LIBPATH}
+#
+# Logical block size; Database Administrator must set this variable
+#
+BLKSIZE=512
+#
+# Set default name of the database to be used by database utilities
+# and database creation scripts
+#
+DBNAME=bankdb
+#
+# Indicate whether database is to be opened in share or private mode
+#
+DBPRIVATE=no
+#          
+# Set Ipc Key for the database; this MUST differ from the UBBCONFIG
+# *RESOURCES IPCKEY parameter
+#
+DIPCKEY=67554
+#
+# Environment file to be used by tmloadcf
+#
+ENVFILE=${APPDIR}/ENVFILE
+#
+# List of field table files to be used by mc, viewc, tmloadcf, etc.
+#
+FIELDTBLS=Usysflds,bank.flds,credit.flds
+#
+# List of directories to search to find field table files
+#
+FLDTBLDIR=${TUXDIR}/udataobj:${APPDIR}
+#
+# Universal Device List for database
+#
+FSCONFIG=${APPDIR}/bankdl1
+#
+# Network address, used in MENU script
+#
+NWADDR=
+#
+# Network device name
+#
+NWDEVICE=
+#
+# Network listener address, used in MENU script
+#
+NLSADDR=
+#
+# List of services permitted to the current invoker of mio
+#
+OKXACTS=ALL
+#
+# Make sure TERM is set for mio
+#
+TERM=${TERM:?}
+#
+# Set device for the transaction log; this should match the TLOGDEVICE
+# parameter under this site's LMID in the *MACHINES section of the
+# UBBCONFIG file
+#
+TLOGDEVICE=${APPDIR}/TLOG
+#
+# Device for binary file that gives /T all its information
+#
+TUXCONFIG=${APPDIR}/tuxconfig
+BDMCONFIG=${APPDIR}/bdmconfig
+#
+# Set the prefix of the file which is to contain the central user log;
+# this should match the ULOGPFX parameter under this site's LMID in the
+# *MACHINES section of the UBBCONFIG file
+#
+ULOGPFX=${APPDIR}/ULOG
+#
+# System name, used by RUNME.sh
+#
+UNAME=
+#
+# List of directories to search to find view files
+#
+VIEWDIR=${APPDIR}
+#
+# List of view files to be used by viewc, tmloadcf, etc.
+#
+VIEWFILES=aud.V
+#
+# Export all variables just set
+#
+export TUXDIR APPDIR BLKSIZE DBNAME DBPRIVATE DIPCKEY ENVFILE
+export LD_LIBRARY_PATH SHLIB_PATH LIBPATH
+export FIELDTBLS FLDTBLDIR FSCONFIG MASKPATH OKXACTS TERM
+export TLOGDEVICE TUXCONFIG ULOGPFX  BDMCONFIG
+export VIEWDIR VIEWFILES
+#
+# Add TUXDIR/bin to PATH if not already there
+#
+a="`echo $PATH | grep ${TUXDIR}/bin`"
+if [ x"$a" = x ]
+then
+	PATH=${TUXDIR}/bin:${PATH}
+	export PATH
+fi
+#
+# Add APPDIR to PATH if not already there
+#
+a="`echo $PATH | grep ${APPDIR}`"
+if [ x"$a" = x ]
+then
+	PATH=${PATH}:${APPDIR}
+	export PATH
+fi
+PATH=${PATH}:/usr/ccs/bin:/opt/SUNWspro/bin
+export PATH

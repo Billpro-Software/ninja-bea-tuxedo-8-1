@@ -1,0 +1,1635 @@
+<!-- .if n .pH errman.h.ltmsg05.htm @(#)ltmsg05.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 700-799</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="700"></A>
+<H3>LIBTUX MESSAGE #700</H3>
+<H2> ERROR: Invalid search key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO System table was requested, and could not be
+read because an invalid search key was passed to the low-level
+access routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="701"></A>
+<H3>LIBTUX MESSAGE #701</H3>
+<H2> ERROR: [Parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to modify structures in the TUXEDO System/T bulletin board
+received a parameter that did not match any of the allowable values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="703"></A>
+<H3>LIBTUX MESSAGE #703</H3>
+<H2> ERROR: Cannot get statistics on message queue <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+msgctl
+kernel call performing an
+IPC-STAT
+operation failed for message queue
+<I>number</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="704"></A>
+<H3>LIBTUX MESSAGE #704</H3>
+<H2> ERROR: Operating system parameter for message queues too small</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX System kernel parameters related to message queues
+are set too low.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the kernel parameters related to message queue capacities,
+and increase if necessary.
+In particular, check
+MSGMNB .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="705"></A>
+<H3>LIBTUX MESSAGE #705</H3>
+<H2> ERROR: No BRIDGE available for remote send</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System process attempted to send a message to another machine,
+but the
+BRIDGE
+system process could not be located.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down and reboot the TUXEDO System on this machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="709"></A>
+<H3>LIBTUX MESSAGE #709</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+searching for the
+BRIDGE
+system process's server table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="710"></A>
+<H3>LIBTUX MESSAGE #710</H3>
+<H2> ERROR: Server table index out of range</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service could not be advertised because of an invalid internal
+handle identifying the server process offering it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="711"></A>
+<H3>LIBTUX MESSAGE #711</H3>
+<H2> ERROR: Server table index out of range</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service could not be advertised because of an internal
+data structure inconsistency.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="712"></A>
+<H3>LIBTUX MESSAGE #712</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+advertising a service.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="713"></A>
+<H3>LIBTUX MESSAGE #713</H3>
+<H2> ERROR: Queue parameter error in internal routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid queue table parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="715"></A>
+<H3>LIBTUX MESSAGE #715</H3>
+<H2> ERROR: Cannot attach bulletin board -- magic number mismatch</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process just attached to a shared memory region, expecting
+to find a TUXEDO System bulletin board.
+The header's magic number indicates that it is not a valid bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the configuration file's
+IPCKEY
+parameter is unique,
+and not being used by any other software product on the machine.
+The UNIX
+ipcs
+utility may help diagnose the conflict.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="716"></A>
+<H3>LIBTUX MESSAGE #716</H3>
+<H2> ERROR: Cannot attach bulletin board -- wrong release of software</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System software has been updated on the machine,
+but this process has not been rebuilt with
+the new libraries.  It therefore cannot
+interpret the bulletin board data structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Rebuild the process with updated TUXEDO System libraries.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclient (1),
+buildserver (1),
+buildtms (1),
+buildwsh (1),
+buildmio (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="717"></A>
+<H3>LIBTUX MESSAGE #717</H3>
+<H2> ERROR: Cannot attach to or create shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process could not attach to the bulletin board's
+shared memory.
+It then attempted to create the bulletin board, but
+did not have the correct permissions to do so.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the configuration file's
+IPCKEY
+parameter is correct,
+and that the application is booted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="721"></A>
+<H3>LIBTUX MESSAGE #721</H3>
+<H2> ERROR: Server group creation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server group entry in the bulletin board could
+not be created due to an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="722"></A>
+<H3>LIBTUX MESSAGE #722</H3>
+<H2> ERROR: Cannot add subtype to bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A subtype could not be added to the bulletin board
+due to an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="723"></A>
+<H3>LIBTUX MESSAGE #723</H3>
+<H2> ERROR: Cannot add subtype: no more room in subtype table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bulletin board's subtype table is full,
+and a new subtype cannot be added.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the
+MAXBUFSTYPE
+parameter in the
+configuration file's *RESOURCES section.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="724"></A>
+<H3>LIBTUX MESSAGE #724</H3>
+<H2> ERROR: Service information invalid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System internal function was used to retrieve service information
+from the services table, but a
+NULL
+service name was used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="725"></A>
+<H3>LIBTUX MESSAGE #725</H3>
+<H2> ERROR: Server information invalid, does not exist</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while a service was
+being added to the bulletin board's tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="726"></A>
+<H3>LIBTUX MESSAGE #726</H3>
+<H2> ERROR: Server information invalid, does not exist</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal data structure inconsistency was detected
+while a service was being added to the bulletin board's tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="727"></A>
+<H3>LIBTUX MESSAGE #727</H3>
+<H2> ERROR: [Server parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The internal routine to create a server table entry received invalid
+parameters.  This should not happen during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="728"></A>
+<H3>LIBTUX MESSAGE #728</H3>
+<H2> ERROR: [Queue parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid queue table parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="729"></A>
+<H3>LIBTUX MESSAGE #729</H3>
+<H2> ERROR: Server not available, doing work</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create a server table entry failed because the server was busy.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Wait until the server is no longer busy, and then retry the failed operation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="730"></A>
+<H3>LIBTUX MESSAGE #730</H3>
+<H2> ERROR: No space for another queue table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There are no more queue table entries left in the system.
+The number of queue table entries is equal to
+the maximum number of servers as specified in the UBBCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the maximum number of servers, as specified by the
+MAXSERVERS
+parameter in the *RESOURCES section of the UBBCONFIG file.
+This can be done by editing the configuration file and reloading
+it with
+tmloadcf (1),
+or it can be done through dynamic administration using the
+tmconfig (1)
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1),
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="732"></A>
+<H3>LIBTUX MESSAGE #732</H3>
+<H2> ERROR: BBL unstable or dead</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+(Bulletin Board Liaison) process is unstable or dead.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look for associated messages in the userlog related to the
+BBL .
+These may give more insight about the problem.
+If using a multi-node configuration,
+make certain that the network is operating properly and
+has sufficient bandwidth.
+Verify that the TUXEDO System/T administrator or the UNIX System
+administrator did not kill the
+BBL
+process.
+Oftentimes, a network that is inoperative or slow may result in a
+BBL
+response problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="733"></A>
+<H3>LIBTUX MESSAGE #733</H3>
+<H2> ERROR: [Type information invalid]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The internal routine to create an entry in the bulletin board types table
+was passed invalid parameters.  This should not happen during normal
+system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="734"></A>
+<H3>LIBTUX MESSAGE #734</H3>
+<H2> ERROR: Cannot add to type table due to lack of space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There are no more type table entries left in the system.
+An attempt to add an additional type to the bulletin board has failed
+due to a lack of space.
+The number of type table entries is equal to the number specified
+in the UBBCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the maximum number of type table entries, as specified by the
+MAXBUFTYPE
+parameter in the *RESOURCES section of the UBBCONFIG file.
+This can be done by editing the configuration file and reloading it with
+tmloadcf (1),
+or it can be done through dynamic administration using the
+tmconfig (1)
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1),
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="735"></A>
+<H3>LIBTUX MESSAGE #735</H3>
+<H2> ERROR: [Queue parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 728 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 728 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="736"></A>
+<H3>LIBTUX MESSAGE #736</H3>
+<H2> ERROR: [Cannot delete entry from queue table due to invalid server association]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to delete an entry from the internal TUXEDO System/T queue table failed
+while attempting to delete one of the servers associated with the queue.
+This should not happen during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="737"></A>
+<H3>LIBTUX MESSAGE #737</H3>
+<H2> ERROR: [Invalid service information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid service table parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="738"></A>
+<H3>LIBTUX MESSAGE #738</H3>
+<H2> ERROR: [Invalid server information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid server table parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="739"></A>
+<H3>LIBTUX MESSAGE #739</H3>
+<H2> ERROR: [Inconsistent service/server associations in bulletin board]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System/T bulletin board data structures contain an invalid service/server
+association.  This indicates a corruption of data structures and should
+not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="741"></A>
+<H3>LIBTUX MESSAGE #741</H3>
+<H2> ERROR: Routing function failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The function used to perform data dependent routing during a service
+call returned an error.  If using the TUXEDO System/T supplied routing functions,
+a previous userlog message will give more specifics as to the cause of the
+error.  If the application administrator modified the buffer type switch
+to add additional routing functions, a previous userlog message may or
+may not be present.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the previous message in the userlog for more information on the
+cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tuxtypes (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="742"></A>
+<H3>LIBTUX MESSAGE #742</H3>
+<H2> ERROR: Unknown group name returned from routing function</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The function used to perform data dependent routing during a service
+call indicated that the current data is to be routed to a group name that
+does not exist.
+If using the routing functions for TUXEDO System/T supplied types, this should not happen.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="743"></A>
+<H3>LIBTUX MESSAGE #743</H3>
+<H2> ERROR: No service '<I>service_name</I>' in group '<I>group_name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service
+<I>service_name</I>
+is not offered as part of group
+<I>group_name</I>.
+This message may occur when the routing criterion associated with service
+<I>service_name</I>
+specifies one or more groups in which the service is not currently offered.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the routing criterion associated with
+<I>service_name</I>
+in the configuration file.
+Make certain that service
+<I>service_name</I>
+is offered in each group listed in the routing criterion.
+If the service is temporarily not available in a particular group,
+start the server(s) that offers
+<I>service_name</I>
+in that group.
+If
+<I>service_name</I>
+is not meant to be offered in a particular group, modify the routing
+criterion so that that group is no longer listed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="744"></A>
+<H3>LIBTUX MESSAGE #744</H3>
+<H2> ERROR: Not attached to a Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process producing this error message is not attached to the
+TUXEDO System/T configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this message occurred in a client process, make sure that
+the process successfully invokes
+tpinit ()
+before issuing any other System/T calls (with the exception of calls
+noted as being specifically allowed prior to
+tpinit ()).
+If the error occurred within an administrative process or a server process,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="745"></A>
+<H3>LIBTUX MESSAGE #745</H3>
+<H2> ERROR: Process not attached to a Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 744 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 744 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="746"></A>
+<H3>LIBTUX MESSAGE #746</H3>
+<H2> ERROR: Cannot lock Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A process was unable to lock the TUXEDO System/T shared memory data structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="747"></A>
+<H3>LIBTUX MESSAGE #747</H3>
+<H2> ERROR: Process not attached to Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 744 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 744 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="748"></A>
+<H3>LIBTUX MESSAGE #748</H3>
+<H2> ERROR: Cannot unlock Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process was unable to successfully unlock the TUXEDO System/T Bulletin Board.
+As a result of this problem, other processes will be unable to lock the
+Bulletin Board.
+The most common cause of this error is the accidental removal of some
+or all of the TUXEDO System/T semaphore sets.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ask the privileged users on your system (normally the TUXEDO System/T administrator and
+root )
+whether they may have accidentally removed some IPC resources, perhaps
+through inadvertent use of the UNIX System
+ipcrm (1)
+command.  If no IPC resources have been accidentally removed,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="749"></A>
+<H3>LIBTUX MESSAGE #749</H3>
+<H2> ERROR: Cannot unlock Bulletin Board, not the locker</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process attempted to unlock the TUXEDO System/T Bulletin Board,
+but it was not the locker of the Bulletin Board.  Because of this,
+no change was made to the status of the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="751"></A>
+<H3>LIBTUX MESSAGE #751</H3>
+<H2> ERROR: semop system call failure for semaphore <I>semno</I>, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+semop (2)
+system call failed for one of the semaphores that control access to
+TUXEDO System/T data structures.
+The
+<I>semno</I>
+refers to the index of the semaphore within a particular set;
+this information may be useful to support technicians.
+<I>errno</I>
+refers to the UNIX System error returned by the
+semop (2)
+system call.  This value can be very helpful to application administrators
+in diagnosing the cause of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the UNIX System
+intro (2)
+and
+semop (2)
+manual pages to translate the numeric value of
+errno
+into a symbolic value and determine the possible causes of such an error.
+For example,
+errno
+values of 22 (EINVAL) or 36 (<Font>EIDRM)
+indicate that a privileged user may accidentally have removed the
+TUXEDO System/T semaphores, perhaps through use of the UNIX System
+ipcrm (1)
+command.
+If the problem cannot be resolved, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+semop (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="752"></A>
+<H3>LIBTUX MESSAGE #752</H3>
+<H2> ERROR: semop system call failure for semaphore <I>semno</I>, errno <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 751 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 751 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="753"></A>
+<H3>LIBTUX MESSAGE #753</H3>
+<H2> ERROR: [Invalid service information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="754"></A>
+<H3>LIBTUX MESSAGE #754</H3>
+<H2> ERROR: Service does not match existing services offered</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a new server is added to an existing group of servers on an MSSQ set,
+the new server must offer the same set of services as the existing servers,
+and these services must be performed by the same service functions.
+Also, the executable for the new server must be the same file
+as the existing server(s) on the queue, or a link to the same file.
+The server being started did not obey these restrictions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the path name of the new server executable is the same as the
+path name for the existing server(s) on the queue used by the new server.
+Determine the services currently advertised on the server queue, and
+make sure that the new server offers the same set of services.
+The services currently offered on a queue can be determined through the
+tmadmin (1)
+printservice
+command with the
+-q
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="755"></A>
+<H3>LIBTUX MESSAGE #755</H3>
+<H2> ERROR: Restarting server cannot delete queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server being restarted by the
+restartsrv (1)
+command was unable to delete an entry from the TUXEDO System/T queue table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+restartsrv (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="756"></A>
+<H3>LIBTUX MESSAGE #756</H3>
+<H2> ERROR: Cannot get status for server files <I>new_server_executable</I> and <I>existing_server_executable</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When adding a server to an
+MSSQ
+set on which there are already one or more
+servers executing, TUXEDO System/T verifies that the new server either has the same
+file name as the existing server(s) or is a link to these server(s).
+This latter check requires executing the UNIX System
+stat (2)
+system call on the new server and an existing server.
+This call failed for one or both of these servers.
+As a result of this failure, the new server will not be started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make certain that both files listed in the error message exist,
+that all components in the path prefixes of these files are directories,
+and that the user ID under which the new server is being started
+has search permission on every directory in the path prefix.
+Refer to the UNIX System
+stat (2)
+manual page for further information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+stat (2)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="757"></A>
+<H3>LIBTUX MESSAGE #757</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TUXEDO System/T received an error return when attempting to allocate memory from
+the operating system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to decrease the amount of memory required by TUXEDO System/T, or add more
+physical memory to the machine.  The amount of memory required by TUXEDO System/T
+is influenced by the parameters given in the
+UBBCONFIG
+file.  Refer to the
+"TUXEDO Administrator's Guide"
+for further information.
+The number of processes running on a machine and the options given to
+those processes also have a large effect on memory usage.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="758"></A>
+<H3>LIBTUX MESSAGE #758</H3>
+<H2> ERROR: Cannot find desired server to remove</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to remove a server from the TUXEDO System/T bulletin board,
+TUXEDO System/T was unable to find the server in its internal tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="759"></A>
+<H3>LIBTUX MESSAGE #759</H3>
+<H2> ERROR: Cannot find queue entry for server that is to be removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to remove a server from the TUXEDO System/T bulletin board,
+TUXEDO System/T was unable to find the queue associated with the server in its
+internal tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="760"></A>
+<H3>LIBTUX MESSAGE #760</H3>
+<H2> ERROR: [Queue parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 728 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 728 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="761"></A>
+<H3>LIBTUX MESSAGE #761</H3>
+<H2> ERROR: [Queue parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 728 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 728 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="762"></A>
+<H3>LIBTUX MESSAGE #762</H3>
+<H2> ERROR: [Parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to modify structures in the TUXEDO System/T bulletin board
+received a parameter that did not match any of the allowable values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="763"></A>
+<H3>LIBTUX MESSAGE #763</H3>
+<H2> ERROR: [Server group parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal TUXEDO System/T routines to manipulate server group parameters
+within the bulletin board received an invalid input parameter.
+This should not happen during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="764"></A>
+<H3>LIBTUX MESSAGE #764</H3>
+<H2> ERROR: [Server group parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 763 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 763 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="765"></A>
+<H3>LIBTUX MESSAGE #765</H3>
+<H2> ERROR: [Server group parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 763 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 763 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="766"></A>
+<H3>LIBTUX MESSAGE #766</H3>
+<H2> ERROR: [Parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 762 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 762 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="767"></A>
+<H3>LIBTUX MESSAGE #767</H3>
+<H2> ERROR: [Parameter error in internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 762 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 762 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="768"></A>
+<H3>LIBTUX MESSAGE #768</H3>
+<H2> ERROR: [Invalid service information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="769"></A>
+<H3>LIBTUX MESSAGE #769</H3>
+<H2> ERROR: [Invalid service information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="770"></A>
+<H3>LIBTUX MESSAGE #770</H3>
+<H2> ERROR: [Invalid service information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="771"></A>
+<H3>LIBTUX MESSAGE #771</H3>
+<H2> ERROR: [Invalid service information passed to internal routine]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 737 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="772"></A>
+<H3>LIBTUX MESSAGE #772</H3>
+<H2> ERROR: Invalid search criteria given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 762 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 762 for an explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="773"></A>
+<H3>LIBTUX MESSAGE #773</H3>
+<H2> ERROR: Invalid server information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to look up
+server table entries in the Bulletin Board by
+SRVID
+and
+GROUPID ,
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="774"></A>
+<H3>LIBTUX MESSAGE #774</H3>
+<H2> ERROR: Invalid server information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to look up
+server table entries in the Bulletin Board by
+GROUP
+and
+MACHINE ,
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="775"></A>
+<H3>LIBTUX MESSAGE #775</H3>
+<H2> ERROR: Invalid queue information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to look up
+server table entries in the Bulletin Board by
+QUEUE
+name,
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="776"></A>
+<H3>LIBTUX MESSAGE #776</H3>
+<H2> ERROR: Invalid server information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to look up
+server table entries in the Bulletin Board by using the
+rlink field or a
+TMID ,
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="777"></A>
+<H3>LIBTUX MESSAGE #777</H3>
+<H2> ERROR: Invalid search criteria given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to look up
+server table entries in the Bulletin Board
+and supplies an incorrect or
+NULL
+scope argument.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="778"></A>
+<H3>LIBTUX MESSAGE #778</H3>
+<H2> ERROR: Invalid queue information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to update
+queue table entries in the Bulletin Board
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="779"></A>
+<H3>LIBTUX MESSAGE #779</H3>
+<H2> ERROR: Invalid server group information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to update
+server group table entries in the Bulletin Board
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="780"></A>
+<H3>LIBTUX MESSAGE #780</H3>
+<H2> ERROR: Invalid entry information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to
+update the status of table entries in the Bulletin Board
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="781"></A>
+<H3>LIBTUX MESSAGE #781</H3>
+<H2> ERROR: Invalid service information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to
+update service table entries in the Bulletin Board
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="782"></A>
+<H3>LIBTUX MESSAGE #782</H3>
+<H2> ERROR: Invalid server information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to update
+server table entries in the Bulletin Board
+and supplies incorrect or
+NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="788"></A>
+<H3>LIBTUX MESSAGE #788</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc (3)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="789"></A>
+<H3>LIBTUX MESSAGE #789</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc (3)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="790"></A>
+<H3>LIBTUX MESSAGE #790</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc (3)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="791"></A>
+<H3>LIBTUX MESSAGE #791</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc (3)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="792"></A>
+<H3>LIBTUX MESSAGE #792</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc (3)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="793"></A>
+<H3>LIBTUX MESSAGE #793</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc (3)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

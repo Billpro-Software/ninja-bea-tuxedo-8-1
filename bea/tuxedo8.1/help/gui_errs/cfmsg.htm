@@ -1,0 +1,1588 @@
+<!--.if n .pH errman.h.cfmsg.htm @(#)cfmsg.htm	60.4 of 3/12/97-- 
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>CMDFML MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<TITLE>CMDFML MESSAGES </TITLE>
+<SECT1>
+<H1>CMDFML MESSAGES 1-99</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2"></A>
+<H3>CMDFML MESSAGE #2</H3>
+<H2> ERROR: Cannot find file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+mkfldhdr ,
+the specified file,
+<I>filename</I>,
+could not be found.
+mkfldhdr
+looks for the file relative to the current directory, if the file name
+was specified on the command line or if the
+FLDTBLDIR
+environment variable is not set, and in the directories specified by
+FLDTBLDIR
+otherwise.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the file name is correct and that the
+FLDTBLDIR
+environment variable is set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mkfldhdr</I>(1),
+field_tables</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3"></A>
+<H3>CMDFML MESSAGE #3</H3>
+<H2> ERROR: Cannot open input file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+mkfldhdr
+failed to open the specified input file,
+<I>filename</I>,
+for reading.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the input file exists and has read permission.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mkfldhdr</I>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4"></A>
+<H3>CMDFML MESSAGE #4</H3>
+<H2> ERROR: Cannot open output file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+mkfldhdr
+failed to create and open the specified output file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the output file exists and has write
+and execute permissions set correctly, and that the file does not
+already exist or has write permissions set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mkfldhdr</I>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5"></A>
+<H3>CMDFML MESSAGE #5</H3>
+<H2> ERROR: Invalid line ignored in file <I>filename</I>: <I>line</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a field table file,
+<I>filename</I>,
+with
+mkfldhdr ,
+an invalid line was encountered and ignored.
+The contents of the line is printed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The field table file will be processed but the invalid line is ignored.
+Normally, the field table should be corrected and the command
+re-executed.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+field_tables</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="6"></A>
+<H3>CMDFML MESSAGE #6</H3>
+<H2> ERROR: Invalid type, <I>field_type</I>, in file <I>filename</I>; line ignored</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a field table file,
+<I>filename</I>,
+with
+mkfldhdr ,
+a line with an invalid field type,
+<I>field_type</I>,
+was encountered and ignored.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The field table file will be processed but the invalid line is ignored.
+Correct the field type and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+field_tables</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="7"></A>
+<H3>CMDFML MESSAGE #7</H3>
+<H2> ERROR: Invalid field number, <I>field_number</I>, in file <I>filename</I>; line ignored</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a field table file,
+<I>filename</I>,
+with
+mkfldhdr ,
+a line with an invalid field number,
+<I>field_number</I>,
+was encountered and ignored.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The field table file will be processed but the invalid line is ignored.
+Correct the field number and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+field_tables</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="8"></A>
+<H3>CMDFML MESSAGE #8</H3>
+<H2> ERROR: Invalid base number, <I>base_number</I>, in file <I>filename</I>; line ignored</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a field table file,
+<I>filename</I>,
+with
+mkfldhdr ,
+a line with an invalid base number,
+<I>base_number</I>,
+was encountered and ignored.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The field table file will be processed but the invalid line is ignored.
+Correct the base number and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+field_tables</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="11"></A>
+<H3>CMDFML MESSAGE #11</H3>
+<H2> ERROR: Viewfile line does not have at least 6 columns; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+an invalid line (fewer than 6 column values separated by white space)
+was encountered and ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="12"></A>
+<H3>CMDFML MESSAGE #12</H3>
+<H2> ERROR: Cname and fbname cannot be the same; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with the view element name the same as
+the fielded buffer field name; the line is ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="13"></A>
+<H3>CMDFML MESSAGE #13</H3>
+<H2> ERROR: Unexpected end of file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+an unexpected end of file was encountered when reading the next
+line of input (an "END</I>" line was left out) or a view description
+contained no elements.
+The line number for where the error occurred is printed in the
+prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view description will be processed but generally the output
+will not be valid (a dummy entry is generated for the unfinished
+view description).
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="14"></A>
+<H3>CMDFML MESSAGE #14</H3>
+<H2> ERROR: Unknown or unsupported datatype; assuming long integer</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with an invalid field type or with a field type
+of "-" where the field type could not be determined from the &F; field.
+A default field type of "long" is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the field type may be invalid.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3>CMDFML MESSAGE #15</H3>
+<H2> ERROR: Zero or negative count not allowed; assuming value of 1</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with a field count that was 0 or negative.
+A default field count of 1 is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the field count may be invalid.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3>CMDFML MESSAGE #16</H3>
+<H2> ERROR: Zero or negative size not allowed; assuming value of 1</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with a field size that was 0 or negative.
+A default field size of 1 is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the field size may be invalid.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3>CMDFML MESSAGE #17</H3>
+<H2> ERROR: Improper null value; ignoring value</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with an invalid null value for the field type
+(for example, a non-numeric value for a numeric field).
+The null value is ignored for the field.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid value is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="18"></A>
+<H3>CMDFML MESSAGE #18</H3>
+<H2> ERROR: 'VIEW' expected; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a
+VIEW
+line is expected to begin a new view definition but
+was not read.
+The input line is ignored.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the input line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3>CMDFML MESSAGE #19</H3>
+<H2> ERROR: Memory allocation failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+an attempt to dynamically allocate space with
+malloc ()
+failed and the program exits.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<!--  message 20, 21 never printed -->
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="22"></A>
+<H3>CMDFML MESSAGE #22</H3>
+<H2> ERROR: Cname can not be Fbname, skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered where the C structure name is also a valid
+fielded buffer name, as defined in the field tables specified
+by the
+FIELDTBLS
+and
+FLDTBLDIR
+environment variables;
+the input line is ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="23"></A>
+<H3>CMDFML MESSAGE #23</H3>
+<H2> ERROR: Multiple cname declarations; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a second definition of the same C structure name was encountered within
+the same view; the invalid line is ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="24"></A>
+<H3>CMDFML MESSAGE #24</H3>
+<H2> ERROR: Multiple field name declarations; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a second definition of the same fielded buffer name was encountered within
+the same view; the invalid line is ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="25"></A>
+<H3>CMDFML MESSAGE #25</H3>
+<H2> ERROR: L flag is used for string or carray type only</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with an L flag specified but the field
+type is not string or carray; the L flag is ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the L flag is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="26"></A>
+<H3>CMDFML MESSAGE #26</H3>
+<H2> ERROR: Multiple view name declarations; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a second view definition with the same name was encountered.
+The line is ignored; this normally results in all lines up to the
+next
+VIEW
+input line being flagged as invalid and ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid view definition is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="27"></A>
+<H3>CMDFML MESSAGE #27</H3>
+<H2> ERROR: Field count should not exceed 65535; assuming 1</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with a field count that was greater than 65535.
+A default field count of 1 is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the field count may not be valid.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="28"></A>
+<H3>CMDFML MESSAGE #28</H3>
+<H2> ERROR: Escape constant syntax error in null value; ignoring value</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a string or carray field with a null
+value that has an unescaped single or double quote.
+The null value is ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid null value is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="29"></A>
+<H3>CMDFML MESSAGE #29</H3>
+<H2> ERROR: View name not a valid C identifier; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a
+VIEW
+line was encountered with a view name that is not
+a valid C identifier.
+The line is ignored; this normally results in all lines up to the
+next
+VIEW
+input line being flagged as invalid and ignored.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid view description is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="30"></A>
+<H3>CMDFML MESSAGE #30</H3>
+<H2> ERROR: Member name not a valid C identifier; skipping line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with a view member name that is not
+a valid C identifier.
+The line number for the invalid line is
+printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the invalid line is ignored.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT1>
+<H1>CMDFML MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="101"></A>
+<H3>CMDFML MESSAGE #101</H3>
+<H2> WARN: String or Carray with size = 1</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a string or carray field with the size
+set to 1.
+The line number is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+A size of 1, particularly for a string field, is not useful since
+the value must be null terminated.
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="102"></A>
+<H3>CMDFML MESSAGE #102</H3>
+<H2> WARN: Missing or mismatched quotes</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with a null value for a character, string,
+or carray field that is missing the trailing quote.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed correctly.
+To get rid of the Warning message,
+correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="103"></A>
+<H3>CMDFML MESSAGE #103</H3>
+<H2> ERROR: Fldid not found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with a fielded buffer name whose field
+identifier could not be determined.
+The line number for the line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The field identifier is not needed if the field type is
+specified for the member; the view file should
+compile successfully.
+To get rid of the Error message,
+check the
+FIELDTBLS
+and
+FLDTBLDIR
+environment variables, check the view file to make sure
+everything is set correctly, then re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="104"></A>
+<H3>CMDFML MESSAGE #104</H3>
+<H2> WARN: Size of null value is greater than field size</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a character, string, or carray field
+where the null value is longer than the field size.
+The null value is truncated.
+The line number for the line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the null value may be incorrect.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="105"></A>
+<H3>CMDFML MESSAGE #105</H3>
+<H2> WARN: Line too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+an input line was encountered that was too long (longer than 2740 bytes).
+The remainder of the line is ignored.
+The line number is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="106"></A>
+<H3>CMDFML MESSAGE #106</H3>
+<H2> WARN: Unknown flag</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with an invalid flag value in the flags column.
+The value is ignored.
+The line number is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed correctly, ignoring the flag.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<!--  message 107 is not printed -->
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="108"></A>
+<H3>CMDFML MESSAGE #108</H3>
+<H2> WARN: Octal escape constant greater than 0377</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered with an octal escape constant value that
+is greater than 0377.
+The line number is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="109"></A>
+<H3>CMDFML MESSAGE #109</H3>
+<H2> WARN: Size defined improperly; assuming value of 2</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a string or carray field with a non-numeric
+size, or a size value less than 1 or greater than 65535, or
+no size value specified.
+A default size of 2 is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the size may be incorrect.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="110"></A>
+<H3>CMDFML MESSAGE #110</H3>
+<H2> WARN: Ignoring size for type which isn't string or carray</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a field type other than string or carray
+with a size value.  The size value is ignored.
+The line number is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="111"></A>
+<H3>CMDFML MESSAGE #111</H3>
+<H2> WARN: Must specify length field for decimal; assuming 9 bytes with 1 decimal place</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a decimal field without a length value.
+A default length of 9 bytes with 1 decimal place is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the length field for the member
+may be incorrect.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="112"></A>
+<H3>CMDFML MESSAGE #112</H3>
+<H2> WARN: Bad length field for decimal; assuming 9 bytes with 1 decimal place</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a view file with
+<KBD>viewc</KBD>,
+a line was encountered for a decimal field with an invalid length value.
+The length is invalid if not two numbers separated by a comma,
+the first being the number of bytes and the second being the number
+of decimal places (to the right of the decimal point).
+The values are also invalid if the number of bytes is less than 1 or
+greater than 9, or if the number of decimal places is less than or equal to 0,
+or greater than two times the number of bytes less two.
+A default length of 9 bytes with 1 decimal place is used.
+The line number for the invalid line is printed in the prefix of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The view file will be processed but the length field for the member
+may be incorrect.
+Correct the view file and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1),
+viewfile</I>(5)
+<SECT1>
+<H1>CMDFML MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="201"></A>
+<H3>CMDFML MESSAGE #201</H3>
+<H2> ERROR: <I>program</I>: TUXDIR environment variable must be set</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+was executed without the
+TUXDIR
+environment variable set and
+exported.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXDIR
+environment variable and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="204"></A>
+<H3>CMDFML MESSAGE #204</H3>
+<H2> ERROR: unable to open viewfile <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to open the specified input view file,
+<I>filename</I>,
+for reading.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the input file exists and has read permission.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="210"></A>
+<H3>CMDFML MESSAGE #210</H3>
+<H2> ERROR: unable to open tmp file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to create and open the specified temporary output file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the output file exists and has write
+and execute permissions set correctly, and that the file does not
+already exist or has write permissions set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="211"></A>
+<H3>CMDFML MESSAGE #211</H3>
+<H2> ERROR: <I>program</I>: unable to generate view object file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to compile the internally-generated program that computes the offsets for
+the view members.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Normally, the compiler warnings and errors are printed to the standard
+error output for the
+viewc
+command.
+Possible errors might be in executing the compiler with
+invalid options, with insufficient memory or disk space, etc.
+Correct the problems indicated and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="212"></A>
+<H3>CMDFML MESSAGE #212</H3>
+<H2> ERROR: <I>program</I>: unable to execute internal program</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to execute the internally-generated program that computes the offsets for
+the view members.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Errors may be printed to the standard error output, or in the case of
+system resource limitations, to the console.
+Possible errors might be
+insufficient memory or disk space, etc.
+Correct the problems indicated and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="213"></A>
+<H3>CMDFML MESSAGE #213</H3>
+<H2> ERROR: <I>program</I>: internal program error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to read the output of the internally-generated program that
+computes the offsets for the view members.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Try executing the command again.
+Contact your &U; Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="214"></A>
+<H3>CMDFML MESSAGE #214</H3>
+<H2> ERROR: <I>program</I>: internal program error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to read the output of the internally-generated program that
+computes the offsets for the view members.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Try executing the program again.
+Contact your &U; Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="215"></A>
+<H3>CMDFML MESSAGE #215</H3>
+<H2> ERROR: <I>program</I>: internal program error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to read the output of the internally-generated program that
+computes the offsets for the view members.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Try executing the program again.
+Contact your &U; Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="216"></A>
+<H3>CMDFML MESSAGE #216</H3>
+<H2> ERROR: <I>program</I>: internal program error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to read the output of the internally-generated program that
+computes the offsets for the view members.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Try executing the program again.
+Contact your &U; Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="217"></A>
+<H3>CMDFML MESSAGE #217</H3>
+<H2> ERROR: unable to open output file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewc
+failed to create and open the specified output file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the output file exists and has write
+and execute permissions set correctly, and that the file does not
+already exist or has write permissions set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="221"></A>
+<H3>CMDFML MESSAGE #221</H3>
+<H2> ERROR: <I>program</I>: unable to open input file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+viewdis
+failed to open the specified view input file,
+<I>filename</I>,
+for reading.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the input file exists and has read permission.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+viewdis</I>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="222"></A>
+<H3>CMDFML MESSAGE #222</H3>
+<H2> ERROR: <I>program</I>: <I>filename</I> is not a viewfile</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The input file name,
+<I>filename</I>,
+specified for
+viewdis
+is not a compiled view file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the input file is a compiled view file
+(suffixed with .V) for the local machine
+and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1), <KBD>viewdis</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="223"></A>
+<H3>CMDFML MESSAGE #223</H3>
+<H2> ERROR: <I>program</I>: <I>filename</I> is an out-of-date viewfile: can't disassemble</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The input file name,
+<I>filename</I>,
+specified for
+viewdis
+is not a valid compiled view file for the current version of the
+software.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the input file is a compiled view file
+(suffixed with .V) for the local machine (for the current version
+of the software)
+and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1), <KBD>viewdis</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="224"></A>
+<H3>CMDFML MESSAGE #224</H3>
+<H2> ERROR: <I>program</I>: <I>filename</I> is an incomplete viewfile: can't disassemble</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The input file name,
+<I>filename</I>,
+specified for
+viewdis
+is not a complete view file (for example, the file may have been truncated).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the input file is a compiled view file
+(suffixed with .V) for the local machine
+and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+viewdis</I>(1)
+<SECT1>
+<H1>CMDFML MESSAGES 1000-1999</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>CMDFML MESSAGE #1002</H3>
+<H2> ERROR: <I>program</I>: unable to open file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While compiling a view, the view information file for the
+second pass could not be opened.
+For DOS workstations, this file name is provided via the -2
+command line option.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the file name and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>CMDFML MESSAGE #1006</H3>
+<H2> ERROR: <I>program</I>: can not open header file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>viewc</KBD>,
+or
+<KBD>viewc32</KBD>,
+failed to create and open the specified output header file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the output file exists and has write
+and execute permissions set correctly, and that the file does not
+already exist or has write permissions set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>CMDFML MESSAGE #1007</H3>
+<H2> ERROR: <I>program</I>: can not open copy file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>viewc</KBD>,
+or
+<KBD>viewc32</KBD>,
+failed to create and open the specified output copy file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the output file exists and has write
+and execute permissions set correctly, and that the file does not
+already exist or has write permissions set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>CMDFML MESSAGE #1008</H3>
+<H2> ERROR: <I>program</I>: can not open copy file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>viewc</KBD>,
+or
+<KBD>viewc32</KBD>,
+failed to create and open the specified output header file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the output file exists and has write
+and execute permissions set correctly, and that the file does not
+already exist or has write permissions set correctly.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>CMDFML MESSAGE #1009</H3>
+<H2> ERROR: <I>program</I>: Only one view file can be used with the multiple pass option</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>viewc</KBD>,
+or
+<KBD>viewc32</KBD>,
+was run with the -1 or -2 option and multiple view files were specified.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-run the command once for each view file, using the -1 or -2 option.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>CMDFML MESSAGE #1010</H3>
+<H2> ERROR: <I>program</I>: Compiler not currently supported.</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>viewc</KBD>,
+or
+<KBD>viewc32</KBD>,
+was run on a MAC with an unsupported compiler (based on the CC
+environment variable).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check to see that the CC environment variable is properly set
+and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>CMDFML MESSAGE #1011</H3>
+<H2> ERROR: <I>program</I>: <I>filename</I> is not a viewfile</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The input file name,
+<I>filename</I>,
+specified for
+viewdis
+is not a compiled view file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the input file is a compiled view file
+(suffixed with .V) for the local machine
+and re-execute the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1), <KBD>viewdis</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>CMDFML MESSAGE #1015</H3>
+<H2> ERROR: <I>program</I>: unable to create temp file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The program, <I>program</I>, was not able to create the named
+temporary file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Determine why the file could not be created and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>CMDFML MESSAGE #1016</H3>
+<H2> ERROR: <I>program</I>: unable to create temp header file QTEMP/H.<I>name</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The program, <I>program</I>, was not able to create the named
+temporary header file because it was not able to make the directory
+/qsys.lib/qtemp.lib/h.file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Determine why the directory could not be created and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>CMDFML MESSAGE #1017</H3>
+<H2> ERROR: <I>program</I>: unable to copy <I>file</I> to QTEMP/H.<I>name</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The program, <I>program</I>, was not able to copy the header file
+to the target name.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Determine why the file could not be created and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>CMDFML MESSAGE #1018</H3>
+<H2> ERROR: <I>program</I>: unable to compile view source</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The program, <I>program</I>, was not able to compile a program
+to determine the offsets for the view fields.
+temporary file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Determine why the compilation failed and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+<KBD>viewc</KBD>(1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

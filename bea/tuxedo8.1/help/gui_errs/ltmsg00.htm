@@ -1,0 +1,1135 @@
+<!-- .if n .pH errman.h.ltmsg00.htm @(#)ltmsg00.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="200"></A>
+<H3>LIBTUX MESSAGE #200</H3>
+<H2> ERROR: Invalid service information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested to be unadvertised is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpunadvertise (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="201"></A>
+<H3>LIBTUX MESSAGE #201</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="202"></A>
+<H3>LIBTUX MESSAGE #202</H3>
+<H2> ERROR: No bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process is currently not attached to the Bulletin Board so the service
+cannot be offered.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="203"></A>
+<H3>LIBTUX MESSAGE #203</H3>
+<H2> ERROR: Invalid service information given, NULL name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Function called without proper parameters - null service to offer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="205"></A>
+<H3>LIBTUX MESSAGE #205</H3>
+<H2> ERROR: Invalid service information given, function name too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Function called with improper parameters - function name too long.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="206"></A>
+<H3>LIBTUX MESSAGE #206</H3>
+<H2> ERROR: Invalid service information given, bad function address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Function called with improper parameters - function address cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="210"></A>
+<H3>LIBTUX MESSAGE #210</H3>
+<H2> ERROR: tmbbclean failed, couldn't find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Could not find structures/information associated with the
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="211"></A>
+<H3>LIBTUX MESSAGE #211</H3>
+<H2> ERROR: tmbbclean failed, couldn't find BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Could not find structures/information associated with the
+BBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="212"></A>
+<H3>LIBTUX MESSAGE #212</H3>
+<H2> ERROR: tmbbclean failed, message send/receive error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending of message to the
+BBL/DBBL
+to clean up and check status of local Bulletin Board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check prior messages or check if message queue is blocked.  If queue is blocked,
+system usage could be heavy and parameters may need to be tuned.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="213"></A>
+<H3>LIBTUX MESSAGE #213</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+allocating space to store tmids.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="216"></A>
+<H3>LIBTUX MESSAGE #216</H3>
+<H2> WARN: Process <I>pid</I> died; removing from BB</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process that was attached to the BB died, so the BB is cleaning up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required for BB, but you may want to investigate why the process died.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="217"></A>
+<H3>LIBTUX MESSAGE #217</H3>
+<H2> WARN: pid=<I>pid</I> died leaving BB locked; cleaning up</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process that was attached to the BB died and holds a user-level semaphore,
+so the BB is cleaning up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required for BB, but you may want to investigate why the process died.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="218"></A>
+<H3>LIBTUX MESSAGE #218</H3>
+<H2> ERROR: Error cleaning BB owner</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred in cleaning up after a dead process.
+Either the slot could
+not be found, or a prior message indicates a semaphore error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="219"></A>
+<H3>LIBTUX MESSAGE #219</H3>
+<H2> WARN: BB owned by <I>pid</I>, but not locked</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either the machine does not have proper atomic increment for the user-level
+semaphore, or there are too many signals coming to the process too quickly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="220"></A>
+<H3>LIBTUX MESSAGE #220</H3>
+<H2> WARN: BB lock appears stuck: held by pid=<I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process has held the lock on the BB for a longer than normal period of
+time.
+The process could still be alive, but incorrectly holding the
+user-level semaphore.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the status of the process that is holding the lock.
+There could be a problem with the process (hung),
+or the process is holding the lock for too long a period of time while doing
+work.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="221"></A>
+<H3>LIBTUX MESSAGE #221</H3>
+<H2> ERROR: Error putting ENVFILE <I>filename</I> into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server could not process the
+ENVFILE
+properly.
+This includes not being
+able to find, open, or read it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the path of
+ENVFILE ,
+and the permissions and owner of the file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="222"></A>
+<H3>LIBTUX MESSAGE #222</H3>
+<H2> ERROR: Cannot get service parms for <I>server</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server could not process the parameters for a service specified in the
+TUXCONFIG
+file.
+This includes a problem with loading the information from
+the SERVICES section, or not understanding some of the parameters
+(for example, buffer types.)
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the SERVICES section of the
+UBBCONFIG
+file for correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="223"></A>
+<H3>LIBTUX MESSAGE #223</H3>
+<H2> WARN: Duplicate server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An instantiation of this server already exists and this is a duplicate.
+It will exit gracefully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the server that you wish to start is correct.
+If the server died unexpectedly or is hung,
+the process needs to be killed if hung, and the
+bulletin board must be given time to clean up after the killed process before
+starting the server again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="226"></A>
+<H3>LIBTUX MESSAGE #226</H3>
+<H2> ERROR: Type switch buffer initialization routine _tminitbuf failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred when calling the initialization routine for the particular
+type switch buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3),
+tuxtypes (5),
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="228"></A>
+<H3>LIBTUX MESSAGE #228</H3>
+<H2> ERROR: Type switch buffer reinitialization routine _tmreinitbuf failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred when calling the reinitialization routine for the particular
+type switch buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3),
+tuxtypes (5),
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="229"></A>
+<H3>LIBTUX MESSAGE #229</H3>
+<H2> ERROR: Type switch buffer uninitialization routine _tmuninitbuf failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred when calling the uninitialization routine for the particular
+type switch buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3),
+tuxtypes (5),
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="230"></A>
+<H3>LIBTUX MESSAGE #230</H3>
+<H2> ERROR: Buffer type tables not available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process is currently not attached to the Bulletin Board so it could not
+access the type switch table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="236"></A>
+<H3>LIBTUX MESSAGE #236</H3>
+<H2> ERROR: Remote tmnwkill timed out <I>count</I> secs</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process tried to signal a remote process, and a message was sent to the
+bridge process on the remote side to perform the fill for it.
+The reply to indicate the success/failure of the operation did not
+return before the operation timed out.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This timeout could be a sign of network congestion, but is not a specific
+network failure, other than the operation did not return in time.  If the
+network is not a problem, then the timeout is too small for the speed with
+which the signal request can be met.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="237"></A>
+<H3>LIBTUX MESSAGE #237</H3>
+<H2> ERROR: semctl err: errno = <I>errno_val</I>, key = <I>key_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+semctl ()
+call failed.
+This is possibly due to the semaphore set being removed
+or differing permissions on the semaphore.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The semaphore set was somehow removed.
+If this does happen, the system will eventually fail.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="245"></A>
+<H3>LIBTUX MESSAGE #245</H3>
+<H2> WARN: Invalid LMID specification: PMID=<I>mid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An erroneous LMID
+has been specified and an attempt to locate it has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and edit the
+UBBCONFIG
+file such that all specified
+LMIDs reference the correct machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="248"></A>
+<H3>LIBTUX MESSAGE #248</H3>
+<H2> ERROR: System init function failed, Uunixerr = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server has failed to join the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See surrounding messages for reasons for failure to join.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="250"></A>
+<H3>LIBTUX MESSAGE #250</H3>
+<H2> ERROR: tpsvrinit() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to
+tpsvrinit ()
+failed.
+This may easily be caused by an application-defined
+tpsvrinit
+function returning failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check prior specific
+tpsvrinit ()
+messages or the application specific messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsvrinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="251"></A>
+<H3>LIBTUX MESSAGE #251</H3>
+<H2> ERROR: tpsvrinit() failed with outstanding message handles</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to
+tpsvrinit (),
+although returning success, failed to receive all outstanding reply
+messages and therefore has outstanding handles.
+This is probably caused
+by an application-defined
+tpsvrinit
+function.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check prior specific
+tpsvrinit ()
+messages or the application specific messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsvrinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="252"></A>
+<H3>LIBTUX MESSAGE #252</H3>
+<H2> WARN: Cannot synchronize with tmboot...continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The connection with
+tmboot
+was lost by the forking process.
+If on the same node where
+tmboot
+is running, the pipe with
+tmboot
+was lost and may be due to the
+tmboot
+process being killed.
+If on a remote node, the pipe to the
+TAGENT
+process was lost, which may be due to the
+TAGENT
+process being killed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, although the cause of tmboot/TAGENT
+dying should be investigated if not known.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="253"></A>
+<H3>LIBTUX MESSAGE #253</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+copying the arguments to
+CLOPT
+as the server tries to join the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="254"></A>
+<H3>LIBTUX MESSAGE #254</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+copying the arguments to
+CLOPT
+as the server tries to join the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="255"></A>
+<H3>LIBTUX MESSAGE #255</H3>
+<H2> INFO: Duplicate -A option ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Multiple
+-A
+options were specified to the server in the
+CLOPT
+line of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+CLOPT
+option in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="256"></A>
+<H3>LIBTUX MESSAGE #256</H3>
+<H2> WARN: Queue address must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The queue address, as specified to the server through the
+-Q
+option of
+CLOPT ,
+is non-numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the address specified for the
+-Q
+option in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="257"></A>
+<H3>LIBTUX MESSAGE #257</H3>
+<H2> WARN: Invalid lock argument, setting to PROCLOCK</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lock argument, as specified to the server through the
+-l
+option in
+CLOPT ,
+is invalid.
+It must be one of
+"'t' (TEXTLOCK),"
+"'d' (DATALOCK),"
+'b'
+or
+"'p' (PROCLOCK)."
+The argument is ignored and is set to
+'p'
+for
+PROCLOCK .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the lock argument for the
+-l
+option in
+CLOPT
+in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+in the System/T reference manual,
+plock (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="258"></A>
+<H3>LIBTUX MESSAGE #258</H3>
+<H2> WARN: Memory lock plock() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to lock the process in core has failed.
+This was requested by setting the lock option,
+-l ,
+on the
+CLOPT
+option to the server in the configuration file.
+The error can occur when the server not being run as
+super-user, the requested lock is already on the process, or the system
+is out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the server is being started as super-user (and that the
+tmboot
+process is running as super-user).
+If the application can run its own
+code (tpsvrinit()) first, it might also have put a lock on the process.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+in the System/T reference manual,
+plock (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="259"></A>
+<H3>LIBTUX MESSAGE #259</H3>
+<H2> WARN: nice() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to change the priority of the process has failed.
+This was requested by setting the
+-n
+option on the
+CLOPT
+option to the server in the configuration file.
+This can be caused by the option to
+-n
+being negative or greater than 39, and not super-user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the argument to the
+-e
+option of
+CLOPT
+is correct in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+in the System/T reference manual,
+nice (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="260"></A>
+<H3>LIBTUX MESSAGE #260</H3>
+<H2> WARN: Cannot open <I>path</I> as stderr, Uunixerr = <I>Uunixerr</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open the file for
+stderr
+failed.
+This file may have been specified by the
+-e
+option on the
+CLOPT
+option to the server in the configuration file.
+This can be caused by the inability to access the path
+given as the argument to the
+-e
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the argument to the
+-e
+option of
+CLOPT
+is correct in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="261"></A>
+<H3>LIBTUX MESSAGE #261</H3>
+<H2> WARN: Cannot open <I>path</I> as stdout: Uunixerr = <I>Uunixerr</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open the file for
+stout
+failed.
+This file may have been specified by the
+-o
+option on the
+CLOPT
+option to the server in the configuration file.
+This can be caused by the inability to access the path
+given as the argument to the
+-o
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the argument to the
+-o
+option of
+CLOPT
+is correct in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="262"></A>
+<H3>LIBTUX MESSAGE #262</H3>
+<H2> INFO: Standard main starting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The arguments have been successfully processed, and joining the application
+will continue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="263"></A>
+<H3>LIBTUX MESSAGE #263</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+setting up buffers to advertise the services of the
+application as the server tries to join the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="264"></A>
+<H3>LIBTUX MESSAGE #264</H3>
+<H2> ERROR: Cannot set server group/id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This cannot happen because code changed to use a local variable, not a passed-in
+variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="267"></A>
+<H3>LIBTUX MESSAGE #267</H3>
+<H2> INFO: Duplicate advertisement of service <I>svcname</I> ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to advertise the same service a second time is ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file for multiple occurrences of the service on
+the
+-s
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="268"></A>
+<H3>LIBTUX MESSAGE #268</H3>
+<H2> ERROR: Failed to stop serving</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server did not properly shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+There may be prior messages to describe the problem.
+In any case, the BBL should clean up after the process.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="270"></A>
+<H3>LIBTUX MESSAGE #270</H3>
+<H2> ERROR: Restart sync error <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred during a restart of a process.  An
+acknowledgment that the process was restarted was never received.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="271"></A>
+<H3>LIBTUX MESSAGE #271</H3>
+<H2> ERROR: System lock semop failure, key = <I>key</I> (errno = <I>errno</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an attempt to lock the bulletin board, a call to semop(2) failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the value returned in the UNIX\(rg System <I>errno</I>, and attempt to
+fix the problem described by the <I>errno</I>.  If unable to do so,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="272"></A>
+<H3>LIBTUX MESSAGE #272</H3>
+<H2> ERROR: System unlock semop failure, key = <I>key</I> (errno = <I>errno</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an attempt to unlock the bulletin board, a call to semop(2) failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the value returned in the UNIX\(rg System errno and attempt to
+fix the problem described by the errno.  If unable to do so,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="294"></A>
+<H3>LIBTUX MESSAGE #294</H3>
+<H2> ERROR: <I>function</I>: FSCONFIG not or incorrectly set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The variable
+FSCONFIG
+is either not set or has been incorrectly set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and edit the
+UBBCONFIG
+file and make sure the
+FSCONFIG
+environment variable is set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="295"></A>
+<H3>LIBTUX MESSAGE #295</H3>
+<H2> ERROR: <I>funcname</I>: corrupted VTOC or different release</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to access the VTOC has failed because the
+existing VTOC has either been corrupted or was created by
+a different release of the TUXEDO System.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="296"></A>
+<H3>LIBTUX MESSAGE #296</H3>
+<H2> ERROR: <I>funcname</I>: VTOC not initialized</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to access the VTOC has failed because the existing VTOC
+has not been properly initialized.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="297"></A>
+<H3>LIBTUX MESSAGE #297</H3>
+<H2> ERROR: <I>funcname</I>: no space can be allocated for disk table or for VTOC/UDL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate space within the VTOC has failed because there
+are no more available slots.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="298"></A>
+<H3>LIBTUX MESSAGE #298</H3>
+<H2> ERROR: <I>funcname</I>: Read beyond initialized file boundary.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to access information in the VTOC has failed because
+the read has gone past the set boundaries of the VTOC.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="299"></A>
+<H3>LIBTUX MESSAGE #299</H3>
+<H2> ERROR: <I>funcname</I>: Write beyond initialized file boundary.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to write information to the
+VTOC
+has failed because
+the write has gone past the set boundaries of the
+VTOC.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.destinations subsystem
+    of the WebLogic Server administration console
+
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="DestinationBook" title="book.title" markupName="book"
+               markupType="Book"
+               backingFile="com.bea.console.utils.GeneralBackingFile"
+               threadsafe="true"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="CoreJMSDestinationsBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:book definitionLabel="JmsDestinationsBook" title="JmsDestinationsBook"
+                       markupName="book"
+                       markupType="Book">
+            <netuix:content>
+              <netuix:page markupName="page" markupType="Page" definitionLabel="JmsDestinationsPages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JmsDestinationsTabsBook"
+                                   title="JmsDestinationsTabsBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDestinationKeyconfigTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.config.label">
+                            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsdestinationkeyconfig.title;jms"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:meta name="configuration-page"
+                                         content="weblogic.j2ee.descriptor.wl.DestinationKeyBean"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDestinationsJMSDestinationKeyConfigPortlet"
+                                                          contentUri="/PortalConfig/jms/destinations/JMSDestinationKeyConfig.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDestinationKeynotesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.notes.label">
+                            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsdestinationkeynotes.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDestinationsJMSDestinationKeyNotesPortlet"
+                                                          contentUri="/PortalConfig/jms/destinations/JMSDestinationKeyNotes.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+              <netuix:page markupName="page" markupType="Page" definitionLabel="JmsDestinationsQueuePages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JmsDestinationsQueueBook"
+                                   title="JmsDestinationsQueueBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSQueueconfigTabPage"
+                                       title="tab.config.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueuegeneralTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.general.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueueconfiggeneral.title;jms"/>
+                                <netuix:meta name="breadcrumb-context" content="handle"/>
+                                <netuix:meta name="configuration-page" content="weblogic.j2ee.descriptor.wl.QueueBean"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSQueueConfigGeneralPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueConfigGeneral.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the thresholds tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueuethresholdsTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.thresholds.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueueconfigthresholds.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSQueueConfigThresholdsPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueConfigThresholds.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the overrides tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueueoverridesTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.overrides.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueueconfigoverrides.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSQueueConfigOverridesPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueConfigOverrides.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the logging tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueueLoggingTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.logging.label">
+                                <netuix:meta name="helpid" content="JMS.jms.jmsqueuelogging.config.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSQueueLoggingPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueLogging.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the redelivery tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueueredeliveryTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.redelivery.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueueredelivery.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSQueueRedeliveryPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueRedelivery.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- Definition for the monitor tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSQueueMonitorBook"
+                                       title="tab.monitor.label">
+                            <netuix:content>
+                          <!-- Definition for the monitor tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueuemonitorPage"
+                                           presentationClass="page-content"
+                                           title="tab.statistics.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuemonitor.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSQueueMonitorPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueRuntimeTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+
+                          <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSQueueControlBook"
+                                       title="tab.control.label">
+                            <netuix:content>
+                              <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueueControlPage"
+                                           presentationClass="page-content"
+                                           title="tab.control.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuecontroltable.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSQueueControlPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueControlTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+
+                          <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSQueueSecurityTabPage"
+                                       title="tab.security.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                          <!-- Definition for the JMS Queue security roles tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSQueueSecurityRolesTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.roles.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuerole.table.title;jms"/>
+                                <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueSecurityRolesTablePortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueRolesTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End of Definition for the JMS Queue security roles tab -->
+                          <!-- Definition for the JMS Queue security policies tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSQueueSecurityPoliciesTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.policies.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuepolicies.title;jms"/>
+                                <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueSecurityPoliciesPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueuePolicies.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End of Definition for the security policies tab -->
+                        </netuix:content>
+                          </netuix:book>
+                          <!-- End Definition for the security tab -->
+                      <!-- Definition for the target tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSQueueTargetTabBook"
+                                       title="tab.subdeployment.label">
+                            <netuix:content>
+                              <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueueTargetTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.subdeployment.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuetargets.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSQueueTargetPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueTarget.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- Definition for the Notes tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSQueueNotesTabPage"
+                                       title="tab.notes.label">
+                            <netuix:content>
+                          <!-- Definition for the notes tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSQueuenotesTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.notes.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuenotes.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSQueueNotesPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSQueueNotes.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+              <netuix:page markupName="page" markupType="Page" definitionLabel="JmsDestinationsTopicPages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JmsDestinationsTopicBook"
+                                   title="JmsDestinationsTopicBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSTopicconfigTabPage"
+                                       title="tab.config.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicgeneralTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.general.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicconfiggeneral.title;jms"/>
+                                <netuix:meta name="breadcrumb-context" content="handle"/>
+                                <netuix:meta name="configuration-page" content="weblogic.j2ee.descriptor.wl.TopicBean"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSTopicConfigGeneralPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicConfigGeneral.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the thresholds tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicthresholdsTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.thresholds.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicconfigthresholds.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSTopicConfigThresholdsPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicConfigThresholds.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the overrides tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicoverridesTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.overrides.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicconfigoverrides.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSTopicConfigOverridesPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicConfigOverrides.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the Logging tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicLoggingTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.logging.label">
+                                <netuix:meta name="helpid" content="JMS.jms.jmstopiclogging.config.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSTopicConfigPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicConfigLogging.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the redelivery tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicredeliveryTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.redelivery.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicconfigredelivery.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDestinationsJMSTopicConfigRedeliveryPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicConfigRedelivery.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the multicast tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicmulticastTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.multicast.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicmulticast.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSTopicMulticastPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicMulticast.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- Definition for the monitor tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSTopicmonitorTabBook"
+                                       title="tab.monitor.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                              <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicmonitorTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.statistics.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicmonitor.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSTopicMonitorPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicRuntimeTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the durable subscribers table page -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSDurableSubscriberRuntimeTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.jms.subscribers.title">
+                                <netuix:meta name="helpid"
+                                             content="JMS.jms.subscribers.jmsdurablesubscriberruntime.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsSubscribersJMSDurableSubscriberRuntimeTablePortlet"
+                                                              contentUri="/PortalConfig/jms/subscribers/JMSDurableSubscriberRuntimeTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+
+
+                          <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSTopicControlBook"
+                                       title="tab.control.label">
+                            <netuix:content>
+                              <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicControlPage"
+                                           presentationClass="page-content"
+                                           title="tab.control.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopiccontroltable.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSTopicControlPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicControlTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+
+                          <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSTopicSecurityTabPage"
+                                       title="tab.security.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                          <!-- Definition for the security roles tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSTopicSecurityRolesTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.roles.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicrole.table.title;jms"/>
+                                <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicSecurityRolesTablePortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicRolesTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End of Definition for the security roles tab -->
+                          <!-- Definition for the security policies tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSTopicSecurityPoliciesTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.policies.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicpolicies.title;jms"/>
+                                <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicSecurityPoliciesPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicPolicies.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End of Definition for the security policies tab -->
+                        </netuix:content>
+                          </netuix:book>
+                          <!-- End Definition for the security tab -->
+                      <!-- Definition for the target tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JMSTopicTargetTabBook"
+                                       title="tab.subdeployment.label">
+                            <netuix:content>
+                              <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicTargetTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.subdeployment.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopictargets.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSTopicTargetPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicTarget.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <netuix:book markupName="book" markupType="Book" definitionLabel="JMSTopicNotesTabPage"
+                                       title="tab.notes.label">
+                            <netuix:content>
+                          <!-- Definition for the notes tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="JMSTopicnotesTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.notes.label">
+                                <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicnotes.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JmsDestinationsJMSTopicNotesPortlet"
+                                                              contentUri="/PortalConfig/jms/destinations/JMSTopicNotes.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+            </netuix:content>
+          </netuix:book>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for JMS Destination Topics Security create role assistant -->
+  <netuix:book definitionLabel="JMSTopicSecurityCreateRoleBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.topic.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicSecurityCreateRolePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicrole.create.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicSecurityCreateRolePortlet"
+                                          contentUri="/PortalConfig/jms/destinations/CreateJMSTopicRole.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the Edit JMS Topic Security Roles assistant. -->
+  <netuix:book definitionLabel="JMSTopicSecurityRolesEdit" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.edit.topic.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicSecurityEditRolePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicrole.manage.title;jms"/>
+            <netuix:meta name="breadcrumb" content="assistant.edit.topic.security.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicSecurityEditRolePortlet"
+                                          contentUri="/PortalConfig/jms/destinations/EditJMSTopicRole.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the Delete JMS Topic Security Roles assistant -->
+  <netuix:book definitionLabel="JMSTopicSecurityDeleteRolesBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.topic.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicSecurityDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicrole.delete.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicSecurityDeleteRolesPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/DeleteJMSTopicRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for JMS Destination Queue Security create role assistant -->
+  <netuix:book definitionLabel="JMSQueueSecurityCreateRoleBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.queue.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueueSecurityCreateRolePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuerole.create.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueSecurityCreateRolePortlet"
+                                          contentUri="/PortalConfig/jms/destinations/CreateJMSQueueRole.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the Edit JMS Queue Security Roles assistant. -->
+  <netuix:book definitionLabel="JMSQueueSecurityRolesEdit" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.edit.queue.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueueSecurityEditRolePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuerole.manage.title;jms"/>
+            <netuix:meta name="breadcrumb" content="assistant.edit.queue.security.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueSecurityEditRolePortlet"
+                                          contentUri="/PortalConfig/jms/destinations/EditJMSQueueRole.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the Delete JMS Queue Security Roles assistant -->
+  <netuix:book definitionLabel="JMSQueueSecurityDeleteRolesBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.queue.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueueSecurityDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuerole.delete.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueSecurityDeleteRolesPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/DeleteJMSQueueRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- START QUEUE DESTINATION CONTROL -->
+
+  <!-- definition for the destination pause production assistant -->
+  <netuix:book definitionLabel="JMSQueuePauseProductionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.pauseproduction.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueuePauseProductionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuepauseproduction.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueuePauseProductionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSQueuePauseProduction.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination resume production assistant -->
+  <netuix:book definitionLabel="JMSQueueResumeProductionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.resumeproduction.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueueResumeProductionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueueresumeproduction.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueResumeProductionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSQueueResumeProduction.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination pause insertion assistant -->
+  <netuix:book definitionLabel="JMSQueuePauseInsertionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.pauseinsertion.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueuePauseInsertionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuepauseinsertion.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueuePauseInsertionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSQueuePauseInsertion.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination resume insertion assistant -->
+  <netuix:book definitionLabel="JMSQueueResumeInsertionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.resumeinsertion.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueueResumeInsertionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueueresumeinsertion.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueResumeInsertionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSQueueResumeInsertion.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination pause consumption assistant -->
+  <netuix:book definitionLabel="JMSQueuePauseConsumptionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.pauseconsumption.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueuePauseConsumptionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmsqueuepauseconsumption.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueuePauseConsumptionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSQueuePauseConsumption.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination resume consumption assistant -->
+  <netuix:book definitionLabel="JMSQueueResumeConsumptionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.resumeconsumption.queue.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSQueueResumeConsumptionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.destinations.jmsqueueresumeconsumption.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSQueueResumeConsumptionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSQueueResumeConsumption.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- END QUEUE DESTINATION CONTROL -->
+
+ <!-- START TOPIC DESTINATION CONTROL -->
+
+  <!-- definition for the destination pause production assistant -->
+  <netuix:book definitionLabel="JMSTopicPauseProductionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.pauseproduction.topic.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicPauseProductionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicpauseproduction.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicPauseProductionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSTopicPauseProduction.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination resume production assistant -->
+  <netuix:book definitionLabel="JMSTopicResumeProductionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.resumeproduction.topic.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicResumeProductionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicresumeproduction.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicResumeProductionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSTopicResumeProduction.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination pause insertion assistant -->
+  <netuix:book definitionLabel="JMSTopicPauseInsertionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.pauseinsertion.topic.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicPauseInsertionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicpauseinsertion.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicPauseInsertionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSTopicPauseInsertion.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination resume insertion assistant -->
+  <netuix:book definitionLabel="JMSTopicResumeInsertionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.resumeinsertion.topic.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicResumeInsertionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicresumeinsertion.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicResumeInsertionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSTopicResumeInsertion.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination pause consumption assistant -->
+  <netuix:book definitionLabel="JMSTopicPauseConsumptionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.pauseconsumption.topic.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicPauseConsumptionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.destinations.jmstopicpauseconsumption.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicPauseConsumptionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSTopicPauseConsumption.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the destination resume consumption assistant -->
+  <netuix:book definitionLabel="JMSTopicResumeConsumptionBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.resumeconsumption.topic.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="JMSTopicResumeConsumptionPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.destinations.jmstopicresumeconsumption.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="JMSTopicResumeConsumptionPortlet"
+                                          contentUri="/PortalConfig/jms/destinations/JMSTopicResumeConsumption.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- END DESTINATION CONTROL -->
+
+  </netuix:content>
+  </netuix:book>
+
+</portal:root>

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export PATH
+
+
+# Figure out the absolute path of this shell script
+SHELLPARENT=$(
+cd -P -- "$(dirname -- "$0")" &&
+pwd -P
+)
+
+# Run the JDeveloper launcher shell script relative to this parent directory
+$SHELLPARENT/../../../jdev/bin/jdev
+

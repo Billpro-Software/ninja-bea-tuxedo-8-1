@@ -1,0 +1,130 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefile.nt
+#
+# NT makefile for the simple sample application
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------
+# Declarations
+#---------------------------------------------------------------------
+
+REMOVE=-del /Q
+
+RMDIR=-rmdir /S /Q
+
+CPPFLAGS= -DWIN32
+
+#---------------------------------------------------------------------
+# Main build rules
+#---------------------------------------------------------------------
+
+all: simple_client.exe simple_server.exe
+
+java_all: all SimpleClient.class SimpleClient.jar
+
+#---------------------------------------------------------------------
+# C++ Client
+#---------------------------------------------------------------------
+
+CLIENT_SRCS = simple_c.cpp simplec.cpp
+
+simple_client.exe: $(CLIENT_SRCS)
+	buildobjclient -v -o $@ -f "$(CLIENT_SRCS) $(CPPFLAGS)"
+
+#---------------------------------------------------------------------
+# C++ Server
+#---------------------------------------------------------------------
+
+SERVER_SRCS= simple_c.cpp simple_s.cpp simple_i.cpp simples.cpp
+
+simple_server.exe: $(SERVER_SRCS)
+	buildobjserver -v -o $@ -f "$(SERVER_SRCS) $(CPPFLAGS)"
+
+#----------------------------------------------------------------------
+# IDL files
+#----------------------------------------------------------------------
+
+simple_c.cpp simple_c.h simple_s.cpp simple_s.h : simple.idl
+	idl simple.idl
+
+#---------------------------------------------------------------------
+# File Dependencies
+#---------------------------------------------------------------------
+
+simple_i.h   : simple_s.h
+simple_i.cpp : simple_i.h
+simples.cpp  : simple_i.h
+simplec.cpp  : simple_c.h
+
+#---------------------------------------------------------------------
+# Java IDL Files
+#---------------------------------------------------------------------
+
+JAVAIDLFILES =  SimpleFactory.java \
+                SimpleFactoryHelper.java \
+                SimpleFactoryHolder.java \
+                _SimpleFactoryStub.java \
+                Simple.java \
+                SimpleHelper.java \
+                SimpleHolder.java \
+                _SimpleStub.java
+
+JAVAIDLCLASSES= $(JAVAIDLFILES:.java=.class)
+
+$(JAVAIDLFILES) : Simple.idl
+        idltojava Simple.idl
+
+#---------------------------------------------------------------------
+# Java Client
+#---------------------------------------------------------------------
+
+$(JAVAIDLCLASSES): $(JAVAIDLFILES)
+
+SimpleClient.class: SimpleClient.java $(JAVAIDLCLASSES)
+
+#---------------------------------------------------------------------
+# Java Client JAR
+#---------------------------------------------------------------------
+
+CLIENTJARCLASSES = $(JAVAIDLCLASSES) \
+                   SimpleClient.class
+
+SimpleClient.jar: $(CLIENTJARCLASSES)
+	jar cvf SimpleClient.jar $(CLIENTJARCLASSES)
+
+#----------------------------------------------------------------------
+# JAVA Suffix rules
+#----------------------------------------------------------------------
+
+.SUFFIXES: .class .java
+
+.java.class:
+	javac -O -classpath $(CLASSPATH) $<
+
+#----------------------------------------------------------------------
+# Housekeeping
+#----------------------------------------------------------------------
+
+clean:
+	$(REMOVE) OBB*
+	$(REMOVE) *.obj
+	$(REMOVE) simple_c*
+	$(REMOVE) simple_s*
+	$(REMOVE) ULOG*
+	$(REMOVE) *.dat
+	$(REMOVE) stderr
+	$(REMOVE) stdout
+	$(RMDIR)  results
+	$(RMDIR)  .adm
+	$(REMOVE) *.class
+	$(REMOVE) $(JAVAIDLFILES)
+        $(REMOVE) Simple.jar Simple.ser SimpleClient.jar
+        $(REMOVE) *ImplBase.java
+
+#----------------------------------------------------------------------

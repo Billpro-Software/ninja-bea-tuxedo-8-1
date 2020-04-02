@@ -1,0 +1,417 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//	Copyright (c) 1995 Novell, Inc.	
+//	  All Rights Reserved 	 	
+
+//	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF     	
+//	Novell, Inc.                     			
+//	The copyright notice above does not evidence any   	
+//	actual or intended publication of such source code.	
+
+// #ident	"@(#) samples/atmi/bankapp/nt/driver/driver.rc	$Revision: 1.4 $"	
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""res\\driver.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\driver.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About driver"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,18,20
+    LTEXT           "bankapp driver Version 1.0",IDC_STATIC,40,10,119,8
+    LTEXT           "Copyright \251 1995",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+END
+
+IDD_DRIVER_DIALOG DIALOG DISCARDABLE  0, 0, 237, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "bankapp application driver"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Initialize",IDC_INITIALIZE,25,20,80,14
+    PUSHBUTTON      "&Boot",IDC_BOOT,25,40,80,14
+    PUSHBUTTON      "&Shutdown",IDC_SHUTDOWN,25,60,80,14
+    PUSHBUTTON      "&Populate",IDC_POPULATE,25,80,80,14
+    PUSHBUTTON      "&Launch client",IDC_CLIENT,25,100,80,14
+    PUSHBUTTON      "&Generate Transactions",IDC_GENTRANS,125,20,80,14
+    PUSHBUTTON      "&Audit Application",IDC_AUDIT,125,40,80,14
+    PUSHBUTTON      "&Tmadmin",IDC_TMADMIN,125,60,80,14
+    PUSHBUTTON      "&Cleanup",IDC_CLEANUP,125,80,80,14
+    PUSHBUTTON      "Exit",IDOK,25,120,80,14
+    PUSHBUTTON      "&Help",ID_HELP,125,120,80,14,WS_DISABLED
+END
+
+IDD_INIT_MAIN DIALOG DISCARDABLE  0, 0, 170, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Bankapp Main/Initialization"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Back",IDOK,100,12,50,14
+    PUSHBUTTON      "&Help",ID_HELP,100,42,50,14,WS_DISABLED
+    PUSHBUTTON      "&Configuration",IDC_CONFIGURATION,13,12,50,14
+    PUSHBUTTON      "&Propagation",IDC_PROPAGATION,13,42,50,14
+    PUSHBUTTON      "&Runtime",IDC_RUNTIME,13,72,50,14
+END
+
+IDD_INIT_CONFIG DIALOG DISCARDABLE  0, 0, 185, 71
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Bankapp/Main/Initialization/Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Back",IDOK,100,15,50,14
+    PUSHBUTTON      "&Help",ID_HELP,100,45,50,14,WS_DISABLED
+    PUSHBUTTON      "&Ubbconfig",IDC_UBBCONFIG,20,15,51,14
+    PUSHBUTTON      "&Tuxconfig",IDC_TUXCONFIG,20,45,50,14
+END
+
+IDD_INIT_MODE DIALOG DISCARDABLE  0, 0, 281, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Bankapp Initialization mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,52,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,178,57,50,14
+    LTEXT           "Bankapp initialization has two modes",IDC_STATIC,22,15,
+                    147,11
+    CONTROL         "Verbose mode - more input, more output, more questions, more flexibility",
+                    IDC_VERBOSE,"Button",BS_AUTORADIOBUTTON,22,25,258,11
+    CONTROL         "Terse mode - less input, less output, less questions, less flexibility",
+                    IDC_TERSE,"Button",BS_AUTORADIOBUTTON,22,37,248,10
+END
+
+IDD_INIT_SITES DIALOG DISCARDABLE  0, 0, 185, 200
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Configuration setup for local machine"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,23,165,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,165,50,14
+    PUSHBUTTON      "&Add site",IDC_ADD,23,145,50,14
+    PUSHBUTTON      "&Remove site",IDC_REMOVE,104,145,50,14
+    PUSHBUTTON      "Site&1",IDC_SITE1,23,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&2",IDC_SITE2,104,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&3",IDC_SITE3,23,42,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&4",IDC_SITE4,104,42,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&5",IDC_SITE5,23,62,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&6",IDC_SITE6,104,62,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&7",IDC_SITE7,23,82,50,14,WS_DISABLED
+    PUSHBUTTON      "Site&8",IDC_SITE8,104,82,50,15,WS_DISABLED
+    PUSHBUTTON      "Site&9",IDC_SITE9,23,102,50,14,WS_DISABLED
+    PUSHBUTTON      "Site1&0",IDC_SITE10,104,102,50,14,WS_DISABLED
+    GROUPBOX        "Configured sites",IDC_STATIC,14,6,159,121
+    GROUPBOX        "Actions",IDC_STATIC,14,130,159,59
+END
+
+IDD_SITE_ADD DIALOG DISCARDABLE  0, 0, 185, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Add a site"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,80,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,99,80,50,14
+    LTEXT           "New site name:",IDC_STATIC,24,21,53,7
+    EDITTEXT        IDC_SITE_NAME,100,19,58,12,ES_AUTOHSCROLL
+    CONTROL         "Windows NT",IDC_OSNT,"Button",BS_AUTORADIOBUTTON,23,41,
+                    71,10
+    CONTROL         "UNIX",IDC_OSUNIX,"Button",BS_AUTORADIOBUTTON,24,54,34,
+                    10
+END
+
+IDD_SITE_REMOVE DIALOG DISCARDABLE  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Remove sites"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,118,27,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,58,50,14
+    LISTBOX         IDC_SITE_LIST,17,22,82,61,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sites to remove:",IDC_STATIC,9,7,72,7
+END
+
+IDD_SITE_INFO DIALOG DISCARDABLE  0, 0, 382, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Site description"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ROOTDIR,126,15,150,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HOME,126,35,150,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_APPDIR,126,53,150,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TYPE,90,109,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NET_DEVICE,90,129,50,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NET_ADDRESS,90,149,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BRIDGE,257,109,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TLISTEN,257,129,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_UID,90,169,50,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GID,257,169,50,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,315,20,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,315,40,50,14
+    LTEXT           "Tuxedo root directory (TUXDIR)",IDC_STATIC,6,16,118,9
+    LTEXT           "Home directory (HOME)",IDC_STATIC,8,36,104,9
+    LTEXT           "Application directory (APPDIR)",IDC_STATIC,9,56,103,9
+    LTEXT           "Network device",IDC_NET_DEVICE_TEXT,9,130,69,9
+    LTEXT           "Network port for bridge",IDC_STATIC,160,111,87,9
+    LTEXT           "Network port for tlisten",IDC_STATIC,160,130,91,9
+    LTEXT           "Machine type",IDC_STATIC,9,110,72,9
+    LTEXT           "Network address",IDC_STATIC,9,150,68,9
+    GROUPBOX        "MP only info",IDC_STATIC,3,89,344,106
+    GROUPBOX        "Generic info",IDC_STATIC,3,2,290,77
+    LTEXT           "User Id",IDC_UID_TEXT,9,170,46,7
+    LTEXT           "Group Id",IDC_GID_TEXT,160,170,46,8
+END
+
+IDD_IPCKEY DIALOG DISCARDABLE  0, 0, 185, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select IPCKEY"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,20,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,109,95,50,14
+    LTEXT           "IPCKEY is a numeric value that is used to allocate shared memory for both /T and the database allocated in /D.\n\nThe default is usually fine, unless others are using the indicated key on this machine.",
+                    IDC_STATIC,23,10,139,55
+    EDITTEXT        IDC_IPCKEY,58,72,40,12,ES_AUTOHSCROLL
+    LTEXT           "IPCKEY:",IDC_STATIC,23,73,30,7
+END
+
+IDD_RUN_COMMAND DIALOG DISCARDABLE  0, 0, 381, 220
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Run a command"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,132,200,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,198,200,50,14
+    EDITTEXT        IDC_COMMAND_OUTPUT,38,9,305,180,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_OEMCONVERT | ES_READONLY | 
+                    WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_INIT_RUNTIME DIALOG DISCARDABLE  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Bankapp/Main/Initialization/Runtime"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Build",IDC_BUILD,15,15,50,14
+    PUSHBUTTON      "&Databases",IDC_BANKDL,15,40,50,14
+    PUSHBUTTON      "&Tlogs",IDC_TLOG,15,65,50,14
+    DEFPUSHBUTTON   "Back",IDOK,118,15,50,14
+    PUSHBUTTON      "&Help",ID_HELP,118,40,50,14,WS_DISABLED
+END
+
+IDD_RUN_UD DIALOG DISCARDABLE  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ud output"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,66,65,50,14
+    EDITTEXT        IDC_PERCENT,21,27,147,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_TRANSACTION_COUNT DIALOG DISCARDABLE  0, 0, 233, 49
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Generate Transactions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,57,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,28,50,14
+    LTEXT           "How many transactions do you want to generate?",
+                    IDC_STATIC,9,10,162,8
+    EDITTEXT        IDC_TRANSACTION_COUNT,179,7,40,12,ES_AUTOHSCROLL
+END
+
+IDD_WAIT DIALOG DISCARDABLE  0, 0, 185, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Bankapp Driver"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please wait.",IDC_STATIC,71,30,41,8
+    CTEXT           "",IDC_WAIT_REASON,34,9,115,11
+END
+
+IDD_AUDIT DIALOG DISCARDABLE  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Audit application"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Audit &Accounts",IDC_AUDIT_ACCOUNTS,9,10,72,14
+    PUSHBUTTON      "Audit &Tellers",IDC_AUDIT_TELLERS,9,35,72,14
+    PUSHBUTTON      "&Conversational audit",IDC_CONV_AUDIT,9,60,72,14
+    DEFPUSHBUTTON   "&Back",IDOK,98,10,72,14
+    PUSHBUTTON      "&Help",ID_HELP,98,60,72,14,WS_DISABLED
+END
+
+IDD_SELECT_BRANCH DIALOG DISCARDABLE  0, 0, 151, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select branch to audit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Audit all branches",IDC_AUDIT_ALL,"Button",
+                    BS_AUTORADIOBUTTON,10,15,70,10
+    CONTROL         "Audit branch:",IDC_AUDIT_ONE,"Button",
+                    BS_AUTORADIOBUTTON,10,36,55,10
+    EDITTEXT        IDC_BRANCH,77,36,18,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,15,63,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,86,63,50,14
+END
+
+IDD_CLEANUP DIALOG DISCARDABLE  0, 0, 185, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Bankapp Main/Cleanup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Configuration",IDC_CLEAN_CONFIGURATION,27,10,50,14
+    PUSHBUTTON      "&Servers",IDC_CLEAN_SERVERS,27,31,50,14
+    PUSHBUTTON      "&Runtime",IDC_CLEAN_RUNTIME,27,52,50,14
+    PUSHBUTTON      "&Tlisteners",IDC_CLEAN_TLISTEN,107,10,50,14
+    PUSHBUTTON      "&Ipc",IDC_CLEAN_IPC,107,31,50,14
+    PUSHBUTTON      "&All",IDC_CLEAN_ALL,107,52,50,14
+    DEFPUSHBUTTON   "&Back",IDOK,27,73,50,14
+    PUSHBUTTON      "&Help",ID_HELP,107,73,50,14,WS_DISABLED
+END
+
+IDD_CLEAN_RUNTIME DIALOG DISCARDABLE  0, 0, 185, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Bankapp/Main/Cleanup/Runtime"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Back",IDOK,110,35,50,14
+    PUSHBUTTON      "&Help",ID_HELP,110,60,50,14,WS_DISABLED
+    PUSHBUTTON      "&Databases",IDC_CLEAN_BANKDLS,10,10,49,14
+    PUSHBUTTON      "&Tlogs",IDC_CLEAN_TLOGS,10,35,49,14
+    PUSHBUTTON      "&Userlogs",IDC_CLEAN_USERLOGS,10,60,50,12
+    PUSHBUTTON      "&All",IDC_CLEAN_ALL,110,10,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "DRIVER MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DRIVER\0"
+            VALUE "LegalCopyright", "Copyright \251 1995\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "DRIVER.EXE\0"
+            VALUE "ProductName", "DRIVER Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About bankapp driver..."
+END
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\driver.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

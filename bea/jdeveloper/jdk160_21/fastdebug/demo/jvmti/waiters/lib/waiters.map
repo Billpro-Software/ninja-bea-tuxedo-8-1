@@ -1,0 +1,167 @@
+ waiters
+
+ Timestamp is 4cfae5eb (Sat Dec 04 17:07:55 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00001d1cH .text                   CODE
+ 0002:00000000 00000068H .idata$5                DATA
+ 0002:00000070 00000490H .rdata                  DATA
+ 0002:00000500 00000071H .rdata$debug            DATA
+ 0002:00000580 00000004H .rdata$sxdata           DATA
+ 0002:00000584 00000004H .rtc$IAA                DATA
+ 0002:00000588 00000004H .rtc$IZZ                DATA
+ 0002:0000058c 00000004H .rtc$TAA                DATA
+ 0002:00000590 00000004H .rtc$TZZ                DATA
+ 0002:00000594 00000028H .idata$2                DATA
+ 0002:000005bc 00000014H .idata$3                DATA
+ 0002:000005d0 00000068H .idata$4                DATA
+ 0002:00000638 00000142H .idata$6                DATA
+ 0002:00000780 0000006bH .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 0000014cH .data                   DATA
+ 0003:0000015c 00000020H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000360H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _stdout_message            10001000 f   agent_util.obj
+ 0001:00000030       _fatal_error               10001030 f   agent_util.obj
+ 0001:00000080       _get_token                 10001080 f   agent_util.obj
+ 0001:00000110       _interested                10001110 f   agent_util.obj
+ 0001:00000360       _check_jvmti_error         10001360 f   agent_util.obj
+ 0001:000003e0       _deallocate                100013e0 f   agent_util.obj
+ 0001:00000420       _allocate                  10001420 f   agent_util.obj
+ 0001:00000460       _add_demo_jar_to_bootclasspath 10001460 f   agent_util.obj
+ 0001:00000720       _Agent_OnLoad@12           10001720 f   waiters.obj
+ 0001:00000e90       _Agent_OnUnload@4          10001e90 f   waiters.obj
+ 0001:00000ea0       ?GetEnv@JavaVM_@@QAEJPAPAXJ@Z 10001ea0 f i waiters.obj
+ 0001:00000ed0       ?SetEventCallbacks@_jvmtiEnv@@QAE?AW4jvmtiError@@PBUjvmtiEventCallbacks@@J@Z 10001ed0 f i waiters.obj
+ 0001:00000f00       ?SetEventNotificationMode@_jvmtiEnv@@QAA?AW4jvmtiError@@W4jvmtiEventMode@@W4jvmtiEvent@@PAV_jobject@@ZZ 10001f00 f i waiters.obj
+ 0001:00000f20       ?AddCapabilities@_jvmtiEnv@@QAE?AW4jvmtiError@@PBUjvmtiCapabilities@@@Z 10001f20 f i waiters.obj
+ 0001:00000f40       ?CreateRawMonitor@_jvmtiEnv@@QAE?AW4jvmtiError@@PBDPAPAU_jrawMonitorID@@@Z 10001f40 f i waiters.obj
+ 0001:00000f70       ?SetEnvironmentLocalStorage@_jvmtiEnv@@QAE?AW4jvmtiError@@PBX@Z 10001f70 f i waiters.obj
+ 0001:00000f90       ?GetEnvironmentLocalStorage@_jvmtiEnv@@QAE?AW4jvmtiError@@PAPAX@Z 10001f90 f i waiters.obj
+ 0001:00000fb0       ?RawMonitorEnter@_jvmtiEnv@@QAE?AW4jvmtiError@@PAU_jrawMonitorID@@@Z 10001fb0 f i waiters.obj
+ 0001:00000fd0       ?RawMonitorExit@_jvmtiEnv@@QAE?AW4jvmtiError@@PAU_jrawMonitorID@@@Z 10001fd0 f i waiters.obj
+ 0001:00000ff0       ??_GAgent@@QAEPAXI@Z       10001ff0 f i waiters.obj
+ 0001:00001020       ?get_thread@Agent@@AAEPAVThread@@PAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 10002020 f   Agent.obj
+ 0001:000010e0       ?get_monitor@Agent@@AAEPAVMonitor@@PAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 100020e0 f   Agent.obj
+ 0001:00001240       ??0Agent@@QAE@PAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 10002240 f   Agent.obj
+ 0001:000012b0       ??1Agent@@QAE@XZ           100022b0 f   Agent.obj
+ 0001:000012d0       ?vm_death@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@@Z 100022d0 f   Agent.obj
+ 0001:00001380       ?thread_start@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 10002380 f   Agent.obj
+ 0001:000013f0       ?thread_end@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 100023f0 f   Agent.obj
+ 0001:00001470       ?monitor_contended_enter@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2@Z 10002470 f   Agent.obj
+ 0001:000014d0       ?monitor_contended_entered@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2@Z 100024d0 f   Agent.obj
+ 0001:000014e0       ?monitor_wait@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2_J@Z 100024e0 f   Agent.obj
+ 0001:00001540       ?monitor_waited@Agent@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2E@Z 10002540 f   Agent.obj
+ 0001:000015a0       ?object_free@Agent@@QAEXPAU_jvmtiEnv@@_J@Z 100025a0 f   Agent.obj
+ 0001:000015e0       ?SetThreadLocalStorage@_jvmtiEnv@@QAE?AW4jvmtiError@@PAV_jobject@@PBX@Z 100025e0 f i Agent.obj
+ 0001:00001610       ?GetThreadLocalStorage@_jvmtiEnv@@QAE?AW4jvmtiError@@PAV_jobject@@PAPAX@Z 10002610 f i Agent.obj
+ 0001:00001640       ?GetTag@_jvmtiEnv@@QAE?AW4jvmtiError@@PAV_jobject@@PA_J@Z 10002640 f i Agent.obj
+ 0001:00001670       ?SetTag@_jvmtiEnv@@QAE?AW4jvmtiError@@PAV_jobject@@_J@Z 10002670 f i Agent.obj
+ 0001:000016a0       ?DestroyRawMonitor@_jvmtiEnv@@QAE?AW4jvmtiError@@PAU_jrawMonitorID@@@Z 100026a0 f i Agent.obj
+ 0001:000016a0       ?GetObjectClass@JNIEnv_@@QAEPAV_jclass@@PAV_jobject@@@Z 100026a0 f i Monitor.obj
+ 0001:000016c0       ??_GMonitor@@QAEPAXI@Z     100026c0 f i Agent.obj
+ 0001:000016f0       ??_GThread@@QAEPAXI@Z      100026f0 f i Agent.obj
+ 0001:00001720       ??0Monitor@@QAE@PAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 10002720 f   Monitor.obj
+ 0001:000017e0       ??1Monitor@@QAE@XZ         100027e0 f   Monitor.obj
+ 0001:00001820       ?contended@Monitor@@QAEXXZ 10002820 f   Monitor.obj
+ 0001:00001840       ?waited@Monitor@@QAEXXZ    10002840 f   Monitor.obj
+ 0001:00001860       ?timeout@Monitor@@QAEXXZ   10002860 f   Monitor.obj
+ 0001:00001880       ?GetClassSignature@_jvmtiEnv@@QAE?AW4jvmtiError@@PAV_jclass@@PAPAD1@Z 10002880 f i Monitor.obj
+ 0001:000018b0       ??0Thread@@QAE@PAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@@Z 100028b0 f   Thread.obj
+ 0001:00001950       ??1Thread@@QAE@XZ          10002950 f   Thread.obj
+ 0001:00001980       ?monitor_contended_enter@Thread@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2@Z 10002980 f   Thread.obj
+ 0001:000019a0       ?monitor_wait@Thread@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2_J@Z 100029a0 f   Thread.obj
+ 0001:000019c0       ?monitor_waited@Thread@@QAEXPAU_jvmtiEnv@@PAUJNIEnv_@@PAV_jobject@@2E@Z 100029c0 f   Thread.obj
+ 0001:000019f0       ?GetThreadInfo@_jvmtiEnv@@QAE?AW4jvmtiError@@PAV_jobject@@PAU_jvmtiThreadInfo@@@Z 100029f0 f i Thread.obj
+ 0001:00001a12       _strlen                    10002a12 f   MSVCRT:MSVCR71.dll
+ 0001:00001a18       _strcat                    10002a18 f   MSVCRT:MSVCR71.dll
+ 0001:00001a1e       _strcpy                    10002a1e f   MSVCRT:MSVCR71.dll
+ 0001:00001a24       _memset                    10002a24 f   MSVCRT:MSVCR71.dll
+ 0001:00001a2a       ??2@YAPAXI@Z               10002a2a f   MSVCRT:MSVCR71.dll
+ 0001:00001a30       ??3@YAXPAX@Z               10002a30 f   MSVCRT:MSVCR71.dll
+ 0001:00001a36       __CRT_INIT@12              10002a36 f   MSVCRT:crtdll.obj
+ 0001:00001af4       __DllMainCRTStartup@12     10002af4 f   MSVCRT:crtdll.obj
+ 0001:00001bd8       __initterm                 10002bd8 f   MSVCRT:MSVCR71.dll
+ 0001:00001bde       __onexit                   10002bde f   MSVCRT:atonexit.obj
+ 0001:00001c04       _atexit                    10002c04 f   MSVCRT:atonexit.obj
+ 0001:00001c16       __RTC_Initialize           10002c16 f   MSVCRT:initsect.obj
+ 0001:00001c5a       __RTC_Terminate            10002c5a f   MSVCRT:initsect.obj
+ 0001:00001c9e       ___CppXcptFilter           10002c9e f   MSVCRT:MSVCR71.dll
+ 0001:00001ca4       _DllMain@12                10002ca4 f   MSVCRT:dllmain.obj
+ 0001:00001cc4       __SEH_prolog               10002cc4 f   MSVCRT:sehprolg.obj
+ 0001:00001cff       __SEH_epilog               10002cff f   MSVCRT:sehprolg.obj
+ 0001:00001d10       __except_handler3          10002d10 f   MSVCRT:MSVCR71.dll
+ 0001:00001d16       ___dllonexit               10002d16 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DisableThreadLibraryCalls@4 10003000     kernel32:KERNEL32.dll
+ 0002:00000004       \177KERNEL32_NULL_THUNK_DATA 10003004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__exit                10003008     MSVCRT:MSVCR71.dll
+ 0002:0000000c       __imp__fflush              1000300c     MSVCRT:MSVCR71.dll
+ 0002:00000010       __imp__strncpy             10003010     MSVCRT:MSVCR71.dll
+ 0002:00000014       __imp__strcspn             10003014     MSVCRT:MSVCR71.dll
+ 0002:00000018       __imp__strspn              10003018     MSVCRT:MSVCR71.dll
+ 0002:0000001c       __imp__strncmp             1000301c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp__strlen              10003020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp__strcat              10003024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp__strcpy              10003028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp__memset              1000302c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp___iob                10003030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp_??3@YAXPAX@Z         10003034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__realloc             10003038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp__malloc              1000303c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__free                10003040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp___initterm           10003044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp___adjust_fdiv        10003048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp____CppXcptFilter     1000304c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp___except_handler3    10003050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp____dllonexit         10003054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp___onexit             10003058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp_??2@YAPAXI@Z         1000305c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp__vfprintf            10003060     MSVCRT:MSVCR71.dll
+ 0002:00000064       \177MSVCR71_NULL_THUNK_DATA 10003064     MSVCRT:MSVCR71.dll
+ 0002:000004b8       __load_config_used         100034b8     MSVCRT:loadcfg.obj
+ 0002:00000580       ___safe_se_handler_table   10003580     <linker-defined>
+ 0002:00000584       ___rtc_iaa                 10003584     MSVCRT:initsect.obj
+ 0002:00000588       ___rtc_izz                 10003588     MSVCRT:initsect.obj
+ 0002:0000058c       ___rtc_taa                 1000358c     MSVCRT:initsect.obj
+ 0002:00000590       ___rtc_tzz                 10003590     MSVCRT:initsect.obj
+ 0002:00000594       __IMPORT_DESCRIPTOR_MSVCR71 10003594     MSVCRT:MSVCR71.dll
+ 0002:000005a8       __IMPORT_DESCRIPTOR_KERNEL32 100035a8     kernel32:KERNEL32.dll
+ 0002:000005bc       __NULL_IMPORT_DESCRIPTOR   100035bc     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    10004000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10004004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10004008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000400c     MSVCRT:cinitexe.obj
+ 0003:00000158       ___security_cookie         10004158     MSVCRT:seccook.obj
+ 0003:0000016c       __adjust_fdiv              1000416c     <common>
+ 0003:00000170       ___onexitend               10004170     <common>
+ 0003:00000174       ___onexitbegin             10004174     <common>
+ 0003:00000178       __pRawDllMain              10004178     <common>
+
+ entry point at        0001:00001af4
+
+ Static symbols
+
+ 0001:00000180       _covered_by_list           10001180 f   agent_util.obj
+ 0001:00000220       _covered_by_list_item      10001220 f   agent_util.obj
+ 0001:000008a0       _vm_init@12                100018a0 f   waiters.obj
+ 0001:00000a90       _vm_death@8                10001a90 f   waiters.obj
+ 0001:00000b30       ?get_agent@@YAPAVAgent@@PAU_jvmtiEnv@@@Z 10001b30 f   waiters.obj
+ 0001:00000b80       ?menter@@YAXPAU_jvmtiEnv@@PAU_jrawMonitorID@@@Z 10001b80 f   waiters.obj
+ 0001:00000bb0       ?mexit@@YAXPAU_jvmtiEnv@@PAU_jrawMonitorID@@@Z 10001bb0 f   waiters.obj
+ 0001:00000be0       _thread_start@12           10001be0 f   waiters.obj
+ 0001:00000c40       _thread_end@12             10001c40 f   waiters.obj
+ 0001:00000ca0       _monitor_contended_enter@16 10001ca0 f   waiters.obj
+ 0001:00000d00       _monitor_contended_entered@16 10001d00 f   waiters.obj
+ 0001:00000d60       _monitor_wait@24           10001d60 f   waiters.obj
+ 0001:00000dd0       _monitor_waited@20         10001dd0 f   waiters.obj
+ 0001:00000e30       _object_free@12            10001e30 f   waiters.obj

@@ -1,0 +1,51 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/STOCKAPP/FILES	$Revision: 1.5 $"
+
+Source		Generated		Purpose
+-----		---------		-------
+BUY.cbl		BUY.o			Client
+		BUY
+
+BUYSR.cbl	BUYSR.o			Contains BUY service
+		BUYSR
+
+ENVFILE		-			ENVFILE used by tmloadcf
+
+FILES		-			Descriptive list of all the files in STOCKAPP
+
+FUNDPR.cbl	FUNDPR.o		Client
+		FUNDPR
+
+FUNDPRSR.cbl	FUNDPRSR.o		Contains PRICE QUOTE service
+		FUNDPRSR
+
+FUNDUP.cbl	FUNDUP.o		Client
+		FUNDUP
+
+FUNDUPSR.cbl	FUNDUPSR.o		Contains FUND UPDATE service
+		FUNDUPSR
+
+README		-			On-line version of the installation and
+					boot procedures
+
+SELL.cbl	SELL.o			Client
+		SELL
+
+SELLSR.cbl	SELLSR.o		Contains SELL service
+		SELLSR
+
+STKVAR		-			Contains variable settings, except for those
+					within ENVFILE.  
+
+STOCKAPP.mk	-			Application makefile.
+
+UBBCBSHM	TUXCONFIG		Sample UBBCONFIG file for use in a SHM
+					mode configuration
+
+cust		CUST.cbl		View used to define structure passed
+		cust.V			between the BUY and SELL clients and
+		cust.h			the BUYSR and SELLSR servers
+
+quote		QUOTE.cbl		View used to define structure passed
+		quote.V			between the FUNDPR and FUNDUP clients
+		quote.h			and all the servers

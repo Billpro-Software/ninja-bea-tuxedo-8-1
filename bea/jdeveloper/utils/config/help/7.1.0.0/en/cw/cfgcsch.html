@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Configuration Wizard Help: Configure JDBC Component Schema</title>
+<LINK REL=StyleSheet HREF="blaf.css" TYPE="text/css" MEDIA=screen>
+</head>
+<body>
+<H1>Configure JDBC Component Schema</H1>
+<p>For some Fusion Middleware components (for example, SOA and Web Center Spaces), JDBC data sources might be defined as part of the component's database schema, which are loaded (during installation) by using the Repository Creation Utility (RCU). </p>
+<p>When you create a WebLogic domain for such components by using the Configuration Wizard, you can configure the JDBC component schema settings, such as database driver, schema owner, password, and so on.</p>
+<p>The JDBC component schemas associated with the products for which you are creating the domain (example, SOA) are listed in the lower half of the screen.</p>
+<p> <strong>Note</strong>: If you want to configure one or more of the schemas as RAC data sources, select the check boxes adjacent to the name of the required schemas, and select the <strong>Configure selected component schemas as RAC multi data source schemas in the next panel</strong> check box. Then, click the <strong>Next</strong> button. </p>
+<ol>
+<li>Select the schemas for which you want to specify data source settings, by selecting the check box adjacent to the schema names.
+  <p class="list_para"><strong>Note</strong>:  When you select multiple component schemas, the text &#8220;<span class="code">Varies among component schemas</span>&#8221; might be displayed in certain fields, indicating that the current values of those fields are not the same across the selected component schemas. If you go ahead and change the values in such fields, the new values are applied uniformly across the selected component schemas.</p>
+<p><strong>Note</strong>: The default values of component schema parameters such as vendor, driver, host name, and port number depend on the values that are specified in the application templates.</p></li>
+<li>Review the current configuration settings and modify them as required.
+<p class="list_para"><strong>Note</strong>: The default values of  schema parameters such as vendor, driver, host name, and port number depend on the values that are specified in the application templates.</p>
+<table>
+ <tr>
+ <th>Field</th>
+      <th>Description</th>
+    </tr>
+ <tr>
+ <td><strong>Vendor</strong></td>
+      <td>Select the database vendor.</td>
+    </tr>
+ <tr>
+ <td><strong>Driver</strong></td>
+      <td>Select the JDBC driver that you want to use to connect to the database.<p class="list_para">The list includes the JDBC drivers for the selected database vendor.</p></td>
+    </tr>
+ <tr>
+ <td><strong>Schema Owner </strong></td>
+      <td>Enter the login name for connecting to the database.</td>
+    </tr>
+ <tr>
+ <td><strong>Schema Password </strong></td>
+      <td>Enter the login password for the specified schema owner.</td>
+    </tr>
+ <tr>
+ <td><strong>DBMS/Service</strong></td>
+      <td>Enter a database DBMS name, or service name if you selected a service type driver. </td>
+    </tr>
+ <tr>
+ <td><strong>Host Name </strong></td>
+      <td>Enter the name of the server hosting the database.</td>
+    </tr>
+ <tr>
+ <td><strong>Port</strong></td>
+      <td>Enter the port number to be used to connect to the server that hosts the database.</td>
+    </tr>
+ </table>
+<p class="list_para">The values that you specify are displayed in the appropriate columns in the schema list, for the selected schemas. </p>
+</li>
+<li>After making the required selections and entries, click the <strong>Next</strong> button in the wizard to test the component schemas.</li>
+</ol>
+<p class="body">For more information, see the Oracle Fusion Middleware documentation library on the <a href="http://www.oracle.com/technology/documentation/index.html" target="_blank">Oracle Technology Network</a>.</p>
+<p class="copyright">Copyright &copy; 2009, 2010, Oracle and/or its affiliates. All rights reserved.</p>
+</body>
+</html>

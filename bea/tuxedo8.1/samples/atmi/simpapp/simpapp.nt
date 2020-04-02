@@ -1,0 +1,95 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 2000 BEA Systems, Inc.	
+#	  All Rights Reserved 	 
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF 
+#	BEA Systems, Inc.  
+#	The copyright notice above does not evidence any  
+#	actual or intended publication of such source code.
+
+#Copyright (c) 2000 BEA Systems, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/simpapp/simpapp.nt	$Revision: 1.6 $"
+
+#
+#	ANAME -- Name of this application (e.g. bankapp).
+#
+ANAME = simpapp
+
+#
+#	CNAME -- Name of this component (e.g. apps).
+#
+CNAME = apps
+
+#
+# C compiler flags:  enable TUXEDO System Distributed Transaction
+# Processing, search for C header files in TUXEDO's include directory
+#
+CFLAGS= -DNOWHAT=1 -I$(INCDIR) -W3 -Od -DWIN32 -MD -Zi
+
+#
+# List of all the source files in simpapp
+#
+SRC = \
+	simpcl.c \
+	simpserv.c
+
+#
+# Targets
+#
+INSTALL = simpcl.exe simpserv.exe
+INSTALLWS = wsimpcl.exe
+
+all:	$(INSTALL)
+
+install:	$(INSTALL)
+installws:	$(INSTALLWS)
+
+#
+# Rule for linting source
+#
+lint:
+	-LIBDIR= $(LINT) $(LINTOPTS) -DNOWHAT -I$(INCDIR) $(SRC)
+
+#
+# Rule for cleaning out generated files
+#
+clean:
+	-del /F /Q $(INSTALL) $(INSTALLWS) *.obj *.pdb *.ilk
+
+#
+#	clobber -- Should remove everything which was installed
+#	(i.e., inverse of install).
+#
+clobber:	clean
+
+#
+#	print -- Should produce a complete source listing of the
+#	files in the directory.
+#
+print::
+	@$(PR) $(PRFLAGS) $(SRC)
+
+#
+# This section contains rules for building the simpapp server
+# 
+simpserv.exe:	simpserv.c $(LIBES)
+	del /F /Q $(@) $(@).obj
+	set CFLAGS="$(CFLAGS)"
+	set TUXDIR=$(TUXDIR)
+	buildserver -s TOUPPER -o simpserv -f simpserv.c
+
+#
+# This section contains rules for building the simpapp client
+#
+simpcl.exe:	simpcl.c $(LIBES)
+	del /F /Q $(@)
+	set CFLAGS="$(CFLAGS)"
+	set TUXDIR=$(TUXDIR)
+	buildclient	-o simpcl -f simpcl.c
+
+wsimpcl.exe:	simpcl.c $(WLIBES)
+	del /F /Q $(@)
+	set CFLAGS="$(CFLAGS)"
+	set TUXDIR=$(TUXDIR)
+	buildclient -w 	-o wsimpcl -f simpcl.c

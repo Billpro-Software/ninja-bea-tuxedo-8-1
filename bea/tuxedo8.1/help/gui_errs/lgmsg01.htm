@@ -1,0 +1,2414 @@
+<TITLE>LIBGW MESSAGES - RELEASE 6.0</TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBGW MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>LIBGW MESSAGE #1000</H3>
+<H2> ERROR: Message dropped by gw_msg_recv(). Error = <I>error_code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway process received an input message that it was
+unable to process.
+The <I>error_code</I> reported is for use by your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The userlog will normally contain another related
+userlog message explaining the cause of the error in more detail.
+If no other message is present, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>LIBGW MESSAGE #1001</H3>
+<H2> ERROR: Received message with an unknown internal type index <I>index_number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a reply, the internal buffer type is unknown.
+This refers to an internal system problem that could be caused,
+for example, by corrupted shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>LIBGW MESSAGE #1002</H3>
+<H2> ERROR: Received message of unknown type '<I>type_name</I>' subtype '<I>subtype_name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a message whose type and subtype are
+not known.  That is, the gateway's type switch was not built to
+recognize the type and/or subtype of the message received.
+This may happen if the administrator has defined a new application
+specific type as described in tuxtypes(5)
+and has rebuilt some clients and/or servers with the new typeswitch,
+but has forgotten to rebuild other clients and/or servers with the
+new typeswitch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The /Domain gateway process should be re-linked with the appropriate
+type switch including the type and subtype that are printed as
+part of this error message.
+Or, the process sending the offending type/subtype should be
+altered to send a buffer that the gateway understands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tuxtypes (5),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>LIBGW MESSAGE #1003</H3>
+<H2> ERROR: Received message of unknown type '<I>type_name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a message whose type is
+not known.  That is, the gateway's type switch was not built to
+recognize the type of the message received.
+This may happen if the administrator has defined a new application
+specific type as described in tuxtypes(5)
+and has rebuilt some clients and/or servers with the new typeswitch,
+but has forgotten to rebuild other clients and/or servers with the
+new typeswitch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The /Domain gateway process should be re-linked with the appropriate
+type switch including the type that is printed as
+part of this error message.
+Or, the process sending the offending type should be
+altered to send a buffer that the gateway understands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tuxtypes (5),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>LIBGW MESSAGE #1008</H3>
+<H2> ERROR: shmat() system call failure: errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the /Domain system-supplied processes was unable to attach
+to a shared memory segment.  The value of
+<I>errno</I>
+returned from the UNIX
+shmat (2)
+system call is also printed.
+This could happen if one or more shared memory segments were
+manually removed by a privileged UNIX user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the value of
+<I>errno</I>
+indicates that the shared memory segment in question does not exist,
+it will be necessary to shut down the gateway group and reboot it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>LIBGW MESSAGE #1009</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to create and initialize the /Domain
+semaphore structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>LIBGW MESSAGE #1010</H3>
+<H2> ERROR: Reached UNIX limit on semaphore ids</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+GWADM
+server could not create any more semaphore ids because the UNIX
+system-imposed limit on the maximum number of allowed semaphores
+system-wide would be exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+tmloadcf
+-c
+and
+dmloadcf
+-c
+commands to determine the machine IPC resources
+required by core System/T and by the /Domain feature.
+Add to these values the IPC resources used by any
+resource managers and/or other applications, and
+reconfigure the system IPC resources appropriately.
+Refer to the IPC tuning guidelines in the
+"TUXEDO Installation Guide"
+for further information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+dmloadcf (1),
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>LIBGW MESSAGE #1011</H3>
+<H2> ERROR: Can't create enough semaphores for GW</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a /Domain gateway group initializes, it creates one or
+more sets of semaphores for serializing access to the /Domain
+shared memory.
+The number of semaphores created per gateway group is equal to the
+number of server processes configured for that gateway group, plus 1.
+This message is printed when the /Domain gateway group cannot
+create as many semaphores as it needs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since core System/T normally makes use of many more semaphores
+than the /Domain add-on, attempts to reduce semaphore usage should
+focus on core System/T.
+If possible, decrease the value of
+MAXACCESSERS
+in the UBBCONFIG file to reduce core System/T semaphore usage.
+If the MAX value for any /Domain server is set to a large value,
+reduce this value in order to reduce the number of /Domain semaphores used.
+If it is not possible to reduce semaphore usage for the existing
+application, the
+tmconfig -c
+and dmconfig -c
+commands can be run to determine the number of semaphores required by
+core System/T and by the /Domain add-on.
+Refer to the
+"TUXEDO Installation Guide"
+for further information regarding IPC parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide" ,
+tmloadcf (1),
+dmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1012"></A>
+<H3>LIBGW MESSAGE #1012</H3>
+<H2> ERROR: Reached UNIX limit on semaphore ids</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1010.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1010.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>LIBGW MESSAGE #1013</H3>
+<H2> ERROR: Can't create enough semaphores for GW</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1011.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1011.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>LIBGW MESSAGE #1014</H3>
+<H2> ERROR: semctl for initializing sems failed, errno=<I>errno_value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Once the
+GWADM
+process creates a semaphore set used for serializing access to the /Domain
+shared memory, it initializes it.
+This message is issued when the
+GWADM
+server fails to initialize a semaphore set as locked.
+The issued message contains the UNIX error number, <I>errno</I>,
+which can be used to determine the exact nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+semctl(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>LIBGW MESSAGE #1015</H3>
+<H2> ERROR: semctl for initializing sems failed, errno=<I>errno_value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Once the
+GWADM
+process creates a semaphore set used for serializing access to the /Domain
+shared memory, it initializes it.
+This message is issued when the
+GWADM
+server fails to initialize a semaphore set with the
+administrator's UNIX
+uid ,
+gid ,
+and permissions as specified in the
+dmconfig
+file.
+The issued message contains the UNIX error number, <I>errno</I>,
+which can be used to determine the exact nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+semctl(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>LIBGW MESSAGE #1019</H3>
+<H2> ERROR: Gateway internal data structures not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to lock shared memory,
+a /Domain system server noticed that a pointer which should
+always point to information about the /Domain process
+was set to NULL.
+This is an internal problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>LIBGW MESSAGE #1020</H3>
+<H2> ERROR: Can't lock gateway shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A process was unable to lock the gateway
+shared memory data structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>LIBGW MESSAGE #1021</H3>
+<H2> ERROR: Can't unlock gateway shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process was unable to successfully unlock the gateway shared memory data
+structures.
+As a result of this problem, other processes will be unable to lock the
+shared memory data structures.
+The most common cause of this error is the accidental removal of some
+or all of the gateway semaphore sets.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ask the privileged users on your system (normally the TUXEDO System/T administrator and
+root )
+whether they may have accidentally removed some IPC resource, perhaps
+through inadvertent use of the UNIX System
+ipcrm (1)
+command.  If no IPC resources have been accidentally removed,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3>LIBGW MESSAGE #1022</H3>
+<H2> ERROR: Can't unlock gateway shared memory, not the locker</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process attempted to unlock the gateway shared memory data structures,
+but it was not the locker of these structures.  Because of this,
+no change was made to the status of the shared memory data structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>LIBGW MESSAGE #1023</H3>
+<H2> ERROR: Tosswkup failure for sem <I>semno</I>, errno <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+semop (2)
+system call failed for one of the semaphores that control access to
+gateway data structures.
+The
+<I>semno</I>
+refers to the index of the semaphore within a particular set;
+this information may be useful to support technicians.
+<I>errno_val</I>
+refers to the UNIX System error returned by the
+semop (2)
+system call.  This value can be very helpful to application administrators
+in diagnosing the cause of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the UNIX System
+intro (2)
+and
+semop (2)
+manual pages to translate the numeric value of
+errno
+into a symbolic value and determine the possible causes of such an error.
+For example,
+errno
+values of 22 (EINVAL) or 36 (<Font>EIDRM)
+indicate that a privileged user may accidentally have removed the
+gateway semaphores, perhaps through use of the UNIX System
+ipcrm (1)
+command.
+If the problem cannot be resolved, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+semop (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3>LIBGW MESSAGE #1024</H3>
+<H2> ERROR: Wakeup failure for sem <I>semno</I>, errno <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+semop (2)
+system call failed for one of the semaphores that control access to
+gateway data structures.
+The
+<I>semno</I>
+refers to the index of the semaphore within a particular set;
+this information may be useful to support technicians.
+<I>errno_val</I>
+refers to the UNIX System error returned by the
+semop (2)
+system call.  This value can be very helpful to application administrators
+in diagnosing the cause of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the UNIX System
+intro (2)
+and
+semop (2)
+manual pages to translate the numeric value of
+errno
+into a symbolic value and determine the possible causes of such an error.
+For example,
+errno
+values of 22 (EINVAL) or 36 (<Font>EIDRM)
+indicate that a privileged user may accidentally have removed the
+gateway semaphores, perhaps through use of the UNIX System
+ipcrm (1)
+command.
+If the problem cannot be resolved, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+semop (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3>LIBGW MESSAGE #1025</H3>
+<H2> ERROR: Awaitwkup failure for sem <I>semno</I>, errno <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+semop (2)
+system call failed for one of the semaphores that control access to
+gateway data structures.
+The
+<I>semno</I>
+refers to the index of the semaphore within a particular set;
+this information may be useful to support technicians.
+<I>errno_val</I>
+refers to the UNIX System error returned by the
+semop (2)
+system call.  This value can be very helpful to application administrators
+in diagnosing the cause of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the UNIX System
+intro (2)
+and
+semop (2)
+manual pages to translate the numeric value of
+errno
+into a symbolic value and determine the possible causes of such an error.
+For example,
+errno
+values of 22 (EINVAL) or 36 (<Font>EIDRM)
+indicate that a privileged user may accidentally have removed the
+gateway semaphores, perhaps through use of the UNIX System
+ipcrm (1)
+command.
+If the problem cannot be resolved, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+semop (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>LIBGW MESSAGE #1026</H3>
+<H2> WARN: GWDBG contains non-numeric characters in first number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The format of the
+GWDBG
+variable is invalid.
+The allowable formats for
+GWDBG
+are:
+<PRE><KBD>
+number
+number:regular_expression
+number1-number2
+number1-number2:regular_expression
+</KBD></PRE>
+If number is specified, debugging messages with levels less than
+or equal to number will be printed.
+If number1 and <Font>number2 are specified, debugging messages with levels
+between number1 and <Font>number2, inclusive, will be printed.
+If a regular expression is appended to the numeric part of the argument,
+only those messages matching that regular expression will be printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the format of the
+GWDBG
+variable is valid.
+GWDBG
+may be incorrectly set and exported in the environment.
+It may also be incorrectly set in an environment file using the
+ENVFILE
+parameter in the *MACHINES or SERVERS section
+of the UBBCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>LIBGW MESSAGE #1027</H3>
+<H2> WARN: GWDBG contains non-numeric characters in 2nd part of range</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The format of the
+GWDBG
+variable is invalid.
+The allowable formats for
+GWDBG
+are:
+<PRE><KBD>
+number
+number:regular_expression
+number1-number2
+number1-number2:regular_expression
+</KBD></PRE>
+If number is specified, debugging messages with levels less than
+or equal to number will be printed.
+If number1 and <Font>number2 are specified, debugging messages with levels
+between number1 and <Font>number2, inclusive, will be printed.
+If a regular expression is appended to the numeric part of the argument,
+only those messages matching that regular expression will be printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the format of the
+GWDBG
+variable is valid.
+GWDBG
+may be incorrectly set and exported in the environment.
+It may also be incorrectly set in an environment file using the
+ENVFILE
+parameter in the *MACHINES or SERVERS section
+of the UBBCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1028"></A>
+<H3>LIBGW MESSAGE #1028</H3>
+<H2> WARN: GWDBG regular expression invalid.  Ignoring regular expression.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The format of the
+GWDBG
+variable is invalid.
+The allowable formats for
+GWDBG
+are:
+<PRE><KBD>
+number
+number:regular_expression
+number1-number2
+number1-number2:regular_expression
+</KBD></PRE>
+If number is specified, debugging messages with levels less than
+or equal to number will be printed.
+If number1 and <Font>number2 are specified, debugging messages with levels
+between number1 and <Font>number2, inclusive, will be printed.
+If a regular expression is appended to the numeric part of the argument,
+only those messages matching that regular expression will be printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the format of the
+GWDBG
+variable is valid.
+GWDBG
+may be incorrectly set and exported in the environment.
+It may also be incorrectly set in an environment file using the
+ENVFILE
+parameter in the *MACHINES or SERVERS section
+of the UBBCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>LIBGW MESSAGE #1029</H3>
+<H2> ERROR: Service request not forwarded to remote site:\</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway server attempted to execute a service request
+received from another /Domain gateway.  However, the invocation of
+tpacall (3)
+on the remote domain failed.
+A string indicating the specific error is printed as part of the message,
+and will be returned to the process that invoked this service request
+across the gateway gateway.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look at the specific error string reported by
+tpacall (3)
+to narrow down the cause of the error.
+Make certain that the service requested is advertised by one or more
+application servers, that its input buffer type is specified correctly,
+and that the application server supports transactions if the call was
+made in transaction mode.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpacall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>LIBGW MESSAGE #1030</H3>
+<H2> ERROR: Reply message not sent due to gateway error <I>error_code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway server was unable to send a reply message to a
+System/T process.
+In many cases, another related userlog message will give further
+details as to the cause of the error.
+The <I>error_code</I> may help support personnel further distinguish
+the cause of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look for another related userlog message explaining the cause of the
+error in greater detail.
+If no other message is present, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>LIBGW MESSAGE #1031</H3>
+<H2> ERROR: Domain administrative service GWA not advertised</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a /Domain gateway server is booted, it checks to see if an instance
+of the
+GWADM
+server is executing within the same group by verifying that a service
+named
+GWA
+is offered within the same group.
+If no
+GWA
+service is offered, the /Domain gateway server logs this message and
+exits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make certain that the
+dmconfig (5)
+file specifies the
+GWADM
+server as present in each group where there are /Domain gateway
+servers.
+Make certain that the
+dmconfig (5)
+file specifies that the
+GWADM
+server is to be booted prior to any /Domain gateway servers within
+the same group.
+If using options to
+tmboot
+to explicitly control the servers booted, do not attempt to boot
+/Domain gateway servers unless there is a
+GWADM
+server booted within the same group.
+Finally,
+make sure that the
+GWADM
+server has not abnormally died or failed to boot.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dmconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>LIBGW MESSAGE #1032</H3>
+<H2> ERROR: Failed to update own server table entry with /T error (<I>error_string</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain process failed in an attempt to update its own server table
+entry in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the shared memory segment that contains the Bulletin Board has not
+been removed.  If it has, then the application will need to be rebooted.
+Otherwise, this error indicates an internal error.  In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3>LIBGW MESSAGE #1033</H3>
+<H2> ERROR: Cannot allocate memory to retrieve service table entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to retrieve the list of services offered within
+this gateway group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>LIBGW MESSAGE #1035</H3>
+<H2> ERROR: Cannot retrieve GWADM server table entry due to /T error (<I>error_string</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway server or a restarting
+GWADM
+process is unable to retrieve the server table entry associated with
+the
+GWADM
+server.
+A string describing the value of
+tperrno
+associated with the failure is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this message is reported by a /Domain gateway process,
+make certain that the
+GWADM
+server is in fact executing in the /Domain gateway server group.
+If this message is reported in a different context,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>LIBGW MESSAGE #1036</H3>
+<H2> ERROR: Can't locate free block in domain log</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain software was unable to locate a suitably large block
+of space in the /Domain log to log a particular transaction.
+This will result in the transaction being unable to commit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If any records for heuristically completed transactions exist in
+the /Domain log, these records will remain until explicitly removed
+by an administrator.
+The
+dmadmin
+printtrans
+and
+forgettrans
+commands can be used to remove any heuristic log records that
+are no longer required.
+Also, consider increasing the size of the /Domain transaction log
+file.
+This can be done when the /Domain gateway group is next taken down for
+maintenance
+using the
+dmadmin
+dsdmlog
+command and either the
+dmadmin
+config
+command or the
+dmloadcf
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dmadmin (1),
+dmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>LIBGW MESSAGE #1037</H3>
+<H2> ERROR: gwlog_eot(): wrong page numbers <I>start_page</I>/<I>end_page</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal request to free certain page(s) in the /Domain log
+requested the freeing of a page range where the start page was
+greater than the end page, the start page was negative, or the end
+page reached beyond the end of the log.
+This indicates a problem with the /Domain internal data structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3>LIBGW MESSAGE #1038</H3>
+<H2> INFO: Domain log page <I>pageno</I> skipped, chksum didn't match</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While reading in the /Domain log to perform warmstart, a record
+was detected with a valid magic value but an invalid checksum.
+This can happen if there was a system crash after a part of the log
+record had been written to disk.
+This log record will not be considered when forming the list of transactions
+to be recommitted by warmstart.
+/Domain will maintain transaction integrity by rolling the transaction back.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3>LIBGW MESSAGE #1039</H3>
+<H2> ERROR: Domain log not in an understandable format.  Different release.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While reading in the /Domain log as part of warmstart, the /Domain
+software detected a record whose format indicates that it comes from
+a different major release of /Domain whose format is not known to this
+release.  The record cannot be processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If there is more than one release of the TUXEDO System/T available on this machine,
+make sure that you are running the proper release.
+Also, refer to the installation notes for this release of /Domain to
+determine the proper steps to follow when upgrading from a previous release.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>LIBGW MESSAGE #1040</H3>
+<H2> ERROR: System clock has been reset to prior time.  Reset again to time after <I>time</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system clock has been reset such that the current time precedes
+the timestamps in the /Domain transaction log.
+Since this could cause inconsistencies when previous transactions
+are warmstarted, the boot of the /Domain gateway group is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reset the system clock to the correct time, and retry the
+operation again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3>LIBGW MESSAGE #1041</H3>
+<H2> ERROR: Can't get domain log information for warmstart</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain system processes was unable to obtain basic information
+about its local domain that is needed to properly warmstart the
+/Domain gateway group.
+For this reason, the boot of the /Domain gateway group will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>LIBGW MESSAGE #1042</H3>
+<H2> ERROR: Can't open domain log</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process was unable to open the /Domain transaction log device.
+Another userlog message will normally provide further details as to
+the cause of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make certain that the device listed in the
+DMTLOGDEV
+parameter in the /Domain configuration file exists,
+and that it can be read by the user ID under which the /Domain
+processes are running.
+Use the
+tmadmin
+livtoc
+command to verify that a table whose name is given by the
+DMTLOGNAME
+parameter in the /Domain configuration file exists.
+If no such table exists, determine whether there is sufficient
+free space to create such a table.
+Examine immediately preceding messages in the userlog to determine
+a more specific cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+dmconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3>LIBGW MESSAGE #1044</H3>
+<H2> WARN: Cannot access domain log table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was unable to access the shared memory data
+structures having to do with the /Domain transaction log.
+As a result, the /Domain gateway will be unable to reply to the
+originators of transactions that have been logged.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the /Domain gateway group and then restart it.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1045"></A>
+<H3>LIBGW MESSAGE #1045</H3>
+<H2> WARN: Cannot access domain log table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway
+process is unable to access the shared memory data structures
+having to do with the /Domain transaction log.
+As a result, it is unable to process a logging request.
+This will result in a transaction being rolled back or remaining
+in an inconclusive state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the /Domain gateway group and then restart it.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3>LIBGW MESSAGE #1046</H3>
+<H2> ERROR: Can't release domain shared memory lock</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway process is unable to release a lock on the
+/Domain shared data structures.
+As a result, other processes within the /Domain gateway group
+will be unable to access the /Domain shared data structures.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the /Domain gateway group and then restart it.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1047"></A>
+<H3>LIBGW MESSAGE #1047</H3>
+<H2> ERROR: Found invalid TMS event 0x<I>event_number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A common function within the /Domain gateway that is used to
+send several different types of events to other TMS processes
+was invoked with an event that it does not know about.
+This is an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3>LIBGW MESSAGE #1048</H3>
+<H2> ERROR: Cannot send to service \</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was managing a transaction and had attempted to send
+a message to a
+TMS
+service via a
+tpacall (),
+and that call failed.
+The string value displayed in the message identifies the value of
+tperrno
+returned by
+tpacall ().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A possible cause for this error may be that the
+TMS
+process has terminated for some reason.
+Please check and ensure that all
+TMS
+processes are running.
+If further assistance is needed, contact the System/T Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1049"></A>
+<H3>LIBGW MESSAGE #1049</H3>
+<H2> ERROR: TMS_ABORTONLY transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway process was rolling back a transaction.
+The transaction state was not as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1050"></A>
+<H3>LIBGW MESSAGE #1050</H3>
+<H2> ERROR: TMS_MANAGE found transaction state <I>stateval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to send a first phase commit request to other
+participating groups in a transaction, the /Domain gateway process
+found a transaction state it did not expect.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1051"></A>
+<H3>LIBGW MESSAGE #1051</H3>
+<H2> ERROR: TMS_MANAGE found transaction state <I>stateval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to send a second phase commit message to other
+participating groups in a transaction, the /Domain gateway process
+found a transaction state it did not expect.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3>LIBGW MESSAGE #1052</H3>
+<H2> ERROR: TMS_MANAGE found transaction state <I>stateval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to send an abort message to other participating
+groups in a transaction, the /Domain gateway process
+found a transaction state it did not expect.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3>LIBGW MESSAGE #1053</H3>
+<H2> ERROR: TMS_TIMEOUT state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to process a request to time out a transaction received
+from the TUXEDO System/T
+BBL ,
+the /Domain gateway process found an unexpected transaction state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1054"></A>
+<H3>LIBGW MESSAGE #1054</H3>
+<H2> ERROR: Received TMS_ABORT for TMGDECIDED transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a rollback request for a transaction.
+However, the Bulletin Board data structures indicate that the
+transaction is in a state that can only occur if the decision
+was to commit the transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3>LIBGW MESSAGE #1055</H3>
+<H2> ERROR: Group <I>group</I> at coordinator site received TMS_ABORT in state TMGREADY</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway, acting as coordinator of a System/T transaction,
+received a request to rollback a transaction that is already in
+"ready" state.
+Since only the coordinator itself can make the decision to abort
+such a transaction, this is an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>LIBGW MESSAGE #1056</H3>
+<H2> WARN: TMS_ABORT changing group <I>group</I> from TMGHCOMMIT to TMGABORTED</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An administrator had made a previous decision to heuristically commit
+a transaction at this group.
+Subsequently, it was learned that the coordinator had decided to abort
+the transaction.
+This message logs the inconsistency.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is required.
+However, the administrator may want to take application-specific steps
+to manually remedy any inconsistency caused by the
+incorrect heuristic decision.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>LIBGW MESSAGE #1057</H3>
+<H2> ERROR: tms_abort group <I>group</I> in state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While rolling back a transaction, the /Domain gateway found
+the transaction state of group <I>group</I> to not be one of
+the expected states for a transaction being rolled back.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>LIBGW MESSAGE #1058</H3>
+<H2> WARN: aborttrans all aborted transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a request to heuristically rollback
+a global transaction.
+This request was generated via the
+tmadmin
+aborttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3>LIBGW MESSAGE #1059</H3>
+<H2> WARN: committrans committed group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message informs that a transaction has been heuristically
+committed at this group as a result of a
+tmadmin
+committrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>LIBGW MESSAGE #1060</H3>
+<H2> ERROR: Can't get domain shared memory lock</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to place a transaction on the list of items to
+be logged, the /Domain gateway was
+unable to log the /Domain shared memory data structures.
+As a result, the transaction cannot be logged at this time.
+This will result in the transaction being aborted or remaining
+in an indeterminate state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>LIBGW MESSAGE #1061</H3>
+<H2> ERROR: Failed to set non-blocking priority for TMS request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to send a TMS message, a /Domain gateway process
+was unable to increase the priority of a non-blocking request.
+By itself, this failure will not result in any incorrect operation
+other than a possible minor performance degradation.
+However, it may be symptomatic of problems elsewhere in the system,
+since this call should not normally fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1062"></A>
+<H3>LIBGW MESSAGE #1062</H3>
+<H2> ERROR: TMS_COMMIT found transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to process a transaction commit request,
+the /Domain gateway found an unexpected transaction state
+in the System/T transaction table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3>LIBGW MESSAGE #1063</H3>
+<H2> ERROR: Cannot start AUTOTRAN transaction due to error \</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The domain gateway attempted to initiate a transaction because
+of the
+AUTOTRAN
+option on a service request it received.
+However, the call to
+tpbegin (3)
+failed.
+The error string associated with the value of
+tperrno
+returned by
+tpbegin (3)
+is printed as part of the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look at the list of
+tperrno
+values on the
+tpbegin (3)
+manual page to attempt to narrow down the cause of the error.
+Also look for any immediately preceding messages in the userlog.
+For example, a preceding message about "No space in Bulletin Board"
+would indicate that the global transaction table was full.  In this
+case, the size of the transaction table should be increased by the
+administrator.
+If the cause of the error cannot otherwise be determined,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpbegin (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3>LIBGW MESSAGE #1066</H3>
+<H2> ERROR: gw_tms_status found transaction state <I>tran_state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a transaction status message received from
+a TMS process or from the BBL,
+the /Domain gateway process detected that the transaction was
+in an unexpected state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1067"></A>
+<H3>LIBGW MESSAGE #1067</H3>
+<H2> ERROR: Cannot find transaction for action <I>action_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway generated an action to send a transaction-related
+message to a
+TMS
+process.  However, the transaction specified by the action was not found
+in the system at the time when the action was executed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1068"></A>
+<H3>LIBGW MESSAGE #1068</H3>
+<H2> WARN: Cannot free unrecognized internal buffer at address 0x<I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway process attempted to free what it thought was a
+System/T buffer.
+However, the buffer did not have the proper System/T magic value
+or was a NULL pointer, so it was not freed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the bad buffer was not freed, no action is required.
+However, you may want to contact your TUXEDO System Technical Support
+to report that this has occurred.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1069"></A>
+<H3>LIBGW MESSAGE #1069</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while attempting to log a transaction.
+For the most common types of log records, this will result in the
+transaction being aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3>LIBGW MESSAGE #1070</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while attempting to warmstart the /Domain gateway group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>LIBGW MESSAGE #1071</H3>
+<H2> ERROR:  gw_tms_ready for missing group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction, the /Domain gateway received a ready
+indication for a group that is not part of the transaction.
+The transaction will be marked as abort-only.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1072"></A>
+<H3>LIBGW MESSAGE #1072</H3>
+<H2> ERROR: gw_tms_ready group <I>group</I> state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction, the /Domain gateway found that
+one of the groups for the transaction is in an unexpected state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>LIBGW MESSAGE #1073</H3>
+<H2> ERROR: gw_tms_ready found transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to commit a transaction, the /Domain gateway
+found an unexpected transaction state.
+Because of this, the transaction is being marked abort-only.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>LIBGW MESSAGE #1074</H3>
+<H2> ERROR: Service request found state <I>state</I> for group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway process received a service request in transaction mode,
+but the state of the /Domain gateway group was neither active nor
+aborted.
+Due to this unexpected state, the service request is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>LIBGW MESSAGE #1075</H3>
+<H2> ERROR: TMS_DONE transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was finishing the final phase of transaction
+commit, and found that the transaction state was not as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>LIBGW MESSAGE #1076</H3>
+<H2> WARN: aborttrans aborted transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a request to heuristically rollback
+a group of a global transaction.
+This request was generated via the
+tmadmin
+aborttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>LIBGW MESSAGE #1077</H3>
+<H2> WARN: aborttrans not allowed for TMGDECIDED transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a request to heuristically rollback
+a transaction that is already in decided state.
+This is not allowed, since the decision has already been made that
+such a transaction is to be committed.
+The request was generated via the
+tmadmin
+aborttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>LIBGW MESSAGE #1078</H3>
+<H2> WARN: aborttrans not allowed for TMGREADY transaction at coordinator site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway received a request to heuristically rollback a
+transaction.  This /Domain group is the coordinator of the transaction,
+and all groups have reported that they are ready.
+At this point, the transaction may be waiting for its request to
+write commit in the transaction log to be completed.
+For this reason, the request to heuristically rollback the transaction
+is not allowed, and will be ignored.
+The request was generated by the
+tmadmin
+aborttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>LIBGW MESSAGE #1079</H3>
+<H2> WARN: aborttrans aborted group <I>group_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message informs that a transaction has been heuristically
+committed at group <I>group_name</I> as a result of a
+tmadmin
+committrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3>LIBGW MESSAGE #1080</H3>
+<H2> ERROR: Conversational request not forwarded to remote site - <I>tperrno_string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tpsend (3)
+or
+tpdiscon (3)
+call was issued by a program on another domain.
+This call was for a conversation with a server located on this domain.
+However, when the /Domain gateway attempted to execute the
+tpsend (3)
+or
+tpdiscon (3)
+on this domain on behalf of the original issuer, an error resulted.
+The value of
+tperrno
+is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the manual pages for
+tpsend (3)
+and
+tpdiscon (3)
+for possible causes of the error.
+If necessary, correct the application so that the error does not reoccur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsend (3),
+tpdiscon (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3>LIBGW MESSAGE #1081</H3>
+<H2> ERROR: Conversation error TPEEVENT but event flag not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway process received a conversational message
+from another System/T process.
+The message header contained a
+tperrno
+value of
+TPEEVENT ,
+but the message header did not contain any event.
+This does not conform to the expected protocol.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>LIBGW MESSAGE #1082</H3>
+<H2> ERROR: Bad conversation event: <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway process received a conversational message from
+another System/T process.
+The
+tperrno
+value in the message was set to
+TPEEVENT ,
+but the event reported was a value that is not known to the system.
+However, the event field was set to an event value that is not known.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3>LIBGW MESSAGE #1083</H3>
+<H2> ERROR: Conversational connect not forwarded to remote site - <I>tperrno_string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tpconnect (3)
+was issued by a program on another domain to initiate a conversation
+with a server on this domain.
+However, when the /Domain gateway attempted to perform the functionality
+of
+tpsend (3)
+on this domain on behalf of the original issuer, an error resulted.
+The value of
+tperrno
+is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the manual page for
+tpconnect (3)
+for possible causes of the error.
+If necessary, correct the application so that the error does not reoccur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpconnect (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1084"></A>
+<H3>LIBGW MESSAGE #1084</H3>
+<H2> ERROR: Failed to create connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a /Domain gateway process
+executes
+tpconnect (3)
+on behalf of a client on a remote domain and
+fails to add a connection table entry into the Bulletin Board.
+This can happen if the Bulletin Board connection table is full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the number of connection table entries in the Bulletin Board
+by increasing the
+MAXCONV
+parameter in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3>LIBGW MESSAGE #1085</H3>
+<H2> ERROR: Failed to get acknowledgement message for connection - <I>tperrno_string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error could occur when a conversational client or server
+on another domain issues a
+tpconnect (3)
+with
+TPSENDONLY
+to a service located on this domain.
+Within each System/T domain, the
+tpconnect (3)
+request with
+TPSENDONLY
+requires an internal acknowledgment message to be sent.
+The internal acknowledgment sent from the application server on
+this domain to the /Domain gateway indicated a failure.
+The value of
+tperrno
+associated with the failure is included as part of the message.
+The next call made on the conversation will result in an immediate
+disconnect notification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look at the
+tpconnect (3)
+manual page to see under what circumstances the specific value of
+tperrno
+reported can occur.
+(For example, a
+tperrno
+value of
+TPEITYPE
+would indicate that the data type passed to
+tpconnect (3)
+is not acceptable to the service invoked.)
+If the error reported is
+TPESYSTEM ,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpconnect (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1086"></A>
+<H3>LIBGW MESSAGE #1086</H3>
+<H2> INFO: Transaction marked abort-only upon gateway restart</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway process died and was restarted by System/T.
+As a result, transactions that the dead gateway was involved in
+that had not yet entered the commit phase were marked as abort-only.
+The transaction indicated in this message had an active action
+associated with it in the dead gateway, and was marked abort-only.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>LIBGW MESSAGE #1087</H3>
+<H2> INFO: Warmstart processing transaction as coordinating domain</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway group was previously shut down while transactions
+were active, or the group previously was terminated abnormally (that is, by a
+machine crash) regardless of whether transactions were active.
+Upon restart, the /Domain gateway has examined its log and
+found that this transaction may need to be pushed through to commit.
+This domain gateway group is the root of the transaction tree.
+/Domain will take care of recommitting the transaction; no administrator
+action is required.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>LIBGW MESSAGE #1088</H3>
+<H2> INFO: Warmstart processing transaction as subordinate to domain <I>domain_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway group was previously shut down while transactions
+were active, or the group previously was terminated abnormally (that is, by a
+machine crash) regardless of whether transactions were active.
+Upon restart, the /Domain gateway has examined its log and
+found that the commitment or rollback actions for this transaction
+may not have been completed.
+This domain gateway group is a subordinate of
+domain <I>domain_name</I> in the transaction tree.
+/Domain will contact the transaction coordinator and will take care of
+committing or rolling back the transaction; no administrator
+action is required.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>LIBGW MESSAGE #1089</H3>
+<H2> INFO: Warmstart processing transaction as subordinate to group <I>group_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /Domain gateway group was previously shut down while transactions
+were active, or the group previously was terminated abnormally (that is, by a
+machine crash) regardless of whether transactions were active.
+Upon restart, the /Domain gateway has examined its log and
+found that the commitment or rollback actions for this transaction
+may not have been completed.
+This domain gateway group is a subordinate of
+local group <I>group_name</I> in the transaction tree.
+/Domain will contact the transaction coordinator and will take care of
+committing or rolling back the transaction; no administrator
+action is required.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>LIBGW MESSAGE #1090</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to perform a message queue read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can
+be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>LIBGW MESSAGE #1091</H3>
+<H2> ERROR: Recovery cannot retrieve record for domain <I>domain_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was reading its transaction log upon startup
+and identified the transaction mentioned in this userlog record as
+potentially requiring recovery actions.
+The transaction log stated that domain <I>domain_name</I> was a participant
+in this transaction, but information about this
+domain could not be found in shared memory.
+This message can occur in a development environment
+if the TUXEDO System Administrator loads a /Domain
+configuration file for a new application in place of an old configuration
+file, the new and old configuration files share the same
+DMTLOGDEV
+and
+DMTLOGNAME
+parameters, the new configuration file specifies a different set of
+domains from the old file, and the old application was last shut down
+either when transactions were outstanding or other than by using
+tmshutdown (1).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the TUXEDO System Administrator has recently loaded a new /Domain configuration
+file as described above, then the TUXEDO System Administrator may either
+reload the old configuration file, reboot the old application, and
+shut down the old application (if transactional integrity of
+the old application is important), or may use the
+dmadmin (1)
+subcommand
+dsdmlog
+to remove the old log
+(if in a development environment where the old application is
+being thrown away).
+Note that an application may not specify the same
+DMTLOGDEV
+and
+DMTLOGNAME
+combination as used for any other application.  If this is the
+case, one of the applications should be changed to use a different
+DMTLOGNAME
+or
+DMTLOGDEV .
+If this error is not the result of one of the conditions described
+above, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dmloadcf (1),
+dmconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>LIBGW MESSAGE #1092</H3>
+<H2> ERROR: Recovery cannot retrieve record for domain <I>domain_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was reading its transaction log upon startup
+and identified the transaction mentioned in this userlog record as
+potentially requiring recovery actions.
+The transaction log stated that domain <I>domain_name</I> was a participant
+in this transaction, but information about this
+domain could not be found in shared memory.
+This message can occur in a development environment
+if the TUXEDO System Administrator loads a /Domain
+configuration file for a new application in place of an old configuration
+file, the new and old configuration files share the same
+DMTLOGDEV
+and
+DMTLOGNAME
+parameters, the new configuration file specifies a different set of
+domains from the old file, and the old application was last shut down
+either when transactions were outstanding or other than by using
+tmshutdown (1).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the TUXEDO System Administrator has recently loaded a new /Domain configuration
+file as described above, then the TUXEDO System Administrator may either
+reload the old configuration file, reboot the old application, and
+shut down the old application (if transactional integrity of
+the old application is important), or may use the
+dmadmin (1)
+subcommand
+dsdmlog
+to remove the old log
+(if in a development environment where the old application is
+being thrown away).
+Note that an application may not specify the same
+DMTLOGDEV
+and
+DMTLOGNAME
+combination as used for any other application.  If this is the
+case, one of the applications should be changed to use a different
+DMTLOGNAME
+or
+DMTLOGDEV .
+If this error is not the result of one of the conditions described
+above, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dmloadcf (1),
+dmconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1093"></A>
+<H3>LIBGW MESSAGE #1093</H3>
+<H2> ERROR: Recovery cannot set branch state for domain <I>domain_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was recovering a transaction from its log
+and was able to restore the transaction to shared memory, but
+then was unable to set the transaction state in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3>LIBGW MESSAGE #1094</H3>
+<H2> ERROR: DMCONFIG DMTLOGSIZE, <I>num_pages</I>, differs from size of existing log, <I>num_pages</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway was opening its transaction log to perform
+recovery and found that the size of the log as listed in the
+dmconfig
+file did not match the actual size of the log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If there could still be any outstanding transactions requiring
+recovery,
+restore the /Domain configuration to its previous size and reload
+it using
+dmloadcf (1).
+The /Domain gateway group may then be rebooted.
+If the TUXEDO System administrator does need to change the size of the
+/Domain log, the
+dmadmin (1)
+subcommand
+dsdmlog
+may be used.
+The log will then automatically be re-created with the size listed in
+the /Domain configuration file the next time the /Domain gateway group
+is booted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dmadmin (1),
+dmloadcf (1),
+dmconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1095"></A>
+<H3>LIBGW MESSAGE #1095</H3>
+<H2> WARN: Cannot initialize network recovery and/or listening points</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting, a /Domain gateway process
+was unable to complete network initialization operations.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The specific actions taken upon network startup are dependent
+upon the network instantiation.
+Make sure that the network parameters specified in the /Domain
+configuration file are valid.
+In many cases, the network instantiation will print a preceding
+userlog message giving more information as to the cause of the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3>LIBGW MESSAGE #1096</H3>
+<H2> ERROR: Memory allocation failure for post receive</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while the /Domain gateway was attempting to process a message
+received from another process in the same domain.
+The message will be dropped.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can
+be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3>LIBGW MESSAGE #1097</H3>
+<H2> ERROR: Post receive operation on message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /Domain gateway
+was unable to perform buffer-type specific postprocessing
+on a message received from another process in the same domain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If using an application-defined buffer type,
+make sure that the buffer typeswitch routines conform to the
+specifications described on the
+buffer (3)
+manual page.
+If using only the buffer types provided with the TUXEDO product,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>LIBGW MESSAGE #1098</H3>
+<H2> ERROR: [Service receive: cannot send meta-msg reply]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to advertise a service,
+the /Domain gateway was unable to send a reply message to the process
+which requested that the service be advertised.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look in the userlog for a preceding message explaining why the reply
+message could not be sent (for example, an operating system resource
+error).
+If no such message is present, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>LIBGW MESSAGE #1099</H3>
+<H2> ERROR: Unable to advertise initial services - <I>error_string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When booting, the /Domain gateway was unable to advertise its initial
+services.  A string indicating the value of
+tperrno
+will be printed as part of the message.
+The gateway will exit as a result of this error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The proper action to take will depend upon the value of
+tperrno .
+If
+tperrno
+is set to
+TPELIMIT ,
+increase the value of the
+MAXSERVICES
+parameter in the *RESOURCES
+section of the
+TUXCONFIG
+file.
+If
+tperrno
+is set to
+TPESYSTEM ,
+look for another message preceding this message with more information
+on the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT1><P>
+<H1>LIBGW MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>LIBGW MESSAGE #1100</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to allocate initial table space for the /Domain
+gateway.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>LIBGW MESSAGE #1101</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1100.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1100.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3>LIBGW MESSAGE #1102</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1100.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1100.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1103"></A>
+<H3>LIBGW MESSAGE #1103</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1100.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1100.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>LIBGW MESSAGE #1104</H3>
+<H2> ERROR: Memory allocation failure, size <I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1100.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1100.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

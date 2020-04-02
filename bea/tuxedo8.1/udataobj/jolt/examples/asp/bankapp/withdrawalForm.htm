@@ -1,0 +1,29 @@
+<!--
+--	Copyright (c) 1998-99 BEA Systems, Inc.  All rights reserved
+--	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF BEA Systems, Inc.
+--	The copyright notice above does not evidence any actual or intended
+--	publication of such source code.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Withdrawal From Account</TITLE>
+</HEAD>
+<BODY>
+<H2>Please Enter Your Account Number and Withdrawal Amount:</H2>
+<FORM NAME="teller" ACTION="tlr.asp" METHOD="POST">
+<TABLE>
+<TR><TD ALIGN=RIGHT>Account Number: </TD>
+    <TD><INPUT TYPE="text" NAME="ACCOUNT_ID"></TD></TR>
+<BR>
+<TR><TD ALIGN=RIGHT>Amount: $</TD>
+    <TD><INPUT TYPE="text" NAME="SAMOUNT"></TD></TR>
+</TABLE>
+<CENTER>
+<INPUT TYPE="hidden" NAME="SVCNAME" VALUE="WITHDRAWAL">
+<INPUT TYPE="submit" VALUE="Withdraw">
+<INPUT TYPE="reset" VALUE="Clear">
+</CENTER>
+</FORM>
+</BODY>
+</HTML>

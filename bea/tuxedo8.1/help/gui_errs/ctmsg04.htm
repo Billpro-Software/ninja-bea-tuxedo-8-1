@@ -1,0 +1,1951 @@
+<!-- .if n .pH errman.h.ctmsg04.htm @(#)ctmsg04.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 400-499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="401"></A>
+<H3>CMDTUX MESSAGE #401</H3>
+<H2> ERROR: service request <I>service_name</I> handled by DBBL failed, <I>msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An administrative service request handled by the
+DBBL
+failed with a non-fatal error.  These requests include
+tmadmin
+requests,
+tmboot
+and
+tmshutdown
+requests.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The service requests failed with
+tperrno
+and
+Uunixerr ,
+if any.
+Take proper action according to the
+tperrno
+and/or
+Uunixerr ,
+or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="402"></A>
+<H3>CMDTUX MESSAGE #402</H3>
+<H2> INFO: The temporary DBBL is exiting system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary
+DBBL
+was brought up to clean up the partitioned BBLs.
+This temporary
+DBBL
+is currently exiting the system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="403"></A>
+<H3>CMDTUX MESSAGE #403</H3>
+<H2> INFO: The DBBL is exiting system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+is currently exiting the system.  All other processes
+have been shut down already.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="404"></A>
+<H3>CMDTUX MESSAGE #404</H3>
+<H2> WARN: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+the DBBL was checking the status
+of all BBLs, marking unreachable BBLs and then cleaning up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="406"></A>
+<H3>CMDTUX MESSAGE #406</H3>
+<H2> WARN: SIGTERM was ignored while shutting down the DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+SIGTERM
+was received and ignored while shutting down the
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See
+tmshutdown
+command for shutdown procedures.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="407"></A>
+<H3>CMDTUX MESSAGE #407</H3>
+<H2> ERROR: Unable to add group <I>group_name</I> to TMGCTL table -- no space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T attempted to add the specified group in the transaction
+management data table,
+but the space allocated for the number of groups was exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please modify your configuration and increase the number of server groups
+that are to be used.
+Then reload the
+TUXCONFIG
+file and reboot your application.
+If you need more than the allowable maximum number of server groups,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+tmloadcf (1),
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="408"></A>
+<H3>CMDTUX MESSAGE #408</H3>
+<H2> ERROR: Unable to add group <I>group_name</I> to TMGTT table -- no space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was in the process of recovering transactions
+while performing a
+tpsvrinit ().
+System/T attempted to add the specified group
+to the global transaction table,
+but the space allocated for the number of groups was exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="409"></A>
+<H3>CMDTUX MESSAGE #409</H3>
+<H2> ERROR: xa_recover() returned <I>count</I> for group <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was in the process of recovering transactions while
+performing a
+tpsvrinit ().
+The resource manager returned an error when
+xa_recover ()
+was called to find pre-committed
+global transactions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error mechanism for the associated resource manager
+to find the nature of the error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="410"></A>
+<H3>CMDTUX MESSAGE #410</H3>
+<H2> WARN: tpsvrinit() changing state of group <I>groupname</I> from TMGHCOMMIT to TMGABORTED</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was in the process of recovering transactions while
+performing a
+tpsvrinit ().
+While the transaction coordinator was restarting, messages about groups may
+have been lost; as such the coordinator may have an incomplete list of groups
+unless the transaction was logged.
+Since this is a case of the coordinator restarting, the transaction must not
+have been logged, so the particular transaction must be aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please repeat the transaction.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="411"></A>
+<H3>CMDTUX MESSAGE #411</H3>
+<H2> ERROR: tpsvrinit() found transaction state <I>state_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was in the process of recovering transactions while
+performing a
+tpsvrinit ().
+The transaction state was not one of the valid states.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="412"></A>
+<H3>CMDTUX MESSAGE #412</H3>
+<H2> ERROR: tpsvrinit() unable to locate entry for TMS in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was in the process of recovering transactions while
+performing a
+tpsvrinit ().
+The function was unable to locate an entry for the first
+TMS
+in a group
+in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="413"></A>
+<H3>CMDTUX MESSAGE #413</H3>
+<H2> ERROR: tpsvrinit() unable to update entry for TMS in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was in the process of recovering transactions while
+performing a
+tpsvrinit ().
+The function was unable to update an entry for the first
+TMS
+in a group
+in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="414"></A>
+<H3>CMDTUX MESSAGE #414</H3>
+<H2> ERROR: TMS() got request for invalid Global Transaction ID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T server
+TMS
+was given an invalid global transaction
+identifier, and therefore could not complete the necessary operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="415"></A>
+<H3>CMDTUX MESSAGE #415</H3>
+<H2> ERROR: Invalid service <I>identifier</I> requested while processing transactions</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid service identifier
+<I>identifier</I>
+was specified for processing,
+and therefore could not complete the necessary operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="416"></A>
+<H3>CMDTUX MESSAGE #416</H3>
+<H2> ERROR: service <I>svcname</I> sent to non-coordinator</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was unable to execute the service
+<I>svcname</I>
+because the service was sent to a non-coordinator for the transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="417"></A>
+<H3>CMDTUX MESSAGE #417</H3>
+<H2> ERROR: TMS_MANAGE found transaction state <I>stateval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing transactions, an invalid state was reached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="418"></A>
+<H3>CMDTUX MESSAGE #418</H3>
+<H2> ERROR: Unable to add message groups to transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing transactions, the System/T attempted to add
+message groups to the transaction.
+The operation was unsuccessful.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="419"></A>
+<H3>CMDTUX MESSAGE #419</H3>
+<H2> WARN: Commit found no participants</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a commit request, the
+TMS
+found no participants.
+The transaction will be deleted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="420"></A>
+<H3>CMDTUX MESSAGE #420</H3>
+<H2> WARN: Commit coordinator gone</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing transactions.
+In a transaction, the first Resource Manager group is the transaction
+coordinator, so it must be the first at its site.
+However, it is possible that the site went down and came back up before the
+arrival of a TMS_MANAGE message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="421"></A>
+<H3>CMDTUX MESSAGE #421</H3>
+<H2> ERROR: Invalid transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was committing a transaction.
+During a one-phase commit step, the transaction state was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="422"></A>
+<H3>CMDTUX MESSAGE #422</H3>
+<H2> ERROR: XA_RETRY not supported for one-phase commit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was committing a transaction.
+During a one-phase commit, the
+XA
+return code was
+XA_RETRY ,
+which is not supported for one-phase commit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="423"></A>
+<H3>CMDTUX MESSAGE #423</H3>
+<H2> WARN: One-phase commit -- xa_commit returned <I>error_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was committing a transaction.
+During a one-phase commit, the
+XA
+return code was not
+XA_OK ,
+XA_HEURCOM ,
+XA_RETRY ,
+XAER_RMFAIL ,
+XA_HEURHAZ ,
+XA_HEURRB ,
+XA_HEURMIX ,
+or
+XAER_RMERR .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="424"></A>
+<H3>CMDTUX MESSAGE #424</H3>
+<H2> ERROR: Commit found invalid state - group <I>group</I> state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was committing a transaction.
+During a one-phase commit, the
+XA
+return code was not
+XA_OK ,
+XA_HEURCOM ,
+XA_RETRY ,
+XAER_RMFAIL ,
+XA_HEURHAZ ,
+XA_HEURRB ,
+XA_HEURMIX ,
+or
+XAER_RMERR .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="425"></A>
+<H3>CMDTUX MESSAGE #425</H3>
+<H2> ERROR: Precommit found an invalid transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was precommitting a transaction.
+The transaction state was not one of the states expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="426"></A>
+<H3>CMDTUX MESSAGE #426</H3>
+<H2> ERROR: Precommit found invalid state group <I>group</I> state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was precommitting a transaction.
+The transaction state for the indicated group was not as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="427"></A>
+<H3>CMDTUX MESSAGE #427</H3>
+<H2> ERROR: Precommit transaction state <I>state</I> after xa_precom failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was precommitting a transaction.
+The transaction state after <I>xa_precom</I> failure was not
+as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="428"></A>
+<H3>CMDTUX MESSAGE #428</H3>
+<H2> ERROR: Precommit transaction state <I>state</I> after xa_precom</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was precommitting a transaction.
+The transaction state after <I>xa_precom</I> was not
+as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="429"></A>
+<H3>CMDTUX MESSAGE #429</H3>
+<H2> ERROR: Rollback found invalid transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was rolling back a transaction.
+The transaction state was not
+as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="430"></A>
+<H3>CMDTUX MESSAGE #430</H3>
+<H2> ERROR: Completion found invalid transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was completing a transaction.
+The transaction state was not as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="431"></A>
+<H3>CMDTUX MESSAGE #431</H3>
+<H2> ERROR: Received a rollback request for a decided transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T received a rollback request for a decided transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="432"></A>
+<H3>CMDTUX MESSAGE #432</H3>
+<H2> ERROR: Group <I>group</I> at coordinator site received rollback request in ready state</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T received a request to rollback a transaction
+that is already in "ready" state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="433"></A>
+<H3>CMDTUX MESSAGE #433</H3>
+<H2> ERROR: Rollback - xa_abort returned <I>error</I> for group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was rolling back a transaction.
+The resource manager returned an error when
+xa_abort
+was called.
+The XA return code was not
+XA_OK ,
+XA_HEURRB ,
+or
+XAER_NOTA .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="434"></A>
+<H3>CMDTUX MESSAGE #434</H3>
+<H2> WARN: Rollback changing group <I>group</I> from heuristic commit to rolled back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was rolling back a transaction.
+The transaction state of the group was changed from
+heuristic commit to rolled back.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="435"></A>
+<H3>CMDTUX MESSAGE #435</H3>
+<H2> ERROR: Rollback found invalid state - group <I>group</I> in state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was rolling back a transaction.
+The transaction state of the group was not one of the expected states.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="436"></A>
+<H3>CMDTUX MESSAGE #436</H3>
+<H2> WARN: Heuristic rollback of transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T received a request to heuristically rollback
+a global transaction.
+This request was generated via
+tmadmin
+aborttrans .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="437"></A>
+<H3>CMDTUX MESSAGE #437</H3>
+<H2> WARN: Heuristic rollback of transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T received a request to heuristically rollback
+a transaction for this group only.
+This request was generated via
+tmadmin
+aborttrans .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="438"></A>
+<H3>CMDTUX MESSAGE #438</H3>
+<H2> WARN: Heuristic rollback not allowed for decided transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request was received to heuristically rollback a transaction
+that is already in decided state.
+This request was generated via
+tmadmin
+aborttrans .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="439"></A>
+<H3>CMDTUX MESSAGE #439</H3>
+<H2> WARN: Heuristic rollback not allowed for ready transaction at coordinator site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T received a request to heuristically rollback a transaction
+that is in ready state.
+The request was generated by the
+tmadmin
+aborttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The request will be ignored.
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="440"></A>
+<H3>CMDTUX MESSAGE #440</H3>
+<H2> WARN: Transaction heuristically rolled back for group <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T heuristically rolled back
+a transaction based on a request from the
+tmadmin
+aborttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="441"></A>
+<H3>CMDTUX MESSAGE #441</H3>
+<H2> ERROR: Rollback xa_abort returned <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was rolling back a transaction.
+The <I>xa_rollback</I>() function returned an error
+that was not one of the expected values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="442"></A>
+<H3>CMDTUX MESSAGE #442</H3>
+<H2> ERROR: Timeout found invalid state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a timeout request for a transaction
+and found an unexpected state,
+<I>state</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="443"></A>
+<H3>CMDTUX MESSAGE #443</H3>
+<H2> ERROR: tms_timeout group <I>group</I> xa_abort returned <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a timeout request for a transaction.
+The resource manager returned an error from
+xa_abort .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="444"></A>
+<H3>CMDTUX MESSAGE #444</H3>
+<H2> WARN: Heuristic commit for group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This informative message indicates that the transaction has been
+heuristically committed as a result of a
+tmadmin
+committrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="445"></A>
+<H3>CMDTUX MESSAGE #445</H3>
+<H2> ERROR: Heuristic commit xa_commit for group <I>group</I> returned <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While heuristically committing a transaction,
+the resource manager returned an error condition
+from <I>xa_commit</I>().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="446"></A>
+<H3>CMDTUX MESSAGE #446</H3>
+<H2> ERROR: Commit found transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction, an unexpected transaction state was found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="447"></A>
+<H3>CMDTUX MESSAGE #447</H3>
+<H2> ERROR: xa_commit returned <I>error</I> for group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction,
+the resource manager returned an error from
+xa_commit .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource manager.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="448"></A>
+<H3>CMDTUX MESSAGE #448</H3>
+<H2> ERROR: Commit found invalid state for group <I>group</I> state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction, an invalid state was found for
+the specified group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="449"></A>
+<H3>CMDTUX MESSAGE #449</H3>
+<H2> ERROR: Ready indication for missing group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction,
+a ready indication was received for a group that is not part
+of the transaction.
+The indication will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="450"></A>
+<H3>CMDTUX MESSAGE #450</H3>
+<H2> ERROR: Ready found invalid state for group <I>group</I> state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction, a ready indication was received
+for a group that is in an invalid state.
+The indication will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="451"></A>
+<H3>CMDTUX MESSAGE #451</H3>
+<H2> ERROR: Reday indication found transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction,
+a ready indication was received for a transaction that is in
+an unexpected state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="452"></A>
+<H3>CMDTUX MESSAGE #452</H3>
+<H2> ERROR: Status request transaction state <I>state</I> group <I>group</I> state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a status request for a transaction,
+unexpected states were found for the transaction and the specified
+group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="453"></A>
+<H3>CMDTUX MESSAGE #453</H3>
+<H2> ERROR: Transaction log commit failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While committing a transaction, updating the transaction log failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier messages indicating the nature of the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="454"></A>
+<H3>CMDTUX MESSAGE #454</H3>
+<H2> ERROR: Status request found transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a status request,
+an invalid transaction state was found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="455"></A>
+<H3>CMDTUX MESSAGE #455</H3>
+<H2> ERROR: tpsvrdone can't find group <I>group</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was being shut down.
+A group entry was to be cleaned up, but no information on that group
+was found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="456"></A>
+<H3>CMDTUX MESSAGE #456</H3>
+<H2> ERROR: tpsvrdone can't get queue entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was being shut down.
+A group entry was to be cleaned up, but System/T was unable to
+get information on the Queue Table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="457"></A>
+<H3>CMDTUX MESSAGE #457</H3>
+<H2> INFO: TMS tpsvrdone complete</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+shutdown was completed safely.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="458"></A>
+<H3>CMDTUX MESSAGE #458</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The distinguished
+TMS
+was about to be shut down.
+However, System/T was unable to allocate required memory.
+The memory allocated was to have been used to step through server information
+on all the
+TMS s
+to ensure that the distinguished
+TMS
+could shut down properly.
+In this case, since memory could not be allocated, it is not
+possible to determine the state of each
+TMS ,
+so System/T allows the shutdown to proceed anyway.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="459"></A>
+<H3>CMDTUX MESSAGE #459</H3>
+<H2> ERROR: Invalid sendlist error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+encountered an error while trying to send a message.
+This condition should never arise.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="460"></A>
+<H3>CMDTUX MESSAGE #460</H3>
+<H2> ERROR: TMS send - failed to set priority for TMS request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was managing a transaction and had attempted to set the priority of
+a
+TMS
+request, and that function failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="461"></A>
+<H3>CMDTUX MESSAGE #461</H3>
+<H2> ERROR: tms_send tpacall service <I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was managing a transaction and had attempted to send a message to
+a
+TMS
+service via a
+tpacall (),
+and that call failed.
+The numeric value displayed in the message identifies the service that was
+used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A possible cause for this error may be that the
+TMS
+process has
+terminated for some reason.
+Please check and ensure that all
+TMS
+processes are running.
+If further assistance is needed, please contact the System/T
+Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="462"></A>
+<H3>CMDTUX MESSAGE #462</H3>
+<H2> WARN: Can't send reply to committer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was managing a transaction and had attempted to send a reply to
+the committer of the transaction.
+The call failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for additional messages included prior to this
+one.
+If further assistance is needed,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="463"></A>
+<H3>CMDTUX MESSAGE #463</H3>
+<H2> ERROR: could not contact BBL to abort old transactions</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was in the process of aborting old transactions and was unable to
+contact the
+BBL
+process to get information about the transactions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="464"></A>
+<H3>CMDTUX MESSAGE #464</H3>
+<H2> ERROR: could not contact DBBL to abort old transactions</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was in the process of aborting old transactions and was unable to
+contact the
+DBBL
+process to get information about the transactions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please ensure that the
+DBBL
+process is running.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="465"></A>
+<H3>CMDTUX MESSAGE #465</H3>
+<H2> ERROR: Failed to abort old transactions</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMS
+was in the process of aborting old transactions and was unable to
+do so.
+An underlying system call had failed,
+in all probability a request/response call to the
+BRIDGE
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="468"></A>
+<H3>CMDTUX MESSAGE #468</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while allocating a message.
+The TUXEDO System/T boot process for non-master nodes involves running a
+bootstrap-Bridge process, called the
+BSBRIDGE .
+The
+BSBRIDGE
+starts
+the
+BBL
+on that node, and the
+BBL
+starts the real
+BRIDGE ,
+which then shuts down the
+BSBRIDGE .
+The
+BRIDGE
+does this by sending a message to the
+BSBRIDGE .
+The code that allocated the space for that message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="469"></A>
+<H3>CMDTUX MESSAGE #469</H3>
+<H2> ERROR: Can't send shutdown message to the BSBRIDGE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Please refer to the description for Message 468 above.
+The send of the shutdown message to the
+BSBRIDGE
+failed.
+This could be caused by full message queues on the system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="470"></A>
+<H3>CMDTUX MESSAGE #470</H3>
+<H2> WARN: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+the
+BRIDGE
+process was creating an internal buffer for an
+identification message.
+Failure to send this message will not prevent the
+BRIDGE
+process from running.
+However, the network connection being established cannot be used
+bi-directionally, so some system resources will be wasted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="471"></A>
+<H3>CMDTUX MESSAGE #471</H3>
+<H2> WARN: Error sending message OB_IDENT process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process could not send an
+OB_IDENT
+identification message over a newly created connection.
+This failure will not prevent the
+BRIDGE
+process from running.
+However, the network connection being established cannot be used
+bi-directionally, so some system resources will be wasted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+It is likely that further errors will occur over this connection.
+Try to reestablish the link using
+tmadmin 's
+reconnect
+command.
+If this fails, shut down and reboot the TUXEDO System on this machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="472"></A>
+<H3>CMDTUX MESSAGE #472</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed
+during
+BRIDGE
+process initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="473"></A>
+<H3>CMDTUX MESSAGE #473</H3>
+<H2> ERROR: Could not find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BSBRIDGE
+(bootstrap bridge)
+process could not contact the
+DBBL
+on the master or backup machine during its initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the master machine's network addresses
+in the *NETWORK section of the configuration file.
+Check for and resolve any networking problems.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="476"></A>
+<H3>CMDTUX MESSAGE #476</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+attempting to contact the
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="477"></A>
+<H3>CMDTUX MESSAGE #477</H3>
+<H2> ERROR: Network poll failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During initialization, the
+BRIDGE
+or
+BSBRIDGE
+process encountered a network polling error.
+It was waiting for a response from the
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the machine's network addresses
+in the *NETWORK section of the configuration file.
+Check for and resolve any networking problems.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="478"></A>
+<H3>CMDTUX MESSAGE #478</H3>
+<H2> ERROR: Network handling failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing, the
+BRIDGE
+or
+BSBRIDGE
+process encountered a networking error.
+It was processing a response from the
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the machine's network addresses
+in the *NETWORK section of the configuration file.
+Check for and resolve any networking problems.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="479"></A>
+<H3>CMDTUX MESSAGE #479</H3>
+<H2> ERROR: Could not allocate brkey buffer space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed during
+BRIDGE
+or
+BSBRIDGE
+process initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="480"></A>
+<H3>CMDTUX MESSAGE #480</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+trying to allocate a buffer for receiving a message in the
+BRIDGE .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="481"></A>
+<H3>CMDTUX MESSAGE #481</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+realloc ()
+failed while
+allocating a larger buffer for receiving a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="482"></A>
+<H3>CMDTUX MESSAGE #482</H3>
+<H2> ERROR: Received message with unknown release number <I>rel_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The message received by the
+BRIDGE
+was not one from the current release or the
+previous one but from release
+<I>rel_val</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the releases of the TUXEDO System software installed are valid.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="483"></A>
+<H3>CMDTUX MESSAGE #483</H3>
+<H2> ERROR: Shutting down bridge, serious message receive error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bridge is shutting down due to a system error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the desired operation and if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="484"></A>
+<H3>CMDTUX MESSAGE #484</H3>
+<H2> ERROR: BRIDGE process detected corrupted message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bridge or bootstrap bridge process detected a message with a corrupted
+header.
+This could be caused by problems in the networking software or in
+TUXEDO System/T itself.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="485"></A>
+<H3>CMDTUX MESSAGE #485</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TUXEDO System/T received an error return while attempting to allocate memory from
+the operating system.
+The amount of memory required by TUXEDO System/T
+is influenced by the parameters in the
+UBBCONFIG
+file.
+The number of processes running on a machine and the options given to
+those processes also have a large effect on memory usage.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to decrease the amount of memory required by TUXEDO System/T, or add more
+physical memory to the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="486"></A>
+<H3>CMDTUX MESSAGE #486</H3>
+<H2> ERROR: Message encoding error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+TUXEDO System/T encountered an error while attempting to encode a negative
+acknowledgment message being sent from the bridge or bootstrap bridge process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="490"></A>
+<H3>CMDTUX MESSAGE #490</H3>
+<H2> ERROR: tprealloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+tprealloc ()
+failed while the system was processing a BRIDGE op-code
+in attempting to print BRIDGE statistics.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="491"></A>
+<H3>CMDTUX MESSAGE #491</H3>
+<H2> ERROR: tprealloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+tprealloc ()
+failed while the system was processing a
+BRIDGE
+op-code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="492"></A>
+<H3>CMDTUX MESSAGE #492</H3>
+<H2> ERROR: tprealloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+tprealloc ()
+failed while the system was processing a
+BRIDGE
+op-code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="493"></A>
+<H3>CMDTUX MESSAGE #493</H3>
+<H2> INFO: Waiting for orderly release to exit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a server shutdown.
+This message is an indication of that action.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="494"></A>
+<H3>CMDTUX MESSAGE #494</H3>
+<H2> INFO: BRIDGE exiting system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a server shutdown.
+This message is an indication of that action.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="495"></A>
+<H3>CMDTUX MESSAGE #495</H3>
+<H2> INFO: Alarm forcing shutdown after 30 second wait</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a BRIDGE shutdown.
+This message indicates that a forced shutdown of the BRIDGE was initiated,
+most likely because a previous network connection disconnect failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="496"></A>
+<H3>CMDTUX MESSAGE #496</H3>
+<H2> INFO: Rejecting EXIT Message not sent from local BBL or BRIDGE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a BRIDGE shutdown.
+The BSBRIDGE process received an EXIT message from a process other than
+the local BRIDGE or BBL process, not from a process on a remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message is informative in nature.
+System/T processing will continue.
+However, the userlog may yield additional information that would help
+explain why this message was written to the userlog.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="497"></A>
+<H3>CMDTUX MESSAGE #497</H3>
+<H2> INFO: Rejecting EXIT Message not sent from local BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T was processing a BRIDGE shutdown.
+The BRIDGE process received an EXIT message from a process other than
+the local BBL process, not from a process on a remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message is informative in nature.
+System/T processing will continue.
+However, the userlog may yield additional information that would help
+explain why this message was written to the userlog.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="498"></A>
+<H3>CMDTUX MESSAGE #498</H3>
+<H2> ERROR: Shutting down bridge, serious message receive error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bridge is shutting down due to a system error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the desired operation and if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="499"></A>
+<H3>CMDTUX MESSAGE #499</H3>
+<H2> ERROR: Shutting down bridge, serious message receive error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bridge is shutting down due to a system error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the desired operation and if the problem persists,
+contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

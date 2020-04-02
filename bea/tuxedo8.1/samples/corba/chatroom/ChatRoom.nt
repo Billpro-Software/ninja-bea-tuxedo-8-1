@@ -1,0 +1,133 @@
+#---------------------------------------------------------------------
+#
+# File: ChatRoom.nt
+#
+# NT make file for the WLE ChatRoom: the callback sample application
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+REMOVE = -del/Q 
+RMDIR=   -rmdir /S /Q
+MAKE =   nmake/NOLOGO
+
+# WLE installation directory stuff :
+TUXINC=$(TUXDIR)\include
+TUXBIN=$(TUXDIR)\bin
+
+# C++ compiler stuff :
+CC=cl
+CFLAGS= -D_TOBJ -W3 -I. -I$(TUXINC) -DWIN32 -DNULL=0 -MD -nologo
+CPPFLAGS= $(CFLAGS) -GX -GR -Od -Zi        
+
+# link stuff, including special linking for WLE domain clients and servers
+BUILDSERVER = $(TUXBIN)\buildobjserver
+BUILDCLIENT = $(TUXBIN)\buildobjclient
+
+# IDL Compiler stuff:
+
+IDLCOMPILE = $(TUXBIN)\idl -I. 
+IDL2IR = $(TUXBIN)\idl2ir
+
+
+#----------------------
+# target: "all" 
+#    Builds client and server
+#----------------------
+all :  client server
+
+client : ChatClient.exe ChatClientW.exe
+
+server : ChatRoomServer.exe Chat.ifr
+
+ClientObjects = ChatClientMain.obj ChatClient_s.obj Listener_i.obj \
+				ChatClient_c.obj ChatRoom_c.obj KeyboardManager.obj
+
+ClientWObjects = ChatClientMainW.obj ChatClient_s.obj Listener_i.obj \
+				ChatClient_c.obj ChatRoom_c.obj KeyboardManager.obj
+
+ServerObjects = ChatRoomServer.obj ChatRoom_s.obj Moderator_i.obj \
+				ChatRoom_c.obj ChatClient_c.obj
+
+ChatClient.exe : $(ClientObjects)
+    $(BUILDCLIENT) \
+            -P \
+			-o $@ \
+            -f "$(ClientObjects) $(CPPFLAGS)"
+	@echo *****************************************   
+	@echo ***   completed build of Chat Client  ***
+	@echo *****************************************   
+
+ChatClientW.exe : $(ClientWObjects)
+    $(BUILDCLIENT) \
+            -P \
+			-o $@ \
+            -f "$(ClientWObjects) $(CPPFLAGS)" \
+	        -l %TUXDIR%\lib\libbeawrapper.lib
+    @echo ******************************************   
+	@echo ***   completed build of Chat ClientW  ***
+	@echo ******************************************   
+
+ChatRoomServer.exe : $(ServerObjects)
+    $(BUILDSERVER) \
+            -o $@  \
+            -f "$(ServerObjects) $(CPPFLAGS)" 
+
+	@echo ***********************************************
+	@echo ***   completed build of Chat Room Server   ***
+	@echo ***********************************************
+
+# Dependencies of standard obj files on sources
+
+ChatClientMain.obj : ChatClientMain.cpp ChatClient_c.obj ChatClient_s.obj ChatRoom_c.obj 
+
+ChatClientMainW.obj : ChatClientMain.cpp ChatClient_c.obj ChatClient_s.obj ChatRoom_c.obj 
+    $(CC) $(CPPFLAGS) -DBEA_WRAPPER /FoChatClientMainW.obj /c ChatClientMain.cpp
+
+ChatServer.obj : ChatRoomServer.cpp ChatRoom_s.obj
+
+Moderator_i.obj : Moderator_i.cpp Moderator_i.h ChatRoom_s.obj ChatClient_c.obj 
+
+
+chat.ifr : ChatRoom.idl ChatClient.idl
+	@$(REMOVE) chat*.ifr >NUL: 2>&1
+	@$(REMOVE) Admin\chat*.ifr >NUL: 2>&1
+	$(IDL2IR) -D_TOBJ -I $(TUXINC) -c -f chat.ifr $(TUXINC)\tobjin.idl
+	$(IDL2IR) -I $(TUXINC) -f chat.ifr ChatRoom.idl
+	move chat_2.ifr Admin\chat.ifr
+
+# Test to see if stubs and skeletons are up-to-date. An IDL 
+#   compile generates four files (*_c.cpp *_c.h, *_s.cpp, *_s.h)
+
+ChatClient_s.h ChatClient_c.h ChatClient_s.cpp ChatClient_c.cpp : ChatClient.idl
+    $(IDLCOMPILE) -P ChatClient.idl
+	@$(REMOVE) *.tmp >NUL: 2>&1
+
+ChatRoom_s.h ChatRoom_c.h ChatRoom_s.cpp ChatRoom_c.cpp : ChatRoom.idl ChatRoom.icf
+    $(IDLCOMPILE) ChatRoom.idl ChatRoom.icf
+	@$(REMOVE) *.tmp >NUL: 2>&1
+
+#----------------------
+# target: "clean" 
+#    gets rid of object files and cousins
+#----------------------
+clean:
+	$(REMOVE) *.obj *.exe *.log *.out *.ilk *.pdb *.bsc *.opt *.ifr stderr stdout >NUL: 2>&1
+	
+#----------------------
+# target: "superclean" 
+#    gets rid of object files and cousins, and then stubs and skeletons
+#----------------------
+superclean: clean adminclean
+	$(REMOVE) *_c.* *_s.* >NUL: 2>&1
+
+#----------------------
+# target: "adminclean" 
+# Removes WLE admin files. After this, must run "ChatSetup.cmd" again.
+#----------------------
+adminclean:
+    @$(REMOVE) build.log  > NUL: 2>&1
+	@$(REMOVE) Admin\*.*  > NUL: 2>&1
+    @$(RMDIR) Admin\.adm  > NUL: 2>&1
+    @$(RMDIR) Admin       > NUL: 2>&1
+

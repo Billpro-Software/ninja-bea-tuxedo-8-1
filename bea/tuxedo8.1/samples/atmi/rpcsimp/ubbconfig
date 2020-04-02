@@ -1,0 +1,34 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1994 Unix System Laboratories, Inc.
+#	All rights reserved
+#
+#	THIS IS UNPUBLISHED PROPRIETARY
+#	SOURCE CODE OF Unix System Laboratories, Inc.
+#	The copyright notice above does not
+#	evidence any actual or intended
+#	publication of such source code.
+#
+#ident	"@(#) samples/atmi/rpcsimp/ubbconfig	$Revision: 1.5 $"
+*RESOURCES
+IPCKEY		187345
+DOMAINID	rpcsimp
+MODEL		SHM
+MASTER		SITE1
+PERM		0660
+*MACHINES
+<UNAME>	LMID=SITE1
+	TUXCONFIG="<TUXCONFIG>"
+	TUXDIR="<TUXDIR>"
+	APPDIR="<APPDIR>"
+#	MAXWSCLIENTS=10
+*GROUPS
+GROUP1	LMID=SITE1	GRPNO=1
+*SERVERS
+server SRVGRP=GROUP1 SRVID=1
+#WSL SRVGRP=GROUP1 SRVID=2 RESTART=Y GRACE=0 MAXGEN=10
+#	CLOPT="-A -- -n <address> -x 10 -m 1 -M 10 -d <device>"
+#
+# TUXEDO-to-DCE Gateway
+#simpgw SRVGRP=GROUP1 SRVID=2
+*SERVICES
+*ROUTING

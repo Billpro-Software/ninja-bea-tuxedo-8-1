@@ -1,0 +1,947 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:48:05">
+<title>Creating and Configuring Tuxedo CORBA Resources</title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>Creating and Configuring Tuxedo CORBA Resources</b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="acacls.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="acapximp.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="1701431">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating and Configuring Tuxedo CORBA Resources</font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo system core administrative resources consists of both ATMI and CORBA domains and their associated resources. The CORBA interface queues and CORBA factories are used in BEA Tuxedo client and server applications. The BEA Tuxedo Administration Console enables the system administrator to manage the BEA Tuxedo CORBA resources for configuration and run-time administration.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> For detailed instructions on creating and configuring core BEA Tuxedo ATMI administrative resources, refer to <a href="accore.htm#1556096">Creating and Configuring Core Administrative Resources.</a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections define the fields for the Create New Object window and Configuration Tool tab pages when creating or configuring BEA Tuxedo CORBA resources: </p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1704933">CORBA Interfaces (T_INTERFACE)</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#894943">Creating a New CORBA Interface</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1076074">Configuring a CORBA Interface (T_INTERFACE)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1661604">CORBA Interface Queues (T_IFQUEUE)</a></font><p style="MARGIN-LEFT: 0"><a href="accorba.htm#1685120">Viewing a CORBA Interface Queue Configuration (IF_QUEUE)</a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1651093">CORBA Factories (T_FACTORY)</a></font><p style="MARGIN-LEFT: 0"><a href="accorba.htm#1651242">Viewing a CORBA Factory Configuration</a></p><p> </p>
+
+<p></ul><p>
+<a name="1704933"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">CORBA Interfaces (T_INTERFACE)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A <a name="1704934"></a>CORBA Interface represents a contract with a client. Interfaces are advertised by BEA Tuxedo server applications at startup. The BEA Tuxedo T_INTERFACE MIB represents configuration and run-time attributes of CORBA interfaces at both the domain and server group levels. Using the BEA Tuxedo Administration Console applet, you can perform the administrative tasks required to create and manage BEA Tuxedo CORBA interfaces including defining default attributes for interfaces at the domain and server group levels.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="newcorbainterface"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_INTERFACE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_INTERFACE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_INTERFACE"></a></p>
+<a name="894943"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating a New CORBA Interface
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select the CORBA Interfaces folder and select Quick Menu--&gt;New to open the Create New Object window. The Create New Object Window contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1673107">Interface Name</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1673237">Group Name</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create a new interface, enter the required information for the new CORBA interface and click the Create button.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> For information about using the Quick Menu, see <a href="acmainw.htm#493387">Quick Menu Options</a>. For information about the Create New Object window, see <a href="actasks.htm#553002">Adding New Administrative Objects</a>. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe the information you need to enter in the Create New Object window for each interface field.The format of the fields you enter may be dependent upon the IDL that generates the interface implementation, For more information about the IDL format, see the CORBA 2.1 Specification Section 7.6.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1708961"></a><a name="ncif_interfacename"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifcno_inf1"></a></p>
+<a name="1673107"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Interface Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1675124"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This name represents the interface repository ID for the interface. The format of the name is dependent on the options specified in the IDL that generates the interface implementation.</p><!--<div align="right">-->
+<a name="1675450"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A fully qualified interface name, where name is a text string from 1 to a maximum of 128 characters. You cannot leave this field blank. </p><!--<div align="right">-->
+<a name="1674667"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">IDL:Simp:1.0</font></font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1708967"></a><a name="ac_ifcno_grp1"></a><a name="ncif_groupname"></a> </p>
+<a name="1673237"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1674263"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This name represents the name of the server group associated with this interface.</p><!--<div align="right">-->
+<a name="1675674"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A group name, where the name is a text string from 0 to a maximum of 30 characters. Server group names cannot contain an asterisk, comma, or colon. You cannot leave this field blank.</p><!--<div align="right">-->
+<a name="1675533"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">GRP9BANKERS</font></font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="concorbainterface"></a> </p>
+<a name="1076074"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Configuring a CORBA Interface (T_INTERFACE)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console Interface (T_INTERFACE) configuration attributes are displayed on the following tab pages:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1646659">General Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1632083">System Parameters Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1655474">Policies Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1684666">Statistics Tab</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To view or edit the configuration attributes for an Interface, highlight an interface icon in the main window tree. The Configuration Tool pane displays the tabs containing the configuration attributes for your selection. For more information about the Configuration Tool, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe each interface configuration attribute field.The format of the editable field may be dependent upon the IDL that generates the interface implementation. For more information about the IDL format, see the CORBA 2.1 Specification Section 7.6.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ccif_generaltab"></a> </p>
+<a name="1623635"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following describes the fields provided on the General tab and the values you need to enter for those fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16301"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifgen_inf2"></a></p>
+<a name="1623947"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1623947"></a>Interface Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1670440"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Name field displays the fully qualified interface name that was specified in the Create New Objects <a href="accorba.htm#1673107">Interface Name</a> field. For more information, see <a href="accorba.htm#894943">Creating a New CORBA Interface</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1708988"></a><a name="16302"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifgen_grp2"></a></p>
+<a name="1623951"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1670399"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Group Name field displays the name of the server group associated with this interface that was specified in the Create New Objects <a href="accorba.htm#1673237">Group Name</a> field. For more information, see <a href="accorba.htm#894943">Creating a New CORBA Interface</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16303"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifgen_obs2"></a></p>
+<a name="1623955"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1623955"></a>Object State</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1670270"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Object State field displays the state attributes for Interface Queue objects. </p><!--<div align="right">-->
+<a name="1675699"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This read-only field displays one of the following values:</p><dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">
+<dt><code>ACT	</code>
+<dd>	 Active state. The Interface Queue object is an available interface in the running system.
+</font></p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">
+<dt><code>SUS	</code>
+<dd>	 Suspend state. The Interface Queue object represents a currently suspended interface in the running system.
+</font></p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">
+<dt><code>PAR	</code>
+<dd>	 Partitioned state. The Interface Queue object represents a currently partitioned interface in the running system.
+</font></p>
+
+<p></dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Object States for an Interface Queue are set by selecting an Interface Queue icon and using the Quick Menu to suspend or resume the object. If the Interface Queue object is suspended, you can activate the object. To restore a suspended Interface Queue object to an active state, select Resume from the Quick Menu. If the Interface Queue object is active, you can suspend the object. To suspend an Interface Queue object, highlight the object and select Suspend from the Quick Menu.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> The BEA Tuxedo Administration Console does not support dynamic advertisement of interfaces (i.e., state change from INActive or INValid to ACTive) or unadvertisement of interfaces (i.e., state change from ACTive to INActive).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16310"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifgen_lmn2"></a></p>
+<a name="1677998"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1677998"></a>Logical Machine Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1678000"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Logical Machine Name field displays the name of the current logical machine on which the queue offering this interface is loaded.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ccif_sysparmtab"></a> </p>
+<a name="895114"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">System Parameters Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describes the fields provided on the System Parameters tab and the values you need to enter for those fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709011"></a><a name="16305"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifsyp_ifl2"></a></p>
+<a name="1678039"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Interface Load</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1678041"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Load field displays a value representing the load on the system imposed by the T_INTERFACE object. Interface loads are used for load balancing purposes. Queues with higher enqueued workloads are less likely to be chosen for a new request.</p><!--<div align="right">-->
+<a name="1675705"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Any integer from 1 to a maximum of 32K.</p><!--<div align="right">-->
+<a name="1675766"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">50</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709017"></a><a name="16306"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifsyp_pri2"></a></p>
+<a name="1630154"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Priority</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1667189"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Priority field displays the dequeueing priority. If multiple interface requests are waiting on a queue for servicing, the higher priority requests are handled first. </p><!--<div align="right">-->
+<a name="1675791"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number from 1 a maximum of 101.</p><!--<div align="right">-->
+<a name="1675793"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">101</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16307"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifsyp_ift2"></a></p>
+<a name="1630158"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1630158"></a>Interface Timeout</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1669989"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Timeout field displays the time limit (in seconds) for processing individual method invocations for the selected interface queue. Servers processing method invocations for this interface are abortively terminated if they exceed the specified time limit in processing the request. </p><!--<div align="right">-->
+<a name="1675924"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.A value of zero for this attribute indicates that the server should not be abortively terminated.</p><!--<div align="right">-->
+<a name="1675926"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">30</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16308"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifsyp_trt2"></a></p>
+<a name="1636485"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1636485"></a>Transaction Timeout</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1669870"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Transaction Timeout field displays the timeout value in seconds for transactions automatically started for this interface queue. Transactions are started automatically when a request not in transaction mode is received and the Interface AUTOTRAN attribute value is set to Y. For more information about the Interface AUTOTRAN attribute, see the Interface <a href="accorba.htm#1625364">Auto Transaction Mode</a> field.</p><!--<div align="right">-->
+<a name="1676103"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero, representing a timeout interval in seconds.</p><!--<div align="right">-->
+<a name="1676105"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">60</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16309"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifsyp_rtn2"></a></p>
+<a name="1630166"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1630166"></a>Routing Table Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1670093"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Routing Table Name field displays the factory-based routing criteria associated with this interface.</p><!--<div align="right">-->
+<a name="1676235"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string from 1 a maximum of 15 characters.</p><!--<div align="right">-->
+<a name="1676237"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">RTBLSOPAC</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ccif_policies"></a> </p>
+<a name="1624457"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Policies Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following topics describe the Policies tab fields provided for configuring CORBA Interfaces.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709046"></a><a name="16304"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifpol_atm2"></a></p>
+<a name="1625364"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Auto Transaction Mode</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1666193"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Auto Transaction Mode field indicates whether a transaction is automatically started for invocations made outside a transaction context. The transaction policy setting can override the AUTOTRAN attribute. See <a href="accorba.htm#1625372">Transaction Policy</a> for more information.</p><!--<div align="right">-->
+<a name="1641735"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select Yes or No from the drop-down list box in this field. Select Yes to automatically start a transaction. Select No to prevent transactions from automatically starting.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16311"></a> </p><!--<div align="right">-->
+<a name="1709053"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif"></font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifpol_dep2"></a></p>
+<a name="1625368"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1625368"></a>Deactivation Policy</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1666114"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Deactivation Policy field displays the TP Framework deactivation policy. This reflects the policy registered with the framework at server startup. The first server to register the interface sets the value in T_INTERFACE. You can not change this value.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The values for the deactivation policy are: method, transaction, process.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16312"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifpol_trp2"></a></p>
+<a name="1625372"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1625372"></a>Transaction Policy</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1665992"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Transaction Policy field displays the policy attribute for the interface. The Transaction Policy is a read-only field. The developer sets the value for this attribute when the server application is built and registered at server startup. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The transaction policy setting can override the AUTOTRAN attribute. For more information about how these settings affect the AUTOTRAN attribute, see the Interface <a href="accorba.htm#1625364">Auto Transaction Mode</a> field.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The values displayed for the Transaction Policy are listed in the following table and include a description of how these settings override the AUTOTRAN attribute.</p><p> 
+
+<table border="1" bordercolorlight="#FFFFFF" bordercolordark="#000000" cellpadding="3" cellspacing="0">
+	<h4></h4>
+	<tr bgcolor="#CCCCCC">
+		<th align="left" valign="top">
+			<b><p><strong><strong>Valid Values</strong></font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>AUTOTRAN Setting</font></strong></p></b>
+		</th>
+		<th align="left" valign="top">
+			<b><p><strong>Description</font></strong></p></b>
+		</th>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">always</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No or Yes</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No change occurs at run time. The behavior is the same as if AUTOTRAN was set to Y.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">never</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Y</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No change occurs. The interface will never be involved in a transaction.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">ignore</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Y</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Overrides the AUTOTRAN setting. The interface will never be involved in a transaction.</font></p>
+		</td>
+
+	</tr>
+	<tr>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">optional</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Y or N</font></p>
+		</td>
+		<td align="left" valign="top">
+			<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Has no effect on AUTOTRAN setting.</font></p>
+		</td>
+
+	</tr>
+
+</table>
+
+
+
+</p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ccif_statstab"></a> </p>
+<a name="1684666"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Statistics Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following topics describe the fields provided on the Configuration Statistics tab and the values you need to enter for those fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16313"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifstat_rec2"></a></p>
+<a name="1665302"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1665302"></a>Requests Completed</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1665304"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Requests Completed field contains the number of interface method invocations completed with respect to the corresponding T_IFQUEUE objects since they were initially offered. Local queries on domain level objects will return one object per machine with the statistics for the indicated interface on that machine. </p><!--<div align="right">-->
+<a name="1665504"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="16314"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifstat_req2"></a></p>
+<a name="1665309"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1665309"></a>Requests Queued</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1665311"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Requests Queued field displays the number of requests currently enqueued for this interface. The displayed number is a long integer greater than or equal to zero. This is a read-only field.</p>
+<a name="1661604"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">CORBA Interface Queues (T_IFQUEUE)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The T_IFQUEUE MIB represents run-time attributes of an interface as it pertains to a particular server queue (T_QUEUE). This is primarily a read-only class providing access to the inherited configuration attributes of an interface as well as statistics relating to the interface on the queue. Additionally, this class gives administrators finer granularity in suspending and activating interfaces. This class provides the link between an interface name and the server processes capable of processing method invocations on the interface (i.e., TA_RQADDR can be used as a key search field on the T_SERVER class).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="newinterfaceq"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_IFQUEUE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_IFQUEUE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_IFQUEUE"></a></p>
+<a name="1685120"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Viewing a CORBA Interface Queue Configuration (IF_QUEUE)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console Interface Queue (IF_QUEUE) configuration attributes are displayed on the following tab pages:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1646659">General Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1655474">Policies Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="accorba.htm#1632083">System Parameters Tab</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To view the configuration attributes for an Interface Queue, highlight an interface queue icon. The Configuration Tool pane displays the General tab containing the configuration attributes for your selection.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For more information about the Configuration Tool, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>. For more information about the IDL format for interface queue attributes, see the CORBA 2.1 Specification Section 7.6.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe each interface queue configuration attribute. The Interface Queue configuration attributes are read-only. You cannot edit them.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="nifq_generaltab"></a> </p>
+<a name="1646659"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe the fields provided on the General tab.These Interface Queue fields are read-only attributes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709095"></a><a name="15200"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqgen_ifn4"></a></p>
+<a name="1633999"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Interface Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1671636"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Name field displays the fully qualified interface name. This is the repository ID for the interface. The interface name is a string from 0 to a maximum of 128 characters. The format of the name is dependent on the options specified in the IDL that generates the interface implementation.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15201"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqgen_grp4"></a></p>
+<a name="1671641"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1671641"></a>Group Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1641964"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Group Name field displays the name of the server group associated with this interface. The name is a string from 0 to a maximum of 30 characters. Server group names cannot contain an asterisk, comma, or colon.</p>
+<a name="1634007"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1634007"></a>Logical Machine Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1642013"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Logical Machine Name field displays the name of the current logical machine on which the queue offering this interface is loaded.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15202"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqgen_qad4"></a></p>
+<a name="1656852"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1656852"></a>Queue Address</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1656154"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Queue Address field displays the symbolic address of the request queue for an active server offering this interface.The address is a string from 1 to a maximum of 30 characters.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15203"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqgen_obs4"></a></p>
+<a name="1656156"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1656156"></a>Object State</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655082"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Object State field displays the state attributes for Interface Queue objects. This read-only value displays the following values:</p><dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">
+<dt><code>ACT	</code>
+<dd>	 Active state. The Interface Queue object is an available interface in the running system.
+</font></p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">
+<dt><code>SUS	</code>
+<dd>	 Suspend state. The Interface Queue object represents a currently suspended interface in the running system.
+</font></p>
+
+<p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">
+<dt><code>PAR	</code>
+<dd>	 Partitioned state. The Interface Queue object represents a currently partitioned interface in the running system.
+</font></p>
+
+<p></dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Object States for an Interface Queue are set by selecting an Interface Queue icon and using the Quick Menu to suspend or resume the object. If the Interface Queue object is suspended, you can activate the object. To restore a suspended Interface Queue object to an active state, select Resume from the Quick Menu. If the Interfaces Queue object is active, you can suspend the object. To suspend an Interface Queue object, highlight the object and select Suspend from the Quick Menu.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> The BEA Tuxedo Administration Console does not support dynamic advertisement of interfaces (i.e., state change from INActive or INValid to ACTive) or unadvertisement of interfaces (i.e., state change from ACTive to INActive).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="nifq_policytab"></a> </p>
+<a name="1655474"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Policies Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describes the fields provided on the Policies tab.The Interface Queue policies are read-only attributes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15204"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqpol_atm4"></a></p>
+<a name="1684853"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1684853"></a>Auto Transaction Mode</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655478"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Auto Transaction Mode field displays the value of Y or N indicating whether a transaction is automatically started for invocations made outside a transaction context. The transaction policy setting can override the AUTOTRAN attribute. For more information about how these settings affect the AUTOTRAN attribute, see the Interface <a href="accorba.htm#1625364">Auto Transaction Mode</a> field.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709130"></a><a name="15211"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqpol_dep4"></a></p>
+<a name="1679289"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Deactivation Policy</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655485"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Deactivation Policy field displays the TP Framework deactivation policy. This reflects the policy registered with the framework at server startup. The first server to register the interface sets the value in T_INTERFACE. You cannot change this value.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The values for the deactivation policy are: method, transaction, process.</p>
+<a name="1655491"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1655491"></a>Transaction Policy</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655493"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Transaction Policy field displays the policy attribute for the interface. The Transaction Policy is a read-only field. The developer sets the value for this attribute when the server is built and registered at server startup.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The transaction policy setting can override the AUTOTRAN attribute. For more information about the values for this field and how these values affect the AUTOTRAN attribute, see the Interface <a href="accorba.htm#1625372">Transaction Policy</a> field.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="nifq_sysparmtab"></a> </p>
+<a name="1632083"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">System Parameters Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describes the fields provided on the System Parameters tab.The Interface Queue system parameters are read-only attributes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709141"></a><a name="15205"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqsyp_ifl4"></a></p>
+<a name="1632094"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Interface Load</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655094"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Load field displays a value representing the load on the system imposed by the T_INTERFACE object. Interface loads are used for load balancing purposes. Queues with higher enqueued workloads are less likely to be chosen for a new request.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number from 1 to a maximum of 32K.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709147"></a><a name="15206"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqsyp_pri4"></a></p>
+<a name="1632098"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Priority</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655098"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Priority field displays the dequeueing priority. If multiple interface requests are waiting on a queue for servicing, the higher priority requests are handled first. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number from 1 a maximum of 101.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709153"></a><a name="15207"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqsyp_ift4"></a></p>
+<a name="1632102"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Interface Timeout</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655102"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Timeout field displays the time limit (in seconds) for processing individual method invocations for the selected interface queue. Servers processing method invocations for this interface are abortively terminated if they exceed the specified time limit in processing the request. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to zero. A value of zero for this attribute indicates that the server should not be abortively terminated.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15208"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqsyp_trt4"></a></p>
+<a name="1632106"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1632106"></a>Transaction Timeout</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655114"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Transaction Timeout field displays the timeout value in seconds for transactions automatically started for this interface queue. Transactions are started automatically when a request not in transaction mode is received and the Interface AUTOTRAN attribute value is set to Y. For more information about the Interface AUTOTRAN attribute, see the Interface <a href="accorba.htm#1625364">Auto Transaction Mode</a> field.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to 0 representing a timeout interval in seconds.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15209"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqsyp_rtn4"></a></p>
+<a name="1632110"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1632110"></a>Routing Table Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655118"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Routing Table Name field displays the factory-based routing criteria associated with this interface.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a string from 1 to a maximum of 15 characters.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709171"></a><a name="15217"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqsyp_nsi4"></a></p>
+<a name="1633381"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Number of Servers with Interface</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655130"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Number of Servers with Interface field displays the number of corresponding servers offering this interface on this queue.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to zero.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="nifq_statstab"></a> </p>
+<a name="1655734"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Statistics Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe the fields provided on the Statistics tab.The Interface Queue statistics are read-only attributes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15213"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqstat_rec4"></a></p>
+<a name="1655736"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1655736"></a>Requests Completed</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655738"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Requests Completed field displays the number of interface method invocations completed since the interface was initially offered. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to zero.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15214"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqstat_req4"></a></p>
+<a name="1655743"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1655743"></a>Requests Queued</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655745"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Requests Queued field displays the number of requests currently enqueued for this interface. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to zero.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709194"></a><a name="15215"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqstat_cuo4"></a></p>
+<a name="1655750"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Objects</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655752"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Current Number of Objects field displays the number of active objects for this interface for associated queues. This number represents the number of entries in the active object table for its queue on the associated machine. This included objects that are not in memory but that were invoked within an active transaction.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to zero.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15216"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_ifqstat_cnt4"></a></p>
+<a name="1655757"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1655757"></a>Current Number of Transactions</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655759"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Current Number of Transactions field displays the number of active global transactions associated with this interface for its associated queue.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The displayed value is a number greater than or equal to zero.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_FACTORY"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_FACTORY"></a></p>
+<a name="1651093"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">CORBA Factories (T_FACTORY)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A CORBA Factory is an interface used by a client to obtain an object reference to a CORBA object. Object references to factories are obtained by the client using an object reference to a FactoryFinder interface. The FactoryFinder interface is advertised by the BEA Tuxedo server application and is made available to the client as part of client bootstrap processing.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The T_FACTORY MIB represents the occurrences of factories registered with the BEA Tuxedo FactoryFinder. The available factories for a domain are displayed in the BEA Tuxedo Administration Console. The BEA Tuxedo Administration Console only allows you to view a Factory configuration and run-time information using the configuration tool.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709212"></a><a name="concorbafactory"></a> </p>
+<a name="1651242"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Viewing a CORBA Factory Configuration
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console Factory configuration attributes are provided on the General tab page. To view the configuration attributes for a factory, highlight a factory icon. The Configuration Tool pane displays the General tab containing the configuration attributes for your selected factory.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For more information about the Configuration Tool, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>. For more information about the IDL format for factory interface names, see the CORBA 2.1 Specification Section 7.6 for details.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describe each factory configuration attribute.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="cfac_generaltab"></a> </p>
+<a name="1634054"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The following sections describes the read-only fields provided on the General tab.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15220"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_facgen_inf6"></a></p>
+<a name="1642131"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1642131"></a>Interface Name</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655164"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Interface Name field displays the interface repository ID for the factory. The format of this name is dependent on the options specified in the IDL that generates the interface implementation.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="1709228"></a><a name="15221"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_facgen_fid6"></a></p>
+<a name="1634066"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Factory ID</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655171"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Factory ID field displays the registered ID for the factory. The Factory ID is a string value from one to 256 alphanumeric characters. The format of the ID depends upon the options specified in the IDL for the generated interface implementation.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="15222"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="ac_facgen_obs6"></a></p>
+<a name="1651801"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="1651801"></a>Object State</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="1655174"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Object State field displays the current state of the selected Factory. The format of the Object State is a string. The value of this field is ACT (ACTive) indicating that the Object State is active. The ACT object state indicates that the factory is registered with the FactoryFinder.</p>
+
+<p>
+  <a href="acacls.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="acapximp.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

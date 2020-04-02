@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title></title>
+
+
+  <link rel="stylesheet" charset="UTF-8" type="text/css" href="../../jdev/jdeveloper.css">
+
+</head>
+<body>
+
+<h1>Configuring Graph Types</h1>
+
+Use the Graph binding dialog to map data from an ADF data control onto
+the DVT Graph.&nbsp; The following information is available to help
+you with this process:<br>
+
+<br>
+
+<a href="#Overview:_Binding_Graphs_to_ADF_Data">Overview:&nbsp;
+Binding Graphs to ADF Data Controls</a><br>
+
+<a href="#Examples:_Graph_Type_Configurations">Examples:&nbsp;
+Graph Type Configurations</a><br>
+
+<h1><a name="Overview:_Binding_Graphs_to_ADF_Data"></a>Overview:&nbsp;
+Binding Graphs to ADF Data Controls</h1>
+
+The Graph binding is a data-mapping layer between the ADF Graph data
+visualization component and an ADF data control.&nbsp;&nbsp; To
+set up this mapping, the Graph binding dialog is used.&nbsp; This
+document shows how to use the Graph binding dialog to configure the
+data for different Graph types.<br>
+
+<br>
+
+Graph types, such as bar, pie, scatter, etc. have different data
+requirements.&nbsp; The Graph binding dialog has been designed to
+allow for a wide range of mappings between the data as sourced from a
+data control and all of the various Graph type specific data models. <br>
+
+<br>
+
+The Graph binding dialog is comprised of the following elements:<br>
+
+<br>
+
+<img style="width: 840px; height: 600px;" alt="Graph binding dialog" src="images/GraphBindingDialog.PNG"><br>
+
+The basic steps used to fill out this dialog are:<br>
+
+1.&nbsp;&nbsp;&nbsp; Specify the numeric facts or metrics
+you want to graph in the &ldquo;Data Points&rdquo; section of
+the dialog.<br>
+
+2.&nbsp;&nbsp;&nbsp; Specify the data attributes to show on
+the axis or legend of the graph in the &ldquo;Group By&rdquo;
+section of the dialog.<br>
+
+3.&nbsp;&nbsp;&nbsp; Optionally, specify additional data
+categories over which the numeric data points will be categorized in
+the &ldquo;Data Points&rdquo; section of the dialog.<br>
+
+4.&nbsp;&nbsp;&nbsp; Use the Preview tab to see what the
+Graph will look like when bound to the data as specified in steps 1-3
+above.<br>
+
+<h1><a name="Examples:_Graph_Type_Configurations"></a>Examples:
+Graph Type Configurations</h1>
+
+Refer to the following examples for details on how to fill out the
+Graph binding dialog for the various types of Graphs: <br>
+
+<br>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td colspan="2" rowspan="1"><span style="font-weight: bold;">Simple Graph Types</span></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Bar, Line, Area</td>
+
+      <td><a href="#Example_1:_Setting_up_Bar_Line__Area">Example
+1: Setting up Bar, Line, &amp; Area Graphs</a></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Combo</td>
+
+      <td><a href="#Example_2:_Setting_up_Combo_Graphs">Example
+2: Setting up Combo Graphs</a></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Pie</td>
+
+      <td>Example 3: Setting up Pie Graphs <span style="font-style: italic;">&lt;to be written&gt;</span></td>
+
+    </tr>
+
+    <tr>
+
+      <td colspan="2" rowspan="1"><span style="font-weight: bold;">Complex Graph Types</span></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Bubble</td>
+
+      <td><a href="#Example_4:_Setting_up_Bubble_Graphs">Example
+4: Setting up Bubble Graphs</a></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Scatter</td>
+
+      <td><a href="#Example_5:_Setting_up_Scatter_Graphs">Example
+5: Setting up Scatter Graphs</a></td>
+
+    </tr>
+
+    <tr>
+
+      <td>Stock</td>
+
+      <td><a href="#Example_6:_Setting_up_Stock_Graphs">Example
+6: Setting up Stock Graphs</a></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+<h2><a name="Example_1:_Setting_up_Bar_Line__Area"></a>Example
+1: Setting up Bar, Line, &amp; Area Graphs</h2>
+
+Bar Graphs, Line Graphs, and Area Graphs all have similar data models
+and are configured using the Graph binding dialog the same way.<br>
+
+<h3>A. Single numeric fact</h3>
+
+In this example, a single numeric column of data (Salary) from an ADF
+collection is displayed in a bar graph.<br>
+
+<img style="width: 840px; height: 625px;" alt="Bar Graph 1" src="images/graphBar1.PNG"><br>
+
+<h3>Graph binding dialog settings</h3>
+
+To configure the DVT Graph shown above with this data, the Graph
+binding dialog should be filled out as follows:<br>
+
+<br>
+
+<img style="width: 840px; height: 600px;" alt="Bar Graph 1 binding dialog" src="images/graphBar1_binding.PNG"><br>
+
+<br>
+
+Notes about the single numeric fact use case:
+<ul>
+
+  <li>In the Data Points section, the numeric data attribute
+&lsquo;Sal&rsquo; is specified, along with a label of
+&lsquo;Salary&rsquo;, which is displayed in the legend of the
+Graph.&nbsp; The salary data in this case is coming from a typed
+data attribute of the data control, so the default setting of Typed
+Attributes is used.</li>
+
+</ul>
+
+<ul>
+
+  <li>In the Group By section, employee name
+(&lsquo;Ename&rsquo;) is specified.&nbsp; The names are
+displayed as axis labels, as indicated by the Display Group Values
+setting.</li>
+
+</ul>
+
+<h3>B. Multiple numeric facts</h3>
+
+Three metrics (Salary, Bonus, and Commission), sourced from three typed
+attribute columns, are displayed in the following stacked bar graph.<br>
+
+<img style="width: 840px; height: 600px;" alt="Bar graph 2" src="images/graphBar2.PNG"><span style="font-weight: bold;"><br>
+
+</span>
+<h3>Graph binding dialog settings</h3>
+
+To configure the DVT Graph shown above with this data, the Graph
+binding dialog should be filled out as follows:<br>
+
+<br>
+
+<img style="width: 840px; height: 600px;" alt="Bar Graph 2 binding dialog" src="images/graphBar2_binding.PNG"><br>
+
+<br>
+
+Notes about graphs with multiple numeric facts:<br>
+
+<ul>
+
+  <li>The numeric columns being graphed are all specified in the
+Data Points section of the Graph binding dialog.&nbsp; Since the
+data is coming from separate data attributes of the data control, using
+Typed Attributes is appropriate.</li>
+
+</ul>
+
+<ul>
+
+  <li>The employee name column is specified in the Group By
+section of the dialog.&nbsp; The names will appear as labels on the
+ordinal axis of the stacked bar graph.</li>
+
+</ul>
+
+<ul>
+
+  <li>Setting Display Group Values to In Legend will cause the
+Graph to display the employee names in the legend and the numeric facts
+to be displayed on the ordinal axis:</li>
+
+</ul>
+
+<img style="width: 789px; height: 588px;" alt="Bar graph 2A" src="images/graphBar2a.PNG"><br>
+
+<h2><a name="Example_2:_Setting_up_Combo_Graphs"></a>Example
+2: Setting up Combo Graphs</h2>
+
+A Combo Graph, short for Combination,&nbsp;is very much like the
+other simple Graph types in terms of data requirements.&nbsp;
+However, each series of numeric data is assigned its own marker
+type.&nbsp; In this example, Sales is assigned to be bar markers,
+Cost is assigned to a line marker, and Profit is assigned to an area
+marker.<br>
+
+<img style="width: 591px; height: 488px;" alt="Combo graph 1" src="images/graphCombo1.PNG"><br>
+
+<h3>Graph binding dialog settings</h3>
+
+To configure the DVT Graph shown above with this data, the Graph
+binding dialog should be filled out as follows:<br>
+
+<br>
+
+<img style="width: 664px; height: 600px;" alt="Combo graph 1 binding dialog" src="images/graphCombo1_binding.PNG"><br>
+
+<br>
+
+Notes about the combo graph binding settings:<br>
+
+<ul>
+
+  <li>The order of the facts in the Data Points section of the
+dialog is significant.&nbsp; The first data attribute will be
+assigned to the first data marker shape (Sales to bar markers in this
+case), the second data attribute will be assigned to the second data
+marker shape (Cost to line markers in this case), etc.&nbsp;
+Selecting a row and pressing the blue arrow icons re-orders the data
+attributes.</li>
+
+</ul>
+
+<h2><a name="Example_4:_Setting_up_Bubble_Graphs"></a>Example
+4: Setting up Bubble Graphs</h2>
+
+The bubble graph is useful for visualizing multiple, correlated metrics
+at the same time.<br>
+
+<h3><img style="width: 786px; height: 705px;" alt="Bubble graph 1" src="images/graphBubble1.PNG"><br>
+
+</h3>
+
+<h3>Graph binding dialog settings</h3>
+
+To configure the DVT Graph shown above with this data, the Graph
+binding dialog should be filled out as follows:<br>
+
+<br>
+
+<img style="width: 664px; height: 600px;" alt="Bubble graph 1 binding dialog" src="images/graphBubble1_binding.PNG"><br>
+
+<br>
+
+Notes about configuring bubble graphs:<br>
+
+<ul>
+
+  <li>For bubble graphs, there must be at least 3 numeric data
+attributes specified in the Data Points section of the dialog.</li>
+
+</ul>
+
+<ul>
+
+  <li>The order of the numeric data attributes specified in the
+Data Points section of the dialog maps to the X axis, Y axis, and
+bubble size, respectively.&nbsp; In this example, GNP is the first
+metric listed in the Data Points section, so it is plotted along the X
+axis of the Graph, Life Expectancy is second metric and is plotted
+along the Y axis, and Population is listed third and determines the
+size of the bubble.</li>
+
+</ul>
+
+<ul>
+
+  <li>The Group By section the dialog is used to determine what
+should appear in the legend of the bubble chart.&nbsp; Therefore,
+the Display Group Values should be set to In Legend.&nbsp; In this
+example, the Region attribute is used to provide legend entries.</li>
+
+</ul>
+
+<ul>
+
+  <li>Country is listed as a data category before the numeric
+data attributes.&nbsp; The bubble graph binding interprets this to
+mean that each country in the data set will have three numeric data
+attributes (GNP, Life Expectancy, and Population) and each country will
+be shown with its own bubble marker.</li>
+
+</ul>
+
+<h2><a name="Example_5:_Setting_up_Scatter_Graphs"></a>Example
+5: Setting up Scatter Graphs</h2>
+
+Scatter graphs are similar to bubble graphs in that they are useful for
+visualizing correlation between data. They are somewhat simpler than
+bubble graphs in that they show the relationship between just two
+metrics.<br>
+
+<br>
+
+This example Scatter Graph uses a subset of the data used in the Bubble
+Graph example to show correlation between life expectancy and per
+capita income.<br>
+
+<h3><img style="width: 784px; height: 705px;" alt="Scatter graph 1" src="images/graphScatter1.PNG"><br>
+
+</h3>
+
+<h3>Graph binding dialog settings</h3>
+
+To configure the DVT Graph shown above with this data, the Graph
+binding dialog should be filled out as follows:<br>
+
+<br>
+
+<img style="width: 664px; height: 600px;" alt="Scatter graph 1 binding dialog" src="images/graphScatter1_binding.PNG"><br>
+
+<br>
+
+Notes about configuring scatter graphs:<br>
+
+<ul>
+
+  <li>For scatter graphs, there must be at least 2 numeric data
+attributes specified in the Data Points section of the dialog.</li>
+
+</ul>
+
+<ul>
+
+  <li>The order of the numeric data attributes specified in the
+Data Points section of the dialog maps to the X axis, and Y axis,
+respectively.&nbsp; In this example, GNP is the first metric listed
+in the Data Points section, so it is plotted along the X axis of the
+Graph;&nbsp; Life Expectancy is listed second and is plotted along
+the Y axis.</li>
+
+</ul>
+
+<ul>
+
+  <li>The Group By section the dialog is used to determine what
+should appear in the legend of the scatter graph.&nbsp; Therefore,
+the Display Group Values should be set to In Legend.&nbsp; In this
+example, the Region attribute is used to provide legend entries.</li>
+
+</ul>
+
+<ul>
+
+  <li>Country is listed as a data category before the numeric
+data attributes.&nbsp; The scatter graph binding interprets this to
+mean that each country in the data set will have two numeric data
+attributes (GNP and Life Expectancy) and each country will be shown
+with its own marker.</li>
+
+</ul>
+
+<h2><a name="Example_6:_Setting_up_Stock_Graphs"></a>Example
+6: Setting up Stock Graphs</h2>
+
+Stock graphs have specific data requirements that must be met in order
+to display reasonable results.&nbsp; This section will provide
+details on how to map the required data from the ADF DC onto the
+different types of stock graphs.<br>
+
+<br>
+
+A stock graph requires at least two, and as many as five, numeric
+values per marker depending on the type of stock graph being
+displayed.&nbsp; The five data attributes specific to stock graphs
+are:&nbsp; open, high, low, close, and volume.&nbsp; Some stock
+graphs, such as the Open-Close Candle Graph, only display the open and
+close values, while others display additional attributes.&nbsp;
+Once you have selected the type of graph to be used, the appropriate
+data attributes must be mapped onto that graph type.<br>
+
+<h3>Mapping data from multiple data attributes</h3>
+
+The following example is an Open-High-Low-Close with Volume Candle
+Graph.&nbsp; Placing the mouse cursor over a marker shows the data
+associated with it.&nbsp; The red marker shows the open, high, low,
+and close stock data for Oracle on a specific date, while the blue bar
+below it shows volume data.&nbsp; Notice that the data for this
+graph comes from separate typed attributes (columns) in the data
+control.<br>
+
+<img style="width: 802px; height: 488px;" alt="Stock graph 1" src="images/graphStock1.PNG"><br>
+
+<h3>Graph binding dialog settings</h3>
+
+To configure the DVT Graph shown above with this data, the Graph
+binding dialog should be filled out as follows:<br>
+
+<br>
+
+<img style="width: 661px; height: 719px;" alt="Stock graph 1 binding dialog" src="images/graphStock1_binding.PNG"><br>
+
+<br>
+
+Notes about using the Graph Binding dialog with stock graphs:<br>
+
+<ul>
+
+  <li>In this example, the data control provides a separate data
+column for each required data attribute (open, high, low,
+etc.).&nbsp; Therefore the default setting of Typed Attributes is
+used.</li>
+
+</ul>
+
+<ul>
+
+  <li>For all stock graphs, the order of the attributes listed in
+the Data Points section of the dialog must be Open, High, Low, Close,
+Volume.&nbsp; If the stock graph type in use only requires a subset
+of these attributes, specify them in this order.</li>
+
+</ul>
+
+<ul>
+
+  <li>The market date attribute is specified in the Data Points
+section of the dialog as a Data Category.</li>
+
+</ul>
+
+<ul>
+
+  <li>The stock symbol attribute is set in the Group By section,
+and since stock symbol (ORCL in this example) is constant across dates,
+Display Group Values is set to In Legend.&nbsp; (Note:&nbsp;
+Stock graphs, in the current release, are intended to show data for
+only one stock at a time.&nbsp; As a result, some stock graph
+types, such as the one in this example, will not display a
+legend.&nbsp; A Graph title can be used to displayed the stock name
+if desired.)</li>
+
+</ul>
+
+<h3>Mapping data from a single data attribute</h3>
+
+The same graph can be displayed even if the data coming from the data
+control is arranged differently.&nbsp; For example, the numeric
+data to be graphed may be sourced from a single column.&nbsp;
+Notice in this layout, the required stock data (Open, High, Low, Close,
+Volume) is repeated in groups of five rows like this:<br>
+
+<br>
+
+<img style="width: 420px; height: 343px;" alt="Stock graph 2 table of data" src="images/graphStock2_table.PNG"><br>
+
+<br>
+
+The Graph Binding dialog is designed to allow for this arrangement of
+data and would be configured as follows:<br>
+
+<br>
+
+<img style="width: 658px; height: 743px;" alt="Stock graph 2 binding dialog" src="images/graphStock2_binding.PNG"><br>
+
+<br>
+
+Notes about setting up the Graph Binding dialog when numeric data is
+coming from a single data attribute:<br>
+
+<ul>
+
+  <li>Make sure the Name-Value Pairs option is
+selected.&nbsp; &ldquo;Name&rdquo; in Name-Value Pairs
+refers to the attribute that has the metric names.&nbsp;
+&ldquo;Value&rdquo; in Name-Value Pairs refers to the attribute
+that has the metric values.</li>
+
+</ul>
+
+<ul>
+
+  <li>Provide the &ldquo;Name&rdquo; attribute in the
+Value Type Attribute dropdown [we should probably rename this dropdown
+control to &ldquo;Name Attribute&rdquo;], and the
+&ldquo;Value&rdquo; attribute in the Value Attribute
+dropdown.&nbsp; In this example, these are the
+&lsquo;Measure&rsquo; and &lsquo;Data&rsquo;
+attributes, respectively.</li>
+
+</ul>
+
+<ul>
+
+  <li>Add the same items to the Data Points section of the dialog
+as in the previous example.&nbsp; Make sure that the Data
+Attributes specified match the metric names in the data (e.g. OPEN,
+HIGH, LOW, etc.)</li>
+
+</ul>
+
+</body>
+</html>

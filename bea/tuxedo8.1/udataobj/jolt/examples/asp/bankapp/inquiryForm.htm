@@ -1,0 +1,23 @@
+<!--
+--	Copyright (c) 1998-99 BEA Systems, Inc.  All rights reserved
+--	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF BEA Systems, Inc.
+--	The copyright notice above does not evidence any actual or intended
+--	publication of such source code.
+-->
+
+<HTML>
+<HEAD>
+<TITLE>Account Balance</TITLE>
+</HEAD>
+<BODY>
+<H2>Please Enter Your Account Number Below:</H2>
+<FORM NAME="teller" ACTION="tlr.asp" METHOD="POST">
+Account Number: <INPUT TYPE="text" NAME="ACCOUNT_ID">
+<CENTER>
+<INPUT TYPE="hidden" NAME="SVCNAME" VALUE="INQUIRY">
+<INPUT TYPE="submit" VALUE="Get">
+<INPUT TYPE="reset" VALUE="Clear">
+</CENTER>
+</FORM>
+</BODY>
+</HTML>

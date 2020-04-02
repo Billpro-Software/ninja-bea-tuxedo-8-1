@@ -1,0 +1,1800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="adfdi-excel-addin.dll" version="11.11.40.3291" publicKeyToken="5ab9c5b8ef48a54f" language="neutral" processorArchitecture="msil" type="win32" />
+  <description xmlns="urn:schemas-microsoft-com:asm.v1">adfdi-excel-addin - Excel add-in created with Visual Studio Tools for Office</description>
+  <application />
+  <entryPoint>
+    <co.v1:customHostSpecified />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.mshtml" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Interop.Excel" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Interop.SmartTag" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.Common.v9.0" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.Excel.v9.0" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.v9.0" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Vbe.Interop" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.Tools.Applications.Hosting.v9.0" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.Tools.Applications.ServerDocument.v9.0" version="9.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="office" version="12.0.0.0" publicKeyToken="71E9BCE111E9429C" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-common.dll" size="117848">
+      <assemblyIdentity name="adfdi-common" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OWvlE+BlBx+tsTi9kP6iAjbCwQQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar\adfdi-common.resources.dll" size="7168">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ar" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>T/bYiDTW/PfMqy55plo0wQXzOe8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cs\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="cs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>o40PpHqjPdJQWSr859ehLsBoJ2U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="da\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="da" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>087uibZDLv4wc54wmtM2J0A+1Ps=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>tAkKcTtMs1aL8PX4+ShEy6yK2tk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="el\adfdi-common.resources.dll" size="7680">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="el" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>RSEOpEoCnI2FPn+eXZCIzM10UEM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>/n6IpEXOvpZ6vhIVHtawlw1F9yo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fi\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>q3YTs9ArkHt1y3VxHCQlHE0wI9s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\adfdi-common.resources.dll" size="7168">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>avpfP4JFvSDs8++gvKyVsB7oTVE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="he\adfdi-common.resources.dll" size="7168">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="he" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ekMOZRcf34bLM8BfzSYvEu/vzZY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hu\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="hu" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>TChDqXTpCYJyq99a5iGgTxL7AQ8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>pP+cxiNakYOU207mZqp6EFdJTRo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\adfdi-common.resources.dll" size="7168">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>y5HrUGwB/7lXgmv9DqPI95kBZCs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>veZvDTRzysbo2Jm+XBeTtMGqd2w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="nl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>24pe6fx0JIKdV9KIrLoUwLVSvlc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="no\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="no" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>v1vZhuQt2IdJxmVHmOO2md4TM/I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>HAQfayF9+qVlwXM6V7cWjJEccVI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt\adfdi-common.resources.dll" size="7168">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>EXhIpCF0z+EI329KsL2CrHuQ9rg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt-BR" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>0iHnYVFHRw9S6TakpCKU2o5J92A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ro" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IBRZVXN8afoTrY3QbVfyOt0ejCs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\adfdi-common.resources.dll" size="7168">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nsmsgL7bidu4x5YiaFcXbSYnotM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sk" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Z4L591IRMZfOyS7QxRzXk0tc6Nc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qLvxWpuhZG9u2vfz6FUsIasx11g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="th\adfdi-common.resources.dll" size="7680">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="th" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>9yaI1WVvoPSyVpjtrRXCikeMbxw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tr\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="tr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>geRTM+7sapEm56Ji0Hb8JT0a6mQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHS\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHS" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>aAcQ4Yd4fFjkFFXfU+N9wtYRsv8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHT\adfdi-common.resources.dll" size="6656">
+      <assemblyIdentity name="adfdi-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHT" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>d22fgaRDJ50/UGDwxx5P6+H0dRI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-datamanager.dll" size="134232">
+      <assemblyIdentity name="adfdi-datamanager" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>I4xva7+rXkLBowJvvHCyRm9OFuE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar\adfdi-datamanager.resources.dll" size="10752">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ar" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>v5ExnzSec10LoEzxu00dWFbpD5A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cs\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="cs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ct68UHOryDd+AelzUGiKqSQyqZk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="da\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="da" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>UwfPH1HWxN3H2+i+aDHmQ6h5x9I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>6wtHZ9NdENthfwJeLHFTOSowhcE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="el\adfdi-datamanager.resources.dll" size="12288">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="el" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VPNw3ZfL6jsy/so7l23JDOWCLRI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Ort+aLzJzIXVG1en34YNPR0m1w8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fi\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>cTUMtAXJEAtdGFhYMJuZ0j/zLUQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xPlnweAZku4YhCmhqyqWtj27wBs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="he\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="he" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WbsStIeQpS0s8zTRKedRhWAP3Mc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hu\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="hu" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OPg7aVqrgkT0TFbu1Vxbcm/erms=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ZAi7kJSNePw6Pvc5RYNyP2J9r04=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\adfdi-datamanager.resources.dll" size="10752">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nYxjBYm4E1qQBa1oO2yAh2bnsL4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>S19fUF2LarzseHpNzdkcwOPlaHg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="nl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yb/+bn0/fv3SC1QvXcgmaNBq3Fk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="no\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="no" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>UZm7kD9GnK27Xdnq2tIjf0ZWcWI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Dt16xM5dhVMTMTUwQ7MfTILumiY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>wDFKa3cGpTcMwLfGFw5GmhZ8q8c=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\adfdi-datamanager.resources.dll" size="10240">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt-BR" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>y26lDUB54Ke2d9FY7c6fr7rZVSQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ro" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Wa3+DFSB8D8p99nx8OyTVcFaBKc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\adfdi-datamanager.resources.dll" size="11264">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>PFrgFTRCKXxCbSrbz6Is696oOOs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sk" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>rjJD6Ri+/W8esRkRMvx3LkbbP/o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>3hCfPTRF7hKWnA2lS9LwID3b4JA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="th\adfdi-datamanager.resources.dll" size="12800">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="th" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>wDJirOOIpNb0Hrwc+rvlmwKPeOs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tr\adfdi-datamanager.resources.dll" size="9728">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="tr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OSFVZrdBZWtzpnI1Wmb8ioOEvRc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHS\adfdi-datamanager.resources.dll" size="9216">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHS" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>81AynrRTPraJ8AOyzvTcSS1PNYc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHT\adfdi-datamanager.resources.dll" size="9216">
+      <assemblyIdentity name="adfdi-datamanager.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHT" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>TVe8HnVybnQ9NqkDDK6WW+Z9DTk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-excel-addin.dll" size="106496">
+      <assemblyIdentity name="adfdi-excel-addin" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>F0CdbjqISxW+ClvjIYxmcCOvh6I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-excel-common.dll" size="351320">
+      <assemblyIdentity name="adfdi-excel-common" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ZWM/G1P7L8XUChlMBFBeMwvll6g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar\adfdi-excel-common.resources.dll" size="16384">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ar" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>GB9l1hm1veImjL8z9Uxu5usQsC4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cs\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="cs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>lqbsoVvfKYXW/5H3ImGeHh5wpbc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="da\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="da" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>BQ21Ig3wDBNQ1ec/vVpUc1yRc8U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\adfdi-excel-common.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xjN6UJB9QR+fFdhsCXK8HY0QoHU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="el\adfdi-excel-common.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="el" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>GHcNgXHXR4WipYbgt5xUlAIqJ7g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VeRkI6wZnN3ICiP/+RGnDWBWm18=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fi\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>DXnUoikiFT7w/aPFQIxMbWVqHcQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>TkLIkx1el06nv4co7ocKGc7cIVk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="he\adfdi-excel-common.resources.dll" size="15872">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="he" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>KnIKxU+6y9/lCBLB/mAIVxfTTFc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hu\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="hu" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dN2VmjRQiEkMMDYEcjy7aSOqQ5k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>GIK1R8Iwq+63IUWsqojYc/0/Kog=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\adfdi-excel-common.resources.dll" size="16384">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>TcHZcHPUvyeg0R7WFIONd2vtVBg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yQacy7SM5xmC6HnW4dOBhWZH0Gs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="nl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>hRsRCb5Bg5/j2ZFv7eLkHbkvhWY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="no\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="no" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>g245LQ4kKMs6HzkYsPtLhtLIOYM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>8WMtcRtQ2XVd9OW/y7diZf/XOjw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>/41Tt/nRf0vQz4fZ/CVasBYC4Fc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt-BR" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IfNn10YV5ve9+w9z4ER6NFqH40Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\adfdi-excel-common.resources.dll" size="15360">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ro" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>gfjQhZL+zW5nvvJIxIa9jwR03jQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\adfdi-excel-common.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>lmcwUVAfCIi4Z0+rWgoPuCdP7u4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sk" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>OS/JT3QDF+Pe+WyP4TO2JqEg+yY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>MSV40K0+7SRixs0U9UxmxLdIWvQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="th\adfdi-excel-common.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="th" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qtzeBPsAB/NBH//lA0gHfRsQ/HI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tr\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="tr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nAfHy/bJP1db3BNr/AWk2NpH34E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHS\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHS" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>L2+2zwIUd2M2yTwSK6WUgEhiN9E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHT\adfdi-excel-common.resources.dll" size="24576">
+      <assemblyIdentity name="adfdi-excel-common.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHT" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1k76HHnfDxDDCLJR3XAbE34yE1s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-excel-designtime.dll" size="257112">
+      <assemblyIdentity name="adfdi-excel-designtime" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>4yNnbLFRmtJ3bay4qVrG3/e87p4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\adfdi-excel-designtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-designtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dI2EiV7vnVMhVxmUjR24gNXairA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-excel-runtime.dll" size="330840">
+      <assemblyIdentity name="adfdi-excel-runtime" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>hTfZB4IG2PGe7mAh4UdtE9q2xy0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ar" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Jdg3+4XgcNeW4THrq6hfjxCVQe0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cs\adfdi-excel-runtime.resources.dll" size="19456">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="cs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>TzM71xVeOZ29jZKpACUfjcDl9V8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="da\adfdi-excel-runtime.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="da" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>1lEOwB9bxnX+IhRW/6VoU6aGsjs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5Qrww7/RXjrVWoLLVys6Yvv5PZU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="el\adfdi-excel-runtime.resources.dll" size="36864">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="el" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VeRUThmmycezX2wqoSRTngxbftM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>AeEvcp7RyYn6BZ8fgOV12WC7jmY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fi\adfdi-excel-runtime.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>m60xFOuLpncqzI9zHthS7q9PbHw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>vJJJp/Zc6mIAjWfKq9IHbkBsyYw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="he\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="he" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>dhGANo70zcZJhlVj/SKTNm3lZYc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hu\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="hu" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Ej2xyOSAHF/3AEswmmD1jERcLNE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VsGalzupT9IDN2MFHyILpvJswzA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>sC/XdrF4+RUVL1y+ppaOMxEm/qY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\adfdi-excel-runtime.resources.dll" size="32768">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>HgfVYxRmQWH3I+lkHE7IK1Ov1wA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\adfdi-excel-runtime.resources.dll" size="19456">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="nl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5c06/R0bwTzToqwumfO9Rly8z3w=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="no\adfdi-excel-runtime.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="no" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5MclBlJHf1uJyOdlqgD1OBZNuj8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\adfdi-excel-runtime.resources.dll" size="19968">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>AxBOsYXr9MfQqOUwcsoCYDYA0tk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt\adfdi-excel-runtime.resources.dll" size="19968">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>KZH37klSNYoe0B8Ag9Bd6WOWWnY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\adfdi-excel-runtime.resources.dll" size="19968">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt-BR" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>iQNtr+uzhT34GFi+IdJb5EuLxUo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\adfdi-excel-runtime.resources.dll" size="19968">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ro" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>nI/RrnRkmG7J0QSs0gL1bxqf3TY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\adfdi-excel-runtime.resources.dll" size="36864">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>AbrJ1QOQ5bf34PccnLnCUddhHz0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\adfdi-excel-runtime.resources.dll" size="19968">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sk" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>H8PGJYaSqODXFN1vS6ClRkGIZxA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\adfdi-excel-runtime.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IGWWFgetoF4+iheUBUCkC3FoYG0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="th\adfdi-excel-runtime.resources.dll" size="36864">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="th" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>QZglSjJ786PRxSwiu2hwyQKuMvo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tr\adfdi-excel-runtime.resources.dll" size="19456">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="tr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VELtBT7NzCvXjEEriLJNULeQDD0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHS\adfdi-excel-runtime.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHS" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Xv8DXhvv7+O/avmqFf73u/waKJI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHT\adfdi-excel-runtime.resources.dll" size="28672">
+      <assemblyIdentity name="adfdi-excel-runtime.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHT" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>AOMowgwoCve5m6HCVFFgnpr0so4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-excel-xml.dll" size="171096">
+      <assemblyIdentity name="adfdi-excel-xml" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>LBu6lP3dP3th9nJ3OltRg5Led28=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar\adfdi-excel-xml.resources.dll" size="49152">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ar" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>VLQCHPiJuU4ZGMuuHhaU+oD09cE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cs\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="cs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SiEjEnZjBCjtjWggJo6WGqE+1Sw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="da\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="da" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>PSsN61gDDteY3ZWpU6Fhuyd0hiM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qldzwAks2V0wepBWznVYtn1kMyI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="el\adfdi-excel-xml.resources.dll" size="53248">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="el" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yS0Koyfue3rVxVHlvWw0LXBLvV4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>/Q079XHGucEAN0TdiL53lKmyrYA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fi\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>w2KPiy47EWZpLBA1YolMuaYW+6k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>LtQcfA1KzCMAfUl4Cc9Lyl8vor8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="he\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="he" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>G4KWetWPSSW9h7sGJBNC3BuC7bU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hu\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="hu" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>8MuSGF6vqDuoOxGVg2xfIR2QJzU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>yiiBpu3j1faW6lC6WxrAfqG7548=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>fJGUTT89QuMSGIoIVp2M/CUBPaM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ukoBD+K0J2C3zhUKxKw606yLh0Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="nl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>sedheqcq+9KAyz1XOPeTYDYU6LE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="no\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="no" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SHhDdvEJlG4l1HAmk7S6xA1WF/c=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Ajfj3letIYC4vMvYiCEhdC1E+9I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>o89VTF0jkmpIQFCGjryIo6RWB9I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="pt-BR" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>ABe+D/8FK4HpkOXvRDsQbiKDw/A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ro" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>NbxBCdjpo7ebFV2hpkLVpBfrXWE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\adfdi-excel-xml.resources.dll" size="49152">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>jgCsCYyS7jPM7n6rcGRht5BZTu4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sk\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sk" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>FWs057eU/IyW5ySJCFYgQYZEjEc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="sv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5wsR+lk5a0y5d1xMi2g3rtwKvLw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="th\adfdi-excel-xml.resources.dll" size="57344">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="th" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>fGjDQjFQ9XuyiwuLROoJatnTIFg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tr\adfdi-excel-xml.resources.dll" size="45056">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="tr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WaDfbhKJSm7CoVh3ILagRD80EFU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHS\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHS" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>knlgoxdMyYquLyV/j9didj1Tnko=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CHT\adfdi-excel-xml.resources.dll" size="40960">
+      <assemblyIdentity name="adfdi-excel-xml.resources" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="zh-CHT" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Ue4aROUp670Kupfe2Zr6K/ieOE8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="adfdi-excel-xml.XmlSerializers.dll" size="236632">
+      <assemblyIdentity name="adfdi-excel-xml.XmlSerializers" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>lxy0iJJ5Z5qELChe2US4hywgY88=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <vstav2:addIn xmlns:vstav2="urn:schemas-microsoft-com:vsta.v2">
+    <vstav2:entryPoints>
+      <vstav2:entryPoint class="oracle.adf.client.windows.excel.client.ThisAddIn">
+        <assemblyIdentity name="adfdi-excel-addin" version="11.11.40.3291" publicKeyToken="C088D435F8DA8CF6" language="neutral" processorArchitecture="msil" />
+      </vstav2:entryPoint>
+    </vstav2:entryPoints>
+    <vstav2:update enabled="true">
+      <vstav2:expiration maximumAge="1" unit="days" />
+    </vstav2:update>
+    <vstav2:application>
+      <vstov3:customization xmlns:vstov3="urn:schemas-microsoft-com:vsto.v3">
+        <vstov3:appAddIn application="Excel" loadBehavior="3" keyName="adfdi-excel-addin">
+          <vstov3:friendlyName>Oracle ADF 11g Desktop Integration Add-in for Excel</vstov3:friendlyName>
+          <vstov3:description>Integrates spreadsheets with web applications based on Oracle ADF 11g</vstov3:description>
+        </vstov3:appAddIn>
+      </vstov3:customization>
+    </vstav2:application>
+  </vstav2:addIn>
+<publisherIdentity name="CN=&quot;Oracle USA, Inc.&quot;, OU=Software Engineering, OU=Digital ID Class 3 - Microsoft Software Validation v2, O=&quot;Oracle USA, Inc.&quot;, L=Pleasanton, S=California, C=US" issuerKeyHash="08f551e8fbfe3d3d64367c68cf5b78a8dfb9c537" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>wQEGVqqnqVaBNmvFsDKSbS00Z8U=</DigestValue></Reference></SignedInfo><SignatureValue>OepBi4OaGt8h6odTs3ux4CMvP6NxEPPHkgwZB8inh36MFvIlc38lVid/rO49YulxrP+66v0XN3D/sKk3/AG/riAaIiZ4KL/FRXCqnGGx7q1BjgbpoWSr9XW/03qbWy9aZYzMlXi/IRKk35BhDMFVzoVlT6/UZdjF1ESsSgIS4dM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>r7bnF1T8cH0i6GKjfqmESGeCFtA3TPtD9X+G8pGbiefQeUdPI/dWKW4koPI9Z37Jd+x/ODqydx3nIllt9hSlghInS8K/W90gAiG+VgLQGymhIrlEVpJVGgeG/hxttIExCkxiTA6kCgqbL7t64IA8zTgvKtMkQb0iRtUNhcwB5mM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c567342d6d9232b0c56b368156a9a7aa560601c1" Description="" Url=""><as:assemblyIdentity name="adfdi-excel-addin.dll" version="11.11.40.3291" publicKeyToken="5ab9c5b8ef48a54f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN="Oracle USA, Inc.", OU=Software Engineering, OU=Digital ID Class 3 - Microsoft Software Validation v2, O="Oracle USA, Inc.", L=Pleasanton, S=California, C=US</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>A3ZWJpdi9Pd/ZPbx6kFMq74LBtE=</DigestValue></Reference></SignedInfo><SignatureValue>m8HzqQRgEEh09sqtcX9QZxRhD6E5WSgkMbqUmeSE9qIyg9X3//Bi1mGVAfFRxk03Shco0SLFf5K7P36+87qVYEcxgYAFopmcby9HvZh1+E8ZVHfJw/28hUQp0D3uwjxJ8ddOg48Csc/00DIDtXqfvG0slU8a8HVvqxa48p5v5U4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>r7bnF1T8cH0i6GKjfqmESGeCFtA3TPtD9X+G8pGbiefQeUdPI/dWKW4koPI9Z37Jd+x/ODqydx3nIllt9hSlghInS8K/W90gAiG+VgLQGymhIrlEVpJVGgeG/hxttIExCkxiTA6kCgqbL7t64IA8zTgvKtMkQb0iRtUNhcwB5mM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIFCTCCA/GgAwIBAgIQTFTayoPa8P7D2i/I6BpmhDANBgkqhkiG9w0BAQUFADCBtDELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2UgYXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwNDEuMCwGA1UEAxMlVmVyaVNpZ24gQ2xhc3MgMyBDb2RlIFNpZ25pbmcgMjAwNCBDQTAeFw0wOTAxMTYwMDAwMDBaFw0xMjAxMTYyMzU5NTlaMIHMMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTETMBEGA1UEBxMKUGxlYXNhbnRvbjEZMBcGA1UEChQQT3JhY2xlIFVTQSwgSW5jLjE+MDwGA1UECxM1RGlnaXRhbCBJRCBDbGFzcyAzIC0gTWljcm9zb2Z0IFNvZnR3YXJlIFZhbGlkYXRpb24gdjIxHTAbBgNVBAsUFFNvZnR3YXJlIEVuZ2luZWVyaW5nMRkwFwYDVQQDFBBPcmFjbGUgVVNBLCBJbmMuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvtucXVPxwfSLoYqN+qYRIZ4IW0DdM+0P1f4bykZuJ59B5R08j91YpbiSg8j1nfsl37H84OrJ3HeciWW32FKWCEidLwr9b3SACIb5WAtAbKaEiuURWklUaB4b+HG20gTEKTGJMDqQKCpsvu3rggDzNOC8q0yRBvSJG1Q2FzAHmYwIDAQABo4IBfzCCAXswCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCB4AwQAYDVR0fBDkwNzA1oDOgMYYvaHR0cDovL0NTQzMtMjAwNC1jcmwudmVyaXNpZ24uY29tL0NTQzMtMjAwNC5jcmwwRAYDVR0gBD0wOzA5BgtghkgBhvhFAQcXAzAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy52ZXJpc2lnbi5jb20vcnBhMBMGA1UdJQQMMAoGCCsGAQUFBwMDMHUGCCsGAQUFBwEBBGkwZzAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AudmVyaXNpZ24uY29tMD8GCCsGAQUFBzAChjNodHRwOi8vQ1NDMy0yMDA0LWFpYS52ZXJpc2lnbi5jb20vQ1NDMy0yMDA0LWFpYS5jZXIwHwYDVR0jBBgwFoAUCPVR6Pv+PT1kNnxoz1t4qN+5xTcwEQYJYIZIAYb4QgEBBAQDAgQQMBYGCisGAQQBgjcCARsECDAGAQEAAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCdUenFF/SG2+wJeKMjYhUPsgUiRdKCxOs7ZyUYmtaqrqK2cpfYedLp0cnCxeLGuv5VD+IrHF251UNQNivloToiIUE9dtthqIlD2N/ERbGzI5qkJ5XqGTvWhBobSmciRNNkUyhK9Hu1tuiXjaxHwMfsq80BB8nZRJTlK6hdp1kTyH8Dc6gDEhsOB6IezHxGTaiXqUnbhOm6Yds3vg+fHABe5y0iH7ezkdEb+AznSWSpp3vsYuX03WWuk93Z1X9HCQoNqcXCnZ1r+OqMrgOmhi4JXovUsdzoY1imhFubG1ErZtdW+p73kXgYMC5Grvm+2J5On9MxSDfJmSsbToJlCfao</X509Certificate><X509Certificate>MIIEvzCCBCigAwIBAgIQQZGhWjl4389JZWY4HUx1wjANBgkqhkiG9w0BAQUFADBfMQswCQYDVQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xNzA1BgNVBAsTLkNsYXNzIDMgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMDQwNzE2MDAwMDAwWhcNMTQwNzE1MjM1OTU5WjCBtDELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTswOQYDVQQLEzJUZXJtcyBvZiB1c2UgYXQgaHR0cHM6Ly93d3cudmVyaXNpZ24uY29tL3JwYSAoYykwNDEuMCwGA1UEAxMlVmVyaVNpZ24gQ2xhc3MgMyBDb2RlIFNpZ25pbmcgMjAwNCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL687rx+74Pr4DdP+wMQOL4I0ox9nfqSfxkMwmvuQlKM3tMcSBMl6sFjevlRZe7Tqjv18JScK/vyZtQk2vf1n24ZOTa80KN2CB4iJyRsOJEn4oRJrhuKof0lgiwQMOhxqyjod0pR8ezN+PBU1G/A420Kj9nYZI1jsi1OJ/aFDv5t4ymZ4oVHfC2Gf+hXj61nwjMykRMg/KkjFJptwoRLdmgE1XEsXSH6iA0m/R8tkSvnAVVN8m01KILf2WtcttbZqoH9X82DumOd0CL8qTtCabKOOrW8tJ4PXsTqLIKLKP1TCJbdtQEg0fmlGOfA7lFwN+G2BUhSSG846sPobHtEhLsCAwEAAaOCAaAwggGcMBIGA1UdEwEB/wQIMAYBAf8CAQAwRAYDVR0gBD0wOzA5BgtghkgBhvhFAQcXAzAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy52ZXJpc2lnbi5jb20vcnBhMDEGA1UdHwQqMCgwJqAkoCKGIGh0dHA6Ly9jcmwudmVyaXNpZ24uY29tL3BjYTMuY3JsMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDAzAOBgNVHQ8BAf8EBAMCAQYwEQYJYIZIAYb4QgEBBAQDAgABMCkGA1UdEQQiMCCkHjAcMRowGAYDVQQDExFDbGFzczNDQTIwNDgtMS00MzAdBgNVHQ4EFgQUCPVR6Pv+PT1kNnxoz1t4qN+5xTcwgYAGA1UdIwR5MHehY6RhMF8xCzAJBgNVBAYTAlVTMRcwFQYDVQQKEw5WZXJpU2lnbiwgSW5jLjE3MDUGA1UECxMuQ2xhc3MgMyBQdWJsaWMgUHJpbWFyeSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eYIQcLrkHRDZKTS2OMp7A8y6vzANBgkqhkiG9w0BAQUFAAOBgQCuOhe4SntV+mRV7ECk7UlBkJmcibyvLh3KeCP5HBkPf+tovDLZiDje3D/TibQ/sYKW8aRauu0uJtPefAFuAAoApAaSEUgJQPkcGHlnIyTgu9XhUK4b9Q7d4C6BzYCjbFJPkXVViroi8tLqQXWIL2NVfR5UWpVZytk0gcBfXvZ6tQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

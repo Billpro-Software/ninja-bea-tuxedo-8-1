@@ -1,0 +1,1431 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:47:59">
+<title>Creating and Configuring Application Queues</title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>Creating and Configuring Application Queues</b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="accore.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="acwsl.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="981564">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating and Configuring Application Queues</font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo system uses application queues for time-independent communication. In BEA Tuxedo system applications, messages are stored on a queue, and queues are defined within a particular queue space. Queueing and dequeueing is done within a transaction. The BEA Administration Console provides the administrative environment required for managing and controlling access to application queues. The following help topics contain information about the application queue resources: </p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#882082">Application Queues</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949317">Creating Application Queues</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949206">Configuring Application Queues (T_APPQ Class)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#882579">Application Queue Spaces</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#946848">Creating Application Queue Spaces</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#954064">Configuring Application Queue Spaces (T_APPQSPACE Class)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#883074">Application Queue Messages</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876623">Configuring Application Queue Messages (T_APPQMSG Class)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#956358">Application Queue Transactions</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876743">Configuring Application Queue Transactions (T_APPQTRANS Class)</a></font><p> </p>
+
+<p></ul></ul><p>
+<a name="882082"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Application Queues
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Application Queues tree resources allow you to manage the attributes of an application queue such an pathnames, machine IDs, and processing order.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_APPQ"></a></p>
+<a name="949317"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating Application Queues
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new Application Queues:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the Application Queue folder in the tree and select Quick Menu --&gt;New 
+(right mouse click) to display the Create New Object window.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the following fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947646">App Queue Name (TA_APPQNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876318">Queue Messages Processing Order (TA_APPQORDER)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949038">App Queue Space Name (TA_APPQSPACENAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949115">App Queue Space Device (TA_QMCONFIG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#951735">Logical Machine Name (TA_LMID)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Create to close the window and create the new application queue.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For information about using the Create New Object window, see <a href="actasks.htm#544855">Creating Administrative Class Objects</a>.<a name="949201"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_APPQ"></a></p>
+<a name="949206"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="949206"></a>Configuring Application Queues (T_APPQ Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The attributes of application queues are listed in the following tab pages:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#946673">General Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947733">Queue Message Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947786">Retries Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947903">Command Tab</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool contains some fields that are read-only. The information provided by these display-only fields is described briefly. For general information about using the Configuration Tool to configure administrative resources, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_APPQ"></a> </p>
+<a name="946673"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947646">App Queue Name (TA_APPQNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949038">App Queue Space Name (TA_APPQSPACENAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949115">App Queue Space Device (TA_QMCONFIG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#951735">Logical Machine Name (TA_LMID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947722">Object State (TA_STATE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13029"></a><a name="12238"></a></p>
+<a name="947646"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Name (TA_APPQNAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947647"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name of the application queue to be operated upon.</p><!--<div align="right">-->
+<a name="876268"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 15 characters in length.</p><!--<div align="right">-->
+<a name="876270"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">Q_OPENACCT</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13030"></a><a name="12240"></p>
+<a name="949038"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Name (TA_APPQSPACENAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947579"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name of the application queue space associated with the application queue. Filling in this field is half of what you must do to identify such a queue space; you must also enter a value in the <a href="acappq.htm#949115">App Queue Space Device (TA_QMCONFIG)</a>.</p><!--<div align="right">-->
+<a name="876277"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 15 characters in length.</p><!--<div align="right">-->
+<a name="949109"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">QSP_BANKAPP</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13031"></a><a name="12245"></a></p>
+<a name="949115"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Device (TA_QMCONFIG)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947699"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The pathname for an application queue configuration device, which must be on the current machine when you are using a deactivated configuration. Filling in this field is half of what you must do to identify a queue space associated with the application queue; you must also enter a value in the <a href="acappq.htm#949038">App Queue Space Name (TA_APPQSPACENAME)</a>.</p><!--<div align="right">-->
+<a name="876286"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 78 characters in length.</p><!--<div align="right">-->
+<a name="876288"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">Q_DEVICE</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13028"></a><a name="12246"></a></p>
+<a name="951735"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Logical Machine Name (TA_LMID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947607"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Logical machine identifier for the machine on which the application queue space is located.</p><!--<div align="right">-->
+<a name="876295"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 30 characters in length</p><!--<div align="right">-->
+<a name="876297"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">SITE1</font></p><!--<div align="right">-->
+<a name="876299"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The value in this field must be specified as a key field except when the application is unconfigured (i.e., the <font face="Courier">TUXCONFIG</font> environment variable is not set).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12237"></a></p>
+<a name="947722"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947723"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of your application queue. An application queue may be in only one of the following states:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">VALID</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">INVALID</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">NEW</font></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">All operations (whether GET or SET) on application queues silently open the associated queue space (i.e., they implicitly set the state of the queue space to <font face="Courier">OPEN</font> if it is not already <font face="Courier">OPEN</font> or <font face="Courier">ACTIVE</font>). This may be a time-consuming operation if the queue space is large.</p>
+<a name="947733"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Queue Message Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Queue Message tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876318">Queue Messages Processing Order (TA_APPQORDER)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947754">Out of Order Messages Processing (TA_OUTOFORDER)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876343">Current Number of Messages (TA_CURMSG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947771">Current Number of Disk Pages Used (TA_CURBLOCKS)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12239"></a><a name="13028"></a> </p>
+<a name="876318"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Queue Messages Processing Order (TA_APPQORDER)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876319"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The order in which you want messages in the queue to be processed. Consider your needs carefully before selecting an order for your application: the value in this field cannot be modified after the application queue is created.</p><!--<div align="right">-->
+<a name="876321"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select one of the combinations listed below. The commas indicate a secondary (or lower) processing order within the primary processing order. For example, <font face="Courier">PRIO, LIFO </font>means that the queue is processed in priority order, but if two items in the queue share the same priority, they are then processed in last in first out order.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">FIFO</font> -- first in first out</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">PRIO, LIFO</font> -- Priority (then last in first out)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">PRIO, FIFO</font> -- Priority (then first in first out)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">TIME, LIFO</font> -- Execution Time (then last in first out)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">PRIO, TIME, LIFO</font> -- Priority (then Execution Time (then last in first out)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">PRIO, TIME, LIFO</font> -- Priority (then Execution Time (then first in last out)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">TIME, PRIO, LIFO</font> -- Execution Time (then Priority (then last in first out)</p><!--<div align="right">-->
+<a name="876330"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">FIFO</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12244"></a> </p>
+<a name="947754"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Out of Order Messages Processing (TA_OUTOFORDER)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947755"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Method by which out-of-order message processing will be handled. </p><!--<div align="right">-->
+<a name="876337"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select one of the following: </p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">NONE </font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">TOP </font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">MSGID</font></font></ul><p><!--<div align="right">-->
+<a name="876339"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">NONE</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12234"></a> </p>
+<a name="876343"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Messages (TA_CURMSG)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947768"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of messages currently in the queue.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12233"></a></p>
+<a name="947771"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Disk Pages Used (TA_CURBLOCKS)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947784"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of disk pages currently in the queue.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="retries"></a></p>
+<a name="947786"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Retries Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Retries tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947805">Max. Number of Retries (TA_MAXRETRIES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947856">Delay Between Retries (in Sec) (TA_RETRYDELAY)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12235"></a> </p>
+<a name="947805"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max. Number of Retries (TA_MAXRETRIES)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947806"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of retries for a failed queue message. When this number of retries is exhausted, the message is placed on the error queue of the queue's application queue space, as defined by <a href="acappq.htm#876465">Error Queue Name (TA_ERRORQNAME)</a>. If there is not error queue, the message is dropped. </p><!--<div align="right">-->
+<a name="876359"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero</p><!--<div align="right">-->
+<a name="876361"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Zero</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12236"></a> </p>
+<a name="947856"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Delay Between Retries (in Sec) (TA_RETRYDELAY)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947857"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The delay, in seconds, between retries for failed queue messages.</p><!--<div align="right">-->
+<a name="876368"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero</p><!--<div align="right">-->
+<a name="876370"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Zero</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="c_retries"></a></p>
+<a name="947903"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Command Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Command tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876380">High-Water Mark for Command Execution (TA_CMDHW)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947940">Low-Water Mark for Command Execution (TA_CMDLW)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947977">Command to Execute (TA_CMD)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12242"></a> </p>
+<a name="876380"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">High-Water Mark for Command Execution (TA_CMDHW)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876381"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The high-water mark for command execution is expressed as an integer greater or equal to zero, optionally followed by one of the following:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">B</font> or <font face="Courier">b</font> -- the high-water marks are expressed in disk blocks.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">M</font> or <font face="Courier">m</font> -- the high-water marks are expressed in messages.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">%</font> -- the high-water marks are expressed as a percentage of queue capacity.</p><!--<div align="right">-->
+<a name="876386"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Syntax</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">num<font face="Courier"> [b | m | %]</font> (where num is a number greater than or equal to zero)</p><!--<div align="right">-->
+<a name="876388"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The default is 100%.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12243"></a></p>
+<a name="947940"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Low-Water Mark for Command Execution (TA_CMDLW)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947941"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The low-water marks for command execution are expressed in an integer greater or equal to zero, optionally followed by one of the following:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">B</font> or <font face="Courier">b</font> -- the low-water marks are expressed in disk blocks.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">M</font> or <font face="Courier">m</font> -- the low-water marks are expressed in messages.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">%</font> -- the low-watermarks are expressed as a percentage of queue capacity.</p><!--<div align="right">-->
+<a name="876395"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">num<font face="Courier"> [b | m | %]</font> (where num is a number greater than or equal to zero)</p><!--<div align="right">-->
+<a name="876397"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The default is 0%.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12241"></a> </p>
+<a name="947977"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Command to Execute (TA_CMD)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947978"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The command to be executed when the high-water mark is reached. If the high-water mark is reached after the low-water mark, the command is re-executed.</p><!--<div align="right">-->
+<a name="876404"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A shell command. This must be a string up to 78 characters in length.</p><!--<div align="right">-->
+<a name="876407"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No entry</p>
+<a name="882579"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Application Queue Spaces
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Application Queue Spaces objects allow you to manage the attributes of an application queue spaces.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="996385"></a><a name="N_APPQSPACE"></a> </p>
+<a name="946848"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating Application Queue Spaces
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new Application Queue Spaces:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the application queue spaces folder in the tree.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu --&gt;New (right-click) to display the Create New Object 
+window.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the following fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947277">IPC Key (TA_IPCKEY)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876534">Max Queues (TA_MAXQUEUES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876603">Max Messages (TA_MAXMSG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876493">Max Disk Pages (TA_MAXPAGES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948007">Max Processes (TA_MAXPROC)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948040">Max Open Transactions (TA_MAXTRANS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948854">App Queue Space Name (TA_APPQSPACENAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949115">App Queue Space Device (TA_QMCONFIG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948084">Logical Machine Name (TA_LMID)</a></font></ul></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For information about using the Create New Object window, see <a href="actasks.htm#544855">Creating Administrative Class Objects</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="996390"></a><a name="T_APPQSPACE"></a></p>
+<a name="954064"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Configuring Application Queue Spaces (T_APPQSPACE Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The attributes of application spaces are listed in six tab pages with the following labels:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#950225">General Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876483">Disk/Pages Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876526">Queue Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876549">Transaction Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876572">Process Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876595">Message Tab</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For general information about using the Configuration Tool to configure administrative resources, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_APPQSPACE"></a> </p>
+<a name="950225"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948854">App Queue Space Name (TA_APPQSPACENAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949115">App Queue Space Device (TA_QMCONFIG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948084">Logical Machine Name (TA_LMID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947277">IPC Key (TA_IPCKEY)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876465">Error Queue Name (TA_ERRORQNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876476">Object State (TA_STATE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13038"></a> <a name="12265"></a> </p>
+<a name="948854"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Name (TA_APPQSPACENAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="948855"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name used to identify the application queue space.</p><!--<div align="right">-->
+<a name="876430"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 15 characters in length.</p><!--<div align="right">-->
+<a name="876432"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">QSP_BANKAPP</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12268"></a> </p>
+<a name="937324"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Device (TA_QMCONFIG)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="937325"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The absolute pathname of the file or device where the application queue space is located.</p><!--<div align="right">-->
+<a name="876439"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 78 characters in length.</p><!--<div align="right">-->
+<a name="876441"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">/HOME4/APPS/BANKAPP/QSPDVC</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12269"></a> </p>
+<a name="948084"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Logical Machine Name (TA_LMID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="948085"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Identifier of the logical machine on which the application queue space is located.</p><!--<div align="right">-->
+<a name="876448"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 30 characters in length.</p><!--<div align="right">-->
+<a name="876450"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">SITE1</font></p><!--<div align="right">-->
+<a name="876452"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You must specify that this field is a key field except when the application is unconfigured (that is, when the <font face="Courier">TUXCONFIG</font> environment variable is not set).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13032"></a> <a name="12249"></a> </p>
+<a name="947277"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">IPC Key (TA_IPCKEY)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="947278"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A numeric key used to access queue space shared memory. </p><!--<div align="right">-->
+<a name="876459"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 32769 to 262143.</p><!--<div align="right">-->
+<a name="876461"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">88945</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12266"></a> </p>
+<a name="876465"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="876465"></a>Error Queue Name (TA_ERRORQNAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876466"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name of the error queue associated with the queue space.</p><!--<div align="right">-->
+<a name="876468"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 0 to 15 characters in length.</p><!--<div align="right">-->
+<a name="876470"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No entry</p><!--<div align="right">-->
+<a name="876472"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">Q_ERROR</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12264"></a> </p>
+<a name="876476"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876477"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of the application queue space. An application queue space may be in one of the following states:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">INACTIVE</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">INITIALIZING</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">OPEN</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">ACTIVE</font></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">All operations on application queue classes silently open the associated queue space (i.e., implicitly set the state of the queue space to <font face="Courier">OPEN</font> if it is not already <font face="Courier">OPEN</font> or <font face="Courier">ACTIVE</font>). This may be a time-consuming operation if the queue space is large.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="diskpg"></a> </p>
+<a name="876483"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Disk/Pages Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Disk/Pages tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876493">Max Disk Pages (TA_MAXPAGES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876502">Blocking Factor (TA_BLOCKING)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876511">Current Number of Extents (TA_CUREXTENT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876515">Percent Initialized on Disk (TA_PERCENTINIT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876519">Force Initialization of New Extents (TA_FORCEINIT)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13035"></a> <a name="12260"></a> </p>
+<a name="876493"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Disk Pages (TA_MAXPAGES)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876494"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of disk pages used by all queues in the queue space. Each time this attribute is increased, a new extent is used. You cannot decrease the number of pages by entering a lower number in this field.</p><!--<div align="right">-->
+<a name="876496"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="876498"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">200</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12251"></a> </p>
+<a name="876502"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Blocking Factor (TA_BLOCKING)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876503"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The blocking factor used in the queue space for disk space management. The default when a new queue space is created is 16.</p><!--<div align="right">-->
+<a name="876505"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="876507"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">16</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12252"></a></p>
+<a name="876511"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Extents (TA_CUREXTENT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876512"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of extents currently in use by the queue space. The maximum number of extents that can be used is 100.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12263"></a> </p>
+<a name="876515"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Percent Initialized on Disk (TA_PERCENTINIT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876516"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the percentage of disk space that has been initialized for the queue space.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12267"></a> </p>
+<a name="876519"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Force Initialization of New Extents (TA_FORCEINIT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876520"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Select <font face="Courier">Yes</font> to force the application queue space to initialize immediately, or <font face="Courier">No</font> to delay the initialization.</p><!--<div align="right">-->
+<a name="876522"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">Yes</font> or <font face="Courier">No</font></p><!--<div align="right">-->
+<a name="876524"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">No</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="queuefolder"></a> </p>
+<a name="876526"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Queue Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Queue tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876534">Max Queues (TA_MAXQUEUES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876543">Current Number of Queues (TA_CURQUEUES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876547">Highest Number of Queues (TA_HWQUEUES)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13033"></a><a name="12250"></a> </p>
+<a name="876534"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Queues (TA_MAXQUEUES)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876535"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of queues that the queue space can accommodate.</p><!--<div align="right">-->
+<a name="876537"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="876539"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">20</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12247"></a> </p>
+<a name="876543"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Queues (TA_CURQUEUES)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876544"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of server queues that currently exist in the queue space. This number can be determined only if the queue space is new, open, or active. Otherwise a value of <font face="Courier">-1</font> is displayed.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12248"></a> </p>
+<a name="876547"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Highest Number of Queues (TA_HWQUEUES)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876548"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the highest number of queues that existed at any one time in the queue space since the queue space was last opened.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="transaction"></a> </p>
+<a name="876549"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Transaction Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Transaction tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948040">Max Open Transactions (TA_MAXTRANS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876566">Current Number of Open Transactions (TA_CURTRANS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876570">Highest Number of Open Transactions (TA_HWTRANS)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13037"></a> <a name="12262"></a> </p>
+<a name="948040"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Open Transactions (TA_MAXTRANS)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="948041"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of open transactions allowed in the queue space.</p><!--<div align="right">-->
+<a name="876560"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="876562"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">5</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12255"></a> </p>
+<a name="876566"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Open Transactions (TA_CURTRANS)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876567"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the current number of outstanding transactions involving the queue space.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12258"></a> </p>
+<a name="876570"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Highest Number of Open Transactions (TA_HWTRANS)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876571"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the highest number of outstanding transactions involving the queue space, since the queue space was last opened. The highest number of queues existing in the queue space since the queue space was last opened. The number is reset to 0 when the queue space state is set to <font face="Courier">CLEANING</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="process"></a> </p>
+<a name="876572"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Process Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Process tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#948007">Max Processes (TA_MAXPROC)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876589">Current Number of Processes (TA_CURPROC)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876593">Highest Number of Processes (TA_HWPROC)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes the following fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13036"></a> <a name="12261"></a> </p>
+<a name="948007"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Processes (TA_MAXPROC)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="948008"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of processes that can access the queue space simultaneously.</p><!--<div align="right">-->
+<a name="876583"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="876585"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">5</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12254"></a> </p>
+<a name="876589"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Processes (TA_CURPROC)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876590"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of processes currently accessing the queue space.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12257"></a> </p>
+<a name="876593"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Highest Number of Processes (TA_HWPROC)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="962086"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the highest number of processes simultaneously attached to the queue space at any one time since the queue space was last opened.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="trans_message"></a>  </p>
+<a name="876595"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Message Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Message tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876603">Max Messages (TA_MAXMSG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876612">Current Number of Messages (TA_CURMSG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876616">Highest Number of Messages (TA_HWMSG)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13034"></a> <a name="12259"></a> </p>
+<a name="876603"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Messages (TA_MAXMSG)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876604"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of messages allowed in the queue space.</p><!--<div align="right">-->
+<a name="876606"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="876608"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">200</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12253"></a> </p>
+<a name="876612"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Messages (TA_CURMSG) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876613"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the current number of messages in the queue space. This number can be determined only if the queue space is OPEn or ACTive, or if the queue space is newly created. If none of these conditions apply, a value of <font face="Courier">-1</font> is returned.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12256"></a> </p>
+<a name="876616"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Highest Number of Messages (TA_HWMSG)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876617"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the highest number of messages in the queue space at any one time since the queue space was last opened.</p>
+<a name="883074"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Application Queue Messages
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Application Queue Messages objects allow you to manage the attributes of application queue messages.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_APPQMSG"></a> </p>
+<a name="876623"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="876623"></a>Configuring Application Queue Messages (T_APPQMSG Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The attributes of application queue messages are listed in three tab pages with the following labels:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876625">General Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876659">Queue Message Tab</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876716">Statistics Tab</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For general information about using the Configuration Tool to configure administrative resources, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_APPQMSG"></a> </p>
+<a name="876625"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876636">Object State (TA_STATE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876641">App Queue Message ID (TA_APPQMSGID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#947646">App Queue Name (TA_APPQNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949038">App Queue Space Name (TA_APPQSPACENAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#949115">App Queue Space Device (TA_QMCONFIG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#951735">Logical Machine Name (TA_LMID)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p>
+<a name="876636"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876637"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of the application queue message. An application queue message may be in only one state: <font face="Courier">VALID</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> All operations on application queue messages (both GET and SET) silently open the associated queue space (i.e., implicitly set the state of the queue space to <font face="Courier">OPEN</font> if it is not already <font face="Courier">OPEN</font> or <font face="Courier">ACTIVE</font>). This may be a time-consuming operation if the queue space is large.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12276"></a> </p>
+<a name="876641"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Message ID (TA_APPQMSGID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876642"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays a unique identifier for the queue message, which can be used to select the message for GET or SET operations. No significance should be placed on this value; it is provided for your convenience in doing equality comparisons.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12277"></a> </p>
+<a name="876645"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Name (TA_APPQNAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876646"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the name of the application queue in which the message is stored.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12278"></a> </p>
+<a name="876649"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Name (TA_APPQSPACENAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876650"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the name of the application queue space containing the message.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12283"></a> </p>
+<a name="876653"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Device (TA_QMCONFIG)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876654"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the absolute pathname of the file or device where the application queue space is located.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12285"></a> </p>
+<a name="876657"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Logical Machine Name (TA_LMID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876658"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the logical machine identifier of the logical machine on which the application queue space is located.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="q_msgs"></p>
+<a name="876659"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Queue Message Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Queue Message tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876670">Number of Retries (TA_CURRETRIES)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876674">Message Size (TA_MSGSIZE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876678">Message Priority (TA_PRIORITY)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#953692">Correlation Identifier (TA_CORRID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876691">New App Queue Name (TA_NEWAPPQNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876700">Time to Process the Message (TA_TIME)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12270"></a> </p>
+<a name="876670"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Number of Retries (TA_CURRETRIES)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876671"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of retries that have been attempted so far on this message.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12273"></a> </p>
+<a name="876674"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Message Size (TA_MSGSIZE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="962312"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the size of the message (in bytes).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12274"></a> </p>
+<a name="876678"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Message Priority (TA_PRIORITY)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876679"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The priority of the message. The value in this field is valid only for <font face="Courier">PRIO</font>-based queues. A value of <font face="Courier">-1</font> is returned by a GET operation if the queue is not <font face="Courier">PRIO</font>-based.</p><!--<div align="right">-->
+<a name="876681"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 1 to 100.</p><!--<div align="right">-->
+<a name="953688"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">3</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12279"></a> </p>
+<a name="953692"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Correlation Identifier (TA_CORRID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876688"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the correlation identifier for this message provided by the application in the <font face="Courier">tpenqueue(3)</font> request. The empty string indicates that a correlation identifier is not present.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12282"></a> </p>
+<a name="876691"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">New App Queue Name (TA_NEWAPPQNAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876692"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Name of the queue into which to move the selected message. This queue must be an existing queue in the same queue space. This operation will not succeed unless the message is in a <font face="Courier">VALID</font> state.</p><!--<div align="right">-->
+<a name="876694"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string from 1 to 15 characters in length.</p><!--<div align="right">-->
+<a name="876696"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">APPQ3</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12284"></a> </p>
+<a name="876700"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Time to Process the Message (TA_TIME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876701"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The time when the message will be processed. This field is valid only for <font face="Courier">TIME</font>-based queues. (If the queue is not <font face="Courier">TIME</font>-based, an empty string is returned by a GET operation.)</p><!--<div align="right">-->
+<a name="876703"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Use either of the following formats.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Format 1:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">+</font>seconds</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specifies that the message will be processed seconds in the future. The value <font face="Courier">0</font> (zero) specifies that the message should be processed immediately.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Format 2:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">YY<font face="Courier">[</font>MM<font face="Courier">[</font>DD<font face="Courier">[</font>hh<font face="Courier">[</font>mm<font face="Courier">[</font>ss<font face="Courier">]]]]]</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specifies the year, month, day, hour, minute, and second when the message should be processed. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Omitted units default to their minimum possible values.</p><!--<div align="right">-->
+<a name="876713"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Example of Format 2:</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">9506</font> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This is equivalent to <font face="Courier">950601000000</font>. The years <font face="Courier">00</font> through <font face="Courier">37</font> are treated as 2000 through 20037, <font face="Courier">70</font> through <font face="Courier">99</font> are treated as 1970 through 1999, and <font face="Courier">38</font> through <font face="Courier">69</font> are invalid.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="q_stats"></p>
+<a name="876716"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Statistics Tab </font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Statistics tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#881663">High Priority (TA_HIGHPRIORITY)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876728">Low Priority (TA_LOWPRIORITY)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876732">End Time (TA_MSGENDTIME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#876736">Start Time (TA_MSGSTARTTIME)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12271"></p>
+<a name="881663"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">High Priority (TA_HIGHPRIORITY)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876725"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The highest priority in the range within which to search for occurrences of application messages.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12272"></a> </p>
+<a name="876728"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Low Priority (TA_LOWPRIORITY)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876729"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The lowest priority in the range within which to search for occurrences of application messages.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12280"></a> </p>
+<a name="876732"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">End Time (TA_MSGENDTIME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876733"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The time marking the end of the period during which the search for occurrences of application queue messages is performed.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12281"></a> </p>
+<a name="876736"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Start Time (TA_MSGSTARTTIME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="956355"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The time marking the start of the period during which the search for occurrences of application queue messages is performed.</p>
+<a name="956358"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Application Queue Transactions
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Application Queue Transactions objects allow you to manage the attributes of an application queue transactions.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_APPQTRANS"></a> </p>
+<a name="876743"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="876743"></a>Configuring Application Queue Transactions (T_APPQTRANS Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The attributes of application queue transactions are listed on the tab page labeled General. The fields for application queue transactions are information fields and cannot not be edited. The General tab page fields for Application Queue Transactions are the following.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_APPQTRANS"></a> </p>
+<a name="953980"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page contains the following fields.</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#890776">Object State (TA_STATE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#891042">Transaction Identifier (TA_XID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#891141">App Queue Space Name (TA_APPQSPACENAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#891206">App Queue Space Device (TA_QMCONFIG)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acappq.htm#891239">Logical Machine Name (TA_LMID)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12286"></a> </p>
+<a name="890776"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of the application queue transaction. An application queue transaction may be in any of the following states: <font face="Courier">ACTIVE</font>, <font face="Courier">ABORTONLY</font>, <font face="Courier">ABORTED</font>, <font face="Courier">COMCALLED</font>, <font face="Courier">READY</font>, <font face="Courier">DECIDED</font>, or <font face="Courier">SUSPENDED</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">All operations on application queue transactions (both GET and SET) silently open the associated queue space (i.e., implicitly set the state of the queue space to <font face="Courier">OPEN</font> if it is not already <font face="Courier">OPEN</font> or <font face="Courier">ACTIVE</font>). This may be a time-consuming operation if the queue space is large.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12287"></a> </p>
+<a name="891042"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Transaction Identifier (TA_XID)</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays transaction identifier as returned by <font face="Courier">tx_info(3)</font> and mapped to a string representation. The data in this field should not be interpreted directly by the user except for equality comparison. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12288"></a> </p>
+<a name="891141"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Name (TA_APPQSPACENAME)</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the name of the application queue space associated with the transaction. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12289"></a> </p>
+<a name="891206"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">App Queue Space Device (TA_QMCONFIG)</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the absolute pathname of the file or device where the application queue space is located. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12290"></a> </p>
+<a name="891239"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Logical Machine Name (TA_LMID)</font>
+</h4>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the identifier of the logical machine where the application queue space is located. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For general information about using the Configuration Tool to configure administrative resources, see <a href="actasks.htm#625186">Configuring Administrative Objects</a>.</p>
+
+<p>
+  <a href="accore.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="acwsl.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

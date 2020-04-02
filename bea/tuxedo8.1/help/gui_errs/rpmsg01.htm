@@ -1,0 +1,1163 @@
+<TITLE>TxRPC MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>TxRPC MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>TxRPC MESSAGE #1000</H3>
+<H2> ERROR: Invalid -client option - <I>opt</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, an invalid argument,
+<I>opt</I>,
+was specified to the -client option.
+The valid arguments are
+none
+to get no client files,
+stub
+to get the stub file,
+aux
+to get the auxiliary file
+(the auxiliary file may not be generated if not needed),
+and
+all
+to get both client files.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>TxRPC MESSAGE #1002</H3>
+<H2> ERROR: Invalid -server option - <I>opt</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, an invalid argument,
+<I>opt</I>,
+was specified to the -server option.
+The valid arguments are
+none
+to get no server files,
+stub
+to get the stub file,
+aux
+to get the auxiliary file
+(the auxiliary file may not be generated if not needed),
+and
+all
+to get both server files.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1004"></A>
+<H3>TxRPC MESSAGE #1004</H3>
+<H2> ERROR: <I>dir</I> directory does not exist</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the
+-out
+option was specified with an argument,
+<I>dir</I>,
+that does not exist or was not a directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the directory exists and has write permission.
+Re-run the
+tidl
+program using the correct argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3>TxRPC MESSAGE #1005</H3>
+<H2> ERROR: Invalid -keep option - <I>opt</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the argument to the
+keep
+option was invalid.
+The valid arguments are
+none
+to keep no files except the header file,
+c_source
+to keep the C source files,
+object
+to keep the C object files (generated from the source files)
+and
+all
+to keep both C source and object files.
+Note that on DOS and OS/2 environments, the
+object
+argument is not supported and
+all
+implies simply keeping the C source files.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>TxRPC MESSAGE #1007</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>TxRPC MESSAGE #1010</H3>
+<H2> ERROR: Invalid -error option - <I>opt</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the argument to the
+-error
+option was invalid.
+The only valid argument is
+all
+which causes all errors to be printed.
+By default, only the first 50 messages are printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1012"></A>
+<H3>TxRPC MESSAGE #1012</H3>
+<H2> ERROR: Invalid -port option - <I>opt</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the argument to the
+-port
+option was invalid.
+The valid arguments are
+case
+which causes additional checking to see if identifiers differ only
+in case, and
+none
+which does no additional checking.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>TxRPC MESSAGE #1014</H3>
+<H2> WARN: -no_enum_lit not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the -no_enum_lit option was specified.
+This option is needed only for languages that don't support enumeration
+literals.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program without this option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>TxRPC MESSAGE #1015</H3>
+<H2> WARN: -no_mepv not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the -no_mepv option was specified.
+This option turns off the manager entry point vector generation
+and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program without this option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>TxRPC MESSAGE #1016</H3>
+<H2> WARN: -space_opt not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the -space_opt option was specified.
+This option optimizes code generation for space
+and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program without this option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>TxRPC MESSAGE #1017</H3>
+<H2> WARN: -bug option ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the -bug option was specified.
+This option causes certain bugs to be generated for compatibility
+with earlier IDL versions
+and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program without this option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>TxRPC MESSAGE #1018</H3>
+<H2> ERROR: Unrecognized option: <I>opt</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, an invalid command line option was specified.
+The valid options should be listed if this error occurs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>TxRPC MESSAGE #1019</H3>
+<H2> ERROR: Multiple file arguments: <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, multiple input file parameters were specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program using the correct options and a single file parameter.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>TxRPC MESSAGE #1020</H3>
+<H2> ERROR: No input file specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, no input file was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tidl
+program specifying an input IDL file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3>TxRPC MESSAGE #1025</H3>
+<H2> WARN: Failed to open <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the output listing file,
+<I>filename</I>,
+could not be opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the output directory exists and has write permission,
+and if the file exists, that it has write permission
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>TxRPC MESSAGE #1026</H3>
+<H2> ERROR: Above unsupported features found during syntax checking</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, one or more unsupported features were found that caused
+the code generation to fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>TxRPC MESSAGE #1027</H3>
+<H2> WARN: No operations have the [code] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the input IDL file had all operations with the [nocode]
+attribute.  No client stub functions were generated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program if client stub functions are desired.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>TxRPC MESSAGE #1058</H3>
+<H2> ERROR: Cannot find cpp command</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the C pre-processor program could not be found
+using the default paths
+/lib/cpp, /usr/ccs/lib/cpp, and /usr/lib/cpp,
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the -cpp_cmd option to specify the full pathname for
+the C pre-processor, or specify the -no_cpp option to
+turn off pre-processing, and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>TxRPC MESSAGE #1060</H3>
+<H2> ERROR: Cannot open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program using the -stdin option,
+the temporary file
+<I>filename</I>,
+could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory exists and has write permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>TxRPC MESSAGE #1061</H3>
+<H2> ERROR: Cannot find IDL file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the specified IDL input file,
+<I>filename</I>,
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the input file exists and has read permission and
+re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3>TxRPC MESSAGE #1063</H3>
+<H2> ERROR: Can't open file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the input file could not be opened after pre-processing,
+if specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to see if the pre-processing generated error messages.
+Correct any problem and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1064"></A>
+<H3>TxRPC MESSAGE #1064</H3>
+<H2> ERROR: Parse failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, parsing of the IDL input file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1065"></A>
+<H3>TxRPC MESSAGE #1065</H3>
+<H2> ERROR: Severe error found. Stop syntax checking.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, an error occurred that caused input processing to stop.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3>TxRPC MESSAGE #1066</H3>
+<H2> ERROR: Above errors found during syntax checking</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, an error occurred that stopped processing before
+header or stub generation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the earlier messages, correct the IDL or ACS
+file, and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1067"></A>
+<H3>TxRPC MESSAGE #1067</H3>
+<H2> WARN: Interface name being truncated to <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the interface name was too long for generation of
+the TUXEDO service name.
+The interface name length may be
+13 minus the number of digits in the major and minor version numbers.
+The truncated name was printed as
+<I>name</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1068"></A>
+<H3>TxRPC MESSAGE #1068</H3>
+<H2> ERROR: Cannot find cpp command</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the C pre-processor program could not be found
+using the default paths
+/lib/cpp, /usr/ccs/lib/cpp, and /usr/lib/cpp,
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the -cpp_cmd option to specify the full pathname for
+the C pre-processor or specify the -no_cpp option to turn
+off pre-processing, and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3>TxRPC MESSAGE #1070</H3>
+<H2> ERROR: Failed to run preprocessor <I>command</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, execution of the C pre-processor failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for any earlier error messages, correct the problem, and
+re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>TxRPC MESSAGE #1071</H3>
+<H2> ERROR: Failed to find import file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, a specified import file,
+<I>filename</I>,
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the import file name was correct, that it exists,
+and has read permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>TxRPC MESSAGE #1074</H3>
+<H2> ERROR: Can't open file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, a specified import file,
+<I>filename</I>,
+could not be opened for reading.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the import file name was correct, that it exists,
+and has read permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>TxRPC MESSAGE #1075</H3>
+<H2> ERROR: Parse of <I>filename</I> failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, parsing of the imported file,
+<I>filename</I>,
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>TxRPC MESSAGE #1079</H3>
+<H2> ERROR: Failed to open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the header file,
+<I>filename</I>,
+could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory exists and has write permission,
+and if the file exists, it has write permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3>TxRPC MESSAGE #1081</H3>
+<H2> ERROR: Failed to compile <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, compilation of a client or server stub failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the earlier error messages, correct the problem,
+and re-run the
+tidl
+program.
+If necessary, generate the stub source files and compile the
+object files manually.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3>TxRPC MESSAGE #1083</H3>
+<H2> ERROR: Failed to open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the client stub file,
+<I>filename</I>,
+could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory exists and has write permission,
+and if the file exists, it has write permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3>TxRPC MESSAGE #1085</H3>
+<H2> ERROR: Failed to open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the client auxiliary file,
+<I>filename</I>,
+could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory exists and has write permission,
+and if the file exists, it has write permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>TxRPC MESSAGE #1087</H3>
+<H2> ERROR: Failed to open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the server stub file,
+<I>filename</I>,
+could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory exists and has write permission,
+and if the file exists, it has write permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>TxRPC MESSAGE #1088</H3>
+<H2> WARN: [nocode] operation ignored for server operation <I>op</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, a [nocode] attribute was specified for an operation.
+However, code for all operations are always generated on
+the server side.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>TxRPC MESSAGE #1090</H3>
+<H2> ERROR: Failed to open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, the server auxiliary file,
+<I>filename</I>,
+could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory exists and has write permission,
+and if the file exists, it has write permission,
+and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>TxRPC MESSAGE #1091</H3>
+<H2> ERROR: Failed to write to <I>filename</I> - exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+tidl
+program, a write failed on the specified file
+<I>filename</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the disk on which the file is being written is full,
+and re-run the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>TxRPC MESSAGE #1092</H3>
+<H2> ERROR: [context_handle] not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a definition includes the [context_handle] attribute.
+This attribute is not supported.
+This error was printed if generating source or object files
+(not for generating the header file).
+For example,
+<PRE>
+typedef [context_handle]void *t1;
+void op1([in]t1 p1);
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1093"></A>
+<H3>TxRPC MESSAGE #1093</H3>
+<H2> WARN: [out_of_line] not supported - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [out_of_line] attribute was specified.
+This feature is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This attribute affects only the code generation, not the
+transmission of parameters, and the warning can be ignored.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3>TxRPC MESSAGE #1094</H3>
+<H2> WARN: [heap] not supported - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [heap] attribute was specified.
+This feature is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This attribute affects only the code generation, not the
+transmission of parameters, and the warning can be ignored.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>TxRPC MESSAGE #1098</H3>
+<H2> ERROR: Pipe type not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a pipe was defined.
+Pipes need not be supported in TxRPC IDL-only, and this
+attribute is not supported.
+This error was printed if generating source or object files
+(not for generating the header file).
+For example,
+<PRE>
+typedef pipe long t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1519"></A>
+<H3>TxRPC MESSAGE #1519</H3>
+<H2> ERROR: Cannot determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the log for prior messages indicating the cause of the problem.
+Normally, it means that the product has not been licensed properly.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1520"></A>
+<H3>TxRPC MESSAGE #1520</H3>
+<H2> ERROR: Not licensed for TXRPC</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use TXRPC.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for TXRPC.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

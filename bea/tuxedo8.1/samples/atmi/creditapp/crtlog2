@@ -1,0 +1,41 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1990, 1994 Novell, Inc.
+#	Copyright (c) 1994 Novell
+#	  All Rights Reserved
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+#	UNIX System Laboratories, Inc.
+#	The copyright notice above does not evidence any
+#	actual or intended publication of such source code.
+
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/crtlog2	$Revision: 1.5 $"
+#
+# If -m specified, create device and TLOG
+#
+if test x"$1" = "x-m"
+then
+	tmadmin <<!
+	echo
+	crdl -b 500 -z ${TLOGDEVICE}
+	crlog -m SITE2
+	q
+!
+#
+# If -m not specified, create device only
+#
+elif test x"$1" = "x"
+then
+	tmadmin -c <<!
+	echo
+	crdl -b 500 -z ${TLOGDEVICE}
+	q
+!
+#
+# If other things specified, error
+#
+else
+	echo "$0:  usage:  $0 [-m]"
+	exit 2
+fi

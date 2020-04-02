@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<!--  $Header: entsec/igf/config/mbeans.xml /main/2 2009/08/24 09:36:10 vmedam Exp $ -->
+
+<!-- 
+ Copyright (c) 2009, Oracle and/or its affiliates. All rights reserved. 
+
+   NAME
+     mbeans.xml - <one-line expansion of the name>
+
+   DESCRIPTION
+     <short description of component this file declares/defines>
+
+   NOTES
+     <other useful comments, qualifications, etc.>
+
+   MODIFIED   (MM/DD/YY)
+   nthiagar    07/27/09 - Creation
+
+-->
+
+<application-mbeans
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/11/application-mbeans-11_1.xsd"
+   schema-major-version="11"
+   schema-minor-version="1"
+>
+    <config-mbeans>
+        <jmx-config-mbean objectname="com.oracle.igf:type=Xml,name=CarmlConfig_UserRole"
+              class="com.oracle.igf.config.CarmlConfigImpl"
+              management-interface="com.oracle.igf.config.CarmlConfig">
+              <config-file path="../carml/userrole.xml" />
+              <persistence-manager class="oracle.as.config.persistence.jaxb.JAXBXmlPersistenceManagerImpl" >
+                  <property key="oracle.as.config.persistence.jaxb.contextpath" value="com.oracle.igf.config.carmljaxb"/>
+              </persistence-manager>
+        </jmx-config-mbean>
+
+
+        <jmx-config-mbean objectname="com.oracle.igf:type=Xml,name=CarmlConfig_IDXUserRole"
+              class="com.oracle.igf.config.CarmlConfigImpl"
+              management-interface="com.oracle.igf.config.CarmlConfig">
+              <config-file path="../carml/idxuserrole.xml" />
+              <persistence-manager class="oracle.as.config.persistence.jaxb.JAXBXmlPersistenceManagerImpl" >
+                  <property key="oracle.as.config.persistence.jaxb.contextpath" value="com.oracle.igf.config.carmljaxb"/>
+              </persistence-manager>
+        </jmx-config-mbean>
+
+    
+        <jmx-config-mbean objectname="com.oracle.igf:type=Xml,name=MappingConfig_UserRole"
+              class="com.oracle.igf.config.MappingConfigImpl"
+              management-interface="com.oracle.igf.config.MappingConfig">
+              <config-file path="../arisidprovider/conf/igf-map-config-UserRole.xml" />
+              <persistence-manager class="oracle.as.config.persistence.jaxb.JAXBXmlPersistenceManagerImpl" >
+                  <property key="oracle.as.config.persistence.jaxb.contextpath" value="com.oracle.igf.config.mappingjaxb"/>
+              </persistence-manager>
+        </jmx-config-mbean>
+
+
+        <jmx-config-mbean objectname="com.oracle.igf:type=Xml,name=MappingConfig_IDXUserRole"
+              class="com.oracle.igf.config.MappingConfigImpl"
+              management-interface="com.oracle.igf.config.MappingConfig">
+              <config-file path="../arisidprovider/conf/igf-map-config-IDXUserRole.xml" />
+              <persistence-manager class="oracle.as.config.persistence.jaxb.JAXBXmlPersistenceManagerImpl" >
+                  <property key="oracle.as.config.persistence.jaxb.contextpath" value="com.oracle.igf.config.mappingjaxb"/>
+              </persistence-manager>
+        </jmx-config-mbean>
+    </config-mbeans>
+
+</application-mbeans>

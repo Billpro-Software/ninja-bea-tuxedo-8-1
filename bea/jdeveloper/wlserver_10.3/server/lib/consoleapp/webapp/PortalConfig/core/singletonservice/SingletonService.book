@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages for interacting with singleton service
+    configurations in WebLogic Server.
+    
+    Copyright (c) 2006,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="CoreSingletonServicesBook" title="book.title"
+               markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+      <!-- Definition for the Singleton Services pages-->
+      <netuix:book definitionLabel="TopCoreSingletonServiceBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreSingletonServicePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="CoreSingletonServiceBook"
+                               title="SingletonServiceBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="CoreSingletonServiceConfigPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="CoreSingletonServiceConfigGeneralPage"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.singletonservice.singletonserviceconfiggeneral.title;core"/>
+                            <netuix:meta name="configuration-page" content="SingletonService"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreSingletonServiceConfigGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/singletonservice/SingletonServiceConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="CoreSingletonServiceConfigMigrationPage"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.singletonservice.singletonserviceconfigmigration.title;core"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreSingletonServiceConfigMigrationPortlet"
+                                                          contentUri="/PortalConfig/core/singletonservice/SingletonServiceConfigMigration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="CoreSingletonServiceControlPages"
+                                   title="tab.control.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="CoreSingletonServiceControlMigrationPage"
+                                       presentationClass="page-content"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid" content="Core.core.singletonservice.controlmigration.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="CoreSingletonServiceControlMigrationPortlet"
+                                                          contentUri="/PortalConfig/core/singletonservice/SingletonServiceControlMigration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreSingletonServiceNotesPage"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.singletonservice.singletonservicenotes.title;core"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreSingletonServiceNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Migrate Singleton Service assistant page -->
+      <netuix:book definitionLabel="CoreSingletonServiceMigrateSingletonServiceBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.migrate.singletonservice.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreSingletonServiceMigrateSingletonService"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="Core.core.singletonservice.migratesingletonservice.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="CoreSingletonServiceMigrateSingletonServicePortlet"
+                                          contentUri="/PortalConfig/core/singletonservice/MigrateSingletonService.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

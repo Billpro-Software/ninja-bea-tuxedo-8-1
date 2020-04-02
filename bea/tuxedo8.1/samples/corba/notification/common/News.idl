@@ -1,0 +1,45 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//--------------------------------------------------------------------
+//
+// News.idl
+//
+// This file contains the interface to the wire service.
+//
+// In the advanced notification samples, the reporter clients
+// make calls on the wire service server to report news.  The
+// wire service server, in turn, makes calls to the notification
+// service to post events.
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+#ifndef _NEWS_IDL_
+#define _NEWS_IDL_
+
+// these pragmas are specific to the notification samples and
+// should be changed if you clone this file:
+#pragma prefix "notification.corba.samples.beasys.com"
+#pragma javaPackage "com.beasys.samples.corba.notification"
+
+module News
+{
+  interface WireService
+  {
+    // report a news article
+    void report_news(in string category, in string story);
+
+    // shutdown all news subscribers (but don't unsubscribe them)
+    void shutdown_subscribers();
+
+    // unsubscribe and shutdown all news subscribers
+    void cancel_subscribers();
+  };
+
+  interface WireServiceFactory
+  {
+    WireService find();
+  };
+};
+
+#endif

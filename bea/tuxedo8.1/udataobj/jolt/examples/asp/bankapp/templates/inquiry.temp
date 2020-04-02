@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<TITLE>INQUIRY Result on <%=ACCOUNT_ID%></TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>The Result of the INQUIRY Service is:</H2>
+</CENTER>
+<TABLE BORDER=0>
+<TR><TD ALIGN=RIGHT><B>Account Number:</B></TD><TD><%=ACCOUNT_ID%></TD></TR>
+<TR><TD ALIGN=RIGHT><B>Current Balance:</B></TD><TD><%=SBALANCE%></TD></TR>
+<TR><TD ALIGN=RIGHT><B>Current Date:</B></TD><TD><SCRIPT>document.write(new Date())</SCRIPT></TD></TR>
+</TABLE>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Back" OnClick="history.go(-1)">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

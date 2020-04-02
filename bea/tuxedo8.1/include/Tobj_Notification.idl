@@ -1,0 +1,71 @@
+//--------------------------------------------------------------------
+//
+// Copyright (c) 1999 BEA Systems, Inc.
+// All rights reserved
+//
+// THIS IS UNPUBLISHED PROPRIETARY
+// SOURCE CODE OF BEA Systems, Inc.
+// The copyright notice above does not
+// evidence any actual or intended
+// publication of such source code.
+//
+// #ident "@(#)nts/idl/Tobj_Notification.idl $Revision: 1.2 $"
+//
+//--------------------------------------------------------------------
+
+#ifndef _TOBJ_NOTIFICATION_IDL_
+#define _TOBJ_NOTIFICATION_IDL_
+
+#include "CosNotifyChannelAdmin.idl"
+#include "Tobj_Events.idl"
+
+#pragma prefix      "beasys.com"
+#pragma javaPackage "com.beasys"
+
+module Tobj_Notification
+{
+  // channel id to specify when getting the channel:
+  const CosNotifyChannelAdmin::ChannelID DEFAULT_CHANNEL = 3;
+
+  // name to specify our constraint grammar when creating a filter:
+  const string CONSTRAINT_GRAMMAR =
+    "Tobj_Notification_CONSTRAINT_GRAMMAR";
+
+  // name for adding subscription name to qos:
+  // (the matching value should be a string)
+  const string SUBSCRIPTION_NAME =
+    "Tobj_Notification_SUBSCRIPTION_NAME";
+
+  // name for adding subscription type to qos:
+  // (the matching value should be one of the subscription type constants)
+  const string SUBSCRIPTION_TYPE =
+   "Tobj_CosNotification_SUBSCRIPTION_TYPE";
+
+  // subscription type constants
+  typedef short SubscriptionType;
+  const SubscriptionType TRANSIENT_SUBSCRIPTION  = 4;
+  const SubscriptionType PERSISTENT_SUBSCRIPTION = 5;
+
+  // CORBA::IMP_LIMIT minor codes:
+  const unsigned long SUB_SET_FILTER_NOT_CALLED        = 0x54555850; // 1414879312
+  const unsigned long SUB_MULTIPLE_CALLS_TO_SET_FILTER = 0x54555851; // 1414879313
+  const unsigned long SUB_ADD_FILTER_AFTER_CONNECT     = 0x54555852; // 1414879314
+  const unsigned long SUB_NIL_FILTER_REF               = 0x54555853; // 1414879315
+  const unsigned long SUB_NO_CUSTOM_FILTERS            = 0x54555854; // 1414879316
+  const unsigned long SUB_MULTIPLE_CALLS_TO_SET_QOS    = 0x54555855; // 1414879317
+  const unsigned long SUB_CANT_SET_QOS_AFTER_CONNECT   = 0x54555856; // 1414879318
+  const unsigned long SUB_SET_QOS_NOT_CALLED           = 0x54555857; // 1414879319
+  const unsigned long SUB_ADD_CONS_ON_TIMED_OUT_FILTER = 0x54555858; // 1414879320
+  const unsigned long SUB_MULTIPLE_CALLS_TO_ADD_CONS   = 0x54555859; // 1414879321
+  const unsigned long SUB_MULTIPLE_CONSTRAINTS_IN_LIST = 0x5455585A; // 1414879322
+  const unsigned long SUB_MULTIPLE_TYPES_IN_CONSTRAINT = 0x5455585B; // 1414879323
+  const unsigned long SUB_SYSTEM_EVENTS_UNSUPPORTED    = 0x5455585C; // 1414879324
+  const unsigned long SUB_ADDED_TIMED_OUT_FILTER       = 0x5455585D; // 1414879325
+  const unsigned long SUB_ADD_CONS_TO_ADDED_FILTER     = 0x5455585E; // 1414879326
+  const unsigned long SUB_UNSUPPORTED_CLIENT_TYPE      = 0x5455585F; // 1414879327
+
+  // CORBA::OBJECT_NOT_EXIST minor codes:
+  const unsigned long SUBSCRIPTION_DOESNT_EXIST        = 0x54555880; // 1414879360
+};
+
+#endif // _TOBJ_NOTIFICATION_IDL_

@@ -1,0 +1,1528 @@
+<!-- .if n .pH errman.h.ctmsg01.htm @(#)ctmsg01.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="103"></A>
+<H3>CMDTUX MESSAGE #103</H3>
+<H2> ERROR: duplicate address name <I>machinename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identified address name is a duplicate in the *MACHINES section of the
+UBBCONFIG
+file.  Each machine name can only be specified once.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the duplicate machine address name from the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="104"></A>
+<H3>CMDTUX MESSAGE #104</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+allocating space for the machine as specified in the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+and
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="107"></A>
+<H3>CMDTUX MESSAGE #107</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+allocating space for the machine as specified in the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+and
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="109"></A>
+<H3>CMDTUX MESSAGE #109</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+allocating space for the machine as specified in the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+and
+malloc (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="110"></A>
+<H3>CMDTUX MESSAGE #110</H3>
+<H2> ERROR: TUXCONFIG must be specified for machine entry <I>machinename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+parameter is missing from the parameters of the specified
+machine in the *MACHINES section of the
+UBBCONFIG
+file.
+TUXCONFIG
+is
+required to be set for each machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add the proper
+TUXCONFIG
+parameter for the specified machine in the *MACHINES
+section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="111"></A>
+<H3>CMDTUX MESSAGE #111</H3>
+<H2> ERROR: TUXCONFIG (<I>string</I>) of machine <I>machinename</I> must be the same as the TUXCONFIG environment variable (<I>string</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value of the
+TUXCONFIG
+parameter for the specified machine as listed in
+the *MACHINES section of the
+UBBCONFIG
+file is not the same as the current
+value of the
+TUXCONFIG
+environment variable.  The
+TUXCONFIG
+parameter and the
+TUXCONFIG
+environment variable are required to be the same.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value of the
+TUXCONFIG
+parameter of the specified machine in the
+*MACHINES section of the
+UBBCONFIG
+file and/or the value of the
+TUXCONFIG
+environment variable such that the two values are the same.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="112"></A>
+<H3>CMDTUX MESSAGE #112</H3>
+<H2> ERROR: TUXOFFSET environment variable is unset, TUXOFFSET (<I>offset</I>) of machine <I>machinename</I> should be zero.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXOFFSET
+environment variable is not set.  This implies an offset
+of zero.  The
+TUXOFFSET
+environment variable must match the
+TUXOFFSET
+setting
+in the
+UBBCONFIG
+file if it is set.  The
+TUXOFFSET
+of the specified machine
+is not zero in the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXOFFSET
+of the specified machine in the *MACHINES section of the
+UBBCONFIG
+file to match the
+TUXOFFSET
+environment variable.  In the
+case of an unset
+TUXOFFSET
+environment variable, it must be zero.  If
+another value is desired, both the
+TUXOFFSET
+in the
+UBBCONFIG
+file and the
+TUXOFFSET
+environment variable must be set to that value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="113"></A>
+<H3>CMDTUX MESSAGE #113</H3>
+<H2> ERROR: APPDIR must be specified for machine entry <I>machinename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+APPDIR
+parameter is required to be set for the specified machine
+in the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+APPDIR
+parameter for the specified machine in the *MACHINES section
+of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="114"></A>
+<H3>CMDTUX MESSAGE #114</H3>
+<H2> ERROR: TUXDIR must be specified for machine entry <I>machinename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXDIR
+parameter is required to be set for the specified machine
+in the *MACHINES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXDIR
+parameter for the specified machine in the *MACHINES section
+of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="116"></A>
+<H3>CMDTUX MESSAGE #116</H3>
+<H2> ERROR: Machine <I>machinename</I> must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The machine name specified in the *MACHINES section of the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the machine name as specified in the *MACHINES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="118"></A>
+<H3>CMDTUX MESSAGE #118</H3>
+<H2> ERROR: Machine <I>machinename</I> must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The machine name specified in the *MACHINES section of the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the machine name as specified in the *MACHINES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="120"></A>
+<H3>CMDTUX MESSAGE #120</H3>
+<H2> ERROR: Machine <I>machinename</I> must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The machine name specified in the *MACHINES section of the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the machine name as specified in the *MACHINES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="122"></A>
+<H3>CMDTUX MESSAGE #122</H3>
+<H2> ERROR: LMID <I>lmidname</I> must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine id (LMID)
+as specified in the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the logical machine id (LMID)
+as specified in the
+UBBCONFIG
+file
+to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="124"></A>
+<H3>CMDTUX MESSAGE #124</H3>
+<H2> ERROR: LMID <I>lmidname</I> must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine id (LMID)
+as specified in the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the logical machine id (LMID)
+as specified in the
+UBBCONFIG
+file
+to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="126"></A>
+<H3>CMDTUX MESSAGE #126</H3>
+<H2> ERROR: TUXCONFIG must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+TUXCONFIG
+parameter as specified in the *MACHINES
+section of the
+UBBCONFIG
+file must be an absolute pathname.  Relative
+paths and environment variables are not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+TUXCONFIG
+as specified in the *MACHINES section
+of the
+UBBCONFIG
+file to be an absolute pathname.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="128"></A>
+<H3>CMDTUX MESSAGE #128</H3>
+<H2> ERROR: Identifier for TUXCONFIG must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identifier for
+TUXCONFIG
+as specified in the *MACHINES section of the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value of
+TUXCONFIG
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="130"></A>
+<H3>CMDTUX MESSAGE #130</H3>
+<H2> ERROR: TUXDIR must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+TUXDIR
+parameter as specified in the *MACHINES
+section of the
+UBBCONFIG
+file must be an absolute pathname.  Relative
+paths and environment variables are not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+TUXDIR
+as specified in the *MACHINES section
+of the
+UBBCONFIG
+file to be an absolute pathname.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="132"></A>
+<H3>CMDTUX MESSAGE #132</H3>
+<H2> ERROR: APPDIR must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+APPDIR
+parameter as specified in the *MACHINES
+section of the
+UBBCONFIG
+file must be an absolute pathname.  Relative
+paths and environment variables are not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+APPDIR
+as specified in the *MACHINES section
+of the
+UBBCONFIG
+file to be an absolute pathname.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="134"></A>
+<H3>CMDTUX MESSAGE #134</H3>
+<H2> ERROR: TYPE parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+TYPE
+parameter as specified in the *MACHINES section of the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value of
+TYPE
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="136"></A>
+<H3>CMDTUX MESSAGE #136</H3>
+<H2> ERROR: Identifier for TLOGDEVICE must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identifier for
+TLOGDEVICE
+as specified in the *MACHINES section of the
+UBBCONFIG
+file is longer than the specified maximum number
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value of
+TLOGDEVICE
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="138"></A>
+<H3>CMDTUX MESSAGE #138</H3>
+<H2> ERROR: TUXOFFSET parameter must be >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+TUXOFFSET
+as specified in the *MACHINES section of the
+UBBCONFIG
+file, is less than zero.
+TUXOFFSET
+must be equal to or greater than zero.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+TUXOFFSET
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than or equal to zero.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="140"></A>
+<H3>CMDTUX MESSAGE #140</H3>
+<H2> ERROR: TLOGOFFSET parameter must be >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+TLOGOFFSET
+indicated by the arrow is less than 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+TLOGOFFSET
+that is
+greater than or equal to 0.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="142"></A>
+<H3>CMDTUX MESSAGE #142</H3>
+<H2> ERROR: Identifier for TLOGNAME must be &lt;=<I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+TLOGNAME
+indicated by the arrow is greater than 30,
+the number value specified by the parameter
+MAXTIDENT .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+TLOGNAME
+that has a number of characters
+less than or equal to the value of
+MAXTIDENT .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="144"></A>
+<H3>CMDTUX MESSAGE #144</H3>
+<H2> ERROR: TLOGSIZE parameter must be > 0 and &lt;= 2048</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+TLOGSIZE
+indicated by the arrow is
+less than 0 or greater than 2048.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+TLOGSIZE
+that is
+between 0 and 2048.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="146"></A>
+<H3>CMDTUX MESSAGE #146</H3>
+<H2> ERROR: ULOGPFX parameter must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the parameter
+ULOGPFX
+indicated by the arrow is not an absolute pathname.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+ULOGPFX
+that is
+an absolute pathname, meaning it must begin with a "/"
+character.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="148"></A>
+<H3>CMDTUX MESSAGE #148</H3>
+<H2> ERROR: ENVFILE parameter must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the parameter
+ENVFILE
+indicated by the arrow is not
+an absolute pathname.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+ENVFILE
+that is
+an absolute pathname, meaning it must begin with a "/"
+character.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="149"></A>
+<H3>CMDTUX MESSAGE #149</H3>
+<H2> ERROR: Duplicate *GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one *GROUPS section has been specified in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the configuration file
+so that only one *GROUPS section
+is specified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="150"></A>
+<H3>CMDTUX MESSAGE #150</H3>
+<H2> ERROR: *MACHINES section must be specified before *GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The *GROUPS section has been specified before
+the *MACHINES section in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the configuration file such that the *MACHINES section is specified
+before the *GROUPS section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="152"></A>
+<H3>CMDTUX MESSAGE #152</H3>
+<H2> ERROR: Identifier for group name must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value of the group name identifier
+indicated by the arrow is
+greater than 30 characters
+in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+a group name identifier that is 30 characters or less
+in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="154"></A>
+<H3>CMDTUX MESSAGE #154</H3>
+<H2> ERROR: <I>grpname</I> defined as a LMID and it can't be a group name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+<I>grpname</I>
+indicated by the arrow is
+specified as an
+LMID
+in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+<I>grpname</I>
+that is
+unique from all the
+LMID
+values in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="156"></A>
+<H3>CMDTUX MESSAGE #156</H3>
+<H2> ERROR: Duplicate *GROUPS entry <I>grpname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+<I>grpname</I>
+indicated by the arrow is invalid due to being
+specified previously in the *GROUPS section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+<I>grpname</I>
+that has not already been
+specified in the *GROUPS section of the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="157"></A>
+<H3>CMDTUX MESSAGE #157</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly for
+the amount of memory on the machine and the amount of memory that
+can be used by a process.  Reduce the memory usage on the machine
+or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="160"></A>
+<H3>CMDTUX MESSAGE #160</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please refer to Message 157 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="161"></A>
+<H3>CMDTUX MESSAGE #161</H3>
+<H2> ERROR: Must have a GRPNO on *GROUPS entry <I>grpname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+GRPNO
+parameter of the
+<I>grpname</I>
+indicated by the arrow is omitted from
+the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+GRPNO
+of the
+<I>grpname</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="162"></A>
+<H3>CMDTUX MESSAGE #162</H3>
+<H2> ERROR: Must specify LMID on *GROUPS entry <I>group_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+LMID
+parameter was omitted from the *GROUPS section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file so that it contains an
+LMID
+parameter.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="163"></A>
+<H3>CMDTUX MESSAGE #163</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up storage to keep track of
+LMID
+names.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly for
+the amount of memory on the machine and the amount of memory that
+can be used by a process.  Reduce the memory usage on the machine
+or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="166"></A>
+<H3>CMDTUX MESSAGE #166</H3>
+<H2> ERROR: Logical machine <I>machine_name</I> not defined in the *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+<I>machine_name</I>
+indicated by the arrow is
+specified in the *GROUPS section but not
+defined in the *MACHINES section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+<I>machine_name</I>
+that is already defined in the *MACHINES section,
+or define a logical machine for this name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="167"></A>
+<H3>CMDTUX MESSAGE #167</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up storage to keep track of
+LMID
+names.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly for
+the amount of memory on the machine and the amount of memory that
+can be used by a process.  Reduce the memory usage on the machine
+or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="169"></A>
+<H3>CMDTUX MESSAGE #169</H3>
+<H2> ERROR: Logical machine <I>machine_name</I> not defined in *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+<I>machine_name</I>
+indicated by the arrow is
+specified in the *GROUPS section but not
+defined in the *MACHINES section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+<I>machine_name</I>
+that is already defined in the *MACHINES section,
+or define a logical machine for this name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="171"></A>
+<H3>CMDTUX MESSAGE #171</H3>
+<H2> ERROR: Logical machine <I>machine_name</I> not defined in *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+<I>machine_name</I>
+indicated by the arrow is
+specified in the *GROUPS section but not
+defined in the *MACHINES section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+<I>machine_name</I>
+that is already defined in the *MACHINES section,
+or define a logical machine for this name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="172"></A>
+<H3>CMDTUX MESSAGE #172</H3>
+<H2> ERROR: Duplicate LMID <I>machine_name</I> specified in group entry <I>group_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The same
+LMID
+value was used twice within a logical group name
+in the *GROUPS section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that each
+LMID
+value is unique within a logical group name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="174"></A>
+<H3>CMDTUX MESSAGE #174</H3>
+<H2> ERROR: TMSNAME parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+TMSNAME
+indicated by the arrow is
+greater than 78 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+TMSNAME
+that is
+less than or equal to 78 characters in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="176"></A>
+<H3>CMDTUX MESSAGE #176</H3>
+<H2> ERROR: TMSCOUNT parameter must be > 1 and &lt;= 10</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+TMSCOUNT
+indicated by the arrow is
+less than 2 or greater than 10.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+TMSCOUNT
+that is
+greater than or equal to 2 but less than or equal to 10.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="178"></A>
+<H3>CMDTUX MESSAGE #178</H3>
+<H2> ERROR: CLOSEINFO parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+CLOSEINFO
+string indicated by the arrow is
+greater than 256 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+CLOSEINFO
+string that is
+less than or equal to 256 characters in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="180"></A>
+<H3>CMDTUX MESSAGE #180</H3>
+<H2> ERROR: OPENINFO parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+OPENINFO
+string indicated by the arrow is
+greater than 256 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+OPENINFO
+string that is
+less than or equal to 256 characters in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="182"></A>
+<H3>CMDTUX MESSAGE #182</H3>
+<H2> ERROR: GRPNO parameter must be &lt; <I>number</I> and > 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+GRPNO
+indicated by the arrow is
+less than 0 or greater than or equal to 30,000.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+GRPNO
+that is
+greater than 0 and less than 30,000.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="184"></A>
+<H3>CMDTUX MESSAGE #184</H3>
+<H2> ERROR: *GROUPS entry <I>grpname</I> has a duplicate GRPNO parameter of <I>group_number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+<I>grpname</I>
+entry in the *GROUPS section of the configuration file
+has a
+GRPNO
+value of
+<I>group_number</I>
+that is the same as another entry in the section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a unique
+GRPNO
+value for the
+<I>grpname</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="186"></A>
+<H3>CMDTUX MESSAGE #186</H3>
+<H2> ERROR: Duplicate *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one SERVERS section has been defined
+in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that there
+is only one SERVERS section defined.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="187"></A>
+<H3>CMDTUX MESSAGE #187</H3>
+<H2> ERROR: *GROUPS section must appear before *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The SERVERS section has been defined before the *GROUPS section in the
+configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that the *RESOURCES, *MACHINES, and *GROUPS
+sections are the first three sections in that order.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="188"></A>
+<H3>CMDTUX MESSAGE #188</H3>
+<H2> ERROR: SRVGRP parameter missing in *SERVERS entry <I>AOUT</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Each entry in the SERVERS section of
+the configuration file must have a
+SRVGRP
+parameter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+SRVGRP
+value that specifies the group name for the group
+in which the server is to run.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="189"></A>
+<H3>CMDTUX MESSAGE #189</H3>
+<H2> ERROR: SRVID parameter missing in *SERVERS entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Each entry in the SERVERS section of
+the configuration file must have a
+SRVID
+parameter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+SRVID
+value that specifies an integer that
+uniquely identifies a server within a group.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="190"></A>
+<H3>CMDTUX MESSAGE #190</H3>
+<H2> ERROR: SRVID <I>number</I> is not unique among server group <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified
+SRVID
+<I>number</I>
+parameter number
+has already been used in a SERVERS section
+entry of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+SRVID
+value that specifies an integer that
+uniquely identifies a server within a group.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="191"></A>
+<H3>CMDTUX MESSAGE #191</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please refer to Message 157 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="192"></A>
+<H3>CMDTUX MESSAGE #192</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please refer to Message 157 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="193"></A>
+<H3>CMDTUX MESSAGE #193</H3>
+<H2> ERROR: RQADDR <I>request_queue_name</I> can't be defined for SRVGRP <I>grpname1</I> and <I>grpname2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The same
+RQADDR
+parameter value has been specified for use
+in two different server groups entries
+in the SERVERS section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that if the same
+RQADDR
+is used, then both servers have the SRVGRP value.
+Otherwise, assign different
+RQADDR
+values to the servers.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="194"></A>
+<H3>CMDTUX MESSAGE #194</H3>
+<H2> ERROR: Server <I>svrname1</I> and <I>svrname2</I> can't share the same RQADDR <I>rqaddr</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The same
+RQADDR
+was defined for two servers which are not in the same server group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and edit the
+UBBCONFIG
+file such that either two different
+RQADDR s
+are used for each server or that both servers are
+on the same server group.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="198"></A>
+<H3>CMDTUX MESSAGE #198</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="199"></A>
+<H3>CMDTUX MESSAGE #199</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages for interacting with messaging
+    bridge configurations in WebLogic Server.
+
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="BridgeBook" title="not.used" markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="CoreBridgeBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="MessagingBridgePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="MessagingBridgeBook"
+                               title="MessagingBridgeBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="WLSMessagingBridgeConfigPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="MessagingBridgegeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Bridge.bridge.messagingbridgeconfiggeneral.title;bridge"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:meta name="configuration-page" content="MessagingBridge"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="BridgeMessagingBridgeConfigGeneralPortlet"
+                                                          contentUri="/PortalConfig/bridge/MessagingBridgeConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the connectionretry tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WLSMessagingBridgeConfigConnectionRetryPage"
+                                       presentationClass="page-content"
+                                       title="tab.connectionretry.label">
+                            <netuix:meta name="helpid"
+                                         content="Bridge.bridge.messagingbridgeconfigconnectionretry.title;bridge"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WLSMessagingBridgeConfigConnectionRetryPortlet"
+                                                          contentUri="/PortalConfig/bridge/MessagingBridgeConfigConnectionretry.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the transactions tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WLSMessagingBridgeConfigTransactionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.transactions.label">
+                            <netuix:meta name="helpid"
+                                         content="Bridge.bridge.messagingbridgeconfigtransactions.title;bridge"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WLSMessagingBridgeConfigTransactionsPortlet"
+                                                          contentUri="/PortalConfig/bridge/MessagingBridgeConfigTransactions.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WLSMessagingBridgeTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="Bridge.bridge.messagingbridgetargetdeploy.title;bridge"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WLSMessagingBridgeTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/bridge/MessagingBridgeTargetdeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WLSMessagingBridgeMonitoringPage"
+                                   presentationClass="page-content"
+                                   title="tab.monitoring.label">
+                        <netuix:meta name="helpid" content="Bridge.messagingbridge.monitoring.title;bridge"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WLSMessagingBridgeMonitoringPortlet"
+                                                      contentUri="/PortalConfig/bridge/MessagingBridgeMonitoring.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WLSMessagingBridgeNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Bridge.bridge.messagingbridgenotes.title;bridge"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WLSMessagingBridgeNotesPortlet"
+                                                      contentUri="/PortalConfig/bridge/MessagingBridgeNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the MessagingBridge table page -->
+      <netuix:book definitionLabel="MessagingBridgeTableBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jms.messagingbridge.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="MessagingBridgeTablePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="BridgeMessagingBridgeTablePagesBook"
+                               title="jms.messagingbridge.title">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="BridgeMessagingBridgeTablePage"
+                                   presentationClass="page-table"
+                                   title="tab.configuration.label">
+                        <netuix:meta name="helpid" content="Bridge.bridge.messagingbridge.title;bridge"/>
+                        <netuix:meta name="breadcrumb" content="jms.messagingbridge.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WLSMessagingBridgeConfigTablePortlet"
+                                                      contentUri="/PortalConfig/bridge/MessagingBridgeConfigTable.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the WLSMessagingBridgeMonitoringTablePage page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WLSMessagingBridgeMonitoringTablePage"
+                                   presentationClass="page-content"
+                                   title="tab.monitoring.label">
+                        <netuix:meta name="helpid" content="Bridge.messagingbridge.monitoringtable.title;bridge"/>
+                        <netuix:meta name="breadcrumb" content="jms.messagingbridge.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WLSMessagingBridgeMonitoringTablePortlet"
+                                                      contentUri="/PortalConfig/bridge/MessagingBridgeMonitoringTable.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Bridge creation assistant page -->
+      <netuix:book definitionLabel="CreateMessagingBridgeBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.messagingbridge.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="BridgeCreateMessagingBridge"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Bridge.bridge.createbridge.title;bridge"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="BridgeCreateMessagingBridgePortlet"
+                                          contentUri="/PortalConfig/bridge/CreateMessagingBridge.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Bridge deletion assistant page -->
+      <netuix:book definitionLabel="DeleteMessagingBridgeBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.messagingbridge.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="BridgeDeleteMessagingBridge"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Bridge.bridge.deletebridge.page.title;bridge"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="BridgeDeleteMessagingBridgePortlet"
+                                          contentUri="/PortalConfig/bridge/DeleteMessagingBridge.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

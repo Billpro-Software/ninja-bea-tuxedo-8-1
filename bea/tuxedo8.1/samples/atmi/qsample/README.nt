@@ -1,0 +1,55 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1995 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/qsample/README.nt	$Revision: 1.5 $"
+#
+This is a brief description of the TUXEDO /Q Application.
+A more comprehensive look can be found in the TUXEDO ETP System,
+Release 6.1, TUXEDO Sytem/Q Guide.
+
+The sample /Q application is very similar to the application in
+simpapp. It consists of a single server offering a single
+service, "STRING",  which converts the string "this is a q example" from 
+lower case to upper case.  The service is called STRING.  The client enqueues 
+a request for this service. The request is placed on the request 
+queue, "STRING," by the TMQUEUE server. The request is handled by the 
+TMQFORWARD server.  This server removes the request from the request queue, 
+sends it to the server for processing, and places the results on the reply 
+queue, "RPLYQ."
+
+You should probably copy the sample files to your own directory,
+since some files must be edited and you might also want to experiment 
+with the client and server code. The changes that must be made are to
+set TUXDIR to the location of the TUXEDO software and to set APPDIR to 
+the location of the sample /Q application. These values should replace the
+bracketed items. The full path name must be supplied.  The files that 
+must be edited are:
+
+		a. ubb.sample	<TUXDIR, APPDIR, machine name>
+		b. setenv.cmd	<TUXDIR, APPDIR>
+		
+Once these files are correct the sample application can be run
+by executing the command "nmake /f qsample.nt" This will build the servers, 
+create the QUEUE and transaction log. 
+
+At this point you should boot the application and run the client.
+You can then remove everything. Once this has been run successfully, it 
+may be instructive to run each command individually outside of the makefile.
+
+ The files contained in the /Q sample application are:
+
+	client.c - the client program that enqueues the request and
+	  dequeues the reply.
+
+	server.c - the server file that	contains the service "STRING"
+	  which converts a string from lower case to upper case.
+
+	qsample.nt - a makefile that will build the client and server
+	  executables and also creates the logfiles and the queues.
+
+	setenv.cmd - a script that sets the necessary environment variables.	
+
+	ubb.sample - the configuration file that describes the application.
+
+      Before running the sample check whether all permissions are given for creation of new files or TLOG creation might fail. 

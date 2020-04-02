@@ -1,0 +1,110 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+# Copyright (c) 1992 USL
+# All rights reserved
+
+# THIS IS UNPUBLISHED PROPRIETARY
+# SOURCE CODE OF USL
+# The copyright notice above does not
+# evidence any actual or intended
+# publication of such source code.
+#
+#ident	"@(#) samples/atmi/qsample/qsample.nt	$Revision: 1.4 $"
+
+#
+INCDIR=$(TUXDIR)\include
+BINDIR=$(TUXDIR)\bin
+CFLAGS=-DWIN32 -MD -W3 -nologo -DNOWHAT=1 -I$(INCDIR)
+CC = CL
+
+CSRC = \
+	client.c \
+	server.c
+
+COBJ = $(CSRC:.c=.obj)
+
+OBJS = \
+	client.exe \
+	server.exe
+
+all:	$(COBJ) $(OBJS) tuxconfig tlog que 
+
+tuxconfig:	ubb.sample
+	tmloadcf -y ubb.sample
+
+server.exe:	server.obj
+	$(BINDIR)\buildserver -v -o server.exe \
+		-s STRING -f server.obj 
+client.exe:	client.obj
+	$(BINDIR)\buildclient -o client.exe -f client.obj
+
+clean: 
+	del /F /Q $(COBJ) $(OBJS) TLOG QUE
+
+lint:
+	lint -u -D NOWHAT -I. -I$(INCDIR) $(CSRC)
+
+.c.obj:
+	$(CC) $(CFLAGS) -c $*.c
+
+tlog: 
+	tmadmin < <<
+	echo
+	crdl -b 45 -z $(APPDIR)\TLOG
+	crlog -m SITE1
+	quit
+<<NOKEEP
+
+que:
+	del /q $(APPDIR)\QUE
+	(set QMCONFIG=$(APPDIR)\QUE) &
+	qmadmin $(APPDIR)\QUE < <<
+echo
+crdl $(APPDIR)\QUE 0 400
+qspacecreate
+QSPACE
+62839
+100
+6
+4
+9
+3
+errque
+y
+16
+qopen QSPACE
+qcreate
+STRING
+fifo
+none
+2
+30
+80%
+0%
+	
+qcreate
+RPLYQ
+fifo
+none
+2
+30
+80%
+0%
+	
+qcreate
+errque
+fifo
+none
+2
+30
+80%
+0%
+	
+q
+<<NOKEEP
+
+rmipc:
+	(set QMCONFIG=$(APPDIR)\QUE) &
+	qmadmin $(APPDIR)\QUE < <<
+echo
+ipcrm -y QSPACE
+<<NOKEEP

@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages for interacting with the 
+    work management subsystem
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="WorkBook" title="book.title" markupName="book"
+               markupType="Book"
+               backingFile="com.bea.console.utils.GeneralBackingFile"
+               threadsafe="true"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="CoreWorkBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkCapacityPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="CoreWorkCapacityBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkCapacityConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.capacityconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="Capacity"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkCapacityConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/CapacityConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkCapacityTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="Core.core.work.capacitytargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkCapacityTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/CapacityTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkCapacityNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.capacitynotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkCapacityNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkContextRequestClassPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="CoreWorkContextRequestClassBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkContextRequestClassConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.contextrequestclassconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="ContextRequestClass"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkContextRequestClassConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/ContextRequestClassConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkContextRequestClassTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.work.contextrequestclasstargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkContextRequestClassTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/ContextRequestClassTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkContextRequestClassNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.contextrequestclassnotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkContextRequestClassNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkFairShareRequestClassPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="CoreWorkFairShareRequestClassBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkFairShareRequestClassConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.fairsharerequestclassconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="FairShareRequestClass"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkFairShareRequestClassConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/FairShareRequestClassConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkFairShareRequestClassTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.work.fairsharerequestclasstargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkFairShareRequestClassTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/FairShareRequestClassTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkFairShareRequestClassNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.fairsharerequestclassnotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkFairShareRequestClassNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkMaxThreadsConstraintPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="CoreWorkMaxThreadsConstraintBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkMaxThreadsConstraintConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.maxthreadsconstraintconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="MaxThreadsConstraint"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkMaxThreadsConstraintConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/MaxThreadsConstraintConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkMaxThreadsConstraintTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.work.maxthreadsconstrainttargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkMaxThreadsConstraintTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/MaxThreadsConstraintTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkMaxThreadsConstraintNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.maxthreadsconstraintnotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkMaxThreadsConstraintNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkMinThreadsConstraintPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="CoreWorkMinThreadsConstraintBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkMinThreadsConstraintConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.minthreadsconstraintconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="MinThreadsConstraint"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkMinThreadsConstraintConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/MinThreadsConstraintConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkMinThreadsConstraintTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.work.minthreadsconstrainttargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkMinThreadsConstraintTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/MinThreadsConstraintTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkMinThreadsConstraintNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.minthreadsconstraintnotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkMinThreadsConstraintNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkResponseTimeRequestClassPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="CoreWorkResponseTimeRequestClassBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkResponseTimeRequestClassConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.work.responsetimerequestclassconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="ResponseTimeRequestClass"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkResponseTimeRequestClassConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/ResponseTimeRequestClassConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkResponseTimeRequestClassTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid"
+                                     content="Core.core.work.responsetimerequestclasstargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkResponseTimeRequestClassTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/ResponseTimeRequestClassTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkResponseTimeRequestClassNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.responsetimerequestclassnotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="CoreWorkResponseTimeRequestClassNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkWorkManagerPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="CoreWorkWorkManagerBook"
+                               title="CoreWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkWorkManagerConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.workmanagerconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="WorkManager"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkWorkManagerConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/WorkManagerConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targetdeploy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkWorkManagerTargetDeployPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="Core.core.work.workmanagertargetdeploy.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkWorkManagerTargetDeployPortlet"
+                                                      contentUri="/PortalConfig/core/work/WorkManagerTargetDeploy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkWorkManagerNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.work.workmanagernotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkWorkManagerNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkContextCasePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="CoreContextCaseBook"
+                               title="CoreContextCaseBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="CoreWorkContextCaseConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="Core.core.work.contextcaseconfig.title;core"/>
+                        <netuix:meta name="configuration-page" content="ContextCase"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkContextCaseConfigPortlet"
+                                                      contentUri="/PortalConfig/core/work/ContextCaseConfig.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager table page -->
+      <netuix:book definitionLabel="CoreWorkManagerTableBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="workmanager.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkManagerTable"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Core.core.workmanagers.title;core"/>
+            <netuix:meta name="breadcrumb" content="workmanager.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkManagerTablePortlet"
+                                          contentUri="/PortalConfig/core/work/WorkManagerTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager Runtime dispatch page -->
+      <netuix:book definitionLabel="CoreWorkManagerRuntimeBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="workmanager.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkManagerRuntime"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="configuration-page" content="WorkManagerRuntime"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkManagerRuntimePortlet"
+                                          contentUri="/PortalConfig/core/work/WorkManagerRuntime.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ContextCase creation assistant page -->
+      <netuix:book definitionLabel="CoreWorkCreateContextCaseBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkCreateContextCase"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkCreateContextCasePortlet"
+                                          contentUri="/PortalConfig/core/work/CreateContextCase.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ContextCase deletion assistant page -->
+      <netuix:book definitionLabel="CoreWorkDeleteContextCaseBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkDeleteContextCase"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.deletecontextcase.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkDeleteContextCasePortlet"
+                                          contentUri="/PortalConfig/core/work/DeleteContextCase.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager creation assistant page -->
+      <netuix:book definitionLabel="CoreCreateWorkManagerBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreCreateWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreCreateWorkManagerPortlet"
+                                          contentUri="/PortalConfig/core/work/CreateWorkManager.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager clone assistant page -->
+      <netuix:book definitionLabel="CoreCloneWorkManagerBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.clone.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreCloneWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreCloneWorkManagerPortlet"
+                                          contentUri="/PortalConfig/core/work/CloneWorkManager.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager deletion assistant page -->
+      <netuix:book definitionLabel="CoreWorkDeleteWorkManagerBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreDeleteWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.deleteworkmanager.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreDeleteWorkManagerPortlet"
+                                          contentUri="/PortalConfig/core/work/DeleteWorkManager.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Add Request Class page -->
+      <netuix:book definitionLabel="CoreWorkAddRequestClassBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreWorkAddRequestClass"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkAddRequestClassPortlet"
+                                          contentUri="/PortalConfig/core/work/AddRequestClass.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Add Capacity Constraint page -->
+      <netuix:book definitionLabel="CoreWorkAddCapacityConstraintBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkAddCapacityConstraint"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkAddCapacityConstraintPortlet"
+                                          contentUri="/PortalConfig/core/work/AddCapacityConstraint.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Add Max Thread Constraint page -->
+      <netuix:book definitionLabel="CoreWorkAddMaxThreadConstraintBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkAddMaxThreadConstraint"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkAddMaxThreadConstraintPortlet"
+                                          contentUri="/PortalConfig/core/work/AddMaxThreadConstraint.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Add Min Thread Constraint page -->
+      <netuix:book definitionLabel="CoreWorkAddMinThreadConstraintBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/> 
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreWorkAddMinThreadConstraint"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.work.createworkmanager.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreWorkAddMinThreadConstraintPortlet"
+                                          contentUri="/PortalConfig/core/work/AddMinThreadConstraint.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

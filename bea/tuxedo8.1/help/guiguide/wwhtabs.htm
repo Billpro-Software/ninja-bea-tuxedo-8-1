@@ -1,0 +1,116 @@
+<html>
+<!--
+// Copyright (c) 1999 Quadralay Corporation.  All rights reserved.
+//
+// The information in this file is confidential and proprietary to
+// Quadralay Corporation.  Unauthorized use or duplication is
+// strictly prohibited.
+-->
+
+<head><script LANGUAGE="JavaScript">
+function setTabSelection(t) {
+	if (parent.ct!=t){
+      document.tab0.src=parent.tab[t]["display"][0];
+      document.tab1.src=parent.tab[t]["display"][1];
+      document.tab2.src=parent.tab[t]["display"][2];
+      document.tab3.src=parent.tab[t]["display"][3];
+      if (parent.isIE4)eval("document.all.td"+t+".blur();");
+      parent.tabDisplay.location.href=parent.wwhdir+"wwh"+t+".htm";
+      parent.ct=t;
+      parent.document.cookie="ct="+t;
+   }
+}
+function clickPrevLoad(){
+   if (document.prev.src.indexOf(parent.brwse["prev"][2].replace(/^\.+/,""))==-1){
+      document.prev.src=parent.brwse["prev"][0];
+      if(parent.isIE4)document.all.prv.blur();
+      parent.helpcontents.prevDoc();
+   }
+}
+function clickNextLoad(){
+   if (document.next.src.indexOf(parent.brwse["next"][2].replace(/^\.+/,""))==-1){
+      document.next.src=parent.brwse["next"][0];
+      if(parent.isIE4)document.all.nxt.blur();
+      parent.helpcontents.nextDoc();
+   }
+}
+function nextMouseDown(){
+   if (document.next.src.indexOf(parent.brwse["next"][2].replace(/^\.+/,""))==-1)
+      document.next.src=parent.brwse["next"][1];
+}
+function prevMouseDown(){
+   if (document.prev.src.indexOf(parent.brwse["prev"][2].replace(/^\.+/,""))==-1)
+      document.prev.src=parent.brwse["prev"][1];
+}
+function nextMouseOver(){
+   if (document.next.src.indexOf(parent.brwse["next"][2].replace(/^\.+/,""))==-1)
+      document.next.src=parent.brwse["next"][3];
+}
+function prevMouseOver(){
+   if (document.prev.src.indexOf(parent.brwse["prev"][2].replace(/^\.+/,""))==-1)
+      document.prev.src=parent.brwse["prev"][3];
+}
+function nextMouseOut(){
+   if (parent.brwse["next"][4])
+      document.next.src=parent.brwse["next"][0];
+   else
+      document.next.src=parent.brwse["next"][2];
+}
+function prevMouseOut(){
+   if (parent.brwse["prev"][4])
+      document.prev.src=parent.brwse["prev"][0];
+   else
+      document.prev.src=parent.brwse["prev"][2];
+}
+function init(){
+   document.bgColor=parent.tbstrp;
+}
+</script>
+
+<title></title>
+</head>
+
+<body onLoad="init();">
+<script LANGUAGE="Javascript">
+   var IE4top=14;
+   var Nav4top=14;
+   if(parent.ct==null){parent.ct=parent.GetCookie("ct");if(parent.ct==null)parent.ct=parent.dt;}
+   var tab0src=parent.tab[parent.ct]["display"][0];
+   var tab1src=parent.tab[parent.ct]["display"][1];
+   var tab2src=parent.tab[parent.ct]["display"][2];
+   var tab3src=parent.tab[parent.ct]["display"][3];
+   if(parent.showNavButtons){IE4top=5;Nav4top=3;}
+   if(parent.isNav4)document.write("<LAYER ID='ltbl' top='"+Nav4top+"px' left=0px><TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>");
+   else if (parent.isIE4){document.body.leftMargin=0;document.write("<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 style='position:absolute; top:"+IE4top+"px; left;0px; margin-left:0px'>");}
+   if(parent.showNavButtons){
+      document.write("<TR><TD ID='prv' COLSPAN=2 ALIGN='right'><A HREF='#pbutton' NAME='pbutton' onMouseDown='prevMouseDown();' onMouseUp='clickPrevLoad();'>");
+      document.write("<IMG ID='prev' NAME='prev' WIDTH=49 HEIGHT=17 BORDER=0 SRC='");
+      if(parent.brwse["prev"][4])document.write(parent.brwse["prev"][0]);
+      else document.write(parent.brwse["prev"][2]);
+//      if(parent.isIE4)document.write("' onMouseOver='prevMouseOver();' onMouseOut='prevMouseOut();'>");
+//      else if(parent.isNav4)
+      document.write("'>");
+      document.write("</A></TD><TD ID='nxt' COLSPAN=2 ALIGN='left'><A HREF='#nbutton' NAME='nbutton' onMouseDown='nextMouseDown();' onMouseUp='clickNextLoad();'>");
+      document.write("<IMG ID='next' NAME='next' WIDTH=50 HEIGHT=17 BORDER=0 SRC='");
+      if(parent.brwse["next"][4])document.write(parent.brwse["next"][0]);
+      else document.write(parent.brwse["next"][2]);
+//      if(parent.isIE4)document.write("' onMouseOver='nextMouseOver();' onMouseOut='nextMouseOut();'>");
+//      else if(parent.isNav4)
+      document.write("'>");
+      document.write("</A></TD></TR>");
+      document.write("<TR><TD COLSPAN=4 HEIGHT=5></TD></TR>");
+   }
+   document.write("<TR><TD ID='tdtab0'><A HREF='#tab0' NAME='tab0' onClick='setTabSelection(\"tab0\");'>");
+   document.write("<IMG ID='tab0' NAME='tab0' WIDTH=74 HEIGHT=52 BORDER=0 SRC='"+tab0src+"'>");
+   document.write("</A></TD><TD ID='tdtab1'><A HREF='#tab1' NAME='tab1' onClick='setTabSelection(\"tab1\");'>");
+   document.write("<IMG ID='tab1' NAME='tab1' WIDTH=52 HEIGHT=52 BORDER=0 SRC='"+tab1src+"'>");
+   document.write("</A></TD><TD ID='tdtab2'><A HREF='#tab2' NAME='tab2'onClick='setTabSelection(\"tab2\");'>");
+   document.write("<IMG ID='tab2' NAME='tab2' WIDTH=55 HEIGHT=52 BORDER=0 SRC='"+tab2src+"'>");
+   document.write("</A></TD><TD ID='tdtab3'>");
+   document.write("<A HREF='#tab3' NAME='tab3' onClick='setTabSelection(\"tab3\");'>");
+   document.write("<IMG ID='tab3' NAME='tab3' WIDTH=69 HEIGHT=52 BORDER=0 SRC='"+tab3src+"'></A></TD>");
+   document.write("</TR></TABLE>");
+</script>
+
+</body>
+</html>

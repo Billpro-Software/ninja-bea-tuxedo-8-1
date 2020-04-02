@@ -1,0 +1,2180 @@
+<TITLE>WSNATIVE MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>NATIVE /WS MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>NATIVE MESSAGE #1001</H3>
+<H2> ERROR: Unused arguments passed to buildwsh</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The command line option passed to the
+buildwsh
+command is not recognized as a valid option.
+This could also be caused by an extra "-" in the
+command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the command line that calls
+buildwsh
+and remove the extraneous option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildwsh (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>NATIVE MESSAGE #1002</H3>
+<H2> ERROR: Unable to execute the command <I>command_string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While invoking the C compilation system to build a new Workstation Handler,
+an error was detected.  This could happen for one of the following reasons:
+<UL>
+<LI><P>
+The C compilation system command was not found.
+<LI><P>
+The cc command returned an error while linking the new Workstation
+Handler.
+<LI><P>
+The
+$CC
+environmental variable was not set correctly.
+<LI><P>
+The
+$CFLAGS
+environmental variable has invalid options.
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the C compilation system is present on your machine.
+Make sure there is enough disk space available for the new
+Workstation Handler.
+This should be roughly the same as the existing
+WSH
+and the added object files.
+Examine the
+$CC
+and
+$CFLAGS
+variables and, if set, make sure the options
+are correct for your C compilation environment.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+cc (1)
+in UNIX system reference manuals,
+buildwsh (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>NATIVE MESSAGE #1003</H3>
+<H2> ERROR: Could not find buffer type <I>type_val</I> : subtype <I>subtype_val</I> information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when the Workstation Handler receives a message from
+either a server or a workstation client, and it cannot find the buffer type
+information for the buffer type of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the buffer type is views, then make sure the
+$VIEWDIR
+and the
+$VIEWFILES
+environment variables are set and the permissions of the directories
+and files are readable by the
+WSH .
+If the view has been recompiled, the
+WSH
+should be shut down and restarted
+because it has a cache of the recently used
+VIEWS.
+<P>
+If this error occurs for other TUXEDO System/T buffer types and the
+WSH
+has been rebuilt using
+buildwsh ,
+then the
+WSH
+should be rebuilt with the
+correct buffer type switch information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3),
+buildwsh (1),
+viewfile (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1004"></A>
+<H3>NATIVE MESSAGE #1004</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3>NATIVE MESSAGE #1005</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>NATIVE MESSAGE #1006</H3>
+<H2> ERROR: Failed to initialize global network information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The internal network information used by the Workstation Handler or
+the Workstation Listener was not initialized.  This can happen if the
+system has run out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the virtual memory available for the
+WSH
+and
+WSL
+processes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>NATIVE MESSAGE #1007</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>NATIVE MESSAGE #1008</H3>
+<H2> ERROR: Could not establish listening address on network <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs if the
+WSH
+or the
+WSL
+cannot advertise its listening
+address on the network.
+This could happen for one of the following
+conditions.
+<UL>
+<LI><P>
+The format of the address supplied to the
+WSL
+is incorrect.
+If the address format is incorrect, the network
+provider will be unable to advertise the address
+and the request fails.
+<LI><P>
+The address used in the
+-n
+command line option to the
+WSL
+is already
+in use by another process.
+For
+TCP/IP,
+this can be verified by using the
+netstat
+command.
+<LI><P>
+The system has run out of network addresses for the
+WSH .
+The
+WSH
+requests a new address from the system.
+If there are no addresses available,
+the request is rejected.
+<LI><P>
+A previously used address has not completed the close sequence.
+This occurs if the
+WSL
+or
+WSH
+was killed in an abortive manner such as
+kill -9.
+Some transports
+(among them,
+TCP/IP)
+keep the connection open for an "implementation
+dependent" time to flush the existing data on the buffered network
+connection.
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To correct the problem, match one of the following
+solutions with the problem descriptions above:
+<UL>
+<LI><P>
+Check that the address format is correct.
+For
+TCP/IP,
+the format is
+0x0002ppppaaaaaaaa .
+This is a hexadecimal representation of the
+TCP/IP
+address, where
+pppp
+is a unique port number and
+aaaaaaaa
+is the
+IP
+dotted number in the
+/etc/hosts
+file for the machine on which the
+WSL
+will run.
+<LI><P>
+See if other processes are using the requested network address.
+For
+TCP/IP,
+use the
+netstat
+command and, if the address is already in use,
+select a different address.
+<LI><P>
+If the system is out of network addresses, check with the system
+administrator to increase the number of addresses to use.
+<LI><P>
+If the connection is not closed yet, wait a few minutes and try
+again.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+netstat (3)
+in UNIX system reference manuals,
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>NATIVE MESSAGE #1009</H3>
+<H2> ERROR: Cannot decode TUXEDO header of the received message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WSH
+or
+WSL
+read the data from the network.
+Each message has a TUXEDO System/T-specific
+header at the top of the message.
+If the message is corrupted or is smaller that the TUXEDO System/T header,
+this error occurs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>NATIVE MESSAGE #1010</H3>
+<H2> ERROR: Couldn't convert buffer to current release format</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs if a Workstation client and the native
+UNIX system machine are of different TUXEDO System/T releases
+and the message is from an older release.
+The error can also occur if the message received by the
+WSH
+or
+WSL
+is corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>NATIVE MESSAGE #1011</H3>
+<H2> ERROR: Couldn't convert buffer to native site format</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WSH
+was unable to convert a message from a workstation client format
+to the native format.
+This indicates that the buffer type is unknown
+to the
+WSH .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for a message indicating the nature
+of the failure (in particular, the type and subtype of
+the buffer that could not be converted).
+It may be necessary to rebuild the
+WSH
+using
+buildwsh
+to include additional application buffer types.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildwsh (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1012"></A>
+<H3>NATIVE MESSAGE #1012</H3>
+<H2> ERROR: Received message with an unknown internal type index <I>indexval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a message from the workstation client, the internal buffer type is
+unknown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the buffer type is set as part of converting to the native format,
+this error should not occur.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>NATIVE MESSAGE #1013</H3>
+<H2> ERROR: Received message of unknown type '<I>typeval</I>' subtype '<I>subtypeval</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a message from the workstation client, the application buffer type
+and subtype are unknown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the buffer type is set as part of converting to the native format,
+this error should not occur.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>NATIVE MESSAGE #1014</H3>
+<H2> ERROR: Received message of unknown type '<I>type</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a message from the workstation client, the application buffer type is
+unknown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the buffer type is set as part of converting to the native format,
+this error should rarely occur.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>NATIVE MESSAGE #1015</H3>
+<H2> ERROR: Message decode failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Decoding of the message received from the workstation client
+by the
+encdec
+function for the buffer type failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+decoding failed.
+If the buffer type or the encode/decode function is provided
+by the application, contact your system administrator.
+If this is one of the System/T provided
+buffer types, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>NATIVE MESSAGE #1016</H3>
+<H2> ERROR: Post receive operation on message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Post-processing of the message received from the workstation client
+by the
+postsend
+function for the buffer type failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+post-processing failed.
+If the buffer type or the
+postsend
+function is provided
+by the application, contact your system administrator.
+If this is one of the System/T provided
+buffer types, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>NATIVE MESSAGE #1017</H3>
+<H2> ERROR: Message presend routine failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Pre-processing of the message being sent to the workstation client
+by the
+presend
+function for the buffer type failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+pre-processing failed.
+If the buffer type or the
+presend
+function is provided
+by the application, contact your system administrator.
+If this is one of the System/T provided
+buffer types, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>NATIVE MESSAGE #1018</H3>
+<H2> ERROR: Invalid data length of 0, data not self describing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Pre-processing of the message being sent to the workstation client
+by the
+presend
+function for the buffer type returned 0.
+This indicates that a message length of 0 was presented by the
+application and the buffer type is not self-describing, such
+that the
+presend
+function cannot infer the desired transfer length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application must provide a length for sending messages
+of the particular buffer type.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>NATIVE MESSAGE #1019</H3>
+<H2> ERROR: Message conversion to workstation format failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WSH
+was unable to convert a message from a native format to
+workstation client format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error should not occur.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>NATIVE MESSAGE #1020</H3>
+<H2> ERROR: Encoding of message header failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Encoding of the header of the message being sent to a workstation client
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+decoding failed.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>NATIVE MESSAGE #1021</H3>
+<H2> ERROR: Encoding of message data failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Encoding of the message being sent to the workstation client
+by the
+encdec
+function for the buffer type failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+encoding failed.
+If the buffer type or the encode/decode function is provided
+by the application, contact your system administrator.
+If this is one of the System/T provided
+buffer types, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>NATIVE MESSAGE #1023</H3>
+<H2> WARN: No client context space available in handler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up a connection for a new workstation client, the
+WSH
+ran out of room to keep context for clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error should occur rarely since the
+WSL
+transfers control of workstation client connections to
+WSH
+programs based on their current degree of multiplexing.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3>NATIVE MESSAGE #1024</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3>NATIVE MESSAGE #1025</H3>
+<H2> ERROR: Expected numeric argument to -x option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument was passed to the Workstation Listener,
+WSL ,
+command line option.
+The argument to the
+-x
+option, the degree of multiplexing, needs to be numeric.
+This error causes the Workstation Listener not to be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the argument to the
+-x
+option is numeric.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>NATIVE MESSAGE #1026</H3>
+<H2> ERROR: Handler received unexpected message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WSH
+received a message without a client context (that is, intended for
+the Workstation Handler) that is not in the right format
+(it is not a workstation message).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The message will be ignored.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>NATIVE MESSAGE #1027</H3>
+<H2> ERROR: Handler received unexpected opcode 0x<I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WSH
+received a message without a client context (that is, intended for
+the Workstation Handler) that has an unrecognized operation code
+(normally, a shutdown message from the
+WSL ).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The message will be ignored.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1028"></A>
+<H3>NATIVE MESSAGE #1028</H3>
+<H2> WARN: Couldn't change to client context <I>context_number</I>, continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error switching to the context of
+a client when dropping all connections during shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The connection is ignored.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>NATIVE MESSAGE #1029</H3>
+<H2> ERROR: Sending of reply message to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending a reply message to a client,
+the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for messages indicating the nature of the failure.
+It may indicate that the client is no longer accessible
+(either the network or machine may have failed).
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>NATIVE MESSAGE #1030</H3>
+<H2> INFO: Work Station Handler joining application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that a
+WSH
+process was started by the
+WSL ,
+based on the command line options for the listener and
+the current demand by workstation clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>NATIVE MESSAGE #1031</H3>
+<H2> ERROR: Invalid command line argument '<I>arg</I>' ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An illegal command line option was found in the
+command line options for the
+WSH .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This should be a rare event since the
+WSH
+is started by the
+WSL
+(it is not started directly by the administrator).
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>NATIVE MESSAGE #1032</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3>NATIVE MESSAGE #1033</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1034"></A>
+<H3>NATIVE MESSAGE #1034</H3>
+<H2> ERROR: Failed to attach to shared memory for listener table, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler,
+WSH ,
+failed in an attempt to attach a shared memory segment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an operating system error. Check the value of
+<I>errno_val</I>
+for an indication of the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>NATIVE MESSAGE #1035</H3>
+<H2> ERROR: Handler table entry already occupied by <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WSL
+started a
+WSH
+and assigned it a slot that is already occupied by another
+WSH
+process with process identifier
+<I>pid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>NATIVE MESSAGE #1036</H3>
+<H2> ERROR: Network provider returns a zero length network address, can't establish network address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The length of the network address that the
+WSH
+is using to establish a connection is 0.
+This is not valid (and should not occur).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>NATIVE MESSAGE #1037</H3>
+<H2> ERROR: Can't synchronize with /WS listener ... continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The connection between the
+WSL
+and the
+WSH
+that it is executing
+was lost by the forked
+WSH
+process.
+The pipe with
+WSL
+was lost and may be due to the
+WSL
+process being killed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, although the cause of
+WSL
+dying should be investigated if not known.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3>NATIVE MESSAGE #1038</H3>
+<H2> WARN: Couldn't change to client context <I>index</I>, continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error switching to the context of
+a client when dropping all connections during shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The connection is ignored.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3>NATIVE MESSAGE #1039</H3>
+<H2> WARN: Can't use TPGETANY flag with tpcall()</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation client called
+tpcall
+with the
+TPGETANY
+option.  This is not valid, and
+TPEINVAL
+will be returned to the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>NATIVE MESSAGE #1040</H3>
+<H2> WARN: tpsprio() call failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to
+tpsprio
+in the
+WSH
+on behalf of the workstation client failed with tperrno set to
+<I>tperrno_val</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsprio (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3>NATIVE MESSAGE #1041</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>NATIVE MESSAGE #1042</H3>
+<H2> ERROR: tpcall() call failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to
+tpcall
+in the
+WSH
+on behalf of the workstation client failed with
+tperrno
+set to
+<I>tperrno_val</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3>NATIVE MESSAGE #1043</H3>
+<H2> ERROR: tpacall() call failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to
+tpacall
+in the
+WSH
+on behalf of the workstation client failed with tperrno set to
+<I>tperrno_val</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpacall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3>NATIVE MESSAGE #1044</H3>
+<H2> ERROR: tpgprio() call failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to
+tpgprio
+in the
+WSH
+on behalf of the workstation client failed with tperrno set to
+<I>tperrno_val</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildwsh (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1045"></A>
+<H3>NATIVE MESSAGE #1045</H3>
+<H2> ERROR: Sending of reply to tpacall() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpacall
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3>NATIVE MESSAGE #1046</H3>
+<H2> ERROR: Sending of reply to tpinit() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpinit
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1047"></A>
+<H3>NATIVE MESSAGE #1047</H3>
+<H2> ERROR: Sending of reply to tpterm() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpterm
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3>NATIVE MESSAGE #1048</H3>
+<H2> ERROR: Sending of error reply to call client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment message
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1049"></A>
+<H3>NATIVE MESSAGE #1049</H3>
+<H2> ERROR: Couldn't create buffer for receiving messages</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create a buffer with
+tpalloc
+failed. This buffer is used to receive messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error indicates a resource problem. If there is not
+sufficient memory to allocate buffers, the Workstation Handler
+process can not operate.  Please contact your System Support for help.
+If machine resources are sufficient, this would indicate
+an internal problem with the Workstation Handler. In this
+case,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1050"></A>
+<H3>NATIVE MESSAGE #1050</H3>
+<H2> ERROR: Error switching to the handler's context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler was attempting to switch from a client
+context to the Workstation Handler context when it experienced
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error indicates an internal problem with the Workstation Handler.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3>NATIVE MESSAGE #1052</H3>
+<H2> ERROR: Failed to process network event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler was unable to process a network event using
+tmnwevent .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error indicates an internal problem with the Workstation Handler
+or the LIBNET software.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3>NATIVE MESSAGE #1053</H3>
+<H2> ERROR: Error polling network connections</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error polling a network connection using
+tmnwcpoll .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error indicates a network error. Check that the network connection to
+the Workstation Client has not gone down. If it has, the Workstation Client
+will have to rejoin the application.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1054"></A>
+<H3>NATIVE MESSAGE #1054</H3>
+<H2> ERROR: Error generating network event list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error polling a network connection using
+tmnwcpoll .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error indicates a network error. Check that the network connection to
+the Workstation Client has not gone down. If it has, the Workstation Client
+will have to rejoin the application.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3>NATIVE MESSAGE #1055</H3>
+<H2> ERROR: Connection to unassigned WSH rejected</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The connection for the Workstation Client was timed out.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This situation may happen if the system or the network is very busy,
+or if the network has gone down.
+The Workstation Client should try again to join the application.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>NATIVE MESSAGE #1056</H3>
+<H2> WARN: Couldn't change to client context <I>index</I>, continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error switching to the context of
+a client to do a
+tpterm .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error indicates an internal problem.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>NATIVE MESSAGE #1057</H3>
+<H2> ERROR: Error processing message received from network</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error receiving a message from
+the network.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error could indicate a network problem
+or an internal System/T problem.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>NATIVE MESSAGE #1058</H3>
+<H2> ERROR: Received message with opcode other than init for non-existent context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler has received a message from a process that has
+not joined the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message indicates an internal problem in communication between the
+Workstation Handler and the Workstation Client.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3>NATIVE MESSAGE #1059</H3>
+<H2> ERROR: Received network message with unknown context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler has received a message from a process that
+it does not know about.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message indicates an internal problem in communication between the
+Workstation Handler and the Workstation Client.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>NATIVE MESSAGE #1060</H3>
+<H2> ERROR: Received message with context associated with a different connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler, working on behalf of one client context, has received a
+message intended for a different client context.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message indicates an internal problem in communication between the
+Workstation Handler and the Workstation Client.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>NATIVE MESSAGE #1061</H3>
+<H2> ERROR: Received a reply message from a workstation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler has received a message containing the reply protocol
+from a Workstation Client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A Workstation Client should never send a message with this protocol.
+This situation indicates an internal problem in communication between the
+Workstation Handler and the Workstation Client.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1062"></A>
+<H3>NATIVE MESSAGE #1062</H3>
+<H2> ERROR: Sending of reply to tpbegin() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpbegin
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3>NATIVE MESSAGE #1063</H3>
+<H2> ERROR: No more workstation handlers available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to start a new Workstation Handler process has failed because
+the maximum limit of Workstation Handlers has already been started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The maximum number of Workstation Handlers specified in the configuration file have
+been started. In order to increase this number, the
+"CLOPT -M maxh"
+value must be changed. This can be done in two ways: first, shut the application down
+and change the configuration file and reboot the application, or second, change the
+value dynamically with
+tmconfig (1),
+shut down and reboot only the Workstation Listener (WSL) server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1064"></A>
+<H3>NATIVE MESSAGE #1064</H3>
+<H2> ERROR: Error formatting command line options for handler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered formatting the argument string needed for
+booting a Workstation Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message would occur if there are more than 256 characters in the
+CLOPT
+string in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1065"></A>
+<H3>NATIVE MESSAGE #1065</H3>
+<H2> ERROR: Error retrieving machine table entry of the listener</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered trying to get internal machine information while
+booting a Workstation Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3>NATIVE MESSAGE #1066</H3>
+<H2> ERROR: Work Station Handler died, attempting restart</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If a Workstation Handler process has died and the number of Workstation
+Handler processes booted is below the minimum specified in the
+configuration file, the TUXEDO System attempts to boot a new
+Workstation Handler.
+This message is written to the userlog when
+this happens.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Workstation Handlers should not die.
+If this happens, it could
+indicate an internal problem that requires attention.
+Additional
+Workstation Handlers may need to be booted, if the system is very busy.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1067"></A>
+<H3>NATIVE MESSAGE #1067</H3>
+<H2> ERROR: Work Station Handler died, cleaning up</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A Workstation Handler process has died and the number of Workstation
+Handler processes booted is below the minimum specified in the
+configuration file.
+An attempt to boot a new Workstation Handler
+has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This could either be an operating system error or an
+internal TUXEDO System error.
+In the former case, please contact
+your system administrator.
+In the latter case,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1068"></A>
+<H3>NATIVE MESSAGE #1068</H3>
+<H2> ERROR: Invalid command line argument '<I>arg</I>' ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An illegal command line option was found in the
+CLOPT string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+"TUXEDO Reference Manual: Section 5"
+for correct options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL (5),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1069"></A>
+<H3>NATIVE MESSAGE #1069</H3>
+<H2> ERROR: Sending of reply to tpbroadcast() or tpnotify() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpbroadcast
+or
+tpnotify
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3>NATIVE MESSAGE #1070</H3>
+<H2> ERROR: Cannot boot WSL with MAXWSCLIENTS for machine set to 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener process has failed to boot because the
+MAXWSCLIENTS
+parameter was not specified in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+MAXWSCLIENTS
+parameter must be specified either in the *RESOURCES
+section or in the *MACHINES section of the configuration file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>NATIVE MESSAGE #1071</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to create a buffer
+for storing Workstation Handler information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1072"></A>
+<H3>NATIVE MESSAGE #1072</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to create a buffer
+for storing a device name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>NATIVE MESSAGE #1073</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to create a buffer
+for storing a Workstation Handler's name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>NATIVE MESSAGE #1074</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to create a buffer
+for storing a network address.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>NATIVE MESSAGE #1075</H3>
+<H2> ERROR: Can't get machine entry for listener</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener encountered an error attempting to read the
+*MACHINES entry from the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+TUXCONFIG
+file has not been removed or corrupted.
+If this is not the problem,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>NATIVE MESSAGE #1076</H3>
+<H2> ERROR: Failed to create to shared memory for listener table, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to create a shared memory segment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an operating system error.
+Check the value of
+<I>errno_val</I>
+for an indication of the problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Uunix_err (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>NATIVE MESSAGE #1077</H3>
+<H2> ERROR: Failed to update server table entry, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to update the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that  the shared memory segment that contains the Bulletin Board has not
+been removed.  If it has, then the application will need to be rebooted.
+Otherwise, this error would indicate an internal error. In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>NATIVE MESSAGE #1078</H3>
+<H2> ERROR: Failed to attach to shared memory for listener table, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener failed in an attempt to attach a shared memory segment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an operating system error. Check the value of
+<I>errno_val</I>
+for an indication of the problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>NATIVE MESSAGE #1079</H3>
+<H2> ERROR: Error starting minimum number of handlers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener encountered an error attempting to boot the
+minimum number of Workstation Handlers.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This could be an operating system error. Perhaps there are too many
+processes running. Or, this could be an internal error.
+Check the log file for other messages relating to this message.
+In this case,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3>NATIVE MESSAGE #1080</H3>
+<H2> ERROR: Error polling network connections</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener encountered an error polling a network connection.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error indicates a network error.
+Check with your system administrator to
+see if the network is down.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3>NATIVE MESSAGE #1081</H3>
+<H2> ERROR: Error servicing network event</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener was unable to process a network event.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error indicates an internal problem with the
+Workstation Listener or the LIBNET software.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>NATIVE MESSAGE #1082</H3>
+<H2> ERROR: Error adding connection request to event list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener was unable to allocate space on the event list.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error indicates a resource problem. If there is not
+sufficient memory to allocate buffers, the Workstation Listener
+process can not operate.  Please contact your System Support for help.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3>NATIVE MESSAGE #1083</H3>
+<H2> ERROR: Error assigning connection request, can't create any more handlers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Listener was unable to start a new Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The most likely problem is that
+the maximum number of Workstation Handlers specified in the configuration file have
+been started. In order to increase this number, the
+CLOPT -M maxh
+value must be changed. This can be done in two ways: first, shut the application down
+and change the configuration file and reboot the application, or second, change the
+value dynamically with
+tmconfig(1),
+shut down and reboot only the Workstation Listener (WSL) server.
+<P>
+Another possible source of the problem could be
+that the number of processes allowable by a user (ulimit)
+has been reached.
+If this is the case, consult with your System Administrator to increase this limit.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1086"></A>
+<H3>NATIVE MESSAGE #1086</H3>
+<H2> ERROR: Message conversion to release <I>rel</I> format failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler/Listener was unable to change the release structure
+to 4.2.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>NATIVE MESSAGE #1087</H3>
+<H2> ERROR: tpalloc() failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler failed in an attempt to create a buffer
+needed for encoding a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error indicates a resource problem. If there is not
+sufficient memory to allocate buffers, the Workstation Handler
+process can not operate.
+Please contact your TUXEDO System Technical Support for help.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>NATIVE MESSAGE #1088</H3>
+<H2> ERROR: tpinit() failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpinit (3)
+function call used to connect a workstation client to
+a TUXEDO System/T application has failed.
+Further information about the cause of the failure
+is provided by the value of
+tperrno .
+By examining the
+&lt;atmi.h>
+header file, this numeric
+tperrno
+value may be converted to a symbolic value.
+Potential causes of each such symbolic value are listed on the
+tpinit (3)
+manual page.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the
+tpinit (3)
+manual page for causes of the specific
+tperrno
+value that was reported to the application.
+Eliminate the potential causes of such an error and retry the failed operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit (3),
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>NATIVE MESSAGE #1089</H3>
+<H2> ERROR: tpscmt() failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to commit a transaction on behalf of a workstation client,
+the workstation handler process was unable to set the transaction commit
+control characteristic for the transaction to
+TP_CMT_LOGGED .
+(For further information on the transaction commit control characteristic,
+refer to the
+tpscmt (3)
+manual page.)
+For this reason, the attempt to commit the transaction failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the transaction cannot be committed, it will be necessary for the
+user to abort it.
+The value of
+tperrno
+and immediately preceding messages in the userlog may provide further
+information as to the cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpabort (3),
+tpcommit (3),
+tpscmt (3),
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>NATIVE MESSAGE #1090</H3>
+<H2> ERROR: tpscmt() failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to commit a transaction on behalf of a workstation client,
+the workstation handler process was unable to set the transaction commit
+control characteristic for the transaction to
+TP_CMT_COMPLETE .
+(For further information on the transaction commit control characteristic,
+refer to the
+tpscmt (3)
+manual page.)
+For this reason, the attempt to commit the transaction failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the transaction cannot be committed, it will be necessary for the
+user to abort it.
+The value of
+tperrno
+and immediately preceding messages in the userlog may provide further
+information as to the cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpabort (3),
+tpcommit (3),
+tpscmt (3),
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3>NATIVE MESSAGE #1096</H3>
+<H2> ERROR: Sending of reply to tpcommit() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a tpcommit() request to
+the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message.
+This failure indicates a problem with the network, with the Workstation,
+or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3>NATIVE MESSAGE #1097</H3>
+<H2> ERROR: Sending of reply to tpabort() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a tpabort() request to
+the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message.
+This failure indicates a problem with the network, with the Workstation,
+or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>NATIVE MESSAGE #1099</H3>
+<H2> ERROR: Could not find correct number of active handlers, found <I>num1</I>, expected <I>num2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While being restarted after the death of a previous workstation listener
+process, the workstation listener found an inconsistency in the existing
+/WS specific shared memory regarding the number of workstation handler
+processes.
+The WSL attempts to shut down any associated WSH processes that it knows
+about, removes the inconsistent shared memory, and exits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The administrator should check for any stray workstation handler (WSH)
+processes associated with this particular workstation listener, and see
+that they are manually terminated.
+The administrator may then re-boot the workstation listener process.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,665 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>CMDTUX MESSAGE #1001</H3>
+<H2> ERROR: The MAXCONV parameter must be > 0 and &lt; 32768.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXCONV
+parameter in the
+UBBCONFIG
+file must be greater than zero and
+less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXCONV
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>CMDTUX MESSAGE #1002</H3>
+<H2> ERROR: The MIN parameter must be >=1 and &lt;= 1000</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MIN
+parameter in the
+UBBCONFIG
+SERVERS section must be greater
+than or equal to 1
+and less than or equal to 1000.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MIN
+as specified in the SERVERS section of the
+UBBCONFIG
+file to be greater than 0 and less than or equal to 1000.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>CMDTUX MESSAGE #1003</H3>
+<H2> ERROR: The MAX parameter must be >=1 and &lt;= 1000</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAX
+parameter in the
+UBBCONFIG
+SERVERS section must be greater
+than or equal to 1
+and less than or equal to 1000.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAX
+as specified in the SERVERS section of the
+UBBCONFIG
+file to be greater than or equal to 1
+and less than or equal to 1000.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>CMDTUX MESSAGE #1021</H3>
+<H2> ERROR: The Primary and Backup LMIDs for a Group can't be the same.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In the *GROUPS section of the
+UBBCONFIG
+file, a group was specified
+as having a Backup machine (using the
+LMID,LMID
+syntax),
+but the
+LMID s
+were the same.
+The Backup must be on a different machine from the Primary.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+LMID
+as specified in the *GROUPS section of the
+UBBCONFIG
+so that the primary and backup
+machine names are different, or specify only one machine name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3>CMDTUX MESSAGE #1022</H3>
+<H2> WARN: The MIGRATE option was given without any Backup LMIDs present.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MIGRATE
+keyword appeared in the
+OPTIONS
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file, but neither a Group nor the Master
+were given Backup
+LMID s
+(using the
+LMID,LMID
+syntax).
+Note that some versions of TUXEDO System R4.2 have a bug where this warning will
+appear even though a backup Master machine was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that either the Master machine was made migratable (using the
+LMID,LMID
+syntax for the
+MASTER
+parameter), or that at least one group
+was migratable (using
+LMID,LMID
+in the LMID parameter in the *GROUPS section).
+If only the Master is migratable, and the configuration looks ok,
+then this warning is probably due to the bug mentioned in the description.
+The message can be ignored in this case.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>CMDTUX MESSAGE #1036</H3>
+<H2> ERROR: The AUTHSVC parameter is NULL or longer than <I>len</I> characters.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+AUTHSVC
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file must be
+a Service name that is less than or equal to 15 characters long.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+AUTHSVC
+parameter in the
+UBBCONFIG
+file and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>CMDTUX MESSAGE #1037</H3>
+<H2> ERROR: MAXWSCLIENTS must be >= 0 and &lt; 32768.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXWSCLIENTS
+parameter is outside the allowable range of values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+MAXWSCLIENTS
+parameter to be in the allowable range of values
+and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>CMDTUX MESSAGE #1056</H3>
+<H2> ERROR: Can't get Application Password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the
+SECURITY
+option is defined in the
+UBBCONFIG
+file,
+tmloadcf
+tries to get a password from the user.
+If the standard input is
+connected to a terminal,
+tmloadcf
+prompts for the password interactively.
+If not, it looks at the
+APP_PW
+environment variable.
+This error happens if
+tmloadcf
+cannot open the tty device for prompting, or if
+APP_PW
+is not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If running
+tmloadcf
+from a script, make sure that
+APP_PW
+is set and exported into the environment.
+Otherwise, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>CMDTUX MESSAGE #1057</H3>
+<H2> WARN: Passwords do not match.  Try again.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmloadcf
+prompts for the application password twice.
+If the two entries do not match, this message appears,
+and the sequence is repeated.
+Three separate tries are allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the password correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>CMDTUX MESSAGE #1058</H3>
+<H2> ERROR: Too many failures to obtain application password.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After three failed attempts to read the application password, the
+tmloadcf
+program gives up and prints this message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-load the configuration again, entering matching
+password values.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3>CMDTUX MESSAGE #1070</H3>
+<H2> ERROR: Unable to forward message, sending it back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+While draining the request queue, a function executed to (possibly) convert
+from one TUXEDO System release to another failed.
+The possible causes of this error are: attempting to send a message that has an
+incorrect release identifier in the message header, or sending a message to
+a site with an unknown release.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>CMDTUX MESSAGE #1071</H3>
+<H2> ERROR: Unable to forward message, sending it back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+While attempting to forward messages, a function executed to (possibly) convert
+from one TUXEDO System release to another failed.
+The possible causes of this error are: attempting to send a message that has an
+incorrect release identifier in the message header, or sending a message to
+a site with an unknown release.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1072"></A>
+<H3>CMDTUX MESSAGE #1072</H3>
+<H2> ERROR: Unable to process reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+While draining the reply queue, a function executed to (possibly) convert
+from one TUXEDO System release to another failed.
+The possible causes of this error are: attempting to send a message that has an
+incorrect release identifier in the message header, or sending a message to
+a site with an unknown release.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>CMDTUX MESSAGE #1073</H3>
+<H2> WARN: Client process <I>pid</I> \(em dropped message because server died, SERVICE=<I>service_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The TUXEDO System logs a message to the userlog file indicating that the
+server had been cleaned up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>CMDTUX MESSAGE #1074</H3>
+<H2> WARN: Client process <I>pid</I> \(em dropped message because server and client died, SERVICE=<I>service_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The TUXEDO System logs a message to the userlog file indicating that the
+server and client had died.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3>CMDTUX MESSAGE #1081</H3>
+<H2> ERROR: Unable to read RESOURCES section of TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The TUXEDO System was unable to get information on the *RESOURCES section
+from the
+TUXCONFIG
+file.
+Additional information from the userlog will indicate why the System was
+unable to do so.
+For example, the
+TUXCONFIG
+environment variable may not have been set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog for further information.
+If necessary, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>CMDTUX MESSAGE #1082</H3>
+<H2> ERROR: Execute permission denied, not application administrator</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup had been attempted, but the executor of this command
+did not have the proper permissions to execute the cleanupsrv
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>CMDTUX MESSAGE #1089</H3>
+<H2> ERROR: Unable to read the *RESOURCES section of the TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process was not able to read the *RESOURCES section of the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The shared memory might be corrupted. Check the permissions on all IPC or
+contact your TUXEDO System Technical Support.
+See LIBTUX_CAT Message 607 for further explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>CMDTUX MESSAGE #1090</H3>
+<H2> ERROR: Execute permission denied, not application administrator</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Execute permission was denied when a non-administrator was executing
+the
+restartsrv
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Only the System/T application administrator can execute the command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>CMDTUX MESSAGE #1091</H3>
+<H2> ERROR: Invalid option, duplicate <I>option</I> option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+"tlisten -d"
+option was passed twice at the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Invoke the
+tlisten
+command with only one
+-d
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>CMDTUX MESSAGE #1092</H3>
+<H2> ERROR: tlisten could not set group id to <I>group_id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process failed to reset its group id.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the user name or user id passed as an argument to the
+-u
+option has a valid entry in the
+/etc/passwd
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3>CMDTUX MESSAGE #1096</H3>
+<H2> ERROR: Could not send broadcast to BBL (<I>machine</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tpbroadcast
+message could not be sent to the
+BBL
+process on
+<I>machine</I>,
+because the message send operation failed.
+Clients on
+<I>machine</I>
+will not receive the broadcast.
+A likely cause is
+UNIX system message queue
+blocking on the
+DBBL 's
+machine.
+The
+BRIDGE 's
+message queue may be full, or the total amount of
+message queue buffer space in the kernel may be exhausted.
+The
+"ipcs -aq"
+shell command is one way to verify this.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check the machine's kernel parameters related to message queuing:
+MSGMNB ,
+MSGSEG ,
+MSGSSZ ,
+and
+MSGMAX .
+Increase them if this seems reasonable.
+<LI><P>
+Check for any networking problems that might
+cause the
+BRIDGE
+to run slowly.
+<LI><P>
+Check for performance problems causing overload on the machine.
+<LI><P>
+Reduce the frequency of broadcasts.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide" ,
+tpbroadcast (3),
+ipcs (1)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3>CMDTUX MESSAGE #1097</H3>
+<H2> WARN: DBBL should not be receiving notifications</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tpnotify request for asynchronous client notification
+message should go directly to the
+BBL
+process on the client's machine.
+One was unexpectedly received by the
+DBBL
+process, which ignored it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpnotify (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>CMDTUX MESSAGE #1098</H3>
+<H2> ERROR: Can't create queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Queues used for communication with the (D)BBL could not be created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the userlog for further details.  Contact your TUXEDO System
+Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

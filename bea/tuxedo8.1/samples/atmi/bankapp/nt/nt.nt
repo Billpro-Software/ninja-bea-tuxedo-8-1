@@ -1,0 +1,66 @@
+#
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1996 BEA Systems, Inc.
+#	All Rights Reserved
+#
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+#	BEA Systems, Inc.
+#	The copyright notice above does not evidence any
+#	actual or intended publication of such source code.
+#
+#ident	"@(#) samples/atmi/bankapp/nt/nt.nt	$Revision: 1.5 $"
+#
+
+!include "..\..\..\..\makerule.nt"
+DEBUG=
+
+# this makefile is used to prepare bankapp for shipping, not to compile
+# bankapp itself
+
+all install: build_driver build_bankappd build_bankappn
+
+tools: build_driver build_bankappd
+
+build_driver:
+	cd driver
+!if "$(DEBUG)" == ""
+	nmake -f driver.mak CFG="driver - Win32 Release"
+	copy WinRel\driver.exe ..\..
+	rem copy WinRel\driver.hlp ..\..
+!else
+	nmake -f driver.mak CFG="driver - Win32 Debug"
+	copy WinDebug\driver.exe ..\..
+	rem copy WinDebug\driver.hlp ..\..
+!endif
+	cd ..
+
+build_bankappd:
+	cd bankappd
+!if "$(DEBUG)" == ""
+	nmake -f bankappd.mak CFG="bankappd - Win32 Release"
+	copy WinRel\bankappd.exe ..\..
+!else
+	nmake -f bankappd.mak CFG="bankappd - Win32 Debug"
+	copy WinDebug\bankappd.exe ..\..
+!endif
+	cd ..
+
+build_bankappn:
+	cd ..
+	$(TUXDIR)\bin\mkfldhdr$(FML32) bankflds
+	cd nt\client
+	nmake /f client.mak
+	cd ..
+
+clean:
+!if "$(DEBUG)" == ""
+	rm -rf driver\WinRel
+	rm -rf bankappd\WinRel
+!else
+	rm -rf driver\WinDebug
+	rm -rf bankappd\WinDebug
+!endif
+
+clobber: clean
+	rm -f driver.exe driver.hlp bankappd.exe
+

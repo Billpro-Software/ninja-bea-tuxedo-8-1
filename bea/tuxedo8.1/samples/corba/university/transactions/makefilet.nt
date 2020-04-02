@@ -1,0 +1,203 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefilet.nt
+#
+# NT makefile for the university sample application
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+
+include <ntwin32.mak>
+
+#---------------------------------------------------------------------
+# Declarations
+#---------------------------------------------------------------------
+
+REMOVE=-del /Q
+
+# ORACLE stuff :
+# Is the version of the Oracle installation 8i?
+!if exists($(ORACLE_HOME)\precomp\public)
+ORAINC=$(ORACLE_HOME)\precomp\public
+ORADEF=-DORACLE8I
+!else
+ORAINC=$(ORACLE_HOME)\$(PRODIR)\c\include
+!endif
+RM=Oracle_XA
+
+# TUXDIR related stuff :
+TUXINC=$(TUXDIR)\include
+
+# Application specific stuff :
+UTILS= $(APPDIR)\..\utils
+
+# Oracle SQL Precompiler stuff :
+PROCPLSFLAGS= parse=partial release_cursor=yes
+PROCPPFLAGS=  code=cpp include=$(ORAINC)  \
+     include=$(TUXINC) include=$(UTILS)   \
+     include="$(MSVCDIR)\include"         \
+     include="$(MSVCDIR)\Mfc\include"
+
+# CORBA IDL compiler stuff :
+IDLFLAGS=-D_TOBJ -I$(TUXINC)
+
+# C++ compiler stuff :
+CPPFLAGS=-I$(ORAINC) -I$(TUXINC) -I$(UTILS) -DWIN32 $(ORADEF)
+
+#---------------------------------------------------------------------
+# Main build rules
+#---------------------------------------------------------------------
+
+# by default, don't build the java client:
+all        : servers ifrepos cxxclient
+
+servers    : univt_server.exe TMS_ORA.exe
+
+ifrepos    : repository_1.ifr
+
+cxxclient  : univt_client.exe
+
+javaclient : UnivTApplet.class
+
+#---------------------------------------------------------------------
+# C++ Client
+#---------------------------------------------------------------------
+
+CLIENT_SRCS =               \
+    $(UTILS)\log.cpp        \
+    $(UTILS)\log_client.cpp \
+    univt_c.cpp             \
+    univt_utils.cpp         \
+    univtc.cpp
+
+univt_client.exe: $(CLIENT_SRCS)
+	set CFLAGS=$(CPPFLAGS)
+	buildobjclient -v -o $@ \
+            -f "$(CLIENT_SRCS)"
+
+#---------------------------------------------------------------------
+# Java Client
+#---------------------------------------------------------------------
+
+UnivTApplet.class: UnivTApplet.java univt.idl
+	$(IDLTOJAVA) univt.idl
+	javac -g UnivTApplet.java
+
+#---------------------------------------------------------------------
+# C++ University Server
+#---------------------------------------------------------------------
+
+UNIV_SERVER_SRCS=             \
+    $(UTILS)\log.cpp          \
+    $(UTILS)\log_server.cpp   \
+    $(UTILS)\unique_id.cpp    \
+    $(UTILS)\samplesdb.cpp    \
+    $(UTILS)\samplesdbsql.cpp \
+    $(UTILS)\oranoconn.cpp    \
+    univt_c.cpp               \
+    univt_s.cpp               \
+    univt_utils.cpp           \
+    univt_i.cpp               \
+    univts.cpp
+
+univt_server.exe: $(UNIV_SERVER_SRCS)
+	set CFLAGS=$(CPPFLAGS)
+	buildobjserver -v -o $@ -r $(RM) \
+            -f "$(UNIV_SERVER_SRCS)"
+
+#----------------------------------------------------------------
+#	Transaction management server
+#----------------------------------------------------------------
+
+TMS_ORA.exe:
+	set CFLAGS=$(CPPFLAGS)
+	buildtms -v -o $@ -r $(RM)
+
+#----------------------------------------------------------------------
+# Interface Repository file
+#----------------------------------------------------------------------
+
+repository_1.ifr : univt.idl
+	idl2ir $(IDLFLAGS) $(TUXINC)\tobjin.idl univt.idl
+
+#----------------------------------------------------------------------
+# IDL files
+#----------------------------------------------------------------------
+
+univt_c.cpp univt_c.h univt_s.cpp univt_s.h : univt.idl univt.icf
+	idl $(IDLFLAGS) univt.idl univt.icf
+
+#---------------------------------------------------------------------
+# Initialize the database
+#---------------------------------------------------------------------
+
+LOADSCRIPT=     $(UTILS)\university.sql
+
+initdb	:
+	sqlplus $(USERID) @$(LOADSCRIPT)
+
+#---------------------------------------------------------------------
+# Header file dependencies
+#---------------------------------------------------------------------
+
+univt_i.h               : univt_s.h $(UTILS)\samplesdb.h
+univt_utils.h           : univt_c.h
+
+$(UTILS)\samplesdbsql.h	: $(UTILS)\samplesdb.h
+
+#---------------------------------------------------------------------
+# Source file dependencies
+#---------------------------------------------------------------------
+
+univt_utils.cpp	         : univt_utils.h
+univt_i.cpp              : $(UTILS)\log.h $(UTILS)\unique_id.h \
+                           univt_utils.h univt_i.h
+univts.cpp               : $(UTILS)\log.h univt_i.h
+univtc.cpp               : $(UTILS)\log.h univt_utils.h
+
+$(UTILS)\log.cpp         : $(UTILS)\log.h
+$(UTILS)\log_client.cpp  : $(UTILS)\log.h
+$(UTILS)\log_server.cpp  : $(UTILS)\log.h
+$(UTILS)\samplesdb.cpp   : $(UTILS)\samplesdb.h
+$(UTILS)\oranoconn.cpp   : $(UTILS)\samplesdbsql.h
+$(UTILS)\samplesdbsql.cpp: $(UTILS)\samplesdbsql.pc
+$(UTILS)\samplesdbsql.pc : $(UTILS)\samplesdbsql.h
+
+#----------------------------------------------------------------------
+# Valid suffixes
+#----------------------------------------------------------------------
+.SUFFIXES:      .pc .cpp .java .class
+
+#----------------------------------------------------------------------
+# Suffix rules
+#----------------------------------------------------------------------
+
+.pc.cpp:
+	$(PROC) $(PROCPLSFLAGS) $(PROCPPFLAGS) iname=$*.pc
+
+.java.class:
+	javac -g  $<
+
+#----------------------------------------------------------------------
+# Housekeeping
+#----------------------------------------------------------------------
+
+clean:
+	$(REMOVE) OBB*
+	$(REMOVE) $(UTILS)\samplesdbsql.cpp
+	$(REMOVE) *.obj
+	$(REMOVE) univt_c*
+	$(REMOVE) univt_s*
+	$(REMOVE) *.exe
+	$(REMOVE) UniversityT\*
+	$(REMOVE) Univ*.class
+	$(REMOVE) repository*
+	$(REMOVE) ULOG*
+	$(REMOVE) xa*.trc
+	$(REMOVE) *.dat
+	$(REMOVE) stderr
+	$(REMOVE) stdout
+
+#----------------------------------------------------------------------

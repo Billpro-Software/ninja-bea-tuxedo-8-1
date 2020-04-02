@@ -1,0 +1,36 @@
+			Session Pool Administration Sample
+
+The "admin" application illustrates how to use the administrative API
+to control the session pools and to retrieve the statistics through
+PageCompiledServlet in Servlet Connectivity for Tuxedo.
+
+REQUIREMENT
+===========
+Any Web Application Server with Servlet JSDK 1.1 or above
+Jolt 1.2
+
+INSTALLATION INSTRUCTIONS
+=========================
+
+1. Install the Jolt class library and Servlet Connectivity for Tuxedo class
+   library to the web application server.
+
+2. Copy all JHTML files to the public HTML directory (e.g.
+   $WEBLOGIC/myserver/public_html for WebLogic):
+
+	PoolList.jhtml
+	PoolAdmin.jhtml
+
+3. To get a list of session pools, use the following URL in your
+   favorite browser:
+
+	http://mywebserver:8080/PoolList.jhtml
+
+REFERENCES
+==========
+1. Java Servlets
+	http://jserv.java.sun.com/products/java-server/documentation/
+		webserver1.1/index_developer.html
+
+2. Servlet Interest Group:
+	servlet-interest@java.sun.com

@@ -1,0 +1,182 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//--------------------------------------------------------------------
+//
+// univo.idl
+//
+// IDL for the university object by value sample application
+//
+// Declares the following interfaces
+// (and their supporting datatypes):
+//
+//   CourseSynopsisEnumerator
+//   Registrar
+//   RegistrarFactory
+//   Course
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+//--------------------------------------------------------------------
+
+// Use a company specific pragma prefix to make sure the
+// repository ids for this IDL don't collide with those
+// from other companies
+
+#pragma prefix "beasys.com"
+
+module UniversityO
+{
+    //----------------------------------------------------------------
+
+    typedef unsigned long CourseNumber;
+    typedef sequence<CourseNumber> CourseNumberList;
+
+    //----------------------------------------------------------------
+
+    struct CourseSynopsis
+    {
+        CourseNumber   course_number;
+        string         title;
+    };
+    typedef sequence<CourseSynopsis> CourseSynopsisList;
+
+    //----------------------------------------------------------------
+
+    interface CourseSynopsisEnumerator
+    {
+        // returns a list of length 0 if there are no more entries
+        CourseSynopsisList get_next_n(
+            in  unsigned long number_to_get, // 0 = return all
+            out unsigned long number_remaining
+        );
+
+        // this must be called when you're done with the enumerator
+        void destroy();
+    };
+
+    //----------------------------------------------------------------
+
+    // data types to specify when a class is scheduled
+
+    typedef unsigned short Days;
+    const Days MONDAY    =  1;
+    const Days TUESDAY   =  2;
+    const Days WEDNESDAY =  4;
+    const Days THURSDAY  =  8;
+    const Days FRIDAY    = 16;
+
+    enum Day {Sun, Mon, Tue, Wed, Thu, Fri, Sat};
+
+    // classes restricted to same time block on all
+    // scheduled days, starting on the hour
+    struct ClassSchedule
+    {
+        Days           class_days; // bitmask of days
+        unsigned short start_hour; // whole hours in military time
+        unsigned short duration;   // minutes
+    };
+  
+    //----------------------------------------------------------------
+
+    //
+    // Replace the CourseDetails with a Course valuetype.  Provide some
+    // behavior to access the schedule state instead of exposing the
+    // the schedule representation as a public data member.
+    //
+    valuetype Course {
+	factory create (in CourseNumber	    course_number,
+			in double	    cost,
+			in unsigned short   number_of_credits,
+			in ClassSchedule    class_schedule,
+			in unsigned short   number_of_seats,
+			in string	    title,
+			in string	    professor,
+			in string	    description);
+
+	boolean is_taught(in Day aDay);
+	string days_taught();
+	unsigned short start_hour();
+	unsigned short duration();
+
+
+	public CourseNumber	course_number;
+	public double		cost;
+	public unsigned short	number_of_credits;
+	private ClassSchedule	class_schedule;
+	public unsigned short	number_of_seats;
+	public string		title;
+	public string		professor;
+	public string		description;
+    };
+
+    typedef sequence<Course> Courses;
+    //struct CourseDetails
+    //{
+    //   CourseNumber   course_number;
+    //    double         cost;
+    //    unsigned short number_of_credits;
+    //    ClassSchedule  class_schedule;
+    //    unsigned short number_of_seats;
+    //    string         title;
+    //    string         professor;
+    //    string         description;
+    //};
+    //typedef sequence<CourseDetails> CourseDetailsList;
+
+    //----------------------------------------------------------------
+
+    // The Registrar interface is the main interface that allows
+    // students to access the database.
+
+    // Clients only get references to registrars - they are not
+    // responsible for their lifecycle (thus registrars don't
+    // have a "destroy" method.
+
+    interface Registrar
+    {
+        // "number_to_get" controls how many matches are returned
+        // if set to 0, then all matches are returned.  otherwise
+        // that number of matches, plus an enumerator which can
+        // be used to retrieve the other matches, are returned.
+
+        // if "number_remaining" > 0, then "rest" contains an
+        // enumerator that can be used to get the other matches.
+
+        CourseSynopsisList
+        get_courses_synopsis(
+            in string                    search_criteria,
+            in unsigned long             number_to_get, // 0 = all
+            out unsigned long            number_remaining,
+            out CourseSynopsisEnumerator rest
+        );
+
+        // details for all valid course numbers are returned.
+        // (therefore you can tell which course numbers are invalid
+        // by comparing the list of returned course details with the
+        // list of course numbers you sent in)
+
+    	//CourseDetailsList get_courses_details(in CourseNumberList courses);
+    	Courses get_courses(in CourseNumberList courses);
+
+    };
+
+    //----------------------------------------------------------------
+
+    // The "RegistrarFactory" interface finds registrars.
+
+    // Clients only get references to registrar factories -
+    // they are not responsible for their lifecycle (thus
+    // registrar factories don't have a "destroy" method.
+
+    interface RegistrarFactory
+    {
+        Registrar find_registrar(
+        );
+    };
+
+    //----------------------------------------------------------------
+};
+
+//--------------------------------------------------------------------
+

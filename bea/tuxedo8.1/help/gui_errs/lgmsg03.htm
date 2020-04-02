@@ -1,0 +1,2618 @@
+<TITLE>LIBGW - RELEASE 6.0</TITLE>
+<SECT1><P>
+<BODY BGCOLOR="#FFFFFF">
+<H1>LIBGW MESSAGES 4000-4099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4019"></A>
+<H3>LIBGW MESSAGE #4019</H3>
+<H2> ERROR: Cannot get fieldid for <I>fld</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A system error occurred in getting the field identifier when loading the routing entry into the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the field tables to see if the field specified in the routing table is defined. Also, check your environment variables FLDTBLDIR and FIELDTBLS.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4023"></A>
+<H3>LIBGW MESSAGE #4023</H3>
+<H2> ERROR: unknown type <I>type</I> to route on</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BUFTYPE, <I>type</I>, for routing is unknown to the system. Currently, only VIEW and FML are supported buffer types for routing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your BUFTYPE definitions in the *DM_ROUTING section of the DMCONFIG file. Only VIEW and FML can be specified. Then, re-load the BDMCONFIG file and re-boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4024"></A>
+<H3>LIBGW MESSAGE #4024</H3>
+<H2> ERROR: cannot use data, field type not identical for field <I>fieldname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The data routing entry cannot be used because the field type is not identical for field, <I>fieldname</I>, in the routing table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the field type, <I>fieldname</I>, in the *DM_ROUTING section of the DMCONFIG file for consistency.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4025"></A>
+<H3>LIBGW MESSAGE #4025</H3>
+<H2> ERROR: Can't add ROUTSTRPOOL entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server couldn't successfully add a *DM_ROUTING entry into shared memory. Check the surrounding messages for specifics.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the error and re-boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4026"></A>
+<H3>LIBGW MESSAGE #4026</H3>
+<H2> ERROR: Can't find ROUTSTRPOOL entry in table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server couldn't successfully add a *DM_ROUTING entry into shared memory. The server couldn't retrieve the entry it just added.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4027"></A>
+<H3>LIBGW MESSAGE #4027</H3>
+<H2> ERROR: Can't add ROUTSTRPOOL entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server couldn't successfully add a *DM_ROUTING entry into shared memory. Check the surrounding messages for specifics.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the error and re-boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4028"></A>
+<H3>LIBGW MESSAGE #4028</H3>
+<H2> ERROR: Can't find ROUTSTRPOOL entry in table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server couldn't successfully add a *DM_ROUTING entry into shared memory. The server couldn't retrieve the entry it just added.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4029"></A>
+<H3>LIBGW MESSAGE #4029</H3>
+<H2> ERROR: Can't add RANGES entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server couldn't successfully add a *DM_ROUTING entry into shared memory. Check the surrounding messages for specifics.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the error and re-boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4030"></A>
+<H3>LIBGW MESSAGE #4030</H3>
+<H2> ERROR: Can't find RANGES entry in table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server couldn't successfully add a *DM_ROUTING entry into shared memory. The server couldn't retrieve the entry it just added.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4031"></A>
+<H3>LIBGW MESSAGE #4031</H3>
+<H2> ERROR: dmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type FML</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A <I>routing_name</I> was specified for a *DM_REMOTE_SERVICES entry in the DMCONFIG file that does not appear in the *DM_ROUTING section, and the standard FML routing function is used (which requires a matching *DM_ROUTING entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the DMCONFIG file, or provide an application-specific routing function for FML typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4032"></A>
+<H3>LIBGW MESSAGE #4032</H3>
+<H2> ERROR: dmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type FML</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A <I>routing_name</I> was specified for a *DM_REMOTE_SERVICES entry in the DMCONFIG file that does not appear in the *DM_ROUTING section, and the standard FML routing function is used (which requires a matching *DM_ROUTING entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the DMCONFIG file, or provide an application-specific routing function for FML typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4033"></A>
+<H3>LIBGW MESSAGE #4033</H3>
+<H2> ERROR: dmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type VIEW</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A <I>routing_name</I> was specified for a *DM_REMOTE_SERVICES entry in the DMCONFIG file that does not appear in the *DM_ROUTING section, and the standard VIEW routing function is used (which requires a matching *DM_ROUTING entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the DMCONFIG file, or provide an application-specific routing function for VIEW typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4034"></A>
+<H3>LIBGW MESSAGE #4034</H3>
+<H2> ERROR: dmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type VIEW</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A <I>routing_name</I> was specified for a *DM_REMOTE_SERVICES entry in the DMCONFIG file that does not appear in the *DM_ROUTING section, and the standard VIEW routing function is used (which requires a matching *DM_ROUTING entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the DMCONFIG file, or provide an application-specific routing function for VIEW typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4035"></A>
+<H3>LIBGW MESSAGE #4035</H3>
+<H2> ERROR: unknown field type used for FML routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML typed buffer, an unknown field type was encountered for the routing field. This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4036"></A>
+<H3>LIBGW MESSAGE #4036</H3>
+<H2> ERROR: unknown field type used for VIEW routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of a VIEW typed buffer, an unknown field type was encountered for the routing field. This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4037"></A>
+<H3>LIBGW MESSAGE #4037</H3>
+<H2> ERROR: Routing field value for '<I>service</I>' not valid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing data-dependent routing on an FML typed buffer for the specified service <I>service</I>, the routing field value did not match any of the ranges specified in the routing criteria and the criteria did not contain a wild-card pattern.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field value is valid. Correct the routing criteria in the RANGES value of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4038"></A>
+<H3>LIBGW MESSAGE #4038</H3>
+<H2> ERROR: Routing field value for '<I>service</I>' not valid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing data-dependent routing on a VIEW typed buffer for the specified service <I>service</I>, the routing field value did not match any of the ranges specified in the routing criteria and the criteria did not contain a wild-card pattern.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field value is valid. Correct the routing criteria in the RANGES value of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4039"></A>
+<H3>LIBGW MESSAGE #4039</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>short</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>short</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4040"></A>
+<H3>LIBGW MESSAGE #4040</H3>
+<H2> ERROR: range values out of order <I>upper_range</I> &lt; <I>low_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>short</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>short</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4041"></A>
+<H3>LIBGW MESSAGE #4041</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>integer</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>integer</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4042"></A>
+<H3>LIBGW MESSAGE #4042</H3>
+<H2> ERROR: range values out of order <I>upper_range</I> &lt; <I>low_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>integer</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>integer</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4043"></A>
+<H3>LIBGW MESSAGE #4043</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>long</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>long</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4044"></A>
+<H3>LIBGW MESSAGE #4044</H3>
+<H2> ERROR: range values out of order <I>upper_range</I> &lt; <I>low_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>long</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>long</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4045"></A>
+<H3>LIBGW MESSAGE #4045</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>float</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>float</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4046"></A>
+<H3>LIBGW MESSAGE #4046</H3>
+<H2> ERROR: range values out of order <I>upper_range</I>  <I>low_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>float</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>float</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4047"></A>
+<H3>LIBGW MESSAGE #4047</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>double</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>double</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4048"></A>
+<H3>LIBGW MESSAGE #4048</H3>
+<H2> ERROR: range values out of order <I>upper_range</I> &lt; <I>low_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>double</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>double</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4049"></A>
+<H3>LIBGW MESSAGE #4049</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>char</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>char</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4050"></A>
+<H3>LIBGW MESSAGE #4050</H3>
+<H2> ERROR: char range with MAX as lower value has values out of order</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If MAX is specified for the <I>char</I> lower routing range, then its corresponding upper routing range must also be specified as MAX, that is, MAX-MAX:remote_domain_name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the <I>char</I> routing range in the *DM_ROUTING section of the DMCONFIG file. If MAX is specified for the lower range, then its corresponding upper range must be MAX.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4051"></A>
+<H3>LIBGW MESSAGE #4051</H3>
+<H2> ERROR: char range with MIN as upper value has values out of order</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If MIN is specified for the <I>char</I> lower routing range, then its corresponding upper routing range must also be specified as MIN, that is, MIN-MIN:remote_domain_name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the <I>char</I> routing range in the *DM_ROUTING section of the DMCONFIG file. If MIN is specified for the lower range, then its corresponding upper range must be MIN.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4052"></A>
+<H3>LIBGW MESSAGE #4052</H3>
+<H2> ERROR: range values out of order <I>upper_range</I> &lt; <I>low_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>char</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>char</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4053"></A>
+<H3>LIBGW MESSAGE #4053</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>string</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>string</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4054"></A>
+<H3>LIBGW MESSAGE #4054</H3>
+<H2> ERROR: range values out of order for the string routing data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>string</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>string</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4055"></A>
+<H3>LIBGW MESSAGE #4055</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>carray</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>carray</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4056"></A>
+<H3>LIBGW MESSAGE #4056</H3>
+<H2> ERROR: range values out of order for the carray routing data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>carray</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>carray</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4057"></A>
+<H3>LIBGW MESSAGE #4057</H3>
+<H2> ERROR: more than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the <I>decimal</I> routing data was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your DMCONFIG file for multiple definitions of wild-card ranges for the <I>decimal</I> routing data. Only one wild-card range is allowed per routing entry, and it should be the last (ranges following it will be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4058"></A>
+<H3>LIBGW MESSAGE #4058</H3>
+<H2> ERROR: range values out of order for the decimal routing data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the <I>carray</I> routing data are out of order,
+that is, the upper range is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>carray</I> routing data in your DMCONFIG file. The lower range value must be less than or equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4059"></A>
+<H3>LIBGW MESSAGE #4059</H3>
+<H2> ERROR: unknown field type given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unknown field type was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the field types specified in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4060"></A>
+<H3>LIBGW MESSAGE #4060</H3>
+<H2> ERROR: expected colon to separate remote domain name <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Within a range and a remote domain pair, the range is separated from the remote domain name by a colon (:) in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and remote domain name specified in the *DM_ROUTING section of the DMCONFIG file. A colon (:) is expected to separate the range and the remote domain name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4061"></A>
+<H3>LIBGW MESSAGE #4061</H3>
+<H2> ERROR: expected comma after remote domain name <I>domain_name</I>,<I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Within a range and a remote domain name pair, a comma (,) is expected after remote domain name in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and remote domain name specified in the *DM_ROUTING section of the DMCONFIG file. A comma (,) is expected after the remote domain name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4062"></A>
+<H3>LIBGW MESSAGE #4062</H3>
+<H2> ERROR: expecting keyword MAX</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The keyword MAX is expected to indicate the maximum value for the data type of the associated field in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and the remote domain name specified in the *DM_ROUTING section of the DMCONFIG file. The keyword MAX should be specified to indicate the maximum value for the data type of the associated field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4063"></A>
+<H3>LIBGW MESSAGE #4063</H3>
+<H2> ERROR: expecting keyword MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The keyword MIN is expected to indicate the minimum value for the data type of the associated field in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and the remote domain name specified in the *DM_ROUTING section of the DMCONFIG file. The keyword MIN should be specified to indicate the minimum value for the data type of the associated field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4064"></A>
+<H3>LIBGW MESSAGE #4064</H3>
+<H2> ERROR: expecting keyword MIN or MAX</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The keyword MAX or MIN is expected to indicate the maximum or minimum value for the data type of the associated field in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and the remote domain name specified in the *DM_ROUTING section of the DMCONFIG file. The keyword MAX or MIN should be specified to indicate the maximum or minimum value for the data type of the associated field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4065"></A>
+<H3>LIBGW MESSAGE #4065</H3>
+<H2> ERROR: cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing data in the *DM_ROUTING section of the DMCONFIG file. Remove any '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4066"></A>
+<H3>LIBGW MESSAGE #4066</H3>
+<H2> ERROR: value out of range for a short <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a <I>short</I> routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>short</I> routing data in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4067"></A>
+<H3>LIBGW MESSAGE #4067</H3>
+<H2> ERROR: value out of range for an int <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for an <I>integer</I> routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>integer</I> routing data in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4068"></A>
+<H3>LIBGW MESSAGE #4068</H3>
+<H2> ERROR: value out of range for a long <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a <I>long</I> routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>long</I> routing data in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4069"></A>
+<H3>LIBGW MESSAGE #4069</H3>
+<H2> ERROR: cannot have a '-' and a '+' sign in front of a number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' and '+' sign in front of a number.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the *DM_ROUTING section of the DMCONFIG file. If a '-' and a '+' sign are both in front of a number, remove the '+' sign.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4070"></A>
+<H3>LIBGW MESSAGE #4070</H3>
+<H2> ERROR: cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While loading all of the information that is in the BDMCONFIG file into the shared memory, the calling process failed to get a data routing entry. The failure occurred while parsing a range string into data based on the field type information of one of the entries in the *DM_ROUTING section of the configuration file. The calling process was unable to create the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the RANGES parameter in the *DM_ROUTING section of the DMCONFIG file is valid. The range strings may not contain a '-' in front of MIN or MAX.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4071"></A>
+<H3>LIBGW MESSAGE #4071</H3>
+<H2> ERROR: expecting a ' ', '+', '-' or number after 'e/E' in float/double</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A '', '+', '-' or number after 'e' or 'E' is expected for float or double routing values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range values of the float and double in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4072"></A>
+<H3>LIBGW MESSAGE #4072</H3>
+<H2> ERROR: value out of range for a float <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a <I>float</I> routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>float</I> routing data in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4073"></A>
+<H3>LIBGW MESSAGE #4073</H3>
+<H2> ERROR: value out of range for a double <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a <I>double</I> routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>double</I> routing data in the *DM_ROUTING section of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4074"></A>
+<H3>LIBGW MESSAGE #4074</H3>
+<H2> ERROR: cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' and '+' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the *DM_ROUTING section of the DMCONFIG file. Remove any '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4075"></A>
+<H3>LIBGW MESSAGE #4075</H3>
+<H2> ERROR: expected single quote to begin char routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A single quote (') is expected at the beginning of <I>char</I> routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>char</I> routing data in the *DM_ROUTING section of the DMCONFIG file.
+A <I>char</I> routing data must begin with a single quote (').
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4076"></A>
+<H3>LIBGW MESSAGE #4076</H3>
+<H2> ERROR: expected single quote to end char routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A single quote (') is expected at the end of <I>char</I> routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>char</I> routing data in the *DM_ROUTING section of the DMCONFIG file. A <I>char</I> routing data must be ended with a single quote (').
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4077"></A>
+<H3>LIBGW MESSAGE #4077</H3>
+<H2> ERROR: cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' and '+' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the *DM_ROUTING section of the DMCONFIG file. Remove any '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4078"></A>
+<H3>LIBGW MESSAGE #4078</H3>
+<H2> ERROR: expected single quote for string/carray routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A single quote (') is expected for <I>string</I> and <I>carray</I> routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the <I>string</I> and <I>carray</I> routing data in the *DM_ROUTING section of the DMCONFIG file. The <I>string</I> and <I>carray</I> routing data must be within single quotes (').
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4079"></A>
+<H3>LIBGW MESSAGE #4079</H3>
+<H2> ERROR: not enough string pool space available for routing info</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There is not enough routing free string pool space in the shared memory when filling the data section with <I>string</I> and <I>carray</I> data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is s system error, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4080"></A>
+<H3>LIBGW MESSAGE #4080</H3>
+<H2> ERROR: cannot have a '-' and a '+' sign in front of a number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' and '+' sign in front of a number.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the *DM_ROUTING section of the DMCONFIG file. If a '-' and a '+' sign are both in front of a number, remove the '+' sign.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4081"></A>
+<H3>LIBGW MESSAGE #4081</H3>
+<H2> ERROR: cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' and '+' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the *DM_ROUTING section of the DMCONFIG file. Remove any '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4082"></A>
+<H3>LIBGW MESSAGE #4082</H3>
+<H2> ERROR: invalid format for decimal</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range <I>packed decimal</I> data are specified incorrectly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range <I>packed decimal</I> data in the *DM_ROUTING section of the DMCONFIG file. The <I>decimal</I> data must be in the correct format.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4083"></A>
+<H3>LIBGW MESSAGE #4083</H3>
+<H2> ERROR: discovered NULL character in string routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A NULL character is found in the <I>string</I> routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the <I>string</I> routing data for NULL characters in the *DM_ROUTING section of the DMCONFIG file. A <I>string</I> value is terminated with a NULL character.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4084"></A>
+<H3>LIBGW MESSAGE #4084</H3>
+<H2> ERROR: Routing field for '<I>routing_field</I>' null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing for an FML buffer, the specified '<I>routing_field</I>' value in the FML buffer was null.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field is correctly set in the FML buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4085"></A>
+<H3>LIBGW MESSAGE #4085</H3>
+<H2> ERROR: Field type of buffer does not match routing criteria type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML typed buffer, the field type for the routing field didn't match the field type for the typed buffers. This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4086"></A>
+<H3>LIBGW MESSAGE #4086</H3>
+<H2> ERROR: Illegal offset value for <I>routing_field</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Data-dependent routing failed for a VIEW buffer because the offset for the routing field is invalid. This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4087"></A>
+<H3>LIBGW MESSAGE #4087</H3>
+<H2> ERROR: Routing field for '<I>routing_field</I>' null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing for a VIEW buffer, the specified '<I>routing_field</I>' value in the VIEW buffer was null.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field is correctly set in the VIEW buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4089"></A>
+<H3>LIBGW MESSAGE #4089</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_PASSWORDS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_PASSWORDS section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4090"></A>
+<H3>LIBGW MESSAGE #4090</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_PASSWORDS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_PASSWORDS section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4091"></A>
+<H3>LIBGW MESSAGE #4091</H3>
+<H2> ERROR: Can't add PASSWORD entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a PASSWORD into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4092"></A>
+<H3>LIBGW MESSAGE #4092</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_RESOURCES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_RESOURCES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4093"></A>
+<H3>LIBGW MESSAGE #4093</H3>
+<H2> ERROR: Can't add RESOURCES entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load the *DM_RESOURCES info into shared memory. This should only occur if the shared memory is corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT1><P>
+<H1>LIBGW MESSAGES 4100-4199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4101"></A>
+<H3>LIBGW MESSAGE #4101</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_RDOMSECS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Administrative server detected an internal error.  The *DM_RDOMSECS
+section of the bdmconfig file could not be opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMADMIN (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4102"></A>
+<H3>LIBGW MESSAGE #4102</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_RDOMUSR section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Administrative server detected an internal error.  The *DM_RDOMUSR
+section of the bdmconfig file could not be opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMADMIN (1)
+<SECT1><P>
+<H1>LIBGW MESSAGES 5000-5099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5000"></A>
+<H3>LIBGW MESSAGE #5000</H3>
+<H2> ERROR: Can't get offset for view <I>viewname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Cannot get offset for view, <I>viewname</I>, in routing entry.
+Possible causes: 1) the view, <I>viewname</I>, is not defined in your environment variable VIEWFILES, 2) it doesn't exist, or 3) the FIELD specified in the routing section is not defined in the view, <I>viewname</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your environment variables VIEWFILES and VIEWDIR to see if the view, <I>viewname</I>, is defined. Also, check to see if the view file exists under the VIEWDIR. Then, check the FIELD defined in the *DM_ROUTING section of the DMCONFIG file to see if they are indeed defined in the view files.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5001"></A>
+<H3>LIBGW MESSAGE #5001</H3>
+<H2> ERROR: Can't put FIELDTBLS into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO administrative server was unable to reset FIELDTBLS in the process's environment using putenv().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make the existing environment smaller by unsetting some unneeded variables (or make environment larger if the operating system allows it) and re-execute the program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5002"></A>
+<H3>LIBGW MESSAGE #5002</H3>
+<H2> ERROR: Environment variable TUXDIR not defined</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO administrative server didn't have TUXDIR set in its environment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5003"></A>
+<H3>LIBGW MESSAGE #5003</H3>
+<H2> ERROR: Can't put FIELDTBLDIR into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO administrative server was unable to reset FLDTBLDIR in the process's environment using putenv().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make the existing environment smaller by unsetting some unneeded variables (or make environment larger if the operating system allows it) and re-execute the program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5004"></A>
+<H3>LIBGW MESSAGE #5004</H3>
+<H2> ERROR: Fldid failed(Ferror=<I>err</I>). Can't find TA_SRVGRP in FIELDTBLS files</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO administrative server couldn't find the definition for one of the system fields.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5005"></A>
+<H3>LIBGW MESSAGE #5005</H3>
+<H2> WARN: pid=<I>pid</I> died leaving SHM locked; cleaning up</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A process that was attached to the BB died and holds a
+user-level semaphore, so the BB is cleaning up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required for BB, but you may want to investigate
+why the process died.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5006"></A>
+<H3>LIBGW MESSAGE #5006</H3>
+<H2> WARN: Ticket stuck high - retrying</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While monitoring the integrity of the Bulletin Board, the
+BBL found a TUXEDO System user-level semaphore with
+no owner.
+In addition, another process was waiting to be served.
+The BBL must therefore become the owner of the
+semaphore and delegate it to the waiting process.
+While trying to do so, the BBL failed to lock the
+Bulletin Board, and will attempt to lock it again.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5007"></A>
+<H3>LIBGW MESSAGE #5007</H3>
+<H2> WARN: Ticket stuck high - retrying</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While monitoring the integrity of the Bulletin Board, the
+BBL found a TUXEDO System user-level semaphore with
+no owner.
+In addition, another process was waiting to be served.
+The BBL must therefore become the owner of the
+semaphore and delegate it to the waiting process.
+While trying to do so, the BBL failed to lock the
+Bulletin Board, and will attempt to lock it again.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5008"></A>
+<H3>LIBGW MESSAGE #5008</H3>
+<H2> WARN: Ticket stuck high - resetting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While monitoring the integrity of the Bulletin Board, the
+BBL found a TUXEDO System user-level semaphore with
+no owner.
+In addition, another process was waiting to be served.
+The BBL must therefore become the owner of the
+semaphore and delegate it to the waiting process.
+The BBL managed to lock the Bulletin Board, transfer
+the ownership of the semaphore, and adjust the statistics.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5009"></A>
+<H3>LIBGW MESSAGE #5009</H3>
+<H2> WARN: warning: SHM owned by <I>pid</I>, but not locked</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either the machine does not have proper atomic increment
+for the user-level semaphore, or there are too many
+signals coming to the process too quickly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5010"></A>
+<H3>LIBGW MESSAGE #5010</H3>
+<H2> WARN: SHM lock appears stuck: held by pid=<I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process has held the lock on the BB for a longer than
+normal period of time.
+The process could still be alive, but incorrectly holding
+the user-level semaphore.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the status of the process that is holding the lock.
+It might be hung, or it is holding the lock for too long a
+period of time while doing work.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5012"></A>
+<H3>LIBGW MESSAGE #5012</H3>
+<H2> ERROR: Attempted to add a duplicate record with key=<I>key</I> in section <I>section</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to add an entry to a table in shared memory failed because it violated the primary key constraint.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-submit the operation with a valid key value for the record.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5013"></A>
+<H3>LIBGW MESSAGE #5013</H3>
+<H2> ERROR: Can't delete file <I>file</I> in APPDIR used for storing OSITP blob</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWOSITP process was unable to delete a file it created earlier for storing OSITP BLOB.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the file still exists. If the file doesn't exist, refrain from deleting files used for saving BLOBS.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5014"></A>
+<H3>LIBGW MESSAGE #5014</H3>
+<H2> ERROR: Can't create file <I>file</I> in APPDIR for storing OSITP blob</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWOSITP process was unable to create a file in the APPDIR directory for storing BLOB.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the directory is writable by the GWOSITP process. Make sure that the file system didn't run out of space/inodes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5015"></A>
+<H3>LIBGW MESSAGE #5015</H3>
+<H2> ERROR: Can't write to OSITP blob file <I>file</I> in APPDIR</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWOSITP process was unable to write to a file in the APPDIR directory for storing BLOB.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that there is enough space in the file system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5016"></A>
+<H3>LIBGW MESSAGE #5016</H3>
+<H2> ERROR: Can't open file <I>file</I> in APPDIR for reading OSITP blob</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWOSITP process was unable to open a file for reading in the APPDIR directory that it created earlier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the file still exists. If the file doesn't exist, refrain from deleting files used for saving BLOBS.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5017"></A>
+<H3>LIBGW MESSAGE #5017</H3>
+<H2> ERROR: Can't read OSITP blob from file <I>file</I> in APPDIR</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWOSITP process was unable to read a file in the APPDIR directory that it created earlier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the file still exists. If the file doesn't exist, refrain from deleting files used for saving BLOBS.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5018"></A>
+<H3>LIBGW MESSAGE #5018</H3>
+<H2> ERROR: Can't get password entry for RDOM=<I>domain</I> from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a gateway process establishes a connection with a remote domain,
+the connecting domain has to pass the security check of the remote domain.
+If the remote domain is enforcing DM_PW security, then the initiator must have a *DM_PASSWORD entry in the BDMCONFIG file corresponding to the remote domain. This message indicates that the password for the remote domain is not available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the dmadmin program and add a *DM_PASSWORD entry for the remote domain, and then re-establish connection with the remote domain.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5019"></A>
+<H3>LIBGW MESSAGE #5019</H3>
+<H2> ERROR: Can't create more than <I>num</I> segments for a domain</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM server's attempt to create a shared memory segment failed. There is a fixed upper bound for the number of shared memory segments that can be created by a local domain. If this limit is reached, it means that there have been lots of dynamic insertions for this local domain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+By shutting down the application and rebooting it, you can coalesce the shared memory segments.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5020"></A>
+<H3>LIBGW MESSAGE #5020</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc() failed while attempting to log a transaction.
+For the most common types of log records, this will result in the
+transaction being aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5023"></A>
+<H3>LIBGW MESSAGE #5023</H3>
+<H2> ERROR: Cannot get fieldid for <I>fld</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A system error occurred in getting the field identifier when loading
+the routing entry into the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the field tables to see if the field specified in the routing table is defined.
+Also, check your environment variables FLDTBLDIR and FIELDTBLS.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5024"></A>
+<H3>LIBGW MESSAGE #5024</H3>
+<H2> ERROR: dmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type FML32</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A <I>routing_name</I> was specified for a *DM_REMOTE_SERVICES entry
+in the DMCONFIG file that does not appear in the *DM_ROUTING section,
+and the standard FML32 routing function is used (which requires
+a matching *DM_ROUTING entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the DMCONFIG file, or provide an application-specific
+routing function for FML32 typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5025"></A>
+<H3>LIBGW MESSAGE #5025</H3>
+<H2> ERROR: dmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type FML32</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A <I>routing_name</I> was specified for a *DM_REMOTE_SERVICES entry
+in the DMCONFIG file that does not appear in the *DM_ROUTING section,
+and the standard FML32 routing function is used (which requires
+a matching *DM_ROUTING entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the DMCONFIG file, or provide an application-specific
+routing function for FML32 typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5026"></A>
+<H3>LIBGW MESSAGE #5026</H3>
+<H2> ERROR: Routing field for '<I>routing_field</I>' null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing for an FML32 buffer,
+the specified '<I>routing_field</I>' value in the FML32 buffer was null.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field is correctly set in the FML32 buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5027"></A>
+<H3>LIBGW MESSAGE #5027</H3>
+<H2> ERROR: Field type of buffer does not match routing criteria type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML32 typed buffer, the field type
+for the routing field didn't match the field type for the typed buffers.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5028"></A>
+<H3>LIBGW MESSAGE #5028</H3>
+<H2> ERROR: unknown field type used for FML32 routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML32 typed buffer,
+an unknown field type was encountered for the routing field.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5029"></A>
+<H3>LIBGW MESSAGE #5029</H3>
+<H2> ERROR: Routing field value for '<I>service</I>' not valid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing data-dependent routing on an FML32 typed buffer
+for the specified service <I>service</I>, the routing field value
+did not match any of the ranges specified in the routing criteria
+and the criteria did not contain a wild-card pattern.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field value is valid.
+Correct the routing criteria in the RANGES value of the DMCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5030"></A>
+<H3>LIBGW MESSAGE #5030</H3>
+<H2> ERROR: Can't add REMOTE SECURITY MAP (RDOMSEC) entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Gateway Administrative server detected an internal error during
+initialization.  An internal function call returned a failure trying to add an
+entry to the RDOMSEC table in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5031"></A>
+<H3>LIBGW MESSAGE #5031</H3>
+<H2> ERROR: Can't add REMOTE USER (RDOMUSR) entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Gateway Administrative server detected an internal error during
+initialization.  An internal function call returned a failure trying to add an
+entry to the RDOMUSR table in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5035"></A>
+<H3>LIBGW MESSAGE #5035</H3>
+<H2> ERROR: Can't add RSEC entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Gateway Administrative server detected an internal error.  An internal
+function call returned a failure trying to add an entry to the RSEC table in
+shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5036"></A>
+<H3>LIBGW MESSAGE #5036</H3>
+<H2> ERROR: Can't add RSEC entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Gateway Administrative server detected an internal error.  An internal
+function call returned a failure trying to add an entry to the RSEC table in
+shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5037"></A>
+<H3>LIBGW MESSAGE #5037</H3>
+<H2> ERROR: Can't add PRINAPPKEY entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Gateway Administrative server detected an internal error.  An internal
+function call returned a failure trying to add an entry to the PRINAPPKEY table
+in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5038"></A>
+<H3>LIBGW MESSAGE #5038</H3>
+<H2> ERROR: Can't setup links from RSEC table to RDOMSEC entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to initialize
+the Gateway Administrative server.  The process was unable to set up the links
+to the shared memory table for the remote domain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5039"></A>
+<H3>LIBGW MESSAGE #5039</H3>
+<H2> ERROR: Can't setup principal-appkey mappings</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to initialize
+the Gateway Administrative server.  The process was unable to set up the
+principal-appkey mappings.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5040"></A>
+<H3>LIBGW MESSAGE #5040</H3>
+<H2> ERROR: Can't setup links from RSEC table to RDOMUSR entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to initialize
+the Gateway Administrative server.  The process was unable to set up the links
+to the shared memory table for the remote domain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5041"></A>
+<H3>LIBGW MESSAGE #5041</H3>
+<H2> ERROR: Can't get VIEW32 offset for view <I>type</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to initialize
+the Gateway Administrative server.  An internal function call returned an error.
+The process was unable to get the offset for <I>type</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5200"></A>
+<H3>LIBGW MESSAGE #5200</H3>
+<H2> WARN: Transaction became HEURISTIC HAZARD</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected this condition while trying to
+process a commit operation.  This messages indicates that the transaction is in
+a HEURISTIC HAZARD state.  This is a warning message to alert the user that the
+transaction may be out of synchronization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Review the transaction log for the transaction and attempt to determine the
+cause for the indicated condition.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcommit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5201"></A>
+<H3>LIBGW MESSAGE #5201</H3>
+<H2> WARN: Transaction became HEURISTIC MIX</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected this condition while trying to
+process a commit operation.  This messages indicates that the transaction is in
+a HEURISTIC MIX state.  This is a warning message to alert the user that the
+transaction may be out of synchronization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Review the transaction log for the transaction and attempt to determine the
+cause for the indicated condition.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcommit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5202"></A>
+<H3>LIBGW MESSAGE #5202</H3>
+<H2> WARN: Transaction returning HEURISTIC HAZARD result</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected this condition while trying to
+process a TMS_DONE event.  This messages indicates that the transaction is in a
+HEURISTIC HAZARD state.  This is a warning message to alert the user that the
+transaction may be out of synchronization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Review the transaction log for the transaction and attempt to determine the
+cause for the indicated condition.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcommit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5203"></A>
+<H3>LIBGW MESSAGE #5203</H3>
+<H2> WARN: Transaction returning HEURISTIC MIX result</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected this condition while trying to
+process a TMS_DONE event.  This messages indicates that the transaction is in a
+HEURISTIC MIX state.  This is a warning message to alert the user that the
+transaction may be out of synchronization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Review the transaction log for the transaction and attempt to determine the
+cause for the indicated condition.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcommit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5204"></A>
+<H3>LIBGW MESSAGE #5204</H3>
+<H2> ERROR: Invalid action <I>action</I> specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an internal error while trying to
+schedule an action to be processed.  The action specified is not a valid action.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5205"></A>
+<H3>LIBGW MESSAGE #5205</H3>
+<H2> ERROR: Maximum action table size(<I>max size</I>) reached</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an internal error while trying to
+schedule an action to be processed.  The action table has reached the maximum
+size allowable <I>max size</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5206"></A>
+<H3>LIBGW MESSAGE #5206</H3>
+<H2> ERROR: No more memory available to expand action table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an internal error while trying to
+schedule an action to be processed.  The action table cannot be expanded due to
+the lack of virtual memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5207"></A>
+<H3>LIBGW MESSAGE #5207</H3>
+<H2> ERROR: Program limit exceeded, terminate Domain Gateway process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an internal error while trying to
+schedule an action to be processed.  The action table has reached the maximum
+size allowable and the maximum number of failures of this type has been reached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shutdown the failed Domain Gateway process and then restart it to clear the
+error condition.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5208"></A>
+<H3>LIBGW MESSAGE #5208</H3>
+<H2> ERROR: Unable to recover, terminate Domain Gateway process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an internal error while trying to
+schedule an action to be processed.  The maximum number of scheduling failures
+has been reached and the process cannot recover.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shutdown the failed Domain Gateway process and then restart it to clear the
+error condition.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5209"></A>
+<H3>LIBGW MESSAGE #5209</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_SNADOM section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Administrative server detected an internal error during
+initialization.  The *DM_SNADOM section of the bdmconfig file could not be
+opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMADMIN (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5210"></A>
+<H3>LIBGW MESSAGE #5210</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_RDOMSEC section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Administrative server detected an internal error during
+initialization.  The *DM_RDOMSEC section of the bdmconfig file could not be
+opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMADMIN (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5211"></A>
+<H3>LIBGW MESSAGE #5211</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_RDOMUSR  section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Administrative server detected an internal error during
+initialization.  The *DM_RDOMUSR section of the bdmconfig file could not be
+opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMADMIN (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5212"></A>
+<H3>LIBGW MESSAGE #5212</H3>
+<H2> ERROR: Can't add SNADOM entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Gateway Administrative server detected an internal error during
+initialization.  An internal function call returned a failure trying to add an
+entry to the SNADOM table in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+GWADM (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5213"></A>
+<H3>LIBGW MESSAGE #5213</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_SNADOM section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Administrative server detected an internal error during
+initialization.  The *DM_SNADOM section of the bdmconfig file could not be
+opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the message
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMADMIN (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5214"></A>
+<H3>LIBGW MESSAGE #5214</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the log for prior messages indicating the cause of the problem.
+Normally, it means that the product has not been licensed properly.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5215"></A>
+<H3>LIBGW MESSAGE #5215</H3>
+<H2> WARN: Domain compression configured for <I>val</I>, but no license available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use Domains compression.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for Domains compression.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5216"></A>
+<H3>LIBGW MESSAGE #5216</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the log for prior messages indicating the cause of the problem.
+Normally, it means that the product has not been licensed properly.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5217"></A>
+<H3>LIBGW MESSAGE #5217</H3>
+<H2> ERROR: Domain compression configured for <I>val</I>, but no license available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use Domains compression.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for Domains compression.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5218"></A>
+<H3>LIBGW MESSAGE #5218</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the log for prior messages indicating the cause of the problem.
+Normally, it means that the product has not been licensed properly.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5219"></A>
+<H3>LIBGW MESSAGE #5219</H3>
+<H2> ERROR: Domain compression configured for <I>val</I>, but no license available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use Domains compression.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for Domains compression.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5220"></A>
+<H3>LIBGW MESSAGE #5220</H3>
+<H2> WARN: Domain svc advertising can only be done with dmadmin</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You attempted to dynamically advertise a domain service via tmadmin.
+This is only allowed via dmadmin.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use dmadmin to advertise the remote domain service.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dmadmin (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

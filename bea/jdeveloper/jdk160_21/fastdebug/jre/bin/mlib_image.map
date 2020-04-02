@@ -1,0 +1,596 @@
+ mlib_image
+
+ Timestamp is 4cfadd07 (Sat Dec 04 16:29:59 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000f63d0H .text                   CODE
+ 0002:00000000 0000004cH .idata$5                DATA
+ 0002:00000050 0000b330H .rdata                  DATA
+ 0002:0000b380 0000007dH .rdata$debug            DATA
+ 0002:0000b400 00000004H .rdata$sxdata           DATA
+ 0002:0000b404 00000004H .rtc$IAA                DATA
+ 0002:0000b408 00000004H .rtc$IZZ                DATA
+ 0002:0000b40c 00000004H .rtc$TAA                DATA
+ 0002:0000b410 00000004H .rtc$TZZ                DATA
+ 0002:0000b414 00000028H .idata$2                DATA
+ 0002:0000b43c 00000014H .idata$3                DATA
+ 0002:0000b450 0000004cH .idata$4                DATA
+ 0002:0000b49c 000000e4H .idata$6                DATA
+ 0002:0000b580 00000122H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 000002c4H .data                   DATA
+ 0003:000002d4 00000014H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000370H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0001:00000000       _mlib_ImageAffine_alltypes 10001000 f   mlib_ImageAffine.obj
+ 0001:00000580       _j2d_mlib_ImageAffine      10001580 f   mlib_ImageAffine.obj
+ 0001:00000600       _mlib_ImageSet             10001600 f   mlib_ImageCreate.obj
+ 0001:00000810       _j2d_mlib_ImageCreateStruct 10001810 f   mlib_ImageCreate.obj
+ 0001:00000880       _j2d_mlib_ImageCreate      10001880 f   mlib_ImageCreate.obj
+ 0001:00000a80       _j2d_mlib_ImageDelete      10001a80 f   mlib_ImageCreate.obj
+ 0001:00000ad0       _mlib_ImageCreateSubimage  10001ad0 f   mlib_ImageCreate.obj
+ 0001:00000ca0       _mlib_ImageSetSubimage     10001ca0 f   mlib_ImageCreate.obj
+ 0001:00000e30       _mlib_ImageCreateRowTable  10001e30 f   mlib_ImageCreate.obj
+ 0001:00000f50       _mlib_ImageDeleteRowTable  10001f50 f   mlib_ImageCreate.obj
+ 0001:00000f90       _mlib_ImageSetPaddings     10001f90 f   mlib_ImageCreate.obj
+ 0001:00001000       _mlib_ImageSetFormat       10002000 f   mlib_ImageCreate.obj
+ 0001:00001020       _j2d_mlib_ImageLookUp      10002020 f   mlib_c_ImageLookUp.obj
+ 0001:00001fa0       _j2d_mlib_ImageConvMxN     10002fa0 f   mlib_ImageConvMxN.obj
+ 0001:00002080       _mlib_ImageConvMxN_f       10003080 f   mlib_ImageConvMxN.obj
+ 0001:00002760       _j2d_mlib_ImageConvKernelConvert 10003760 f   mlib_ImageConvKernelConvert.obj
+ 0001:00002e90       _mlib_ImageAffine_s32_1ch_nn 10003e90 f   mlib_ImageAffine_NN.obj
+ 0001:000030d0       _mlib_ImageAffine_s32_2ch_nn 100040d0 f   mlib_ImageAffine_NN.obj
+ 0001:00003250       _mlib_ImageAffine_s32_3ch_nn 10004250 f   mlib_ImageAffine_NN.obj
+ 0001:000033e0       _mlib_ImageAffine_s32_4ch_nn 100043e0 f   mlib_ImageAffine_NN.obj
+ 0001:00003580       _mlib_ImageAffine_d64_1ch_nn 10004580 f   mlib_ImageAffine_NN.obj
+ 0001:000036f0       _mlib_ImageAffine_d64_2ch_nn 100046f0 f   mlib_ImageAffine_NN.obj
+ 0001:00003870       _mlib_ImageAffine_d64_3ch_nn 10004870 f   mlib_ImageAffine_NN.obj
+ 0001:00003a00       _mlib_ImageAffine_d64_4ch_nn 10004a00 f   mlib_ImageAffine_NN.obj
+ 0001:00003ba0       _mlib_ImageAffine_bit_1ch_nn 10004ba0 f   mlib_ImageAffine_NN_Bit.obj
+ 0001:000040d0       _mlib_ImageAffine_s32_1ch_bc 100050d0 f   mlib_ImageAffine_BC_S32.obj
+ 0001:00004e30       _mlib_ImageAffine_s32_2ch_bc 10005e30 f   mlib_ImageAffine_BC_S32.obj
+ 0001:00005c60       _mlib_ImageAffine_s32_3ch_bc 10006c60 f   mlib_ImageAffine_BC_S32.obj
+ 0001:00006aa0       _mlib_ImageAffine_s32_4ch_bc 10007aa0 f   mlib_ImageAffine_BC_S32.obj
+ 0001:000078e0       _mlib_ImageAffine_d64_1ch_bc 100088e0 f   mlib_ImageAffine_BC_D64.obj
+ 0001:000085a0       _mlib_ImageAffine_d64_2ch_bc 100095a0 f   mlib_ImageAffine_BC_D64.obj
+ 0001:00009330       _mlib_ImageAffine_d64_3ch_bc 1000a330 f   mlib_ImageAffine_BC_D64.obj
+ 0001:0000a0c0       _mlib_ImageAffine_d64_4ch_bc 1000b0c0 f   mlib_ImageAffine_BC_D64.obj
+ 0001:0000ae50       _mlib_ImageAffine_f32_1ch_bc 1000be50 f   mlib_ImageAffine_BC_F32.obj
+ 0001:0000baa0       _mlib_ImageAffine_f32_2ch_bc 1000caa0 f   mlib_ImageAffine_BC_F32.obj
+ 0001:0000c7c0       _mlib_ImageAffine_f32_3ch_bc 1000d7c0 f   mlib_ImageAffine_BC_F32.obj
+ 0001:0000d4e0       _mlib_ImageAffine_f32_4ch_bc 1000e4e0 f   mlib_ImageAffine_BC_F32.obj
+ 0001:0000e200       _mlib_ImageAffine_s32_1ch_bl 1000f200 f   mlib_ImageAffine_BL_S32.obj
+ 0001:0000e650       _mlib_ImageAffine_s32_2ch_bl 1000f650 f   mlib_ImageAffine_BL_S32.obj
+ 0001:0000ec40       _mlib_ImageAffine_s32_3ch_bl 1000fc40 f   mlib_ImageAffine_BL_S32.obj
+ 0001:0000f3a0       _mlib_ImageAffine_s32_4ch_bl 100103a0 f   mlib_ImageAffine_BL_S32.obj
+ 0001:0000fc80       _mlib_ImageAffine_d64_1ch_bl 10010c80 f   mlib_ImageAffine_BL_D64.obj
+ 0001:00010050       _mlib_ImageAffine_d64_2ch_bl 10011050 f   mlib_ImageAffine_BL_D64.obj
+ 0001:00010530       _mlib_ImageAffine_d64_3ch_bl 10011530 f   mlib_ImageAffine_BL_D64.obj
+ 0001:00010b20       _mlib_ImageAffine_d64_4ch_bl 10011b20 f   mlib_ImageAffine_BL_D64.obj
+ 0001:00011200       _mlib_ImageAffine_f32_1ch_bl 10012200 f   mlib_ImageAffine_BL_F32.obj
+ 0001:000115a0       _mlib_ImageAffine_f32_2ch_bl 100125a0 f   mlib_ImageAffine_BL_F32.obj
+ 0001:00011a20       _mlib_ImageAffine_f32_3ch_bl 10012a20 f   mlib_ImageAffine_BL_F32.obj
+ 0001:00011f90       _mlib_ImageAffine_f32_4ch_bl 10012f90 f   mlib_ImageAffine_BL_F32.obj
+ 0001:000125f0       _mlib_ImageAffine_u8_1ch_nn 100135f0 f   mlib_c_ImageAffine_NN.obj
+ 0001:00012760       _mlib_ImageAffine_u8_2ch_nn 10013760 f   mlib_c_ImageAffine_NN.obj
+ 0001:00012970       _mlib_ImageAffine_u8_3ch_nn 10013970 f   mlib_c_ImageAffine_NN.obj
+ 0001:00012ba0       _mlib_ImageAffine_u8_4ch_nn 10013ba0 f   mlib_c_ImageAffine_NN.obj
+ 0001:00012e00       _mlib_ImageAffine_s16_1ch_nn 10013e00 f   mlib_c_ImageAffine_NN.obj
+ 0001:00012fe0       _mlib_ImageAffine_s16_2ch_nn 10013fe0 f   mlib_c_ImageAffine_NN.obj
+ 0001:00013200       _mlib_ImageAffine_s16_3ch_nn 10014200 f   mlib_c_ImageAffine_NN.obj
+ 0001:00013450       _mlib_ImageAffine_s16_4ch_nn 10014450 f   mlib_c_ImageAffine_NN.obj
+ 0001:000136d0       _mlib_ImageAffine_u8_1ch_bl 100146d0 f   mlib_c_ImageAffine_BL.obj
+ 0001:000139c0       _mlib_ImageAffine_u8_2ch_bl 100149c0 f   mlib_c_ImageAffine_BL.obj
+ 0001:00013e10       _mlib_ImageAffine_u8_3ch_bl 10014e10 f   mlib_c_ImageAffine_BL.obj
+ 0001:000143f0       _mlib_ImageAffine_u8_4ch_bl 100153f0 f   mlib_c_ImageAffine_BL.obj
+ 0001:00014b40       _mlib_ImageAffine_s16_1ch_bl 10015b40 f   mlib_c_ImageAffine_BL_S16.obj
+ 0001:00014e80       _mlib_ImageAffine_s16_2ch_bl 10015e80 f   mlib_c_ImageAffine_BL_S16.obj
+ 0001:00015320       _mlib_ImageAffine_s16_3ch_bl 10016320 f   mlib_c_ImageAffine_BL_S16.obj
+ 0001:00015950       _mlib_ImageAffine_s16_4ch_bl 10016950 f   mlib_c_ImageAffine_BL_S16.obj
+ 0001:00016100       _mlib_ImageAffine_u16_1ch_bl 10017100 f   mlib_c_ImageAffine_BL_U16.obj
+ 0001:00016440       _mlib_ImageAffine_u16_2ch_bl 10017440 f   mlib_c_ImageAffine_BL_U16.obj
+ 0001:000168e0       _mlib_ImageAffine_u16_3ch_bl 100178e0 f   mlib_c_ImageAffine_BL_U16.obj
+ 0001:00016f10       _mlib_ImageAffine_u16_4ch_bl 10017f10 f   mlib_c_ImageAffine_BL_U16.obj
+ 0001:000176c0       _mlib_ImageAffine_u8_1ch_bc 100186c0 f   mlib_c_ImageAffine_BC.obj
+ 0001:00017d00       _mlib_ImageAffine_u8_2ch_bc 10018d00 f   mlib_c_ImageAffine_BC.obj
+ 0001:000183e0       _mlib_ImageAffine_u8_3ch_bc 100193e0 f   mlib_c_ImageAffine_BC.obj
+ 0001:00018ad0       _mlib_ImageAffine_u8_4ch_bc 10019ad0 f   mlib_c_ImageAffine_BC.obj
+ 0001:000191b0       _mlib_ImageAffine_s16_1ch_bc 1001a1b0 f   mlib_c_ImageAffine_BC_S16.obj
+ 0001:00019870       _mlib_ImageAffine_s16_2ch_bc 1001a870 f   mlib_c_ImageAffine_BC_S16.obj
+ 0001:00019fe0       _mlib_ImageAffine_s16_3ch_bc 1001afe0 f   mlib_c_ImageAffine_BC_S16.obj
+ 0001:0001a750       _mlib_ImageAffine_s16_4ch_bc 1001b750 f   mlib_c_ImageAffine_BC_S16.obj
+ 0001:0001aec0       _mlib_ImageAffine_u16_1ch_bc 1001bec0 f   mlib_c_ImageAffine_BC_U16.obj
+ 0001:0001b590       _mlib_ImageAffine_u16_2ch_bc 1001c590 f   mlib_c_ImageAffine_BC_U16.obj
+ 0001:0001bd10       _mlib_ImageAffine_u16_3ch_bc 1001cd10 f   mlib_c_ImageAffine_BC_U16.obj
+ 0001:0001c490       _mlib_ImageAffine_u16_4ch_bc 1001d490 f   mlib_c_ImageAffine_BC_U16.obj
+ 0001:0001cc10       _mlib_ImageAffineIndex_U8_U8_3CH_BC 1001dc10 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:0001df30       _mlib_ImageAffineIndex_U8_S16_3CH_BC 1001ef30 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:0001f220       _mlib_ImageAffineIndex_U8_U8_4CH_BC 10020220 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:00020a50       _mlib_ImageAffineIndex_U8_S16_4CH_BC 10021a50 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:00022240       _mlib_ImageAffineIndex_S16_U8_3CH_BC 10023240 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:00023570       _mlib_ImageAffineIndex_S16_S16_3CH_BC 10024570 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:00024860       _mlib_ImageAffineIndex_S16_U8_4CH_BC 10025860 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:00026090       _mlib_ImageAffineIndex_S16_S16_4CH_BC 10027090 f   mlib_c_ImageAffineIndex_BC.obj
+ 0001:00027880       _mlib_ImageAffineIndex_U8_U8_3CH_BL 10028880 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:000280e0       _mlib_ImageAffineIndex_U8_S16_3CH_BL 100290e0 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:00028920       _mlib_ImageAffineIndex_U8_U8_4CH_BL 10029920 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:000292d0       _mlib_ImageAffineIndex_U8_S16_4CH_BL 1002a2d0 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:00029c50       _mlib_ImageAffineIndex_S16_U8_3CH_BL 1002ac50 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:0002a4c0       _mlib_ImageAffineIndex_S16_S16_3CH_BL 1002b4c0 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:0002ad10       _mlib_ImageAffineIndex_S16_U8_4CH_BL 1002bd10 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:0002b6c0       _mlib_ImageAffineIndex_S16_S16_4CH_BL 1002c6c0 f   mlib_c_ImageAffineIndex_BL.obj
+ 0001:0002c050       _mlib_ImageAffineEdgeZero  1002d050 f   mlib_ImageAffineEdge.obj
+ 0001:0002c8d0       _mlib_ImageAffineEdgeNearest 1002d8d0 f   mlib_ImageAffineEdge.obj
+ 0001:0002dc50       _mlib_ImageAffineEdgeExtend_BL 1002ec50 f   mlib_ImageAffineEdge.obj
+ 0001:00036290       _mlib_ImageAffineEdgeExtend_BC 10037290 f   mlib_ImageAffineEdge.obj
+ 0001:0004b950       _mlib_AffineEdges          1004c950 f   mlib_ImageScanPoly.obj
+ 0001:0004d8c0       _mlib_ImageColorTrue2Index 1004e8c0 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004de50       _mlib_search_quadrant_U8_3 1004ee50 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004df60       _mlib_search_quadrant_part_to_left_U8_3 1004ef60 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004e240       _mlib_search_quadrant_part_to_right_U8_3 1004f240 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004e520       _mlib_search_quadrant_S16_3 1004f520 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004e650       _mlib_search_quadrant_part_to_left_S16_3 1004f650 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004e960       _mlib_search_quadrant_part_to_right_S16_3 1004f960 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004ec70       _mlib_search_quadrant_U8_4 1004fc70 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004eda0       _mlib_search_quadrant_part_to_left_U8_4 1004fda0 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004f0d0       _mlib_search_quadrant_part_to_right_U8_4 100500d0 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004f400       _mlib_search_quadrant_S16_4 10050400 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004f560       _mlib_search_quadrant_part_to_left_S16_4 10050560 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004f8e0       _mlib_search_quadrant_part_to_right_S16_4 100508e0 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004fc60       _mlib_ImageColorTrue2IndexLine_U8_U8_3 10050c60 f   mlib_ImageColorTrue2Index.obj
+ 0001:00050250       _mlib_ImageColorTrue2IndexLine_U8_U8_3_in_4 10051250 f   mlib_ImageColorTrue2Index.obj
+ 0001:00050840       _mlib_ImageColorTrue2IndexLine_U8_U8_4 10051840 f   mlib_ImageColorTrue2Index.obj
+ 0001:00051030       _mlib_ImageColorTrue2IndexLine_U8_S16_3 10052030 f   mlib_ImageColorTrue2Index.obj
+ 0001:00057990       _mlib_ImageColorTrue2IndexLine_U8_S16_3_in_4 10058990 f   mlib_ImageColorTrue2Index.obj
+ 0001:0005e2f0       _mlib_ImageColorTrue2IndexLine_U8_S16_4 1005f2f0 f   mlib_ImageColorTrue2Index.obj
+ 0001:00068ca0       _mlib_ImageColorTrue2IndexLine_S16_S16_3 10069ca0 f   mlib_ImageColorTrue2Index.obj
+ 0001:000700b0       _mlib_ImageColorTrue2IndexLine_S16_S16_3_in_4 100710b0 f   mlib_ImageColorTrue2Index.obj
+ 0001:000774d0       _mlib_ImageColorTrue2IndexLine_S16_S16_4 100784d0 f   mlib_ImageColorTrue2Index.obj
+ 0001:00083240       _mlib_ImageColorTrue2IndexLine_S16_U8_3 10084240 f   mlib_ImageColorTrue2Index.obj
+ 0001:00083840       _mlib_ImageColorTrue2IndexLine_S16_U8_3_in_4 10084840 f   mlib_ImageColorTrue2Index.obj
+ 0001:00083e50       _mlib_ImageColorTrue2IndexLine_S16_U8_4 10084e50 f   mlib_ImageColorTrue2Index.obj
+ 0001:00084610       _mlib_ImageColorTrue2IndexLine_U8_BIT_1 10085610 f   mlib_ImageColorTrue2Index.obj
+ 0001:00084680       _mlib_c_ImageThresh1_U81   10085680 f   mlib_c_ImageThresh1_U8.obj
+ 0001:000849e0       _mlib_c_ImageThresh1_U82   100859e0 f   mlib_c_ImageThresh1_U8.obj
+ 0001:00084da0       _mlib_c_ImageThresh1_U83   10085da0 f   mlib_c_ImageThresh1_U8.obj
+ 0001:000852a0       _mlib_c_ImageThresh1_U84   100862a0 f   mlib_c_ImageThresh1_U8.obj
+ 0001:00085700       _mlib_c_ImageThresh1_U81_1B 10086700 f   mlib_c_ImageThresh1_U8.obj
+ 0001:00085be0       _mlib_c_ImageThresh1_U82_1B 10086be0 f   mlib_c_ImageThresh1_U8.obj
+ 0001:00086230       _mlib_c_ImageThresh1_U83_1B 10087230 f   mlib_c_ImageThresh1_U8.obj
+ 0001:00086a40       _mlib_c_ImageThresh1_U84_1B 10087a40 f   mlib_c_ImageThresh1_U8.obj
+ 0001:00087160       _mlib_c_ImageLookUp_U8_U8  10088160 f   mlib_c_ImageLookUp_f.obj
+ 0001:000891d0       _mlib_c_ImageLookUp_S16_U8 1008a1d0 f   mlib_c_ImageLookUp_f.obj
+ 0001:00089440       _mlib_c_ImageLookUp_U16_U8 1008a440 f   mlib_c_ImageLookUp_f.obj
+ 0001:000896a0       _mlib_c_ImageLookUp_S32_U8 1008a6a0 f   mlib_c_ImageLookUp_f.obj
+ 0001:00089900       _mlib_c_ImageLookUp_U8_S16 1008a900 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008bd10       _mlib_c_ImageLookUp_S16_S16 1008cd10 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008bfa0       _mlib_c_ImageLookUp_U16_S16 1008cfa0 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008c230       _mlib_c_ImageLookUp_S32_S16 1008d230 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008c4c0       _mlib_c_ImageLookUp_S16_U16 1008d4c0 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008c750       _mlib_c_ImageLookUp_U16_U16 1008d750 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008c9e0       _mlib_c_ImageLookUp_S32_U16 1008d9e0 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008cc70       _mlib_c_ImageLookUp_U8_S32 1008dc70 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008e020       _mlib_c_ImageLookUp_S16_S32 1008f020 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008e2a0       _mlib_c_ImageLookUp_U16_S32 1008f2a0 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008e520       _mlib_c_ImageLookUp_S32_S32 1008f520 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008e7a0       _mlib_c_ImageLookUpSI_U8_U8 1008f7a0 f   mlib_c_ImageLookUp_f.obj
+ 0001:0008fb30       _mlib_c_ImageLookUpSI_S16_U8 10090b30 f   mlib_c_ImageLookUp_f.obj
+ 0001:000907c0       _mlib_c_ImageLookUpSI_U16_U8 100917c0 f   mlib_c_ImageLookUp_f.obj
+ 0001:00091440       _mlib_c_ImageLookUpSI_S32_U8 10092440 f   mlib_c_ImageLookUp_f.obj
+ 0001:00091680       _mlib_c_ImageLookUpSI_U8_S16 10092680 f   mlib_c_ImageLookUp_f.obj
+ 0001:00092a40       _mlib_c_ImageLookUpSI_S16_S16 10093a40 f   mlib_c_ImageLookUp_f.obj
+ 0001:00092cb0       _mlib_c_ImageLookUpSI_U16_S16 10093cb0 f   mlib_c_ImageLookUp_f.obj
+ 0001:00092f20       _mlib_c_ImageLookUpSI_S32_S16 10093f20 f   mlib_c_ImageLookUp_f.obj
+ 0001:00093190       _mlib_c_ImageLookUpSI_S16_U16 10094190 f   mlib_c_ImageLookUp_f.obj
+ 0001:00093400       _mlib_c_ImageLookUpSI_U16_U16 10094400 f   mlib_c_ImageLookUp_f.obj
+ 0001:00093670       _mlib_c_ImageLookUpSI_S32_U16 10094670 f   mlib_c_ImageLookUp_f.obj
+ 0001:000938e0       _mlib_c_ImageLookUpSI_U8_S32 100948e0 f   mlib_c_ImageLookUp_f.obj
+ 0001:00094da0       _mlib_c_ImageLookUpSI_S16_S32 10095da0 f   mlib_c_ImageLookUp_f.obj
+ 0001:00095000       _mlib_c_ImageLookUpSI_U16_S32 10096000 f   mlib_c_ImageLookUp_f.obj
+ 0001:00095250       _mlib_c_ImageLookUpSI_S32_S32 10096250 f   mlib_c_ImageLookUp_f.obj
+ 0001:000954a0       _mlib_ImageLookUp_U8_D64   100964a0 f   mlib_ImageLookUp_64.obj
+ 0001:00096950       _mlib_ImageLookUp_S16_D64  10097950 f   mlib_ImageLookUp_64.obj
+ 0001:00096bd0       _mlib_ImageLookUp_U16_D64  10097bd0 f   mlib_ImageLookUp_64.obj
+ 0001:00096e50       _mlib_ImageLookUp_S32_D64  10097e50 f   mlib_ImageLookUp_64.obj
+ 0001:000970c0       _mlib_ImageLookUpSI_U8_D64 100980c0 f   mlib_ImageLookUp_64.obj
+ 0001:00098680       _mlib_ImageLookUpSI_S16_D64 10099680 f   mlib_ImageLookUp_64.obj
+ 0001:000988e0       _mlib_ImageLookUpSI_U16_D64 100998e0 f   mlib_ImageLookUp_64.obj
+ 0001:00098b30       _mlib_ImageLookUpSI_S32_D64 10099b30 f   mlib_ImageLookUp_64.obj
+ 0001:00098d80       _mlib_ImageLookUp_Bit_U8_1 10099d80 f   mlib_ImageLookUp_Bit.obj
+ 0001:00099270       _mlib_ImageLookUp_Bit_U8_2 1009a270 f   mlib_ImageLookUp_Bit.obj
+ 0001:00099690       _mlib_ImageLookUp_Bit_U8_3 1009a690 f   mlib_ImageLookUp_Bit.obj
+ 0001:00099c40       _mlib_ImageLookUp_Bit_U8_4 1009ac40 f   mlib_ImageLookUp_Bit.obj
+ 0001:0009a330       _mlib_ImageCopy            1009b330 f   mlib_c_ImageCopy.obj
+ 0001:0009a6c0       _mlib_ImageCopy_bit_al     1009b6c0 f   mlib_c_ImageCopy.obj
+ 0001:0009b3f0       _mlib_ImageCopy_na         1009c3f0 f   mlib_c_ImageCopy.obj
+ 0001:0009b590       _mlib_conv3x3ext_s16       1009c590 f   mlib_ImageConv_16ext.obj
+ 0001:0009c440       _mlib_i_conv3x3ext_s16     1009d440 f   mlib_ImageConv_16ext.obj
+ 0001:0009cbe0       _mlib_conv4x4ext_s16       1009dbe0 f   mlib_ImageConv_16ext.obj
+ 0001:0009df60       _mlib_conv5x5ext_s16       1009ef60 f   mlib_ImageConv_16ext.obj
+ 0001:0009f7a0       _mlib_i_conv5x5ext_s16     100a07a0 f   mlib_ImageConv_16ext.obj
+ 0001:000a0d60       _mlib_convMxNext_s16       100a1d60 f   mlib_ImageConv_16ext.obj
+ 0001:000a4dc0       _mlib_i_convMxNext_s16     100a5dc0 f   mlib_ImageConv_16ext.obj
+ 0001:000a71d0       _mlib_conv3x3ext_u16       100a81d0 f   mlib_ImageConv_u16ext.obj
+ 0001:000a80d0       _mlib_i_conv3x3ext_u16     100a90d0 f   mlib_ImageConv_u16ext.obj
+ 0001:000a8860       _mlib_conv4x4ext_u16       100a9860 f   mlib_ImageConv_u16ext.obj
+ 0001:000a9c20       _mlib_conv5x5ext_u16       100aac20 f   mlib_ImageConv_u16ext.obj
+ 0001:000ab4a0       _mlib_i_conv5x5ext_u16     100ac4a0 f   mlib_ImageConv_u16ext.obj
+ 0001:000aca50       _mlib_convMxNext_u16       100ada50 f   mlib_ImageConv_u16ext.obj
+ 0001:000b0d00       _mlib_i_convMxNext_u16     100b1d00 f   mlib_ImageConv_u16ext.obj
+ 0001:000b30e0       _mlib_convMxNext_s32       100b40e0 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3820       _mlib_ImageConvMxN_Fp      100b4820 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b38a0       _mlib_convMxNext_f32       100b48a0 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3ee0       _mlib_convMxNext_d64       100b4ee0 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b4520       _mlib_c_conv3x3ext_u8      100b5520 f   mlib_ImageConv_8ext.obj
+ 0001:000b53f0       _mlib_i_conv3x3ext_u8      100b63f0 f   mlib_ImageConv_8ext.obj
+ 0001:000b5b20       _mlib_c_conv4x4ext_u8      100b6b20 f   mlib_ImageConv_8ext.obj
+ 0001:000b6eb0       _mlib_c_conv5x5ext_u8      100b7eb0 f   mlib_ImageConv_8ext.obj
+ 0001:000b8700       _mlib_i_conv5x5ext_u8      100b9700 f   mlib_ImageConv_8ext.obj
+ 0001:000b9c20       _mlib_c_conv7x7ext_u8      100bac20 f   mlib_ImageConv_8ext.obj
+ 0001:000baec0       _mlib_c_convMxNext_u8      100bbec0 f   mlib_ImageConv_8ext.obj
+ 0001:000bf0e0       _mlib_i_convMxNext_u8      100c00e0 f   mlib_ImageConv_8ext.obj
+ 0001:000c1420       _mlib_conv2x2nw_u8         100c2420 f   mlib_c_ImageConv_f.obj
+ 0001:000c1450       _mlib_conv3x3nw_u8         100c2450 f   mlib_c_ImageConv_f.obj
+ 0001:000c14b0       _mlib_conv4x4nw_u8         100c24b0 f   mlib_c_ImageConv_f.obj
+ 0001:000c14e0       _mlib_conv5x5nw_u8         100c24e0 f   mlib_c_ImageConv_f.obj
+ 0001:000c1540       _mlib_conv7x7nw_u8         100c2540 f   mlib_c_ImageConv_f.obj
+ 0001:000c1570       _mlib_convMxNnw_u8         100c2570 f   mlib_c_ImageConv_f.obj
+ 0001:000c15f0       _mlib_conv2x2ext_u8        100c25f0 f   mlib_c_ImageConv_f.obj
+ 0001:000c1630       _mlib_conv3x3ext_u8        100c2630 f   mlib_c_ImageConv_f.obj
+ 0001:000c16b0       _mlib_conv4x4ext_u8        100c26b0 f   mlib_c_ImageConv_f.obj
+ 0001:000c16f0       _mlib_conv5x5ext_u8        100c26f0 f   mlib_c_ImageConv_f.obj
+ 0001:000c1770       _mlib_conv7x7ext_u8        100c2770 f   mlib_c_ImageConv_f.obj
+ 0001:000c17b0       _mlib_convMxNext_u8        100c27b0 f   mlib_c_ImageConv_f.obj
+ 0001:000c1840       _mlib_conv2x2nw_s16        100c2840 f   mlib_c_ImageConv_f.obj
+ 0001:000c1870       _mlib_conv2x2nw_u16        100c2870 f   mlib_c_ImageConv_f.obj
+ 0001:000c18a0       _mlib_conv2x2ext_s16       100c28a0 f   mlib_c_ImageConv_f.obj
+ 0001:000c18e0       _mlib_conv2x2ext_u16       100c28e0 f   mlib_c_ImageConv_f.obj
+ 0001:000c1920       _mlib_ImageClippingMxN     100c2920 f   mlib_ImageClipping.obj
+ 0001:000c1c50       _mlib_ImageClipping        100c2c50 f   mlib_ImageClipping.obj
+ 0001:000c1ca0       _mlib_ImageConvCopyEdge    100c2ca0 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2790       _mlib_ImageConvClearEdge   100c3790 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2e60       _mlib_ImageConvZeroEdge    100c3e60 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2f00       _mlib_c_conv3x3nw_u8       100c3f00 f   mlib_ImageConv_8nw.obj
+ 0001:000c3c00       _mlib_i_conv3x3nw_u8       100c4c00 f   mlib_ImageConv_8nw.obj
+ 0001:000c40f0       _mlib_c_conv4x4nw_u8       100c50f0 f   mlib_ImageConv_8nw.obj
+ 0001:000c5280       _mlib_c_conv5x5nw_u8       100c6280 f   mlib_ImageConv_8nw.obj
+ 0001:000c68d0       _mlib_i_conv5x5nw_u8       100c78d0 f   mlib_ImageConv_8nw.obj
+ 0001:000c77d0       _mlib_c_conv7x7nw_u8       100c87d0 f   mlib_ImageConv_8nw.obj
+ 0001:000c8700       _mlib_c_convMxNnw_u8       100c9700 f   mlib_ImageConv_8nw.obj
+ 0001:000cc300       _mlib_i_convMxNnw_u8       100cd300 f   mlib_ImageConv_8nw.obj
+ 0001:000cdf80       _mlib_conv3x3nw_s16        100cef80 f   mlib_ImageConv_16nw.obj
+ 0001:000cec60       _mlib_i_conv3x3nw_s16      100cfc60 f   mlib_ImageConv_16nw.obj
+ 0001:000cf1a0       _mlib_conv4x4nw_s16        100d01a0 f   mlib_ImageConv_16nw.obj
+ 0001:000d0320       _mlib_conv5x5nw_s16        100d1320 f   mlib_ImageConv_16nw.obj
+ 0001:000d1970       _mlib_i_conv5x5nw_s16      100d2970 f   mlib_ImageConv_16nw.obj
+ 0001:000d28e0       _mlib_convMxNnw_s16        100d38e0 f   mlib_ImageConv_16nw.obj
+ 0001:000d6370       _mlib_i_convMxNnw_s16      100d7370 f   mlib_ImageConv_16nw.obj
+ 0001:000d80f0       _mlib_conv3x3nw_u16        100d90f0 f   mlib_ImageConv_u16nw.obj
+ 0001:000d8e20       _mlib_i_conv3x3nw_u16      100d9e20 f   mlib_ImageConv_u16nw.obj
+ 0001:000d9360       _mlib_conv4x4nw_u16        100da360 f   mlib_ImageConv_u16nw.obj
+ 0001:000da520       _mlib_conv5x5nw_u16        100db520 f   mlib_ImageConv_u16nw.obj
+ 0001:000dbbb0       _mlib_i_conv5x5nw_u16      100dcbb0 f   mlib_ImageConv_u16nw.obj
+ 0001:000dcb10       _mlib_convMxNnw_u16        100ddb10 f   mlib_ImageConv_u16nw.obj
+ 0001:000e07d0       _mlib_i_convMxNnw_u16      100e17d0 f   mlib_ImageConv_u16nw.obj
+ 0001:000e2520       _mlib_conv2x2nw_s32        100e3520 f   mlib_ImageConv_32nw.obj
+ 0001:000e2d20       _mlib_conv3x3nw_s32        100e3d20 f   mlib_ImageConv_32nw.obj
+ 0001:000e36a0       _mlib_conv4x4nw_s32        100e46a0 f   mlib_ImageConv_32nw.obj
+ 0001:000e4380       _mlib_conv5x5nw_s32        100e5380 f   mlib_ImageConv_32nw.obj
+ 0001:000e54b0       _mlib_conv7x7nw_s32        100e64b0 f   mlib_ImageConv_32nw.obj
+ 0001:000e6110       _mlib_convMxNnw_s32        100e7110 f   mlib_ImageConv_32nw.obj
+ 0001:000e8d20       _mlib_conv2x2nw_f32        100e9d20 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9140       _mlib_conv3x3nw_f32        100ea140 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9520       _mlib_conv4x4nw_f32        100ea520 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9b50       _mlib_conv5x5nw_f32        100eab50 f   mlib_ImageConv_F32nw.obj
+ 0001:000ea4e0       _mlib_convMxNnw_f32        100eb4e0 f   mlib_ImageConv_F32nw.obj
+ 0001:000ec730       _mlib_conv2x2nw_d64        100ed730 f   mlib_ImageConv_D64nw.obj
+ 0001:000ecc40       _mlib_conv3x3nw_d64        100edc40 f   mlib_ImageConv_D64nw.obj
+ 0001:000ed0f0       _mlib_conv4x4nw_d64        100ee0f0 f   mlib_ImageConv_D64nw.obj
+ 0001:000ed880       _mlib_conv5x5nw_d64        100ee880 f   mlib_ImageConv_D64nw.obj
+ 0001:000ee410       _mlib_convMxNnw_d64        100ef410 f   mlib_ImageConv_D64nw.obj
+ 0001:000f0050       _mlib_ImageXor80_aa        100f1050 f   mlib_ImageConv2x2_f.obj
+ 0001:000f0140       _mlib_ImageXor80           100f1140 f   mlib_ImageConv2x2_f.obj
+ 0001:000f01f0       _mlib_c_conv2x2nw_s16      100f11f0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f0af0       _mlib_c_conv2x2ext_s16     100f1af0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f1430       _mlib_c_conv2x2nw_u16      100f2430 f   mlib_ImageConv2x2_f.obj
+ 0001:000f1d50       _mlib_c_conv2x2ext_u16     100f2d50 f   mlib_ImageConv2x2_f.obj
+ 0001:000f26f0       _mlib_c_conv2x2nw_u8       100f36f0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f3030       _mlib_c_conv2x2ext_u8      100f4030 f   mlib_ImageConv2x2_f.obj
+ 0001:000f39f0       _mlib_ImageConvClearEdge_Fp 100f49f0 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f3ea0       _mlib_ImageConvCopyEdge_Bit 100f4ea0 f   mlib_ImageConvCopyEdge_Bit.obj
+ 0001:000f4ea0       _mlib_ImageConvClearEdge_Bit 100f5ea0 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f55f0       _mlib_ImageCopy_bit_na     100f65f0 f   mlib_ImageCopy_Bit.obj
+ 0001:000f59c0       _mlib_ImageCopy_bit_na_r   100f69c0 f   mlib_ImageCopy_Bit.obj
+ 0001:000f5d80       _mlib_ImageConvVersion     100f6d80 f   mlib_c_ImageConvVersion.obj
+ 0001:000f5e20       _mlib_malloc               100f6e20 f   mlib_sys.obj
+ 0001:000f5e40       _mlib_realloc              100f6e40 f   mlib_sys.obj
+ 0001:000f5e60       _mlib_free                 100f6e60 f   mlib_sys.obj
+ 0001:000f5e80       _mlib_memset               100f6e80 f   mlib_sys.obj
+ 0001:000f5ea0       _mlib_memcpy               100f6ea0 f   mlib_sys.obj
+ 0001:000f5ec0       _mlib_memmove              100f6ec0 f   mlib_sys.obj
+ 0001:000f5ee0       ___mlib_sincosf            100f6ee0 f   mlib_sys.obj
+ 0001:000f5f20       _mlib_ilogb                100f6f20 f   mlib_ImageUtils.obj
+ 0001:000f5fa2       _abs                       100f6fa2 f   MSVCRT:MSVCR71.dll
+ 0001:000f5fa8       _fabs                      100f6fa8 f   MSVCRT:MSVCR71.dll
+ 0001:000f5fb0       __ftol2                    100f6fb0 f   MSVCRT:ftol2.obj
+ 0001:000f6030       __alloca_probe             100f7030     MSVCRT:chkstk.obj
+ 0001:000f6030       __chkstk                   100f7030 f   MSVCRT:chkstk.obj
+ 0001:000f6070       __aullshr                  100f7070 f   MSVCRT:ullshr.obj
+ 0001:000f6090       __allshl                   100f7090 f   MSVCRT:llshl.obj
+ 0001:000f60b0       __allshr                   100f70b0 f   MSVCRT:llshr.obj
+ 0001:000f60d2       _memset                    100f70d2 f   MSVCRT:MSVCR71.dll
+ 0001:000f60d8       _memcpy                    100f70d8 f   MSVCRT:MSVCR71.dll
+ 0001:000f60de       _cos                       100f70de f   MSVCRT:MSVCR71.dll
+ 0001:000f60e4       _sin                       100f70e4 f   MSVCRT:MSVCR71.dll
+ 0001:000f60ea       __CRT_INIT@12              100f70ea f   MSVCRT:crtdll.obj
+ 0001:000f61a8       __DllMainCRTStartup@12     100f71a8 f   MSVCRT:crtdll.obj
+ 0001:000f628c       __initterm                 100f728c f   MSVCRT:MSVCR71.dll
+ 0001:000f6292       __onexit                   100f7292 f   MSVCRT:atonexit.obj
+ 0001:000f62b8       _atexit                    100f72b8 f   MSVCRT:atonexit.obj
+ 0001:000f62ca       __RTC_Initialize           100f72ca f   MSVCRT:initsect.obj
+ 0001:000f630e       __RTC_Terminate            100f730e f   MSVCRT:initsect.obj
+ 0001:000f6352       ___CppXcptFilter           100f7352 f   MSVCRT:MSVCR71.dll
+ 0001:000f6358       _DllMain@12                100f7358 f   MSVCRT:dllmain.obj
+ 0001:000f6378       __SEH_prolog               100f7378 f   MSVCRT:sehprolg.obj
+ 0001:000f63b3       __SEH_epilog               100f73b3 f   MSVCRT:sehprolg.obj
+ 0001:000f63c4       __except_handler3          100f73c4 f   MSVCRT:MSVCR71.dll
+ 0001:000f63ca       ___dllonexit               100f73ca f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DisableThreadLibraryCalls@4 100f8000     kernel32:KERNEL32.dll
+ 0002:00000004       \177KERNEL32_NULL_THUNK_DATA 100f8004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__malloc              100f8008     MSVCRT:MSVCR71.dll
+ 0002:0000000c       __imp__realloc             100f800c     MSVCRT:MSVCR71.dll
+ 0002:00000010       __imp__free                100f8010     MSVCRT:MSVCR71.dll
+ 0002:00000014       __imp__memset              100f8014     MSVCRT:MSVCR71.dll
+ 0002:00000018       __imp__memcpy              100f8018     MSVCRT:MSVCR71.dll
+ 0002:0000001c       __imp__memmove             100f801c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp__cos                 100f8020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp__fabs                100f8024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp___initterm           100f8028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp___adjust_fdiv        100f802c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp____CppXcptFilter     100f8030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp___except_handler3    100f8034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp____dllonexit         100f8038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp___onexit             100f803c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__sin                 100f8040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp__abs                 100f8044     MSVCRT:MSVCR71.dll
+ 0002:00000048       \177MSVCR71_NULL_THUNK_DATA 100f8048     MSVCRT:MSVCR71.dll
+ 0002:00000070       _mlib_AffineFunArr_nn      100f8070     mlib_ImageAffine.obj
+ 0002:000000b0       _mlib_AffineFunArr_bl      100f80b0     mlib_ImageAffine.obj
+ 0002:00000110       _mlib_AffineFunArr_bc      100f8110     mlib_ImageAffine.obj
+ 0002:00000170       _mlib_AffineFunArr_bc_i    100f8170     mlib_ImageAffine.obj
+ 0002:00000190       __real@41d0000000000000    100f8190     mlib_ImageConvKernelConvert.obj
+ 0002:00000198       __real@3ff0000000000000    100f8198     mlib_ImageConvKernelConvert.obj
+ 0002:000001a0       __real@3fe0000000000000    100f81a0     mlib_ImageConvKernelConvert.obj
+ 0002:000001a8       __real@c1e0000000000000    100f81a8     mlib_ImageConvKernelConvert.obj
+ 0002:000001b0       __real@41dfffffffc00000    100f81b0     mlib_ImageConvKernelConvert.obj
+ 0002:000001b8       __real@0000000000000000    100f81b8     mlib_ImageConvKernelConvert.obj
+ 0002:000001c0       __real@4000000000000000    100f81c0     mlib_ImageAffine_BC_S32.obj
+ 0002:000001c8       __real@4004000000000000    100f81c8     mlib_ImageAffine_BC_S32.obj
+ 0002:000001d0       __real@4008000000000000    100f81d0     mlib_ImageAffine_BC_S32.obj
+ 0002:000001d8       __real@3ef0000000000000    100f81d8     mlib_ImageAffine_BC_S32.obj
+ 0002:000001e0       __real@40000000            100f81e0     mlib_ImageAffine_BC_F32.obj
+ 0002:000001e4       __real@3f800000            100f81e4     mlib_ImageAffine_BC_F32.obj
+ 0002:000001e8       __real@40200000            100f81e8     mlib_ImageAffine_BC_F32.obj
+ 0002:000001ec       __real@40400000            100f81ec     mlib_ImageAffine_BC_F32.obj
+ 0002:000001f0       __real@3f000000            100f81f0     mlib_ImageAffine_BC_F32.obj
+ 0002:000001f8       __real@41dfe00000000000    100f81f8     mlib_c_ImageAffineIndex_BC.obj
+ 0002:00000200       _mlib_AffineFunArr_bl_i    100f8200     mlib_c_ImageAffineIndex_BL.obj
+ 0002:00000220       __real@41dfffe000000000    100f8220     mlib_ImageAffineEdge.obj
+ 0002:00000228       __real@bfe0000000000000    100f8228     mlib_ImageScanPoly.obj
+ 0002:00000230       __real@3fc0000000000000    100f8230     mlib_ImageColorTrue2Index.obj
+ 0002:00000238       _mlib_div6_tab             100f8238     mlib_ImageDivTables.obj
+ 0002:00000438       _mlib_div1_tab             100f8438     mlib_ImageDivTables.obj
+ 0002:00000638       _mlib_HSL2RGB_L2           100f8638     mlib_ImageDivTables.obj
+ 0002:00000a38       _mlib_HSL2RGB_F            100f8a38     mlib_ImageDivTables.obj
+ 0002:00000e38       _mlib_U82F32               100f8e38     mlib_ImageDivTables.obj
+ 0002:00001240       _mlib_U82D64               100f9240     mlib_ImageDivTables.obj
+ 0002:00001a48       _mlib_FlipAndFixRotateTable 100f9a48     mlib_ImageDivTables.obj
+ 0002:00002248       _mlib_filters_u8f_bc       100fa248     mlib_ImageFilters.obj
+ 0002:00003248       _mlib_filters_u8f_bc2      100fb248     mlib_ImageFilters.obj
+ 0002:00004248       _mlib_filters_s16f_bc      100fc248     mlib_ImageFilters.obj
+ 0002:00006248       _mlib_filters_s16f_bc2     100fe248     mlib_ImageFilters.obj
+ 0002:00008248       _mlib_filters_u8_bc        10100248     mlib_ImageFilters.obj
+ 0002:00008a48       _mlib_filters_u8_bc2       10100a48     mlib_ImageFilters.obj
+ 0002:00009248       _mlib_filters_s16_bc       10101248     mlib_ImageFilters.obj
+ 0002:0000a248       _mlib_filters_s16_bc2      10102248     mlib_ImageFilters.obj
+ 0002:0000b2c8       __real@40f0000000000000    101032c8     mlib_ImageConv_16ext.obj
+ 0002:0000b2d0       __real@3e10000000000000    101032d0     mlib_ImageConv_16ext.obj
+ 0002:0000b2d8       __real@41e0000000000000    101032d8     mlib_ImageConv_u16ext.obj
+ 0002:0000b2e0       __real@4170000000000000    101032e0     mlib_ImageConv_8ext.obj
+ 0002:0000b2e8       __real@4040000000000000    101032e8     mlib_c_ImageConvVersion.obj
+ 0002:0000b2f0       __real@4020000000000000    101032f0     mlib_c_ImageConvVersion.obj
+ 0002:0000b2f8       __real@40e0000000000000    101032f8     mlib_c_ImageConvVersion.obj
+ 0002:0000b300       __real@4330000000000000    10103300     mlib_ImageUtils.obj
+ 0002:0000b338       __load_config_used         10103338     MSVCRT:loadcfg.obj
+ 0002:0000b400       ___safe_se_handler_table   10103400     <linker-defined>
+ 0002:0000b404       ___rtc_iaa                 10103404     MSVCRT:initsect.obj
+ 0002:0000b408       ___rtc_izz                 10103408     MSVCRT:initsect.obj
+ 0002:0000b40c       ___rtc_taa                 1010340c     MSVCRT:initsect.obj
+ 0002:0000b410       ___rtc_tzz                 10103410     MSVCRT:initsect.obj
+ 0002:0000b414       __IMPORT_DESCRIPTOR_MSVCR71 10103414     MSVCRT:MSVCR71.dll
+ 0002:0000b428       __IMPORT_DESCRIPTOR_KERNEL32 10103428     kernel32:KERNEL32.dll
+ 0002:0000b43c       __NULL_IMPORT_DESCRIPTOR   1010343c     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    10104000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10104004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10104008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1010400c     MSVCRT:cinitexe.obj
+ 0003:000002d0       ___security_cookie         101042d0     MSVCRT:seccook.obj
+ 0003:000002d8       __adjust_fdiv              101042d8     <common>
+ 0003:000002dc       ___onexitend               101042dc     <common>
+ 0003:000002e0       ___onexitbegin             101042e0     <common>
+ 0003:000002e4       __pRawDllMain              101042e4     <common>
+
+ entry point at        0001:000f61a8
+
+ Static symbols
+
+ 0001:00000550       _mlib_ImageGetType         10001550 f   mlib_ImageAffine.obj
+ 0001:00000560       _mlib_ImageGetChannels     10001560 f   mlib_ImageAffine.obj
+ 0001:00000570       _mlib_ImageGetBitOffset    10001570 f   mlib_ImageAffine.obj
+ 0001:00000f20       _mlib_ImageGetHeight       10001f20 f   mlib_ImageCreate.obj
+ 0001:00000f30       _mlib_ImageGetStride       10001f30 f   mlib_ImageCreate.obj
+ 0001:00000f40       _mlib_ImageGetData         10001f40 f   mlib_ImageCreate.obj
+ 0001:00001f30       _mlib_ImageGetType         10002f30 f   mlib_c_ImageLookUp.obj
+ 0001:00001f40       _mlib_ImageGetChannels     10002f40 f   mlib_c_ImageLookUp.obj
+ 0001:00001f50       _mlib_ImageGetWidth        10002f50 f   mlib_c_ImageLookUp.obj
+ 0001:00001f60       _mlib_ImageGetHeight       10002f60 f   mlib_c_ImageLookUp.obj
+ 0001:00001f70       _mlib_ImageGetStride       10002f70 f   mlib_c_ImageLookUp.obj
+ 0001:00001f80       _mlib_ImageGetData         10002f80 f   mlib_c_ImageLookUp.obj
+ 0001:00001f90       _mlib_ImageGetBitOffset    10002f90 f   mlib_c_ImageLookUp.obj
+ 0001:00002070       _mlib_ImageGetType         10003070 f   mlib_ImageConvMxN.obj
+ 0001:00002730       _mlib_ImageGetChannels     10003730 f   mlib_ImageConvMxN.obj
+ 0001:00002740       _mlib_ImageGetWidth        10003740 f   mlib_ImageConvMxN.obj
+ 0001:00002750       _mlib_ImageGetHeight       10003750 f   mlib_ImageConvMxN.obj
+ 0001:0002c8a0       _mlib_ImageGetType         1002d8a0 f   mlib_ImageAffineEdge.obj
+ 0001:0002c8b0       _mlib_ImageGetChannels     1002d8b0 f   mlib_ImageAffineEdge.obj
+ 0001:0002c8c0       _mlib_ImageGetStride       1002d8c0 f   mlib_ImageAffineEdge.obj
+ 0001:00036270       _mlib_ImageGetWidth        10037270 f   mlib_ImageAffineEdge.obj
+ 0001:00036280       _mlib_ImageGetHeight       10037280 f   mlib_ImageAffineEdge.obj
+ 0001:0004d870       _mlib_ImageGetWidth        1004e870 f   mlib_ImageScanPoly.obj
+ 0001:0004d880       _mlib_ImageGetHeight       1004e880 f   mlib_ImageScanPoly.obj
+ 0001:0004d890       _mlib_ImageGetStride       1004e890 f   mlib_ImageScanPoly.obj
+ 0001:0004d8a0       _mlib_ImageGetData         1004e8a0 f   mlib_ImageScanPoly.obj
+ 0001:0004d8b0       _mlib_ImageGetPaddings     1004e8b0 f   mlib_ImageScanPoly.obj
+ 0001:0004ddf0       _mlib_ImageGetType         1004edf0 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004de00       _mlib_ImageGetChannels     1004ee00 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004de10       _mlib_ImageGetWidth        1004ee10 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004de20       _mlib_ImageGetHeight       1004ee20 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004de30       _mlib_ImageGetStride       1004ee30 f   mlib_ImageColorTrue2Index.obj
+ 0001:0004de40       _mlib_ImageGetData         1004ee40 f   mlib_ImageColorTrue2Index.obj
+ 0001:0009a630       _mlib_ImageGetType         1009b630 f   mlib_c_ImageCopy.obj
+ 0001:0009a640       _mlib_ImageGetChannels     1009b640 f   mlib_c_ImageCopy.obj
+ 0001:0009a650       _mlib_ImageGetWidth        1009b650 f   mlib_c_ImageCopy.obj
+ 0001:0009a660       _mlib_ImageGetHeight       1009b660 f   mlib_c_ImageCopy.obj
+ 0001:0009a670       _mlib_ImageGetStride       1009b670 f   mlib_c_ImageCopy.obj
+ 0001:0009a680       _mlib_ImageGetData         1009b680 f   mlib_c_ImageCopy.obj
+ 0001:0009a690       _mlib_ImageGetBitOffset    1009b690 f   mlib_c_ImageCopy.obj
+ 0001:0009a6a0       _mlib_ImageIsNotAligned8   1009b6a0 f   mlib_c_ImageCopy.obj
+ 0001:0009a6b0       _mlib_ImageIsNotOneDvector 1009b6b0 f   mlib_c_ImageCopy.obj
+ 0001:0009a980       _mlib_c_ImageCopy_u8       1009b980 f   mlib_c_ImageCopy.obj
+ 0001:0009ac90       _mlib_c_ImageCopy_s16      1009bc90 f   mlib_c_ImageCopy.obj
+ 0001:0009afd0       _mlib_c_ImageCopy_s32      1009bfd0 f   mlib_c_ImageCopy.obj
+ 0001:0009b2a0       _mlib_c_ImageCopy_d64      1009c2a0 f   mlib_c_ImageCopy.obj
+ 0001:0009b3b0       _mlib_c_ImageCopy_a1       1009c3b0 f   mlib_c_ImageCopy.obj
+ 0001:0009c3f0       _mlib_ImageGetChannels     1009d3f0 f   mlib_ImageConv_16ext.obj
+ 0001:0009c400       _mlib_ImageGetWidth        1009d400 f   mlib_ImageConv_16ext.obj
+ 0001:0009c410       _mlib_ImageGetHeight       1009d410 f   mlib_ImageConv_16ext.obj
+ 0001:0009c420       _mlib_ImageGetStride       1009d420 f   mlib_ImageConv_16ext.obj
+ 0001:0009c430       _mlib_ImageGetData         1009d430 f   mlib_ImageConv_16ext.obj
+ 0001:000a3750       _mlib_ImageConv1xN_ext     100a4750 f   mlib_ImageConv_16ext.obj
+ 0001:000a8080       _mlib_ImageGetChannels     100a9080 f   mlib_ImageConv_u16ext.obj
+ 0001:000a8090       _mlib_ImageGetWidth        100a9090 f   mlib_ImageConv_u16ext.obj
+ 0001:000a80a0       _mlib_ImageGetHeight       100a90a0 f   mlib_ImageConv_u16ext.obj
+ 0001:000a80b0       _mlib_ImageGetStride       100a90b0 f   mlib_ImageConv_u16ext.obj
+ 0001:000a80c0       _mlib_ImageGetData         100a90c0 f   mlib_ImageConv_u16ext.obj
+ 0001:000af570       _mlib_ImageConv1xN_ext     100b0570 f   mlib_ImageConv_u16ext.obj
+ 0001:000b3550       _mlib_ImageGetChannels     100b4550 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3560       _mlib_ImageGetWidth        100b4560 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3570       _mlib_ImageGetHeight       100b4570 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3580       _mlib_ImageGetStride       100b4580 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3590       _mlib_ImageGetData         100b4590 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b35a0       _mlib_ImageConvMxNMulAdd_S32 100b45a0 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b36e0       _mlib_ImageConvMxNMedian_S32 100b46e0 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3770       _mlib_ImageConvMxNS322S32_ext 100b4770 f   mlib_ImageConvMxN_ext.obj
+ 0001:000b3890       _mlib_ImageGetType         100b4890 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3b70       _mlib_ImageGetChannels     100b4b70 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3b80       _mlib_ImageGetWidth        100b4b80 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3b90       _mlib_ImageGetHeight       100b4b90 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3ba0       _mlib_ImageGetStride       100b4ba0 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3bb0       _mlib_ImageGetData         100b4bb0 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3bc0       _mlib_ImageConvMxNMulAdd_F32 100b4bc0 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b3e40       _mlib_ImageConvMxNF322F32_ext 100b4e40 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b41b0       _mlib_ImageConvMxNMulAdd_D64 100b51b0 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b4480       _mlib_ImageConvMxND642D64_ext 100b5480 f   mlib_ImageConvMxN_Fp.obj
+ 0001:000b53a0       _mlib_ImageGetChannels     100b63a0 f   mlib_ImageConv_8ext.obj
+ 0001:000b53b0       _mlib_ImageGetWidth        100b63b0 f   mlib_ImageConv_8ext.obj
+ 0001:000b53c0       _mlib_ImageGetHeight       100b63c0 f   mlib_ImageConv_8ext.obj
+ 0001:000b53d0       _mlib_ImageGetStride       100b63d0 f   mlib_ImageConv_8ext.obj
+ 0001:000b53e0       _mlib_ImageGetData         100b63e0 f   mlib_ImageConv_8ext.obj
+ 0001:000bd980       _mlib_ImageConv1xN_ext     100be980 f   mlib_ImageConv_8ext.obj
+ 0001:000c1c10       _mlib_ImageGetType         100c2c10 f   mlib_ImageClipping.obj
+ 0001:000c1c20       _mlib_ImageGetChannels     100c2c20 f   mlib_ImageClipping.obj
+ 0001:000c1c30       _mlib_ImageGetWidth        100c2c30 f   mlib_ImageClipping.obj
+ 0001:000c1c40       _mlib_ImageGetHeight       100c2c40 f   mlib_ImageClipping.obj
+ 0001:000c2730       _mlib_ImageGetType         100c3730 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2740       _mlib_ImageGetChannels     100c3740 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2750       _mlib_ImageGetWidth        100c3750 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2760       _mlib_ImageGetHeight       100c3760 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2770       _mlib_ImageGetStride       100c3770 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2780       _mlib_ImageGetData         100c3780 f   mlib_c_ImageConvCopyEdge.obj
+ 0001:000c2e00       _mlib_ImageGetType         100c3e00 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2e10       _mlib_ImageGetChannels     100c3e10 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2e20       _mlib_ImageGetWidth        100c3e20 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2e30       _mlib_ImageGetHeight       100c3e30 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2e40       _mlib_ImageGetStride       100c3e40 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c2e50       _mlib_ImageGetData         100c3e50 f   mlib_c_ImageConvClearEdge.obj
+ 0001:000c3bb0       _mlib_ImageGetChannels     100c4bb0 f   mlib_ImageConv_8nw.obj
+ 0001:000c3bc0       _mlib_ImageGetWidth        100c4bc0 f   mlib_ImageConv_8nw.obj
+ 0001:000c3bd0       _mlib_ImageGetHeight       100c4bd0 f   mlib_ImageConv_8nw.obj
+ 0001:000c3be0       _mlib_ImageGetStride       100c4be0 f   mlib_ImageConv_8nw.obj
+ 0001:000c3bf0       _mlib_ImageGetData         100c4bf0 f   mlib_ImageConv_8nw.obj
+ 0001:000cadb0       _mlib_ImageConv1xN         100cbdb0 f   mlib_ImageConv_8nw.obj
+ 0001:000cec10       _mlib_ImageGetChannels     100cfc10 f   mlib_ImageConv_16nw.obj
+ 0001:000cec20       _mlib_ImageGetWidth        100cfc20 f   mlib_ImageConv_16nw.obj
+ 0001:000cec30       _mlib_ImageGetHeight       100cfc30 f   mlib_ImageConv_16nw.obj
+ 0001:000cec40       _mlib_ImageGetStride       100cfc40 f   mlib_ImageConv_16nw.obj
+ 0001:000cec50       _mlib_ImageGetData         100cfc50 f   mlib_ImageConv_16nw.obj
+ 0001:000d4eb0       _mlib_ImageConv1xN         100d5eb0 f   mlib_ImageConv_16nw.obj
+ 0001:000d8dd0       _mlib_ImageGetChannels     100d9dd0 f   mlib_ImageConv_u16nw.obj
+ 0001:000d8de0       _mlib_ImageGetWidth        100d9de0 f   mlib_ImageConv_u16nw.obj
+ 0001:000d8df0       _mlib_ImageGetHeight       100d9df0 f   mlib_ImageConv_u16nw.obj
+ 0001:000d8e00       _mlib_ImageGetStride       100d9e00 f   mlib_ImageConv_u16nw.obj
+ 0001:000d8e10       _mlib_ImageGetData         100d9e10 f   mlib_ImageConv_u16nw.obj
+ 0001:000df220       _mlib_ImageConv1xN         100e0220 f   mlib_ImageConv_u16nw.obj
+ 0001:000e2cd0       _mlib_ImageGetChannels     100e3cd0 f   mlib_ImageConv_32nw.obj
+ 0001:000e2ce0       _mlib_ImageGetWidth        100e3ce0 f   mlib_ImageConv_32nw.obj
+ 0001:000e2cf0       _mlib_ImageGetHeight       100e3cf0 f   mlib_ImageConv_32nw.obj
+ 0001:000e2d00       _mlib_ImageGetStride       100e3d00 f   mlib_ImageConv_32nw.obj
+ 0001:000e2d10       _mlib_ImageGetData         100e3d10 f   mlib_ImageConv_32nw.obj
+ 0001:000e7e40       _mlib_ImageConv1xN         100e8e40 f   mlib_ImageConv_32nw.obj
+ 0001:000e90f0       _mlib_ImageGetChannels     100ea0f0 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9100       _mlib_ImageGetWidth        100ea100 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9110       _mlib_ImageGetHeight       100ea110 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9120       _mlib_ImageGetStride       100ea120 f   mlib_ImageConv_F32nw.obj
+ 0001:000e9130       _mlib_ImageGetData         100ea130 f   mlib_ImageConv_F32nw.obj
+ 0001:000ebb70       _mlib_ImageConv1xN         100ecb70 f   mlib_ImageConv_F32nw.obj
+ 0001:000ecbf0       _mlib_ImageGetChannels     100edbf0 f   mlib_ImageConv_D64nw.obj
+ 0001:000ecc00       _mlib_ImageGetWidth        100edc00 f   mlib_ImageConv_D64nw.obj
+ 0001:000ecc10       _mlib_ImageGetHeight       100edc10 f   mlib_ImageConv_D64nw.obj
+ 0001:000ecc20       _mlib_ImageGetStride       100edc20 f   mlib_ImageConv_D64nw.obj
+ 0001:000ecc30       _mlib_ImageGetData         100edc30 f   mlib_ImageConv_D64nw.obj
+ 0001:000ef480       _mlib_ImageConv1xN         100f0480 f   mlib_ImageConv_D64nw.obj
+ 0001:000f0aa0       _mlib_ImageGetChannels     100f1aa0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f0ab0       _mlib_ImageGetWidth        100f1ab0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f0ac0       _mlib_ImageGetHeight       100f1ac0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f0ad0       _mlib_ImageGetStride       100f1ad0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f0ae0       _mlib_ImageGetData         100f1ae0 f   mlib_ImageConv2x2_f.obj
+ 0001:000f3e40       _mlib_ImageGetType         100f4e40 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f3e50       _mlib_ImageGetChannels     100f4e50 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f3e60       _mlib_ImageGetWidth        100f4e60 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f3e70       _mlib_ImageGetHeight       100f4e70 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f3e80       _mlib_ImageGetStride       100f4e80 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f3e90       _mlib_ImageGetData         100f4e90 f   mlib_ImageConvClearEdge_Fp.obj
+ 0001:000f4e50       _mlib_ImageGetWidth        100f5e50 f   mlib_ImageConvCopyEdge_Bit.obj
+ 0001:000f4e60       _mlib_ImageGetHeight       100f5e60 f   mlib_ImageConvCopyEdge_Bit.obj
+ 0001:000f4e70       _mlib_ImageGetStride       100f5e70 f   mlib_ImageConvCopyEdge_Bit.obj
+ 0001:000f4e80       _mlib_ImageGetData         100f5e80 f   mlib_ImageConvCopyEdge_Bit.obj
+ 0001:000f4e90       _mlib_ImageGetBitOffset    100f5e90 f   mlib_ImageConvCopyEdge_Bit.obj
+ 0001:000f5580       _mlib_ImageGetType         100f6580 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f5590       _mlib_ImageGetChannels     100f6590 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f55a0       _mlib_ImageGetWidth        100f65a0 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f55b0       _mlib_ImageGetHeight       100f65b0 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f55c0       _mlib_ImageGetStride       100f65c0 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f55d0       _mlib_ImageGetData         100f65d0 f   mlib_ImageConvClearEdge_Bit.obj
+ 0001:000f55e0       _mlib_ImageGetBitOffset    100f65e0 f   mlib_ImageConvClearEdge_Bit.obj

@@ -1,0 +1,573 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:48:04">
+<title>Creating and Configuring Access Control Lists</title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>Creating and Configuring Access Control Lists</b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="acwsl.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="accorba.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="874809">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating and Configuring Access Control Lists</font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">An <em>access control list</em> (ACL) is a list that specifies who and what is authorized to access BEA Tuxedo system objects. The ACL enables a system manager to administer security through authenticating users, setting permissions, and controlling access. The BEA Tuxedo Administration Console ACL objects allow the system manager to create and configure ACL objects. These objects are grouped into the following major categories:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#870471">ACL Groups</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#877167">Creating ACL Groups</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#879772">Configuring ACL Groups (T_ACLGROUP Class)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#873645">ACL Principals</a> (users or domains)</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#894785">Creating ACL Principals</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518216">Configuring ACL Principals (T_ACLPRINCIPAL Class)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#874334">ACLs</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#872302">Creating ACLs</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#889917">Configuring ACLs (T_ACLPERM Class)</a></font><p> </p>
+
+<p></ul></ul><p>
+<a name="870471"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">ACL Groups
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The ACL Groups represent the groups of BEA Tuxedo application users and domains.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_ACLGROUP"></a> </p>
+<a name="877167"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="877167"></a>Creating ACL Groups
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new ACL Groups:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the ACL Groups folder in the tree view.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu --&gt;New (right-click) to display the New Object window. 
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the following fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518186">Group Name (TA_GROUPNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518209">Group ID (TA_GROUPID)</a> (optional)</font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the Create button to close the window and create the new ACL group.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_ACLGROUP"></a></p>
+<a name="879772"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="879772"></a>Configuring ACL Groups (T_ACLGROUP Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To configure ACL Groups, choose an ACL Groups object in the tree view. Enter values for the fields in the General tab displayed in the Configuration Tool pane.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_ACLGROUP"></a> </p>
+<a name="878824"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page lists the ACL Groups Class attributes and includes the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518186">Group Name (TA_GROUPNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518209">Group ID (TA_GROUPID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518211">Object State (TA_STATE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13041"></a> <a name="12379"></a> </p>
+<a name="518186"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Name (TA_GROUPNAME) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518175"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Logical name of an ACL group. An ACL group is a set of users characterized by the type of permission to access particular administrative objects, such as services.</p><!--<div align="right">-->
+<a name="518179"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of one to 30 characters. The group name must be printable and it may not include a pound sign (#), a comma, a colon, or a newline character.</p><!--<div align="right">-->
+<a name="518183"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">banktellers</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13084"></a> <a name="12377"></a> </p>
+<a name="518209"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group ID (TA_GROUPID) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518190"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A decimal number representing the ACL group specified in the <a href="acacls.htm#518186">Group Name (TA_GROUPNAME)</a>. A value of <font face="Courier">0</font> indicates the default group <font face="Courier">other</font>. If not specified at creation time, it defaults to the next available (unique) identifier greater than <font face="Courier">0</font>. </p><!--<div align="right">-->
+<a name="518194"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than 0 but less than 16,384.</p><!--<div align="right">-->
+<a name="518198"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A unique ID number is assigned.</p><!--<div align="right">-->
+<a name="518202"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">201</font></p><!--<div align="right">-->
+<a name="518206"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font> is reserved for a group named <font face="Courier">other</font> which is provided by BEA Tuxedo. (You can add users to this group but you cannot modify or delete the group.)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12378"></a> </p>
+<a name="518211"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="885580"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of your ACL group. An ACL group may be in only one state: <font face="Courier">VALID</font>.</p>
+<a name="873645"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">ACL Principals
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The users and remote domains in an application that need authentication and authorization are collectively known as <em>principals</em>. To join an application as a specific user, it is necessary to present a user-specific password.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_ACLPRINCIPAL"></a> </p>
+<a name="894785"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="894785"></a>Creating ACL Principals
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new ACL Principals:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the ACL Principals folder in the tree view.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu --&gt;New (right-click) to display the New Object window. 
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the following fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518242">Principal Name (TA_PRINNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518328">Password (TA_PRINPASSWD)</a> (optional)</font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the Create button to close the window and create the new ACL principals.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The rest of this section describes the fields on the Create New Object window.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_ACLPRINCIPAL"></a> </p>
+<a name="518216"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Configuring ACL Principals (T_ACLPRINCIPAL Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To configure ACL Principals, choose an ACL Principals object in the tree view. Enter values for the fields in the Configuration Tool General tab page.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_ACLPRINCIPAL"></a> </p>
+<a name="874290"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page lists the ACL Principals Class attributes and includes the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518242">Principal Name (TA_PRINNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#889685">Principal Client Name (TA_PRINCLTNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518286">Principal ID (TA_PRINID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#882820">Principal Group (TA_PRINGRP)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518328">Password (TA_PRINPASSWD)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518330">Object State (TA_STATE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13044"></a> <a name="12388"></a> </p>
+<a name="518242"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Principal Name (TA_PRINNAME) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518230"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Logical name of a principal. A principal is a user or domain that can access a BEA Tuxedo application. </p><!--<div align="right">-->
+<a name="518234"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string from 1 to 30 characters in length.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The principal name must be printable and it cannot contain a pound sign (#), a colon, or a newline character.</p><!--<div align="right">-->
+<a name="518239"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">bill_jones</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12387"></a> </p>
+<a name="889685"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Principal Client Name (TA_PRINCLTNAME) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518246"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The client name associated with a principal (that is, a user or domain that can access a BEA Tuxedo application). The client name provides a further qualifier on the user entry that is checked for authentication.</p><!--<div align="right">-->
+<a name="518250"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string from 1 to 30 characters in length.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The client name must be printable and it cannot contain a colon or a newline character. </p><!--<div align="right">-->
+<a name="518255"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">*</font> (wildcard character)</p><!--<div align="right">-->
+<a name="518259"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">tpsysusr</font> (logs you in as the BEA Tuxedo application administrator)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">typsysop</font> (logs you in as the BEA Tuxedo application operator)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12385"></a> </p>
+<a name="518286"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Principal ID (TA_PRINID) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518267"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A unique identification number for an ACL principal.</p><!--<div align="right">-->
+<a name="518271"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 1 to 131,071 inclusive.</p><!--<div align="right">-->
+<a name="518275"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A unique ID number is assigned.</p><!--<div align="right">-->
+<a name="518279"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">2001</font></p><!--<div align="right">-->
+<a name="518283"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">BEA Tuxedo reserves principal client names for the administrator and operator of a Tuxedo application. The name <font face="Courier">tpsysadm</font> logs in the associated user as the administrator; <font face="Courier">tpsysop</font> logs in the associated user as the operator. If you plan to use either of these names, be sure to specify it in this field. If you do not, authentication will fail and the designated user will not be able to log in as the administrator (or operator).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12384"></a> </p>
+<a name="882820"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Principal Group (TA_PRINGRP) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="670968"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A group ID number that specifies the group to which a principal belongs. A value of <font face="Courier">0 </font>indicates the default group <font face="Courier">other</font>. If not specified at creation time, the default value <font face="Courier">0</font> is assigned.</p><!--<div align="right">-->
+<a name="518294"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 0 to 16,383 inclusive.</p><!--<div align="right">-->
+<a name="518298"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font> (assigned to group <font face="Courier">other</font>)</p><!--<div align="right">-->
+<a name="518302"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">201</font></p><!--<div align="right">-->
+<a name="518306"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">0 is reserved for a group named <font face="Courier">other</font> which is provided by BEA Tuxedo. If you do not assign principals to a group, they will be assigned, by default, to group <font face="Courier">other</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13076"></a> <a name="12389"></a> </p>
+<a name="518328"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Password (TA_PRINPASSWD)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518313"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The authentication password for the associated ACL principal. </p><!--<div align="right">-->
+<a name="518317"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string.</p><!--<div align="right">-->
+<a name="518321"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">obi1kenobi</font></p><!--<div align="right">-->
+<a name="518325"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The system automatically encrypts this password.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12386"></a> </p>
+<a name="518330"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="886298"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of your ACL principal. An ACL principal may be in only one state: <font face="Courier">VALID</font>.</p>
+<a name="874334"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">ACLs
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The ACLs, as a whole, comprise the principals and access control lists for BEA Tuxedo applications services, application queues, and events. The ACLs indicate what groups are allowed to access BEA Tuxedo system entities.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_ACLPERM"></a> </p>
+<a name="872302"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="872302"></a>Creating ACLs
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new ACLs:</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select the ACLs folder in the tree view.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu --&gt;New (right-click) to display the New Object window. 
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the following fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#890102">ACL Entity Name (TA_ACLNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#892099">ACL Entity Type (TA_ACLTYPE)</a> (optional)</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518394">Groups (TA_ACLGROUPIDS)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click the Create button to close the window and create the new ACL group.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_ACLPERM></a></p>
+<a name="889917"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="889917"></a>Configuring ACLs (T_ACLPERM Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool pane displays one General tab page with the fields for configuring ACLs.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_ACLPERM></a> </p>
+<a name="891754"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page lists the ACLs Class attributes and include the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#890102">ACL Entity Name (TA_ACLNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#892099">ACL Entity Type (TA_ACLTYPE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#518394">Groups (TA_ACLGROUPIDS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acacls.htm#886324">Object State (TA_STATE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13042"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12382"></a> </p>
+<a name="890102"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">ACL Entity Name (TA_ACLNAME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518347"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name of a service, event or queue (referred to, collectively, as an "entity") for which permissions are being granted. </p><!--<div align="right">-->
+<a name="518351"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string from 1 to 30 characters in length.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The ACL entity name must be printable and it cannot contain a colon, a pound sign (#), or a newline character.</p><!--<div align="right">-->
+<a name="518356"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">TRANSFER</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13043"></a> <a name="12383"></a> </p>
+<a name="892099"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">ACL Entity Type (TA_ACLTYPE) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="881809"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The type of the entity for which permissions are being granted.</p><!--<div align="right">-->
+<a name="881811"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">ENQ</font> or <font face="Courier">DEQ</font> or <font face="Courier">SERVICE</font> or <font face="Courier">POSTEVENT</font></p><!--<div align="right">-->
+<a name="881813"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">SERVICE</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13083"></a> <a name="12381"></a> </p>
+<a name="518394"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Groups (TA_ACLGROUPIDS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="518378"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A comma-separated list of numeric IDs for groups that are permitted access to the associated entity. </p><!--<div align="right">-->
+<a name="518382"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The length of this list is limited only by the amount of disk space on the machine.</p><!--<div align="right">-->
+<a name="518387"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">201, 301</font></p><!--<div align="right">-->
+<a name="877347"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The values in this list are the Group ID numbers you entered for the relevant ACL groups on the General tab page for the ACL Groups class. See <a href="acacls.htm#518209">Group ID (TA_GROUPID)</a>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12380"><a> </p>
+<a name="886324"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="886328"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of your ACL. An ACL may be in only one state: <font face="Courier">VALID</font>.</p>
+
+<p>
+  <a href="acwsl.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="accorba.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

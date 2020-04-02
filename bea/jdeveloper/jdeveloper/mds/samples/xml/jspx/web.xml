@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+    <description>
+      Example XML which can be used to test MDS integration against a non-Oracle JSP
+      engine, such as Resin.
+      MODIFIED (MM/DD/YY)
+      dklein    09/06/05 - dklein_nonorajsp04
+      dklein    08/03/05 - Created
+    </description>
+    <display-name>JSPX MDS</display-name>
+
+   <filter>
+        <filter-name>DummyFilter</filter-name>
+        <filter-class>oracle.mds.samples.DummyFilter</filter-class>
+        <init-param>
+             <!-- Set the following to your %ADE_VIEW_ROOT%\jtmds\src\samples\xml -->
+             <param-name>mds-doc</param-name>
+             <param-value>D:\ADE\dklein_jdev036\jtmds\src\samples\xml</param-value>
+        </init-param>
+    </filter>
+
+    <filter>
+        <filter-name>NonOraJSPFilter</filter-name>
+        <filter-class>oracle.mds.jsp.NonOraJSPFilter</filter-class>
+        <init-param>
+             <!-- Set the following to the parent directory for JSP source files -->
+             <param-name>jspSourceDir</param-name>
+             <param-value>D:\Program Files\Resin\resin-pro-3.0.14\webapps\ROOT</param-value>
+        </init-param>
+    </filter> 
+
+
+    <filter-mapping>
+        <filter-name>DummyFilter</filter-name>
+        <url-pattern>/jspx/basic.jspx</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+      <filter-name>NonOraJSPFilter</filter-name>
+      <url-pattern>/jspx/basic.jspx</url-pattern>
+    </filter-mapping>
+
+</web-app>
+

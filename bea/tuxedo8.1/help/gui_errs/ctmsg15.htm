@@ -1,0 +1,716 @@
+<!-- .if n .pH errman.h.ctmsg15.htm @(#)ctmsg15.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1500-1599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1569"></A>
+<H3>CMDTUX MESSAGE #1569</H3>
+<H2> ERROR: Unable to decompress message due to memory allocation failure, size <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+or
+realloc ()
+failed while
+attempting to decompress a system message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1570"></A>
+<H3>CMDTUX MESSAGE #1570</H3>
+<H2> ERROR: Failed to decompress system message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Decompression of a system message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Turn off data compression for the application
+through the variable
+TMCMPLIMIT
+in the
+ENVFILE ,
+and report the failure to your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1573"></A>
+<H3>CMDTUX MESSAGE #1573</H3>
+<H2> ERROR: Illegal arguments for send to TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a remote
+tagent ,
+invalid arguments were passed to the internal function.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1574"></A>
+<H3>CMDTUX MESSAGE #1574</H3>
+<H2> ERROR: Memory allocation error for TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending a message to a remote
+tagent
+(on
+<I>machine</I>)
+an attempt dynamically to allocate memory
+using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1575"></A>
+<H3>CMDTUX MESSAGE #1575</H3>
+<H2> ERROR: Memory allocation error for TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending a message to a remote
+tagent
+(on
+<I>machine</I>),
+an attempt dynamically to allocate memory using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1576"></A>
+<H3>CMDTUX MESSAGE #1576</H3>
+<H2> ERROR: No NLS available for remote machine <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a remote
+tagent ,
+the program was unable to contact the
+tlisten
+process on the remote
+<I>machine</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Start the
+tlisten
+process on the remote
+<I>machine</I>
+using the proper
+NLSADDR
+value that was specified in the
+TUXCONFIG
+file.
+Check that the networking is available from the local
+to remote machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1577"></A>
+<H3>CMDTUX MESSAGE #1577</H3>
+<H2> ERROR: Could not open device <I>device_name</I> for contacting NLS on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+the connection failed because the program could not
+open the specified device,
+<I>device_name</I>.
+The device name is taken from the
+BRIDGE
+parameter in the
+TUXCONFIG
+file for the local machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the correct
+BRIDGE
+value is specified for the network device for connections between
+the local machine and the remote machine.
+Also check that the operating system parameters are set correctly
+for networking.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1578"></A>
+<H3>CMDTUX MESSAGE #1578</H3>
+<H2> ERROR: Could not contact NLS on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a remote
+tagent ,
+the program was unable to contact the
+tlisten
+process on the remote
+<I>machine</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Start the
+tlisten
+process on the remote
+<I>machine</I>
+using the proper
+NLSADDR
+value that was specified in the
+TUXCONFIG
+file.
+Check that the networking is available from the local machine
+to the remote machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1579"></A>
+<H3>CMDTUX MESSAGE #1579</H3>
+<H2> ERROR: Network error contacting NLS on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a remote
+tagent ,
+the program was unable to contact the
+tlisten
+process on the remote
+<I>machine</I>
+because of a networking error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the networking is available from the local machine
+to the remote machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1580"></A>
+<H3>CMDTUX MESSAGE #1580</H3>
+<H2> ERROR: NLS request message for <I>machine</I> not interpretable</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+the program was unable to interpret the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1581"></A>
+<H3>CMDTUX MESSAGE #1581</H3>
+<H2> ERROR: NLS request service code <I>code_val</I> unknown on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+the requested
+NLS
+service was not recognized.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the specified service is
+CHECKALIVE ,
+then a later release is contacting an earlier release of the
+tlisten
+process and this message can be ignored.
+Otherwise, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1582"></A>
+<H3>CMDTUX MESSAGE #1582</H3>
+<H2> ERROR: Service code <I>code_val</I> currently disabled on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+the requested
+NLS
+service was available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1583"></A>
+<H3>CMDTUX MESSAGE #1583</H3>
+<H2> ERROR: Unknown error during NLS request to <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+an unknown error occurred.
+Normally, this indicates that the remote machine became unavailable
+after the initial connection (that is, the network or machine failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the problem and execute the program again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1584"></A>
+<H3>CMDTUX MESSAGE #1584</H3>
+<H2> ERROR: Unknown error during NLS request to <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+an unknown error occurred.
+Normally, this indicates that the remote machine became unavailable
+after the initial connection (that is, the network or machine failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the problem and execute the program again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1585"></A>
+<H3>CMDTUX MESSAGE #1585</H3>
+<H2> ERROR: Memory allocation error encoding request for TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While encoding a message for a remote
+TAGENT
+on the specified
+<I>machine</I>,
+an attempt to dynamically allocate memory from the operating
+system using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in a UNIX reference manual,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1586"></A>
+<H3>CMDTUX MESSAGE #1586</H3>
+<H2> ERROR: Could not encode TAGENT msg for <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While encoding a message for a remote
+TAGENT
+on the specified
+<I>machine</I>,
+the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1587"></A>
+<H3>CMDTUX MESSAGE #1587</H3>
+<H2> ERROR: Could not encode TAGENT msg for <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While encoding a message for a remote
+TAGENT
+on the specified
+<I>machine</I>,
+the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1588"></A>
+<H3>CMDTUX MESSAGE #1588</H3>
+<H2> ERROR: Error sending to TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When sending a message to a
+tagent
+on a remote
+<I>machine</I>,
+an error occurred.
+Normally, this indicates that the remote machine became unavailable
+after the initial connection (that is, the network or machine failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the problem and execute the program again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1589"></A>
+<H3>CMDTUX MESSAGE #1589</H3>
+<H2> ERROR: Memory allocation error receiving reply from TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a message from a remote
+TAGENT
+on the specified
+<I>machine</I>,
+an attempt to dynamically allocate memory from the operating
+system using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in a UNIX System reference manual,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1590"></A>
+<H3>CMDTUX MESSAGE #1590</H3>
+<H2> ERROR: Unknown network error receiving reply from TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When receiving a message to a
+tagent
+on a remote
+<I>machine</I>,
+an unknown network error occurred.
+Normally, this indicates that the remote machine became unavailable
+after the initial connection (that is, the network or machine failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the problem and execute the program again.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1591"></A>
+<H3>CMDTUX MESSAGE #1591</H3>
+<H2> ERROR: Memory allocation error receiving reply from TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a reply message from a remote
+TAGENT
+on the specified
+<I>machine</I>,
+an attempt to dynamically allocate memory from the operating
+system using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in a UNIX System reference manual,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1592"></A>
+<H3>CMDTUX MESSAGE #1592</H3>
+<H2> ERROR: Error decoding reply from TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While decoding a message reply from a remote
+TAGENT
+on the specified
+<I>machine</I>,
+the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1593"></A>
+<H3>CMDTUX MESSAGE #1593</H3>
+<H2> ERROR: Error decoding reply from TAGENT on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While decoding a message from a remote
+TAGENT
+on the specified
+<I>machine</I>,
+the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1594"></A>
+<H3>CMDTUX MESSAGE #1594</H3>
+<H2> ERROR: Cannot find master without BB</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to find the acting
+MASTER
+machine, that is, the machine where the
+DBBL
+is currently running, by a process that has not
+yet joined the application as a client or server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1595"></A>
+<H3>CMDTUX MESSAGE #1595</H3>
+<H2> ERROR: Unable to register process - semctl failure; errno = <I>err_number,</I> key = <I>ipc_key</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While in the process of registering an entry in the Bulletin Board, a
+semaphore operation was required in order to set the process ID of the
+registering process in the semaphore.
+This semaphore operation, performed using semctl(2), failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1596"></A>
+<H3>CMDTUX MESSAGE #1596</H3>
+<H2> ERROR: Unable to get space for unregister request - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was unable to allocate space to create a
+message to unregister with the DBBL process.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The tpalloc(3)
+manual page lists the specific reasons why
+tpalloc
+may fail.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc (3)
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1597"></A>
+<H3>CMDTUX MESSAGE #1597</H3>
+<H2> ERROR: Unable to unregister - remote procedure call failure - can't send request - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was unable to unregister with the DBBL process
+because the remote procedure call to perform the unregister operation
+failed.
+The nature of the failure is indicated by
+<I>errmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other messages indicating the reason for the
+failure.  The DBBL will detect that the process has gone away
+and clean up the entry during a later sanity check.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1598"></A>
+<H3>CMDTUX MESSAGE #1598</H3>
+<H2> ERROR: Unable to register - another DBBL already exists on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was unable to unregister the DBBL process
+because another DBBL was found to have been booted already.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1599"></A>
+<H3>CMDTUX MESSAGE #1599</H3>
+<H2> ERROR: Unable to register process - semctl err - errno = <I>errno,</I> key = <I>ipc_key</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While in the process of registering the DBBL process in the Bulletin Board, a
+semaphore operation was required in order to set the process ID of the
+DBBL in the semaphore.
+This semaphore operation, performed using semctl(2), failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

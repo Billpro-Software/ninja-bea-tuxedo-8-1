@@ -1,0 +1,6096 @@
+<TITLE>LIBGWO MESSAGES - RELEASE 5.0</TITLE>
+<SECT1><P>
+<BODY BGCOLOR="#FFFFFF">
+<H1>LIBGWO MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>LIBGWO MESSAGE #1000</H3>
+<H2> ERROR: Tried to write more than maxlen:len=<I>number</I>, maxlen=<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The amount of blob data left to be logged exceeds the
+amount that was specified as the maximum data length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>LIBGWO MESSAGE #1100</H3>
+<H2> ERROR: Unable to obtain ldom info from shm</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Accessing the DMCONFIG DM_LOCAL_DOMAINS information in
+shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>LIBGWO MESSAGE #1101</H3>
+<H2> ERROR: Unable to obtain ositp info from ldom</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Accessing the DMCONFIG DM_OSITP information in shared memory
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3>LIBGWO MESSAGE #1102</H3>
+<H2> ERROR: Unable to obtain svc info from svcinfo</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Accessing the DMCONFIG DM_REMOTE_SERVICES information in
+shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>LIBGWO MESSAGE #1104</H3>
+<H2> ERROR: Open fd failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The opening of a communications file descriptor failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1105"></A>
+<H3>LIBGWO MESSAGE #1105</H3>
+<H2> ERROR: AP_CNTX_NAME <I>app_context_name</I> not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application context name specified by <I>app_context_name</I>
+is not XATMI or UDT.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the DMCONFIG file for an incorrect ACN specification
+for the local domain.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1106"></A>
+<H3>LIBGWO MESSAGE #1106</H3>
+<H2> ERROR: Set CNTX_NAME failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the application context name in the OSITP
+environment failed. The reason is noted in the
+ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>LIBGWO MESSAGE #1107</H3>
+<H2> ERROR: Set BIND_TPADDR failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the TPADDR bind address in the OSITP
+environment failed. The reason is noted in the
+ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>LIBGWO MESSAGE #1108</H3>
+<H2> ERROR: Bind BIND_TPADDR failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Binding to the TPADDR bind address failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the DMCONFIG file for an incorrect specification of
+the APT, AEQ, APID or AEID for the local domain.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>LIBGWO MESSAGE #1109</H3>
+<H2> ERROR: Unable to obtain local domainid info from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Accessing the DOMAIN ID information in shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>LIBGWO MESSAGE #1110</H3>
+<H2> ERROR: Unable to set nettxid in shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Adding the Transaction Id information to the shared memory
+transaction table failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>LIBGWO MESSAGE #1111</H3>
+<H2> ERROR: Cannot associate with network transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The domainid could not be
+associated with the transaction GTRID in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1112"></A>
+<H3>LIBGWO MESSAGE #1112</H3>
+<H2> ERROR: Set of TTNID failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the TTNID in the OSITP environment failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1113"></A>
+<H3>LIBGWO MESSAGE #1113</H3>
+<H2> ERROR: Send of AP_TP_BEGIN_DIALOGUE_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the AP_TP_BEGIN_DIALOGUE_REQ primitive failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1114"></A>
+<H3>LIBGWO MESSAGE #1114</H3>
+<H2> ERROR: Set of AP_FLAGS failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting AP_FLAGS to AP_NDELAY in the OSITP environment
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1115"></A>
+<H3>LIBGWO MESSAGE #1115</H3>
+<H2> ERROR: Send of AP_TP_DATA_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the AP_TP_DATA_REQ primitive failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1116"></A>
+<H3>LIBGWO MESSAGE #1116</H3>
+<H2> ERROR: Send of <I>primitive</I> failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ap_snd() function failed sending the listed primitive.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1117"></A>
+<H3>LIBGWO MESSAGE #1117</H3>
+<H2> ERROR: Cannot set remote domain for transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Adding this domain as being active in the transaction
+in shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1118"></A>
+<H3>LIBGWO MESSAGE #1118</H3>
+<H2> INFO: Resumed with BLOCKING timeout</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This action was resumed because of a timeout before the
+service returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1119"></A>
+<H3>LIBGWO MESSAGE #1119</H3>
+<H2> ERROR: Send of AP_TP_U_ABORT_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the AP_TP_U_ABORT primitive because of the
+BLOCKING timeout failed. The reason is noted in the
+ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1120"></A>
+<H3>LIBGWO MESSAGE #1120</H3>
+<H2> ERROR: Send of AP_TP_DEFERRED_END_DIALOGUE_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the AP_TP_DEFERRED_END_DIALOGUE_REQ primitive failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1121"></A>
+<H3>LIBGWO MESSAGE #1121</H3>
+<H2> ERROR: Bad action state</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message should never occur. The program code or
+defines are wrong if it does.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1122"></A>
+<H3>LIBGWO MESSAGE #1122</H3>
+<H2> ERROR: Couldn't retrieve TRAN table from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to set
+transaction parameters.  The process was unable to obtain the transaction table
+from shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.
+If the error persists,
+contact your TUXEDO System Technical Support with the exact error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1200"></A>
+<H3>LIBGWO MESSAGE #1200</H3>
+<H2> ERROR: Malloc failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Attempt to malloc memory for an OSITP vbuf failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check amount of memory available on system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1201"></A>
+<H3>LIBGWO MESSAGE #1201</H3>
+<H2> ERROR: Malloc failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Attempt to malloc memory for an OSITP dbuf failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check amount of memory available on system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1202"></A>
+<H3>LIBGWO MESSAGE #1202</H3>
+<H2> ERROR: Malloc failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Attempt to malloc memory for an OSITP db_base failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check amount of memory available on system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1203"></A>
+<H3>LIBGWO MESSAGE #1203</H3>
+<H2> ERROR: Malloc failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Attempt to malloc memory for additional space failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check amount of memory available on system.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1300-1399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1300"></A>
+<H3>LIBGWO MESSAGE #1300</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1301"></A>
+<H3>LIBGWO MESSAGE #1301</H3>
+<H2> ERROR: ASN.1 ENCODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1302"></A>
+<H3>LIBGWO MESSAGE #1302</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1303"></A>
+<H3>LIBGWO MESSAGE #1303</H3>
+<H2> ERROR: ASN.1 DECODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1304"></A>
+<H3>LIBGWO MESSAGE #1304</H3>
+<H2> ERROR: tpalloc failed: <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating a typed buffer for decoding output failed
+for the listed reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1306"></A>
+<H3>LIBGWO MESSAGE #1306</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1307"></A>
+<H3>LIBGWO MESSAGE #1307</H3>
+<H2> ERROR: ASN.1 ENCODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1308"></A>
+<H3>LIBGWO MESSAGE #1308</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1309"></A>
+<H3>LIBGWO MESSAGE #1309</H3>
+<H2> ERROR: ASN.1 DECODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1310"></A>
+<H3>LIBGWO MESSAGE #1310</H3>
+<H2> ERROR: tpalloc failed: <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating a typed buffer for decoding output failed
+for the listed reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1313"></A>
+<H3>LIBGWO MESSAGE #1313</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1314"></A>
+<H3>LIBGWO MESSAGE #1314</H3>
+<H2> ERROR: ASN.1 ENCODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1315"></A>
+<H3>LIBGWO MESSAGE #1315</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1316"></A>
+<H3>LIBGWO MESSAGE #1316</H3>
+<H2> ERROR: ASN.1 DECODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1317"></A>
+<H3>LIBGWO MESSAGE #1317</H3>
+<H2> ERROR: tpalloc failed: <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating a typed buffer for decoding output failed
+for the listed reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1319"></A>
+<H3>LIBGWO MESSAGE #1319</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1320"></A>
+<H3>LIBGWO MESSAGE #1320</H3>
+<H2> ERROR: ASN.1 ENCODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1321"></A>
+<H3>LIBGWO MESSAGE #1321</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1322"></A>
+<H3>LIBGWO MESSAGE #1322</H3>
+<H2> ERROR: ASN.1 DECODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1323"></A>
+<H3>LIBGWO MESSAGE #1323</H3>
+<H2> ERROR: tpalloc failed: <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating a typed buffer for decoding output failed
+for the listed reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1325"></A>
+<H3>LIBGWO MESSAGE #1325</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1326"></A>
+<H3>LIBGWO MESSAGE #1326</H3>
+<H2> ERROR: ASN.1 ENCODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1327"></A>
+<H3>LIBGWO MESSAGE #1327</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1328"></A>
+<H3>LIBGWO MESSAGE #1328</H3>
+<H2> ERROR: ASN.1 DECODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1329"></A>
+<H3>LIBGWO MESSAGE #1329</H3>
+<H2> ERROR: tpalloc failed: <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating a typed buffer for decoding output failed
+for the listed reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1331"></A>
+<H3>LIBGWO MESSAGE #1331</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1332"></A>
+<H3>LIBGWO MESSAGE #1332</H3>
+<H2> ERROR: ASN.1 ENCODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1333"></A>
+<H3>LIBGWO MESSAGE #1333</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1334"></A>
+<H3>LIBGWO MESSAGE #1334</H3>
+<H2> ERROR: ASN.1 DECODE failed <I>pdu_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the typed buffer failed.
+The reason is noted in the pdu_error text.
+Reference ASN.1 Basic Encode/Decode Library Manual.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1335"></A>
+<H3>LIBGWO MESSAGE #1335</H3>
+<H2> ERROR: tpalloc failed: <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating a typed buffer for decoding output failed
+for the listed reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1337"></A>
+<H3>LIBGWO MESSAGE #1337</H3>
+<H2> ERROR: Unable to process typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the input buffer into an apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1338"></A>
+<H3>LIBGWO MESSAGE #1338</H3>
+<H2> ERROR: Unable to process typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the input buffer into an apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1339"></A>
+<H3>LIBGWO MESSAGE #1339</H3>
+<H2> ERROR: Unable to process typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the input buffer into an apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1340"></A>
+<H3>LIBGWO MESSAGE #1340</H3>
+<H2> ERROR: Unable to process typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the input buffer into an apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1341"></A>
+<H3>LIBGWO MESSAGE #1341</H3>
+<H2> ERROR: Unable to process typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the input buffer into an apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1342"></A>
+<H3>LIBGWO MESSAGE #1342</H3>
+<H2> ERROR: Unable to process typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the input buffer into an apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1343"></A>
+<H3>LIBGWO MESSAGE #1343</H3>
+<H2> ERROR: Unable to reconstruct typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an apdu into an output buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1344"></A>
+<H3>LIBGWO MESSAGE #1344</H3>
+<H2> ERROR: Unable to reconstruct typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an apdu into an output buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1345"></A>
+<H3>LIBGWO MESSAGE #1345</H3>
+<H2> ERROR: Unable to reconstruct typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an apdu into an output buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1346"></A>
+<H3>LIBGWO MESSAGE #1346</H3>
+<H2> ERROR: Unable to reconstruct typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an apdu into an output buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1347"></A>
+<H3>LIBGWO MESSAGE #1347</H3>
+<H2> ERROR: Unable to reconstruct typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an apdu into an output buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1348"></A>
+<H3>LIBGWO MESSAGE #1348</H3>
+<H2> ERROR: Unable to reconstruct typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting an apdu into an output buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1500-1599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1500"></A>
+<H3>LIBGWO MESSAGE #1500</H3>
+<H2> ERROR: Couldn't retrieve TRAN table from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GTRID of the transaction could not be found in the
+shared memory transaction table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1503"></A>
+<H3>LIBGWO MESSAGE #1503</H3>
+<H2> ERROR: Bad action state</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message should never occur. The program code or
+defines are wrong if it does.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1504"></A>
+<H3>LIBGWO MESSAGE #1504</H3>
+<H2> ERROR: Set of network state failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the state of the transaction to PREPARED failed
+after the COMMIT_REQ was sent to OSITP.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction was rollbacked and must be resubmitted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1505"></A>
+<H3>LIBGWO MESSAGE #1505</H3>
+<H2> ERROR: Unable to send AP_TP_U_ABORT_REQ, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During rollback of the transaction, OSITP protocol failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The rollback of the transaction failed. It will be corrected
+when GWOSITP is restarted and recovery is initiated.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1506"></A>
+<H3>LIBGWO MESSAGE #1506</H3>
+<H2> ERROR: Set of network state failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the state of the transaction to ROLLBACK_STARTED
+failed after sending the ROLLBACK_REQ or DONE_REQ to OSITP.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction was rollbacked and must be resubmitted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1507"></A>
+<H3>LIBGWO MESSAGE #1507</H3>
+<H2> ERROR: Set of network state failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the state of the transaction to ROLLBACK_STARTED
+failed during the processing of a service failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction was rollbacked and must be resubmitted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1508"></A>
+<H3>LIBGWO MESSAGE #1508</H3>
+<H2> ERROR: Unable to send AP_TP_U_ABORT_REQ, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During rollback of the transaction, OSITP protocol failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The rollback of the transaction failed. It will be corrected
+when GWOSITP is restarted and recovery is initiated.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1509"></A>
+<H3>LIBGWO MESSAGE #1509</H3>
+<H2> ERROR: Invalid conversation context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The context for the active conversation could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The request was terminated and must be resubmitted.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1600-1699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1600"></A>
+<H3>LIBGWO MESSAGE #1600</H3>
+<H2> ERROR: Invalid action index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An action was scheduled without an index to its context.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1601"></A>
+<H3>LIBGWO MESSAGE #1601</H3>
+<H2> ERROR: Unable to obtain remote service information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Information about the remote service could not be found in
+shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1602"></A>
+<H3>LIBGWO MESSAGE #1602</H3>
+<H2> ERROR: Cannot open FD</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Opening a file descriptor for OSI communications failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1604"></A>
+<H3>LIBGWO MESSAGE #1604</H3>
+<H2> ERROR: Initialization of environment failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the OSITP environment failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1605"></A>
+<H3>LIBGWO MESSAGE #1605</H3>
+<H2> ERROR: AP_CNTX_NAME <I>name</I> not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The listed application context name is not supported.
+It must be either XATMI or UDT.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the DMCONFIG file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1606"></A>
+<H3>LIBGWO MESSAGE #1606</H3>
+<H2> ERROR: Unable to set AP_CNTX_NAME on osi-tp, ap_errno = <I>ap_errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable AP_CNTXT_NAME
+failed. The reason code is <I>ap_errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1607"></A>
+<H3>LIBGWO MESSAGE #1607</H3>
+<H2> ERROR: unable to set AP_BIND_TPADDR, ap_errno = <I>ap_errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable BIND_TPADDR
+failed. The reason code is <I>ap_errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1608"></A>
+<H3>LIBGWO MESSAGE #1608</H3>
+<H2> ERROR: Unable to bind AP_BIND_TPADDR, ap_errno = <I>ap_errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Binding to the OSITP address used for communication
+to the OSI network failed. The reason code is <I>ap_errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1609"></A>
+<H3>LIBGWO MESSAGE #1609</H3>
+<H2> ERROR: Unable to obtain local domain id information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Information about the local domain could not be
+obtained from shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1610"></A>
+<H3>LIBGWO MESSAGE #1610</H3>
+<H2> ERROR: Unable to set nettxid in shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the transaction id in shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1611"></A>
+<H3>LIBGWO MESSAGE #1611</H3>
+<H2> ERROR: Cannot associate with network transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Associating this node with a network transaction failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1612"></A>
+<H3>LIBGWO MESSAGE #1612</H3>
+<H2> ERROR: Can't set AP_TTNID, ap_errno = <I>ap_errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable TTNID
+failed. The reason code is <I>ap_errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1613"></A>
+<H3>LIBGWO MESSAGE #1613</H3>
+<H2> ERROR: Send of AP_TP_BEGIN_DIALOGUE_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The initial OSI primitive to begin communication with a
+remote node failed. The reason is noted in the ap_error
+text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1614"></A>
+<H3>LIBGWO MESSAGE #1614</H3>
+<H2> ERROR: Unable to set AP_NDELAY flag, ap_errno = 0x<I>ap_errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the NO DELAY flag for OSITP communication failed.
+The reason code is <I>ap_errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1615"></A>
+<H3>LIBGWO MESSAGE #1615</H3>
+<H2> ERROR: Send of AP_TP_DEFFERRED_END_DIALOGUE_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI primitive necessary for a transaction
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1616"></A>
+<H3>LIBGWO MESSAGE #1616</H3>
+<H2> ERROR: Send of AP_TP_DATA_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI data primitive to the remote node
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1617"></A>
+<H3>LIBGWO MESSAGE #1617</H3>
+<H2> ERROR: Send AP_TP_GRANT_CONTROL_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI primitive indicating the end of a message
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1618"></A>
+<H3>LIBGWO MESSAGE #1618</H3>
+<H2> ERROR: Cannot set remote domain for transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the remote domain as being active in the
+transaction failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction will fail and must be resubmitted.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1619"></A>
+<H3>LIBGWO MESSAGE #1619</H3>
+<H2> ERROR: gw_tx_end returned failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to indicate that there is no longer an action
+active in the transaction failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction will fail and must be resubmitted.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1620"></A>
+<H3>LIBGWO MESSAGE #1620</H3>
+<H2> ERROR: Remote server rejected conversation request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The request was rejected by the remote node. It could
+be either by the user or the communications provider.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the DMCONFIG file for an ACL (access control list)
+problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1621"></A>
+<H3>LIBGWO MESSAGE #1621</H3>
+<H2> ERROR: Bad action state</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message should never occur. The program code or
+defines are wrong if it does.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1622"></A>
+<H3>LIBGWO MESSAGE #1622</H3>
+<H2> ERROR: Invalid action index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message should never occur. The program code or
+defines are wrong if it does.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1623"></A>
+<H3>LIBGWO MESSAGE #1623</H3>
+<H2> ERROR: Invalid conversation context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The context for the conversation could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1624"></A>
+<H3>LIBGWO MESSAGE #1624</H3>
+<H2> ERROR: Conversation identifier is NULL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either a tpsend was made after the tpconnect was aborted
+or the tpconnect was rejected by the remote server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1625"></A>
+<H3>LIBGWO MESSAGE #1625</H3>
+<H2> ERROR: Invalid action index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message should never occur. The program code or
+defines are wrong if it does.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1626"></A>
+<H3>LIBGWO MESSAGE #1626</H3>
+<H2> ERROR: Invalid conversation context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The context for the conversation could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1627"></A>
+<H3>LIBGWO MESSAGE #1627</H3>
+<H2> ERROR: Conversation identifier is invalid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The id of the conversation is NULL. The disconnect failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1628"></A>
+<H3>LIBGWO MESSAGE #1628</H3>
+<H2> ERROR: Invalid fd_idx</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The file descriptor for communicating to the remote node
+for this conversation is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1629"></A>
+<H3>LIBGWO MESSAGE #1629</H3>
+<H2> ERROR: Send of AP_TP_U_ABOUT_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The sending of the OSI primitive to abort the
+connection while trying to disconnect failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1700-1799</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1700"></A>
+<H3>LIBGWO MESSAGE #1700</H3>
+<H2> ERROR: Cannot get LDOM OSITP from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to get the local domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1701"></A>
+<H3>LIBGWO MESSAGE #1701</H3>
+<H2> ERROR: ap_open failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Opening an OSI communications file descriptor failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1702"></A>
+<H3>LIBGWO MESSAGE #1702</H3>
+<H2> ERROR: ap_init_env failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initializing the OSITP environment failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1703"></A>
+<H3>LIBGWO MESSAGE #1703</H3>
+<H2> ERROR: Unable to set AP_ROLE_ALLOWED, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable ROLE_ALLOWED
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1704"></A>
+<H3>LIBGWO MESSAGE #1704</H3>
+<H2> ERROR: Setting constant env variables failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the constant OSITP environment variables
+COPYENV, MODE_SEL, URCH or CID failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Previous logged error messages should indicate the
+specific environment variable that failed.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1705"></A>
+<H3>LIBGWO MESSAGE #1705</H3>
+<H2> ERROR: Unable to set AP_TP_CATEGORY, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable CATEGORY
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1706"></A>
+<H3>LIBGWO MESSAGE #1706</H3>
+<H2> ERROR: Unable to set AP_BIND_TPADDR, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable BIND_TPADDR
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1707"></A>
+<H3>LIBGWO MESSAGE #1707</H3>
+<H2> ERROR: ap_bind failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Binding to the OSITP address used for communication to the
+OSI network failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1708"></A>
+<H3>LIBGWO MESSAGE #1708</H3>
+<H2> ERROR: ap_snd failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSITP primitive RESUME_REQ failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1709"></A>
+<H3>LIBGWO MESSAGE #1709</H3>
+<H2> ERROR: Unable to restart xap_tp control instance</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the transaction BLOB and sending it to OSITP
+for recovery purposes failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1710"></A>
+<H3>LIBGWO MESSAGE #1710</H3>
+<H2> ERROR: Receive of AP_TP_RESTART_COMPLETE_IND failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After recovering the transaction BLOB's, receiving the
+RESTART_COMPLETE_IND primitive failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1711"></A>
+<H3>LIBGWO MESSAGE #1711</H3>
+<H2> ERROR: Unable to resume control instance</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During recovery, the process of rolling back or committing
+transactions that had not completed failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+dmadmin(1) must be used to complete the logged transactions
+before the gateway can be restarted.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1712"></A>
+<H3>LIBGWO MESSAGE #1712</H3>
+<H2> ERROR: Unable to set AP_FLAGS, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the NO DELAY flag for OSI communication failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1713"></A>
+<H3>LIBGWO MESSAGE #1713</H3>
+<H2> ERROR: Unable to send AP_TP_RESTART_REQ, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the RESTART_REQ primitive to initiate recovery
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1714"></A>
+<H3>LIBGWO MESSAGE #1714</H3>
+<H2> WARN: log record refused</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to recover a logged transaction was refused
+by OSITP with a BAD_LOG error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction will not be completed. dmadmin can be
+used to further process the transaction (Either commit
+or rollback as needed).
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1715"></A>
+<H3>LIBGWO MESSAGE #1715</H3>
+<H2> ERROR: Unable to reconstruct OSITP TPPM, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to recover a logged transaction failed other
+than a BAD_LOG error. The reason is noted in the ap_error
+text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1716"></A>
+<H3>LIBGWO MESSAGE #1716</H3>
+<H2> ERROR: Unable to send AP_TP_RESTART_COMPLETE_REQ, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After  completing the restart process, sending the
+RESTART_COMPLETE_REQ primitive failed.  The reason
+is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1717"></A>
+<H3>LIBGWO MESSAGE #1717</H3>
+<H2> ERROR: Cannot get LDOM from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to get the local domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1718"></A>
+<H3>LIBGWO MESSAGE #1718</H3>
+<H2> ERROR: calloc call failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for the list of transactions to rollback
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check amount of memory available.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1719"></A>
+<H3>LIBGWO MESSAGE #1719</H3>
+<H2> ERROR: ap_rcv failed in resume: <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Receiving the status of the transaction as known by OSITP
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1720"></A>
+<H3>LIBGWO MESSAGE #1720</H3>
+<H2> ERROR: Too many uncompleted transactions from OSITP</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The number of transactions logged that did not complete
+is greater that the number of transactions allocated for
+in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+dmadmin may be used to complete processing for the logged
+transactions.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1721"></A>
+<H3>LIBGWO MESSAGE #1721</H3>
+<H2> INFO: Transaction from OSITP (<I>transaction id</I>) queued for completion</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The listed transaction has been read from the log and
+put in a list to be completed during recovery.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action possible.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1722"></A>
+<H3>LIBGWO MESSAGE #1722</H3>
+<H2> ERROR: Memory allocation failed in resume</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for the next transaction's data to be
+recovered failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1723"></A>
+<H3>LIBGWO MESSAGE #1723</H3>
+<H2> ERROR: No TTNID returned in cdata->env with NODE_STATUS_IND</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction id was not returned by OSITP on a
+transaction status request. This may be a possible
+damaged log record.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1724"></A>
+<H3>LIBGWO MESSAGE #1724</H3>
+<H2> ERROR: Unexpected primitive received in resume: 0x<I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The primitive (listed by value) returned by OSITP
+on a resume request is unknown. Possible program or
+defines error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1725"></A>
+<H3>LIBGWO MESSAGE #1725</H3>
+<H2> WARN: Unable to complete processing on OSITP transaction (<I>transaction id</I>): <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The DONE_REQ primitive required to complete the rollback
+or commit processing of the listed transaction failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1726"></A>
+<H3>LIBGWO MESSAGE #1726</H3>
+<H2> WARN: Unable to rollback OSITP transaction (<I>transaction id</I>): <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The sending of the ROLLBACK_REQ primitive for recovering
+the listed transaction failed.  The reason is noted in
+the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 1900-1999</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1900"></A>
+<H3>LIBGWO MESSAGE #1900</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a UASE structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1901"></A>
+<H3>LIBGWO MESSAGE #1901</H3>
+<H2> ERROR: Invalid Buffer Type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The input data buffer is not a known type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1902"></A>
+<H3>LIBGWO MESSAGE #1902</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an XATMI_APDU structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1903"></A>
+<H3>LIBGWO MESSAGE #1903</H3>
+<H2> ERROR: Invalid Operation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The apdu type is not in the apdu switch table.
+Internal error or data corruption.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1904"></A>
+<H3>LIBGWO MESSAGE #1904</H3>
+<H2> ERROR: Invalid Buffer Type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer type allocated is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use a supported buffer type (X_C_TYPE, X_COMMON, X_OCTET,
+CARRAY, STRING or VIEW)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1905"></A>
+<H3>LIBGWO MESSAGE #1905</H3>
+<H2> ERROR: VIEW file not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The 'view' description file cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Create a .V view file and include it in the
+application environment.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1906"></A>
+<H3>LIBGWO MESSAGE #1906</H3>
+<H2> ERROR: Invalid Operation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The function pointers for this buffer type have not been
+put into the UDT switch table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Put the correct function names in the UDT switch (gwnwtypesw.c)
+and re-compile and re-link the OSI gateway.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1907"></A>
+<H3>LIBGWO MESSAGE #1907</H3>
+<H2> ERROR: UDT ENCODE Failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the data buffer under the UDT_ASE failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a user supplied function, so make sure you think
+it's working correctly before contacting your TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1908"></A>
+<H3>LIBGWO MESSAGE #1908</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the XATMI abstract syntax to object id format failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1909"></A>
+<H3>LIBGWO MESSAGE #1909</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for the defined context set structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1910"></A>
+<H3>LIBGWO MESSAGE #1910</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an enc_data-octets failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1911"></A>
+<H3>LIBGWO MESSAGE #1911</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an alldata structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1912"></A>
+<H3>LIBGWO MESSAGE #1912</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1913"></A>
+<H3>LIBGWO MESSAGE #1913</H3>
+<H2> ERROR: Encode of U_ASE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Encoding the output UDT data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1914"></A>
+<H3>LIBGWO MESSAGE #1914</H3>
+<H2> ERROR: No UDT data present</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+No UDT data was present on the output data request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the client program for errors or failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1915"></A>
+<H3>LIBGWO MESSAGE #1915</H3>
+<H2> ERROR: Invalid operation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The apdu type requested is unknown to the encoding routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1916"></A>
+<H3>LIBGWO MESSAGE #1916</H3>
+<H2> ERROR: Invalid Buffer Type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer type is not X_COMMON, X_C_TYPE, X_OCTET or
+X_U_DEFINED.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1917"></A>
+<H3>LIBGWO MESSAGE #1917</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a vbuf structure to hold the
+encoded data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1918"></A>
+<H3>LIBGWO MESSAGE #1918</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a dbuf structure in the vbuf
+structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1919"></A>
+<H3>LIBGWO MESSAGE #1919</H3>
+<H2> ERROR: Encode failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Encoding the apdu failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1920"></A>
+<H3>LIBGWO MESSAGE #1920</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the UDT transfer syntax to object id format failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1921"></A>
+<H3>LIBGWO MESSAGE #1921</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for the UDT transfer syntax object id failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1922"></A>
+<H3>LIBGWO MESSAGE #1922</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an enc_data-octets failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1923"></A>
+<H3>LIBGWO MESSAGE #1923</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a vbuf structure to hold the
+encoded data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1924"></A>
+<H3>LIBGWO MESSAGE #1924</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1925"></A>
+<H3>LIBGWO MESSAGE #1925</H3>
+<H2> ERROR: Encode of U_ASE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Encoding the output XATMI data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1926"></A>
+<H3>LIBGWO MESSAGE #1926</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a U_ASE structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1927"></A>
+<H3>LIBGWO MESSAGE #1927</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an XATMI_APDU structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1928"></A>
+<H3>LIBGWO MESSAGE #1928</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1929"></A>
+<H3>LIBGWO MESSAGE #1929</H3>
+<H2> ERROR: Decode of U_ASE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Decoding the input UDT data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1930"></A>
+<H3>LIBGWO MESSAGE #1930</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the UDT transfer syntax to object id format failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1931"></A>
+<H3>LIBGWO MESSAGE #1931</H3>
+<H2> ERROR: Invalid transfer syntax name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The input transfer syntax name is in error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1932"></A>
+<H3>LIBGWO MESSAGE #1932</H3>
+<H2> ERROR: Get of AP_CNTX_NAME failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the  application context name from the OSITP
+environment failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1933"></A>
+<H3>LIBGWO MESSAGE #1933</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the XATMI abstract syntax to object id format failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1934"></A>
+<H3>LIBGWO MESSAGE #1934</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a vbuf structure to hold the
+decoded data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1935"></A>
+<H3>LIBGWO MESSAGE #1935</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a dbuf structure in the vbuf
+structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1936"></A>
+<H3>LIBGWO MESSAGE #1936</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the ioptr structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1937"></A>
+<H3>LIBGWO MESSAGE #1937</H3>
+<H2> ERROR: Invalid operation, or context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The operation in the input buffer does not specify
+a valid apdu type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1938"></A>
+<H3>LIBGWO MESSAGE #1938</H3>
+<H2> ERROR: XATMI DECODE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Decoding the XATMI input data buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1940"></A>
+<H3>LIBGWO MESSAGE #1940</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an object id failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1941"></A>
+<H3>LIBGWO MESSAGE #1941</H3>
+<H2> ERROR: UDT DECODE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user supplied decode function failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the function, re-compile and re-link the OSI gateway.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1942"></A>
+<H3>LIBGWO MESSAGE #1942</H3>
+<H2> ERROR: UDT post recieve function failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user supplied post receive function failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the function, re-compile and re-link the OSI gateway.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1944"></A>
+<H3>LIBGWO MESSAGE #1944</H3>
+<H2> ERROR: Remote Domain Name is not in Configuration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The remote domain name in the input cannot be found in
+the shared memory version of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1945"></A>
+<H3>LIBGWO MESSAGE #1945</H3>
+<H2> ERROR: Service is denied Access</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested is not in the specified access
+control list.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1946"></A>
+<H3>LIBGWO MESSAGE #1946</H3>
+<H2> ERROR: Remote Domain Name is not in Configuration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The remote domain name in the input cannot be found in
+the shared memory version of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1947"></A>
+<H3>LIBGWO MESSAGE #1947</H3>
+<H2> ERROR: Service is denied Access</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested is not in the specified access
+control list.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1948"></A>
+<H3>LIBGWO MESSAGE #1948</H3>
+<H2> ERROR: Invalid operation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The apdu type requested is unknown to the encoding routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1949"></A>
+<H3>LIBGWO MESSAGE #1949</H3>
+<H2> ERROR: Undefined buffer type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer type is not X_COMMON, X_C_TYPE, X_OCTET or
+X_U_DEFINED.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Fix the tpalloc in your client to use one of the above buffer
+types and re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1950"></A>
+<H3>LIBGWO MESSAGE #1950</H3>
+<H2> ERROR: Not a typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either an X_OCTET buffer was not created correctly with
+tpalloc() or data corruption has occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to be sure the tpalloc in the client is correct.
+Re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1951"></A>
+<H3>LIBGWO MESSAGE #1951</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for X_OCTET data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1952"></A>
+<H3>LIBGWO MESSAGE #1952</H3>
+<H2> ERROR: Not a typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An X_COMMON buffer was not created with tpalloc() or
+it has been corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to be sure the tpalloc in the client is correct.
+Re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1953"></A>
+<H3>LIBGWO MESSAGE #1953</H3>
+<H2> ERROR: Can't find view file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A view file for X_COMMON buffer subtype cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Create a .V view file and include it in the
+application environment.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1954"></A>
+<H3>LIBGWO MESSAGE #1954</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1955"></A>
+<H3>LIBGWO MESSAGE #1955</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1956"></A>
+<H3>LIBGWO MESSAGE #1956</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1957"></A>
+<H3>LIBGWO MESSAGE #1957</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1958"></A>
+<H3>LIBGWO MESSAGE #1958</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1959"></A>
+<H3>LIBGWO MESSAGE #1959</H3>
+<H2> ERROR: Buffer size error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1960"></A>
+<H3>LIBGWO MESSAGE #1960</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for a single character failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1961"></A>
+<H3>LIBGWO MESSAGE #1961</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for a string or CARRAY failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1962"></A>
+<H3>LIBGWO MESSAGE #1962</H3>
+<H2> ERROR: Invalid data type for X_COMMON</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A data type was found that does not conform to the
+X_COMMON specification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write client software to either conform to X_COMMON or
+change the buffer type to X_C_TYPE.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1963"></A>
+<H3>LIBGWO MESSAGE #1963</H3>
+<H2> ERROR: Not a typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either an X_C_TYPE buffer was not created correctly with
+tpalloc() or data corruption has occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to be sure the tpalloc in the client is correct.
+Re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1964"></A>
+<H3>LIBGWO MESSAGE #1964</H3>
+<H2> ERROR: Can't find view file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A view file for X_C_TYPE buffer subtype cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Create a .V view file and include it in the
+application environment.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1965"></A>
+<H3>LIBGWO MESSAGE #1965</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1966"></A>
+<H3>LIBGWO MESSAGE #1966</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1967"></A>
+<H3>LIBGWO MESSAGE #1967</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1968"></A>
+<H3>LIBGWO MESSAGE #1968</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1969"></A>
+<H3>LIBGWO MESSAGE #1969</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1970"></A>
+<H3>LIBGWO MESSAGE #1970</H3>
+<H2> ERROR: Buffer size error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1971"></A>
+<H3>LIBGWO MESSAGE #1971</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for specified data
+element failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1972"></A>
+<H3>LIBGWO MESSAGE #1972</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space in XATMI apdu for a string or CARRAY failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1973"></A>
+<H3>LIBGWO MESSAGE #1973</H3>
+<H2> ERROR: Invalid data type for X_C_TYPE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A data type was found that does not conform to the
+X_C_TYPE specification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write client software to either conform to X_C_TYPE or
+define your own data type and use UDT.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1974"></A>
+<H3>LIBGWO MESSAGE #1974</H3>
+<H2> ERROR: Undefined buffer type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer type is not X_COMMON, X_C_TYPE, X_OCTET or
+X_U_DEFINED.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Fix the tpalloc in your client to use one of the above buffer
+types and re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1975"></A>
+<H3>LIBGWO MESSAGE #1975</H3>
+<H2> ERROR: Not a typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either an X_OCTET buffer was not created correctly with
+tpalloc() or data corruption has occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to be sure the tpalloc in the client is correct.
+Re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1976"></A>
+<H3>LIBGWO MESSAGE #1976</H3>
+<H2> ERROR: Not a typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either an X_C_TYPE buffer was not created correctly with
+tpalloc() or data corruption has occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to be sure the tpalloc in the client is correct.
+Re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1977"></A>
+<H3>LIBGWO MESSAGE #1977</H3>
+<H2> ERROR: Can't find view file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A view file for X_C_TYPE buffer subtype cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Create a .V view file and include it in the
+application environment.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1978"></A>
+<H3>LIBGWO MESSAGE #1978</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1979"></A>
+<H3>LIBGWO MESSAGE #1979</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1980"></A>
+<H3>LIBGWO MESSAGE #1980</H3>
+<H2> ERROR: Invalid data type for X_C_TYPE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A data type was found that does not conform to the
+X_C_TYPE specification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write client software to either conform to X_C_TYPE or
+define your own data type and use UDT.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1981"></A>
+<H3>LIBGWO MESSAGE #1981</H3>
+<H2> ERROR: Not a typed buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An X_COMMON buffer was not created with tpalloc() or
+it has been corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to be sure the tpalloc in the client is correct.
+Re-try the request. If this error persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1982"></A>
+<H3>LIBGWO MESSAGE #1982</H3>
+<H2> ERROR: Can't find view file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A view file for X_COMMON buffer subtype cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Create a .V view file and include it in the
+application environment.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1983"></A>
+<H3>LIBGWO MESSAGE #1983</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1984"></A>
+<H3>LIBGWO MESSAGE #1984</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1985"></A>
+<H3>LIBGWO MESSAGE #1985</H3>
+<H2> ERROR: APDU buffer overflow</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encoded data has exceeded the length of the allocated
+buffer space. If this occurs it is an internal error (bug).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1986"></A>
+<H3>LIBGWO MESSAGE #1986</H3>
+<H2> ERROR: Invalid data type for X_COMMON</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A data type was found that does not conform to the
+X_COMMON specification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write client software to either conform to X_COMMON or
+change the buffer type to X_C_TYPE.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1987"></A>
+<H3>LIBGWO MESSAGE #1987</H3>
+<H2> ERROR: Invalid Buffer Type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer type is not X_COMMON, X_C_TYPE, X_OCTET or
+X_U_DEFINED.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1988"></A>
+<H3>LIBGWO MESSAGE #1988</H3>
+<H2> ERROR: Can't get local services from configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Extraction of local service information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1990"></A>
+<H3>LIBGWO MESSAGE #1990</H3>
+<H2> ERROR: Incoming request not allowed access to any local services</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The incoming service request has failed the access
+control list check.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add the remote service name to the access control list
+and run dmloadcf.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1991"></A>
+<H3>LIBGWO MESSAGE #1991</H3>
+<H2> ERROR: Invalid buffer type specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified buffer type (found in the type switch table)
+is not supported in the XATMI_ASE.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If buffer type is correct, try specifying UDT_ASE.
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2200-2299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2200"></A>
+<H3>LIBGWO MESSAGE #2200</H3>
+<H2> ERROR: Cannot malloc fd structures</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for pollfd, alldata, conversations
+or context structures failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2201"></A>
+<H3>LIBGWO MESSAGE #2201</H3>
+<H2> ERROR: Cannot malloc local domain structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a local domain structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2202"></A>
+<H3>LIBGWO MESSAGE #2202</H3>
+<H2> ERROR: Cannot get Local Domain information from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the local domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2203"></A>
+<H3>LIBGWO MESSAGE #2203</H3>
+<H2> ERROR: Cannot malloc remote domain structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a remote domain structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2204"></A>
+<H3>LIBGWO MESSAGE #2204</H3>
+<H2> ERROR: Cannot malloc local OSI structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an OSITP structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2205"></A>
+<H3>LIBGWO MESSAGE #2205</H3>
+<H2> ERROR: Unable to obtain local ositp information from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the local OSITP information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2206"></A>
+<H3>LIBGWO MESSAGE #2206</H3>
+<H2> ERROR: Cannot malloc remote service structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a remote service structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2207"></A>
+<H3>LIBGWO MESSAGE #2207</H3>
+<H2> ERROR: Cannot malloc remote OSI structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for an OSITP structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2208"></A>
+<H3>LIBGWO MESSAGE #2208</H3>
+<H2> ERROR: Cannot malloc domain id structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a domain id structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2209"></A>
+<H3>LIBGWO MESSAGE #2209</H3>
+<H2> ERROR: Cannot establish control instance</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The creation of an OSITP control instance needed for
+co-ordination of transactions failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Previous logged error messages should provide the
+exact reasons for the failure.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2210"></A>
+<H3>LIBGWO MESSAGE #2210</H3>
+<H2> WARN: Could not establish listening instance <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The creation of the specific OSITP listening instance
+indicated by the number listed failed.
+Three instances are initially created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2211"></A>
+<H3>LIBGWO MESSAGE #2211</H3>
+<H2> ERROR: Could not establish any listening instance</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Creation of at least one of three instances failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2300-2399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2300"></A>
+<H3>LIBGWO MESSAGE #2300</H3>
+<H2> ERROR: Cannot get LDOM OSITP from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the local domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2301"></A>
+<H3>LIBGWO MESSAGE #2301</H3>
+<H2> ERROR: Unable to init env on osi, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of the OSITP environment failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Previous logged error messages should indicate the
+specific environment variable that failed.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2302"></A>
+<H3>LIBGWO MESSAGE #2302</H3>
+<H2> ERROR: Unable to set AP_ROLE_ALLOWED, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable ROLE_ALLOWED
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2303"></A>
+<H3>LIBGWO MESSAGE #2303</H3>
+<H2> ERROR: Setting constant env variables failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the constant OSITP environment variables
+COPYENV, MODE_SEL, URCH or CID failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Previous logged error messages should indicate the
+specific environment variable that failed.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2304"></A>
+<H3>LIBGWO MESSAGE #2304</H3>
+<H2> ERROR: Unable to set AP_TP_CATEGORY, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable CATEGORY
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2305"></A>
+<H3>LIBGWO MESSAGE #2305</H3>
+<H2> ERROR: Unable to set AP_BIND_TPADDR, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable BIND_TPADDR
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2306"></A>
+<H3>LIBGWO MESSAGE #2306</H3>
+<H2> ERROR: Unable to set AP_FLAGS, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the NO DELAY flag for OSITP communication failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2400-2499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2400"></A>
+<H3>LIBGWO MESSAGE #2400</H3>
+<H2> ERROR: ap_poll error, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Polling for input on an OSI fd failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2401"></A>
+<H3>LIBGWO MESSAGE #2401</H3>
+<H2> ERROR: Could not make new action</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to create an action to process input received
+on the control instance failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, processing continues.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2402"></A>
+<H3>LIBGWO MESSAGE #2402</H3>
+<H2> WARN: Dropping polled action, no free contexts</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to get a context area for a new action failed.
+The action was dropped.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, processing continues.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2403"></A>
+<H3>LIBGWO MESSAGE #2403</H3>
+<H2> ERROR: Could not make new action</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to create an action to process input received
+on a dialogue instance failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, processing continues.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2404"></A>
+<H3>LIBGWO MESSAGE #2404</H3>
+<H2> WARN: Dropping polled action, no free contexts</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to get a context area for a new action failed.
+The action was dropped.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, processing continues.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2405"></A>
+<H3>LIBGWO MESSAGE #2405</H3>
+<H2> ERROR: AP_POLLOUT event has no associated action, fd = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An AP_POLLOUT event has occurred on a file descriptor which
+no longer has an action waiting for the signal.  A timeout
+may have removed the action, and normal processing would
+continue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2406"></A>
+<H3>LIBGWO MESSAGE #2406</H3>
+<H2> WARN: MAXRDOM reached, not starting listener</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The maximum number of dialogues that can be active at one
+time has been reached. No additional listening instance
+will be created at this time.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action possible.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2407"></A>
+<H3>LIBGWO MESSAGE #2407</H3>
+<H2> WARN: Could not create new listener</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to create a new listening instance failed.
+A subsequent try will be made after the next receive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action possible.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2408"></A>
+<H3>LIBGWO MESSAGE #2408</H3>
+<H2> ERROR: Could not make new action</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to create a new action for receipt of
+UDT_ASE conversational data failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, processing continues.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2409"></A>
+<H3>LIBGWO MESSAGE #2409</H3>
+<H2> WARN: Dropping polled action, no free contexts</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to get a context area for a new action failed.
+The action was dropped.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required, processing continues.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2500-2599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2500"></A>
+<H3>LIBGWO MESSAGE #2500</H3>
+<H2> ERROR: Send AP_TP_BEGIN_DIALOGUE_RSP failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI primitive indicating dialogue rejection
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2501"></A>
+<H3>LIBGWO MESSAGE #2501</H3>
+<H2> ERROR: ap_rcv failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Receiving OSI primitives from a poll for input failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2504"></A>
+<H3>LIBGWO MESSAGE #2504</H3>
+<H2> ERROR: Cannot create shared mem nettxid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Creating a network transaction id for this domain in
+shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2505"></A>
+<H3>LIBGWO MESSAGE #2505</H3>
+<H2> ERROR: Set of TTNID failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable TTNID to the
+transaction id failed. The reason is noted in the
+ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2506"></A>
+<H3>LIBGWO MESSAGE #2506</H3>
+<H2> ERROR: Remote domain name not found in configuration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The remote domain name in the input cannot be found in
+the shared memory version of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2507"></A>
+<H3>LIBGWO MESSAGE #2507</H3>
+<H2> ERROR: Unable to obtain remote domain info from shm</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the remote domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2508"></A>
+<H3>LIBGWO MESSAGE #2508</H3>
+<H2> ERROR: Unable to assign id to incoming conversation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A conversation id could not be assigned from the
+conversation table in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2509"></A>
+<H3>LIBGWO MESSAGE #2509</H3>
+<H2> ERROR: No free context structures available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Obtaining a free context for a conversation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2510"></A>
+<H3>LIBGWO MESSAGE #2510</H3>
+<H2> ERROR: No conversation id associated with this fd</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The conversation id was not found in the conversation
+table in shared memory for the file descriptor this
+request is being processed on.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2511"></A>
+<H3>LIBGWO MESSAGE #2511</H3>
+<H2> ERROR: No conversation id associated with this fd</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The conversation id was not found in the conversation
+table in shared memory for the file descriptor this
+request is being processed on.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2512"></A>
+<H3>LIBGWO MESSAGE #2512</H3>
+<H2> ERROR: Invalid Buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The input data buffer is not a known type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2514"></A>
+<H3>LIBGWO MESSAGE #2514</H3>
+<H2> ERROR: Conversation id not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The id of the conversational request was not found in
+the shared memory conversation table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2515"></A>
+<H3>LIBGWO MESSAGE #2515</H3>
+<H2> ERROR: Blocking timeout occured, deleting fd</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Before receiving this reply from a remote node the
+request timed out and the client making the request
+can no longer be contacted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase timeout value for the request.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2517"></A>
+<H3>LIBGWO MESSAGE #2517</H3>
+<H2> ERROR: Received unknown op code <I>operation</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The operation listed is an invalid or unsupported
+apdu type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2518"></A>
+<H3>LIBGWO MESSAGE #2518</H3>
+<H2> ERROR: Conversation id not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The id of the conversational request was not found in
+the shared memory conversation table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2519"></A>
+<H3>LIBGWO MESSAGE #2519</H3>
+<H2> ERROR: Conversation id not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The id of the conversational request was not found in
+the shared memory conversation table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2520"></A>
+<H3>LIBGWO MESSAGE #2520</H3>
+<H2> ERROR: Conversation id not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The id of the conversational request was not found in
+the shared memory conversation table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2522"></A>
+<H3>LIBGWO MESSAGE #2522</H3>
+<H2> ERROR: Received protocol error, sptype = <I>primitive name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The listed OSI primitive name is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2523"></A>
+<H3>LIBGWO MESSAGE #2523</H3>
+<H2> ERROR: Send of AP_TP_U_ABOUT_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI primitive U_ABORT_REQ (because sending a
+HANDSHAKE_AND_GRANT_CONTROL_RSP failed), failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2524"></A>
+<H3>LIBGWO MESSAGE #2524</H3>
+<H2> ERROR: Received AP_TP_P_ABORT_IND from OSITP</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An OSI provider abort was received.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2525"></A>
+<H3>LIBGWO MESSAGE #2525</H3>
+<H2> ERROR: A permanent error condition has been encountered</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2526"></A>
+<H3>LIBGWO MESSAGE #2526</H3>
+<H2> ERROR: A transient error condition has been encountered</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2527"></A>
+<H3>LIBGWO MESSAGE #2527</H3>
+<H2> ERROR: A protocol error has been encountered</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2528"></A>
+<H3>LIBGWO MESSAGE #2528</H3>
+<H2> ERROR: Transaction request rejected because recipient is already involved in a transaction, or a local error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2529"></A>
+<H3>LIBGWO MESSAGE #2529</H3>
+<H2> ERROR: Two TP_END_DIALOG primitives have collided</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2530"></A>
+<H3>LIBGWO MESSAGE #2530</H3>
+<H2> ERROR: A TP_BEGIN_TRANSACTION_REQ and a TP_END_DIALOG_REQ have collided</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2531"></A>
+<H3>LIBGWO MESSAGE #2531</H3>
+<H2> ERROR: Invalid diagnostic value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the diagnostic information accompanying the
+OSI provider abort.
+This is just an informational message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2532"></A>
+<H3>LIBGWO MESSAGE #2532</H3>
+<H2> ERROR: Send of AP_TP_U_ABOUT_REQ failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI primitive U_ABORT_REQ because the dialogue
+being initiated from a remote domain is being rejected,
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2533"></A>
+<H3>LIBGWO MESSAGE #2533</H3>
+<H2> ERROR: Invalid Buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The input data buffer is not a known type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2534"></A>
+<H3>LIBGWO MESSAGE #2534</H3>
+<H2> ERROR: No conversation id associated with this fd</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message from the network.
+The process was unable to obtain the conversation identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2535"></A>
+<H3>LIBGWO MESSAGE #2535</H3>
+<H2> ERROR: Invalid Buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message from the network.  The process was unable to allocate an empty buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reduce memory usage on the system or increase physical memory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2600-2699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2600"></A>
+<H3>LIBGWO MESSAGE #2600</H3>
+<H2> ERROR: Invalid conversation context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The context for the conversation could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2601"></A>
+<H3>LIBGWO MESSAGE #2601</H3>
+<H2> ERROR: Unable to send AP_TP_DATA_REQ, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI DATA_REQ primitive in reply to a
+service request failed. The reason is noted in the
+ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2602"></A>
+<H3>LIBGWO MESSAGE #2602</H3>
+<H2> ERROR: Unable to send <I>primitive</I>, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the listed primitive to end a reply failed.
+If HANDSHAKE_AND_GRANT_CONTROL_REQ, the UDT_ASE is active.
+If GRANT_CONTROL_REQ, the XATMI_ASE is active within a
+transaction.
+If END_DIALOGUE_REQ, the XATMI_ASE is active outside a
+transaction.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2603"></A>
+<H3>LIBGWO MESSAGE #2603</H3>
+<H2> ERROR: Invalid conversation context</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The context for the conversation could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2604"></A>
+<H3>LIBGWO MESSAGE #2604</H3>
+<H2> ERROR: Unable to send AP_TP_U_ABORT_REQ, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the OSI U_ABORT_REQ primitive because a service
+request failure occurred, failed. The reason is noted
+in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2800-2899</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2800"></A>
+<H3>LIBGWO MESSAGE #2800</H3>
+<H2> ERROR: Invalid action index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Catastrophic protocol error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2801"></A>
+<H3>LIBGWO MESSAGE #2801</H3>
+<H2> ERROR: Invalid conversation id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either no conversation id found or the conversation id
+is greater than the TMMAXCONV define.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2802"></A>
+<H3>LIBGWO MESSAGE #2802</H3>
+<H2> ERROR: Invalid action index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Catastrophic protocol error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2803"></A>
+<H3>LIBGWO MESSAGE #2803</H3>
+<H2> ERROR: Maximum number of conversation id's exceeded</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In trying to setup for another conversation, this
+conversation's id would exceed the number allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the request after in progress conversations
+terminate.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2804"></A>
+<H3>LIBGWO MESSAGE #2804</H3>
+<H2> ERROR: Invalid action index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Catastrophic protocol error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2805"></A>
+<H3>LIBGWO MESSAGE #2805</H3>
+<H2> ERROR: Unable to obtain remote domain info from shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the remote domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2806"></A>
+<H3>LIBGWO MESSAGE #2806</H3>
+<H2> ERROR: Unable to obtain ositp info from rdom</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the remote OSITP information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2807"></A>
+<H3>LIBGWO MESSAGE #2807</H3>
+<H2> ERROR: Remote domain name not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The remote domain name in the input cannot be found in
+the shared memory version of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2808"></A>
+<H3>LIBGWO MESSAGE #2808</H3>
+<H2> ERROR: Cannot realloc fd structures</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After using all allocated slots in the fd table,
+reallocation of more space for additional fd slots
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2809"></A>
+<H3>LIBGWO MESSAGE #2809</H3>
+<H2> ERROR: Could not create new listener</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After deleting a communications file descriptor and
+finding no listening running (usually because there
+were the maximum number of remote nodes connected),
+starting a listening instance failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This condition should remedy itself after another
+request finishes. If not, contact your TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2810"></A>
+<H3>LIBGWO MESSAGE #2810</H3>
+<H2> ERROR: Stuctures have not been allocated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for vbuf and dbuf structures failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2811"></A>
+<H3>LIBGWO MESSAGE #2811</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a dbuf db_base area failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2812"></A>
+<H3>LIBGWO MESSAGE #2812</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a cdata area failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2813"></A>
+<H3>LIBGWO MESSAGE #2813</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a tpenv structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2814"></A>
+<H3>LIBGWO MESSAGE #2814</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a tpenv structure and a
+cdata area failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2815"></A>
+<H3>LIBGWO MESSAGE #2815</H3>
+<H2> ERROR: gw_tx_end returned failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routine to update the transaction table counter
+for this gateway indicating the number of active actions
+associated with this transaction failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2816"></A>
+<H3>LIBGWO MESSAGE #2816</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for sending vbuf and dbuf structures
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2817"></A>
+<H3>LIBGWO MESSAGE #2817</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for receiving vbuf and dbuf structures
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2818"></A>
+<H3>LIBGWO MESSAGE #2818</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a data buffer associated with the
+receive vbuf and dbuf failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2819"></A>
+<H3>LIBGWO MESSAGE #2819</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a receive cdata area failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2820"></A>
+<H3>LIBGWO MESSAGE #2820</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a sending tpenv structure and a
+cdata area failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2821"></A>
+<H3>LIBGWO MESSAGE #2821</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a context structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2822"></A>
+<H3>LIBGWO MESSAGE #2822</H3>
+<H2> ERROR: No free fd structures available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After using all allocated slots in the fd table,
+reallocation of more space for additional fd slots
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2823"></A>
+<H3>LIBGWO MESSAGE #2823</H3>
+<H2> ERROR: No free context structures available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a context structure failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2824"></A>
+<H3>LIBGWO MESSAGE #2824</H3>
+<H2> ERROR: Cannot get LDOM or OSITP from shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving either the local domain information or the
+local ositp information from shared memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2825"></A>
+<H3>LIBGWO MESSAGE #2825</H3>
+<H2> ERROR: ap_open() failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Opening an OSI communications file descriptor failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2826"></A>
+<H3>LIBGWO MESSAGE #2826</H3>
+<H2> ERROR: ap_init_env() failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Initializing the OSITP environment failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2827"></A>
+<H3>LIBGWO MESSAGE #2827</H3>
+<H2> ERROR: set of COPYENV failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable COPYENV
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2828"></A>
+<H3>LIBGWO MESSAGE #2828</H3>
+<H2> ERROR: set of AP_MODE_SEL failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable MODE_SEL
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2829"></A>
+<H3>LIBGWO MESSAGE #2829</H3>
+<H2> ERROR: Cannot get LDOM OSITP from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Trying to get the local domain information from shared
+memory failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2830"></A>
+<H3>LIBGWO MESSAGE #2830</H3>
+<H2> ERROR: set of AP_URCH failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable URCH
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2831"></A>
+<H3>LIBGWO MESSAGE #2831</H3>
+<H2> ERROR: set of AP_CONTROL_ID failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable CONTROL_ID
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2832"></A>
+<H3>LIBGWO MESSAGE #2832</H3>
+<H2> ERROR: set of AP_ROLE_ALLOWED failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable ROLE_ALLOWED
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2833"></A>
+<H3>LIBGWO MESSAGE #2833</H3>
+<H2> ERROR: set CATEGORY failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable CATEGORY
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2834"></A>
+<H3>LIBGWO MESSAGE #2834</H3>
+<H2> ERROR: set of TPFU_SEL failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Setting the OSITP environment variable TPFU_SEL
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2835"></A>
+<H3>LIBGWO MESSAGE #2835</H3>
+<H2> ERROR: get of AP_CNTX_NAME failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the OSITP environment variable CNTX_NAME
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2836"></A>
+<H3>LIBGWO MESSAGE #2836</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the UDT application context to object id
+format failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2837"></A>
+<H3>LIBGWO MESSAGE #2837</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Converting the XATMI application context to object id
+format failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2838"></A>
+<H3>LIBGWO MESSAGE #2838</H3>
+<H2> ERROR: Invalid Application Context Name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Application context name does not agree with the
+OSITP environment application name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2839"></A>
+<H3>LIBGWO MESSAGE #2839</H3>
+<H2> ERROR: get of CATEGORY failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the OSITP environment variable CATEGORY
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2840"></A>
+<H3>LIBGWO MESSAGE #2840</H3>
+<H2> ERROR: Invalid Dialogue Category</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The received CATEGORY does not agree with the OSITP
+CATEGORY environment variable. It should be
+AP_TP_DIALOGUE.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2841"></A>
+<H3>LIBGWO MESSAGE #2841</H3>
+<H2> ERROR: get of TPFU_SEL failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the OSITP environment variable TPFU_SEL
+failed. The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2842"></A>
+<H3>LIBGWO MESSAGE #2842</H3>
+<H2> ERROR: TPFU not supported, bit value = <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The received TPFU_SEL does not agree with the OSITP
+environment variable TPFU_SEL. The value listed
+identifies the invalid functional units.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2843"></A>
+<H3>LIBGWO MESSAGE #2843</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a dbuf db_base area failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check available memory.
+<SECT1><P>
+<H1>LIBGWO MESSAGES 2900-2999</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2900"></A>
+<H3>LIBGWO MESSAGE #2900</H3>
+<H2> ERROR: ap_rcv failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Receiving OSI primitives from a poll for input failed.
+The reason is noted in the ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2901"></A>
+<H3>LIBGWO MESSAGE #2901</H3>
+<H2> ERROR: Received protocol error, sptype = <I>primitive name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The listed OSI primitive name is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2902"></A>
+<H3>LIBGWO MESSAGE #2902</H3>
+<H2> ERROR: Can't find LSVC entry by rname <I>service name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the local service information from shared
+memory failed for the listed service.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2903"></A>
+<H3>LIBGWO MESSAGE #2903</H3>
+<H2> ERROR: Can't find RSVC entry by name <I>service name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Retrieving the remote service information from shared
+memory failed for the listed service.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2906"></A>
+<H3>LIBGWO MESSAGE #2906</H3>
+<H2> ERROR: Cannot allocate RPCRQ buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Allocating space for a UDT RPCRQ buffer with tpalloc()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2907"></A>
+<H3>LIBGWO MESSAGE #2907</H3>
+<H2> ERROR: Can't get local services from configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Information about local services could not be found in
+shared memory version of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2909"></A>
+<H3>LIBGWO MESSAGE #2909</H3>
+<H2> ERROR: Incoming request not allowed access to any local services</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested is not in the specified ACL
+(access control list).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2910"></A>
+<H3>LIBGWO MESSAGE #2910</H3>
+<H2> ERROR: Remote domain name not found in configuration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The remote domain name in the input cannot be found in
+the shared memory version of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+Check that DWADM and GWADM are up and running before
+GWOSITP is started.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2911"></A>
+<H3>LIBGWO MESSAGE #2911</H3>
+<H2> ERROR: Service is denied Access</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested is not in the specified ACL
+(access control list).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2912"></A>
+<H3>LIBGWO MESSAGE #2912</H3>
+<H2> ERROR: Can't find LSVC entry by rname <I>service name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested by the listed service name was
+not found in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the DMCONFIG file and insure dmloadcf has been
+run on it.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2913"></A>
+<H3>LIBGWO MESSAGE #2913</H3>
+<H2> ERROR: Send AP_TP_HANDSHAKE_AND_GRANT_CONTROL_RSP failed, <I>ap_error text</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending an OSI HANDSHAKE_AND_GRANT_CONTROL_RSP
+primitive failed. The reason is noted in the
+ap_error text.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2914"></A>
+<H3>LIBGWO MESSAGE #2914</H3>
+<H2> ERROR: Unable to obtain svc info from svcinfo</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  The process was unable to obtain the remote services table from shared
+memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2915"></A>
+<H3>LIBGWO MESSAGE #2915</H3>
+<H2> ERROR: Unable to obtain svc info from svcinfo</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  The process was unable to obtain the remote services table from
+shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2916"></A>
+<H3>LIBGWO MESSAGE #2916</H3>
+<H2> ERROR: Set of network state failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to commit a
+transaction.  The process was unable to set the status of the transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2917"></A>
+<H3>LIBGWO MESSAGE #2917</H3>
+<H2> ERROR: Invalid Buffer Type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to convert a
+view buffer into an APDU structure.  The process detected an invalid
+buffer type for the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2918"></A>
+<H3>LIBGWO MESSAGE #2918</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to convert a
+view buffer into an APDU structure.  The process was unable to allocate enough
+virtual memory for the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2919"></A>
+<H3>LIBGWO MESSAGE #2919</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to convert a
+view buffer into an APDU structure.  The process was unable to allocate enough
+virtual memory for the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2920"></A>
+<H3>LIBGWO MESSAGE #2920</H3>
+<H2> ERROR: Invalid Buffer Type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to convert an
+APDU structure into a view buffer.  The process detected an invalid buffer type
+for the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2921"></A>
+<H3>LIBGWO MESSAGE #2921</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2922"></A>
+<H3>LIBGWO MESSAGE #2922</H3>
+<H2> ERROR: Encode of U_ABORT_RI failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to
+encode a buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the
+exact error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2923"></A>
+<H3>LIBGWO MESSAGE #2923</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  The process was unable to allocate enough virtual memory for the
+operatio
+n.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2924"></A>
+<H3>LIBGWO MESSAGE #2924</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2925"></A>
+<H3>LIBGWO MESSAGE #2925</H3>
+<H2> ERROR: ioptr_init_char failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  An internal function call returned a failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2926"></A>
+<H3>LIBGWO MESSAGE #2926</H3>
+<H2> ERROR: Encode of U_ABORT_RI failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to encode a
+buffer.  An internal function call returned a failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2927"></A>
+<H3>LIBGWO MESSAGE #2927</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decode a
+buffer.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2928"></A>
+<H3>LIBGWO MESSAGE #2928</H3>
+<H2> ERROR: Decode of U_ABORT_RI failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decode a
+buffer.  An internal function call returned a failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2929"></A>
+<H3>LIBGWO MESSAGE #2929</H3>
+<H2> ERROR: Can't make object identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decode a
+buffer.  An internal function call returned a failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2930"></A>
+<H3>LIBGWO MESSAGE #2930</H3>
+<H2> ERROR: Invalid transfer syntax name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decode a
+buffer.  An internal function call returned a failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2931"></A>
+<H3>LIBGWO MESSAGE #2931</H3>
+<H2> ERROR: Remote domain's domainid not found in configuration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message buffer.  The remote domain associated with the inbound message buffer
+was not found in the domain configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the domain configuration to ensure that the correct remote domain names
+are present.  If the error persists, contact your TUXEDO System Technical
+Support with the exact error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2933"></A>
+<H3>LIBGWO MESSAGE #2933</H3>
+<H2> ERROR: Couldn't retrieve TRAN table from shmem</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to process a
+connect operation.  The process was unable to obtain the transaction table from
+shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact
+error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

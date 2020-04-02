@@ -1,0 +1,142 @@
+package $packageName;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import java.util.Hashtable;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import oracle.jbo.JboContext;
+import oracle.jbo.client.Configuration;
+import oracle.jbo.common.JboEnvUtil;
+import oracle.jbo.common.PropertyConstants;
+import oracle.jbo.common.PropertyMetadata;
+import oracle.jbo.common.ampool.DefaultConnectionStrategy;
+import oracle.jbo.common.ampool.EnvInfoProvider;
+
+public class JCLoginDialog extends JPanel implements EnvInfoProvider {
+
+    private BorderLayout outerLayout = new BorderLayout();
+    private JPanel inputPanel = new JPanel();
+    private GridBagLayout panelLayout = new GridBagLayout();
+    private JLabel labelUserName = new JLabel();
+    private JTextField mUserName = new JTextField();
+    private JLabel labelPassword = new JLabel();
+    private JPasswordField mPassword = new JPasswordField();
+    private JLabel mErrorMessage = new JLabel();
+    private JFrame parent;
+    private String [] options = { "OK", "Cancel" };
+
+    /**Constructor taking a parent Form as parameter
+     */
+    public JCLoginDialog(JFrame parent) {
+        super();
+        this.parent = parent;
+        try {
+            jbInit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Dimension getPreferredSize() {
+        return new Dimension(250, 110);
+    }
+
+    /**The default constructor 
+     */
+    public JCLoginDialog() {
+        this(null);
+    }
+
+    public Dimension getMinimumSize() {
+        return getPreferredSize();
+    }
+
+    /**the JbInit method
+     */
+    public void jbInit() {
+        setLayout(outerLayout);
+        inputPanel.setLayout(panelLayout);
+        inputPanel.add(labelUserName, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 1, 1));
+        inputPanel.add(mUserName, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 165, 1));
+        labelUserName.setLabelFor(mUserName);
+        mUserName.setToolTipText("The username");
+        labelUserName.setText("User name :");
+        inputPanel.add(labelPassword, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 1, 1));
+        inputPanel.add(mPassword, new GridBagConstraints(1, 1, 500, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 165, 1));
+        labelPassword.setLabelFor(mPassword);
+        mPassword.setToolTipText("Password used for authentication");
+        labelPassword.setText("Password :");
+        this.add(inputPanel, BorderLayout.CENTER);
+        this.add(mErrorMessage, BorderLayout.SOUTH);
+    }
+
+    public boolean popupDialog() {
+        int result = 
+            JOptionPane.showOptionDialog( parent, this, "Login", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+        switch (result) {
+        case 0:
+            return true;
+        default:
+            return false;
+        }
+    }
+
+    public void modifyInitialContext(Object initialContext) {
+    }
+
+    public Object getInfo(String info, Object connEnvironment) {
+        RuntimeException exc = ((RuntimeException)((Hashtable)connEnvironment).get(DefaultConnectionStrategy.LAST_EXCEPTION));
+        if (exc == null) {
+            mErrorMessage.setText("");
+        } else {
+            mErrorMessage.setText("Incorrect user name/password combination");
+        }
+
+        if (!(System.getProperty("javawebstart.version") !=null &&
+             System.getProperty("javawebstart.version").startsWith("javaws"))) {
+
+           if (!JboEnvUtil.isAuthenticateUser((Hashtable)connEnvironment)) {
+               return null;
+           }
+        }
+
+        String username = (String) ((Hashtable) connEnvironment).get(JboContext.SECURITY_PRINCIPAL);
+        String password = (String) ((Hashtable) connEnvironment).get(JboContext.SECURITY_CREDENTIALS);
+        boolean isUsernameEmpty = ((username == null) || (username.length() <= 0));
+        boolean isPasswordEmpty = ((password == null) || (password.length() <= 0));
+        if (isUsernameEmpty) {
+            username = new String(mUserName.getText()).trim();
+            isUsernameEmpty = ((username == null) || (username.length() <= 0));
+        }
+        if (isPasswordEmpty) {
+            password = new String(mPassword.getPassword()).trim();
+            isPasswordEmpty = ((password == null) || (password.length() <= 0));
+        }
+        if (isUsernameEmpty || isPasswordEmpty || exc != null) {
+            if (!popupDialog()) {
+                throw new IllegalArgumentException("Login Cancelled");
+            }
+        }
+        ((Hashtable)connEnvironment).put(JboContext.SECURITY_PRINCIPAL, mUserName.getText().trim());
+        ((Hashtable)connEnvironment).put(JboContext.SECURITY_CREDENTIALS, new String(mPassword.getPassword()).trim());
+        ((Hashtable)connEnvironment).put(Configuration.DB_USERNAME_PROPERTY, mUserName.getText().trim());
+        ((Hashtable)connEnvironment).put(Configuration.DB_PASSWORD_PROPERTY, new String(mPassword.getPassword()).trim());
+
+        return null;
+    }
+
+    public int getNumOfRetries() {
+        return 5;
+    }
+}

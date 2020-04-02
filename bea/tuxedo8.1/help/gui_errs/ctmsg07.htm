@@ -1,0 +1,1346 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 700-799</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="700"></A>
+<H3>CMDTUX MESSAGE #700</H3>
+<H2> ERROR: Group's current location inconsistent with TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The location of a server group was
+being updated in the master copy of the
+TUXCONFIG
+file,
+to reflect a new location after migration.
+The new location unexpectedly did not match
+either the primary or backup specified in the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The master machine's
+TUXCONFIG
+is inconsistent with the group's real location.
+The file can be restored by shutting down the
+application, and then running
+tmloadcf
+using a backup
+ASCII
+version of the configuration file.
+Running
+tmunloadcf
+on another machine in the configuration
+should provide a recent backup version.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="730"></A>
+<H3>CMDTUX MESSAGE #730</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurred while attempting to shut down a partitioned lmid
+and its associated servers.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application
+ipckey
+is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="731"></A>
+<H3>CMDTUX MESSAGE #731</H3>
+<H2> ERROR: for debug level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A non-numeric argument was specified with
+the debugging option of
+tmboot
+or
+tmshutdown ,
+causing the process to abort.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a numeric value for the debugging level command line
+option.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="732"></A>
+<H3>CMDTUX MESSAGE #732</H3>
+<H2> ERROR: for srvid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument for the
+-i
+option of
+tmboot
+or
+tmshutdown
+is not a numeric
+value between 1 and 30,000.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a numeric value between 1 and 30,000.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="733"></A>
+<H3>CMDTUX MESSAGE #733</H3>
+<H2> ERROR: for sequence number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument for the
+-o
+option of
+tmboot
+or
+tmshutdown
+is not a numeric value between 1 and 9,999.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a numeric value between 1 and 9,999.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="734"></A>
+<H3>CMDTUX MESSAGE #734</H3>
+<H2> ERROR: for delay</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument for the
+-w
+option of
+tmshutdown
+is not a number greater than 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a numeric value greater than 0.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="735"></A>
+<H3>CMDTUX MESSAGE #735</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurred while booting the
+MASTER
+machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application
+ipckey
+is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="737"></A>
+<H3>CMDTUX MESSAGE #737</H3>
+<H2> ERROR: tmboot too many arguments</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An argument is present that does not
+match the options selected for
+tmboot ,
+or no options are specified and an argument is passed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit after verifying the command line options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="738"></A>
+<H3>CMDTUX MESSAGE #738</H3>
+<H2> ERROR: -R option requires either the -g or -l option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the
+-R
+option shuts down servers on their original processors
+to prepare them for migration to another processor.
+This option must be used with either the group name,
+-g
+<I>grpname</I>,
+or logical name,
+-l
+<I>lmid</I>,
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit the command and specify either the
+-g
+or
+-l
+option that contains the servers to be shut down and eventually migrated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="739"></A>
+<H3>CMDTUX MESSAGE #739</H3>
+<H2> ERROR: -A option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration option,
+-R ,
+has been issued with the administrative servers option,
+-A .
+This request isn't valid, since migration is specific to server groups
+through options
+-l
+or
+-g ,
+not administrative servers.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+with either option
+-R
+to shut down the servers specified for migration, or after all
+the servers in the SERVERS section of the configuration file
+have been shut down, the
+-A
+option may be used to shut down the administrative servers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="740"></A>
+<H3>CMDTUX MESSAGE #740</H3>
+<H2> ERROR: -S option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the
+-R
+option has been issued with the
+-S
+option specifying that all servers in the SERVERS section
+of the configuration file should be shut down for migration.
+This request isn't valid since the
+-R
+option must be used with either option
+-l
+or
+-g .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+without the
+-S
+option and instead specify the servers to be shut down by the
+-l
+<I>lmid</I>
+or
+-g
+<I>grpname</I>
+options that contain these server groups.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="741"></A>
+<H3>CMDTUX MESSAGE #741</H3>
+<H2> ERROR: -B option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration,
+-R ,
+option has been issued with the
+BBL,
+-B ,
+option.
+A
+BBL
+may not be shut down for migration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+without the
+-B
+option and instead specify the servers to be shut down by the
+-l
+<I>lmid</I>
+or
+-g
+<I>grpname</I>
+options that contain these server groups.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="742"></A>
+<H3>CMDTUX MESSAGE #742</H3>
+<H2> ERROR: -T option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration,
+-R ,
+option has been issued with the
+TMS
+servers,
+-T ,
+option.
+A
+TMS
+may not be shut down for migration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+without the
+-T
+option and instead specify the servers to be shut down by the
+-l
+<I>lmid</I>
+or
+-g
+<I>grpname</I>
+options that contain these server groups.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="743"></A>
+<H3>CMDTUX MESSAGE #743</H3>
+<H2> ERROR: -H option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration,
+-R ,
+option has been issued with the
+-H
+option to shut down all administrative and application
+servers on a specified processor.
+This request isn't valid since migration is specific to server groups
+through options
+-l
+or
+-g ,
+not administrative servers.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+with the
+-l
+option to specify the servers to be shut down
+on the specified processor for migration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="744"></A>
+<H3>CMDTUX MESSAGE #744</H3>
+<H2> ERROR: -i option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration,
+-R ,
+option has been issued with the
+-i
+<I>srvid</I>
+option which will shut down all servers in the
+SERVERS section of the configuration file whose
+SRVID
+parameter is
+<I>srvid</I>.
+This request isn't valid since the
+-R
+option must be used with either option
+-l
+or
+-g .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+without the
+-i
+option and instead specify the servers to be shut down by the
+-l
+<I>lmid</I>
+or
+-g
+<I>grpname</I>
+options that contain these server groups.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="745"></A>
+<H3>CMDTUX MESSAGE #745</H3>
+<H2> ERROR: -o option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration,
+-R ,
+option has been issued with the
+-o
+<I>sequence</I>
+option which will shut down all servers in the
+SERVERS section of the configuration file whose
+SEQUENCE
+parameter is
+<I>sequence</I>.
+This request isn't valid since the
+-R
+option must be used with either option
+-l
+or
+-g .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+without the
+-o
+option and instead specify the servers to be shut down by the
+-l
+<I>lmid</I>
+or
+-g
+<I>grpname</I>
+options that contain these server groups.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="746"></A>
+<H3>CMDTUX MESSAGE #746</H3>
+<H2> ERROR: -s option not allowed with -R</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the migration,
+-R ,
+option has been issued with the
+-s
+<I>aout</I>
+option which will shut down all servers in the
+SERVERS section of the configuration file whose
+name is
+<I>aout</I>.
+This request isn't valid since the
+-R
+option must be used with either option
+-l
+or
+-g .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown
+without the
+-s
+option and instead specify the servers to be shut down by the
+-l
+<I>lmid</I>
+or
+-g
+<I>grpname</I>
+options that contain these server groups.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="754"></A>
+<H3>CMDTUX MESSAGE #754</H3>
+<H2> ERROR: error processing configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When booting or shutting down an application,
+tmboot
+or
+tmshutdown
+attempts to load in the
+TUXCONFIG
+file.  At this point the
+configuration file defined by the environment variable
+TUXCONFIG
+cannot be found or has been corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The value of the
+TUXCONFIG
+environment variable should be checked to see if it set to the
+correct configuration file and exported.  After ensuring that this
+variable is set correctly and the same failure occurs, the
+TUXCONFIG
+file has been corrupted.  The
+TUXCONFIG
+file must be regenerated by the
+tmloadcf
+command from the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmloadcf (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="755"></A>
+<H3>CMDTUX MESSAGE #755</H3>
+<H2> ERROR: -R option not allowed if MIGRATE not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the
+-R
+option has been issued for a configuration that does not have the
+MIGRATE
+option specified in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To enable migration for an application in this situation, the
+application must be shut down, and the configuration must be updated to
+include the
+MIGRATE
+option (in the *RESOURCES section).  Then the
+TUXCONFIG
+file must be recompiled using
+tmloadcf ,
+and after the application is brought back up, migration may be
+performed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot (1),
+tmloadcf (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="756"></A>
+<H3>CMDTUX MESSAGE #756</H3>
+<H2> ERROR: -P option not allowed on non-partitioned node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request with the
+-P
+option has been issued on a non-partitioned node.  The
+-P
+option is specifically used for nodes that are partitioned (there
+is no access with the
+DBBL).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To shut down servers on this lmid, the
+-l
+option may be used.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="757"></A>
+<H3>CMDTUX MESSAGE #757</H3>
+<H2> ERROR: Could not reset model to MP for partitioned shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System internal value was not set correctly.  Check the userlog for
+additional error messages to clarify this error condition.
+The circumstances associated with this error are not likely
+to be caused by something that the invoker of the
+tmshutdown
+command will have done.  It is more likely to be a TUXEDO System error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try repeating the same operation.  If this fails with the same
+error, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="758"></A>
+<H3>CMDTUX MESSAGE #758</H3>
+<H2> ERROR: Could not attach to local BB for partitioned shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to connect to the local bulletin board to complete the
+partitioned shutdown request, an error occurred in the
+initialization phase.  There are several scenarios that may
+eventually cause this error, including a corrupted
+TUXCONFIG
+file, authentication failure, and invalid buffer types.
+Also, the
+tpinfo buffer could contain illegal values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for error messages to clarify the problem.
+If the cause cannot be discerned, contact your TUXEDO System Technical
+Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="759"></A>
+<H3>CMDTUX MESSAGE #759</H3>
+<H2> ERROR: Could not bring up temp DBBL for partitioned shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to process a partitioned shutdown request, a temporary
+DBBL
+process must be booted.
+An error occurs such as running the
+command on a machine that is not partitioned.  Or while starting
+the pseudo-DBBL, the original
+DBBL
+is still reachable through
+another bridge from the "partitioned" site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine if the machine is partitioned (by using the
+tmadmin
+command
+psr ).
+Check the userlog for error messages to clarify the problem.
+If the machine is partitioned and this error occurs again,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="760"></A>
+<H3>CMDTUX MESSAGE #760</H3>
+<H2> ERROR: Failed to attach to temp DBBL for partitioned shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The tmadmin process was unable to attach itself to the Bulletin
+Board to perform the requested action.  Check the userlog for
+additional error messages to clarify the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try repeating the command again.  If it fails in the same manner,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="761"></A>
+<H3>CMDTUX MESSAGE #761</H3>
+<H2> ERROR: Illegal TUXCONFIG value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value of the
+TUXCONFIG
+environment variable and the caller process and the value for the
+machine set in the
+UBBCONFIG
+file are inconsistent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reset the
+TUXCONFIG
+variable and rerun the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="762"></A>
+<H3>CMDTUX MESSAGE #762</H3>
+<H2> ERROR: LAN mode not specified for multiple node application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+OPTIONS
+parameter in the *RESOURCES section must specify the
+LAN
+option for a multiple node application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the application configuration to ensure that the
+OPTIONS
+parameter in the *RESOURCES section includes the
+LAN
+value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="763"></A>
+<H3>CMDTUX MESSAGE #763</H3>
+<H2> ERROR: cannot create internal BB tables</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting, an application error in attaching to the shared
+memory has occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="764"></A>
+<H3>CMDTUX MESSAGE #764</H3>
+<H2> ERROR: can't attach to BB</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While shutting down an application, an error in attaching to the
+configuration bulletin board has occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional diagnostic messages.
+Normally this error implies that the
+TUXCONFIG
+environment variable
+is not set correctly, or that the application is not booted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="765"></A>
+<H3>CMDTUX MESSAGE #765</H3>
+<H2> ERROR: must run on master node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmboot
+must be run on either of the master nodes specified in the
+MASTER
+parameter of the *RESOURCES section.
+tmshutdown
+must be run on the active master.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reissue the boot or shutdown command on the proper processing
+element.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="766"></A>
+<H3>CMDTUX MESSAGE #766</H3>
+<H2> ERROR: must run on master node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A boot request is issued from the backup master node specified
+in the configuration.  Or, the system cannot find a
+DBBL
+process in
+the system during a shutdown request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reissue the boot request from the master specified in the
+configuration.  If this error results from a shutdown request,
+make sure that there is a
+DBBL
+process running before reissuing the
+request.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="767"></A>
+<H3>CMDTUX MESSAGE #767</H3>
+<H2> ERROR: must run on master node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request is issued from the master node specified
+in the configuration.
+However, this is no longer the active
+master, since the original master has been migrated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reissue the shutdown request from the active master.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="768"></A>
+<H3>CMDTUX MESSAGE #768</H3>
+<H2> ERROR: Bad LMID (<I>lmid</I>) in command line option(s)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument
+<I>lmid</I>
+specified for the command line option is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration for the correct
+<I>lmid</I>
+value and reissue the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="769"></A>
+<H3>CMDTUX MESSAGE #769</H3>
+<H2> ERROR: Server group name (<I>grpname</I>) too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The group name specified for the command line option is too long.
+The server group name must be less than or equal to 30 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration for the correct group name and reissue the
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="770"></A>
+<H3>CMDTUX MESSAGE #770</H3>
+<H2> ERROR: Invalid server group name (<I>grpname</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The group name specified for this command is not in the
+configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration for the correct group name and reissue the
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="771"></A>
+<H3>CMDTUX MESSAGE #771</H3>
+<H2> ERROR: Bad command line options! Check the LOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid command line option was specified that resulted in a
+fatal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog file to determine the exact cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="772"></A>
+<H3>CMDTUX MESSAGE #772</H3>
+<H2> ERROR: can't get (D)BBL's table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While shutting down the system, a server table entry is in an
+inconsistent state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="777"></A>
+<H3>CMDTUX MESSAGE #777</H3>
+<H2> INFO: See ULOG for complete process status</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message reminds the user that there is more information
+available in the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="786"></A>
+<H3>CMDTUX MESSAGE #786</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During shutdown, memory could not be allocated for an internal
+structure that holds process information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application
+ipckey
+is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="787"></A>
+<H3>CMDTUX MESSAGE #787</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During shutdown, memory could not be allocated for an internal
+structure that holds process information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="788"></A>
+<H3>CMDTUX MESSAGE #788</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During shutdown, memory could not be allocated for an internal
+structure that holds process information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="790"></A>
+<H3>CMDTUX MESSAGE #790</H3>
+<H2> INFO: *Interrupt* Want to Continue? (y/n):</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system was being shut down when an alarm was turned on.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You may proceed with the shutdown request by entering 'y',
+or you may abort the request by entering 'n'.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="794"></A>
+<H3>CMDTUX MESSAGE #794</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+tmboot ,
+memory could not be allocated for an internal
+structure that holds process information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="795"></A>
+<H3>CMDTUX MESSAGE #795</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+tmboot ,
+memory could not be allocated for an internal
+structure that holds process information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="796"></A>
+<H3>CMDTUX MESSAGE #796</H3>
+<H2> ERROR: Cannot continue booting without DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the booting sequence for a multiprocessing configuration,
+the
+DBBL
+process is required to be booted before the
+BBLs
+may be booted.  However, the
+DBBL
+has not been booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+DBBL
+is running on the master node.
+If the
+DBBL
+is in fact running, contact your TUXEDO System Technical Support.
+Otherwise, the
+DBBL
+must be booted (unless all of the admin processes
+are started at the same time with
+"tmboot -A" ).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="797"></A>
+<H3>CMDTUX MESSAGE #797</H3>
+<H2> ERROR: No BBL available for boot of BRIDGE on <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process requires that a
+BBL
+is present on that
+<I>lmid.</I>
+The
+BBL
+is not currently available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+BBL
+may be booted explicitly using
+"tmboot -B"
+<I>lmid</I>
+and the original command retried.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="798"></A>
+<H3>CMDTUX MESSAGE #798</H3>
+<H2> ERROR: Cannot boot remote BBL(<I>lmid1</I>), no BRIDGE available on DBBLs node(<I>lmid2</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process on the
+DBBL's
+node,
+<I>lmid2</I>,
+must be present to boot the
+BBL
+on
+<I>lmid1</I>
+as requested.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="799"></A>
+<H3>CMDTUX MESSAGE #799</H3>
+<H2> ERROR: Cannot boot remote BBL(<I>lmid</I>), machine inaccessible</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The node
+<I>lmid</I>
+is inaccessible and the
+BBL
+may not be booted as requested.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the node
+<I>lmid</I>
+is running.  If so, contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

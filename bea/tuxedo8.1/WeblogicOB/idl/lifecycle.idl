@@ -1,0 +1,29 @@
+
+#ifndef IDL_COSLIFECYCLE_IDL
+#define IDL_COSLIFECYCLE_IDL
+
+module CosLifeCycle
+{
+	exception NoFactory {};
+	exception NotCopyable { string reason; };
+	exception NotMovable { string reason; };
+	exception NotRemovable { string reason; };
+
+	interface LifeCycleObject
+	{
+		LifeCycleObject copy(in Object there)
+			raises(NoFactory, NotCopyable );
+		void move(in Object there )
+			raises(NoFactory, NotMovable);
+		void remove()
+			raises(NotRemovable);
+	};
+
+	interface SimpleFactory
+	{
+		Object create_object();
+	};
+};
+
+#endif // IDL_COSLIFECYCLE_IDL
+

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><AuditConfig componentType="JPS" xmlns="http://xmlns.oracle.com/ias/audit/audit.xsd">
+  <Events componentType="JPS" displayName="Oracle Platform Security Services" isLibrary="true">
+    <Category name="Authorization">
+      <CommonAttributes>
+        
+        <Attribute displayName="CodeSource" maxLength="2048" name="CodeSource" required="true" type="string">
+          <HelpText>Used for code source in authorization</HelpText>
+        </Attribute>
+        <Attribute displayName="Principals" maxLength="1024" name="Principals" required="true" type="string">
+          <HelpText>Used for principals in authorization</HelpText>
+        </Attribute>
+        <Attribute displayName="InitiatorGUID" maxLength="1024" name="InitiatorGUID" required="true" type="string">
+          <HelpText>Used for initiator guid in authorization</HelpText>
+        </Attribute>
+        <Attribute displayName="Subject" maxLength="1024" name="Subject" required="true" type="string">
+          <HelpText>Used for subject in authorization</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="CheckPermission" name="CheckPermission">
+        <HelpText>JPS Authorization API such as JpsAuth.checkPermission used.</HelpText>
+        <Attribute displayName="PermissionAction" maxLength="1024" name="PermissionAction" required="true" type="string">
+          <HelpText>Used for permission action in authorization</HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionTarget" maxLength="1024" name="PermissionTarget" required="true" type="string">
+          <HelpText>Used for permission target in authorization</HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionClass" maxLength="1024" name="PermissionClass" required="true" type="string">
+          <HelpText>Used for permission class in authorization</HelpText>
+        </Attribute>
+      </Event>
+      <Event displayName="CheckSubject" name="CheckSubject">
+        <HelpText>JPS Authorization API such as JpsSubject.doAs/ doAsPrivileged used.</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="CredentialManagement" name="CredentialManagement">
+      <CommonAttributes>
+        
+        <Attribute displayName="mapName" maxLength="1024" name="mapName" required="true" type="string">
+          <HelpText>Used for map name (alias name) in Credential Store</HelpText>
+        </Attribute>
+        <Attribute displayName="key" maxLength="1024" name="key" required="true" type="string">
+          <HelpText>Used for credential key in Credential Store</HelpText>
+        </Attribute>
+        <Attribute displayName="CodeSource" maxLength="2048" name="CodeSource" required="true" type="string">
+          <HelpText>Used for code source in Credential Store</HelpText>
+        </Attribute>
+        <Attribute displayName="Principals" maxLength="1024" name="Principals" required="true" type="string">
+          <HelpText>Used for principals in Credential Store</HelpText>
+        </Attribute>
+        <Attribute displayName="InitiatorGUID" maxLength="1024" name="InitiatorGUID" required="true" type="string">
+          <HelpText>Used for initiator guid in Credential Store</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="CreateCredential" name="CreateCredential">
+        <HelpText>Used while creating the credentials in Credential Store</HelpText>
+      </Event>
+      <Event displayName="DeleteCredential" name="DeleteCredential">
+        <HelpText>Used while deleting the credentials from Credential Store</HelpText>
+      </Event>
+      <Event displayName="AccessCredential" name="AccessCredential">
+        <HelpText>Used while accessing the credentials from Credential Store</HelpText>
+      </Event>
+      <Event displayName="ModifyCredential" name="ModifyCredential">
+        <HelpText>Used while modifying the credentials in Credential Store</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="PolicyManagement" name="PolicyManagment">
+      <CommonAttributes>
+        
+        <Attribute displayName="CodeSource" maxLength="2048" name="CodeSource" required="true" type="string">
+          <HelpText>Used for code source in policy store</HelpText>
+        </Attribute>
+        <Attribute displayName="Principals" maxLength="1024" name="Principals" required="true" type="string">
+          <HelpText>Used for principals in policy store</HelpText>
+        </Attribute>
+        <Attribute displayName="InitiatorGUID" maxLength="1024" name="InitiatorGUID" required="true" type="string">
+          <HelpText>Used for initiator guid in policy store</HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionAction" maxLength="1024" name="PermissionAction" required="true" type="string">
+          <HelpText>Used for permission action in policy store</HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionTarget" maxLength="1024" name="PermissionTarget" required="true" type="string">
+          <HelpText>Used for permission target in policy store </HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionClass" maxLength="1024" name="PermissionClass" required="true" type="string">
+          <HelpText>Used for permission class in policy store</HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionScope" maxLength="1024" name="PermissionScope" required="true" type="string">
+          <HelpText>Used for permission scope like system or application in policy store</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="PolicyGrant" name="PolicyGrant">
+        <HelpText>JPS PolicyManagement API such as JpsJavaPolicy.grant used</HelpText>
+      </Event>
+      <Event displayName="PolicyRevoke" name="PolicyRevoke">
+        <HelpText>JPS PolicyManagement API such as JpsJavaPolicy.revoke used.</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="RoleManagement" name="RoleManagement">
+      <CommonAttributes>
+        
+        <Attribute displayName="CodeSource" maxLength="2048" name="CodeSource" required="true" type="string">
+          <HelpText>Used for code source in role management</HelpText>
+        </Attribute>
+        <Attribute displayName="Principals" maxLength="1024" name="Principals" required="true" type="string">
+          <HelpText>Used for principals in role management</HelpText>
+        </Attribute>
+        <Attribute displayName="InitiatorGUID" maxLength="1024" name="InitiatorGUID" required="true" type="string">
+          <HelpText>Used for initiator guid in role management</HelpText>
+        </Attribute>
+        <Attribute displayName="ApplicationRole" maxLength="1024" name="ApplicationRole" required="true" type="string">
+          <HelpText>Used for application roles in role management</HelpText>
+        </Attribute>
+        <Attribute displayName="EnterpriseRoles" maxLength="1024" name="EnterpriseRoles" required="true" type="string">
+          <HelpText>Used for enterprise roles in role management</HelpText>
+        </Attribute>
+        <Attribute displayName="PermissionClass" maxLength="1024" name="PermissionScope" required="true" type="string">
+          <HelpText>Used for permission scope in role management</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="RoleMembershipAdd" name="RoleMembershipAdd">
+        <HelpText>Used while adding principal to a role</HelpText>
+      </Event>
+      <Event displayName="RoleMembershipRemove" name="RoleMembershipRemove">
+        <HelpText>Used while removing principal from a role</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="" name="ResourceManagement">
+      <CommonAttributes>
+        
+        <Attribute maxLength="1024" name="InitiatorDN" required="true" shortName="InitiatorDN" type="string">
+          <HelpText>This attribute is used for initiator DN audit for Resources</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="GUID" required="true" shortName="GUID" type="string">
+          <HelpText>This attribute is used for GUID audit for Resources</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="CodeSource" required="true" shortName="CodeSource" type="string">
+          <HelpText>This attribute is used for codesources associated with audit for Resources</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Principals" required="true" shortName="Principals" type="string">
+          <HelpText>This attribute used for principals audit for Resources</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Permission" required="true" shortName="Permission" type="string">
+          <HelpText>This attribute is used for permissions associated with audit for Resources</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="PermissionClass" required="true" shortName="PermissionClass" type="string">
+          <HelpText>This attribute is used for permission class associated with audit for Resources</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="" name="ResourceCreation">
+        <HelpText>This event is used while creating resources in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="ResourceDeletion">
+        <HelpText>This event is used while deleting resources in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="ResourceModification">
+        <HelpText>This event is used while modifying resources in the policy store</HelpText>
+        <Attribute maxLength="1024" name="ModifiedAttributeName" required="true" shortName="ModAttr" type="string">
+          <HelpText>This attribute identifies the Resource attribute being modified</HelpText>
+        </Attribute>
+        <Attribute maxLength="2048" name="ModifiedAttributeValue" required="true" shortName="NewValue" type="string">
+          <HelpText>This attribute is the new value of the modified Resource attribute</HelpText>
+        </Attribute>
+      </Event>
+      <Event displayName="" name="ResourceQuery">
+        <HelpText>This event is used while querying resources in the policy store</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="" name="PermissionSetManagement">
+      <CommonAttributes>
+        
+        <Attribute maxLength="1024" name="InitiatorDN" required="true" shortName="InitiatorDN" type="string">
+          <HelpText>This attribute is used for initiator DN audit for PermissionSet</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="GUID" required="true" shortName="GUID" type="string">
+          <HelpText>This attribute is used for GUID audit for PermissionSet</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="CodeSource" required="true" shortName="CodeSource" type="string">
+          <HelpText>This attribute is used for codesources associated with audit for PermissionSet</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Principals" required="true" shortName="Principals" type="string">
+          <HelpText>This attribute used for principals audit for PermissionSet</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Permission" required="true" shortName="Permission" type="string">
+          <HelpText>This attribute is used for permissions associated with audit for PermissionSet</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="PermissionClass" required="true" shortName="PermissionClass" type="string">
+          <HelpText>This attribute is used for permission class associated with audit for PermissionSet</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="PermissionSetName" required="true" shortName="psetname" type="string">
+          <HelpText>This attribute is the name of the permission set that is being manipulated.</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="ResourceActions" required="true" shortName="resourceactions" type="string">
+          <HelpText>This attribute captures the resource actions associated with the audit event.</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="" name="PermissionSetCreation">
+        <HelpText>This event is used while creating permissionsets in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="PermissionSetDeletion">
+        <HelpText>This event is used while deleting permissionsets in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="PermissionSetModification">
+        <HelpText>This event is used while modifying permissionsets in the policy store</HelpText>
+        <Attribute maxLength="1024" name="ModifiedAttributeName" required="true" shortName="ModAttr" type="string">
+          <HelpText>This attribute identifies the Resource attribute being modified</HelpText>
+        </Attribute>
+        <Attribute maxLength="2048" name="ModifiedAttributeValue" required="true" shortName="NewValue" type="string">
+          <HelpText>This attribute is the new value of the modified Resource attribute</HelpText>
+        </Attribute>
+      </Event>
+      <Event displayName="" name="PermissionSetQuery">
+        <HelpText>This event is used while querying permissionsets in the policy store</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="" name="ResourceTypeManagement">
+      <CommonAttributes>
+        
+        <Attribute maxLength="1024" name="ResourceType" required="true" shortName="ResourceType" type="string">
+          <HelpText>This attribute is used for the ResourceType being
+                              manipulated</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="GUID" required="true" shortName="GUID" type="string">
+          <HelpText>This attribute is used for GUID audit for Resource
+                              Types</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Permission" required="true" shortName="Permission" type="string">
+          <HelpText>This attribute is used for permissions associated
+                              with audit for Resource Types</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="PermissionClass" required="true" shortName="PermissionClass" type="string">
+          <HelpText>This attribute is used for permission class
+                              associated with audit for Resource Types</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="CodeSource" required="true" shortName="CodeSource" type="string">
+          <HelpText>This attribute is used for codesources associated
+                              with audit for Resource Types</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Principals" required="true" shortName="Principals" type="string">
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="" name="ResourceTypeCreation">
+        <HelpText>This event is used while creating resource types in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="ResourceTypeDeletion">
+        <HelpText>This event is used while deleting resource types in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="ResourceTypeModification">
+        <HelpText>This event is used while modifying resource types in the policy store</HelpText>
+        <Attribute maxLength="1024" name="ModifiedAttributeName" required="true" shortName="ModAttr" type="string">
+          <HelpText>This attribute identifies the Resource attribute being modified</HelpText>
+        </Attribute>
+        <Attribute maxLength="2048" name="ModifiedAttributeValue" required="true" shortName="NewValue" type="string">
+          <HelpText>This attribute is the new value of the modified Resource attribute</HelpText>
+        </Attribute>
+      </Event>
+      <Event displayName="" name="ResourceTypeQuery">
+        <HelpText>This event is used while querying resource types in
+                          the policy store</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="" name="GrantManagement">
+      <CommonAttributes>
+        
+        <Attribute maxLength="1024" name="InitiatorDN" required="true" shortName="InitiatorDN" type="string">
+          <HelpText>This attribute is used for initiator DN audit for permissionset grants</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="GUID" required="true" shortName="GUID" type="string">
+          <HelpText>This attribute is used for GUID audit for grants</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="CodeSource" required="true" shortName="CodeSource" type="string">
+          <HelpText>This attribute is used for codesources associated with audit for grants</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Principals" required="true" shortName="Principals" type="string">
+          <HelpText>This attribute used for principals audit for grants</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="Permission" required="true" shortName="Permission" type="string">
+          <HelpText>This attribute is used for permissions associated with audit for grants</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="PermissionClass" required="true" shortName="PermissionClass" type="string">
+          <HelpText>This attribute is used for permission class associated with audit for grants</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="PermissionSetName" required="true" shortName="psetname" type="string">
+          <HelpText>This attribute is the name of the permission set that is being granted or revoked.</HelpText>
+        </Attribute>
+        <Attribute maxLength="1024" name="ResourceActions" required="true" shortName="resourceactions" type="string">
+          <HelpText>This attribute captures the resource actions associated with the audit event.</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="" name="PermissionSetGrant">
+        <HelpText>This event is used while granting permissionsets in policy store</HelpText>
+      </Event>
+      <Event displayName="" name="PermissionSetRevocation">
+        <HelpText>This event is used while revoking permissionsets in policy store</HelpText>
+      </Event>
+    </Category>
+    <Category displayName="KeyStoreManagement" name="KeyStoreManagement">
+      <CommonAttributes>
+        
+        <Attribute displayName="stripeName" maxLength="1024" name="stripeName" required="true" type="string">
+          <HelpText>Used for stripe name in Keystore Management</HelpText>
+        </Attribute>
+        <Attribute displayName="keystoreName" maxLength="1024" name="keystoreName" required="true" type="string">
+          <HelpText>Used for keystore name in Keystore Management</HelpText>
+        </Attribute>
+        <Attribute displayName="alias" maxLength="1024" name="alias" required="true" type="string">
+          <HelpText>Used for key alias in Keystore Management</HelpText>
+        </Attribute>
+        <Attribute displayName="operation" maxLength="1024" name="operation" required="true" type="string">
+          <HelpText>Used to store operation name in Keystore Management</HelpText>
+        </Attribute>
+        <Attribute displayName="CodeSource" maxLength="2048" name="CodeSource" required="true" type="string">
+          <HelpText>Used for code source in Keystore Management</HelpText>
+        </Attribute>
+        <Attribute displayName="Principals" maxLength="1024" name="Principals" required="true" type="string">
+          <HelpText>Used for principals in Keystore Management</HelpText>
+        </Attribute>
+        <Attribute displayName="InitiatorGUID" maxLength="1024" name="InitiatorGUID" required="true" type="string">
+          <HelpText>Used for initiator guid in Keystore Management</HelpText>
+        </Attribute>
+      </CommonAttributes>
+      <Event displayName="CreateKeyStore" name="CreateKeyStore">
+        <HelpText>Used while creating or importing a keystore</HelpText>
+      </Event>
+      <Event displayName="DeleteKeyStore" name="DeleteKeyStore">
+        <HelpText>Used while deleting a keystore</HelpText>
+      </Event>
+      <Event displayName="ModifyKeyStore" name="ModifyKeyStore">
+        <HelpText>Used while modifying (adding/deleting/replacing a key or certificate in) a keystore </HelpText>
+      </Event>
+      <Event displayName="AccessKeyStore" name="AccessKeyStore">
+        <HelpText>Used while accessing a keystore</HelpText>
+      </Event>
+    </Category>
+  </Events>
+  <Levels>
+    <Level name="ExceptionsOnly">
+    </Level>
+    <Level name="Basic">
+    </Level>
+    <Level name="Enhanced">
+    </Level>
+  </Levels>
+  <FilterPresetDefinitions>
+    <FilterPresetDefinition name="Low">
+      CreateCredential, ModifyCredential, DeleteCredential,PolicyGrant,PolicyRevoke,RoleMembershipAdd,RoleMembershipRemove, ResourceCreation, ResourceDeletion, ResourceModification, ResourceQuery, PermissionSetCreation, PermissionSetDeletion, PermissionSetModification, PermissionSetQuery, ResourceTypeCreation, ResourceTypeDeletion, ResourceTypeModification, ResourceTypeQuery, PermissionSetGrant, PermissionSetRevocation, CreateKeyStore,DeleteKeyStore,ModifyKeyStore
+    </FilterPresetDefinition>
+    <FilterPresetDefinition name="Medium">
+        CreateCredential, ModifyCredential, DeleteCredential,PolicyGrant,PolicyRevoke,RoleMembershipAdd,RoleMembershipRemove,AccessCredential,CheckSubject.FAILURESONLY,CheckPermission.FAILURESONLY, ResourceCreation, ResourceDeletion, ResourceModification, ResourceQuery,PermissionSetCreation, PermissionSetDeletion, PermissionSetModification, PermissionSetQuery, ResourceTypeCreation, ResourceTypeDeletion, ResourceTypeModification, ResourceTypeQuery, PermissionSetGrant, PermissionSetRevocation, CreateKeyStore,DeleteKeyStore,ModifyKeyStore,AccessKeyStore
+ </FilterPresetDefinition>
+  </FilterPresetDefinitions>
+</AuditConfig>

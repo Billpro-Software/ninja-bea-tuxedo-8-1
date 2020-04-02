@@ -1,0 +1,26 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefile.nt
+#
+# Windows makefile for the introductory simple events c++ sample
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+
+# check that "setenv.cmd" was run first:
+!IF "$(INTRO_SIMPLE_CXX_SETUP)" == ""
+error1:
+	@echo "ERROR : setenv.cmd has not been run"
+	@exit
+!ENDIF
+
+# platform specific constants:
+! include "$(COMMONDIR)\common.nt"
+
+# build rules for this sample:
+! include "makefile.inc"
+
+# configuration build rules common to all the introductory samples:
+! include "$(COMMONDIR)\introductory.inc"

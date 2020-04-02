@@ -1,0 +1,1206 @@
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 400-499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="400"></A>
+<H3>LIBTUX MESSAGE #400</H3>
+<H2> ERROR: Invalid arguments for getting acknowledgement</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when an internal System/T routine
+is passed invalid arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="401"></A>
+<H3>LIBTUX MESSAGE #401</H3>
+<H2> ERROR: Could not find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to send a message to the
+DBBL
+and its whereabouts could not be ascertained either from the
+BB
+or from a
+BRIDGE
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, or if all
+administrative processes are running.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="402"></A>
+<H3>LIBTUX MESSAGE #402</H3>
+<H2> ERROR: Received message, decode of header failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system was attempting to decode message header information for
+a reply, and the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="403"></A>
+<H3>LIBTUX MESSAGE #403</H3>
+<H2> ERROR: Received message with an unknown internal type index <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a reply, the internal buffer type is unknown.
+This refers to an internal system problem that could be caused,
+for example, by corrupted shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="404"></A>
+<H3>LIBTUX MESSAGE #404</H3>
+<H2> ERROR: Received message of unknown type '<I>type</I>' subtype '<I>subtype</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process received a message whose type and subtype
+are not known.  That is, the process' type switch was
+not built to recognize the type and/or subtype of the
+message received.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The process should be re-linked with the appropriate type
+switch including the type and subtype that are printed
+as part of this error message.  Or, the process sending
+the offending type/subtype should be altered to send a
+buffer that the receiver understands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tuxtypes(5), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="405"></A>
+<H3>LIBTUX MESSAGE #405</H3>
+<H2> ERROR: Received message of unknown type '<I>type</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process received a message whose type
+is not known.  That is, the process' type switch was
+not built to recognize the type of the message received.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The process should be re-linked with the appropriate type
+switch including the type that is printed
+as part of this error message.  Or, the process sending
+the offending type should be altered to send a
+buffer that the receiver understands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tuxtypes(5), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="406"></A>
+<H3>LIBTUX MESSAGE #406</H3>
+<H2> ERROR: Message decode failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when a process receives a typed buffer
+that it fails to decode.  The decode function called is part
+of the buffer type switch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+decoding failed.
+If the buffer type or the encode/decode function is provided
+by the application, contact your system administrator.
+If this is one of the System/T provided
+buffer types, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="407"></A>
+<H3>LIBTUX MESSAGE #407</H3>
+<H2> ERROR: Post receive operation on message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Post-processing of the message received
+by internal "post-receive" function for the buffer type failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages indicating why the
+post-processing failed.
+If the buffer type or the
+postreceive
+function is provided
+by the application, contact your system administrator.
+If this is one of the System/T provided
+buffer types, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="409"></A>
+<H3>LIBTUX MESSAGE #409</H3>
+<H2> ERROR: Invalid table entry information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to retrieve the status field entry, the
+<I>tmid</I>
+passed in is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="410"></A>
+<H3>LIBTUX MESSAGE #410</H3>
+<H2> ERROR: [Invalid table entry information given]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to retrieve the status field entry, the
+<I>tmid</I>
+passed in is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="411"></A>
+<H3>LIBTUX MESSAGE #411</H3>
+<H2> ERROR: [Invalid table information given]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to retrieve the TMPROC information associated with the
+<I>tmid</I>
+specified, the entry is found to be invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="412"></A>
+<H3>LIBTUX MESSAGE #412</H3>
+<H2> ERROR: [Invalid table information given]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to retrieve the TMPROC information associated with the
+<I>tmid</I>
+specified, the entry is found to be invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="415"></A>
+<H3>LIBTUX MESSAGE #415</H3>
+<H2> ERROR: Invalid transaction creation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing a warm start or load of the transaction log, an attempt
+to add an entry to the transaction table was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="416"></A>
+<H3>LIBTUX MESSAGE #416</H3>
+<H2> WARN: Invalid state <I>stateval</I> for group <I>groupname</I> while adding transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While adding a transaction to the transaction table during warm start
+or load of the transaction log of decided transactions,
+the transaction table entry was found to have a group
+whose state indicated that the transaction was either normally or
+heuristically rolled back.
+The state will be overwritten and no further notification will
+be given as to the inconsistent state of the global transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the transaction will most likely be driven through to
+completion, the rollback status indicates that the operation
+done by the rolled back transaction will be inconsistent.
+For instance, this could indicate inconsistent data in a data base.
+The action to reconcile this situation is application specific.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="417"></A>
+<H3>LIBTUX MESSAGE #417</H3>
+<H2> ERROR: warmstart found bad log page entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While warm starting the transaction log, an inconsistent entry
+was found in the transaction table entry
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="419"></A>
+<H3>LIBTUX MESSAGE #419</H3>
+<H2> ERROR: Exit failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when the process is unable to detach from
+shared memory or a failure is detected while trying to release
+a request queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="421"></A>
+<H3>LIBTUX MESSAGE #421</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A memory allocation failure occurs while the system is mapping
+the well known IPC key to an internal structure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application ipc key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="422"></A>
+<H3>LIBTUX MESSAGE #422</H3>
+<H2> ERROR: Cannot find own BB entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to shut down a server, the bulletin board entry for
+the specified server cannot be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try shutting the server down again. If this fails, you will
+have to use the UNIX system
+kill (1)
+command to remove the process.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="423"></A>
+<H3>LIBTUX MESSAGE #423</H3>
+<H2> ERROR: [Cannot update own queue]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to update the server table entry, the server's queue
+entry cannot be accessed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="424"></A>
+<H3>LIBTUX MESSAGE #424</H3>
+<H2> ERROR: Cannot re-queue msg</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During shutdown of a MSSQ set server, the shutdown message needs to
+be enqueued for each server instance.  The message re-queuing has
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="425"></A>
+<H3>LIBTUX MESSAGE #425</H3>
+<H2> ERROR: [Service receive: unknown meta-msg type: 0x<I>msg_type</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The meta message header type was of an unknown type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="426"></A>
+<H3>LIBTUX MESSAGE #426</H3>
+<H2> ERROR: [Service receive: cannot send meta-msg reply]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While advertising a new service, a reply is expected for the
+meta-message but fails.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="427"></A>
+<H3>LIBTUX MESSAGE #427</H3>
+<H2> ERROR: [Cannot find own BB entry]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the shutdown of a server the queue must be drained, and while
+the queue is being checked the
+getqcnt()
+call fails.  This error may occur if the Bulletin Board is not
+locked or the queue information passed is in error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="428"></A>
+<H3>LIBTUX MESSAGE #428</H3>
+<H2> ERROR: Cannot re-queue msg</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to shut down a server, the sentinel message could not
+be queued.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try to shut down the server again. If this fails, contact your TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="429"></A>
+<H3>LIBTUX MESSAGE #429</H3>
+<H2> ERROR: Cannot perform shutdown at this time</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt is made to shut down a group of TMS processes in an
+invalid order.  Specifying the TMS processes to be shut down by
+group, lmid, or (S) will order the shutdown sequence properly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The TMSs should not be shut down individually (using the -i option).
+The -g -l -S flags should be used instead.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="430"></A>
+<H3>LIBTUX MESSAGE #430</H3>
+<H2> ERROR: Application rejects shutdown request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application has denied a shutdown request.
+This error can occur in a variety of different scenarios.
+The system processes such as
+(D)BBL ,
+TMS ,
+or
+BRIDGE
+may reach a condition in which they are unable to shut down.
+For example, the
+BBL
+cannot process a shutdown request because a server fails
+to disconnect.
+Application servers may also reach this condition by returning a
+"0" value in the default shutdown function,
+ _tmsvrstop ().
+If this occurs, contact your TUXEDO System application administrator.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+userlog
+for other messages to determine the proper action to take.
+In the above example of a system process (BBL) unable
+to shut down, the force option (-w) may be used.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="431"></A>
+<H3>LIBTUX MESSAGE #431</H3>
+<H2> ERROR: Service receive: cannot send meta-msg reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to reply to a shutdown request, the meta-message
+send fails.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="433"></A>
+<H3>LIBTUX MESSAGE #433</H3>
+<H2> ERROR: Send/receive error on remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to send a meta-message, the request cannot be sent.
+Possible causes may be
+a message type switch function failure,
+an invalid message length,
+or a low level message send failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network or corrupted shared memory.
+Check that all administrative processes are running
+and that the
+sysgen
+parms
+(IPC parameters)
+for messages are appropriate.
+Also check the
+userlog
+for additional messages that may help to isolate the
+problem.
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="439"></A>
+<H3>LIBTUX MESSAGE #439</H3>
+<H2> ERROR: Migration failed: Not all the servers are shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to migrate servers to another machine, the system
+is unable to process this request.  All of the servers affected by
+this request must be shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the desired servers with the relocate (-R) option and reissue
+the migrate request.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="441"></A>
+<H3>LIBTUX MESSAGE #441</H3>
+<H2> ERROR: Migration failed: alternate location not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When attempting to migrate server(s) to another site, the system
+is unable to complete the request because the alternate location
+is not specified for an affected server group(s).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The LMID entry in the *GROUPS section for the affected server groups
+must be updated.  This may be achieved by using the
+tmconfig()
+command and updating the TA_LMID field of the affected server groups
+to include the alternate location.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin (1),
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="442"></A>
+<H3>LIBTUX MESSAGE #442</H3>
+<H2> ERROR: Migration failed: alternate locations not the same</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When attempting to migrate server(s) to another site, the system
+is unable to complete the request because the alternate locations
+specified for the affected server group(s) are not the same.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The appropriate action for this request depends on if the alternate
+locations are set properly or not.  If the alternate locations of
+server groups on an lmid are different, they may be migrated
+independently by group.  See the
+tmadmin()
+subcommand
+migrategroup .
+<P>
+If the groups are to be moved to the same lmid,
+the LMID entry in the *GROUPS section for the affected server groups
+must be updated.  This may be achieved by using the
+tmconfig()
+command and updating the TA_LMID field of the affected server groups
+to specify the same alternate location.  Then the request may be
+resubmitted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin (1),
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="445"></A>
+<H3>LIBTUX MESSAGE #445</H3>
+<H2> INFO: BB on machine <I>lmid</I> has been updated for migration of group <I>group_name</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During a migration request, this message is issued to point out that
+the bulletin board for the alternate location
+<I>(lmid)</I>
+has been updated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action necessary.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="446"></A>
+<H3>LIBTUX MESSAGE #446</H3>
+<H2> INFO: BB on machine <I>lmid</I> has been update for migration of groups from machine <I>lmid</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During a migration request, this message is issued to point out that
+the bulletin board for the alternate location
+<I>(lmid)</I>
+has been updated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action necessary.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="459"></A>
+<H3>LIBTUX MESSAGE #459</H3>
+<H2> ERROR: Send to BRIDGE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to get the status of a remote queue via
+tmadmin ,
+the message to the remote
+BRIDGE
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier messages indicating the cause of the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="460"></A>
+<H3>LIBTUX MESSAGE #460</H3>
+<H2> ERROR: Send to BRIDGE failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to get the status of a remote queue via
+tmadmin ,
+the message to the remote
+BRIDGE
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier messages indicating the cause of the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="461"></A>
+<H3>LIBTUX MESSAGE #461</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while trying to suspend the
+BRIDGE
+during a partitioned shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="462"></A>
+<H3>LIBTUX MESSAGE #462</H3>
+<H2> ERROR: Retrieved too many entries in tmsuspend</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to suspend the
+BRIDGE
+during a partitioned shutdown,
+the number of server entries retrieved is larger than the
+number of entries allocated for retrieval.
+This should not occur.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the
+tmshutdown
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="463"></A>
+<H3>LIBTUX MESSAGE #463</H3>
+<H2> ERROR: TMUSEBRANCH option not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When opening a resource manager with
+tpopen ,
+the resource manager had the
+TMUSEBRANCH
+flag set from the XA Preliminary Specification.
+This option is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your resource manager vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="465"></A>
+<H3>LIBTUX MESSAGE #465</H3>
+<H2> ERROR: TMUSEASYNCH option not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When opening a resource manager with
+tpopen ,
+the resource manager had the
+TMUSEASYNC
+flag set from the XA Preliminary Specification.
+This option is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your resource manager vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="466"></A>
+<H3>LIBTUX MESSAGE #466</H3>
+<H2> ERROR: tpopen TPERMERR xa_open returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The call to
+xa_open
+from within
+tpopen
+returned the XA error value
+<I>errstring</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+Contact your TUXEDO System Technical Support or resource manager vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="467"></A>
+<H3>LIBTUX MESSAGE #467</H3>
+<H2> ERROR: tpclose TPERMERR xa_close returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The call to
+xa_close
+from within
+tpclose
+returned the XA error value
+<I>errstring</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+Contact your TUXEDO System Technical Support or resource manager vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="470"></A>
+<H3>LIBTUX MESSAGE #470</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while trying to put variables into the environment for
+either the machine or server
+ENVFILE .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="474"></A>
+<H3>LIBTUX MESSAGE #474</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while receiving a service request in a server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="476"></A>
+<H3>LIBTUX MESSAGE #476</H3>
+<H2> WARN: Server <I>groupid</I>/<I>serverid</I>: client process <I>processid</I>: lost message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server died and the specified server
+(with group
+<I>groupid</I>
+and server identifier
+<I>serverid</I>)
+is recovering on its behalf.
+A message from the client with the specified
+<I>processid</I>
+has been lost.
+Additional information will be printed in subsequent messages
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages 477 and 478 below.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="477"></A>
+<H3>LIBTUX MESSAGE #477</H3>
+<H2> WARN: SERVICE=<I>servicename</I>    MSG_ID=<I>msgid</I>    REASON=server died</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server died (see message 476) while processing service
+<I>servicename</I>.
+The client from which the message was sent
+is still active so a response message will
+be sent indicating the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="478"></A>
+<H3>LIBTUX MESSAGE #478</H3>
+<H2> WARN: SERVICE=<I>servicename</I>    MSG_ID=<I>msgid</I>    REASON=server and client died</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server died (see message 476) while processing service
+<I>servicename</I>.
+The client from which the message was sent
+is no longer active either so that a response message cannot
+be sent indicating the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="480"></A>
+<H3>LIBTUX MESSAGE #480</H3>
+<H2> ERROR: Cannot find own server entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When receiving a service request in a server, the server was unable
+to find its own entry in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier messages indicating problems with
+the application and check with the application administrator.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="481"></A>
+<H3>LIBTUX MESSAGE #481</H3>
+<H2> ERROR: Service xa_start returned <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message request was received indicating that the message should be
+handled by the server in transaction mode and the corresponding
+xa_start failed.
+xa_start failed because the return code was out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Perform the action appropriate for the indicated error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="482"></A>
+<H3>LIBTUX MESSAGE #482</H3>
+<H2> ERROR: Service request found state <I>state_val</I> for group <I>grpname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message request was received indicating that the current
+transaction was to be committed, but the state of the transaction
+was neither active or aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a corrupted
+GTT
+in shared memory.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="486"></A>
+<H3>LIBTUX MESSAGE #486</H3>
+<H2> ERROR: Service request problem, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message request was received indicating that the message should be
+handled by the server in transaction mode and the corresponding
+tpbegin
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that message was not received by an unsolicited message handler,
+the server was not part or registered with the application,
+the global transaction id was valid, the server had no outstanding reply
+messages, the resource manager was not opened, there was not enough
+space in the global transaction table,
+the resource manager
+xa_start
+failed, or a
+BBL
+lock or unlock failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="487"></A>
+<H3>LIBTUX MESSAGE #487</H3>
+<H2> ERROR: Cannot call ATMI routine without joining application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn
+was called and the server was no longer part of the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either a
+tpsvrinit
+failed or a
+tpsvrdone
+was called before
+tpreturn .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="488"></A>
+<H3>LIBTUX MESSAGE #488</H3>
+<H2> ERROR: Invalid data pointer given to tpreturn()</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn
+was given a pointer to a message that did not contain the
+appropriate magic numbers in the message header, or the address of the
+message did not begin on a long word boundary.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the application's
+IPCKEY
+is correct, or two applications are using the same
+IPCKEY ,
+or the message queue isn't corrupted, or a previously
+tpalloc 'ed
+message was invalidated (via a
+tpfree )
+before
+tpreturn
+was called.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="489"></A>
+<H3>LIBTUX MESSAGE #489</H3>
+<H2> ERROR: Performed tpreturn() with outstanding replies</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tpreturn
+was called with outstanding message replies.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the service code and make sure that
+tpreturn
+is not called before all the
+tpacall
+and
+tpgetrply 's
+are complete,
+all outstanding messages sent to other services have returned,
+and/or there are not two applications using the same
+IPCKEY .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="495"></A>
+<H3>LIBTUX MESSAGE #495</H3>
+<H2> ERROR: tpreturn tpcommit reported <I>tperrno_msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service automatically started a transaction.
+tpreturn
+performed a
+tpcommit
+and it failed with a <I>tperrno_val</I>
+other than
+TPEABORT .
+The specific error is reported as part of this message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Respond according to the type of error indicated in the message.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="499"></A>
+<H3>LIBTUX MESSAGE #499</H3>
+<H2> ERROR: Invalid table entry information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A table id was passed to the the update routine that did not correspond
+to the server, queue, or service (the manner in which information is
+arranged in the
+BB ).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory or an invalid
+IPCKEY
+(wrong application).
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

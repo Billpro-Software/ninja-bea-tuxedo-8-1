@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagnosticsConfiguration xmlns="http://xmlns.oracle.com/DFW/DiagnosticsFrameworkConfiguration" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- maxTotalIncidentSize configures the maximum total disk space
+       allocated to incidents, in megabytes. -->
+  <incidentCleanup maxTotalIncidentSize="500"/>
+  <incidentCreation
+    incidentCreationEnabled="true"
+    logDetectionEnabled="true"
+    uncaughtExceptionDetectionEnabled="true"
+    floodControlEnabled="true"
+    floodControlIncidentCount="5"
+    floodControlIncidentTimePeriod="60"
+    reservedMemoryKB="512"/>
+  <threadDump useExternalCommands="true"/>
+</diagnosticsConfiguration>

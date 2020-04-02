@@ -1,0 +1,37 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//--------------------------------------------------------------------
+//
+// simple.idl
+//
+// IDL for the simpapp_mt sample application
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+#pragma prefix "beasys.com"
+
+interface Simple
+{
+    // convert a string to lower case (return a new string)
+    string to_lower(in string val);
+
+    // convert a string to upper case (in place)
+    string to_upper(in string val);
+
+    // use other server to convert string to lower case
+    string forward_lower (in string val);
+
+    // use other server to convert string to upper case
+    string forward_upper (in string val);
+};
+
+interface SimplePerRequestFactory
+{
+    Simple find_simple();
+};
+
+interface SimplePerObjectFactory
+{
+    Simple find_simple();
+};

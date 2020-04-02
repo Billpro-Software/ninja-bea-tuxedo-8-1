@@ -1,0 +1,23 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1990, 1994 Novell, Inc.
+#	Copyright (c) 1994 Novell
+#	  All Rights Reserved
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+#	UNIX System Laboratories, Inc.
+#	The copyright notice above does not evidence any
+#	actual or intended publication of such source code.
+
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/listnr	$Revision: 1.5 $"
+
+				FILE=bankvar.dm2
+
+			A2="`grep '^APPDIR=' ${FILE} | line | sed 's/APPDIR=//'`"
+			D2="`grep '^NWDEVICE=' ${FILE} | line | sed 's/NWDEVICE=//'`"
+			L2="`grep '^NWADDR=' ${FILE} | line | sed 's/NWADDR=//'`"
+			echo "\n\ttlisten -l ${L2} -d ${D2} -L ${A2}/TLLOG\n"
+			tlisten -l ${L2} -d ${D2} -L ${A2}/TLLOG
+			 

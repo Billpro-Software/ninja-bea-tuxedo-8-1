@@ -1,0 +1,21 @@
+/*	(c) 2003 BEA Systems, Inc. All Rights Reserved. */
+/*	Copyright (c) 1994 Unix System Laboratories, Inc.
+	All rights reserved
+
+	THIS IS UNPUBLISHED PROPRIETARY
+	SOURCE CODE OF Unix System Laboratories, Inc.
+	The copyright notice above does not
+	evidence any actual or intended
+	publication of such source code.
+*/
+/* ident	"@(#) samples/atmi/rpcsimp/simp.idl	$Revision: 1.5 $" */
+[uuid(C996A680-9FC2-110F-9AEF-930269370000), version(1.0) ]
+
+interface changecase
+{
+/* change a string to upper case */
+void to_upper([in, out, string] char *str);
+
+/* change a string to lower case */
+void to_lower([in, out, string] char *str);
+}

@@ -1,0 +1,21 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+// File: Chat.icf
+// Configuration for the ChatServer
+//
+
+module POA_ChatRoom
+{
+    implementation Moderator_i
+        {
+        activation_policy ( process );
+        transaction_policy ( never );
+        implements ( ChatRoom::Moderator );
+    };
+    implementation ModeratorFactory_i
+        {
+        activation_policy ( method );
+        transaction_policy ( never );
+        implements ( ChatRoom::ModeratorFactory );
+    };
+};
+

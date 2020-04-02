@@ -1,0 +1,142 @@
+//--------------------------------------------------------------------
+//
+// Copyright (c) 1999 BEA Systems, Inc.
+// All rights reserved
+//
+// THIS IS UNPUBLISHED PROPRIETARY
+// SOURCE CODE OF BEA Systems, Inc.
+// The copyright notice above does not
+// evidence any actual or intended
+// publication of such source code.
+//
+// #ident "@(#)nts/idl/CosNotifyComm.idl $Revision: 1.2 $"
+//
+//--------------------------------------------------------------------
+
+#ifndef _COS_NOTIFY_COMM_IDL_
+#define _COS_NOTIFY_COMM_IDL_
+
+#include "CosEventComm.idl"
+#include "CosNotification.idl"
+
+#pragma prefix      "omg.org"
+#pragma javaPackage "org.omg"
+
+module CosNotifyComm
+{
+  exception InvalidEventType
+  {
+    CosNotification::EventType type;
+  };
+
+  interface NotifyPublish
+  {
+    void
+    offer_change(
+      in CosNotification::EventTypeSeq added,
+      in CosNotification::EventTypeSeq removed
+    ) raises (
+      InvalidEventType
+    );
+  };
+
+  interface NotifySubscribe
+  {
+    void
+    subscription_change(
+      in CosNotification::EventTypeSeq added,
+      in CosNotification::EventTypeSeq removed
+    ) raises (
+      InvalidEventType
+    );
+  };
+
+  interface PushConsumer : NotifyPublish,   CosEventComm::PushConsumer {};
+  interface PullConsumer : NotifyPublish,   CosEventComm::PullConsumer {};
+  interface PullSupplier : NotifySubscribe, CosEventComm::PullSupplier {};
+  interface PushSupplier : NotifySubscribe, CosEventComm::PushSupplier {};
+
+  interface StructuredPushConsumer : NotifyPublish
+  {
+    void
+    push_structured_event(
+      in CosNotification::StructuredEvent notification
+    ) raises(
+      CosEventComm::Disconnected
+    );
+
+    void disconnect_structured_push_consumer();
+  };
+
+  interface StructuredPullConsumer : NotifyPublish
+  {
+    void disconnect_structured_pull_consumer();
+  };
+
+  interface StructuredPullSupplier : NotifySubscribe
+  {
+    CosNotification::StructuredEvent
+    pull_structured_event(
+    ) raises (
+      CosEventComm::Disconnected
+    );
+
+    CosNotification::StructuredEvent
+    try_pull_structured_event(
+      out boolean has_event
+    ) raises (
+      CosEventComm::Disconnected
+    );
+
+    void disconnect_structured_pull_supplier();
+  };
+
+  interface StructuredPushSupplier : NotifySubscribe
+  {
+    void disconnect_structured_push_supplier();
+  };
+
+  interface SequencePushConsumer : NotifyPublish
+  {
+    void
+    push_structured_events(
+      in CosNotification::EventBatch notifications
+    ) raises (
+      CosEventComm::Disconnected
+    );
+
+    void disconnect_sequence_push_consumer();
+  };
+
+  interface SequencePullConsumer : NotifyPublish
+  {
+    void disconnect_sequence_pull_consumer();
+  };
+
+  interface SequencePullSupplier : NotifySubscribe
+  {
+    CosNotification::EventBatch
+    pull_structured_events(
+      in long max_number
+    ) raises (
+      CosEventComm::Disconnected
+    );
+
+    CosNotification::StructuredEvent
+    try_pull_structured_events(
+      in  long max_number,
+      out boolean has_event
+    ) raises (
+      CosEventComm::Disconnected
+    );
+
+    void disconnect_sequence_pull_supplier();
+  };
+
+  interface SequencePushSupplier : NotifySubscribe
+  {
+    void disconnect_sequence_push_supplier();
+  };
+};
+
+#endif

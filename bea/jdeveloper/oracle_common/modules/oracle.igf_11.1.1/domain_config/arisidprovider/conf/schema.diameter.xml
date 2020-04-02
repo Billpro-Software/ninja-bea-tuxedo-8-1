@@ -1,0 +1,41 @@
+<dsml:dsml xmlns:dsml="http://www.dsml.org/DSML">
+  <dsml:directory-schema>
+   <dsml:class
+         id="orclHSSProfile"
+         type="structural"
+         superior="#top">
+   <dsml:name>orclHSSProfile</dsml:name>
+   <dsml:object-identifier>2.16.840.1.23008.1.1.1</dsml:object-identifier>
+   <dsml:attribute ref="#orclHSSPrivateId" required="true"/>
+   <dsml:attribute ref="#orclHSSPublicId" required="true"/>
+   <dsml:attribute ref="#orclHSSMSISDN" required="true"/>
+   <dsml:attribute ref="#orclHSSServiceProfile" required="true"/>
+  </dsml:class>
+    <dsml:attribute-type id="orclHSSPrivateId">
+      <dsml:name>orclHSSPrivateId</dsml:name>
+      <dsml:object-identifier>23.008.10415.1.1</dsml:object-identifier>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="orclHSSPublicId">
+      <dsml:name>orclHSSPublicId</dsml:name>
+      <dsml:object-identifier>23.008.10415.2.1</dsml:object-identifier>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="orclHSSMSISDN">
+      <dsml:name>orclHSSMSISDN</dsml:name>
+      <dsml:object-identifier>23.008.10415.2.2</dsml:object-identifier>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="orclHSSServiceProfile">
+      <dsml:name>orclHSSServiceProfile</dsml:name>
+      <dsml:object-identifier>23.008.10415.3.1</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+    </dsml:attribute-type>
+  </dsml:directory-schema>
+</dsml:dsml>

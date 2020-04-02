@@ -1,0 +1,43 @@
+<HTML>
+<!--
+// Copyright (c) 1999 Quadralay Corporation.  All rights reserved.
+//
+// The information in this file is confidential and proprietary to
+// Quadralay Corporation.  Unauthorized use or duplication is
+// strictly prohibited.
+-->
+<HEAD></HEAD>
+<BODY>
+<SCRIPT LANGUAGE="Javascript">
+document.open("text/html","replace");
+document.bgColor=parent.parent.tab["tab3"][2];
+document.write("<FORM NAME='favorites'>");
+document.write("<TABLE WIDTH='100%'><TR>");
+document.write("<TD ALIGN='left'>");
+if(parent.parent.isNav4) {
+   document.write("<FONT FACE='"+parent.parent.tff+"' SIZE="+parent.parent.tfs+">");
+}
+document.write("<INPUT TYPE='button' ID='delete' NAME='delete' VALUE='Delete...' onClick='parent.parent.deleteSelectedFavorites();'");
+if(parent.parent.isNav4) {
+   document.write("></FONT>");
+}else if(parent.parent.isIE4) {
+   document.write("STYLE='font-family:"+parent.parent.tff+"; font-size:"+"8pt"+";'>");
+}
+document.write("<TD></TD>");
+document.write("<TD ALIGN='right'>");
+if(parent.parent.isNav4) {
+   document.write("<FONT FACE='"+parent.parent.tff+"' SIZE="+parent.parent.tfs+">");
+}
+document.write("<INPUT TYPE='button' ID='add' NAME='add' VALUE='Add Current' onClick='parent.parent.addFavorite();'");
+if(parent.parent.isNav4) {
+   document.write("></FONT>");
+}else if(parent.parent.isIE4) {
+   document.write("STYLE='font-family:"+parent.parent.tff+"; font-size:"+"8pt"+";'>");
+}
+document.write("</TR></TABLE>");
+document.write("</FORM>");
+document.close();
+</SCRIPT>
+</BODY>
+</HTML>
+

@@ -1,0 +1,406 @@
+$/*	Copyright (c) 1992 UNIX System Laboratories, Inc.
+$        All rights reserved
+$
+$        THIS IS UNPUBLISHED PROPRIETARY
+$	SOURCE CODE OF Unix System Laboratories, Inc.
+$	The copyright notice above does not
+$	evidence any actual or intended
+$	publication of such source code.
+$*/
+$#ifndef NOWHAT
+$static	char h_dmadmin[] = "@(#) domain/gw/include/dmadmin	$Revision: 1.12 $";
+$#endif
+$
+$/* #ident	"@(#) domain/gw/include/dmadmin	$Revision: 1.12 $" */
+$
+$/*
+$	Warning: This file should not be changed in any
+$	way, doing so will destroy the compatibility with TUXEDO programs
+$	and libraries.
+$*/
+$/*	ADMIN FIELD ENTRIES */
+$
+$/* operations in dmadmin translated into admin API operations in DMADM */
+$#define TA_FIRSTCF	1
+$#define TA_NEXTCF	2	
+$#define TA_RETRIEVECF	3
+$#define TA_ADDCF	4	
+$#define TA_UPDATECF	5	
+$#define TA_DELETECF	6
+$
+$/* operations */
+$#define TA_SET		10
+$#define TA_GET		11
+$#define TA_GETNEXT	12
+$
+$/* operations */
+$#define TA_ADVERTISE	15
+$#define TA_UNADVERTISE	16
+$#define TA_SUSPEND	17
+$#define TA_RESUME	18
+$
+$/* states */
+$#define TA_NEW		20
+$#define TA_UPDATE	21
+$#define TA_INVALID	22	
+$#define TA_ACTIVE	23
+$#define TA_INACTIVE	24
+$
+$/* classes */
+$#ifndef DM_GATEWAYS
+$#define DM_RESOURCES	1	
+$#define DM_LDOMAINS	2
+$#define DM_RDOMAINS	3
+$#define DM_TDOMAINS	4
+$#define DM_OSITPS	5
+$#define DM_LSERVICES	6
+$#define DM_RSERVICES	7
+$#define DM_ROUTINGS	8
+$#define DM_ACLS	9
+$#define DM_PASSWORDS	10
+$#define DM_GATEWAYS	11
+$#define GW_INFO	12
+$#define GW_TRANSACTIONS	13
+$#define GW_AUDIT	14
+$#define DM_SNADOMS	15
+$#define DM_RDOMSECS	16
+$#define DM_RDOMUSRS	17
+$/* SNA2 Begin - Fields added by SNA Connect Version 2 */
+$#define DM_SNACRMS	18
+$#define DM_SNASTACKS	19
+$#define DM_SNALINKS	20
+$/* SNA2 End */
+$#define DM_TOPEND	21
+$#define DM_CONNECTION	22
+$/* Added for OSITP V4.0 */
+$#define DM_OSITPX	23
+$#endif
+$
+$/* dmconfig field values */
+#NAME		ID	TYPE	FLAG	COMMENT
+#----		--	----	----	-------
+*base 100
+TA_STATUS	0	string	-	status/error information
+TA_ERROR 	1	short	-	Return value from operation
+TA_OPERATION	2	short	-	operation
+TA_CLASS	3	short	-	section on which to operate
+TA_BADFLD	4	long	-	fldid for field that caused error
+TA_OCCURS	5	short	-	number of record occurrences
+TA_BADFLDNAME	6	string	-	name of field that caused error
+$
+$#ifndef REDUCE_CPP
+*base 200
+$
+$ /* DM_SNADOM */
+TA_SNADOM	10	string	-	domain name in DM_SNADOM
+TA_LUNAME	11	string	-	luname in DM_SNADOM
+TA_MODENAME	12	string	-	modename in DM_SNADOM
+TA_NETID	13	string	-	netid in DM_SNADOM
+TA_SECTYPE	14	string	-	security type in DM_SNADOM
+TA_SYMDESTNAME	15	string	-	symdestname in DM_SNADOM
+TA_MAXSNASESS	16	short	-	maxsnasess in DM_SNADOM
+TA_LCONV	17 	string	-	Local service is conversationals
+$
+$ /* DM_RESOURCES */
+TA_VERSION	20	string	-	Version in DM_RESOURCES section
+TA_DMKEY	21	string	-	DMKEY in DM_RESOURCES section
+TA_ENCDMKEY	22	string	-	DMKEY encrypted in DM_RESOURCES section
+TA_DMMAGIC	23	string	-	DMMAGIC in DM_RESOURCES section
+TA_ENCDMMAGIC	24	string	-	DMMAGIC in DM_RESOURCES section
+$
+$ /* DM_TDOMAIN */
+TA_TDOM		25	string	-	domain name in DM_TDOMAINS
+TA_NWADDR	26	string	-	Network address in DM_TDOMAINS
+TA_NWADDRLEN	27	short	-	Network address length in DM_TDOMAINS
+TA_NWDEVICE	28	string	-	Network device in DM_TDOMAINS
+TA_NWIDLETIME	29	long	-	Network idletime in DM_TDOMAINS
+$
+$ /* DM_OSITP */
+TA_OSITP	30 	string 	-	domain_name in DM_OSITP
+TA_APT		31	string	-	Application process title in DM_OSITP
+TA_APTLEN	32	short	-
+TA_AEQ		33	string	-	App. entity qualifier in DM_OSITP
+TA_AEQLEN	34	short	-
+TA_AET		35	string	-	App. entity title in DM_OSITP
+TA_ACN		36	string	-	App. context name in DM_OSITP
+TA_ACN2		37	short	-	App. context name in DM_OSITP
+TA_APID		38	short	-	App. process invocation Id in DM_OSITP
+TA_AEID		39	short	-	App. entity invocation Id in DM_OSITP
+TA_PROFILE	40	string	-	profile in DM_OSITP
+TA_PROFILE2	41	short	-	profile in DM_OSITP
+TA_URCH		42	string	-	User Recovery Context Handle
+$
+$ /* DM_LOCAL_DOMAIN */
+TA_LDOM		43	string	-
+TA_SVRGRP	44	string 	-
+TA_TYPE		45	string 	-
+TA_DOMAINID	46	string 	-
+TA_DMTLOGDEV	47	string 	-
+TA_AUDITLOG	48	string 	-
+TA_BLOCKTIME	49	short	-
+TA_DMTLOGNAME	50	string 	-
+TA_DMTLOGSIZE	51	long	-
+TA_MAXDATALEN	52	long	-
+TA_MAXRDOM	53	long	-
+TA_MAXRDTRAN	54	short 	-
+TA_MAXTRAN	55	short	-
+TA_MAXSENDLEN	56	long	-
+TA_SECURITY	57	string	-
+TA_SECURITY2	58	short	-
+TA_TUXCONFIG	59	string	-
+TA_TUXOFFSET	60	long	-
+TA_BLOB_SHM_SIZE	61	long	-	Size of initial shared memory for BLOBS
+*base 500
+*base 200
+$
+$ /* DM_REMOTE_DOMAIN */
+TA_RDOM		62	string	-
+TA_LOOPBACK	63	short	-
+$
+$ /* DM_ACCESS_CONTROL */
+TA_ACLNAME	64	string	-
+TA_NRDOM	65	short	-
+TA_ACL_RDOM	66	string	-
+$
+$ /* DM_LOCAL_SERVICES */
+TA_BUFTYPE	67	string	-
+TA_BUFSTYPE	68	string	-
+TA_INBUFTYPE	69	string	-
+TA_OBUFTYPE	70	string	-
+TA_OBUFSTYPE	71	string	-
+TA_OUTBUFTYPE	72	string	-
+TA_RNAME	73	string	-
+TA_SERVICENAME	74	string	-
+$
+$ /* DM_ROUTING */
+TA_ROUTINGNAME	75	string	-
+TA_FIELDNAME	76	string	-
+TA_RANGES	77	string	-
+$
+$ /* DM_REMOTE_SERVICES */
+TA_AUTOTRAN	78	string	-
+TA_AUTOTRAN2	79	short	-
+TA_CONV		80	string	-
+TA_CONV2	81	short	-
+TA_LOAD		82	short	-
+TA_PRIO		83	short	-
+TA_TRANTIME	84	long	-
+
+TA_SRVGRP	85	string	-	
+TA_SRVID	86	short	-	
+TA_STATE	87	short	-	
+TA_ACTIVITY	88	short	-
+
+TA_ALLSTATS	89	short	-	for printstats dmadmin command
+TA_DOMSTATS	90	short	-	for printdomain dmadmin command
+TA_OPTION	91	short	-	TA_ALLSTATS or TA_DOMSTATS
+TA_ON		92	short	-	Turn on AUDITING or STATS
+TA_OFF		93	short	-	Turn off AUDITING or STATS 
+TA_RESET	94	short	-	Reset AUDIT or STATISTICS
+TA_TOGGLE	95	short	-	toggle AUDIT or STATISTICS
+TA_STATISTICS	96	short	-	TA_ON, TA_OFF, TA_RESET, TA_TOGGLE
+TA_AUDIT	97	short	-	TA_ON, TA_OFF, TA_TOGGLE
+
+TA_TRAN_STATE	98	long	-	transaction state	
+TA_MTYPE	100	string	-	Machine Type in LDOM and RDOM sections
+TA_MAX_LISTENING_EP 101 short -
+TA_ENCODING_LEVEL   102 short -
+
+*base 300
+TA_NUMREQLSVC	 	0	long	-	requests to local services
+TA_NUMREQRSVC 		1	long	-	requests to remote services
+TA_NUMREPLSVC		2	long	-	replies to local services
+TA_NUMREPRSVC		3	long	-	replies to remote services
+TA_NUMREQACT		4	long	-	outstanding service requests
+TA_NUMREQC		5	long	-	requests completed
+TA_NUMREQF		6	long	-	requests failed
+TA_NUMCONVACT		7	long	-	active conversations
+TA_NUMCONVLOC		8	long	-	requests to local conv services
+TA_NUMCONVLSND		9	long	-	sends to local conv svcs
+TA_NUMCONVREM		10	long	-	requests to remote conv svcs
+TA_NUMCONVRSND		11	long	-	sends to remote conv svcs
+TA_NUMEVACT		12	long	-	active events
+TA_NUMEVNSUSP		13	long	-	suspended /T events
+TA_NUMEVTSUSP		14	long	-	suspended network events
+TA_NUMTRAN		15	long	-	transactions started
+TA_NUMTRANCMT		16	long	-	transactions committed
+TA_NUMTRANHCMT		17	long	-	transactions heuris. committed
+TA_NUMTRANHRLB		18	long	-	transactions heuris. roll back
+TA_NUMTRANRLB		19	long	-	transactions rolled back
+TA_STAT_RESET_TIME	20	long	-	Time stats were reset
+TA_SHM_CONTENTIONS	21	long	-	Contentions for shared memory.
+TA_LOG_CONTENTIONS	22	long	-	Contentions for log records.
+
+TA_PASSWD		25	string	-
+TA_ENCPASSWD		26	string	-
+TA_LPWD			27	string	-
+TA_RPWD			28	string	-
+TA_ENC2_LPWD		29	string	-
+TA_ENC2_RPWD		30	string	-
+TA_REENCRYPT_PWD	31	short	-
+
+TA_NUMPROC		32	long	-
+TA_NUMRDOM		33	long 	-
+TA_PARENTRDOM		34	string	-
+TA_TRANID		35	string	-
+
+VENKAT_SHORT		36	short	-
+VENKAT_LONG		37	long	-
+VENKAT_FLOAT		38	float	-
+VENKAT_DOUBLE		39	double	-
+VENKAT_CHAR		40	char	-
+VENKAT_STRING		41	string	-
+VENKAT_CARRAY		42	carray	-
+
+TA_PRINNAME		43  	string	-
+TA_RPRINNAME		44	string 	-
+TA_RPRINPASSWD		45	string 	-
+TA_DIRECTION		46	string	-
+TA_RDOMSEC		47	string	-
+TA_RDOMUSR		48	string	-
+TA_CMPLIMIT		50      long	-
+
+TA_DMCMPLIMIT		50	long	-	compression in DM_TDOMAINS
+TA_MINENCRYPTBITS	51	long	-	encryption minimum bits
+TA_MAXENCRYPTBITS	52	long	-	encryption maximum bits
+
+$/* SNA2 Begin - Fields added by SNA Connect Version 2 */
+TA_SNALINK		53	string	-	name of link section
+TA_LSYSID		54	string	-	
+TA_RSYSID		55	string	-	
+TA_MINWIN		56	short	-	
+TA_MAXSYNCLVL		57	short	-	
+TA_SNASTACK		58	string	-	name of stack section
+TA_SNACRM		59	string	-	name of crm section
+TA_STACKTYPE		60	string	-	
+TA_TPNAME		61	string	-	
+TA_STACKPARMS		62	string	-	
+TA_API			63	string	-	
+TA_FUNCTION		64	string	-
+TA_CODEPAGE		65	string	-
+TA_STARTTYPE		66	string	-	
+$/* SNA2 End */
+
+TA_CONNECTION_POLICY    67      string  -
+TA_RETRY_INTERVAL       68      long    -
+TA_MAXRETRY             69      long    -
+
+$/* The following added for TOPEND gateway */
+TA_TP_SYSTEM            70      string  -
+TA_TE_PRODUCT           71      string  -
+TA_TE_FUNCTION          72      string  -
+TA_TE_TARGET            73      string  -
+TA_TE_QUALIFIER         74      long    -
+TA_TE_RTQGROUP          75      string  -
+TA_TE_RTQNAME           76      string  -
+
+$/* DMIB additional fields */
+TA_BRANCHSTATE			77		long	-
+TA_BRANCHNETID			78		string	-
+TA_DMIB				79		long 	-
+TA_DMFAILOVERSEQ		80		short	-
+TA_DMFIELDTYPE			81		string	-	for XML buffers
+TA_CURENCRYPTBITS		82		long	-	encryption current num of bits
+TA_DMACLPOLICY			83		string	- for interop aclpolicy
+TA_DMCONNPRINCIPALNAME	84	string	- for interop impersonate
+TA_DMLOCALPRINCIPALNAME	85	string	- for interop impersonate
+TA_DMPRIORITY_TYPE		86	string	- for msg priority
+TA_DMINPRIORITY			87	short	   - for msg priority
+TA_DMCREDENTIALPOLICY	88	string	- Do we send AA tokens
+TA_DMTCPKEEPALIVE       89 string   - TCP level keepalive
+TA_DMKEEPALIVE          90 long     - APP level keepalive interval
+TA_DMKEEPALIVEWAIT      91 long     - APP level keepalive window
+TA_ABORT_THRESHOLD      92 long     - TCP ABORT THRESHOLD
+
+$/* end REDUCE_CPP */
+$#endif
+$
+$#ifndef REDUCE_CPP
+*base 400
+TA_DMTBLTYPE	1	short	-
+TA_DMENTRYSIZE	2	long	-
+TA_DMHASH_INDX	3	long	-
+TA_DMNBKTS	4	short	-
+TA_DMNUMENTRIES	5	short	-
+TA_DMSHMSIZE	6	long	-
+
+$/* The following 2 fields have been introduced in release 6.0. These are
+$ * internal fields of the /Domain feature and as such liable to change.
+$ * The TA_DMGWOPT field sent by GWADM to DMADM indicates the release/version
+$ * or functionality level of the sending GWADM.   ONE AND ONLY ONE BIT SHOULD
+$ * BE SET ON IN THIS BITFIELD..... indicating the version/functionality level
+$ * of the GWADM.
+$ * The other field TA_DMADMOPT though sent from DMADM to GWADM starting rel 6,
+$ * is being implemented for future usage.
+$ */
+TA_DMADMOPT	7	carray	-	Capabilities field of DMADM server 
+TA_DMGWOPT	8	carray	-	Capabilities field of GWADM server
+
+$/* The next field is used for conveying the GWADM advertised servicename to 
+$ * the DMADM.  This again has been introduced in rel 6.0.  This will hide the
+$ * DMADM from the GWADM servicename computations/conventions/etc.
+$ */
+$/*
+$ * #define	TA_DMGWASVC	((FLDID)41369)	* number: 409	 type: string *
+$ */
+TA_DMGWASVC	9	string	-	GWADM service name
+
+$/* 
+$ * Fields added for the OSITP V4.0 
+$ */
+TA_OSITPX			10 	string 	-	domain_name in DM_OSITPX
+$/* TA_NWADDR string */
+$/* TA_AET string */
+TA_TSEL				11	string -
+TA_TAILORPATH		12	string -
+TA_PSEL				13	string -
+TA_SSEL				14	string -
+TA_EXTENSIONS       15  string - 
+$/* TA_MINENCRYPTBITS long */
+$/* TA_MAXENCRYPTBITS long */
+TA_MULTIPLEXING		16	short - 
+TA_DNSRESOLUTION	17	string -
+TA_OPTIONS		18	string -   
+TA_XATMIENCODING	19	string -
+$/* Local Services adds for OSITP */
+TA_COUPLING			20	string -
+TA_INRECTYPE		21	string -
+TA_INRECSTYPE		22	string -
+TA_OUTRECTYPE		23	string -
+TA_OUTRECSTYPE		24	string -
+$/* Remote Services adds for OSITP */
+TA_AUTOPREPARE		25	string -
+TA_TPSUTTYPE		26	string -
+TA_REMTPSUT			27	string -
+$/* end of OSITP V4.0 adds */
+
+$/* end REDUCE_CPP */
+$#endif
+$
+$/* return values */
+$#define TAEDMTYPE	-20	/* error reading the DMTYPE file*/
+$#define TAEINCONSIS	-19	/* inconsistent specification */
+$#define TAENOSPACE	-18	/* no space in TUXCONFIG */
+$#define TAEBLOCK	-17	/* blocking condition */
+$#define TAEGOTSIG	-16	/* got a signal */
+$#define TAECONFIG	-15	/* error readin the TUXCONFIG */
+$#define TAEDUPLICATE	-14	/* tried to add a duplicate record */
+$#ifndef TAEINVAL
+$#define TAEINVAL	-13	/* invalid argument */
+$#endif
+$#define TAENOTFOUND	-12	/* record not found */
+$#define TAEOS		-11	/* operating system error */
+$#ifndef TAEPERM
+$#define TAEPERM	-10	/* permission error */
+$#endif
+$#define TAEPROTO	-9	/* protocol error */
+$#define TAERANGE	-8	/* field value out of range */
+$#define TAEREQUIRED	-7	/* field value required but not present */
+$#define TAESIZE	-6	/* string value too long */
+$#define TAESVCERR	-5	/* service error */
+$#define TAESYSTEM	-3	/* system error */
+$#define TAETIME	-2	/* timeout */
+$#define TAEUPDATE	-1	/* update not allowed */
+$#define TAOK		0	/* suceeded */
+$#define TAUPDATED	1	/* suceeded and updated a record */
+$#define TAPARTIAL	2	/* suceeded at master; failed elsewhere */

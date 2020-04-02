@@ -1,0 +1,14 @@
+#
+# $Id: jrep.f32,v 1.2 2000/07/06 23:58:59 gtong Exp $ Copyright 1996-97 BEA Systems, Inc.  All Rights Reserved.
+#
+# FML field definitions for Jolt Repository Services.
+#
+
+# Duplicate this field from $TUXDIR/udataobj/Usysflds
+STATLIN	 5	string	- Message to go on status line
+
+*base 85
+NRECS	 1	long	- Number of records in the repository
+REPNAME	 2	string	- Type/Name (e.g. SVC/INQUIRY) in the repository
+REPVALUE 3	string	- Value in the repository
+PATTERN	 4	string	- Search pattern for GETKEYS (e.g. SVC/*, or */* )

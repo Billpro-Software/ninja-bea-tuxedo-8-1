@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.distributeddestinations subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="DistributedDestinations" title="book.title" markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="DistributedDestinationsBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:book definitionLabel="JmsDistributeddestinationsBook"
+                       title="JmsDistributeddestinationsBook"
+                       markupName="book"
+                       markupType="Book">
+            <netuix:content>
+              <netuix:page markupName="page" markupType="Page"
+                           definitionLabel="JmsDistributeddestinationsQueuePages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="JmsDistributeddestinationQueuesBook"
+                                   title="JmsDistributeddestinationQueuesBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                       definitionLabel="JMSDistributedQueueconfigTabPage"
+                                       title="tab.config.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSDistributedQueuegeneralTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.general.label">
+                                <netuix:meta name="helpid"
+                                             content="JMS.jms.distributeddestinations.jmsdistributedqueueconfiggeneral.title;jms"/>
+                                <netuix:meta name="breadcrumb-context" content="handle"/>
+                                <netuix:meta name="configuration-page"
+                                             content="weblogic.j2ee.descriptor.wl.DistributedQueueBean"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDistributeddestinationsJMSDistributedQueueConfigGeneralPortlet"
+                                                              contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedQueueConfigGeneral.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the members tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSDistributedQueuemembersTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.members.label">
+                                <netuix:meta name="helpid"
+                                             content="JMS.jms.distributeddestinations.jmsdistributedqueuememberstable.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="DistributedQueueMembersPortlet"
+                                                              contentUri="/PortalConfig/jms/distributeddestinations/DistributedQueueMemberTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                       definitionLabel="JMSDistributedQueueMonitorTabPage"
+                                       title="tab.monitor.label">
+                            <netuix:content>
+
+                              <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSDistributedQueueMonitorStatisticsTabPage"
+                                           title="tab.statistics.label">
+
+                                <netuix:meta name="helpid"
+                                             content="JMS.jms.distributeddestinations.jmsdistributedqueuemonitor.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="JMSDistributedQueueMonitorPortlet"
+                                                              contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedQueueMonitor.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+
+                            </netuix:content>
+                          </netuix:book>
+
+                          <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDistributedQueuenotesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.notes.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.distributeddestinations.jmsdistributedqueuenotes.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDistributeddestinationsJMSDistributedQueueNotesPortlet"
+                                                          contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedQueueNotes.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+              <netuix:page markupName="page" markupType="Page"
+                           definitionLabel="JmsDistributeddestinationsQueueMemberPages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="JmsDistributeddestinationQueueMembersBook"
+                                   title="JmsDistributeddestinationQueueMembersBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDistributedQueueMemberconfigTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.config.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.distributeddestinations.jmsdistributedqueuememberconfig.title;jms"/>
+                            <netuix:meta name="configuration-page"
+                                         content="weblogic.j2ee.descriptor.wl.DistributedQueueMemberBean"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDistributeddestinationsJMSDistributedQueueMemberConfigPortlet"
+                                                          contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedQueueMemberConfig.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDistributedQueueMembernotesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.notes.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.distributeddestinations.jmsdistributedqueuemembernotes.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDistributeddestinationsJMSDistributedQueueMemberNotesPortlet"
+                                                          contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedQueueMemberNotes.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+              <netuix:page markupName="page" markupType="Page"
+                           definitionLabel="JmsDistributeddestinationsTopicPages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="JmsDistributedTopicBook"
+                                   title="JmsDistributedTopicBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                       definitionLabel="JMSDistributedTopicconfigTabPage"
+                                       title="tab.config.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSDistributedTopicgeneralTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.general.label">
+                                <netuix:meta name="helpid"
+                                             content="JMS.jms.distributeddestinations.jmsdistributedtopicconfiggeneral.title;jms"/>
+                                <netuix:meta name="breadcrumb-context" content="handle"/>
+                                <netuix:meta name="configuration-page"
+                                             content="weblogic.j2ee.descriptor.wl.DistributedTopicBean"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet"
+                                                              instanceLabel="JmsDistributeddestinationsJMSDistributedTopicConfigGeneralPortlet"
+                                                              contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedTopicConfigGeneral.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- Definition for the members tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                           definitionLabel="JMSDistributedTopicmembersTabPage"
+                                           presentationClass="page-content"
+                                           title="tab.members.label">
+                                <netuix:meta name="helpid"
+                                             content="JMS.jms.distributeddestinations.jmsdistributedtopicmemberstable.title;jms"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                      <netuix:portletInstance markupType="Portlet" instanceLabel="DistributedTopicMembersPortlet"
+                                                              contentUri="/PortalConfig/jms/distributeddestinations/DistributedTopicMemberTable.portlet"/>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDistributedTopicnotesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.notes.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.distributeddestinations.jmsdistributedtopicnotes.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDistributeddestinationsJMSDistributedTopicNotesPortlet"
+                                                          contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedTopicNotes.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+              <netuix:page markupName="page" markupType="Page"
+                           definitionLabel="JmsDistributeddestinationsTopicMemberPages"
+                           title="not.used"
+                           hidden="true">
+                <netuix:content>
+                  <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="JmsDistributedTopicMemberBook"
+                                   title="JmsDistributedTopicMemberBook">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                        <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDistributedTopicMemberconfigTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.config.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.distributeddestinations.jmsdistributedtopicmemberconfig.title;jms"/>
+                            <netuix:meta name="configuration-page"
+                                         content="weblogic.j2ee.descriptor.wl.DistributedTopicMemberBean"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDistributeddestinationsJMSDistributedTopicMemberConfigPortlet"
+                                                          contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedTopicMemberConfig.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="JMSDistributedTopicMembernotesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.notes.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.distributeddestinations.jmsdistributedtopicmembernotes.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JmsDistributeddestinationsJMSDistributedTopicMemberNotesPortlet"
+                                                          contentUri="/PortalConfig/jms/distributeddestinations/JMSDistributedTopicMemberNotes.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:placeholder>
+                  </netuix:layout>
+                </netuix:content>
+              </netuix:page>
+            </netuix:content>
+          </netuix:book>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the JMSDistributedTopicMember creation assistant page -->
+  <netuix:book definitionLabel="CreateJMSDistributedTopicMemberBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.distributedtopicmember.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CreateJMSDistributedTopicMember"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.distributedestition.createmember.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CreateJMSDistributedTopicMemberPortlet"
+                                          contentUri="/PortalConfig/jms/distributeddestinations/CreateJMSDistributedDestinationMember.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JMSDistributedTopicMember deletion assistant page -->
+  <netuix:book definitionLabel="DeleteJMSDistributedTopicMemberBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.distributedtopicmember.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="DeleteJMSDistributedTopicMember"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.distributeddestinations.deletedistributeddestinationmember.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DeleteJMSDistributedTopicMemberPortlet"
+                                          contentUri="/PortalConfig/jms/distributeddestinations/DeleteJMSDistributedTopicMember.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JMSDistributedQueueMember creation assistant page -->
+  <netuix:book definitionLabel="CreateJMSDistributedQueueMemberBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.distributedqueuemember.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CreateJMSDistributedQueueMember"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.distributedestition.createmember.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CreateJMSDistributedQueueMemberPortlet"
+                                          contentUri="/PortalConfig/jms/distributeddestinations/CreateJMSDistributedDestinationMember.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JMSDistributedQueueMember deletion assistant page -->
+  <netuix:book definitionLabel="DeleteJMSDistributedQueueMemberBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.distributedqueuemember.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="DeleteJMSDistributedQueueMember"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.distributeddestinations.deletedistributeddestinationmember.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="DeleteJMSDistributedQueueMemberPortlet"
+                                          contentUri="/PortalConfig/jms/distributeddestinations/DeleteJMSDistributedQueueMember.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

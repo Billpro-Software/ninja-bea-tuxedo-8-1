@@ -1,0 +1,35 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//--------------------------------------------------------------------
+//
+// News.icf
+//
+// Specifies the activation and transactional policies for the
+// interfaces that the advanced simple events c++ sample's WireService
+// server implements.
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+module POA_News
+{
+
+  implementation WireService_i
+  {
+    // The WireService_i servant class posts events within a
+    // transaction.  Therefore, set its' transaction policy to
+    // "always".
+    activation_policy  ( method            );
+    transaction_policy ( always            );
+    implements         ( News::WireService );
+  };
+
+  implementation WireServiceFactory_i
+  {
+    activation_policy  ( method                   );
+    transaction_policy ( optional                 );
+    implements         ( News::WireServiceFactory );
+  };
+
+};
+

@@ -1,0 +1,1717 @@
+<TITLE>VUFORM MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>VUFORM MESSAGES 1-99</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1"></A>
+<H3>VUFORM MESSAGE #1</H3>
+<H2> ERROR: malloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed in
+vuform
+while trying to allocate space
+for a fielded buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+Re-execute the
+vuform
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+ulimit (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2"></A>
+<H3>VUFORM MESSAGE #2</H3>
+<H2> ERROR: Couldn't find system form <I>formname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+vuform
+program was not able to find the specified
+system form,
+<I>formname</I>,
+or an I/O error was found while reading the
+specified form.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+TUXDIR
+environment variable is set to the proper
+value and export this variable. Also, verify that the specified
+form exists under the corresponding
+locale
+directory,
+for example,
+${TUXDIR}/locale/C/mask/vuform ,
+and is readable.  Then, re-execute the
+vuform
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5"></A>
+<H3>VUFORM MESSAGE #5</H3>
+<H2> ERROR: Couldn't find <I>formname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+vuform
+program was not able to find the specified form,
+<I>formname</I>,
+or an I/O error was found while reading the specified form.
+This error was produced while the
+vuform
+command was
+trying to initialize a
+MENU
+type form.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+TUXDIR
+and the
+MASKPATH
+environment variables are set to
+the proper values and export these variables.
+Also, check that the
+file containing the specified form is readable.
+Then, re-execute the
+vuform
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="11"></A>
+<H3>VUFORM MESSAGE #11</H3>
+<H2> ERROR: this page already has a home field</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is provided by the
+vuform
+command during
+a cross validation of the
+lastval
+function.
+This cross validation
+found that there is more than one field declared as a <I>Home</I> field
+on the corresponding page.
+Only one field can be the <I>Home</I> field.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For each field, enter <I>Attribute Mode</I> (that is, type cf</I>) and verify
+the value of the <I>Home field</I> attribute.
+Only one field is allowed to be the <I>Home field</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="12"></A>
+<H3>VUFORM MESSAGE #12</H3>
+<H2> ERROR: this page already has an initial field</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is provided by the
+vuform
+command during
+a cross validation of the
+lastval
+function.
+This cross validation
+found that there is more than one field declared as an <I>Initial</I> field
+on the corresponding page.
+Only one field can be the <I>Initial</I> field.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For each field, enter <I>Attribute Mode</I> (that is, type CF) and verify
+the value of the <I>Initial field</I> attribute.  Only one field is allowed to
+be the <I>Initial field</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="13"></A>
+<H3>VUFORM MESSAGE #13</H3>
+<H2> ERROR: this form already has a menu field</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This page already has a menu field (MENU).
+Only one
+MENU
+type field is allowed on a form.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Do not define a new
+MENU
+type field.
+Edit the field attribute
+parameters and delete the values provided for the <I>Menu Type</I> and
+<I>Argument:</I> fields.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="14"></A>
+<H3>VUFORM MESSAGE #14</H3>
+<H2> ERROR: invalid menu type (choose MENU or FORMEXIT)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is returned by vuform during the definition of
+the parameters for a variable field.
+The field labeled Menu type: takes either the
+MENU
+or the
+FORMEXIT
+keyword.
+Another value has been specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the value of the field labeled Menu type:; it must be
+MENU
+or
+FORMEXIT.
+The remainder of the specification
+of the
+MENU
+or the
+FORMEXIT
+statement must be entered on the
+lines following the label Argument:.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3>VUFORM MESSAGE #15</H3>
+<H2> ERROR: no spaces allowed in display code string</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There should be no spaces between display flags.
+This error is produced by the
+vuform
+command while
+validating the display flags for a particular field.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the value of the display flags without spaces.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3>VUFORM MESSAGE #16</H3>
+<H2> ERROR: invalid display code - use digits 0 through 9</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A display flag must be a digit between 0 and 9, where 0 is the normal mode,
+1 is standout mode, 2 is inverse video, 3 is bold, 4 is dim, 5 is blink,
+6 is invisible, 7 is underline, 8 is protected, and 9 is alternate
+character set.
+This error is produced by the
+vuform
+command while validating
+the display flags for a particular field.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-enter the value of the display flags.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3>VUFORM MESSAGE #17</H3>
+<H2> ERROR: duplicate display code</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A display flag can only be specified once.
+This error is produced by the
+vuform
+command while
+validating the display flags specified for a particular field.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-enter the value of the display flags field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="18"></A>
+<H3>VUFORM MESSAGE #18</H3>
+<H2> ERROR: FML id not found in field tables</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by the
+vuform
+program while
+validating the FML name given to a particular field in the
+field attribute form.  The FML id must be defined in the
+corresponding field table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+FIELDTBLS
+and
+FLDTBLDIR
+environment variables to make sure
+they are set correctly, and re-execute the command.
+Add the FML identifier to the field table file.
+You can escape to the editor to edit the field table file and add
+the field identifier, for example, ESC!vi &lt;field table file>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3>VUFORM MESSAGE #19</H3>
+<H2> ERROR: argument specification not consistent with type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Default type:</I> field.
+A value for the <I>Argument:</I> field has been specified but
+no value has been given to the <I>Default type:</I> field.
+A default type (the value of the <I>Default type:</I> field) must be specified
+in this case.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a default type value for the <I>Default type:</I> field, or
+delete the value of the <I>Argument:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="20"></A>
+<H3>VUFORM MESSAGE #20</H3>
+<H2> ERROR: type requires argument</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is issued by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the definition of the <I>Default type:</I> field.
+A value for the <I>Default type:</I> field has been specified but
+no value has been given to the <I>Argument:</I> field.
+An argument value for the <I>Argument:</I> field must be specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify an argument value for the <I>Argument:</I> field, or
+delete the value of the <I>Default type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="21"></A>
+<H3>VUFORM MESSAGE #21</H3>
+<H2> ERROR: argument specification not consistent with type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+validation specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I> field.
+A value for the <I>Argument:</I> field has been specified but
+no value has been given to the <I>Validation type:</I> field.
+A value for the <I>Validation type:</I> field must be specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Type a value for the <I>Validation type:</I> field, or delete the
+value of the <I>Argument:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="22"></A>
+<H3>VUFORM MESSAGE #22</H3>
+<H2> ERROR: validation type does not take an argument</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+validation specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I> field.
+A value for the <I>Argument:</I> field has been specified but
+the value provided for the <I>Validation type:</I> field does not
+take an argument.
+For example,
+ALPHA ,
+ALNUM ,
+INTEGER ,
+and
+NUMERIC
+are validation types that do not take arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Do not specify a value for the <I>Argument:</I> field.
+Correct the value and proceed with editing the form.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="23"></A>
+<H3>VUFORM MESSAGE #23</H3>
+<H2> ERROR: type requires argument</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+validation specification for a variable field.
+A value for the <I>Validation type:</I> field has been specified that
+requires an argument but no value for the <I>Argument:</I> field
+has been provided.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for <I>Argument:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="24"></A>
+<H3>VUFORM MESSAGE #24</H3>
+<H2> ERROR: argument specification not consistent with type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Argument:</I> field
+for a <I>Menu type:</I> field, but the
+<I>Menu type:</I> field has not been set to
+either
+MENU
+or
+FORMEXIT.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the value for the <I>Menu type:</I> field to
+MENU
+or
+FORMEXIT,
+or delete the value for
+the <I>Argument:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="25"></A>
+<H3>VUFORM MESSAGE #25</H3>
+<H2> ERROR: MENU field must be unprotected</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT ,
+but the field has not been marked as unprotected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the protected field indication to "n".
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="26"></A>
+<H3>VUFORM MESSAGE #26</H3>
+<H2> ERROR: type requires argument</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT,
+but no value for the <I>Argument:</I> field has been specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+the <I>Argument:</I> field, or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="27"></A>
+<H3>VUFORM MESSAGE #27</H3>
+<H2> ERROR: regular expression syntax error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I>
+field as
+RE
+(regular expression).  The associated argument is an invalid
+regular expression.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+the <I>Argument:</I> field that is a valid regular expression,
+or delete the <I>Validation type:</I> field value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="28"></A>
+<H3>VUFORM MESSAGE #28</H3>
+<H2> ERROR: bad function specification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I>
+field as
+FUNC
+(function).  The associated argument is an invalid
+function specification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+the <I>Argument:</I> field that is a valid function
+specification, <I>function</I>(<I>string_arg</I>),
+or delete the <I>Validation type:</I> field value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="29"></A>
+<H3>VUFORM MESSAGE #29</H3>
+<H2> ERROR: bad range specification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I>
+field as
+NR
+(numeric range).  The associated argument is an invalid
+numeric range (for example, a closing bracket is missing).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+the <I>Argument:</I> field that is a valid numeric range,
+or delete the <I>Validation type:</I> field value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="30"></A>
+<H3>VUFORM MESSAGE #30</H3>
+<H2> ERROR: bad range specification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I>
+field as
+IR
+(integer range).  The associated argument is an invalid
+integer range (for example, a closing bracket is missing).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+the <I>Argument:</I> field that is a valid integer range,
+or delete the <I>Validation type:</I> field value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="31"></A>
+<H3>VUFORM MESSAGE #31</H3>
+<H2> ERROR: floating point constant in integer range specification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Validation type:</I>
+field as
+IR
+(integer range).  The associated argument is an invalid
+integer range (the numbers specified are not integers).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+the <I>Argument:</I> field that is a valid integer range,
+or delete the <I>Validation type:</I> field value.
+Use a numeric range (NR) if floating point values are desired.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="32"></A>
+<H3>VUFORM MESSAGE #32</H3>
+<H2> ERROR: Cannot have null menu/formexit value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT,
+but the <I>Argument:</I> field is invalid.
+The format of the
+field should be a comma-separated list of
+<I>menu_value=menu_type:jump_type</I>
+values, but one of the entries is missing the <I>menu_value</I> (either the
+field value starts with an equal sign or an equal sign follows a comma).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a valid value for the
+the <I>Argument:</I> field, or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="33"></A>
+<H3>VUFORM MESSAGE #33</H3>
+<H2> ERROR: values for FORMEXIT must be F0-F9 or F11 or *</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as
+FORMEXIT,
+but the <I>Argument:</I> field is invalid.
+The format of the field should be
+a comma-separated list of
+<I>menu_value=menu_type:jump_type</I>
+values where <I>menu_value</I> must be F1 through F09, F11, or *.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a valid value for the
+the <I>Argument:</I> field,
+or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="34"></A>
+<H3>VUFORM MESSAGE #34</H3>
+<H2> ERROR: expected '=' in menu/formexit list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT,
+but the <I>Argument:</I> field is invalid.
+The format of the
+field should be a comma-separated list of
+<I>menu_value=menu_type:jump_type</I>
+values, but one of the entries is missing the equal sign (a <I>menu_value</I>
+was followed by white space but no equal sign).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a valid value for the
+the <I>Argument:</I> field, or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="35"></A>
+<H3>VUFORM MESSAGE #35</H3>
+<H2> ERROR: invalid menu/formexit type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT,
+but the <I>Argument:</I> field is invalid.
+The format of the
+field should be a comma-separated list of
+<I>menu_value=menu_type:jump_type</I>
+values, but one of the entries has an invalid <I>menu_type</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a valid value for the
+the <I>Argument:</I> field, or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="36"></A>
+<H3>VUFORM MESSAGE #36</H3>
+<H2> ERROR: expected ':' in menu/formexit line</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT,
+but the <I>Argument:</I> field is invalid.
+The format of the
+field should be a comma-separated list of
+<PRE>
+<I>menu_value=menu_type:jump_type</I>
+</PRE>
+values, but one of the entries is missing the colon (the character following
+the <I>menu_type</I> and optional white space is not a colon).
+ACTION
+Specify a valid value for the
+the <I>Argument:</I> field, or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="37"></A>
+<H3>VUFORM MESSAGE #37</H3>
+<H2> ERROR: invalid action type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced by
+vuform
+while validating the
+argument specification for a variable field.
+The error occurred during the specification of the <I>Menu type:</I> field
+as either
+MENU
+or
+FORMEXIT,
+but the <I>Argument:</I> field is invalid.
+The format of the field should be a comma-separated list of
+<PRE>
+<I>menu_value=menu_type:action_type</I>
+</PRE>
+values, but one of the entries has an Action (A or a) <I>menu_type</I>,
+with an invalid <I>action_type</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a valid value for the
+the <I>Argument:</I> field, or delete the value for the <I>Menu type:</I> field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="64"></A>
+<H3>VUFORM MESSAGE #64</H3>
+<H2> ERROR: Signal caught - vuform exiting <I>additional_information</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is printed when
+vuform
+processing is interrupted by a signal, usually a
+BREAK
+signal sent by the user hitting the
+BREAK
+key on the terminal.
+<I>additional_information</I>
+may be printed if
+vuform
+has additional information relating to the form being processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Restart
+vuform
+and reformat the mask information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="65"></A>
+<H3>VUFORM MESSAGE #65</H3>
+<H2> ERROR: Signal caught - vuform exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is printed when
+vuform
+processing is interrupted by a signal, usually a
+BREAK
+signal sent by the user hitting the
+BREAK
+key on the terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Restart
+vuform
+and reformat the mask information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="66"></A>
+<H3>VUFORM MESSAGE #66</H3>
+<H2> ERROR: <I>program_name</I> - unknown terminal type <I>term_type</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The terminal type indicated is not known on this system and therefore
+cannot be used with
+vuform .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct
+TERM
+environment variable setting to one understood on the
+local system, or run
+vuform
+from a terminal that has a known type.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+curses(3X) and <Font>terminfo(4) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="68"></A>
+<H3>VUFORM MESSAGE #68</H3>
+<H2> ERROR: <I>program_name</I> - form dimensions, <I>cols</I> X <I>rows ,</I> are too large for screen, <I>cols</I> X <I>rows</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dimensions of the form to be processed by
+vuform
+are too large for the screen or window in use.
+The form dimensions come from the command line of
+vuform
+via the
+-c
+and
+-r
+options or default to 80 by 23 respectively.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+vuform
+from a bigger window or reduce the size of the form being
+created.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="69"></A>
+<H3>VUFORM MESSAGE #69</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+vuform
+creates a file with the same basename as that specified on the
+command line, but with a
+".M"
+suffix appended to the end (if it does not already exist).
+This error occurs when the file name specified is invalid for use on the
+vuform
+command line for one of the following reasons:
+<UL>
+<LI><P>
+The last level of the filename (for example,
+dev
+for
+abc/dev
+and
+xyz
+for
+xyz )
+is 0-length
+<LI><P>
+The last level of the filename is
+".M"
+<LI><P>
+The last level of the filename is more than 14 characters in length
+<LI><P>
+The last level of the filename is more than 12 characters in length and
+does not end in
+".M"
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the file name used on the
+vuform
+command line to conform to the restrictions specified above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="74"></A>
+<H3>VUFORM MESSAGE #74</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="75"></A>
+<H3>VUFORM MESSAGE #75</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="77"></A>
+<H3>VUFORM MESSAGE #77</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="78"></A>
+<H3>VUFORM MESSAGE #78</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="80"></A>
+<H3>VUFORM MESSAGE #80</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="82"></A>
+<H3>VUFORM MESSAGE #82</H3>
+<H2> ERROR: <I>file_name</I> is either an invalid file name or too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 69 above.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="90"></A>
+<H3>VUFORM MESSAGE #90</H3>
+<H2> ERROR: rows must be between 1 and <I>rows</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When trying to reset the number of rows on form using ":rows=", the value
+specified was too large.
+The value must be between 1 and
+<I>rows</I>,
+where
+<I>rows</I>
+is dependent on the screen and/or window size.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+vuform
+from a bigger window or reduce the row size value specified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="92"></A>
+<H3>VUFORM MESSAGE #92</H3>
+<H2> ERROR: cols must be between 1 and <I>cols</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When trying to reset the number of columns on form using ":cols=", the value
+specified was too large.
+The value must be between 1 and
+<I>cols</I>,
+where
+<I>cols</I>
+is dependent on the screen and/or window size.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run
+vuform
+from a bigger window or reduce the column size value specified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="94"></A>
+<H3>VUFORM MESSAGE #94</H3>
+<H2> ERROR: unknown command: <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A command mode string, beginning with a colon, was entered
+but is not a valid
+vuform
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Enter a valid command mode string, as listed in the
+vuform (1)
+manual page.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="95"></A>
+<H3>VUFORM MESSAGE #95</H3>
+<H2> ERROR: <I>formname</I> - bad magic number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The form
+<I>formname</I>
+specified for processing by
+vuform
+is not a valid form or was generated with an earlier version
+of the software (it has an invalid magic number).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the correct form name was specified and that it
+was compiled with the current version of the software.
+If necessary, de-compile it with the old version of the software
+and re-compile it with the new version.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+mcdis (1),
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="99"></A>
+<H3>VUFORM MESSAGE #99</H3>
+<H2> ERROR: read failed for <I>formname</I> - FML id, <I>field_number</I> (<I>field_type</I>), not found in any field table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While reading the specified form,
+<I>formname</I>,
+the field name for field number
+<I>field_number</I>
+and type
+<I>field_type</I>
+could not be found (for example,
+Fname
+failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+FIELDTBLS
+and
+FLDTBLDIR
+environment variables to make sure
+they are set correctly, and re-execute the command.
+Add the FML identifier to the field table file.
+You can escape to the editor to edit the field table file and add
+the field identifier, for example, ESC!vi &lt;field table file>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT1><P>
+<H1>VUFORM MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="106"></A>
+<H3>VUFORM MESSAGE #106</H3>
+<H2> ERROR: <I>pattern_value</I> is a bad pattern</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The search pattern,
+<I>pattern_value,</I>
+specified using the "/" or "?" command,
+is an invalid regular expression (for example, an unfinished character class).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a valid regular expression.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+recomp (3),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="108"></A>
+<H3>VUFORM MESSAGE #108</H3>
+<H2> WARN: pattern not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The search pattern
+specified using the "/" or "?" command
+(search forward/backward for the field matching the specified pattern)
+was not found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="110"></A>
+<H3>VUFORM MESSAGE #110</H3>
+<H2> WARN: pattern not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The search pattern
+specified using the "/" or "?" command was not found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1),
+"TUXEDO Data Entry System Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="111"></A>
+<H3>VUFORM MESSAGE #111</H3>
+<H2> WARN: field name not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The search pattern
+specified using the ' or " command
+(search forward/backward for the field associated with the specified
+FML field name) was not found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="114"></A>
+<H3>VUFORM MESSAGE #114</H3>
+<H2> WARN: field name not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The field
+specified using the ' or " command
+(search forward/backward for the field associated with the specified
+FML field name) was not found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="115"></A>
+<H3>VUFORM MESSAGE #115</H3>
+<H2> ERROR: write failed - FML id, <I>field_name</I> not found in any field tables</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While writing the current form,
+the field name
+<I>field_name</I>
+could not be found (for example,
+Fldid
+failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+FIELDTBLS
+and
+FLDTBLDIR
+environment variables to make sure
+they are set correctly, and re-execute the command.
+Add the FML identifier to the field table file.
+You can escape to the editor to edit the field table file and add
+the field identifier, for example, ESC!vi &lt;field table file>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="116"></A>
+<H3>VUFORM MESSAGE #116</H3>
+<H2> ERROR: write failed - FML id needed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While writing the current form,
+a field was encountered that did not yet have an FML field name
+associated with it, such that the field identifier for the field
+could not be determined.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Associated a field name with the field and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="117"></A>
+<H3>VUFORM MESSAGE #117</H3>
+<H2> ERROR: write error - couldn't create temp file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When writing the current form,
+vuform
+was unable to create and open a temporary file for writing
+in the current directory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the current directory has write
+and execute permissions set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="118"></A>
+<H3>VUFORM MESSAGE #118</H3>
+<H2> ERROR: write error - UFORM source in <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The form compilation failed but no output was generated by the
+mask compiler.
+The source for the form is left in
+<I>filename</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+After executing
+vuform ,
+trying compiling the form manually using
+mc
+<I>filename</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+mc(1),
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="119"></A>
+<H3>VUFORM MESSAGE #119</H3>
+<H2> ERROR: write error; UFORM source in <I>filename1</I>; message from mc in <I>filename2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The form compilation failed.
+The source for the form is left in
+<I>filename1</I>.
+Output generated by the mask compiler is left in
+<I>filename2</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+After executing
+vuform ,
+trying compiling the form manually using
+mc
+<I>filename1</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+mc(1), <Font>vuform(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="120"></A>
+<H3>VUFORM MESSAGE #120</H3>
+<H2> ERROR: could not create <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While writing the form,
+vuform
+was able to compile the form with
+mc
+but could not create the output file,
+<I>filename</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the output file has write
+permission set correctly, and that
+the directory has write and execute permissions set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT1><P>
+<H1>VUFORM MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>VUFORM MESSAGE #1000</H3>
+<H2> ERROR: Internal error, Ferror = <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in changing a field value.  The
+associated FML error is printed to the screen and the program exits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>VUFORM MESSAGE #1002</H3>
+<H2> ERROR: TUXDIR not set; couldn't find system form <I>form_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXDIR
+environment variable is not set and
+vuform
+cannot access the specified form,
+<I>form_name</I>,
+for display.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXDIR
+environment variable before running
+vuform .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+vuform (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

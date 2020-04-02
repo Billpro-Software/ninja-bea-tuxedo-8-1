@@ -1,0 +1,35 @@
+# This file contains the list of rules for validating if 
+# a peer is authorized as the target of a secure connection.
+# 
+# Each rule in the trusted peer rules file comprised of a set of elements that are
+# identified by a key. The WLE product recognizes the key names listed below. 
+#
+#   Key     Attribute                   OID
+#
+#   CN      CommonName                  OID_commonName
+#   SN      SurName                     OID_surName
+#   L       LocalityName                OID_localityName
+#   S       StateOrProvinceName         OID_stateProvinceName
+#   O       OrganizationName            OID_organizationName
+#   OU      OrganizationalUnitName      OID_organizationalUnitName
+#   C       CountryName                 OID_countryName
+#   E       EmailAddress                OID_emailAddress
+#
+# If rules are specified below, then each certificate in the chain is validated 
+# against the rules. The key name and value is compared against the appropriate
+# OID in the Subject Field of the certificate. 
+#
+# Some examples (commented out) are:
+#
+#O=Ace Industry
+#E = "BEA Systems, Inc."
+#
+# For more information on the syntax of the rules file plus additional examples, 
+# refer to the Creating a Trusted Peer Rules File section in the BEA WLE Implementing 
+# Security documentation.
+#
+
+
+
+
+

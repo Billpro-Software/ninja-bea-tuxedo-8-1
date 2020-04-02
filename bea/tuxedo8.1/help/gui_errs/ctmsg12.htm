@@ -1,0 +1,1209 @@
+<!-- .if n .pH errman.h.ctmsg12.htm @(#)ctmsg12.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1201"></A>
+<H3>CMDTUX MESSAGE #1201</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> does not meet the requirement that the lower limit of every range must be less than or equal to the upper limit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value specified in the first part of a range entry must be less than or
+equal to the value specified in the second part of a range entry.
+The value specified in the first part of the range entry was
+greater than the value specified in the second part of a range entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Recode the range entry so that the first value specified is less than
+or equal to the second value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1202"></A>
+<H3>CMDTUX MESSAGE #1202</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> needs a single quote at the end of a character string</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a routing entry, a double quote was found after an odd number of non-escaped
+single quotes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Inspect the single quotes in the flagged routing entry to ensure the
+proper format.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1203"></A>
+<H3>CMDTUX MESSAGE #1203</H3>
+<H2> ERROR: or a backslash to escape a double quote.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is printed as the second part of message 1202.
+See message 1196 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message is printed as the second part of message 1202.
+See message 1196 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1204"></A>
+<H3>CMDTUX MESSAGE #1204</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> has both numeric and character values in the RANGES statement</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 1193 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 1193 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1205"></A>
+<H3>CMDTUX MESSAGE #1205</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> mixes a numeric value with a string value in a RANGES statement</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified entry in the ROUTING section of the UBBCONFIG file contains a
+RANGES
+entry in which one part of a range is a numeric quantity and
+the other part of that range is a string category.
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the
+RANGES
+element flagged as being in error so that all
+range limits are of the same type and match the type defined for the
+field being routed on.
+Reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1206"></A>
+<H3>CMDTUX MESSAGE #1206</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> contains an invalid group name <I>grpname.</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A group specified in the
+RANGES
+parameter for the specified ROUTING
+section entry was not defined in the *GROUPS section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+<I>grpname</I>
+flagged as being in error is defined in the *GROUPS section of the UBBCONFIG file.
+Check that the two names are spelled the same way.
+Also, examine any previous error reported by
+tmloadcf
+that may have caused the corresponding entry in the *GROUPS section to not
+be recognized.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1207"></A>
+<H3>CMDTUX MESSAGE #1207</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> contains an invalid RANGES value.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ROUTING entry specified contains a
+RANGES
+value that does not follow the
+required format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Fix the format of the flagged
+RANGES
+entry.
+Often, the format error will be due to a range whose first value
+does not start with
+MIN ,
+a number, or a single quote, a range whose second value does not
+start with
+MAX ,
+a number, or a single quote,
+a range which is not followed by a colon,
+or a server group name which is not followed by a comma or a double quote
+to terminate the
+RANGES
+entry.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1208"></A>
+<H3>CMDTUX MESSAGE #1208</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> specifies an illegal BUFTYPE of ALL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ROUTING table entry flagged in the error message has a
+BUFTYPE
+of
+ALL .
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a specific buffer type for the routing table entry in error,
+and reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1209"></A>
+<H3>CMDTUX MESSAGE #1209</H3>
+<H2> ERROR: Buffer types in <I>section_name</I> entry <I>entry_name</I> start with ',' or null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+list specified in an entry in the SERVICES section or in the ROUTING section
+of the UBBCONFIG file starts with a comma, or is equal to the null string.
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that at least one valid buffer type is specified in the
+BUFTYPE
+string, and make sure that the string does not begin with a comma.
+When the error has been fixed, reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1210"></A>
+<H3>CMDTUX MESSAGE #1210</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains a null buffer type name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter specified in the ROUTING section or SERVICES section
+contains one or more null buffer type names.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+BUFTYPE
+entry flagged as being in error.
+Make certain that the beginning of the
+BUFTYPE
+string specifies a valid buffer type identifier, and that the string does
+not start with a punctuation mark.
+Also, make sure that each semicolon in the
+BUFTYPE
+string is followed by a valid buffer type identifier.
+Reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1211"></A>
+<H3>CMDTUX MESSAGE #1211</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains an unexpected comma</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter specified in the ROUTING section or SERVICES section of
+the UBBCONFIG file contains an unexpected comma.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+BUFTYPE
+entry flagged as being in error.
+The only places where commas are allowed to occur in
+BUFTYPE
+entries are between entries of a list of multiple subtypes of a particular
+type.
+When the error has been fixed, the configuration file should
+be reloaded.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1212"></A>
+<H3>CMDTUX MESSAGE #1212</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains an excessively long type name <I>type_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the buffer type names specified in the
+BUFTYPE
+parameter of a SERVICES section or ROUTING section entry of the UBBCONFIG file
+exceeds the maximum allowed length.
+The maximum allowed length of a buffer type name is 8 bytes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the buffer type name so that it is no longer than 8 bytes, and
+reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1214"></A>
+<H3>CMDTUX MESSAGE #1214</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains an unexpected colon or comma</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter specified in an entry in
+the ROUTING section or SERVICES section of the UBBCONFIG file
+contains an unexpected colon or comma.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+BUFTYPE
+entry flagged as being in error to determine the exact problem.
+A colon may occur only between a name of a type and the name of the
+first acceptable subtype.
+A comma may occur only between names of subtypes.
+When the error has been corrected, reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1215"></A>
+<H3>CMDTUX MESSAGE #1215</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains a null buffer subtype name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter specified in an entry in
+the ROUTING section or SERVICES section of the UBBCONFIG file
+contains a null buffer subtype name.
+This may occur when a colon or comma is followed by another punctuation
+mark without any intervening subtype name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Fix any subtype list which ends in a comma.
+Specify one or more subtypes for any type which requires a subtype,
+and do not follow any type which does not accept subtypes with a colon.
+When done, reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1216"></A>
+<H3>CMDTUX MESSAGE #1216</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains excessively long subtype name <I>subtype_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the buffer subtype names specified in the
+BUFTYPE
+parameter of a SERVICES section or ROUTING section entry of the UBBCONFIG file
+exceeds the maximum allowed length.
+The maximum allowed length of a buffer subtype name is 16 bytes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the buffer subtype name so that it is no longer than 16 bytes, and
+reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1217"></A>
+<H3>CMDTUX MESSAGE #1217</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> specified both '*' and a specific subtype name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A subtype list contained within the
+BUFTYPE
+parameter of a SERVICES section or ROUTING section entry of the UBBCONFIG file
+specified both the wild-card subtype '*' and a specific subtype name.
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the application should accept all subtype names,
+specify '*' without specifying any specific subtype names.
+If the application should accept only specific subtype names,
+remove '*' from the list of subtype names.
+When the change has been made, reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1218"></A>
+<H3>CMDTUX MESSAGE #1218</H3>
+<H2> ERROR: *ROUTING entry <I>entry_name</I> specifies '*' where it is not allowed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter of a ROUTING section entry of the UBBCONFIG file
+specified '*' as a buffer subtype.
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If routing on a view, specify the specific buffer type to be routed on.
+If routing on an
+FML
+buffer, no buffer subtypes are allowed.
+Reload the configuration file once it has been modified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1221"></A>
+<H3>CMDTUX MESSAGE #1221</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> contains a duplicate type(<I>type_name</I>)/subtype(<I>subtype_name</I>) pair</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter of a SERVICES section entry or ROUTING section entry in the
+UBBCONFIG file specified duplicate type/subtype pairs.
+(For types without any subtype specified, the
+BUFTYPE
+parameter specified duplicate type pairs.)
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the
+BUFTYPE
+parameter so that the same type/subtype pair is not specified more than once.
+Reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1225"></A>
+<H3>CMDTUX MESSAGE #1225</H3>
+<H2> ERROR: *SERVICES entry <I>entry_name</I> does not have the same BUFTYPE for all entries of this service.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If multiple entries exist in the SERVICES section with the same service name
+but with different
+SRVGRP
+parameters, the
+BUFTYPE
+parameter must be the same for all of the entries.
+This rule was violated for the service entry named in the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify the same
+BUFTYPE
+parameters for all instances of a particular service name.
+Then reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1228"></A>
+<H3>CMDTUX MESSAGE #1228</H3>
+<H2> ERROR: <I>section</I> entry <I>service </I> must have the same BUFTYPE for all *SERVICE entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If a service has multiple entries in the SERVICES
+section (for different
+SRVGRP
+parameters),
+all entries must have the same
+BUFTYPE
+parameter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify all entries for
+<I>service</I>
+so that the
+BUFTYPE
+parameter is consistent.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1229"></A>
+<H3>CMDTUX MESSAGE #1229</H3>
+<H2> ERROR: <I>section</I> entry <I>service</I> too many buffer type/subtypes specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The maximum number of type/subtype combinations that
+a service can accept was exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a fixed limit that requires a recompiled TUXEDO System version to increase.
+Contact your TUXEDO System Technical Support.
+Other options are:
+<UL>
+<LI><P>
+Reduce the number of type/subtype combinations by using
+"*" for a subtype wildcard.
+<LI><P>
+Have the server process call
+tptypes ()
+on its input buffer,
+and enforce its own rules concerning allowed buffer type/subtype combinations.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tptypes (3),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1231"></A>
+<H3>CMDTUX MESSAGE #1231</H3>
+<H2> ERROR: Unable to get user id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+the program was unable to get the password entry based on the
+current user identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that a password entry exists for the administrator
+who is running the
+tmconfig
+command.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1232"></A>
+<H3>CMDTUX MESSAGE #1232</H3>
+<H2> ERROR: tpchkauth failed - Uunixerr = <I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+an operating system error occurred while attempting to determine the level
+of authentication required by the application configuration.
+A code is printed indicating the specific UNIX System call which failed.
+These codes may be referenced in the header file &lt;Uunix.h> .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the UNIX System call is failing.
+Often, this error will occur if the
+TUXCONFIG
+shell variable is not set consistently in this process and the rest of
+the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpchkauth (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>CMDTUX MESSAGE #1233</H3>
+<H2> ERROR: Cannot determine authentication level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpchkauth()
+function returned an error when called by
+tmconfig
+to determine the level of authentication required by the application
+configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the
+tpchkauth()
+function call is failing.
+Often, this will be due to an incorrect
+setting of the
+TUXCONFIG
+shell variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1237"></A>
+<H3>CMDTUX MESSAGE #1237</H3>
+<H2> ERROR: Can't open <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When writing out the current buffer values,
+tmconfig
+was unable to create and open a temporary file for writing
+(in the current directory for DOS, or
+/tmp
+for TUXEDO System).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory has write
+and execute permissions set correctly, and that the file system has
+the proper resources for creating and writing a file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1267"></A>
+<H3>CMDTUX MESSAGE #1267</H3>
+<H2> ERROR: Cannot start/stop servers, Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+realloc ()
+failed while
+creating an internal data structure related to
+TMS
+boot or shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+A temporary work-around is to require less space
+by booting or shutting down one machine, group,
+or server at a time.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1268"></A>
+<H3>CMDTUX MESSAGE #1268</H3>
+<H2> ERROR: GROUP entry, <I>group, </I> TMS specified and LMID, <I>lmid,</I> does not have TLOGDEVICE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If any group on a machine has a
+TMS
+specified, the
+TLOGDEVICE
+parameter in the *MACHINES section
+must be set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1270"></A>
+<H3>CMDTUX MESSAGE #1270</H3>
+<H2> ERROR: Could not establish network address - check device and address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process could not establish its listening address
+for incoming network connections.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+NADDR
+and
+BRIDGE
+parameters for this
+machine in the *NETWORK section of the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*NETWORK section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1271"></A>
+<H3>CMDTUX MESSAGE #1271</H3>
+<H2> ERROR: Invalid BRIDGE device <I>pathname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process' networking device pathname
+is set incorrectly, or the device does not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the
+BRIDGE
+parameter for this machine
+in the configuration file's
+*NETWORK section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*NETWORK section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1273"></A>
+<H3>CMDTUX MESSAGE #1273</H3>
+<H2> ERROR: Invalid option <I>string, </I> for SECURITY keyword</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SECURITY
+parameter in the *RESOURCES section of the configuration
+file is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1275"></A>
+<H3>CMDTUX MESSAGE #1275</H3>
+<H2> ERROR: Cannot create encryption key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unexpected error occurred when attempting to create a randomly
+generated encryption key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1276"></A>
+<H3>CMDTUX MESSAGE #1276</H3>
+<H2> ERROR: Cannot create encryption schedule for application password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unexpected error occurred when attempting to encrypt
+the application security password.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1277"></A>
+<H3>CMDTUX MESSAGE #1277</H3>
+<H2> ERROR: Unable to encrypt application password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unexpected error occurred when attempting to encrypt
+the application security password.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1278"></A>
+<H3>CMDTUX MESSAGE #1278</H3>
+<H2> ERROR: Could not create security key database directory <I>path,</I> error <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A directory to hold encrypted security key information
+could not be created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that
+APPDIR
+exists, and that directory permissions will allow
+tmloadcf
+to create a subdirectory there.
+Verify that the
+APPDIR 's
+file system has free disk blocks and inodes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1279"></A>
+<H3>CMDTUX MESSAGE #1279</H3>
+<H2> ERROR: Invalid file type for security key database directory <I>path</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A directory necessary to
+hold encrypted security key information could not be
+created because
+a file exists with the same path name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove a file named
+".adm"
+in the
+APPDIR
+directory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1280"></A>
+<H3>CMDTUX MESSAGE #1280</H3>
+<H2> ERROR: Cannot change permissions of security key database directory <I>path,</I> errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The access permissions of a directory
+necessary to hold encrypted security key information
+could not be modified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change ownership of the subdirectory named
+".adm"
+in the
+APPDIR
+directory to the administrative
+UID .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1281"></A>
+<H3>CMDTUX MESSAGE #1281</H3>
+<H2> ERROR: Cannot open security key database file for writing, path <I>pathname,</I> errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmloadcf
+could not open a file (for writing, with create option)
+necessary to hold encrypted security key information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the
+APPDIR 's
+file system has free disk blocks and inodes.
+In the
+APPDIR
+directory, remove a subdirectory named
+".adm"
+and all files contained in it.
+Then run
+tmloadcf
+again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1282"></A>
+<H3>CMDTUX MESSAGE #1282</H3>
+<H2> ERROR: Cannot write to security key database file <I>path,</I> errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmloadcf
+could not write a file
+necessary to hold encrypted security key information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the
+APPDIR 's
+file system has free disk blocks and inodes.
+In the
+APPDIR
+directory, remove a subdirectory named
+".adm"
+and all files contained in it.
+Then run
+tmloadcf
+again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1283"></A>
+<H3>CMDTUX MESSAGE #1283</H3>
+<H2> ERROR: Could not create directory for security key database</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process could not create a directory necessary to
+hold encrypted security key information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Verify that
+APPDIR
+exists, and that directory permissions
+will allow the
+tagent
+process to create a subdirectory there.
+<LI><P>
+Verify that the
+APPDIR 's
+file system has free disk blocks and inodes.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1284"></A>
+<H3>CMDTUX MESSAGE #1284</H3>
+<H2> ERROR: Invalid file type for security key database directory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process could not create a directory necessary to
+hold encrypted security key information, because
+a file exists with the same path name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove a file named
+".adm"
+in the
+APPDIR
+directory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1285"></A>
+<H3>CMDTUX MESSAGE #1285</H3>
+<H2> ERROR: Cannot change permissions of security key database directory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process could not change the permissions of a directory
+necessary to hold encrypted security key information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change ownership of the subdirectory named
+".adm"
+in the
+APPDIR
+directory to the administrative
+UID .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1286"></A>
+<H3>CMDTUX MESSAGE #1286</H3>
+<H2> ERROR: Cannot open security key database file for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process could not open a file (for writing, with create option)
+necessary to hold encrypted security key information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Verify that the
+APPDIR 's
+file system has free disk
+blocks and inodes.
+<LI><P>
+In the
+APPDIR
+directory, remove a subdirectory named
+".adm"
+and all files contained in it.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1287"></A>
+<H3>CMDTUX MESSAGE #1287</H3>
+<H2> ERROR: Cannot write to security key database file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process could not write a file
+necessary to hold encrypted security key information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Verify that the
+APPDIR 's
+file system has free disk blocks and inodes.
+<LI><P>
+In the
+APPDIR
+directory, remove a subdirectory named
+".adm"
+and all files contained in it.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*MACHINES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1288"></A>
+<H3>CMDTUX MESSAGE #1288</H3>
+<H2> ERROR: Security key encryption error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There was an encryption problem when the
+tagent
+was setting up the security key database files.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

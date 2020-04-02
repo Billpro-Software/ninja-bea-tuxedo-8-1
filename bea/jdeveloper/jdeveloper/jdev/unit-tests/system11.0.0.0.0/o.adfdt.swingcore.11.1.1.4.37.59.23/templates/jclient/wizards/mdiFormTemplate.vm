@@ -1,0 +1,14 @@
+package $packageName;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JInternalFrame;
+import javax.swing.JPanel;
+
+public class $className extends JInternalFrame {
+    public $className(String title, JPanel panel) {
+        super(title, true, false, true, true);
+        this.getContentPane().setLayout(new BorderLayout());
+        this.getContentPane().add(panel, java.awt.BorderLayout.CENTER);
+    }
+}

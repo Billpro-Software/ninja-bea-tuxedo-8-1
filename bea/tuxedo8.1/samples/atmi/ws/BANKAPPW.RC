@@ -1,0 +1,23 @@
+/*	(c) 2003 BEA Systems, Inc. All Rights Reserved. */
+/* #ident	"@(#) samples/atmi/ws/BANKAPPW.RC	$Revision: 1.5 $" */
+#include "windows.h"
+#include "bankapp.h"
+
+MONEY	ICON	MONEY.ICO
+
+BANKAPP MENU
+{
+	MENUITEM "&Balance Inquiry...",	IDM_BALANCE,	MENUBREAK
+	MENUITEM "&Close Account...",	IDM_CLOSE,	MENUBREAK
+	MENUITEM "&Deposit...",		IDM_DEPOSIT,	MENUBREAK
+	MENUITEM "&Open Account...",	IDM_OPEN,	MENUBREAK
+	MENUITEM "&Transfer...",		IDM_TRANSFER,	MENUBREAK
+	MENUITEM "&Withdrawal...",		IDM_WITHDRAWAL,	MENUBREAK
+}
+
+#include "balance.dlg"
+#include "close.dlg"
+#include "deposit.dlg"
+#include "open.dlg"
+#include "transfer.dlg"
+#include "withdraw.dlg"

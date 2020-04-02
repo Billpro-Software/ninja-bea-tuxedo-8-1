@@ -1,0 +1,19 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+// *******************************************************************
+// Created Tue May 22 15:35:17 2001 by Tuxedo V8.0-01
+// *******************************************************************
+//
+// OBB Default ICF file
+// ---------------------
+//
+// Use this file as a base for your additional ICF definitions.
+//
+
+implementation POA_Simple_i
+    {
+    activation_policy ( method );
+    transaction_policy ( optional );
+    concurrency_policy ( user_controlled );
+    implements ( Simple );
+    };
+

@@ -1,0 +1,28 @@
+<HTML>
+<!--
+// Copyright (c) 1998 Quadralay Corporation.  All rights reserved.
+//
+// The information in this file is confidential and proprietary to
+// Quadralay Corporation.  Unauthorized use or duplication is
+// strictly prohibited.
+-->
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
+function setDisplayAttributes(){
+   favorDisplay.document.bgColor=parent.tab["tab3"][2];
+   favorDisplay.document.alinkColor=parent.tab["tab3"][3];
+   favorDisplay.document.linkColor=parent.tab["tab3"][4];
+   favorDisplay.document.vlinkColor=parent.tab["tab3"][5];
+}
+function init(){
+if (parent.srtfvr)parent.favorites.sort(parent.compareLabels);
+parent.displayFavorites();
+}
+</SCRIPT>
+</HEAD>
+<FRAMESET ROWS="65,*" border="0" onLoad="init();">
+   <FRAME SRC="./wwhffrm.htm" ID="favorForm" NAME="favorForm" SCROLLING="no" FRAMEBORDER=no NORESIZE> 
+   <FRAME SRC="./wwhblnk.htm" ID="favorDisplay" NAME="favorDisplay" SCROLLING="auto" FRAMEBORDER=no">
+</FRAMESET>
+</HTML>
+

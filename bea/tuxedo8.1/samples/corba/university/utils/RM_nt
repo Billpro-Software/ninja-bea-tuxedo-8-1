@@ -1,0 +1,18 @@
+TUXEDO/D:tuxd_switch:${TUXDIR}/lib/librms.a ${TUXDIR}/lib/libfs.a
+TUXEDO/SQL:tuxsql_switch:${TUXDIR}/lib/libsql.a ${TUXDIR}/lib/libusort.a ${TUXDIR}/lib/librms.a ${TUXDIR}/lib/libfs.a
+NONE:tmnull_switch: 
+TUXEDO/QM:tuxq_switch:${TUXDIR}/lib/libqm.a ${TUXDIR}/lib/libtmib.a
+# ORACLE 7
+Oracle_XA;xaosw;%ORACLE_HOME%\Rdbms73\Xa\Xa73.Lib %ORACLE_HOME%\Pro22\Lib\Msvc\Sqllib18.Lib
+# ORACLE 8 with ProC/C++ 8.0
+#Oracle_XA;xaosw;%ORACLE_HOME%\Rdbms80\Xa\Xa80.Lib %ORACLE_HOME%\Pro80\Lib\Msvc\Sqllib80.Lib
+# INFORMIX-Online 5
+INFORMIX-OnLine:infx_xa_switch:${INFORMIXDIR}/lib/esql/libinfxxa.a -lx
+# INFORMIX-Online 6
+#INFORMIX-OnLine:infx_xa_switch:${INFORMIXDIR}/lib/esql/libinfxxa.a ${INFORMIXDIR}/lib/esql/libsql.a ${INFORMIXDIR}/lib/libasf.a ${INFORMIXDIR}/lib/netlib.a ${INFORMIXDIR}/lib/esql/libgen.a ${INFORMIXDIR}/lib/esql/libos.a -lsocket -lm
+#ident	"@(#) tuxedo/cmdtux/nt/RM	$Revision: 1.4 $"
+TUXEDO/D;tuxd_switch;%TUXDIR%\lib\librms.lib %TUXDIR%\lib\libfs.lib
+TUXEDO/SQL;tuxsql_switch;%TUXDIR%\lib\libsql.lib %TUXDIR%\lib\libusort.lib %TUXDIR%\lib\librms.lib %TUXDIR%\lib\libfs.lib
+NONE;tmnull_switch; 
+TUXEDO/QM;tuxq_switch;%TUXDIR%\lib\libqm.lib
+#ident	"%W%"

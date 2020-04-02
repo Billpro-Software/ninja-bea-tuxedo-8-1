@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Console Notification Plug-in
+Bundle-SymbolicName: com.jrockit.mc.console.ui.notification; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: BEA Systems Inc. (JRPG)
+Bundle-Localization: plugin
+Require-Bundle: com.jrockit.mc.core,
+ com.jrockit.mc.console.ui,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.forms
+Eclipse-AutoStart: true
+Bundle-Activator: com.jrockit.mc.console.ui.notification.NotificationPlugin
+Export-Package: com.jrockit.mc.console.ui.notification,
+ com.jrockit.mc.console.ui.notification.actions,
+ com.jrockit.mc.console.ui.notification.condition,
+ com.jrockit.mc.console.ui.notification.constraints,
+ com.jrockit.mc.console.ui.notification.extension,
+ com.jrockit.mc.console.ui.notification.fields,
+ com.jrockit.mc.console.ui.notification.tab,
+ com.jrockit.mc.console.ui.notification.uicomponents,
+ com.jrockit.mc.console.ui.notification.widget,
+ com.jrockit.mc.console.ui.notification.wizard
+Bundle-ClassPath: notification_plugin.jar,
+ lib/mail.jar

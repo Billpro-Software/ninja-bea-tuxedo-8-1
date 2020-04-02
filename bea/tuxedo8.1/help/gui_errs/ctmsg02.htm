@@ -1,0 +1,1575 @@
+<!-- .if n .pH errman.h.ctmsg02.htm @(#)ctmsg02.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="201"></A>
+<H3>CMDTUX MESSAGE #201</H3>
+<H2> ERROR: CLOPT parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+CLOPT
+indicated by
+the arrow is greater than 256 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that all
+CLOPT
+parameters are less than or equal to
+256 characters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="203"></A>
+<H3>CMDTUX MESSAGE #203</H3>
+<H2> ERROR: Group name must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SRVGRP
+value indicated by the arrow is greater than 30 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that all
+SRVGRP
+values are less than
+or equal to 30 characters in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="205"></A>
+<H3>CMDTUX MESSAGE #205</H3>
+<H2> ERROR: Group name <I>grpname</I> not defined in *GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified server group name
+<I>grpname</I>
+has not been defined in the *GROUPS section
+of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that the server group name is defined
+in the *GROUPS section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="207"></A>
+<H3>CMDTUX MESSAGE #207</H3>
+<H2> ERROR: SRVID parameter must be >= 1 and &lt;= 30000</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+SRVID
+indicated by the arrow must be greater than or equal to 1 and
+less than or equal to 30000.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+SRVID
+that is greater than or equal to 1
+and less than or equal to 30000.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="209"></A>
+<H3>CMDTUX MESSAGE #209</H3>
+<H2> ERROR: RQADDR parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+RQADDR
+indicated by the arrow must be less than
+or equal to 30 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+RQADDR
+that is less than 31 characters in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="211"></A>
+<H3>CMDTUX MESSAGE #211</H3>
+<H2> ERROR: RQPERM parameter must be >= 1 and &lt;= 0777</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+RQPERM
+indicated by the arrow must be between 0001 and 0777, inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+RQPERM
+that is between 0001 and 0777, inclusive.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="213"></A>
+<H3>CMDTUX MESSAGE #213</H3>
+<H2> ERROR: RPPERM parameter must be >=1 and &lt;= 0777</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+RPPERM
+indicated by the arrow must be between 0001 and 0777, inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+RPPERM
+that is between 0001 and 0777, inclusive.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="215"></A>
+<H3>CMDTUX MESSAGE #215</H3>
+<H2> ERROR: MAXGEN parameter must be >= 1 and &lt; 256</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value given for
+MAXGEN
+indicated by the arrow is invalid because it is not between
+1 and 255, inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+MAXGEN
+that is between 1 and 255, inclusive.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="217"></A>
+<H3>CMDTUX MESSAGE #217</H3>
+<H2> ERROR: GRACE parameter must be >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+GRACE
+indicated by the arrow is invalid because it is not greater than or equal to 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+GRACE
+that is greater than or equal to 0.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="219"></A>
+<H3>CMDTUX MESSAGE #219</H3>
+<H2> ERROR: SEQUENCE parameter must be > 0 and &lt; 10000</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value given for
+SEQUENCE
+indicated by the arrow is invalid because it is not between
+1 and 9999, inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for
+SEQUENCE
+that is between 1 and 9999, inclusive.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="220"></A>
+<H3>CMDTUX MESSAGE #220</H3>
+<H2> ERROR: Duplicate *SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There is more than one
+SERVICES section of the configuration file defined.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that
+there is only one
+SERVICES section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="221"></A>
+<H3>CMDTUX MESSAGE #221</H3>
+<H2> ERROR: *GROUPS section must appear before *SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The SERVICES section is defined before the
+*GROUPS section in the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that the
+*GROUPS section is defined before the
+SERVICES section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="222"></A>
+<H3>CMDTUX MESSAGE #222</H3>
+<H2> ERROR: Could not initialize sort of *SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while attempting to sort
+the SERVICES section
+during
+tmloadcf .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to load the configuration again via
+tmloadcf .
+If the error occurs again,
+contact TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="223"></A>
+<H3>CMDTUX MESSAGE #223</H3>
+<H2> ERROR: Could not turnaround sort of *SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while attempting to sort
+the SERVICES section of the configuration file during
+tmloadcf .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to load the configuration again via
+tmloadcf .
+If the error occurs again,
+contact TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="224"></A>
+<H3>CMDTUX MESSAGE #224</H3>
+<H2> ERROR: Couldn't retrieve data from *SERVICES sort</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while attempting to sort
+the SERVICES section of the configuration file during
+tmloadcf .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to load the configuration again via
+tmloadcf .
+If the error occurs again,
+contact TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="226"></A>
+<H3>CMDTUX MESSAGE #226</H3>
+<H2> ERROR: Service name must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SVCNM
+parameter indicated by the arrow is invalid
+because it is more than 15 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a service name
+value that is less than or equal to 15 characters in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="228"></A>
+<H3>CMDTUX MESSAGE #228</H3>
+<H2> ERROR: Service <I>service_name</I> can't have two different ROUTING values</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated service name has two different routing criteria associated
+with it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the configuration file such that if multiple ROUTING entries
+exist for the same service name but have different
+SRVGRP
+parameters, the
+ROUTING
+parameter must be the same for all of these entries.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="229"></A>
+<H3>CMDTUX MESSAGE #229</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while setting up a table to keep track of the
+information kept in the SERVERS section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly for
+the amount of memory on the machine and the amount of memory that
+can be used by a process.  Reduce the memory usage on the machine
+or increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="230"></A>
+<H3>CMDTUX MESSAGE #230</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while setting up a table to keep track of the
+information kept in the SERVICES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please refer to message 229 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="231"></A>
+<H3>CMDTUX MESSAGE #231</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while setting up a table to keep track of the
+information kept in the SERVICES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please refer to message 229 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="232"></A>
+<H3>CMDTUX MESSAGE #232</H3>
+<H2> ERROR:  Need different SRVGRP for the SERVICE <I>svcname</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The same service has been specified more than once, but the
+SRVGRP
+parameter is absent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the
+UBBCONFIG
+file and specify different
+SRVGRP
+entries for each
+SVCNAME
+defined.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="233"></A>
+<H3>CMDTUX MESSAGE #233</H3>
+<H2> ERROR:  SERVICE <I>svcname</I> can't have SRVGRP <I>srvgrp</I> on different entry.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The same service has been specified more than once, using the same
+SRVGRP
+value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the
+UBBCONFIG
+file and specify different
+SRVGRP
+entries for each
+SVCNAME
+defined.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="235"></A>
+<H3>CMDTUX MESSAGE #235</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmloadcf
+command uses the
+malloc ()
+library call to obtain the
+internal memory that it uses for parsing the configuration file.
+One of these
+malloc ()
+calls failed, meaning that no memory was available.
+It is possible that the configuration file was too large
+on a machine with a limited amount of free memory or swap space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try running
+tmloadcf
+again when the machine is less heavily loaded.
+Try reducing the size of the configuration file by making use of the
+DEFAULT
+parameters to set global options for each section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="237"></A>
+<H3>CMDTUX MESSAGE #237</H3>
+<H2> ERROR: Failure during input to sort of *SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmloadcf
+command sorts the entries in the SERVICES section by service name.
+During this processing, an internal error occurred.
+Since sort processing
+uses temporary memory and disk space,
+the most common cause of sort failure
+is if these resources run out.
+The temporary files used for sorting
+are usually placed in
+/usr/tmp
+or
+/tmp .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that there is available temporary disk space in
+/usr/tmp
+and
+/tmp .
+Try running the command again when the system is less heavily loaded.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="239"></A>
+<H3>CMDTUX MESSAGE #239</H3>
+<H2> ERROR: The SRVGRP parameter must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SRVGRP
+parameter in the configuration file must be a string of
+30 or fewer characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Choose a
+SRVGRP
+value that is no more than 30 characters
+and make sure it matches a group name in
+the *GROUPS section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="241"></A>
+<H3>CMDTUX MESSAGE #241</H3>
+<H2> ERROR: Group name <I>group_name</I> must match a name from the *GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SRVGRP
+parameter of the SERVERS section in the configuration file
+does not match an entry in the *GROUPS section.
+This can be due to a direct error here, or a previous error while
+compiling the group name entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+SRVGRP
+entry, or the group name entry that it is supposed to match.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="243"></A>
+<H3>CMDTUX MESSAGE #243</H3>
+<H2> ERROR: BUFTYPE parameter must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter in the configuration file must be a string of
+256 or fewer characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the
+BUFTYPE
+parameter, and make sure it matches a buffer type
+that is in the TUXEDO System Type-Switch.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="245"></A>
+<H3>CMDTUX MESSAGE #245</H3>
+<H2> ERROR: TRANTIME parameter must be >= 0 and &lt; 2147483648</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TRANTIME
+parameter was outside the allowable numeric range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value that is 0 or greater and
+less than 2,147,483,648.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="247"></A>
+<H3>CMDTUX MESSAGE #247</H3>
+<H2> ERROR: *ROUTING <I>routingname</I> must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+<I>routingname</I>
+of the ROUTING section of the configuration file
+must be &lt;= 15 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value that is less than or equal to 15
+characters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="249"></A>
+<H3>CMDTUX MESSAGE #249</H3>
+<H2> ERROR: LOAD parameter must be >= 1 and = 32767</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+LOAD
+parameter in the SERVICES section of the configuration
+file must be within the proper
+range of values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value that is between 1 and 32,767.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="251"></A>
+<H3>CMDTUX MESSAGE #251</H3>
+<H2> ERROR: PRIO parameter must be >= 1 and &lt;= 100</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+PRIO
+parameter in the SERVICES section of the UBBCONFIG
+must be within the proper range
+of values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value that is between 1 and 100, inclusive.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="252"></A>
+<H3>CMDTUX MESSAGE #252</H3>
+<H2> ERROR: Duplicate *ROUTING section present</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A second ROUTING section was encountered in the configuration file.
+Only one is allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Place all routing entries within a single ROUTING section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="253"></A>
+<H3>CMDTUX MESSAGE #253</H3>
+<H2> ERROR: The *GROUPS section must appear before the *ROUTING section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ROUTING section appeared in the configuration file before any *GROUPS
+section appeared.
+This could be due to the sections being out of order or missing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the *GROUPS section appears before the ROUTING section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="255"></A>
+<H3>CMDTUX MESSAGE #255</H3>
+<H2> ERROR: Routing name must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ROUTING
+identifier must be &lt;= 15 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value that is less than or equal to
+15 characters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="256"></A>
+<H3>CMDTUX MESSAGE #256</H3>
+<H2> ERROR: FIELD parameter missing in *ROUTING entry <I>routingname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Each entry in the ROUTING section of
+the configuration file must have a
+FIELD
+parameter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+FIELD
+value for each entry that is the name of the
+routing field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="257"></A>
+<H3>CMDTUX MESSAGE #257</H3>
+<H2> ERROR: RANGES parameter missing in *ROUTING entry <I>routingname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Each entry in the ROUTING section of
+the configuration file must have a
+RANGES
+parameter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+RANGES
+value for each entry that specifies
+the ranges and associated server groups for
+the routing field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="258"></A>
+<H3>CMDTUX MESSAGE #258</H3>
+<H2> ERROR: BUFTYPE parameter missing in *ROUTING entry <I>routingname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Each entry in the ROUTING section of
+the configuration file must have a
+BUFTYPE
+parameter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+BUFTYPE
+value that is a list of types and subtypes of data
+buffers for which this routing entry is valid.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="260"></A>
+<H3>CMDTUX MESSAGE #260</H3>
+<H2> ERROR: FIELD parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Field name in the ROUTING section must be less than 30 characters
+in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a
+FIELD
+name that is less than 30 characters long.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="262"></A>
+<H3>CMDTUX MESSAGE #262</H3>
+<H2> ERROR: RANGES parameter must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+RANGES
+string in the ROUTING section was greater than 256
+characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the
+RANGES
+string and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="264"></A>
+<H3>CMDTUX MESSAGE #264</H3>
+<H2> ERROR: BUFTYPE parameter must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter was greater than 256 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the
+BUFTYPE
+parameter and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="265"></A>
+<H3>CMDTUX MESSAGE #265</H3>
+<H2> ERROR: More than one NETWORK section is present</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+UBBCONFIG
+file can only have one *NETWORK section.
+More than one *NETWORK section was encountered while processing
+the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+UBBCONFIG
+file for the *NETWORK keyword.  It is possible
+that an editing error left an extra copy of that line.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="266"></A>
+<H3>CMDTUX MESSAGE #266</H3>
+<H2> ERROR: The *MACHINES section must precede the *NETWORK section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The *NETWORK section of the
+UBBCONFIG
+file was encountered before
+any *MACHINES section.  The information in the *MACHINES section is needed
+to process the *NETWORK section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if a *MACHINES section is in the
+UBBCONFIG
+file.  If it is,
+place it before the *NETWORK section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="269"></A>
+<H3>CMDTUX MESSAGE #269</H3>
+<H2> ERROR: NETWORK entry for LMID <I>lmid</I> has been defined</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one entry for the
+LMID
+<I>lmid</I>
+appears in the *NETWORK section of the
+UBBCONFIG
+file.
+The
+LMID
+parameter is the identifier at the beginning of the line,
+and does not appear with the keyword
+LMID .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Only define one *NETWORK entry for each
+LMID .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="272"></A>
+<H3>CMDTUX MESSAGE #272</H3>
+<H2> ERROR: *NETWORK LMID <I>lmid</I> does not appear in *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+LMID
+identifier
+<I>lmid</I>
+in the *NETWORK section of the
+UBBCONFIG
+file
+did not appear in the *MACHINES section.
+The
+LMID
+parameter is the identifier at the beginning of the line,
+and does not appear with the keyword
+LMID .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+LMID
+is spelled correctly, and has a matching entry
+in the *MACHINES section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="274"></A>
+<H3>CMDTUX MESSAGE #274</H3>
+<H2> ERROR: NADDR parameter missing in *NETWORK entry <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The entry for
+<I>lmid</I>
+in the *NETWORK section has no
+NADDR
+parameter.  This parameter is required.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add a
+NADDR
+parameter to the *NETWORK entry.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="276"></A>
+<H3>CMDTUX MESSAGE #276</H3>
+<H2> ERROR: NADDR parameter must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NADDR
+parameter in the *NETWORK section of the
+UBBCONFIG
+file must be &lt;=
+<I>len</I>
+characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the
+NADDR
+parameter and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="278"></A>
+<H3>CMDTUX MESSAGE #278</H3>
+<H2> ERROR: There is an invalid hexadecimal digit in the NADDR parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NADDR
+parameter in the *NETWORK section of the
+UBBCONFIG
+file was specified as a hexadecimal number (starting with 0x or \x),
+but a non-hexadecimal character was encountered in the string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Enter hexadecimal characters in the
+NADDR
+parameter and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="280"></A>
+<H3>CMDTUX MESSAGE #280</H3>
+<H2> ERROR: NADDR parameter must contain an even number of hex digits.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NADDR
+parameter in the *NETWORK section of the
+UBBCONFIG
+file was specified as a hexadecimal number (starting with 0x or \x).
+This requires that there be an even number of characters following
+the prefix.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+NADDR
+to have an even number of hexadecimal characters and re-load
+the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="282"></A>
+<H3>CMDTUX MESSAGE #282</H3>
+<H2> ERROR: BRIDGE parameter must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+parameter in the *NETWORK section of the
+UBBCONFIG
+file must be an absolute pathname of the network device.
+This means it must begin with a '/' character.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Replace the current
+BRIDGE
+parameter with the full pathname of the device,
+for example, "/dev/tcp".
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="284"></A>
+<H3>CMDTUX MESSAGE #284</H3>
+<H2> ERROR: NLSADDR parameter must be &lt;= <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NLSADDR
+parameter in the *NETWORK section of the
+UBBCONFIG
+file must be &lt;= <I>len</I> characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+NLSADDR
+parameter to be 78 characters or less and reload
+the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="286"></A>
+<H3>CMDTUX MESSAGE #286</H3>
+<H2> ERROR: There is an invalid hexadecimal digit in the NLSADDR parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NLSADDR
+parameter in the *NETWORK section of the
+UBBCONFIG
+file was specified as a hexadecimal number (starting with 0x or \x),
+but a non-hexadecimal character was encountered in the string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Enter hexadecimal characters in the
+NLSADDR
+parameter and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="288"></A>
+<H3>CMDTUX MESSAGE #288</H3>
+<H2> ERROR: NLSADDR parameter must contain an even number of hex digits</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NLSADDR
+parameter in the *NETWORK section of the
+UBBCONFIG
+file was specified as a hexadecimal number (starting with 0x or \x).
+This requires that there be an even number of characters following
+the prefix.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+NLSADDR
+to have an even number of hexadecimal characters and re-load
+the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="290"></A>
+<H3>CMDTUX MESSAGE #290</H3>
+<H2> ERROR: NETID parameter must be >=0 and &lt;=256</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NETID
+is an undocumented parameter in the
+UBBCONFIG
+file, used for internal testing purposes.
+It should not be used by the end user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the
+NETID
+parameter or change its value to be in the range 1-255.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="291"></A>
+<H3>CMDTUX MESSAGE #291</H3>
+<H2> ERROR: Failure opening TUXCONFIG section <I>sectionname</I> (vtoc_error=<I>vtoc_errno</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+file is a binary file in the
+TUXEDO
+VTOC
+format.
+Each section of the
+UBBCONFIG
+file (*RESOURCES, *MACHINES, etc.)
+is stored as a separate table in the
+TUXCONFIG
+file.
+While trying to update the
+TUXCONFIG
+file,
+tmloadcf
+got an error trying to open the specified
+<I>sectionname</I>.
+The section of the
+TUXCONFIG ,
+and a low level error code, are printed in this message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+TUXCONFIG
+VTOC
+is only being used to hold the
+TUXCONFIG
+tables
+(and not the
+TLOG
+or a
+TUXEDO/D
+database), then the first thing to try
+is to recreate a new
+TUXCONFIG.
+If the
+TUXCONFIG
+is a UNIX file, simply remove it.
+If it is stored on a raw disk, erase it by doing:
+	echo "" >$TUXCONFIG
+If the error persists, check for disk-type error conditions
+that might cause problems writing to files.
+Finally, contact TUXEDO System Technical Support, making sure to have
+the
+<I>vtoc_errno</I>
+that was printed in the error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="292"></A>
+<H3>CMDTUX MESSAGE #292</H3>
+<H2> ERROR: Error writing *RESOURCES section of the TUXCONFIG file (vtoc_errno= <I>vtoc_errno</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+file is a binary file in the
+TUXEDO
+VTOC
+format.
+Each section of the
+UBBCONFIG
+file (*RESOURCES, *MACHINES, etc.)
+is stored as a separate table in the
+TUXCONFIG
+file.
+An error occurred
+while trying to write to the *RESOURCES section of the
+TUXCONFIG .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+TUXCONFIG
+file is a UNIX
+file, the file system that it is in
+should be checked to see if it has enough free space.
+The file should be checked to see if its permissions allow writing.
+If the
+TUXCONFIG
+VTOC
+is only being used to hold the
+TUXCONFIG
+tables
+(and not the
+TLOG
+or a
+TUXEDO/D
+database), then the first thing to try
+is to recreate a new
+TUXCONFIG.
+If the
+TUXCONFIG
+is a UNIX file, simply remove it.
+If it is stored on a raw disk, erase it by doing:
+	echo "" >$TUXCONFIG
+If the error persists, check for disk-type error conditions
+that might cause problems writing to files.
+Finally, contact TUXEDO System Technical Support, making sure to have
+the
+<I>vtoc_errno</I>
+that was printed in the error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="293"></A>
+<H3>CMDTUX MESSAGE #293</H3>
+<H2> ERROR: Failed to write the TUXCONFIG file (vtoc_errno=<I>vtoc_errno</I>).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+file is a binary file in the
+TUXEDO
+VTOC
+format.
+Each section of the
+UBBCONFIG
+file (*RESOURCES, *MACHINES, etc.)
+is stored as a separate table in the
+TUXCONFIG
+file.
+An error occurred
+while writing to a section of the
+TUXCONFIG .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+TUXCONFIG
+file is a UNIX
+file, the file system that it is in
+should be checked to see if it has enough free space.
+The file should be checked to see if its permissions allow writing.
+If the
+TUXCONFIG
+VTOC
+is being used to hold only the
+TUXCONFIG
+tables
+(and not the
+TLOG
+or a
+TUXEDO/D
+database), then the first thing to try
+is to recreate a new
+TUXCONFIG.
+If the
+TUXCONFIG
+file is a UNIX
+file, simply remove it.
+If it is stored on a raw disk, erase it by doing:
+<PRE><KBD>
+	echo "" >$TUXCONFIG
+</KBD></PRE>
+If the error persists, check for disk-type error conditions
+that might cause problems writing to files.
+Finally, contact TUXEDO System Technical Support, making sure to have
+the
+<I>vtoc_errno</I>
+that was printed in the error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,1301 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:48:01">
+<title>Creating and Configuring Workstation Listeners and Handlers</title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>Creating and Configuring Workstation Listeners and Handlers</b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="acappq.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="acacls.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="522992">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Creating and Configuring Workstation Listeners and Handlers</font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo system includes the capability to require that clients run on a workstation for purposes of security, performance, and convenience. A network administrator can define the environment required to control the Workstation clients. The BEA Tuxedo Administration Console workstation objects allow you to specify the information required to control access to an application from multiple workstations.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">These workstation objects are grouped on the BEA Tuxedo Administration Console tree view in the following categories:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#878229">Workstation Listeners (WSLs)</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#875183">Creating Workstation Listeners</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#907197">Configuring Workstation Listeners (T_WSL Class)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#880602">Workstation Handlers (WSHs)</a></font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876517">Configuring Workstation Handlers (T_WSH Class)</a></font><p> </p>
+
+<p></ul></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You can define new workstation listeners and you can obtain information about active workstation handlers.</p>
+<a name="878229"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Workstation Listeners (WSLs)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Workstation Listener (WSL) allows you to manage workstation groups, configuration, and run-time attributes of WSL server processes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="N_WSL"></a> </p>
+<a name="875183"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="875183"></a>Creating Workstation Listeners
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_NewObjectForm"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To create new Workstation Listeners (WSLs):</p><ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Workstation Listeners<strong> </strong>in the tree view.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Select Quick Menu--&gt;New to display the Create New Object window.
+</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Enter values for the following fields:
+</font><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872957">Group Name (TA_SRVGRP)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872978">Server ID (TA_SRVID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872996">Network Address (TA_NADDR)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873019">Bridge Device (TA_DEVICE)</a></font></ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Click Create to close the window and create the new WS Listener group.
+</font></ol><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_WSL"></a> </p>
+<a name="907197"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="907197"></a>Configuring Workstation Listeners (T_WSL Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To configure WSLs, select WS Listeners in the Tree view. Enter values for the fields in the tab pages. The Configuration Tool pane contains the following tab pages for configuring Workstation Listener attributes: General, Options, System Parameters, and Statistics.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_WSL"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_GeneralTabPage"></a></p>
+<a name="872942"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872957">Group Name (TA_SRVGRP)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872966">Object State (TA_STATE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872978">Server ID (TA_SRVID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#914977">WorkStation Handler Name (TA_WSHNAME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#872996">Network Address (TA_NADDR)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873019">Bridge Device (TA_DEVICE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873028">Group Number (TA_GRPNO)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#904044">Process ID (TA_PID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#899785">Logical Machine Name, Backup (TA_LMID)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13026"></a> <a name="12207"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"></p>
+<a name="872957"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Name (TA_SRVGRP)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="885318"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Logical name of the server group.</p><!--<div align="right">-->
+<a name="885320"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 30 characters. The string may not include asterisks (*), commas, or colons.</p><!--<div align="right">-->
+<a name="885322"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">WSGROUP1</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12195"></a> </p>
+<a name="872966"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="920193"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of your workstation listener within the application. A workstation listener may be in any state defined for the Default Servers class:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">ACTIVE</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">INACTIVE</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">MIGRATING</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">CLEANING</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">RESTARTING</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">SUSPENDED</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">PARTITIONED</font></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">DEAD</font></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13023"></a> <a name="12194"></a> </p>
+<a name="872978"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Server ID (TA_SRVID) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="872979"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A server identification number that is unique within the server group.</p><!--<div align="right">-->
+<a name="872981"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 1 to 30,001 inclusive.</p><!--<div align="right">-->
+<a name="872983"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">500</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12205"></a></p>
+<a name="914977"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">WorkStation Handler Name (TA_WSHNAME) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="872988"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The name of the executable providing workstation handler services for this workstation listener. The default value for this is <font face="Courier">WSH</font>, which corresponds to the system provided workstation handler. Workstation handlers may be customized using the command <font face="Courier">buildwsh(1)</font>.</p><!--<div align="right">-->
+<a name="872990"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 1 to 78 characters.</p><!--<div align="right">-->
+<a name="872992"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">WSH</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13025"></a> <a name="12200"></a> </p>
+<a name="872996"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Network Address (TA_NADDR) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="872997"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The complete network address to be used by the WSL process as its listening address. The listening address for a WSL is the means by which it is contacted by Workstation client processes participating in the application.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If the string has the form <font face="Courier">0xhex-digits</font> or <font face="Courier">\\xhex-digits</font>, it must contain an even number of valid hex digits. These forms are translated internally into a character array containing the hexadecimal representations of the string specified.</p><!--<div align="right">-->
+<a name="873000"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">TCP/IP addresses may be specified in either of the following formats.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Format 1: //hostname:port_number</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">In Format 1, the bridge finds an address for hostname using the local name resolution facilities (usually DNS). hostname must unambiguously resolve to the address of the machine on which the bridge resides.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Format 2: //#.#.#.#:port_number</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">In Format 2, the #.#.#.# is in dotted decimal format. In dotted decimal format, each # should be a number from 0 to 255. This dotted decimal number represents the IP address of the local machine.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">In both of the above formats, port_number is the TCP port number at which the bridge will listen for incoming requests. The value of port_number can be either a number (between 0 and 65535) or a name. If port_number is a name, then it must be found in the network services database on your local machine.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The address can also be specified in hexadecimal format when preceded by the characters <font face="Courier">0x</font>. Each character after the initial <font face="Courier">0x</font> is a number between 0 and 9 or a letter between A and F (case insensitive). The hexadecimal format is useful for arbitrary binary network addresses such as IPX/SPX or TCP/IP.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The address can also be specified as an arbitrary string (with a maximum of 78 characters). For example, string addresses are used in STARLAN networks.</p><!--<div align="right">-->
+<a name="873009"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Suppose the local machine on which a TDomain is being run is using TCP/IP addressing and is named <font face="Courier">backup.company.com</font>, with address <font face="Courier">155.2.193.18</font>. Further suppose that the port number at which the TDomain should accept requests is <font face="Courier">2334</font>. Assume that port number <font face="Courier">2334</font> has been added to the network services database under the name <font face="Courier">bankapp-wsl</font>. You can specify the address in any of the following five formats:</p><p><blockquote><pre><font face="Courier" color="#000000"><font face="Courier">//155.2.193.18:bankapp-wsl</font></font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000"><font face="Courier">//155.2.193.18.2334</font></font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000"><font face="Courier">//backup.company.com:bankapp-wsl</font></font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000"><font face="Courier">//backup.company.com:2334</font></font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000"><font face="Courier">0x0002091E9B02C112</font></font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The last line shows an address in hexadecimal format where <font face="Courier">0002</font> is the first part of a TCP/IP address and <font face="Courier">091E</font> is the port number 2334 translated into a hexadecimal number. The rest of the line contains hexadecimal numbers that are translations of the elements of the IP address 155.2.193.12: "155" becomes "9B", "2" becomes "02", and so on.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="13024"></a> <a name="12198"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_GeneralTabPage_TA_DEVICE"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_NewObjectForm_TA_DEVICE"></a></p>
+<a name="873019"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Bridge Device (TA_DEVICE) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="941515"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The full pathname for the device to be used by the WSL process to access the network. This is a required value for access to a network via a TLI-based BEA Tuxedo system binary. This attribute is not needed for sockets-based BEA Tuxedo system binaries.</p><!--<div align="right">-->
+<a name="873022"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string from 0 to 78 characters in length.</p><!--<div align="right">-->
+<a name="873024"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">/dev/tcp</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12182"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_GeneralTabPage_TA_GRPNO"></a></p>
+<a name="873028"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Number (TA_GRPNO)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="896673"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the group number associated with this group of servers.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12184"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_GeneralTabPage_TA_PID"></a></p>
+<a name="904044"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Process ID (TA_PID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="904045"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the native operating system process identifier for the WSL server. Note that this may not be a unique attribute since servers may be located on different machines allowing for duplication of process identifiers. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12206"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_GeneralTabPage_TA_LMID"></a></p>
+<a name="899785"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Logical Machine Name, Backup (TA_LMID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="920202"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the logical machine identifier for the machine on which the server is currently running.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="wsl_opt"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage"></a></p>
+<a name="873039"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Options Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Options tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#921496">Executable Options (TA_CLOPT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873061">Environment File (TA_ENVFILE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#921513">Restart Command (TA_RCMD)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873081">Automatic Restart (TA_RESTART)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873090">Grace Period (TA_GRACE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873101">Activation Sequence Number (TA_SEQUENCE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12196"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage_TA_CLOPT"></a></p>
+<a name="921496"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Executable Options (TA_CLOPT) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="921497"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Command-line options to be passed to the WSL server when it is activated. </p><!--<div align="right">-->
+<a name="873053"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 0 to 128 characters.</p><!--<div align="right">-->
+<a name="873055"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">-A</font></p><!--<div align="right">-->
+<a name="873057"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Run-time modifications to this attribute will not affect a running WSL server.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12199"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage_TA_ENVFILE"></a></p>
+<a name="873061"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Environment File (TA_ENVFILE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873062"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The environment file specific to the WSL server.</p><!--<div align="right">-->
+<a name="873064"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of 0 to 78 characters.</p><!--<div align="right">-->
+<a name="873066"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No entry</p><!--<div align="right">-->
+<a name="873068"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Run-time modifications to this attribute will not affect a running WSL server.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12201"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage_TA_RCMD"></a></p>
+<a name="921513"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Restart Command (TA_RCMD) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="921514"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">An application-specified command to be executed in parallel with the system restart of an application server. This command must be an executable file in the native operating system.</p><!--<div align="right">-->
+<a name="873075"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A string of string 0 to 78 characters.</p><!--<div align="right">-->
+<a name="873077"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No entry</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12202"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage_TA_RESTART"></a></p>
+<a name="873081"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Automatic Restart (TA_RESTART)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873082"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Restartable (<font face="Courier">Y</font>) or non-restartable (<font face="Courier">N</font>) WSL server. If server migration is specified for this server group, then this attribute must be set to <font face="Courier">Y</font>.</p><!--<div align="right">-->
+<a name="873084"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">Y</font> or <font face="Courier">N</font></p><!--<div align="right">-->
+<a name="873086"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">Y</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12181"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage_TA_GRACE"></a></p>
+<a name="873090"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Grace Period (TA_GRACE) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873091"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The period of time, in seconds, over which the limit specified in the <a href="acwsl.htm#873215">Max Generations (TA_MAXGEN)</a> for the Workstation Listener class applies.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The value in this field is meaningful only for restartable WSL servers, i.e., if you have entered <font face="Courier">Y</font> in the <a href="acwsl.htm#873081">Automatic Restart (TA_RESTART)</a> for the Workstation Listeners class. When a restarting server would exceed the limit specified in the Max Generations field but the period specified in the Grace Period field has expired, the system resets the current generation to 1 and resets the initial boot time to the current time. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A value of 0 for this attribute indicates that the WSL server should always be restarted.</p><!--<div align="right">-->
+<a name="873095"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number greater than or equal to zero.</p><!--<div align="right">-->
+<a name="873097"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12185"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_OptionsTabPage_TA_SEQUENCE"></a></p>
+<a name="873101"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Activation Sequence Number (TA_SEQUENCE) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873102"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Specifies when this server should be booted (<font face="Courier">tmboot(1)</font>) or shutdown (<font face="Courier">tmshutdown(1)</font>) relative to other servers. If two servers are given the same sequence number, it is possible for <font face="Courier">tmboot(1)</font> to boot them in parallel and for <font face="Courier">tmshutdown(1) </font>to shut them down in parallel. If you add a workstation listener without specifying a value in the Activation Sequence Number field (or if you enter an invalid value), the workstation listener that is generated will be 10,000 or more -- higher than any other automatically-selected default value. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Servers are booted by <font face="Courier">tmboot(1)</font> in increasing order of sequence number and shut down by<font face="Courier"> tmshutdown(1)</font> in decreasing order. Run-time modifications to this attribute affect only<font face="Courier"> tmboot(1)</font> and<font face="Courier"> tmshutdown(1)</font> and will affect the order in which running servers may be shut down by a subsequent invocation of <font face="Courier">tmshutdown(1)</font>.</p><!--<div align="right">-->
+<a name="873105"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 1 to 10,000 inclusive.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="wsl_sysp"></a></p>
+<a name="873107"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">System Parameters Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The System Parameters tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873121">Compression Limit (TA_CMPLIMIT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#916935">Suspend Status (TA_SUSPENDED)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873141">Current Number of Handlers (TA_CURHANDLERS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873145">Highest Number of Handlers (TA_HWHANDLERS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873154">Version Number (TA_WSPROTO)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#921566">Minimum Encryption Bits (TA_MINENCRYPTBITS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873167">Maximum Encryption Bits (TA_MAXENCRYPTBITS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873184">Minimum Port Number (TA_MINWSHPORT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873195">Maximum Port Number (TA_MAXWSHPORT)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12197"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_CMPLIMIT"></a></p>
+<a name="873121"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Compression Limit (TA_CMPLIMIT) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873122"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Message size threshold at which compression will occur for traffic to and from Workstation clients. threshold may be either non-negative numeric values or the string <font face="Courier">MAXLONG</font>, which is dynamically translated to the maximum long setting for the machine. </p><!--<div align="right">-->
+<a name="873124"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">threshold </p><!--<div align="right">-->
+<a name="873126"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">MAXLONG</font></p><!--<div align="right">-->
+<a name="873128"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Notes</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This attribute value is not used for Workstation clients running BEA Tuxedo Workstation release 6.1 or an earlier release.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12203"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_SUSPENDED"></a></p>
+<a name="916935"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Suspend Status (TA_SUSPENDED) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873133"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the status of your workstation listener in regard to suspension issues. </p><!--<div align="right">-->
+<a name="873135"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">One of the following values is displayed in this field:</p><dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><dd><font face="Courier">NEW</font></font></p><dl><dd><p><dd>Indicates that new incoming clients may not connect through this WSL object.</font></p></dd></dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><dd><font face="Courier">ALL</font></font></p><dl><dd><p><dd>Indicates that Workstation clients already connected to the application through this workstation listener have been SUSPENDED and new incoming connections have been disallowed.</font></p></dd></dl><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><dd><font face="Courier">NONE</font></font></p><dl><dd><p><dd>Indicates that no suspension characteristics are in effect.</font></p></dd></dl></dl><!--<div align="right">-->
+<a name="873137"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">ALL</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12186"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_CURHANDLERS"></a></p>
+<a name="873141"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Handlers (TA_CURHANDLERS)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="897510"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of currently active handlers associated with this workstation listener (WSL).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12186"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_HWHANDLERS"></a></p>
+<a name="873145"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Highest Number of Handlers (TA_HWHANDLERS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873146"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of handlers that should be available in conjunction with this WSL at any given time. Handlers are started as necessary to meet the demand of Workstation clients attempting to access the system. This attribute must be greater than or equal to the setting for the minimum number of handlers.</p><!--<div align="right">-->
+<a name="873148"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of zero to 32K inclusive.</p><!--<div align="right">-->
+<a name="873150"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12193"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_WSPROTO"></a></p>
+<a name="873154"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Version Number (TA_WSPROTO)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="897517"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the BEA Tuxedo Workstation protocol version number for this Workstation group. Note that Workstation clients connecting to this group may themselves have a different protocol version number associated with them.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12179"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_MINENCRYPTBITS"></a></p>
+<a name="921566"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Minimum Encryption Bits (TA_MINENCRYPTBITS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="921567"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">When connecting to BEA Tuxedo, require at least this minimum level of encryption. If this level of encryption cannot be met, link establishment will fail.</p><!--<div align="right">-->
+<a name="873161"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font> or <font face="Courier">40</font> or <font face="Courier">128</font> where <font face="Courier">0</font> means no encryption and <font face="Courier">40</font> and <font face="Courier">128</font> specify encryption key lengths (in bits).</p><!--<div align="right">-->
+<a name="873163"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12180"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_MAXENCRYPTBITS"></a></p>
+<a name="873167"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Maximum Encryption Bits (TA_MAXENCRYPTBITS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873168"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">When connecting to BEA Tuxedo, negotiate encryption up to this level.</p><!--<div align="right">-->
+<a name="873170"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font> or <font face="Courier">40</font> or <font face="Courier">128</font> where <font face="Courier">0</font> means no encryption and <font face="Courier">40</font> and <font face="Courier">128</font> specify encryption key lengths (in bits).</p><!--<div align="right">-->
+<a name="873172"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">128</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12208"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_MINWSHPORT"></a></p>
+<a name="873184"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Minimum Port Number (TA_MINWSHPORT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873185"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The lower end of the range of available port numbers that may be allocated to WSH processes by this listener.</p><!--<div align="right">-->
+<a name="873187"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 0 to 65,535 inclusive.</p><!--<div align="right">-->
+<a name="873189"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">2048</font></p><!--<div align="right">-->
+<a name="873191"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">4096</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12209"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_SysParamsTabPage_TA_MAXWSHPORT"></a></p>
+<a name="873195"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Maximum Port Number (TA_MAXWSHPORT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873196"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The upper end of the range of available port numbers that may be allocated to WSH processes by this listener.</p><!--<div align="right">-->
+<a name="873198"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 0 to 65,535 inclusive.</p><!--<div align="right">-->
+<a name="873200"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">65,535</font></p><!--<div align="right">-->
+<a name="873202"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Example</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">60,000</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="wsl_stats"></a> </p>
+<a name="873204"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Statistics Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Statistics tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873215">Max Generations (TA_MAXGEN)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873224">Min Number of Handlers (TA_MINHANDLERS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873233">Max Number of Handlers (TA_MAXHANDLERS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873244">Max Number of Clients (TA_MULTIPLEX)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873253">Max Idle Time (TA_MAXIDLE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#873262">Max Initialization Time (TA_MAXINIT)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12183"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_StatsTabPage_TA_MAXGEN"></a></p>
+<a name="873215"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Generations (TA_MAXGEN) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873216"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The number of generations allowed for a restartable WSL server over the specified grace period. The initial activation of the WSL server counts as one generation; each restart also counts as one. Processing after the maximum generations is exceeded is discussed in the description of the <a href="acwsl.htm#873090">Grace Period (TA_GRACE)</a> on the Options tab page for Workstation Listeners.</p><!--<div align="right">-->
+<a name="873218"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of one to 1 to 255 inclusive.</p><!--<div align="right">-->
+<a name="873220"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">1</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12191"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_StatsTabPage_TA_MINHANDLERS"></a></p>
+<a name="873224"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Min Number of Handlers (TA_MINHANDLERS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873225"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The minimum number of handlers that should be available in conjunction with this Workstation Listener (WSL) at any given time. The WSL will start this many Workstation Handlers (WSH) immediately upon being activated and will not deplete the supply of WSHs below this number until the administrator issues a shutdown to the WSL. Modifications to this attribute for a running WSL may cause additional handlers to be activated.</p><!--<div align="right">-->
+<a name="873227"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 0 to 255 inclusive.</p><!--<div align="right">-->
+<a name="873229"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12188"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_StatsTabPage_TA_MAXHANDLERS"></a></p>
+<a name="873233"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Number of Handlers (TA_MAXHANDLERS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873234"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum number of handlers that should be available in conjunction with this Workstation Listener at any given time. Handlers are started as necessary to meet the demand of Workstation clients attempting to access the system. This attribute must be greater than or equal to the setting for the minimum number of handlers.</p><!--<div align="right">-->
+<a name="873236"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 0 to 32,766 inclusive.</p><!--<div align="right">-->
+<a name="873238"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">0</font></p><!--<div align="right">-->
+<a name="873240"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Tips</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A value of <font face="Courier">0</font> in this field means that the effective value is determined at activation time from the current value in the Max Handlers field and the Max Workstation Clients field for the Machines class (T_MACHINE). Note that a GET operation with the MIB_LOCAL flag set will get the effective value for objects with an activation time default setting.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12192"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_StatsTabPage_TA_MULTIPLEX"></a></p>
+<a name="873244"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Number of Clients (TA_MULTIPLEX) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873245"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Maximum number of clients to be supported by any one handler process concurrently.</p><!--<div align="right">-->
+<a name="873247"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 1 to 32,767 inclusive.</p><!--<div align="right">-->
+<a name="873249"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">10</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12189"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_StatsTabPage_TA_MAXIDLE"></a></p>
+<a name="873253"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Idle Time (TA_MAXIDLE) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873254"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The maximum amount of time (in minutes) that a Workstation client is permitted to be idle before it is abortively disconnected from the application by the handler. A value of 35,204,649 allows clients to be idle as long as they wish without being timed out. A value of <font face="Courier">0</font> means that clients may be terminated after any period of inactivity greater than 1 second.</p><!--<div align="right">-->
+<a name="873256"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 0 to 35,204,649 inclusive.</p><!--<div align="right">-->
+<a name="873258"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">35,204,649</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12190"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSL_StatsTabPage_TA_MAXINIT"></a></p>
+<a name="873262"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Initialization Time (TA_MAXINIT) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="873263"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The minimum amount of time (in seconds) that should be allowed for a Workstation client to complete initialization processing through the Workstation Handler before being timed out by the Workstation Listener.</p><!--<div align="right">-->
+<a name="873265"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Valid Values</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A number in the range of 1 to 32,766 inclusive.</p><!--<div align="right">-->
+<a name="873267"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Default</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">60</font></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_WSH"></a></p>
+<a name="880602"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Workstation Handlers (WSHs)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Workstation Handler object allows you to specify the workstation statistics specific to a particular WSH client process.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="T_WSH"></a> </p>
+<a name="876517"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif"><a name="876517"></a>Configuring Workstation Handlers (T_WSH Class)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To configure Workstation Handlers, select WS Handlers in the Tree view. Enter values for the fields in the tab pages. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Configuration Tool pane contains the following tab pages for specifying the attributes of WS Handlers: General, Handler Info, and Statistics.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="C_WSH"></a> </p>
+<a name="876519"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">General Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The General tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876532">Client ID (TA_CLIENTID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876536">WorkStation Client ID (TA_WSHCLIENTID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876540">Logical Machine Name, Backup (TA_LMID)</a> </font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876544">Process ID (TA_PID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876548">Group Name (TA_SRVGRP)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#900122">Server ID (TA_SRVID)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876556">Group Number (TA_GRPNO)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876560">Object State (TA_STATE)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12227"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_CLIENTID"></a></p>
+<a name="876532"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Client ID (TA_CLIENTID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="920313"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the client identifier for this workstation handler. The data in this field should not be interpreted directly by the user except for equality comparison.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12230"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_WSHCLIENTID"></a></p>
+<a name="876536"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">WorkStation Client ID (TA_WSHCLIENTID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876537"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the client identifier for this workstation handler. The data in this field should not be interpreted directly by the end user except for an equality comparison. This field can be used to link the workstation handler to its associated Workstation client objects in the Clients class. The value in this field is always equal to the value in the <a href="acwsl.htm#876532">Client ID (TA_CLIENTID)</a> for this class.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12231"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_LMID"></a></p>
+<a name="876540"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Logical Machine Name, Backup (TA_LMID) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876541"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the logical machine identifier for the machine on which the workstation handler is currently running.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12214"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_PID"></a></p>
+<a name="876544"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Process ID (TA_PID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876545"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the native operating system process identifier for the Workstation client. Note that this may not be a unique attribute since clients may be located on different machines, allowing for the duplication of process identifiers.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12232"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_SRVGRP"></a></p>
+<a name="876548"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Name (TA_SRVGRP)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="918690"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the logical name of the server group for the associated workstation listener.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12225"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_SRVID"></a></p>
+<a name="900122"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Server ID (TA_SRVID)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="900123"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the server identification number for the associated workstation listener. This number is unique within the server group.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12212"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_GRPNO"></a></p>
+<a name="876556"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Group Number (TA_GRPNO)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876557"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the group number associated with this group of servers.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12226"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_GeneralTabPage_TA_STATE"></a></p>
+<a name="876560"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Object State (TA_STATE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="900141"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of the workstation handler client within the application. Any state defined for the Clients class in <font face="Courier">TM_MIB</font>(5) may be returned or set as indicated on that reference page.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">State changes to the <font face="Courier">SUSPENDED</font> state affect all clients associated with this workstation handler as does the resetting of a <font face="Courier">SUSPENDED</font> workstation handler to <font face="Courier">ACTIVE</font>. Additionally, <font face="Courier">SUSPENDED</font> workstation handler clients will not be assigned any additional incoming clients by the workstation listener.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Note that the state of a workstation handler client may not be set to <font face="Courier">DEAD</font> when the Clients class is being accessed. However, the state transition to <font face="Courier">DEAD</font> is allowed via the Workstation Handlers class. Such a transition will result in all connections that are being handled by the targeted workstation handler being dropped abortively.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="wsh_haninfo"></a> </p>
+<a name="876564"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Handler Info Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HanderInfoTabPage"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Handler Info tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876577">Max Number of Clients (TA_MULTIPLEX)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876581">Highwater Number of Clients (TA_HWCLIENTS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#880888">Current Number of Clients (TA_CURCLIENTS)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876589">Seconds Remaining Before Timeout (TA_TIMELEFT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876593">Current Status of WSH (TA_ACTIVE)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876597">Total Active Time (TA_TOTACTTIME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876601">Total IDLE Time (TA_TOTIDLTIME)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876605">Network Address (TA_NADDR)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12221"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HandlerInfoTabPage_TA_MULTIPLEX"></a></p>
+<a name="876577"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Max Number of Clients (TA_MULTIPLEX)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="920819"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the maximum number of clients that may access the application via this workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12213"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HandlerInfoTabPage_TA_HWCLIENTS"></a></p>
+<a name="876581"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Highwater Number of Clients (TA_HWCLIENTS)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876582"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The number displayed in this field is the high-water mark of clients accessing the application via this workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12210"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HandlerInfoTabPage_TA_CURCLIENTS"></a></p>
+<a name="880888"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Number of Clients (TA_CURCLIENTS) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="880889"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of clients currently accessing the application via this workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12219"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HandlerInfoTabPage_TA_TIMELEFT"></a></p>
+<a name="876589"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Seconds Remaining Before Timeout (TA_TIMELEFT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876590"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If there is a value other than zero displayed in this field, it means that the new Workstation client that has just been assigned to this workstation handler has the indicated number of seconds in which to complete the initialization process with the workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12229"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HandlerInfoTabPage_TA_ACTIVE"></a></p>
+<a name="876593"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Status of WSH (TA_ACTIVE)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876594"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the state of the workstation handler. A value of <font face="Courier">Y</font> indicates that the workstation handler is currently performing work on behalf of one of its associated Workstation clients. A value of <font face="Courier">N</font> indicates that the workstation handler is currently waiting for work to perform on behalf of one of its associated Workstation clients.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12223"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_HandlerInfoTabPage_TA_TOTACTTIME"></a></p>
+<a name="876597"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Total Active Time (TA_TOTACTTIME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876598"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the time, in seconds, that the workstation handler has been active since it started processing.</p>
+<a name="876601"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Total IDLE Time (TA_TOTIDLTIME)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="921123"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the time, in seconds, that the workstation handler has been idle since it started processing.</p>
+<a name="876605"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Network Address (TA_NADDR)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876606"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the network address of a Workstation client. Network addresses with unprintable characters are converted to the "0x . . ." network address format (as described for the Network Address field on the Networking tab page for the Machines class). If the address is a TCP/IP address, then it is returned in the dotted_decimal:port_number format:</p><p><blockquote><pre><font face="Courier" color="#000000">//#.#.#.#.port_number</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Each # (pound sign) represents a decimal number in the range of 0 to 255. The value of port_number is a decimal number in the range 0 to 65535. No value will be displayed (that is, the field will be blank) for a non-Workstation client.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="wsh_stats"></a> </p>
+<a name="876609"> 
+<h3>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Statistics Tab</font>
+</h3>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage"></a></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Statistics tab page contains the following fields:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876621">Current Workload (TA_CURWORK)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876625">Flow Control Events (TA_FLOWCNT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876629">Queue Blocking Events (TA_NUMBLOCKQ)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876633">Bytes Received (TA_RCVDBYT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876637">System Messages Received (TA_RCVDNUM)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#876641">Bytes Sent (TA_SENTBYT)</a></font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><a href="acwsl.htm#921619">System Messages Sent (TA_SENTNUM)</a></font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This section describes these fields.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12220"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage_TA_CURWORK"></a></p>
+<a name="876621"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Current Workload (TA_CURWORK)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="921237"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the amount of work processed by this workstation handler since the last workstation handler assignment by the workstation listener. The workstation listener uses this value to load-balance new incoming connections among a set of workstation handler processes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12211"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage_TA_FLOWCNT"></a></p>
+<a name="876625"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Flow Control Events (TA_FLOWCNT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876626"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of times flow control has been encountered by this workstation handler. This attribute should be considered only in relation to recent past values as it may wrap around during the lifetime of the workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12222"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage_TA_NUMBLOCKQ"></a></p>
+<a name="876629"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Queue Blocking Events (TA_NUMBLOCKQ)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876630"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of times this workstation handler has been unable to enqueue a message to a local UNIX system message queue due to queue blocking conditions. This attribute should be considered only in relation to recent past values as it may wrap around during the lifetime of the workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12215"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage_TA_RCVDBYT"></a></p>
+<a name="876633"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Bytes Received (TA_RCVDBYT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876634"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of bytes received from the network by this workstation handler from all of its present and past Workstation clients. This attribute should be considered only in relation to recent past values as it may wrap around during the lifetime of the workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12216"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage_TA_RCVDNUM"></a></p>
+<a name="876637"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">System Messages Received (TA_RCVDNUM) </font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="941466"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of BEA Tuxedo system messages received from the network by this workstation handler from all of its present and past Workstation clients. This attribute should be considered only in relation to recent past values as it may wrap around during the lifetime of the workstation handler.</p>
+<a name="876641"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Bytes Sent (TA_SENTBYT)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="876642"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of bytes sent to the network by this workstation handler to all of its present and past Workstation clients. This attribute should be considered only in relation to recent past values as it may wrap around during the lifetime of the workstation handler.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="12218"></a> </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><a name="WSH_StatsTabPage_TA_SENTNUM"></a></p>
+<a name="921619"> 
+<h4>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">System Messages Sent (TA_SENTNUM)</font>
+</h4>
+</a>
+
+<!--<div align="right">-->
+<a name="921620"> 
+<h5>
+<i><font color="#000000" face="Verdana, Arial, Helvetica, sans-serif">Description</font></i>
+</h5>
+</a>
+<!--</div>-->
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This field displays the number of BEA Tuxedo system messages sent to the network by this workstation handler to all of its present and past Workstation clients. This attribute should be considered only in relation to recent past values as it may wrap around during the lifetime of the workstation handler.</p>
+
+<p>
+  <a href="acappq.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="acacls.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

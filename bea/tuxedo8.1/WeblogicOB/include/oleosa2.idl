@@ -1,0 +1,651 @@
+//==========================================================================//
+//     $Revision: 1.1 $
+//  									    //
+[
+	helpstring("ObjectBridge OLE/COM Support (3.0)"),
+	version(1.01),
+	uuid(68F2F800-BA6E-11D0-9EE7-0020AF34B3D4)
+]
+library OBridge
+{
+	importlib("stdole32.tlb");
+
+#define 	DISPID_VALUE 0
+	typedef 
+	[
+		uuid(A83B9E20-34EA-11D0-B00A-00A02419B995),
+		public 
+	]
+	unsigned char COMboolean;
+
+#ifdef  __midl
+
+	typedef 
+	[
+		uuid(BF5183A0-D1E9-11D0-9EF2-0020AF34B3D4),
+		public
+	]
+	VARIANT_BOOL VARIANT_BOOL;
+#else
+	typedef 
+	[
+		uuid(BF5183A0-D1E9-11D0-9EF2-0020AF34B3D4),
+		public
+	]
+	boolean VARIANT_BOOL;
+#endif 
+
+
+	//=============================================================
+	// FOREIGN COMPLEX TYPE INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C0-3B72-11CF-BBFC-444553540000)
+	]
+	interface DIForeignComplexType : IDispatch
+	{
+		[id(127),propget] HRESULT INSTANCE_repositoryId(
+			[out,retval] BSTR		*retval);
+
+		[id(126)] HRESULT INSTANCE_clone(
+			[out,retval] IDispatch		**retval);
+	};
+
+	[
+		version(1.0),
+		uuid(E977F900-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DForeignComplexType
+	{
+		interface DIForeignComplexType;
+	}
+
+	//=============================================================
+	// CORBA STRUCT TYPE INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C1-3B72-11CF-BBFC-444553540000)
+	]
+	interface DICORBAStruct : DIForeignComplexType
+	{
+	};
+
+	[
+		version(1.0),
+		uuid(E977F901-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DCORBAStruct
+	{
+		interface DICORBAStruct;
+	}
+
+	//=============================================================
+	// CORBA UNION TYPE INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C2-3B72-11CF-BBFC-444553540000)
+	]
+	interface DICORBAUnion : DIForeignComplexType
+	{
+	};
+
+	[
+		version(1.0),
+		uuid(E977F902-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DCORBAUnion
+	{
+		interface DICORBAUnion;
+	}
+
+	//=============================================================
+	// FOREIGN EXCEPTIONS INTERFACES
+	//=============================================================
+	typedef 
+	[
+		uuid(56271D80-33F5-11D0-B00A-00A02419B995)
+	]
+	enum
+	{
+		NO_EXCEPTION,
+		SYSTEM_EXCEPTION,
+		USER_EXCEPTION
+	} ExceptionType;
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C7-3B72-11CF-BBFC-444553540000)
+	]
+	interface DIForeignException : DIForeignComplexType
+	{
+		[id(125),propget] HRESULT EX_majorCode(
+			[out,retval]	long		*retval);
+	};
+
+	[
+		version(1.0),
+		uuid(E977F907-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DForeignException
+	{
+		interface DIForeignException;
+	}
+
+	//=============================================================
+	// CORBA USER EXCEPTIONS INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C8-3B72-11CF-BBFC-444553540000)
+	]
+	interface DICORBAUserException : DIForeignException
+	{
+	};
+
+	[
+		version(1.0),
+		uuid(E977F908-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DCORBAUserException
+	{
+		interface DICORBAUserException;
+	}
+
+	//=============================================================
+	// CORBA SYSTEM EXCEPTIONS INTERFACES
+	//=============================================================
+
+	typedef enum
+	{
+		COMPLETION_YES,
+		COMPLETION_NO,
+		COMPLETION_MAYBE
+	} CORBA_CompletionStatus;
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(1E5FFCA0-563B-11CF-B8FD-444553540000)
+	]
+	interface DICORBASystemException : DIForeignException
+	{
+		[id(123),propget] HRESULT EX_minorCode(
+			[out,retval]	long	*retval);
+
+		[id(122),propget] HRESULT EX_completionStatus(
+			[out,retval]	long	*retval);
+	};
+
+	[
+		version(1.0),
+		uuid(1E5FFCA1-563B-11CF-B8FD-444553540000)
+	]
+	dispinterface DCORBASystemException
+	{
+		interface DICORBASystemException;
+	}
+
+	//=============================================================
+	// TYPECODES INTERFACES
+	//=============================================================
+
+	typedef enum
+	{
+		tk_null = 0,
+		tk_void,
+		tk_short,
+		tk_long,
+		tk_ushort,
+		tk_ulong,
+		tk_float,
+		tk_double,
+		tk_octet,
+		tk_any,
+		tk_typeCode,
+		tk_principal,
+		tk_objref,
+		tk_struct,
+		tk_union,
+		tk_enum,
+		tk_string,
+		tk_sequence,
+		tk_array,
+		tk_alias,
+		tk_except
+	} CORBATCKind;
+
+	[
+		odl,
+		dual, oleautomation,
+		version(0.0),
+		uuid(A8B553C3-3B72-11CF-BBFC-444553540000)
+	]
+	interface DICORBATypeCode : DIForeignComplexType
+	{
+		[propget,id(125)] HRESULT kind(
+			[retval,out]	CORBATCKind	*retval);
+
+		//----------------------------------------------------------
+		// for tk_objref, tk_struct, tk_union, tk_alias, tk_except
+		//----------------------------------------------------------
+
+		[propget,id(124)] HRESULT id(
+			[retval,out]	BSTR		*retval);
+
+		[propget,id(123)] HRESULT name(
+			[retval,out]	BSTR		*retval);
+
+		//----------------------------------------------------------
+		// for tk_struct, tk_union, tk_enum, tk_except
+		//----------------------------------------------------------
+
+		[propget,id(122)] HRESULT member_count(
+			[retval,out]	long		*retval);
+
+		[id(121)] HRESULT member_name(
+			[in]		long		index,
+			[retval,out]	BSTR		*retval);
+
+		[id(120)] HRESULT member_type(
+			[in]		long		index,
+			[retval,out]	IDispatch	**retval);
+
+		//----------------------------------------------------------
+		// for tk_union
+		//----------------------------------------------------------
+
+		[id(119)] HRESULT member_label(
+			[in]		long		index,
+			[retval,out]	VARIANT		*retval);
+
+		[propget,id(118)] HRESULT discriminator_type(
+			[retval,out]	IDispatch	**retval);
+
+		[propget,id(117)] HRESULT default_index(
+			[retval,out]	long		*retval);
+
+		//----------------------------------------------------------
+		// for tk_string, tk_array, tk_sequence
+		//----------------------------------------------------------
+
+		[propget,id(116)] HRESULT length(
+			[retval,out]	long		*retval);
+
+		//----------------------------------------------------------
+		// for tk_sequence, tk_array, tk_alias
+		//----------------------------------------------------------
+
+		[propget,id(115)] HRESULT content_type(
+			[retval,out]	IDispatch	**retval);
+	};
+
+	[
+		version(1.0),
+		uuid(E977F903-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DCORBATypeCode
+	{
+		interface DICORBATypeCode;
+	}
+
+	//***********
+	//COM
+	//***********
+	interface ICORBA_Any;
+
+	typedef struct
+	{
+		short notused;
+	} TypeCodeBounds;
+	
+	typedef struct
+	{
+		short notused;
+	} TypeCodeBadKind;
+	
+	[
+		uuid(9556EA20-3889-11cf-9586-AA0004004A09),
+		odl
+	]
+	interface ICORBA_TypeCodeUserExceptions : IUnknown
+	{
+		HRESULT get_Bounds( [out] TypeCodeBounds *ExceptionBody);
+		HRESULT get_BadKind( [out] TypeCodeBadKind *pExceptionBody);
+	};
+	typedef struct 
+	{
+		ExceptionType	type;
+		LPWSTR		repositoryId;
+		ICORBA_TypeCodeUserExceptions   *piUserException;
+	} CORBATypeCodeExceptions;
+
+	typedef LPWSTR	RepositoryId;
+	typedef LPWSTR	Identifier;
+				
+	typedef CORBATCKind TCKind;
+
+	[
+		uuid(9556EA21-3889-11cf-9586-AA0004004A09), 
+		odl
+	]
+	interface ICORBA_TypeCode : IUnknown
+	{
+		HRESULT equal(  
+			[in]  ICORBA_TypeCode		*piTc,
+			[out] VARIANT_BOOL			*pbRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+	
+		HRESULT kind(
+			[out] TCKind			*pRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		//----------------------------------------------------------
+		// for tk_objref, tk_struct, tk_union, tk_alias, tk_except
+		//----------------------------------------------------------
+
+		HRESULT id(
+			[out] RepositoryId		*pszRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		HRESULT name(
+			[out] Identifier		*pszRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		//----------------------------------------------------------
+		// for tk_struct, tk_union, tk_enum, tk_except
+		//----------------------------------------------------------
+
+		HRESULT member_count(
+			[out] unsigned long		*pulRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		HRESULT member_name(
+			[in] unsigned long		ulIndex,
+			[out] Identifier		*pszRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		HRESULT member_type(
+			[in] unsigned long		ulIndex,
+			[out] ICORBA_TypeCode		**ppRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		//----------------------------------------------------------
+		// for tk_union
+		//----------------------------------------------------------
+
+		HRESULT member_label(
+			[in] unsigned long		ulIndex,
+			[out] ICORBA_Any		**ppRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		HRESULT discriminator_type(
+			[out] ICORBA_TypeCode		**ppRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		HRESULT default_index(
+			[in] long			*plRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		//----------------------------------------------------------
+		// for tk_string, tk_array, tk_sequence
+		//----------------------------------------------------------
+
+		HRESULT length(
+			[in] unsigned long		*pulRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+
+		//----------------------------------------------------------
+		// for tk_sequence, tk_array, tk_alias
+		//----------------------------------------------------------
+
+		HRESULT content_type(
+			[in] ICORBA_TypeCode		**ppRetVal,
+			[out] CORBATypeCodeExceptions	**ppUserExceptions);
+	};
+
+	//=============================================================
+	// ANY INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C4-3B72-11CF-BBFC-444553540000)
+	]
+	interface DICORBAAny : DIForeignComplexType
+	{
+		[id(DISPID_VALUE),propget] HRESULT value(
+			[out,retval]	VARIANT		*retval);
+		[id(DISPID_VALUE),propput] HRESULT value(
+			[in]		VARIANT		value);
+
+		[id(124)] HRESULT typeCode(
+			[out,retval]	DICORBATypeCode	**retval);
+	};
+
+	[
+		version(1.0),
+		uuid(E977F904-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DCORBAAny
+	{
+		interface DICORBAAny;
+	}
+
+	//***********
+	//COM
+	//***********
+	[
+		uuid(74105F50-3C68-11CF-9588-AA0004004A09),
+		odl
+	]
+	interface ICORBA_Any : IUnknown
+	{
+		HRESULT _get_value(
+			[out] VARIANT		*val);
+
+		HRESULT _put_value(
+			[in] VARIANT		val);
+	}
+
+	//=============================================================
+	// CORBA FACTORY INTERFACES
+	//=============================================================
+	
+	[
+		odl,
+		dual, oleautomation,
+		version(0.0),
+		uuid(204f6241-3aec-11cf-bbfc-444553540000)
+	]
+	interface DICORBAFactory : IDispatch
+	{
+		[id(14)] HRESULT CreateObject(
+			[in]		BSTR		factoryName, 
+			[out,retval]	IDispatch	**rtrn);
+
+		[id(15)] HRESULT GetObject(
+			[in]		BSTR		objectName, 
+			[out,retval]	IDispatch	**rtrn);
+	};
+
+	[
+		odl,
+		version(0.0),
+		uuid(204f6240-3aec-11cf-bbfc-444553540000)
+	]
+	interface ICORBAFactory : IUnknown
+	{
+		HRESULT CreateObject(
+			[in]		LPWSTR		factoryName,
+			[out,retval]	IUnknown	**rtrn);
+
+		HRESULT GetObject(
+			[in]		LPWSTR		objectName, 
+			[out,retval]	IUnknown	**rtrn);
+	};
+
+	[
+		odl,
+		dual, oleautomation,
+		version(1.0),
+		uuid(A8B553C5-3B72-11CF-BBFC-444553540000)
+	]
+	interface DICORBAFactoryEx : DICORBAFactory
+	{
+		[id(17)] HRESULT CreateType(
+			[in]		IDispatch	*scopingObject,
+			[in]		BSTR		typeName,
+			[out,retval]	VARIANT		*retval);
+
+		[id(18)] HRESULT CreateTypeById(
+			[in]		IDispatch	*scopingObject,
+			[in]		BSTR		repositoryId,
+			[out,retval]	VARIANT		*retval);
+	};
+
+	//=============================================================
+	// BRIDGE DIRECTORY INTERFACES
+	//=============================================================
+
+	typedef [public]  ICORBAFactory     *IBRIDGEDirectory;
+	typedef [public]  DICORBAFactory    *DIBRIDGEDirectory;
+	typedef [public]  DICORBAFactoryEx  *DIBRIDGEDirectoryEx;
+
+	[
+		version(1.0),
+		uuid(E977F905-3B75-11CF-BBFC-444553540000)
+	]
+	dispinterface DCORBAFactoryEx
+	{
+		interface DICORBAFactoryEx;
+	}
+
+	//=============================================================
+	// OBJECT BRIDGE FACTORY INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		dual, oleautomation,
+		version(0.0),
+		uuid(4199de01-a384-11cf-bef1-0020af9375ba)
+	]
+	interface DIObjectBridgeFactory : DICORBAFactoryEx
+	{
+		[id(16)] HRESULT LoadAdapter(
+			[in]		BSTR		adapterName);
+	};
+
+	[
+		odl,
+		version(0.0),
+		uuid(4199de00-a384-11cf-bef1-0020af9375ba)
+	]
+	interface IObjectBridgeFactory : ICORBAFactory
+	{
+		HRESULT LoadAdapter(
+			[in]		LPWSTR		adapterName);
+	};
+
+	//=============================================================
+	// INITIAL IN-PARAMETER INTERFACES
+	//=============================================================
+
+	[
+		odl,
+		version(1.0),
+		uuid(A8B553C6-3B72-11CF-BBFC-444553540000)
+	]
+	interface ITypeFactory : IUnknown
+	{
+		[id(127)] HRESULT CreateType(
+			[in]		LPSTR		typeName,
+			[out,retval]	VARIANT		*retval);
+
+		[id(126)] HRESULT CreateTypeById(
+			[in]		LPSTR		repositoryId,
+			[out,retval]	VARIANT		*retval);
+	};
+
+	//=============================================================
+	// INITIAL CORBA OBJECT INTERFACES
+	//=============================================================
+
+	[
+		odl, dual,
+		version(1.0),
+		uuid(204F6244-3AEC-11CF-BBFC-444553540000)
+	]
+	interface DICORBAObject : IDispatch
+	{
+		[id(127)] HRESULT GetInterface(
+			[out,retval]	IDispatch	**val);
+
+		[id(126)] HRESULT GetImplementation(
+			[out,retval]	IDispatch	**val);
+
+		[id(125)] HRESULT IsA(
+			[in]		BSTR		repositoryID,
+			[out,retval]	VARIANT_BOOL		*itIsA);
+
+		[id(124)] HRESULT IsNil(
+			[out,retval]	VARIANT_BOOL		*itIsNil);
+
+		[id(123)] HRESULT IsEquivalent(
+			[in]		IDispatch	*obj,
+			[out,retval]	VARIANT_BOOL		*val);
+
+		[id(122)] HRESULT NonExistent(
+			[out,retval]	VARIANT_BOOL		*val);
+
+		[id(121)] HRESULT Hash(
+			[out,retval]	long		*val);
+	};
+
+	[
+		odl, dual,
+		version(1.0),
+		uuid(204F6246-3AEC-11CF-BBFC-444553540000)
+	]
+	interface DIORBObject : IDispatch
+	{
+		[id(127)] HRESULT ObjectToString(
+			[in]		IDispatch	*obj,
+			[out,retval]	BSTR		*val);
+
+		[id(126)] HRESULT StringToObject(
+			[in]		BSTR		ref,
+			[out,retval]	IDispatch	**val);
+
+		[id(125)] HRESULT GetInitialReference(
+			[out,retval]	SAFEARRAY(IDispatch*) *val);
+
+		[id(124)] HRESULT ResolveInitialReference(
+			[in]		BSTR		name,
+			[out,retval]	IDispatch	**val);
+
+		[id(123)] HRESULT GetCORBAObject(
+			[in]		IDispatch	*obj,
+			[out,retval]	DICORBAObject	**val);
+	};
+};

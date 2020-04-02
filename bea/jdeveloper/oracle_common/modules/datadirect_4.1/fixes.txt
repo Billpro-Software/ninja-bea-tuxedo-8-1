@@ -1,0 +1,634 @@
+     FIXES.TXT
+     Progress(R) DataDirect(R) 
+     DataDirect Connect(R) for JDBC(TM)
+     Release 4.1 (Build 0025)
+     October 2010
+
+The following are issues that have been resolved since Release
+4.1 GA (Build 0000) in October 2009.
+
+                                   Build number:
+Patch | Issue      | Driver      | Driver | Framework | Util
+----------------------------------------------------------------------
+0025  | DD00056167 | DB2         | 032865 | 042128    | 014914
+A null pointer exception was thrown if ResultSet.getBinaryStream() was
+called twice for the same Blob column of the same result set row.
+
+0025  | DD00057347 | DB2         | 032865 | 042128    | 014914
+The driver incorrectly returned only one row for result sets that 
+contained LOB data from V9 z/OS servers that were running in 
+compatibility mode (CM).
+
+0025  | DD00057187 | DB2         | 032865 | 042128    | 014914
+An "End of stream" exception was thrown on an executeUpdate() that had
+multiple Blob parameter values bound with setBytes(), one of which was 
+smaller than 32 KB.
+
+0024  | DD00056892 | Oracle      | 027938 | 042128    | 014914
+A memory leak occurred when a third-party connection pool manager was 
+used with connections with FailoverMode set to a value other than the 
+default value of "connect".
+
+0024  | DD00056714 | Oracle      | 027938 | 042128    | 014914
+The driver failed to process XA related errors correctly, which could 
+have resulted in unexpected error condition behavior.
+
+0023  | DD00055157 | DB2         | 032860 | 042127    | 014913
+      |            | Informix    | 009619 | 042127    | 014912
+      |            | MySQL       | 010119 | 042127    | 014912
+      |            | Oracle      | 027936 | 042127    | 014912
+      |            | SQL Server  | 024337 | 042127    | 014912
+      |            | Sybase      | 016724 | 042127    | 014912
+Using the addStatementEventListener PooledConnection method resulted 
+in an "AbstractMethodError" exception.
+
+0023  | DD00055409 | DB2         | 032860 | 042127    | 014913
+The driver returned corrupted characters from a GRAPHIC column that 
+had a CCSID of 5026.
+
+0023  | DD00055433 | DB2         | 032860 | 042127    | 014913
+A "Please check parameter binding(s)" exception occurred if an
+application executed a statement with a Blob parameter with a value 
+that was greater than 32 KB and a Decfloat parameter with a value 
+that was out of range for a native Decimal.
+
+0023  | DD00055712 | DB2         | 032860 | 042127    | 014913
+The getTables() method failed to return tables for which the current 
+user had indirect Select privileges.
+
+0023  | DD00055716 | DB2         | 032860 | 042127    | 014913
+The getTables() method failed to return tables for which the current 
+user had indirect Select privileges.
+
+0023  | DD00055824 | DB2         | 032860 | 042127    | 014913
+The getTables() method failed to return tables for which the user had
+Select permission based on indirect privileges. For example, where 
+the user belonged to a group that had been granted a ROLE that had 
+been granted Select privileges.
+
+0023  | DD00056541 | SQL Server  | 024337 | 042127    | 014912
+The driver was unable to connect using SSL when the server's 
+certificate file was large.
+
+0023  | DD00056670 | DB2         | 032860 | 042127    | 014913
+The DatabaseMetadata.getTables() method incorrectly returned tables 
+for which the current user had CREATEIN privileges on the table's 
+schema but did not have SELECT privileges on the table itself.
+
+0022  | DD00055087 | SQL Server  | 024336 | 042127    | 014912
+A bulk operation failed if either of the following conditions were 
+true: a) a column was defined as VARCHAR(8000) or larger and SendStringParametersAsUnicode was set to true, or b) the bulk 
+operation loaded data to a uniqueidentifier column.
+
+0022  | DD00055612 | Oracle      | 027936 | 042127    | 014912
+The getColumns() method incorrectly described a number column that was 
+defined with the following format: "column_name NUMBER (*, scale)".
+
+0021  | DD00055106 | SQL Server  | 024333 | 042127    | 014909
+The driver unexpectedly threw the following exception in a scenario in
+which a stored procedure was executed, a warning was returned, and no 
+rows were returned: "[DataDirect][SQLServer JDBC Driver]No ResultSet 
+set was produced."
+
+0020  | DD00054901 | Informix    | 009616 | 042126    | 014908
+      |            | MySQL       | 010116 | 042126    | 014908
+      |            | SQL Server  | 024329 | 042126    | 014909
+      |            | Sybase      | 016720 | 042126    | 014908
+ResultSetMetaData.getTableName() returned a value enclosed in double 
+quotes when the specified table in the associated SQL statement was 
+enclosed in double quotes even though the quotes were not part of the 
+actual table name. For example, if you executed SELECT col1 FROM 
+“ACCT”, where ACCT is the name of the table, ResultSetMetaData 
+returned the value “ACCT” instead of ACCT.
+
+0020  | DD00053962 | SQL Server  | 024329 | 042126    | 014909
+A potential JRE bug resulted in the following exception: "IO Error 
+writing temp file: Negative seek offset."
+
+0020  | DD00054890 | DB2         | 032853 | 042126    | 014909
+The driver could have returned the following error when processing 
+a result set that contained LOB data: "[DataDirect][DB2 JDBC Driver]No 
+more data available to read."
+
+0019  | DD00055122 | DB2         | 032852 | 042126    | 014909
+The getTables() method failed to return tables if the user had been 
+granted privileges to the table via the group PUBLIC.
+
+0019  | DD00054689 | DB2         | 032852 | 042126    | 014909
+DatabaseMetaData.getTables() did not return any data if the database 
+schema name contained a “%” (for example ACCT%) and the schema name 
+was escaped in the argument to getTables().
+
+0019  | DD00054901 | DB2         | 032852 | 042126    | 014909
+                   | Oracle      | 027931 | 042126    | 014908
+ResultSetMetaData.getTableName() returned a value enclosed in double 
+quotes when the specified table in the associated SQL statement was 
+enclosed in double quotes even though the quotes were not part of the 
+actual table name. For example, if you executed SELECT col1 FROM 
+“ACCT”, where ACCT is the name of the table, ResultSetMetaData 
+returned the value “ACCT” instead of ACCT.
+
+0019  | DD00054708 | Oracle      | 027931 | 042126    | 014908
+DatabaseMetaData.getColumns() incorrectly reported the nullable column 
+if the CatalogOptions property was set to a value of 6 and an Oracle ROWID column was defined as nullable.
+
+0019  | DD00054894 | Oracle      | 027931 | 042126    | 014908
+Improved the driver's performance for a scenario in which a LOB 
+parameter was set to a stream, and the driver was not given the length 
+of the stream.
+
+0018  | DD00054216 | DB2         | 032849 | 042124    | 014909
+Inserting XML data via a bulk operation, or addBatch/executeBatch 
+could have resulted in the following unexpected exception:
+"[DataDirect][DB2 JDBC Driver]End of stream was detected on a read."
+
+0018  | DD00054306 | DB2         | 032849 | 042124    | 014909
+While fetching BLOBs, the following exception was returned:
+"[DataDirect][DB2 JDBC Driver]No more data available to read."
+
+0018  | DD00053654 | DB2         | 032849 | 042124    | 014909
+                     Informix    | 009615 | 042124    | 014908
+                     MySQL       | 010114 | 042124    | 014908
+                     Oracle      | 027930 | 042124    | 014908
+                     SQL Server  | 024328 | 042124    | 014909
+                     Sybase      | 016719 | 042124    | 014908
+The driver generated a null pointer exception instead of an 
+"object closed" exception when calling setObject() on a prepared 
+statement that had been closed.
+
+0018  | DD00054312 | DB2         | 032849 | 042124    | 014909
+                     Informix    | 009615 | 042124    | 014908
+                     MySQL       | 010114 | 042124    | 014908
+                     Oracle      | 027930 | 042124    | 014908
+                     SQL Server  | 024328 | 042124    | 014909
+                     Sybase      | 016719 | 042124    | 014908
+The driver returned no results when metadata that included a 
+backslash in its name was requested. 
+
+0018  | DD00054298 | DB2         | 032849 | 042124    | 014909
+                     Informix    | 009615 | 042124    | 014908
+                     MySQL       | 010114 | 042124    | 014908
+                     Oracle      | 027930 | 042124    | 014908
+                     SQL Server  | 024328 | 042124    | 014909
+                     Sybase      | 016719 | 042124    | 014908
+The driver failed to return a column's table name for
+ResultSetMetaData.getTableName() when the specified column was 
+enclosed by double quotes. 
+
+0017  | DD00054012 | DB2         | 032846 | 042123    | 014908
+Executing CALL SYSPROC.admin_cmd() resulted in the following 
+exception: "[DataDirect][DB2 JDBC Driver][DB2]REMOTE OPERATION INVALID 
+FOR APPLICATION EXECUTING ENVIRONMENT."
+
+0017  | DD00054080 | DB2         | 032846 | 042123    | 014908
+Calling getTables() failed to return tables for which the current user 
+had select privileges through a ROLE to which the user belonged.
+
+0017  | DD00053958 | DB2         | 032846 | 042123    | 014908
+Processing a large result set with LOBs from DB2 V9.5 and higher for
+Linux,UNIX, and Windows could have resulted in an unexpected "No more 
+data available to read" exception.
+
+0016  | DD00054407 | Sybase      | 016717 | 042119    | 014906
+The driver failed to correctly insert UNICHAR and UNIVARCHAR data if
+an application used ExtTypes.BYTESFORNCHAR and either of the 
+following conditions existed: BatchPerformanceWorkaround was set to 
+true, or SelectMethod was set to Direct.
+
+0016  | DD00053949 | SQL Server  | 024326 | 042123    | 014908
+The driver incorrectly converted data when a statement was 
+re-prepared and caused parameter data types to change.
+
+0015  | DD00054228 | Oracle      | 027928 | 042119    | 014906
+A hang could occur while inserting data to a table with a column that 
+contained more than 243 characters and that was defined as the table's 
+primary key.
+
+0014  | DD00053673 | SQL Server  | 024325 | 042123    | 014908
+      |            | DDJPOOL     | 002703 | n/a       | n/a
+When a pooled connection that was created with a data source was 
+closed, DataDirect Spy stopped logging activity for all connections.
+
+0013  | DD00053565 | Sybase      | 016716 | 042119    | 014906
+Using setObject() with the object type ExtType.BYTESFORNCHAR on a 
+UNIVARCHAR column failed to insert the byte array as expected.
+
+0012  | DD00053488 | DB2         | 032842 | 042122    | 014908
+Executing a prepared statement while using XA transactions could have
+unexpectedly resulted in the following error: "Execute statement does 
+not identify a valid prepared statement."
+
+0011  | DD00053305 | DB2         | 032841 | 042122    | 014908
+The getTables() method failed to return tables for a user whose 
+explicit SELECT permission was revoked, but who still had implicit 
+SELECT permission (through group permissions, for example).
+
+0011  | DD00053415 | DB2         | 032841 | 042122    | 014908
+The getTables() method failed to return tables for a user whose 
+explicit SELECT permission was revoked, but who still had implicit 
+SELECT permission (through group permissions, for example).
+
+0009  | DD00053173 | DB2         | 032839 | 042122    | 014908
+A multi-threaded application could return the wrong value when 
+fetching fixed decimal values.
+
+0009  | DD00052516 | Sybase      | 016715 | 042119    | 014906
+The driver was enhanced to support ExtTypes.BYTESFORNCHAR and
+ExtTypes.BYTESFORCHAR.
+
+0008  | DD00052584 | SQL Server  | 024324 | 042120    | 014908
+A Null Pointer Exception could be thrown if an application used IBM's 
+JRE and connected with Kerberos authentication.
+
+0008  | DD00053027 | Oracle      | 027926 | 042119    | 014906
+Added support for Oracle 11 servers with security banners enabled.
+
+0007  | DD00051388 | Oracle      | 027923 | 042119    | 014906
+Improved the driver's bulk protocol performance in manual transactions
+when the table that was loaded contained an index. 
+
+0007  | DD00051566 | Oracle      | 027923 | 042119    | 014906
+When a zero-length byte array was specified for a character column, 
+an ORA-01400 error was returned.
+
+0007  | DD00052079 | Oracle      | 027923 | 042119    | 014906
+Fetching CLOB data could result in the following error: 
+"Transliteration failed, reason: invalid UTF8 data."
+
+0006  | DD00052387 | SQL Server  | 024323 | 042120    | 014907
+If an application called getTime() to retrieve the value from a SQL 
+Server 2008 time column, the driver could incorrectly return the 
+following error: "[DataDirect][SQLServer JDBC Driver]Value can not be 
+converted to requested type."
+
+0005  | DD00052217 | SQL Server  | 024322 | 042120    | 014906
+If a procedure name contained a semi-colon, the getProcedures() method 
+could incorrectly return the following error: "Error writing data to
+client-side row cache. Verify that the directory specified by the
+java.io.tmpdir property exists and the current user has permission to 
+read from and write to that directory."
+
+0005  | DD00052327 | SQL Server  | 024322 | 042120    | 014906
+A Null Pointer Exception could incorrectly be thrown when closing a 
+PreparedStatement if the statement's connection had already been 
+closed.
+
+0005  | DD00052408 | DB2         | 032836 | 042119    | 014907
+The fix for DD00051647 failed to properly handle surrogates when 
+converting from UTF16 to UTF8; this could have resulted in unexpected 
+results when using the setString() method if the string contained 
+characters with UTF16 surrogates.
+
+0005  | DD00052036 | DB2         | 032836 | 042119    | 014907
+The getTables() method failed to return a complete list of tables if 
+the current user was a member of a group that had been granted access 
+to the schema.
+
+0005  | DD00052078 | DB2 Package | n/a    | n/a       | n/a 
+      |            | Manager     |        |           |
+The DB2 Package Manager was enhanced to display the contents of the 
+password field as bullets rather than as text.
+
+0005  | DD00051283 | sqljdbc.dll | n/a    | n/a       | n/a 
+When using explicit transaction cleanup and transactions without an 
+XATransactionGroup, the driver could return the following error:
+"[DataDirect][SQLServer JDBC Driver]The DBMS returned an unspecified 
+error.  The command code was 224."
+
+0004  | DD00052160 | DB2         | 032834 | 042119    | 014906
+The method ResultSetMetaData.getColumnTypeName() incorrectly returned 
+no data for a CALL statement.
+
+0003  | DD00051088 | DB2         | 032833 | 042119    | 014906
+The driver incorrectly returned some Double values from MVS.
+
+0003  | DD00051091 | DB2         | 032833 | 042119    | 014906
+The getIndexInfo method returned unexpected rows when connected to LUW
+servers and filtering on a particular schema.
+
+0003  | DD00051560 | DB2         | 032833 | 042119    | 014906
+A database connection established to cancel a query couldn't be closed 
+until after the main connection had been closed.
+
+0003  | DD00051647 | DB2         | 032833 | 042119    | 014906
+The driver incorrectly translated 4 byte UTF-8 characters.
+
+0003  | DD00052057 | DB2         | 032833 | 042119    | 014906
+When using an inputStream as a parameter, the driver unexpectedly 
+returned the following error: "Stream was not marked." 
+
+0002  | DD00051277 | SQL Server  | 024320 | 042118    | 014905
+getVersionColumns or getBestRowIdentifier could incorrectly return 
+an error when writing data to the client-side row cache.
+
+0002  | DD00051269 | SQL Server  | 024320 | 042118    | 014905
+The driver incorrectly returned an error when executing a Select 
+statement that returned no rows and a warning.
+
+0002  | DD00051389 | SQL Server  | 024320 | 042118    | 014905
+The driver could incorrectly return the following error when it was
+connected to a linked server:  "[DataDirect][SQL Server JDBC Driver]
+No more data available to read."
+
+0001  | DD00048050 | DB2         | 032823 | 042117    | 014905
+Driver was enhanced to allow the execution of stored procedures 
+without escaping them with braces.
+
+0001  | DD00050486 | DB2         | 032823 | 042117    | 014905
+The driver returned no errors if the application used parameter 
+batches to insert data that was too long for character and binary 
+column definitions; however, the data was truncated to the defined 
+column size.
+
+0001  | DD00050313 | DB2         | 032823 | 042117    | 014905
+Calling setBytes() to specify data for a blob column could incorrectly 
+result in an "End of stream was detected on a read" exception.
+
+0001  | DD00049712 | Oracle      | 027917 | 042117    | 014905
+ A getTables() call resulted in slower performance compared to a 
+previous build.
+
+0001  | DD00050244 | Oracle      | 027917 | 042117    | 014905
+The driver returned an error when trying to use the bulk protocol 
+to insert a row that contained more than 255 columns.
+
+0001  | DD00050488 | Oracle      | 027917 | 042117    | 014905
+Calling getColumns() returned an empty result when catalogOptions was 
+set to 6 and a table contained columns that were not selectable.
+
+0001  | DD00050666 | Oracle      | 027917 | 042117    | 014905
+Calling setBytes() to specify data for a blob column could incorrectly 
+result in an "End of stream was detected on a read" exception.
+
+0001  | DD00050767 | Oracle      | 027917 | 042117    | 014905
+Inserting a batch of TIMESTAMP values could result in an ORA-01483 
+error if BatchPerformanceWorkaround was set to true.
+
+0001  | DD00050709 | Oracle      | 027917 | 042117    | 014905
+Executing an "Alter Session Set CURRENT_SCHEMA" command against an 
+11g server with multi-byte character set resulted in the following
+error:[DataDirect][Oracle JDBC Driver]Internal error: Net8 protocol 
+error.
+
+
+The following are issues that have been resolved since Release 4.0 GA 
+(Build 0000) in August 2008 (grouped by component).  
+
+Issue # | Component Modified | Description of Issue
+
+DD00041381 | All Drivers | Kerberos authentication did not 
+enable delegation of credentials.
+
+DD00042145 | All Drivers | A hang occurred on a socket read 
+when the network was disconnected and no exception was thrown by the 
+JVM.
+
+DD00045627 | All Drivers | A memory leak occurred if using 
+statement pool monitoring and EXtConnection.abortConnection().
+
+DD00049077 | All Drivers | Statement pooling failed to reuse a 
+statement in the pool that could have been used.
+
+DD00049928 | DB2 | A "No more data available to read" exception
+occurred when closing a statement that was used to generate a result 
+set. It only occurred when the result set contained multiple lob 
+columns and the last lob value was null.
+
+DD00043188 | DB2 | The driver incorrectly returned "timestmp" 
+as TYPE_NAME for timestamp columns against iSeries and z/OS backends.
+
+DD00043245 | DB2 | The driver intermittently threw a "Permanent 
+Agent Exception" when  AuthenticationMethod was set to 
+ecryptedUIDPassword or encryptedPassword.
+
+DD00040017 | DB2| The driver returned an unhandled codepoint
+exception when connecting to DB2 UDB V6R1 for iSeries via DRDA.
+
+DD00040749 | DB2 | The driver has been certified against 
+DB2 UDB V6R1 for iSeries via DRDA.
+
+DD00042275 | DB2 | The driver failed to return the correct 
+results for getImportedkeys when connected to DB2 LUW 9.1 SP 6.
+
+DD00046478 | DB2 | Against DB2 9.5 on LUW, the driver failed 
+to return all rows if the last column in a row was a LOB and the last 
+value in the last row was null.
+
+DD00046809 | DB2 | Incorrect results were returned from LUW 
+servers when calling DatabaseMetadata.getBestRowIdentifier().
+
+DD00046705 | DB2 | The following exception occurred 
+occasionally when selecting CLOBs from DB2 LUW 9.5 servers:
+[DataDirect][DB2 JDBC Driver]No more data available to read.
+
+DD00047439 | DB2 | Decimal values were inserted incorrectly 
+if using parameter batches.
+
+DD00048801 | DB2 | A "No more data available to read" exception
+occurred when getting LOB data. It only occurred when all the 
+following conditions existed: a) there were multiple LOBS in the 
+result row b) the last LOB value in the previous row was NULL and 
+c) there was a previous non-NULL LOB value in that row.
+
+DD00041675 | Informix | With Informix 11.5, the driver failed 
+to return matching rows for a parameter bigint value of 0 in a WHERE 
+clause.
+
+DD00042248 | Informix | A "Memory allocation failed during 
+query processing" exception occurred after 32K executions of a stored 
+procedure that returns one or more result sets.
+
+DD00047885 | Informix | A NullPointerException or other error
+occurred intermittently when calling executeUpdate(String sql, int
+getAutoGeneratedKeys).
+
+DD00042286 | MySQL | Calling the getPrimaryKeys method returned 
+rows for all uniques indexes rather than only the primary key indexes.
+
+DD00042288 | MySQL | The boolean value that was reported for 
+NON_UNIQUE from a call to getIndexInfo() was false when it should have
+been true.
+
+DD00042633 | MySQL | The driver failed to return COLUMN_DEF 
+values from the getColumns() method.
+
+DD00042779 | MySQL | The driver returned the following 
+exception when connecting to MySQL on z/OS Linux: [DataDirect]
+[MySQL JDBC Driver]The ICU transliteration table MYSQL_ICU_LATIN1.t 
+is improperly formatted.
+
+DD00047610 | MySQL | An incorrect catalog name was returned 
+from getTables() if no catalog restriction was specified.
+
+DD00048160 | MySQL | Against a 5.1 server, a prepare/execute 
+of a SQL statement that concatenated a CLOB value with a literal 
+failed with the error: "Unknown MySQL native type: 250."
+
+DD00041558 | Oracle | The driver incorrectly returned VIEWs 
+owned by SYS as "SYSTEM TABLE" instead of "VIEW".
+
+DD00041613 | Oracle | The driver returned an "ORA-01460: 
+unimplemented or unreasonable conversion requested" exception when 
+calling a stored procedure.
+
+DD00041631 | Oracle | The driver generated an exception when
+inserting CLOB values greater than 32 KB.
+
+DD00041803 | Oracle | The driver called  
+DatabaseMetaData.getProcedures() and returned incorrect results for 
+synonyms of stored procedures.
+
+DD00042001 | Oracle | Calling getTables() failed to return views
+in the system schema when "VIEW" was included in the table type 
+restriction argument.
+
+DD00042498 | Oracle | Driver was enhanced to eliminate 
+unnecessary parameter discovery for previously executed CALL statements.
+
+DD00042545 | Oracle | After a successful execution of a prepared 
+statement with parameters, followed by an unsuccessful execution, a 
+third execution failed with an "ORA-01003:no statement parsed" 
+exception.
+
+DD00042641 | Oracle | Added the NewPassword connection option 
+option to allow an application to change a user’s password when a 
+connection is established. Refer to the README text file for a 
+description of this option.
+
+DD00042697 | Oracle | When calling stored procedures that 
+return REF CURSORS, the driver returned the following error: "Internal 
+error: Net8 protocol error".
+
+DD00042835 | Oracle | Character column lengths were incorrectly 
+described as a count of bytes instead of a count of characters when 
+connected to an Oracle server using an AL32UTF8 character set.
+
+DD00042945 | Oracle | The driver returned parameter batch 
+update counts as Statement.SUCCESS_NO_INFO when one or more timestamp 
+parameter values had 0 for its fractional component.
+
+DD00043982 | Oracle | The getColumns method returned incorrect 
+values for DECIMAL_DIGITS for Oracle TIMESTAMP(1), TIMESTAMP(4),
+TIMESTAMP and TIMESTAMP(9) columns.
+
+DD00043985 | Oracle | The getColumns method returned incorrect 
+values for COLUMN_SIZE for Oracle TIMESTAMP(1), TIMESTAMP(4),TIMESTAMP 
+and TIMESTAMP(9) columns.
+
+DD00046023 | Oracle | Synonyms of a DBLink were not returned
+from getTables().
+
+DD00046795 | Oracle | A hang occurred when using a parameter 
+batch to call a stored function.
+
+DD00046954 | Oracle | The following exception occurred if the 
+SQL statement contained a non-escaped outer join: Application failover 
+does not support non-single-SELET statement.
+
+DD00046976 | Oracle | A hang occurred when a stored function 
+using parameter batches was executed and no parameter marker was 
+included for the return value of the function.
+
+DD00047183 | Oracle |Trying to perform a getXXX operation on a
+CallableStatement for a parameter that is not an OUT or an INOUT 
+parameter resulted in the exception: "The requested output parameter 
+data is not available."
+
+DD00047274 | Oracle | Using native Oracle syntax to execute a 
+stored procedure resulted in the error: "ORA-01460: unimplemented or 
+unreasonable conversion requested."
+
+DD00047652 | Oracle | Mixing literals and parameter 
+markers in an UPDATE statement resulted in the following exception:
+[DataDirect][Oracle JDBC Driver]The requested parameter metadata is 
+not available for the current statement.
+
+DD00047701 | Oracle | Repeatedly executing a stored procedure 
+that returns a ref cursor without navigating through the entire 
+results caused the exception: "ORA-01000: maximum open cursors 
+exceeded."
+
+DD00047790 | Oracle | When calling a function with the native 
+syntax, a NULL value is returned for an input parameter that is 
+registered as an output parameter.
+
+DD00048254 | Oracle | When the same stored procedure was called 
+repeatedly in manual commit mode, the driver generated a "no more data 
+available to read" exception.
+
+DD00049358 | Oracle | An update statement failed to update rows 
+as expected if BatchPerformanceWorkaround was set to true and the 
+Update statement contained a where clause that included a TIMESTAMP
+parameter.
+
+DD00049947 | Oracle | Driver was enhanced to successfully 
+execute SQL with no space between a parameter marker and a keyword.
+
+DD00039537 | SQL Server | Driver returned an invalid -1 value
+for the method ResultSet.getHoldability().
+
+DD00041547 | SQL Server | Driver would intermittently hang when 
+Kerberos authentication required more than one round of handshaking.
+
+DD00041732 | SQL Server |The driver intermittently returned 
+an "Invocation of DatabaseMetaData method 'getDatabaseProductName' 
+failed" error when using kerberos authentication from a web application.
+
+DD00041876 | SQL Server | The driver has been certified 
+against SQL Server 2008.
+
+DD00044897 | SQL Server | When a stored procedure was called, 
+fractional seconds of datetime2 type outuput parameters were 
+truncated to only 3 valid digits.
+
+DD00045885 | SQL Server |  Using LoginTimeout and OS 
+Authentication intermittently resulted in the system exception: 
+DeleteSecurityContext, 0x80090301.
+
+DD00047151 | Sybase | The getTables() method returned an empty 
+result set if the length of the  table type argument exceeded 28 
+characters.
+
+DD00047605 | SQL Server | The driver returned no rows for a 
+query that contained a CONTAINS clause.
+
+DD00047934 | SQL Server | The driver described TIME columns as 
+NVARCHAR when the column had a quoted alias and the FROM clause 
+contained only one table.
+
+DD00048856 | SQL Server | An out of memory exception occurred 
+if an application opened more than 240 concurrent connections.
+
+DD00048898 | SQL Server | A "Column index is out of range" 
+exception occurred when getting a result value of an updateable result 
+set after executing a query a second time within a distributed 
+transaction.
+
+DD00049077 | SQL Server | Statement pooling failed to reuse a 
+statement in the pool that could have been used.
+
+DD00049583 | SQL Server | The driver would not connect using 
+SSL when running on IBM's JVM.
+
+DD00042083 | Sybase | The driver failed to find matching 
+decimal values for a decimal parameter value with a non-zero 
+scale in a WHERE clause when executed in a prepared statement.
+
+DD00043339 | Sybase | The driver failed to connect to a 
+Japanese Sybase server when the user id or password contained 
+Shift-JIS characters.
+
+DD00048033 | Sybase | An exception was thrown when the 
+application tried to update a TEXT column with a value of more than 
+20,000 characters with the database server configured to a maximum 
+database protocol packet size of 32 KB.
+
+DD00048109 | Sybase | The driver sent an incorrect value for 
+a parameter that was bound as a BigDecimal for a MONEY column against
+version 15 server.
+
+
+~~~~~~~~~~~
+End of File
+
+

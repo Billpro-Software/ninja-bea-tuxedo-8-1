@@ -1,0 +1,79 @@
+//--------------------------------------------------------------------
+//
+// Copyright (c) 1999 BEA Systems, Inc.
+// All rights reserved
+//
+// THIS IS UNPUBLISHED PROPRIETARY
+// SOURCE CODE OF BEA Systems, Inc.
+// The copyright notice above does not
+// evidence any actual or intended
+// publication of such source code.
+//
+// #ident "@(#)nts/idl/Tobj_SimpleEvents.idl $Revision: 1.2 $"
+//
+//--------------------------------------------------------------------
+
+#ifndef _TOBJ_SIMPLE_EVENTS_IDL_
+#define _TOBJ_SIMPLE_EVENTS_IDL_
+
+#include "CosNotifyComm.idl"
+#include "Tobj_Events.idl"
+
+#pragma prefix      "beasys.com"
+#pragma javaPackage "com.beasys"
+
+module Tobj_SimpleEvents
+{
+  typedef short  SubscriptionType;
+  typedef long   ChannelID;
+  typedef long   SubscriptionID;
+  typedef string RegularExpression;
+  typedef string FilterExpression;
+
+  const ChannelID        DEFAULT_CHANNEL         = 0;
+  const SubscriptionType TRANSIENT_SUBSCRIPTION  = 0;
+  const SubscriptionType PERSISTENT_SUBSCRIPTION = 1;
+
+  // name for adding subscription type to qos:
+  // (the matching value should be one of the subscription type constants)
+  const string SUBSCRIPTION_TYPE =
+   "Tobj_SimpleEvents_SUBSCRIPTION_TYPE";
+
+  interface Channel
+  {
+    void
+    push_structured_event(
+      in CosNotification::StructuredEvent      event
+    );
+
+    SubscriptionID
+    subscribe(
+      in string                                subscription_name,
+      in RegularExpression                     domain,
+      in RegularExpression                     type,
+      in FilterExpression                      data_filter,
+      in CosNotification::QoSProperties        qos,
+      in CosNotifyComm::StructuredPushConsumer push_consumer
+    );
+
+    boolean
+    exists(
+      in SubscriptionID                        id
+    );
+
+    void
+    unsubscribe(
+      in SubscriptionID                        id
+    );
+  };
+
+  interface ChannelFactory
+  {
+    Channel
+    find_channel(
+      in ChannelID                             channel_id
+    );
+  };
+};
+
+#endif // _TOBJ_SIMPLE_EVENTS_IDL_

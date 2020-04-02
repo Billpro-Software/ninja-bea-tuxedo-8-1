@@ -1,0 +1,42 @@
+<!-- 
+--	Copyright (c) 1998-99 BEA Systems, Inc.  All rights reserved
+--
+--	THIS IS SOURCE CODE PUBLISHED FOR DEMONSTRATION PURPOSES
+-->
+
+<html>
+<head>
+<title>Transfer Fund between Accounts</title>
+</head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h2>
+<font color=#DB1260>
+Enter the account numbers and the amount
+</font>
+</h2>
+
+<form name="teller" action="/TransferServlet.jhtml" method="post">
+
+<table>
+<tr><td align=right>From account number:</td>
+    <td><input type="text" name="ACCOUNT_ID_0"></td></tr>
+<tr><td align=right>To account number:</td>
+    <td><input type="text" name="ACCOUNT_ID_1"></td></tr>
+<tr><td align=right>Amount: $</td>
+    <td><input type="text" name="SAMOUNT"></td></tr>
+</table>
+
+<center>
+<input type="submit" value="Transfer">
+<input type="reset" value="Clear">
+</center>
+
+</form>
+<p>
+Copyright (c) 1998-99 BEA Systems, Inc. All Rights Reserved.
+
+</font>
+</body>
+</html>

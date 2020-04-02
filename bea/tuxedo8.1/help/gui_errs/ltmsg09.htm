@@ -1,0 +1,3821 @@
+<!-- .if n .pH errman.h.ltmsg09.htm @(#)ltmsg09.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX_CAT 4.3</TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 1300-1399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1301"></A>
+<H3>LIBTUX MESSAGE #1301</H3>
+<H2> WARN: Cannot update server group location as listed in bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting, a server process noticed that it was being booted on the
+processor listed as the backup processor for that server's group.
+(This situation occurs when
+tmboot(1)
+is unable to boot the server group on the processor listed as the
+current processor for that group.)
+The server attempted to update the location of the group as stored in
+the bulletin board, but was unable to make the message required to
+update this information.
+This particular failure by itself will not cause the server to be incapable
+of processing service requests, but may be indicative of problems elsewhere
+in the system.
+The server will still be active and able to receive requests,
+but the first subsequent attempt to migrate the server will restart
+the server on the same processor where it is now running.
+Once this occurs, the server location will be stored consistently.
+Unless otherwise indicated by another error, the location of the server
+group will be stored properly in the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The administrator may choose to allow the servers in the group reporting
+this error to continue running, or may elect to shut down and restart
+the server group so that the group location is stored consistently in
+the bulletin board.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1302"></A>
+<H3>LIBTUX MESSAGE #1302</H3>
+<H2> ERROR: Commit error due to outstanding handles</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to commit a transaction with outstanding handles failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an application error.
+Make sure there are no outstanding
+handles before calling
+tpcommit().
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1308"></A>
+<H3>LIBTUX MESSAGE #1308</H3>
+<H2> ERROR: TUXCONFIG environment variable must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application specified a value for the
+TUXCONFIG
+environment variable that is a simple or relative pathname, not
+beginning with slash (/).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+environment variable to be an absolute pathname and re-execute
+the program.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1309"></A>
+<H3>LIBTUX MESSAGE #1309</H3>
+<H2> ERROR: tpcommit failed to send message to TMS server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application called
+tpcommit(),
+which tried to send a request to the
+transaction manager server for processing.
+No entry was found for the transaction manager server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other messages indicating why the request failed.
+Check that the transaction manager servers are available for
+all resource managers involved in the application service.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcommit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1351"></A>
+<H3>LIBTUX MESSAGE #1351</H3>
+<H2> ERROR: Performed tpforward() with outstanding conversations</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application called
+tpforward()
+while there were outstanding conversations
+(for example, after calling
+tpconnect()
+but before receiving a disconnect).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the application such that
+tpforward()
+is called only after all conversations and asynchronous request
+responses have been processed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpconnect(3),
+tpforward(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1353"></A>
+<H3>LIBTUX MESSAGE #1353</H3>
+<H2> ERROR: tpopen failed - <I>tperrno_msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The default
+tpsvrinit()
+function called
+tpopen(),
+which returned an error.
+The message,
+<I>tperrno_msg</I>,
+indicates the reason for the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Most likely, an error occurred in the resource manager.
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpopen(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1354"></A>
+<H3>LIBTUX MESSAGE #1354</H3>
+<H2> ERROR: Another application is using IPC key <I>ipckey</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The IPC key,
+<I>ipckey</I>,
+specified in the *RESOURCES section of the
+UBBCONFIG
+file is being used by another TUXEDO System application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+IPCKEY
+value, reload the configuration file, and
+boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1355"></A>
+<H3>LIBTUX MESSAGE #1355</H3>
+<H2> ERROR: Cannot find *MACHINES entry for MASTER <I>master</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When joining the application, a client or server cannot find the
+configuration entry for the
+MASTER
+machine,
+<I>master</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This should not occur since it is checked when the configuration
+is loaded or updated.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1367"></A>
+<H3>LIBTUX MESSAGE #1367</H3>
+<H2> ERROR: Expired TUXEDO System Binary License</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System/T master binary is not properly licensed, or
+the expiration date on an evaluation copy has been reached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1369"></A>
+<H3>LIBTUX MESSAGE #1369</H3>
+<H2> ERROR: Exceeded 110% of TUXEDO System Binary Licensed User Count (<I>current</I>/<I>max</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The number of users of a TUXEDO System/T master binary has reached
+110% of the maximum allowed users.
+The client will fail to join the application.
+The current number of clients and the maximum number of clients are
+printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The administrator should increase the number of licensed users.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1370"></A>
+<H3>LIBTUX MESSAGE #1370</H3>
+<H2> WARN: Reached 100% of TUXEDO System Binary Licensed User Count (<I>current</I>/<I>max</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The number of users of a TUXEDO System/T master binary has reached
+100% of the maximum allowed users.
+The current number of clients and the maximum number of clients are
+printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The administrator should increase
+the number of licensed users.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1371"></A>
+<H3>LIBTUX MESSAGE #1371</H3>
+<H2> INFO: Reached 90% of TUXEDO System Binary Licensed User Count (<I>current</I>/<I>max</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The number of users of a TUXEDO System/T master binary has reached
+90% of the maximum allowed users.
+The current number of clients and the maximum number of clients are
+printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this happens often, the administrator should consider increasing
+the number of licensed users.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1372"></A>
+<H3>LIBTUX MESSAGE #1372</H3>
+<H2> ERROR: tpsuspend xa_end returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The call to
+xa_end
+from within
+tpsuspend
+returned the XA error value
+<I>errstring</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+Contact your TUXEDO System Technical Support or resource manager vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1373"></A>
+<H3>LIBTUX MESSAGE #1373</H3>
+<H2> ERROR: Wrong transaction state <I>statestring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpsuspend
+was called while the transaction was not in an active state
+(for example,
+tpabort
+or
+tpcommit
+had already been called).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the application such that it does not call
+tpsuspend
+unless it is the current owner of the transaction.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsuspend(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1374"></A>
+<H3>LIBTUX MESSAGE #1374</H3>
+<H2> ERROR: tpresume xa_start flags <I>flagval</I> returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The call to
+xa_start
+from within
+tpresume
+with the XA flag value
+<I>flagval</I>
+(either
+TMJOIN
+or
+TMNOFLAGS )
+returned the XA error value
+<I>errstring</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error reporting mechanism for the associated resource
+manager to determine the cause of the problem.
+Contact your TUXEDO System Technical Support or resource manager vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1376"></A>
+<H3>LIBTUX MESSAGE #1376</H3>
+<H2> WARN: <I>variable</I> value <I>string</I> in environment does
+not match configuration <I>string</I> </H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While putting variables into the environment for either the
+machine or server
+ENVFILE
+file, the
+TUXCONFIG ,
+TUXOFFSET ,
+TUXDIR ,
+or
+APPDIR
+variable was encountered and its value did not match the associated
+value in the configuration file.
+This variable cannot be overridden in the
+ENVFILE
+and its value is taken from the *MACHINES section of the configuration
+file for the associated machine.
+The modified value will not be put into the environment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1377"></A>
+<H3>LIBTUX MESSAGE #1377</H3>
+<H2> ERROR: Memory allocation failure for post receive</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the
+operating system using
+malloc()
+failed while
+performing a
+"post receive"
+operation on a typed buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1378"></A>
+<H3>LIBTUX MESSAGE #1378</H3>
+<H2> ERROR: Transaction counter &lt;= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of starting a new transaction, the system makes
+a unique transaction identifier that is based, in part,
+on a system counter.  If for some reason the counter
+was corrupted, this message is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+The bulletin board shared memory has probably been
+corrupted by a stray pointer or some other problem.
+Consider running tmadmin's <Font>bbclean command
+to verify the sanity of this site's bulletin board.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1380"></A>
+<H3>LIBTUX MESSAGE #1380</H3>
+<H2> ERROR: Still in transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service routine explicitly started a transaction but did not
+commit or abort it before calling
+tpreturn .
+The transaction was aborted by the system, and the
+caller received a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the service routine to resolve the transaction
+before calling
+tpreturn .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1381"></A>
+<H3>LIBTUX MESSAGE #1381</H3>
+<H2> ERROR: Cannot lock bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of
+tpreturn 's
+processing in transaction mode,
+an attempt to lock the bulletin board failed.
+The transaction was aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory, an invalid application
+IPCKEY ,
+or if two applications are using the same
+IPCKEY .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1382"></A>
+<H3>LIBTUX MESSAGE #1382</H3>
+<H2> ERROR: Cannot unlock bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of
+tpreturn 's
+processing in transaction mode,
+an attempt to unlock the bulletin board failed.
+The transaction was aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory, an invalid application
+IPCKEY ,
+or if two applications are using the same
+IPCKEY .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1383"></A>
+<H3>LIBTUX MESSAGE #1383</H3>
+<H2> ERROR: Cannot get counter value for new transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of starting a new transaction, the system makes
+a unique transaction identifier that is based, in part,
+on a system counter.  If for some reason the counter
+was corrupted, this message is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+The bulletin board shared memory has probably been
+corrupted by a stray pointer or some other problem.
+Consider running tmadmin's <Font>bbclean command
+to verify the sanity of this site's bulletin board.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1384"></A>
+<H3>LIBTUX MESSAGE #1384</H3>
+<H2> ERROR: xa_start flags <I>flags</I> returned <I>errcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if a process attempting to start
+a new transaction encounters an error when calling the
+database resource manager's
+xa_start() routine.
+The transaction fails to begin.  The message prints the
+flags passed to xa_start() and the error code that
+xa_start() returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.
+The database system documentation or error logs may contain
+more information about why xa_start() failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1385"></A>
+<H3>LIBTUX MESSAGE #1385</H3>
+<H2> ERROR: xa_end returned <I>errcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if a process attempting to commit
+a transaction encounters an error when calling the
+database resource manager's
+xa_end() routine.
+The transaction will be aborted.  The message prints the
+error code that
+xa_end() returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.
+The database system documentation or error logs may contain
+more information about why xa_end() failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1386"></A>
+<H3>LIBTUX MESSAGE #1386</H3>
+<H2> ERROR: xa_abort returned <I>errcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if a process attempting to commit
+a transaction could not lock the bulletin board.
+It then attempted to roll back the transaction, and
+encountered an error when calling the
+database resource manager's
+xa_rollback() routine [previously known as <Font>xa_abort()].
+The message prints the
+error code that
+xa_rollback() returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.
+The database system documentation or error logs may contain
+more information about why xa_rollback() failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1387"></A>
+<H3>LIBTUX MESSAGE #1387</H3>
+<H2> ERROR: xa_commit returned <I>errcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if a process attempting to commit
+a transaction
+encountered an error when calling the
+database resource manager's
+xa_commit() routine.
+The message prints the
+error code that
+xa_commit() returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.
+The database system documentation or error logs may contain
+more information about why xa_commit() failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1388"></A>
+<H3>LIBTUX MESSAGE #1388</H3>
+<H2> ERROR: Wrong transaction state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when a transaction cannot be
+committed because the process is in an invalid
+transaction state (that is, a protocol violation).
+The process may have already called
+tpcommit(3) or <Font>tpabort(3) to resolve
+the transaction's state, and therefore is no longer
+in transaction mode.
+This message
+also prints out the current transaction state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the userlog for more information about this
+transaction's completion.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1389"></A>
+<H3>LIBTUX MESSAGE #1389</H3>
+<H2> ERROR: xa_end returned <I>errcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if a process attempting to abort
+a transaction encounters an error when calling the
+database resource manager's
+xa_end() routine.
+The message prints the
+error code that
+xa_end() returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.
+The database system documentation or error logs may contain
+more information about why xa_end() failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1390"></A>
+<H3>LIBTUX MESSAGE #1390</H3>
+<H2> ERROR: Too many groups in transaction, cannot add <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred while attempting to add a group to a
+transaction because the maximum number of groups allowed in
+a transaction has been reached.
+The transaction will be aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If possible, reduce the number of groups required for the particular
+operation, or call some of them with the TPNOTRAN flag.
+Using tpenqueue() may allow some work involving additional groups
+to be done later as part of another transaction.
+If that is not possible, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1391"></A>
+<H3>LIBTUX MESSAGE #1391</H3>
+<H2> WARN: tpreturn called outside service routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() was called in an invalid context.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application code calling tpreturn().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1392"></A>
+<H3>LIBTUX MESSAGE #1392</H3>
+<H2> WARN: tpreturn called with invalid flags 0x<I>flags</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() was called with an invalid flag parameter.
+This userlog message is issued because control will not return to the
+service routine.  Instead, the process invoking the
+service routine will receive a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application code calling tpreturn().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1393"></A>
+<H3>LIBTUX MESSAGE #1393</H3>
+<H2> WARN: tpreturn called with TPEXIT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() was called with the TPEXIT flag value.
+This userlog message is issued because control will not return to the
+service routine, and the server process will be restarted.
+The process invoking the
+service routine will receive a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the application developer to learn why
+the server process failed and requested a restart.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1394"></A>
+<H3>LIBTUX MESSAGE #1394</H3>
+<H2> WARN: tpreturn called with invalid rval <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() was called with an invalid rval parameter.
+This userlog message is issued because control will not return to the
+service routine.  Instead, the process invoking the
+service routine will receive a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application code calling tpreturn().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1395"></A>
+<H3>LIBTUX MESSAGE #1395</H3>
+<H2> WARN: tpreturn failed because connection not SENDONLY</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() was called in an invalid conversational context.
+The caller should be in SENDONLY mode when attempting to successfully
+end the conversation.
+This userlog message is issued because control will not return to the
+service routine.  Instead, the process invoking the
+service routine will receive a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application logic so that the service routine
+has SENDONLY control of the conversation before calling tpreturn().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpconnect(3),
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1396"></A>
+<H3>LIBTUX MESSAGE #1396</H3>
+<H2> WARN: tpreturn failed because subordinate conversations open</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() was called in an invalid conversational context.
+The caller should successfully end all conversations it initiated
+before calling tpreturn() with TPSUCCESS.
+This userlog message is issued because control will not return to the
+service routine.  Instead, the process invoking the
+service routine will receive a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application logic so that the service routine
+ends all conversations it started
+before calling tpreturn().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpconnect(3),
+tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1397"></A>
+<H3>LIBTUX MESSAGE #1397</H3>
+<H2> WARN: tpreturn transaction processing failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpreturn() encountered a transaction processing error,
+and the transaction will be aborted (if it has not been already).
+One possible cause might be the service routine ran
+for a very long time, and the transaction timed out before
+tpreturn() was called.
+This userlog message is issued because control will not return to the
+service routine.
+The process invoking the
+service routine will receive an error return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the userlog for more information about this
+transaction's completion.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1398"></A>
+<H3>LIBTUX MESSAGE #1398</H3>
+<H2> WARN: tpforward called outside service routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpforward() was called in an invalid context.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application code calling tpforward().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpforward(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1399"></A>
+<H3>LIBTUX MESSAGE #1399</H3>
+<H2> WARN: tpforward called with invalid flags 0x<I>flags</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpforward() was called with an invalid flag parameter.
+This userlog message is issued because control will not return to the
+service routine.  Instead, the process invoking the
+service routine will receive a TPESVCERR return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the application code calling tpforward().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpforward(3)
+<SECT1><P>
+<H1>LIBTUX MESSAGES 1400-1499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1401"></A>
+<H3>LIBTUX MESSAGE #1401</H3>
+<H2> WARN: tpforward tpacall failure <I>errcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service routine's tmforward() request failed because
+an underlying tpacall() failed.  The error code
+from tpacall() is displayed as part of this message.
+This userlog message is issued because control will not return to the
+service routine.  Instead, the process invoking the
+service routine will receive a TPESVCFAIL return code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Diagnose this problem based on the error return code shown
+in the userlog message.
+One likely cause is that the service being forwarded to
+is not available.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpacall(3),
+tpforward(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1406"></A>
+<H3>LIBTUX MESSAGE #1406</H3>
+<H2> ERROR: Memory allocation failure within interoperability processing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc() failed while doing interoperability processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc(3) in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1407"></A>
+<H3>LIBTUX MESSAGE #1407</H3>
+<H2> WARN: TMDEBUG regular expression invalid.  Ignoring regular expression.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A system debugging enabled binary is being used, and the debugging value
+provided via the environment contains an invalid regular expression.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1409"></A>
+<H3>LIBTUX MESSAGE #1409</H3>
+<H2> ERROR: Suspended client attempting to generate new request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A suspended client attempted to inject new work into the domain.
+Clients are suspended by the application administrator using either the
+/AdminGUI or /AdminAPI.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to determine why the client was
+suspended and when they might expect to be unsuspended.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO Graphical Administration Guide" ,
+tpacall(3),
+tpcall(3),
+MIB(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1410"></A>
+<H3>LIBTUX MESSAGE #1410</H3>
+<H2> ERROR: Suspended client attempting to generate new request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A suspended client attempted to inject new work into the domain.
+Clients are suspended by the application administrator using either the
+/AdminGUI or /AdminAPI.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to determine why the client was
+suspended and when they might expect to be unsuspended.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO Graphical Administration Guide" ,
+tpacall(3),
+tpcall(3),
+MIB(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1411"></A>
+<H3>LIBTUX MESSAGE #1411</H3>
+<H2> ERROR: Suspended client attempting to generate new conversation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A suspended client attempted to start a new conversation.
+Clients are suspended by the application administrator using either the
+/AdminGUI or /AdminAPI.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to determine why the client was
+suspended and when they might expect to be unsuspended.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO Graphical Administration Guide" ,
+tpconnect(3),
+MIB(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1412"></A>
+<H3>LIBTUX MESSAGE #1412</H3>
+<H2> ERROR: Suspended client attempting to start new transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A suspended client attempted to start a new transaction.
+Clients are suspended by the application administrator using either the
+/AdminGUI or /AdminAPI.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to determine why the client was
+suspended and when they might expect to be unsuspended.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO Graphical Administration Guide" ,
+tpbegin(3),
+MIB(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1413"></A>
+<H3>LIBTUX MESSAGE #1413</H3>
+<H2> WARN: Client aborting processing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The client generating the userlog message has been administratively set
+to a state of DEAD.
+This has been detected within the TUXEDO System libraries invoked by the
+client, and the client is abortively terminating processing via a call
+to abort().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to see why the client was
+abortively terminated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1414"></A>
+<H3>LIBTUX MESSAGE #1414</H3>
+<H2> WARN: Client aborting processing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The client generating the userlog message has been administratively set
+to a state of DEAD.
+This has been detected within the TUXEDO System libraries invoked by the
+client, and the client is abortively terminating processing via a call
+to abort().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to see why the client was
+abortively terminated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1415"></A>
+<H3>LIBTUX MESSAGE #1415</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc() failed while performing server initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc(3) in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1416"></A>
+<H3>LIBTUX MESSAGE #1416</H3>
+<H2> ERROR: Server group active on primary location</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server attempted to boot on the backup site for its server group while
+servers in the group were active on the group's primary site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Restart the server on the primary site.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1417"></A>
+<H3>LIBTUX MESSAGE #1417</H3>
+<H2> ERROR: Application initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An application initialization failure occurred in the tpsvrinit(3)
+processing for a dynamically spawned conversational server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine application specific code to determine the cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Programmer's Guide" ,
+tpopen(3),
+tpsvrinit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1418"></A>
+<H3>LIBTUX MESSAGE #1418</H3>
+<H2> ERROR: invalid server group information given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Server group deletion was invoked with invalid server group
+information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1419"></A>
+<H3>LIBTUX MESSAGE #1419</H3>
+<H2> ERROR: Cannot advertise service names beginning with '.'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An application server attempted to advertise a reserved service name
+(that is, one beginning with the character '.') during server
+initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the configuration file entry and/or the tpsvrinit(3)
+processing for the server to avoid attempts to advertise reserved
+service names.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO Programmer's Guide" ,
+tpadvertise(3),
+tpsvrinit(3),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1420"></A>
+<H3>LIBTUX MESSAGE #1420</H3>
+<H2> ERROR: Cannot advertise service names beginning with '.'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An application server attempted to advertise a reserved service name
+(that is, one beginning with the character '.') during server
+initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the configuration file entry and/or the tpsvrinit(3)
+processing for the server to avoid attempts to advertise reserved
+service names.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO Programmer's Guide" ,
+tpadvertise(3),
+tpsvrinit(3),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1421"></A>
+<H3>LIBTUX MESSAGE #1421</H3>
+<H2> ERROR: Out of order routing table found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configuration file routing table was in an inconsistent state and
+could not be processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove your TUXEDO System configuration file, reconfigure the
+application, and reboot.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot(1),
+tmconfig(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1422"></A>
+<H3>LIBTUX MESSAGE #1422</H3>
+<H2> WARN: Cannot compute field name <I>fldname</I> view offset for criteria <I>crit</I> type <I>typ</I> subtype <I>subtyp</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system could not map the field name <I>fldname</I> to a corresponding
+view offset while processing routing criteria <I>crit</I> for buffer type
+<I>typ</I> and subtype <I>subtyp</I>.
+The indicated criteria entry is added to the bulletin board; however,
+routing using this criteria will not succeed from this site due to the
+field name mapping problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the environment file for the site in question to ensure that the
+appropriate environment variables (that is, FIELDTBLS,
+FLDTBLDIR, <Font>VIEWDIR, and <Font>VIEWFILES) are set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+compilation(5),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1423"></A>
+<H3>LIBTUX MESSAGE #1423</H3>
+<H2> WARN: Cannot route on unknown buffer type <I>typ</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A *ROUTING section entry was specified in the <Font>ubbconfig(5)
+file that referenced an unsupported buffer type for preconfigured
+*ROUTING entries.
+The entry in question is ignored by the system and processing
+continues.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the entry to use one of the supported types or remove the entry
+from the configuration file altogether.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1424"></A>
+<H3>LIBTUX MESSAGE #1424</H3>
+<H2> ERROR: Routing field <I>fld</I> type mismatch for routing criteria <I>crit</I>, type <I>typ</I><I>sep</I><I>subtyp</I>, ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing field <I>fld</I> had a different data type in routing
+criteria entry <I>crit</I> for buffer type <I>typ</I> and subtype
+<I>subtyp</I> than it did for an earlier buffer type in the same routing
+entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Split the routing specification for the two buffer types into separate
+entries, each with routing rules appropriate for the data type of the
+field in that buffer type.
+Alternatively, the buffer types themselves may be changed to bring the
+data types into alignment.
+This would typically mean modifying an FML field or a VIEW
+specification.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+"TUXEDO FML Guide" ,
+tmloadcf(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1425"></A>
+<H3>LIBTUX MESSAGE #1425</H3>
+<H2> WARN: Duplicate routing criteria <I>crit</I> type <I>typ</I> combination ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routing criteria <I>crit</I>, buffer type combination <I>typ</I> was
+specified more than once in the *ROUTING section of the
+ubbconfig(5) file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the configuration file to remove the duplicate entry, and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1426"></A>
+<H3>LIBTUX MESSAGE #1426</H3>
+<H2> ERROR: Insufficient routing table space to create entry for criteria <I>crit</I> type <I>typ</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated routing criteria type combination (<I>crit/typ</I>) could
+not be created due to table size restrictions in the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the sizes of the bulletin board tables and reboot the
+application.
+These parameters include MAXDRT, <Font>MAXRFT, and
+MAXRTDATA.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1427"></A>
+<H3>LIBTUX MESSAGE #1427</H3>
+<H2> ERROR: System error(<I>tperrmsg</I>) creating routing table for criteria <I>crit</I> type <I>typ</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System error indicated by <I>tperrmsg</I> occurred while
+attempting to create a new routing criteria table entry for
+<I>crit/typ</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1428"></A>
+<H3>LIBTUX MESSAGE #1428</H3>
+<H2> ERROR: Cannot map field name <I>fld</I> to field identifier for criteria <I>crit</I> type <I>typ</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated *ROUTING section entry could not be added to the
+bulletin board because the specified field name <I>fld</I> could not be
+mapped to a field identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the environment file for the site in question to ensure that the
+environment variables FIELDTBLS and <Font>FLDTBLDIR are set
+correctly for the application.
+Also check that the field name is specified correctly in the
+ubbconfig(5) file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf(1),
+compilation(5),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1429"></A>
+<H3>LIBTUX MESSAGE #1429</H3>
+<H2> ERROR: Cannot compute field name <I>fldname</I> view offset for criteria <I>crit</I> type <I>typ</I> subtype <I>subtyp</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system could not map the field name <I>fldname</I> to a corresponding
+view offset while processing routing criteria <I>crit</I> for buffer type
+<I>typ</I> and subtype <I>subtyp</I>.
+The indicated routing criteria is ignored and processing continues.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the environment file for the site in question to ensure that the
+appropriate environment variables (that is, FIELDTBLS, <Font>FLDTBLDIR,
+VIEWDIR, and <Font>VIEWFILES) are set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+compilation(5),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1430"></A>
+<H3>LIBTUX MESSAGE #1430</H3>
+<H2> WARN: Ignoring routing entry <I>crit</I>, invalid buffer type specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Routing criteria <I>crit</I> is ignored by the system due to invalid
+buffer types being specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+*ROUTING section entries must use only system supported buffer
+types as defined in ubbconfig.
+Correct the configuration file to conform to this restriction, rerun
+tmloadcf(1), and reboot the system (<Font>tmboot(1)).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot(1),
+tmloadcf(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1431"></A>
+<H3>LIBTUX MESSAGE #1431</H3>
+<H2> WARN: Cannot compute field name <I>fldname</I> view offset for criteria <I>crit</I> type <I>typ</I> subtype <I>subtyp</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system could not map the field name <I>fldname</I> to a corresponding
+view offset while processing routing criteria <I>crit</I> for buffer type
+<I>typ</I> and subtype <I>subtyp</I>.
+The indicated criteria entry is added to the bulletin board; however,
+routing using this criteria will not succeed from this site due to the
+field name mapping problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the environment file for the site in question to ensure that the
+appropriate environment variables (that is, FIELDTBLS,
+FLDTBLDIR, <Font>VIEWDIR, and <Font>VIEWFILES) are set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+compilation(5),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1432"></A>
+<H3>LIBTUX MESSAGE #1432</H3>
+<H2> ERROR: Corrupted routing range table found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configuration file routing table was in an inconsistent state and
+could not be processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove your TUXEDO System configuration file, reconfigure the
+application, and reboot.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmboot(1),
+tmconfig(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1433"></A>
+<H3>LIBTUX MESSAGE #1433</H3>
+<H2> WARN: Invalid trace category; trace point ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The category (for example, atmi)
+associated with a trace point is not a known category.
+The trace point was therefore ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmtrace (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1434"></A>
+<H3>LIBTUX MESSAGE #1434</H3>
+<H2> ERROR: Invalid trace specification; ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A syntactically incorrect trace specification was supplied
+as the value of the
+TMTRACE
+environment variable.
+The trace specification was ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Provide a legal string for the trace specification.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmtrace (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1435"></A>
+<H3>LIBTUX MESSAGE #1435</H3>
+<H2> WARN: Invalid regular expression in trace specification (receiver); ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A syntactically incorrect regular expression was supplied
+as part of the <I>receiver-spec</I> in the trace specification string.
+The regular expression was ignored;
+consequently, all trace points that passed the filter
+were emitted to the receiver.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Provide a legal regular expression in the <I>receiver-spec</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmtrace (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1438"></A>
+<H3>LIBTUX MESSAGE #1438</H3>
+<H2> WARN: Trigger failed - system(<I>status</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The execution of the trigger that was executed for a particular trace point failed.
+The trigger was specified in the trace specification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmtrace (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1439"></A>
+<H3>LIBTUX MESSAGE #1439</H3>
+<H2> WARN: Invalid regular expression in trace specification (trigger); ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A syntactically incorrect regular expression was supplied
+as part of the <I>trigger-spec</I> in the trace specification string.
+The regular expression was ignored;
+consequently, the trigger was executed for
+all trace points that passed the filter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Provide a legal regular expression in the <I>trigger-spec</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmtrace (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1440"></A>
+<H3>LIBTUX MESSAGE #1440</H3>
+<H2> ERROR: Invalid trace trigger; ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The action (for example, dye)
+specified in the trigger-spec of a trace specification
+is not a known action.
+The trigger was therefore not executed for a trace point
+that passed the filter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Provide a valid trigger action in the trace specification.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmtrace (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1441"></A>
+<H3>LIBTUX MESSAGE #1441</H3>
+<H2> ERROR: tpcommit message failure, check GTT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when the system encounters
+an error trying to receive the reply to a request
+sent to a TMS to complete a transaction.
+The message is typically issued when a system-level
+failure occurs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the userlog for more information about this
+transaction's completion and about any communication
+error that may have occurred.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction, and use the printnet command
+to see the status of all machine connections in the network.
+This command will report any network partitions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1461"></A>
+<H3>LIBTUX MESSAGE #1461</H3>
+<H2> ERROR: Could not advertise <I>servicename</I>.  Specify all functions at buildserver time.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+All functions that can handle service name associations must be specified
+at buildserver time.
+This can be done using the -s</I> <I>:functionname</I> option
+to buildserver.
+For example, in order to allow services to be associated
+with the function foo dynamically, the <Font>buildserver line would
+include the -s :foo option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add all functions that can be dynamically associated with a service name
+to the buildserver command line.
+If there are many functions of this
+variety, the -s</I> <I>@filename</I> option allows the developer to specify a file
+which buildserver will parse.
+Each line of this file is considered
+to be an argument to the -s option.
+This file can be commented by
+using a '#' character in the first character position on a line.
+On the SunOS 4.1.3 platform,
+set the CFLAGS=-PIC when running the buildserver command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1463"></A>
+<H3>LIBTUX MESSAGE #1463</H3>
+<H2> ERROR: Error parsing -s option.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The CLOPT option specified in <Font>ubbconfig(5) had a syntax error in the
+-s option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the servopts(5) and <Font>ubbconfig(5) manual pages for a description of the
+-s option in the <Font>CLOPT line.
+Then change the CLOPT line for this server
+such that it conforms to the proper syntax.
+Run tmloadcf(1) on the new
+ubbconfig, and reboot the affected server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1465"></A>
+<H3>LIBTUX MESSAGE #1465</H3>
+<H2> INFO: Duplicate advertisement of service <I>servicename</I> (func <I>functionname</I>) ignored.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The given association between <I>servicename</I> and <I>functionname</I> has already been
+advertised.
+Duplicates are ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+In order to eliminate this message, remove the duplicate service advertisement
+from either the buildserver command line or the <Font>CLOPT line for this server
+in the ubbconfig(5) file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1466"></A>
+<H3>LIBTUX MESSAGE #1466</H3>
+<H2> WARN: Overriding service <I>servicename</I> (func <I>functionname</I>) mapping given at buildserver time.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An association between a servicename and a functionname given at buildserver
+time has been overridden by the CLOPT line in the <Font>ubbconfig(5) file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The CLOPT line overrides associations made at buildserver time.
+If you
+wish to preserve the association made at buildserver time, then it will
+be necessary to remove the offending association in the CLOPT line of this
+server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1467"></A>
+<H3>LIBTUX MESSAGE #1467</H3>
+<H2> WARN: Skipping recursive export file.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -s</I> <I>@filename</I> option can be used with the <Font>CLOPT</I> line
+in the ubbconfig(5) file.
+However, the arguments within the file specified by <I>filename</I> cannot
+specify another file to open and parse.
+This practice is known as file recursion.
+File recursion is not supported by buildserver(1).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove any lines from <I>filename</I> which begin with the @ character.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1468"></A>
+<H3>LIBTUX MESSAGE #1468</H3>
+<H2> WARN: Could not open file <I>filename</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The file specified on the CLOPT line of this server in the
+ubbconfig</I>(5) file via the <Font>-s</I> <I>@filename</I> option does not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the given filename exists.
+One useful trick is to
+specify <I>filename</I> as a full path name, rather than a relative path name.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1469"></A>
+<H3>LIBTUX MESSAGE #1469</H3>
+<H2> ERROR: Error while parsing file <I>filename</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server was parsing the given <I>filename</I>.
+While parsing the file
+given via the -s</I> <I>@filename</I> option of the <Font>CLOPT</I>, the server encountered a
+syntax error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the file specified by the -s</I> <I>@filename</I> option.
+Make sure that
+each line is a valid argument to the -s option.
+The file may be commented
+if the first character of the comment line is "#".
+Blank lines are also acceptable.
+If the file is syntactically correct, then contact TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1470"></A>
+<H3>LIBTUX MESSAGE #1470</H3>
+<H2> WARN: Function <I>functionname</I> not specified at buildserver time.  <I>servicename</I> will not be advertised.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+All functions which can handle service name associations must be specified
+at buildserver time.
+This can be done using the -s</I> <I>:functionname</I> option
+to buildserver.
+For example, in order to allow services to be associated
+with the function foo dynamically, the <Font>buildserver line would
+include the -s :foo option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add all functions which can be dynamically associated with a service name
+to the buildserver command line.
+If there are many functions of this
+variety, the -s</I> <I>@filename</I> option allows the developer to specify a file
+which buildserver will parse.
+Each line of this file is considered
+to be an argument to the -s option.
+This file can be commented by
+using a '#' character in the first character position on a line.
+On the SunOS 4.1.3 platform,
+set the CFLAGS=-PIC when running the buildserver command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1471"></A>
+<H3>LIBTUX MESSAGE #1471</H3>
+<H2> ERROR: Memory allocation failure.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to create a table for service advertisements, the system
+ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory of the system.
+If it appears that there should be enough
+memory to run this server, then contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1472"></A>
+<H3>LIBTUX MESSAGE #1472</H3>
+<H2> WARN: Function name must be &lt;= <I>number</I> characters in length; <I>functionname</I> will be truncated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Function names are restricted in length.
+If a given function name is longer
+than this maximum length, then that function name will be truncated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the length of the function name.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1473"></A>
+<H3>LIBTUX MESSAGE #1473</H3>
+<H2> WARN: Service name must be &lt;= <I>number</I> characters in length; <I>servicename</I> will be truncated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Service names are restricted in length.
+If a given service name is longer
+than this maximum length, then that service name will be truncated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the length of the service name.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1475"></A>
+<H3>LIBTUX MESSAGE #1475</H3>
+<H2> ERROR: .SysServerCleaning: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> server cleaning</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above died abnormally
+and the BBL cleaned up the slot allocated by the server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Debug the server and fix the problem before it is restarted again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1476"></A>
+<H3>LIBTUX MESSAGE #1476</H3>
+<H2> ERROR: .SysServerRestarting: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> server restarting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above died abnormally;
+and since this has been marked as a restartable server, it has been
+restarted.
+<P>
+This message is also printed during normal migration of the DBBL
+from the master to the backup.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+TUXEDO application servers should not ordinarily die abnormally.
+This error is most likely due to an application-specific problem.
+Debug the server and resolve the problem before restarting the server
+again.
+<P>
+If it occurs for the DBBL during migration, it can be ignored.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1477"></A>
+<H3>LIBTUX MESSAGE #1477</H3>
+<H2> ERROR: .SysServerDied: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> server died</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above died abnormally
+and the BBL detected this condition in its periodic scan of the BB.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Debug the server and fix the problem before it is restarted again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1478"></A>
+<H3>LIBTUX MESSAGE #1478</H3>
+<H2> ERROR: .SysServerInit: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> server initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above failed in
+tpsvrinit() and therefore could not be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Fix the problem and then reboot the server.
+The problem can be due to a TUXEDO resource limit or an
+application-specific problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1479"></A>
+<H3>LIBTUX MESSAGE #1479</H3>
+<H2> ERROR: .SysServerTpexit: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> server requested TPEXIT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above
+received a request, and the service routine code did a
+tpreturn(TPEXIT) while the server was executing
+application-specific code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1480"></A>
+<H3>LIBTUX MESSAGE #1480</H3>
+<H2> ERROR: .SysServerMaxgen: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> server exceeded MAXGEN LIMIT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above died abnormally;
+and since this has been marked as a restartable server, it has been
+restarted MAXGEN-1 times in the specified GRACE period.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+TUXEDO application servers should not ordinarily die abnormally.
+This error is most likely due to an application-specific problem.
+Debug the server and resolve the problem before restarting the server
+again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1481"></A>
+<H3>LIBTUX MESSAGE #1481</H3>
+<H2> WARN: .SysClientDied: User <I>usrname</I> on <I>LMID</I> client died</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above
+exited the application without doing a tpterm().
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+In the normal way, the clients should do a tpterm() before exiting
+the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1482"></A>
+<H3>LIBTUX MESSAGE #1482</H3>
+<H2> INFO: .SysClientState: User <I>usrname</I> on <I>LMID</I> state change to <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above
+changed to a new state.
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1483"></A>
+<H3>LIBTUX MESSAGE #1483</H3>
+<H2> INFO: .SysClientState: User <I>usrname</I> on <I>LMID</I> state change to <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above
+changed to a new state.
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1484"></A>
+<H3>LIBTUX MESSAGE #1484</H3>
+<H2> WARN: .SysClientSecurity: User <I>usrname</I> on <I>LMID</I> authentication failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above
+failed security validation when trying to join the application.
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that this is not some hacker trying to gain access to
+your application data.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1485"></A>
+<H3>LIBTUX MESSAGE #1485</H3>
+<H2> ERROR: .SysNetworkDropped: <I>LMID1</I>-><I>LMID2</I> connection dropped</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the network link between the two machines
+specified was dropped abnormally.
+A complete listing of the current parameters are sent along in the
+posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This can happen either because the BRIDGE on either machine died or one
+of the machines crashed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1486"></A>
+<H3>LIBTUX MESSAGE #1486</H3>
+<H2> ERROR: .SysNetworkFailure: <I>LMID1</I>-><I>LMID2</I> connection failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the BRIDGE process on <I>LMID1</I> could not
+make a network connection to the BRIDGE process on <I>LMID2</I>.
+A complete listing of the current parameters are sent along in the
+posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This can happen either because the BRIDGE on the remote machine died or
+the remote machine itself crashed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1488"></A>
+<H3>LIBTUX MESSAGE #1488</H3>
+<H2> WARN: .SysMachineFullMaxconv: <I>LMID</I> capacity limit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the given <I>LMID</I> reached the capacity
+limit on the number of concurrent conversations.
+A complete listing of the current parameters
+for the given <I>LMID</I> are sent along in the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the value of MAXCONV for the particular machine
+such that this event is not generated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1489"></A>
+<H3>LIBTUX MESSAGE #1489</H3>
+<H2> WARN: .SysMachineFullMaxgtt: <I>LMID</I> capacity limit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the given <I>LMID</I> reached the capacity
+limit on the number of concurrent transactions.
+A complete listing of the current parameters
+for the given <I>LMID</I> are sent along in the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the value of MAXGTT for the particular machine
+such that this event is not generated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1490"></A>
+<H3>LIBTUX MESSAGE #1490</H3>
+<H2> WARN: .SysMachineFullMaxwsclients: <I>LMID</I> capacity limit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the given <I>LMID</I> reached the capacity
+limit on the number of WS clients.
+A complete listing of the current parameters
+for the given <I>LMID</I> are sent along in the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the value of MAXWSCLIENTS for the particular machine
+such that this event is not generated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1491"></A>
+<H3>LIBTUX MESSAGE #1491</H3>
+<H2> WARN: .SysMachineFullMaxaccessers: <I>LMID</I> capacity limit</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the given <I>LMID</I> reached the capacity
+limit on the number of accessers.
+A complete listing of the current parameters
+for the given <I>LMID</I> are sent along in the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the MAXACCESSERS for the particular machine or, if the
+hardware/software limits have been reached for the maximum number of
+users on the machine, move additional users to other machines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1492"></A>
+<H3>LIBTUX MESSAGE #1492</H3>
+<H2> ERROR: .SysMachinePartitioned: <I>LMID</I> is partitioned</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the DBBL partitioned the stated machine
+either because the BBL on the machine is slow or the network link
+between the master and the machine is broken.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This can be caused due to various reasons, the first one being that the
+entire network is bogged down due to heavy traffic.
+The second is that the BBL or BRIDGE on the non-master is either dead or
+slow.
+The third is that the BRIDGE process on the non-master is extremely
+busy.
+The software is capable of unpartitioning the machine if things
+stabilize.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1494"></A>
+<H3>LIBTUX MESSAGE #1494</H3>
+<H2> INFO: .SysNetworkFlow: <I>LMID1</I>-><I>LMID2</I> flow control</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending a message on the network, flow control has been
+detected.
+Machine parameters for both machines
+are sent along in the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is usually caused by heavy network trafic.
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1495"></A>
+<H3>LIBTUX MESSAGE #1495</H3>
+<H2> INFO: .SysMachineUnpartitioned: <I>LMID</I> is unpartitioned</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A machine that was partitioned (see message 1492) is again available
+to service requests.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1496"></A>
+<H3>LIBTUX MESSAGE #1496</H3>
+<H2> WARN: .SysMachineSlow: <I>machine</I> slow responding to DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+on
+<I>machine</I>
+sends an "I'm OK" message
+to the
+DBBL
+every time it performs a sanity check of its machine.
+This check occurs every
+"SANITYSCAN * SCANUNIT"
+seconds,
+as specified in the *RESOURCES section.
+Similarly, every BBLQUERY * <Font>SCANUNIT seconds,
+the
+DBBL
+performs a sanity check of all
+BBL s.
+If an "I'm OK" message has not been received from
+<I>machine</I>
+during the previous
+"BBLQUERY * SCANUNIT"
+seconds, the
+DBBL
+prints this warning message.
+Then an explicit sanity check is done over the network.
+If this check also fails,
+<I>machine</I>
+will be considered partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message indicates that there may be network
+congestion or an overload on
+<I>machine</I>.
+There is a risk that
+<I>machine</I>
+will become partitioned.
+<P>
+<UL>
+<LI><P>
+Check for networking problems between the
+two machines, or any cause of slow network
+response.
+<LI><P>
+Check for a CPU overload on
+<I>machine</I>
+that prevents the
+BBL
+process from running.
+<LI><P>
+Check for a CPU overload on
+the master machine
+that prevents the
+DBBL
+from processing messages in its queue.
+<LI><P>
+Adjust the
+BBLQUERY
+parameter so that it is
+larger than the
+SANITYSCAN
+parameter.
+A difference of ten seconds or more should prevent
+spurious warnings under most circumstances.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1497"></A>
+<H3>LIBTUX MESSAGE #1497</H3>
+<H2> WARN: .SysMachineMsgq: <I>LMID</I> message queue blocking</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server posting a message encountered a
+blocking condition while putting a message on the message queue.
+A complete listing of the machine parameters
+are sent along in the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Configure larger message queues and/or distribute the load equally on
+all the machines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1498"></A>
+<H3>LIBTUX MESSAGE #1498</H3>
+<H2> WARN: .SysMachineBroadcast: <I>LMID</I> broadcast delivery failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that tpbroadcast() failed for at least one
+accesser on <I>LMID</I> of the application.
+A complete listing of the machine parameters are sent along in the
+posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Since the broadcast messages are sent in no-blocking mode, it is
+possible that the process doing the broadcasting encountered a blocking
+condition and dropped a message.
+Configure larger message queues and/or load-balance clients/servers such
+that excessive load is not put on some machines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1499"></A>
+<H3>LIBTUX MESSAGE #1499</H3>
+<H2> ERROR: Unable to update security version number.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While updating one of the administrative security files, the version
+number could not be updated.
+This will cause a potential inconsistency between multiple active
+machines in the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to update the security information (users, groups, ACLs) again.
+If the message persists, shut down and re-boot the application,
+which will re-propagate the security files.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+MIB(5),
+TM_MIB(5)
+<SECT1><P>
+<H1>LIBTUX MESSAGES 1500-1599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1509"></A>
+<H3>LIBTUX MESSAGE #1509</H3>
+<H2> ERROR: failed to get shared memory, errno = <I>errno_number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server attempted to create the shared memory used for the
+ACL cache and failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration of shared memory on the system where the
+failure occurred.
+Increase the parameters to allow for more shared memory.
+The requirements can be reduced by setting MAXACLGROUPS and MAXACLCACHE
+lower.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1510"></A>
+<H3>LIBTUX MESSAGE #1510</H3>
+<H2> ERROR: failed to attach to shared memory, errno = <I>errno_number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server attempted to attach to the shared memory used for the
+ACL cache and failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration of shared memory on the system where the
+failure occurred.
+Increase the parameters to allow for more shared memory.
+The requirements can be reduced by setting MAXACLGROUPS and MAXACLCACHE
+lower.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1511"></A>
+<H3>LIBTUX MESSAGE #1511</H3>
+<H2> WARN: [Semaphore appears stuck - currently held by <I>pid</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a portion of the queue space
+(using a user-level semaphore),
+the process is unable to get the lock for a long period.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1512"></A>
+<H3>LIBTUX MESSAGE #1512</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the
+operating system using
+malloc()
+failed while
+performing ACL check.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1513"></A>
+<H3>LIBTUX MESSAGE #1513</H3>
+<H2> WARN: Unable to cleanup security files.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the security files are updated, modified and deleted entries
+are not immediately deleted.  Occasionally, these entries are
+cleaned up and one of these attempts failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.  The files will be cleaned up at a later time.
+This warning usually occurs when a cleanup was attempted when
+update activity was heavy.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1514"></A>
+<H3>LIBTUX MESSAGE #1514</H3>
+<H2> ERROR: Out of ACL cache entries.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When checking an access control list,
+the ACL cache ran out of entries.  A permissions violation will be
+returned to the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the application configuration to allow for more entries
+in the cache (MAXACLCACHE which is set on a per-machine basis).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1515"></A>
+<H3>LIBTUX MESSAGE #1515</H3>
+<H2> WARN: Access control violation - user <I>uid</I> on <I>LMID</I> tried to access <I>type</I> <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A client attempted to access a service, event, or queue for which it
+was not granted access via an access control list.
+The user identifier (configured in the user or principal file), the
+machine, entity type, and entity name are printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+The access will fail with an error
+and an event will be generated if configured.
+Further action may be required on the part of the security administrator.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1516"></A>
+<H3>LIBTUX MESSAGE #1516</H3>
+<H2> INFO: .SysACLPerm: User <I>uid</I> on <I>LMID</I> tried to access <I>type</I> <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This is the event that is generated when
+a client attempted to access a service, event, or queue for which it
+was not granted access via an access control list.
+The user identifier (configured in the user or principal file), the
+machine, entity type, and entity name are printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+The access will fail with an error
+and an event will be generated.
+Further action may be required on the part of the security administrator.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1517"></A>
+<H3>LIBTUX MESSAGE #1517</H3>
+<H2> INFO: .SysMachineState: <I>LMID</I> state change to INACTIVE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified machine changed to a new state of INACTIVE.
+A complete listing of the current parameters are sent along in the
+posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1518"></A>
+<H3>LIBTUX MESSAGE #1518</H3>
+<H2> INFO: .SysServerState: <I>servername</I>, group <I>srvgrp</I>, id <I>srvid</I> state change to <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the server specified above
+changed to a new state.
+A complete listing of the server attributes are sent in the posted
+buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1519"></A>
+<H3>LIBTUX MESSAGE #1519</H3>
+<H2> ERROR: TUXCONFIG value (<I>val</I>) is longer than the allowed length of <I>len</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value specified, <I>&lt;val></I>, in the TUXCONFIG</I> environment variable
+is longer than the allowed size of <I>&lt;len></I> characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value of your environment variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1520"></A>
+<H3>LIBTUX MESSAGE #1520</H3>
+<H2> ERROR: .SysTransactionHeuristicCommit: Transaction <I>gtrid</I> in group <I>grpno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the database in the group specified above
+performed heuristic commit on the transaction indicated in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the coordinator of the transaction is still up
+and running.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1521"></A>
+<H3>LIBTUX MESSAGE #1521</H3>
+<H2> ERROR: .SysTransactionHeuristicAbort: Transaction <I>gtrid</I> in group <I>grpno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the database in the group specified above
+performed heuristic abort on the transaction indicated in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the coordinator of the transaction is still up
+and running.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1523"></A>
+<H3>LIBTUX MESSAGE #1523</H3>
+<H2> ERROR: Unable to get APPDIR environment variable.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While reading the ACL information, the program was unable to
+get the APPDIR environment variable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Normally, this variable is automatically set for both clients and
+servers based on the application configuration.
+Call TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1524"></A>
+<H3>LIBTUX MESSAGE #1524</H3>
+<H2> WARN: Cannot set high priority for '<I>sub</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+On the Windows NT platform, the program was unable to set the priority
+class to HIGH_PRIORITY.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1526"></A>
+<H3>LIBTUX MESSAGE #1526</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to tpalloc() a buffer.
+Additional information is printed with the message indicating
+the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1527"></A>
+<H3>LIBTUX MESSAGE #1527</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to tprealloc() a buffer.
+Additional information is printed with the message indicating
+the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1528"></A>
+<H3>LIBTUX MESSAGE #1528</H3>
+<H2> ERROR: Invalid buffer passed to tpfree error=<I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A pointer was passed to tpfree() that is not a valid
+typed buffer (allocated with tpalloc()).
+Further information is printed with the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the application program so that only allocated
+buffers are passed to tpfree().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+tpfree(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1529"></A>
+<H3>LIBTUX MESSAGE #1529</H3>
+<H2> ERROR: Invalid buffer passed to tptypes error=<I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A pointer was passed to tptypes() that is not a valid
+typed buffer (allocated with tpalloc()).
+Further information is printed with the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the application program so that only allocated
+buffers are passed to tptypes().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+tptypes(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1530"></A>
+<H3>LIBTUX MESSAGE #1530</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to send a transaction message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1531"></A>
+<H3>LIBTUX MESSAGE #1531</H3>
+<H2> ERROR: Type switch buffer uninitialization routine failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a message and freeing up a buffer,
+the buffer unintialization function, _tmuninitbuf(), returned
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the buffer type switch to see that it is correctly set up
+(that the right uninitialization function is associated with
+the correct buffer type).
+If an application-defined buffer type, check the uninitialization
+function to see that it is coded correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer(3),
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1532"></A>
+<H3>LIBTUX MESSAGE #1532</H3>
+<H2> ERROR: Type switch buffer uninitialization routine failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While freeing up a buffer in tpreturn(),
+the buffer unintialization function, _tmuninitbuf(), returned
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the buffer type switch to see that it is correctly set up
+(that the right uninitialization function is associated with
+the correct buffer type).
+If an application-defined buffer type, check the uninitialization
+function to see that it is coded correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer(3),
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1533"></A>
+<H3>LIBTUX MESSAGE #1533</H3>
+<H2> ERROR: Type switch buffer uninitialization routine failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While freeing up a buffer in tpreturn(),
+the buffer unintialization function, _tmuninitbuf(), returned
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the buffer type switch to see that it is correctly set up
+(that the right uninitialization function is associated with
+the correct buffer type).
+If an application-defined buffer type, check the uninitialization
+function to see that it is coded correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer(3),
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1534"></A>
+<H3>LIBTUX MESSAGE #1534</H3>
+<H2> ERROR: Type switch buffer uninitialization routine failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While freeing up a buffer in tpforward(),
+the buffer unintialization function, _tmuninitbuf(), returned
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the buffer type switch to see that it is correctly set up
+(that the right uninitialization function is associated with
+the correct buffer type).
+If an application-defined buffer type, check the uninitialization
+function to see that it is coded correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer(3),
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1535"></A>
+<H3>LIBTUX MESSAGE #1535</H3>
+<H2> ERROR: Invalid Group-id to open RM</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpopen() or txopen() was called in a client
+that is not associated associated with a resource manager server
+group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Don't call tpopen() or txopen() from the client, or configure
+the client to be associated with a group using tpinit().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1536"></A>
+<H3>LIBTUX MESSAGE #1536</H3>
+<H2> ERROR: Invalid Group-id to close RM</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpclose() or txclose() was called in a client
+that is not associated associated with a resource manager server
+group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Don't call tpclose() or txclose() from the client, or configure
+the client to be associated with a group using tpinit().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1537"></A>
+<H3>LIBTUX MESSAGE #1537</H3>
+<H2> ERROR: tpclose called with ongoing transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpclose() was called while within a global transaction
+(that is, tpbegin() or txbegin() was called).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The transaction must be completed via tpcommit() or tpabort()
+before calling tpclose().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpabort(3),
+tpbegin(3),
+tpclose(3),
+tpcommit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1538"></A>
+<H3>LIBTUX MESSAGE #1538</H3>
+<H2> WARN: Could not lock Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The program was unable to get access to the TUXEDO Bulletin Board (BB)
+within a reasonable amount of processing, due to race conditions
+with other processes trying to lock the BB.
+The associated operation will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This should not occur often, if at all.  It occurs during a high
+level of concurrent access by many processes.
+Re-try the operation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1539"></A>
+<H3>LIBTUX MESSAGE #1539</H3>
+<H2> ERROR: Error getting Group Environment filename</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting a server, the associated group entry
+could not be found so any group environment file will
+not be processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This indicates a problem in opening or reading the
+application configuration.
+Look for other messages in the event log indicating the problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1540"></A>
+<H3>LIBTUX MESSAGE #1540</H3>
+<H2> ERROR: Error putting ENVFILE <I>filename</I> into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In the process of booting a server or starting a client, the
+ENVFILE
+specified in the GROUPS section of the configuration
+could not be accessed.
+The server will still be booted or the client will be started
+but the environment will not be modified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the group environment file to see that it exists
+in the correct directory with the right name and with read permission.
+It may be necessary to shutdown the client or server and re-start it with the
+correct environment.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1541"></A>
+<H3>LIBTUX MESSAGE #1541</H3>
+<H2> WARN: Invalid server pool option -p <I>argument</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The given argument is in an invalid format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The format for the -p option is
+-p [L][low-water][,[terminate_time]][:[high_water][,create_time]].  Reformat
+argument to comply with the format for -p.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+svropts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1542"></A>
+<H3>LIBTUX MESSAGE #1542</H3>
+<H2> ERROR: The -p option is valid only for SHM mode with load balancing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In order to use the server pool option -p, the application must be SHM mode
+and must have load balancing turned on.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the -p option from the CLOPT for the affected server.  Make sure the
+application is running in SHM mode.  Remember that SHM mode applications should
+have no *NETWORK section in the UBBCONFIG file and should have MODEL set to
+SHM.  Turn load balancing on in the application by specifying LDBAL to Y in
+the *RESOURCES section of the UBBCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+svropts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1543"></A>
+<H3>LIBTUX MESSAGE #1543</H3>
+<H2> ERROR: The -p option is not valid for conversational servers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In order to use the server pool option -p, the server must not be
+conversational.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the -p option from the CLOPT for the affected server.  Make sure the
+server is not conversational by specifying CONV=N in the *SERVERS section
+of the UBBCONFIG file for the affected server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+svropts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1544"></A>
+<H3>LIBTUX MESSAGE #1544</H3>
+<H2> ERROR: The -p option is valid only for MSSQ servers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In order to use the server pool option -p, the server must be in an MSSQ
+set where MAX is greater than 1.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the -p option from the CLOPT for the affected server.  Make sure the
+server is in an MSSQ set by supplying a RQADDR for the server in the *SERVERS
+section of the UBBCONFIG file.  Make sure that the value of MAX in the
+*SERVERS section of the UBBCONFIG is greater than 1 for the affected server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+svropts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1545"></A>
+<H3>LIBTUX MESSAGE #1545</H3>
+<H2> ERROR: Invalid -p values <I>lw</I>,<I>tt</I>:<I>hw</I>,<I>ct</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the values lw, <Font>tt, <Font>hw or <Font>ct are incorrect.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The format for the -p option is
+-p [L][low-water][,[terminate_time]][:[high_water][,create_time]].
+Correct the affected value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+svropts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1546"></A>
+<H3>LIBTUX MESSAGE #1546</H3>
+<H2> ERROR: Cannot lock Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While testing the server pool, an error occured while attempting to lock
+the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your Tuxedo System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+svropts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1547"></A>
+<H3>LIBTUX MESSAGE #1547</H3>
+<H2> ERROR: Fatal error receiving requests, shutting server down</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system detected a fatal error during the reception on incoming service
+requests.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message is supplied when the server has found a condition which does
+not allow the server to continue operation.  The most common causes are
+lack of memory and corrupted memory, but other conditions could also cause
+this behaviour.  The server will shut itself down.  If you believe that your
+system has enough memory and that the memory in the server has not been
+corrupted, contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1548"></A>
+<H3>LIBTUX MESSAGE #1548</H3>
+<H2> ERROR: Unable to send unsolicited message to process (<I>pid</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending an unsolicited message to process pid, an error occured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The most common cause of this error message is that the recipient of the
+unsolicited message has died.  Check to see if pid is still running,
+and if it is, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1549"></A>
+<H3>LIBTUX MESSAGE #1549</H3>
+<H2> ERROR: Invalid USIGNAL parameter in Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending an unsolicited message, an invalid valud of USIGNAL was found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the NOTIFY option in the *RESOURCES section of the UBBCONFIG file is
+SIGNAL, then USIGNAL must be SIGUSR1 or SIGUSR2.  Other values are not
+recognized by the TUXEDO System. Contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1550"></A>
+<H3>LIBTUX MESSAGE #1550</H3>
+<H2> ERROR: Unable to send signal to process, pid = <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+NOTIFY was set to SIGNAL, but while sending an unsolicited message to
+the process with process id pid, we could not properly signal the
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your Tuxedo System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1551"></A>
+<H3>LIBTUX MESSAGE #1551</H3>
+<H2> ERROR: Cannot find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending an unsolicited message to a process on a remote machine,
+the system encountered an error while attempting to find the DBBL.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be a temporary failure, or a failure caused by a partitioned
+application.  If the application is partitioned, then unsolicited messages
+may not work properly.  If your application is not partitioned, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1552"></A>
+<H3>LIBTUX MESSAGE #1552</H3>
+<H2> ERROR: Cannot perform operation, DBBL is migrating</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending an unsolicited message to a process on a remote machine,
+the system discovered that the DBBL was migrating.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+During master migration, unsolicited messages may not be sent.  Retry the
+operation when the DBBL is not migrating.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1553"></A>
+<H3>LIBTUX MESSAGE #1553</H3>
+<H2> ERROR: Unable to find WSH (<I>pid</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending an unsolicited message to a workstation client, the system
+could not find the corresponding workstation handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Unsolicited messages to workstation clients pass through the workstation
+handler.  An error occurs if the workstation handler for a given client
+cannot be found.  Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1554"></A>
+<H3>LIBTUX MESSAGE #1554</H3>
+<H2> ERROR: WSH (<I>pid</I>) should not be ignoring unsolicited messages</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending an unsolicited message to a workstation client, the system
+found that the workstation handler was in an invalid state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1555"></A>
+<H3>LIBTUX MESSAGE #1555</H3>
+<H2> ERROR: Unsolicited message encoding/decoding failed (<I>routine</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While encoding or decoding an usolicited message, an error occured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The value in routine will give the name of the function which failed
+during the encoding and decoding procedure.  Contact your TUXEDO System
+Technical Support with the values from routine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1556"></A>
+<H3>LIBTUX MESSAGE #1556</H3>
+<H2> ERROR: Cannot receive TPACK because MSSQ is specified but REPLYQ is N</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In order to receive acknowledgment of delivery of an unsolicited message
+from a server in an MSSQ set, the REPLYQ parameter of that server must
+be set to Y.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the value of REPLYQ for the affected server to Y in the *SERVERS section
+of the UBBCONFIG file.  Do not use the TPACK flag for tpnotify(3) if you
+cannot specify REPLYQ Y in an MSSQ set.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1557"></A>
+<H3>LIBTUX MESSAGE #1557</H3>
+<H2> ERROR: Memory allocation failure <I>reason</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to encode or decode an unsolicited message the system ran
+out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the affected system.  If it seems
+that there should be enough memory for this operation, contact your TUXEDO
+System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1558"></A>
+<H3>LIBTUX MESSAGE #1558</H3>
+<H2> ERROR: Cannot create call descriptor for unsolicited message, tperrno=<I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While generating a descriptor handle for an unsolicited message, an error
+occured with tperrno tperrno.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the affected system.  If it seems
+that there should be enough memory for this operation, contact your TUXEDO
+System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1559"></A>
+<H3>LIBTUX MESSAGE #1559</H3>
+<H2> ERROR: Failed to receive ACK for unsolicited message, tperrno=<I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While waiting for acknowledment of receipt of an unsolicited message, an error
+occured with tperrno tperrno.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The receipient of the unsolicited message may or may not have received the
+unsolicited message.  Examine tperrno for more information on the
+cause of the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1560"></A>
+<H3>LIBTUX MESSAGE #1560</H3>
+<H2> ERROR: Failed to cancel unsolicited message call descriptor, tperrno=<I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If an error occures while getting an acknowledgment from tpnotify, the system
+attempts to tpcancel the request.  If the tpcancel fails, then this message
+will appear.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The receipient of the unsolicited message may or may not have received the
+unsolicited message.  Examine tperrno for more information on the
+cause of the failure.  Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1561"></A>
+<H3>LIBTUX MESSAGE #1561</H3>
+<H2> ERROR: Failed to send ACK to notifier, tperrno=<I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process which recieved an acknowleged notification event was unable to
+return the acknowledgment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine tperrno for more information on the cause of the failure.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1562"></A>
+<H3>LIBTUX MESSAGE #1562</H3>
+<H2> WARN: Unable to open MACHINE ENVFILE <I>envfile</I> for reading</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The as400 machine could not open envfile for reading.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure envfile exists and that the process has sufficient permission
+for reading the file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1564"></A>
+<H3>LIBTUX MESSAGE #1564</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the log for prior messages indicating the cause of the problem.
+Normally, it means that the product has not been licensed properly.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1565"></A>
+<H3>LIBTUX MESSAGE #1565</H3>
+<H2> ERROR: Application attempted to start a transaction but transactions are not licensed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use /T transactions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for /T transactions.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1566"></A>
+<H3>LIBTUX MESSAGE #1566</H3>
+<H2> ERROR: Unable to set type switch index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to check a buffer type or subtype failed during a call to
+tpalloc ()
+because the type or subtype is not in the buffer type
+switch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the type and/or subtype is listed in the file tmtypesw.c.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1568"></A>
+<H3>LIBTUX MESSAGE #1568</H3>
+<H2> ERROR: TUXDIR environment variable not set</H2><HR>
+<P>
+
+
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System environment variable
+TUXDIR
+was not set while trying the read the TUXEDO license file in $TUXDIR/udataobj.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the environment variable
+TUXDIR
+and repeat the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

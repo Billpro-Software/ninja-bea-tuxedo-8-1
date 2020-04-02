@@ -1,0 +1,1480 @@
+<!-- .if n .pH errman.h.ctmsg05.htm @(#)ctmsg05.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 500-599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="500"></A>
+<H3>CMDTUX MESSAGE #500</H3>
+<H2> ERROR: Shutting down bridge, serious network error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bridge is shutting down due to a network error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the desired operation; if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="501"></A>
+<H3>CMDTUX MESSAGE #501</H3>
+<H2> ERROR: Shutting down bridge, serious polling error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bridge is shutting down due to a polling error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the desired operation; if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="509"></A>
+<H3>CMDTUX MESSAGE #509</H3>
+<H2> ERROR: Local message being nack'd by BRIDGE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process was incorrectly sent a message
+destined for a recipient on the same machine
+as the sender.
+It should have been sent directly to
+the recipient's UNIX message queue,
+without any networking or
+BRIDGE
+involvement.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="511"></A>
+<H3>CMDTUX MESSAGE #511</H3>
+<H2> ERROR: Invalid arguments passed to buildclient</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Invalid arguments were passed to the
+buildclient
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to
+buildclient
+and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclient (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="512"></A>
+<H3>CMDTUX MESSAGE #512</H3>
+<H2> ERROR: Cannot execute C compiler <I>prog_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+buildclient
+command was unable to execute the C compiler.
+The name of the program that
+buildclient
+attempted to execute is given as part of the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the compiler has been installed on the machine, that it
+is executable, and that the directory containing the compiler is included
+in the
+PATH
+environment variable.
+If the name of the compiler is other than the standard
+cc ,
+set and export the
+CC
+shell variable to the proper name of the compiler.
+Otherwise, verify that the
+CC
+shell variable is not set to some extraneous value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclient (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="516"></A>
+<H3>CMDTUX MESSAGE #516</H3>
+<H2> WARN: buildserver -n option requires non-negative argument. Default setting to 0.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -n option for
+buildserver
+must be specified greater than or equal
+to zero.  By default, it is set to zero if an invalid value is specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the argument to the -n option for
+buildserver
+is greater than or equal to zero.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="520"></A>
+<H3>CMDTUX MESSAGE #520</H3>
+<H2> ERROR: Invalid arguments passed to buildserver</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Invalid arguments were passed to the
+buildserver
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to
+buildserver
+and reexecute the command.
+If unsure about the proper arguments, refer to the on-line usage message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="522"></A>
+<H3>CMDTUX MESSAGE #522</H3>
+<H2> ERROR: buildserver cannot open the temporary output file, <I>srcfile,</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+buildserver
+cannot open the temporary output file, <I>srcfile</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the file exists and has write permissions,
+and that the file system has sufficient resources for a new file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="523"></A>
+<H3>CMDTUX MESSAGE #523</H3>
+<H2> WARN: Duplicate service, <I>svc,</I> (function <I>func</I>) is ignored in service dispatch table.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service name was specified more than once to the -s option on the
+command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your -s option for
+buildserver
+and eliminate any duplicate services.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="530"></A>
+<H3>CMDTUX MESSAGE #530</H3>
+<H2> ERROR: Cannot execute <I>prog_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+buildtms
+command was unable to execute the
+buildserver
+command.
+The name of the command being executed is given as part of the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you are compiling executables to run on the same machine type, as
+is normally the case, verify that the
+TUXDIR
+shell variable is properly set, that the program
+${TUXDIR}/bin/buildserver
+exists, is accessible, and executable, and that the shell variable
+XCBINDIR
+is <I>not</I> set.
+If you are compiling executables for a different machine type, verify that
+the shell variable
+XCBINDIR
+is set and exported, and that the program
+${XCBINIDIR}/buildserver
+exists, is accessible, and executable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildtms (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="533"></A>
+<H3>CMDTUX MESSAGE #533</H3>
+<H2> ERROR: Cannot be a cleanupsrv process - Uunixerr <I>Uunixerr_val</I>, errno <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to execute more than one cleanupsrv
+process was encountered.
+If the process was started from a terminal, then this message
+appears at the terminal, otherwise it is written to the userlog.
+The error can occur when one or more processes are to be cleaned up and
+the cleanup doesn't finish before the next scan by the
+BBL ,
+causing
+a second cleanup process to be started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the desired operation; if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="534"></A>
+<H3>CMDTUX MESSAGE #534</H3>
+<H2> ERROR: Cannot be a cleanupsrv process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to execute more than one cleanupsrv process was encountered.
+If the process was started from
+a terminal, then this message
+appears at the terminal, otherwise it is written to the userlog.
+This can occur when one or more processes are to be cleaned up and
+the cleanup doesn't finish before the next scan by the BBL, causing
+a second cleanup process to be started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the desired operation; if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="535"></A>
+<H3>CMDTUX MESSAGE #535</H3>
+<H2> ERROR: Could not retrieve server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to clean up a server, the TUXEDO System examined
+system tables located in shared memory to get the entry for the server.
+However, the server information could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Usually, the System will request manual intervention if this cleanup was
+not possible for some reason.
+If further assistance is needed, please contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="536"></A>
+<H3>CMDTUX MESSAGE #536</H3>
+<H2> ERROR: Server to be cleaned up is still running.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to clean up a server that was either still running or in the
+process of being cleaned up was encountered.
+Only servers that are dead may be cleaned up.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="537"></A>
+<H3>CMDTUX MESSAGE #537</H3>
+<H2> ERROR: Failed to update server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While cleaning up information about a dead server, the TUXEDO System
+was unable to update the server table entry for that server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="538"></A>
+<H3>CMDTUX MESSAGE #538</H3>
+<H2> INFO: Process <I>pid</I> still running - forcing termination (via SIGIOT)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server that was targeted to be cleaned up was found to be still running.
+This message informs the user that the process will be terminated and a
+dump of the core will be saved for examination.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please examine the userlog and the core image saved for further information.
+If necessary, contact the TUXEDO System Administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="539"></A>
+<H3>CMDTUX MESSAGE #539</H3>
+<H2> ERROR: Failed to kill process <I>pid</I> - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server that was targeted to be cleaned up was found to be still running.
+The TUXEDO System attempted to abort the process and cause a dump of core
+to be saved.
+However, the kill() function failed.
+The exact message displayed depends upon the system error that prevented
+the process from being terminated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="540"></A>
+<H3>CMDTUX MESSAGE #540</H3>
+<H2> ERROR: Cannot find Queue Table Entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The process had been terminated if necessary, and the TUXEDO System
+turned off the information for that server in the Registry Table,
+that is, marked it as not restartable.
+The System was attempting to retrieve queue information for that server, and
+the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="541"></A>
+<H3>CMDTUX MESSAGE #541</H3>
+<H2> ERROR: Unable to decode message header</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was attempting to decode message header information for
+a message on that server's request queue,
+and the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="542"></A>
+<H3>CMDTUX MESSAGE #542</H3>
+<H2> ERROR: Cannot find service to which to forward request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was attempting to forward a request from the queue of the cleaned-up
+server.
+Information for the service which should be forwarded was missing or
+unable to be accessed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="543"></A>
+<H3>CMDTUX MESSAGE #543</H3>
+<H2> ERROR: Cannot forward message, sending it back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was attempting to forward a request from the queue of the cleaned-up
+server.
+The System call to enqueue the request failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="544"></A>
+<H3>CMDTUX MESSAGE #544</H3>
+<H2> ERROR: Cannot forward message, sending it back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was attempting to forward a request from the queue of the cleaned-up
+server.
+The System enqueued the request successfully, but the following function
+to unlock the Bulletin Board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="545"></A>
+<H3>CMDTUX MESSAGE #545</H3>
+<H2> ERROR: Cannot encode message header</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was attempting to forward a request from the queue of the cleaned-up
+server.
+The System was unable to encode the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="546"></A>
+<H3>CMDTUX MESSAGE #546</H3>
+<H2> ERROR: Cannot decode message header</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was unable to encode a message while trying to send it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="547"></A>
+<H3>CMDTUX MESSAGE #547</H3>
+<H2> ERROR: Cannot forward message, sending it back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was unable to forward a message, so the message will be
+sent back to the sender.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="548"></A>
+<H3>CMDTUX MESSAGE #548</H3>
+<H2> ERROR: Cannot forward message, sending it back</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was unable to forward a message, so the message will be
+sent back to the sender.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="549"></A>
+<H3>CMDTUX MESSAGE #549</H3>
+<H2> ERROR: Cannot decode message header</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The System was unable to decode a message header retrieved
+from the reply queue while draining it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="550"></A>
+<H3>CMDTUX MESSAGE #550</H3>
+<H2> ERROR: Cannot remove server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+Request and reply queues had been drained. An attempt to remove the server
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="551"></A>
+<H3>CMDTUX MESSAGE #551</H3>
+<H2> INFO: server removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The server was removed successfully,
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the desired operation; if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="552"></A>
+<H3>CMDTUX MESSAGE #552</H3>
+<H2> WARN: Server cleanup - server vanished</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The system was scanning the server table to determine if servers
+needed cleaning.
+A server list had been created that identified the list of servers to be
+cleaned, but the details on a particular server could not be obtained from
+the Server Table.
+The processing for this server was skipped.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the desired operation; if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="555"></A>
+<H3>CMDTUX MESSAGE #555</H3>
+<H2> ERROR: Unable to reply to <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+The TUXEDO System was in the process of draining messages from the server
+queues,
+and was attempting to send a message to the client process informing it that
+the server(s) was not alive anymore.
+The reply failed.
+The value displayed in this message indicates the process ID of the
+process that was to receive the reply.
+Often, this implies that a client or server has left the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="556"></A>
+<H3>CMDTUX MESSAGE #556</H3>
+<H2> ERROR: Unable to reset server table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server cleanup was underway.
+As part of the server cleanup, the server table entry was to be reset.
+The function used to reset this table failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+userlog
+for other messages about the error.
+If necessary, contact the TUXEDO System Administrator
+or your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="557"></A>
+<H3>CMDTUX MESSAGE #557</H3>
+<H2> ERROR: Automatic Server Recovery failure; Server processes require manual intervention.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The automatic server recovery has failed.  Server processes will
+require manual intervention.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier related messages indicating the nature of
+the problem.
+If enough information is provided, it may be possible to simply
+re-boot the failed server.
+Otherwise, you need to manually shut down
+the servers and clean up the IPC resources, and then reboot the servers.
+See
+tmboot
+and
+tmshutdown
+for details on TUXEDO boot and shutdown procedures.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="560"></A>
+<H3>CMDTUX MESSAGE #560</H3>
+<H2> ERROR: Cannot be a restartsrv process because of an operating system error, <I>Uunixerr_msg</I><I>errno_msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When DBBL scans the Bulletin Board, it will restart any dead servers
+that are restartable.  However, only one restart process is allowed
+at a time.  Currently, the restartsrv process cannot join the
+application due to the operating system error (TPEOS).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Take proper action according to the <I>errno_msg</I> and/or <I>Uunixerr_msg</I>,
+or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="561"></A>
+<H3>CMDTUX MESSAGE #561</H3>
+<H2> ERROR: Cannot be a restartsrv process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When DBBL scans the Bulletin Board, it will restart any dead servers
+that are restartable.  However, only one restart process is allowed
+at a time.  Currently, the restartsrv process cannot join the
+application due to an non-operating system error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier related messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="562"></A>
+<H3>CMDTUX MESSAGE #562</H3>
+<H2> ERROR: Cannot restart a server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Before restarting the server, the server table entry is retrieved from
+the Bulletin Board.
+An error in retrieving the internal server table entry caused
+the restartsrv process to fail to restart the server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the current server indicated by the server group and server
+identifier global variables.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="563"></A>
+<H3>CMDTUX MESSAGE #563</H3>
+<H2> ERROR: Cannot restart a server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart a server, the
+restartsrv
+process was unable
+to find the queue entry associated with the server in the internal tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="564"></A>
+<H3>CMDTUX MESSAGE #564</H3>
+<H2> ERROR: Server to be restarted, <I>pid,</I> is still running</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the BBL is scanning the Bulletin Board, it will restart any dead servers
+that are restartable.  However, the restartsrv process detected that
+the restartable server is still alive and running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.  Clean up the Bulletin Board
+or kill the restartable server and let BBL restart the server.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="565"></A>
+<H3>CMDTUX MESSAGE #565</H3>
+<H2> ERROR: Server to be restarted, <I>pid,</I> is still running</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the BBL is scanning the Bulletin Board, it will restart any dead servers
+that are restartable.  However, the
+restartsrv
+process detected that
+the server which was marked as non-restartable server is still alive and
+running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.
+Clean up the Bulletin Board.
+If the server is meant to be restartable, the server should be marked
+as "RESTART=Y" in the
+UBBCONFIG
+file.  Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="566"></A>
+<H3>CMDTUX MESSAGE #566</H3>
+<H2> ERROR: Cannot restart a server because the MAXGEN number reached</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Each restartable server can be restarted at most
+MAXGEN  -1
+times within the time period specified by
+GRACE
+seconds.  Both
+MAXGEN
+and
+GRACE
+parameters are specified in the SERVERS section of the
+UBBCONFIG
+file.  Currently, the restartsrv process failed because it has restarted
+the server
+MAXGEN -1
+times within the
+GRACE
+period.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+MAXGEN
+and
+GRACE
+value for each server.
+Re-boot the server manually with
+tmboot .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="567"></A>
+<H3>CMDTUX MESSAGE #567</H3>
+<H2> ERROR: Cannot restart the server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process was unable to restart a server because an
+error occurred in updating the server entry in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.
+Clean up the Bulletin Board or
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="568"></A>
+<H3>CMDTUX MESSAGE #568</H3>
+<H2> ERROR: Cannot restart the server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process was unable to restart a server because an
+error occurred in getting the server parameters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.
+Clean up the Bulletin Board or
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="569"></A>
+<H3>CMDTUX MESSAGE #569</H3>
+<H2> ERROR: Cannot restart the server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process was unable to restart a server because an
+error occurred in updating the queue entry in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board or the server queue may be corrupted.
+Clean up the Bulletin Board and the IPCs or contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="571"></A>
+<H3>CMDTUX MESSAGE #571</H3>
+<H2> INFO: Server process, <I>pid,</I> is still running; forcing termination via SIGIOT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of restarting a server,
+the
+restartsrv
+process will kill the old server via SIGIOT and leave a core
+for debugging.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="572"></A>
+<H3>CMDTUX MESSAGE #572</H3>
+<H2> ERROR: Cannot kill the process, <I>pid,</I> <I>errno_msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process failed to kill the old server.
+The
+<I>errno_msg</I>
+indicates the reason for the failure (based on errno).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Take appropriate action based on the UNIX <I>errno_msg</I> from kill()</I>
+or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+kill (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="573"></A>
+<H3>CMDTUX MESSAGE #573</H3>
+<H2> ERROR: Cannot restart a server - cannot get information for machine <I>mid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process was unable to restart a server because an
+error occurred in retrieving the machine information for
+<I>mid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.  Clean up the Bulletin Board or
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="574"></A>
+<H3>CMDTUX MESSAGE #574</H3>
+<H2> ERROR: Cannot restart the server - fork error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process cannot fork a new process because the
+system's process table is full, or the user is not allowed
+to create any more processes, or possibly because of insufficient
+memory or swap space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Clean up and verify that the UNIX
+sysgen
+process parameters are correct
+such as the maximum number of process table entries, the total number of
+processes per user, etc.  Also, make sure that your machine has sufficient
+memory or swap space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+fork (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="575"></A>
+<H3>CMDTUX MESSAGE #575</H3>
+<H2> ERROR: Cannot restart a server - exec() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process failed to
+exec()
+the server because
+the server executable file is not found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that your server executable files are located under your
+application directory specified by the environment variable
+APPDIR
+or are in
+PATH .
+Make sure that the
+machine or server
+ENVFILE
+doesn't reset
+PATH
+so that the server executable can no longer be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+exec (2)
+in UNIX system reference manuals,
+buildserver (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="577"></A>
+<H3>CMDTUX MESSAGE #577</H3>
+<H2> ERROR: Cannot restart the server - no BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to restart a server failed because there is no
+BBL
+available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, and all
+administrative processes.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="578"></A>
+<H3>CMDTUX MESSAGE #578</H3>
+<H2> ERROR: Cannot restart the server - no DBBL available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to restart a server failed because there is no
+DBBL
+available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, and all
+administrative processes.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="579"></A>
+<H3>CMDTUX MESSAGE #579</H3>
+<H2> ERROR: Cannot restart a server - unknown process creation error: <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Server restart failed because there is an unknown error while creating
+the process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Take appropriate action based on the UNIX error indicated,
+or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="580"></A>
+<H3>CMDTUX MESSAGE #580</H3>
+<H2> INFO: A server process has restarted: <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server process has restarted successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="581"></A>
+<H3>CMDTUX MESSAGE #581</H3>
+<H2> WARN: Server restart - server vanished</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While scanning the server table to see if other servers need cleaning,
+the
+restartsrv
+process detected that a server has disappeared from
+the internal server table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shared memory may be corrupted.  Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="582"></A>
+<H3>CMDTUX MESSAGE #582</H3>
+<H2> ERROR: Command line option formation error for server <I>servername</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While formatting the command line options for recreating the
+DBBL
+server's invocation environment for restart, the
+restartsrv
+process detected that there are too many command line options.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="583"></A>
+<H3>CMDTUX MESSAGE #583</H3>
+<H2> ERROR: Too many arguments for server <I>servername</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process failed to restart a server because the command line options string
+for
+DBBL
+server is longer than 256 characters and it cannot be processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="584"></A>
+<H3>CMDTUX MESSAGE #584</H3>
+<H2> ERROR: Restart error - retrieving server parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While examining every entry in the SERVERS section of the Bulletin Board,
+an error is encounted while retrieving server parameters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for corrupted shared memory or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="585"></A>
+<H3>CMDTUX MESSAGE #585</H3>
+<H2> ERROR: Command line option formation error for server <I>servername</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While formatting the command line options for recreating the server's
+invocation environment for restart, the
+restartsrv
+process detected that there are too many command line options.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the command line arguments for the server
+or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="586"></A>
+<H3>CMDTUX MESSAGE #586</H3>
+<H2> ERROR: Too many arguments for server <I>servername</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process failed to restart the server because the command line options string
+for indicated server is longer than 256 characters and it cannot be
+processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the command line arguments for indicated server
+or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="587"></A>
+<H3>CMDTUX MESSAGE #587</H3>
+<H2> INFO: Cannot restart server, scheduling for cleanup</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Some type of transient failure has occurred during the restart process.
+The current server is marked as "CLEANING" and it will be handled
+by a subsequent
+cleanupsrv
+run.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="588"></A>
+<H3>CMDTUX MESSAGE #588</H3>
+<H2> ERROR: Cannot retrieve server information for restarting server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+For cleanup, we need to find the server table entry for the current server
+in the Bulletin Board and update it.  However, there is an error in
+retrieving the server information from the server table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The shared memory may be corrupted.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="589"></A>
+<H3>CMDTUX MESSAGE #589</H3>
+<H2> ERROR: Cannot find registry table entry for restarting server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The restartsrv process cannot find the registry table entry
+in the Bulletin Board for restarting server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The shared memory may be corrupted.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="590"></A>
+<H3>CMDTUX MESSAGE #590</H3>
+<H2> ERROR: Cannot update server information for restarting server <I>group</I>/<I>id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+For cleanup, we need to find the server table entry for current server
+in the Bulletin Board and update it.  However, there is an error in
+updating the server information in the server table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The shared memory may be corrupted.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="592"></A>
+<H3>CMDTUX MESSAGE #592</H3>
+<H2> ERROR: Cannot start the cleanupsrv process: <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+cleanupsrv
+process can be used by the
+restartsrv
+process to remove any dead servers that are not restartable.  However,
+there is an error in starting the
+cleanupsrv
+process with no particular server indicated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier related messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="593"></A>
+<H3>CMDTUX MESSAGE #593</H3>
+<H2> ERROR: Automatic server recovery failed, server processes require manual intervention</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The automatic server recovery has failed.  Server processes will
+require manual intervention.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for earlier related messages indicating the nature of
+the problem.
+If enough information is provided, it may be possible to simply
+re-boot the failed server.
+Otherwise, you need to manually shut down
+the servers and clean up the IPC resources, and then reboot the servers.
+See
+tmboot
+and
+tmshutdown
+for details on TUXEDO boot and shutdown procedures.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="594"></A>
+<H3>CMDTUX MESSAGE #594</H3>
+<H2> WARN: *Interrupt* Want to Continue? (y/n):</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process has been interrupted by keyboard interrupt signals.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can continue with the
+restartsrv
+process by entering
+y
+or you can stop the
+restartsrv
+process by entering
+n .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="595"></A>
+<H3>CMDTUX MESSAGE #595</H3>
+<H2> WARN: Please answer <I>'y'</I> or <I>'n'</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+restartsrv
+process has been interrupted.
+See Message 594 above for further explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can continue with the
+restartsrv
+process by entering
+y
+or you can stop the
+restartsrv
+process by entering
+n .
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

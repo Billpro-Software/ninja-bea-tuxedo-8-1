@@ -1,0 +1,283 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1990 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/bankapp/README	$Revision: 1.6 $"
+
+SIMPLE BUILD PROCEDURE
+
+The shell script "RUNME.sh" is an interactive program designed to
+lead users through initialization, booting, shutdown and cleanup
+of SHM and MP bankapp applications.  For example, the following commands
+will copy the necessary source to a subdirectory in the users home
+directory and run through bankapp:
+
+	$ cd ${HOME}
+	$ mkdir mybank
+	$ cd ${TUXDIR}/samples/atmi/bankapp
+	$ cp -r * ${HOME}/mybank
+	$ cd ${HOME}/mybank
+	$ sh RUNME.sh
+
+This script presents menus to the user with defaults that will lead
+you through the most effective means of setting up, running, shutting
+down and cleaning up a single or multi-node bankapp application.
+Anywhere from 1 to 10 nodes may be configured.  The 10 bankapp branches
+will be distributed amongst the available nodes.  Note that once an
+application is booted using RUNME.sh, RUNME.sh can be invoked on the
+remote nodes to interact with the running application.
+
+RUNME.sh Requirements:
+	1. Remote shell capabilities to all machines you will be using.
+	   You may need to alter ${HOME}/.rhosts files to allow for this.
+	2. ksh on all machines where you will be running RUNME.sh.
+
+OR YOU CAN FOLLOW THE PROCEDURES BELOW TO DO YOUR OWN SETUP, ETC....
+
+INSTALLATION AND BUILD PROCEDURES FOR BANKAPP
+
+The following ten steps and alternates describe two separate 
+procedures for building the sample application, bankapp.  
+If you want to bring up the application on a single processor
+(SHM mode) follow the primary steps--Step 1, Step 2 and so on.
+If you want to bring up a networked application on more than
+one processor (MP mode), include the alternate steps--Step 1A,
+Step 2A and so on.
+
+Consult the TUXEDO System Application Development Guide for a more
+detailed description of these procedures.
+
+
+Step 1: Copy the Software for SHM Mode
+
+Make a new directory under your $HOME directory and copy all of 
+the source files from <TUXDIR>/samples/atmi/bankapp into that directory.
+TUXDIR is the root directory under which your TUXEDO System
+software is installed.  We're calling the new directory
+$HOME/bankapp.  The rest of the steps in this procedure are 
+done in the directory $HOME/bankapp.
+
+
+Step 1A: Copy the Software for MP Mode
+
+The person responsible for installing the TUXEDO System software 
+is instructed to see that the executable software is available on 
+each machine that will participate in a System/T application.
+To bring up bankapp in MP mode we assume that TUXEDO System executables 
+are present at all sites but the bankapp source files are only available 
+at the master site. We also assume that you have a login on each 
+non-master machine as well as on the master.
+You need to go through the process of copying and building the bankapp 
+software at each site.
+
+Duplicate Step 1, and then from the master site send the bankapp source 
+files to your login on each machine in your network.
+
+When you have copied the bankapp source files to each site, 
+return to the master site.
+
+
+Step 2: Edit bankvar for SHM Mode
+
+bankvar is a bankapp source file that contains environment variables.
+The following variables should be edited to give them values appropriate 
+for your site.
+
+TUXDIR 	Root directory of the TUXEDO System.
+
+APPDIR 		Directory in which the banking application resides.
+		bankvar initially is set to allow this to default
+		to the current working directory, which agrees with
+		our intention to use $HOME/bankapp
+
+BLKSIZE 	Logical blocksize for the database in bytes.
+		Must be an integral multiple of the physical 
+		page size of the computer.
+
+
+Step 2A: Edit bankvar for MP Mode
+
+On each machine used by your application, Edit TUXDIR, APPDIR and BLKSIZE 
+in bankvar as in Step 2.  Also edit the following:
+
+DIPCKEY 	IPC key for this site's /D database.  This value will 
+		need to be changed if there is more than one instance 
+		of bankapp on the system at once or if this IPC key is 
+		already used for other purposes.
+
+FSCONFIG 	This value needs to be different for each non-master site.
+		In the ubbmp file discussed in Step 3A, each site is 
+		identified with LMID=SITEn, where n is a numeric identifier.
+		Set FSCONFIG to ${APPDIR}/bankdln, where n agrees with 
+		the site number.  This value is used by crbankdb and 
+		other database utilities.
+
+
+Step 3: Edit and Run the makefile for SHM Mode
+
+Edit bankapp.mk and change TUXDIR and APPDIR to the same values as in 
+bankvar.  When you are satisfied
+that TUXDIR, and APPDIR have the correct values, enter the
+following command:
+
+	nohup make -f bankapp.mk&
+
+Check nohup.out to make sure the build was successful.
+
+
+Step 3A: Edit and Run the makefile for MP Mode
+
+Edit bank.h to make the following changes:
+
+	#define	SITEREP	{ 1, 6 }	/* for 2 sites */
+	#define	NSITE		2	/* for 2 sites */
+
+On each machine in your network, edit bankapp.mk and change 
+TUXDIR and APPDIR to the same values as in bankvar on that machine.
+When you are satisfied that the values for TUXDIR and APPDIR in the 
+bankvar agree with the values in bankapp.mk on each machine in your 
+network, enter the following command at each site:
+
+	nohup make -f bankapp.mk&
+
+Check nohup.out to make sure the build was successful.
+
+
+Step 4: Edit the ubbshm Configuration File for SHM Mode
+
+The configuration file, often referred to as UBBCONFIG, is the source 
+file that contains a complete description of an application.  In Step 6
+the configuration file is compiled into the TUXCONFIG file.
+
+In the delivered version of bankapp, the following parameters need 
+to be checked:
+
+IPCKEY 		This parameter may or may not need to be reset depending 
+		on whether it is unique across the computer.  If yours is 
+		the only application on the machine using IPC resources, 
+		you can leave this value as is.
+
+UID/GID 	Set the value for these to your user-id and group-id
+		as displayed by the UNIX system command, id(1).
+
+<SITE1's uname>	In the MACHINES section, substitute the node name 
+		of your computer as displayed by the UNIX system
+		command, uname -n
+
+<TUXDIR1>	The root directory of the TUXEDO System.
+
+<APPDIR1>	The directory from which you are running the application.
+
+Step 4A: Edit the ubbmp Configuration File for MP Mode
+
+Edit IPCKEY and UID/GID as described in Step 3.  Edit the <SITEn's uname>,
+<TUXDIRn> and <APPDIRn> parameters to provide the processor names, root
+TUXEDO directories and application directories for machines in your
+configuration.  ubbmp defines two sites; if you have more than two add
+an entry for each additional site.
+
+In addition, check the following parameters:
+
+LMID		The logical machine address for each machine defined.
+		Also make sure that the n value for each SITEn is unique.
+
+TYPE 		If your network includes machines of different types
+		(for example, both 3B2's and 386's), use the TYPE
+		parameter to assign type names.
+
+OPENINFO 	In the GROUPS section, each OPENINFO parameter must
+		have an fsconfig value that matches the FSCONFIG set 
+		in the bankvar file on that machine.
+
+NETWORK 	There are three parameters that must be set in the
+		NETWORK section.  Check the Application Development
+		Guide for details.
+
+
+Step 5: Create Site Databases in SHM Mode
+
+This step creates three databases on a single processor so you can 
+simulate the data dependent routing you get with a networked system.
+Follow these steps to create the databases:
+
+	1. Set the environment by typing:  . ./bankvar
+
+	2. Run crbank, which in turn runs crbankdb once for 
+	   each database to be created.
+
+
+Step 5A: Create Site Databases in MP Mode
+
+If you are running in MP mode, create the database on each site as follows:
+
+	1. Set the environment by typing:  . ./bankvar
+
+	2. Run crbankdb to create the bank database for this site.
+
+
+Step 6: Create the TUXCONFIG File
+
+In either SHM or MP mode, enter the following command line:
+
+tmloadcf -y <ubbconfig>	# Specify ubbshm for SHM mode, ubbmp for MP mode
+
+
+Step 7: Create the Transaction Log in SHM Mode
+
+Before an application is booted for the first time a Universal Device 
+List (UDL) entry for the transaction log must exist at all sites and 
+the transaction log itself must exist at the master site.  bankapp has 
+a shell script, crtlog, that does this task for you.
+
+Enter the following command:
+
+	crtlog -m
+
+
+Step 7A: Create the Transaction Log in MP Mode
+
+See the explanation in Step 7 above, then run the crtlog program as follows:
+
+Master site:  crtlog -m
+
+At all non-master sites:  crtlog
+
+
+Step 8: Start the tlisten Process in MP Mode
+
+The tlisten process should be running on each node of an MP
+application.
+
+Use the following command:
+
+	tlisten -d /dev/<devname> -l <nlsaddr>
+
+where: 
+
+	<devname> is the device name of your network provider;
+		  for example, starlan.  If you use Sockets,
+		  the -d parameter is not needed.
+
+	<nlsaddr> must match the NLSADDR parameter in the
+		  NETWORK section of your UBBCONFIG file.
+		  Will be different for each node.
+
+Step 9: Boot the Application Servers
+
+This step must be done from the master site.  The environment variable
+TUXCONFIG must be set and exported.  (This was done in Step 5 or Step 5A, 
+if you're following the complete procedure)
+
+Use the following command to boot the application:
+
+	tmboot -y
+
+tmboot gives you feedback about servers started.
+
+
+Step 10: Populate the Databases
+
+Run the populate script from any site.
+
+Step 11: Use the client to interactively call the bankapp services
+
+Run the text based bankclt program from any site.

@@ -1,0 +1,1898 @@
+<!-- .if n .pH errman.h.ltmsg01.htm @(#)ltmsg01.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 300-399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="300"></A>
+<H3>LIBTUX MESSAGE #300</H3>
+<H2> ERROR: <I>funcname</I>: UNIX sys call error - <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to access the
+VTOC
+through a system call such as
+open (2),
+lseek (2),
+read (2),
+write (2),
+stat (2),
+or
+unlink (2)
+has failed because
+the system call returned the
+<I>errno</I>
+indicated in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="301"></A>
+<H3>LIBTUX MESSAGE #301</H3>
+<H2> ERROR: <I>funcname</I>: cannot free space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to free space that was allocated in the
+VTOC
+has failed
+because there are no more available
+VTOC
+map entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="302"></A>
+<H3>LIBTUX MESSAGE #302</H3>
+<H2> ERROR: <I>funcname</I>: bad table name specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while either creating a new table entry or accessing
+an existing table entry in the
+VTOC.
+If the error occurred while attempting to create a table,
+either the table name already exists, or
+the name has a length of 0 or is greater than the allowable
+table name size
+(GP_LOGICAL_NAME).
+If the error occurred while attempting to access
+an existing table, either the name doesn't exist, or
+the name has a length of 0 or is greater than the
+allowable table name size.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="303"></A>
+<H3>LIBTUX MESSAGE #303</H3>
+<H2> ERROR: <I>funcname</I>: invalid arguments or request to function</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred because the indicated function was invoked with
+invalid arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="304"></A>
+<H3>LIBTUX MESSAGE #304</H3>
+<H2> ERROR: <I>funcname</I>: bad device name or index specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to access a device has failed because the name used
+was either of length 0 or was longer than the allowable length
+of
+GP_LOGICAL_NAME .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="305"></A>
+<H3>LIBTUX MESSAGE #305</H3>
+<H2> ERROR: <I>funcname</I>: attempt to create overlapping devices</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred because of an overlap in devices.
+An overlap occurs if the new device begins before the old
+device ends and the new device ends after the old device begins.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="306"></A>
+<H3>LIBTUX MESSAGE #306</H3>
+<H2> ERROR: <I>funcname</I>: no entry remains to create device or table or open table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to either create a device or table, or open a table has failed
+because there are no more available slots in the device list.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="308"></A>
+<H3>LIBTUX MESSAGE #308</H3>
+<H2> ERROR: <I>funcname</I>: bad device type (not character special or regular)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create a disk entry has failed because an invalid device
+type has been specified.  The only two available device types are character
+special and regular.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="309"></A>
+<H3>LIBTUX MESSAGE #309</H3>
+<H2> ERROR: <I>funcname</I>: cannot obtain lock on VTOC</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred because within the function
+_gp_vtoc_lock(),
+an attempt to obtain a lock on the
+VTOC
+has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="310"></A>
+<H3>LIBTUX MESSAGE #310</H3>
+<H2> ERROR: <I>errcode</I>: unknown vtoc error code</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred during an access of the
+VTOC
+and has
+resulted in the indicated unrecognizable error code being
+returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="311"></A>
+<H3>LIBTUX MESSAGE #311</H3>
+<H2> ERROR: Cannot locate free block in tlog</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to locate and write to a free block in the transaction
+log has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the operation and if the problem persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="312"></A>
+<H3>LIBTUX MESSAGE #312</H3>
+<H2> ERROR: Transaction log wrong page number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to access particular page of the transaction log has
+failed because the referenced page is outside of the bounds of the
+transaction log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the operation and if the problem persists, contact
+your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="313"></A>
+<H3>LIBTUX MESSAGE #313</H3>
+<H2> ERROR: Log warmstart can only be called by BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to warmstart has failed because only the
+BBL
+is allowed
+to initiate warmstarts.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="314"></A>
+<H3>LIBTUX MESSAGE #314</H3>
+<H2> INFO: Page <I>page</I> skipped, chksum didn't match</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated page was skipped while doing a warmstart because
+the checksum did not match.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="315"></A>
+<H3>LIBTUX MESSAGE #315</H3>
+<H2> ERROR: TLOG not in an understandable format.  Different release</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The format of the transaction log is unrecognizable.
+The release of the software is different than the release of the
+transaction log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="316"></A>
+<H3>LIBTUX MESSAGE #316</H3>
+<H2> ERROR: Transaction log file exists</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create the transaction log has failed because a
+transaction log already exists.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If a transaction log exists, remove it and retry the desired operation.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="317"></A>
+<H3>LIBTUX MESSAGE #317</H3>
+<H2> ERROR: Log start can only be called by BBL or TMS</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to internal function
+_tlog_start ()
+has failed because the caller is neither the
+BBL
+nor the
+TMS .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="318"></A>
+<H3>LIBTUX MESSAGE #318</H3>
+<H2> ERROR: Log start cannot get tlog information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred in attempting to open the transaction log.  Either
+the *MACHINES section of the configuration file could not be opened,
+or the current machine id has not been defined in that
+configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and ensure the accuracy of the
+TUXCONFIG
+file, and if the problem
+persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="319"></A>
+<H3>LIBTUX MESSAGE #319</H3>
+<H2> ERROR: Log start cannot open tlog</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred attempting to open the transaction log with read
+and write access.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and ensure that the appropriate permissions are set on the
+transaction log and on the directory in which the transaction log
+resides.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="320"></A>
+<H3>LIBTUX MESSAGE #320</H3>
+<H2> ERROR: BB TLOGSIZE differs from number of pages in TLOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred opening the transaction log because the
+actual size of the
+TLOG
+differs from the size maintained by the
+BB .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the desired operation, and if the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="321"></A>
+<H3>LIBTUX MESSAGE #321</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+has failed within
+tpacall ().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for
+the amount of memory on the machine and the amount of memory that can
+be used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcall(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="322"></A>
+<H3>LIBTUX MESSAGE #322</H3>
+<H2> ERROR: Message presend routine failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The presend routine which performs some preliminary checking
+on the message before it is encoded and sent has failed;  therefore
+the message will not be sent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the messages you are attempting to send have the
+length and pointer fields set correctly.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="323"></A>
+<H3>LIBTUX MESSAGE #323</H3>
+<H2> ERROR: Invalid data length of 0, data not self describing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a message that has a data length of 0 has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the messages you are attempting to send have the
+length and pointer fields set correctly.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="324"></A>
+<H3>LIBTUX MESSAGE #324</H3>
+<H2> ERROR: Encoding of message header failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to encode the header of the message has failed, therefore
+the message has not been sent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the messages you are attempting to send have the
+message header length and pointer fields set correctly.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="325"></A>
+<H3>LIBTUX MESSAGE #325</H3>
+<H2> ERROR: Encoding of message data failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to encode the data of the message has failed, therefore
+the message has not been sent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the messages you are attempting to send have the
+message data length and location fields set correctly.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="327"></A>
+<H3>LIBTUX MESSAGE #327</H3>
+<H2> ERROR: Invalid table type desired</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal function has failed because it attempted to access an
+invalid table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="328"></A>
+<H3>LIBTUX MESSAGE #328</H3>
+<H2> ERROR: No space in Bulletin Board for <I>tablename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate a free entry in the Bulletin Board
+for <I>tablename</I> has failed
+because it is full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-configure the application to increase the size of the associated table.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="329"></A>
+<H3>LIBTUX MESSAGE #329</H3>
+<H2> ERROR: Tried to free non-alloced tmrte</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to free a registry table entry has failed because the table entry
+has not yet been allocated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="330"></A>
+<H3>LIBTUX MESSAGE #330</H3>
+<H2> ERROR: Invalid table type given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal function has failed because it attempted to access an
+invalid table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="331"></A>
+<H3>LIBTUX MESSAGE #331</H3>
+<H2> ERROR: No registry table entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There are no more free entries in the registry table, so an
+attempt to allocate an entry has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="332"></A>
+<H3>LIBTUX MESSAGE #332</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc() failed.  This message is issued when a system process
+(for example, DBBL or BBL) initializes and its call to malloc() fails.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="333"></A>
+<H3>LIBTUX MESSAGE #333</H3>
+<H2> ERROR: No DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A program was booted in an MP configuration without the Bulletin Board
+existing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Clean up any IPC resources and re-boot the application from scratch.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="334"></A>
+<H3>LIBTUX MESSAGE #334</H3>
+<H2> ERROR: No BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A program was booted without the Bulletin Board
+existing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Clean up any IPC resources and re-boot the application from scratch.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="335"></A>
+<H3>LIBTUX MESSAGE #335</H3>
+<H2> ERROR: Wrong bulletin board type or IPCKEY not unique</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either the bulletin board type has been changed for this application
+and the old bulletin board (in shared memory) still exists, or
+the
+IPCKEY
+for the application being booted is not unique
+(another application is using the same
+IPCKEY
+and has attached to shared
+memory using that
+IPCKEY
+as the shared memory id).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the
+UBBCONFIG
+configuration file,
+change the IPCKEY to a unique value, reload the
+TUXCONFIG
+using
+tmloadcf ,
+and reboot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="336"></A>
+<H3>LIBTUX MESSAGE #336</H3>
+<H2> ERROR: semget err: errno=<I>errno_val</I>, key = <I>key_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the application, a system semaphore could not be created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look up the <I>errno_val</I> in errno.h to see its name.
+There are several possible causes.
+ENOSPC indicates that not enough semaphores are configured
+in the operating system; re-configure the OS to have more semaphore
+identifiers or sets.
+EACCES indicates that the user executing the command does
+not have permissions, which could be due to another application
+using the same ICPKEY.
+Check the owner of the semaphore using the <I>key_val</I> and the
+ipcs(1) command, and change IPCKEY if necessary.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="337"></A>
+<H3>LIBTUX MESSAGE #337</H3>
+<H2> ERROR: semctl err: errno=<I>errno_val</I>, key=<I>key_val</I>, id=<I>id_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the application, the status of a system semaphore
+could not be obtained.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look up the <I>errno_val</I> in errno.h to see its name.
+There are several possible causes.
+EACCES indicates that the user executing the command does
+not have permissions, which could be due to another application
+using the same ICPKEY.
+Check the owner of the semaphore using the <I>key_val</I> and the
+ipcs(1) command.
+EINVAL could indicate that the semaphore was destroyed during shutdown
+of the system while another user tried to activate the system.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="338"></A>
+<H3>LIBTUX MESSAGE #338</H3>
+<H2> ERROR: BB semaphore not initialized within 10 seconds (key=0x<I>key_val</I>).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the application, a program found the TUXEDO
+system semaphore existed but was not initialized within 10 seconds.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the ipcs(1) command to check the specified key value,
+checking the creator process to see if it is alive.
+Remove the IPC resources and re-boot the application.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="339"></A>
+<H3>LIBTUX MESSAGE #339</H3>
+<H2> ERROR: Creating process may be dead; manual intervention required.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the application, a program found the TUXEDO
+system semaphore existed but was not initialized within 10 seconds.
+This is related to message 338.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the ipcs(1) command to check the specified key value,
+checking the creator process to see if it is alive.
+Remove the IPC resources and re-boot the application.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="340"></A>
+<H3>LIBTUX MESSAGE #340</H3>
+<H2> ERROR: Wrong configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either the configuration parameters have been changed for this application
+and the old bulletin board (in shared memory) still exists, or
+the
+IPCKEY
+for the application being booted is not unique
+(another application is using the same
+IPCKEY
+and has attached to shared
+memory using that
+IPCKEY
+as the shared memory id).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Edit the
+UBBCONFIG
+configuration file,
+change the IPCKEY to a unique value, reload the
+TUXCONFIG
+using
+tmloadcf ,
+and reboot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="341"></A>
+<H3>LIBTUX MESSAGE #341</H3>
+<H2> ERROR: Could not allocate bulletin board shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the TUXEDO application, shared memory could not
+be allocated for the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+IPCKEY in the
+UBBCONFIG
+configuration file
+is not being used by another application for shared memory.
+Check that enough shared memory has been configured.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="342"></A>
+<H3>LIBTUX MESSAGE #342</H3>
+<H2> ERROR: Could not allocate bulletin board shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the TUXEDO application, shared memory could not
+be allocated for the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+IPCKEY in the
+UBBCONFIG
+configuration file
+is not being used by another application for shared memory.
+Check that enough shared memory has been configured.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="343"></A>
+<H3>LIBTUX MESSAGE #343</H3>
+<H2> ERROR: Could not find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the TUXEDO application, shared memory could not
+be allocated for the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application is configured as mode MP and the DBBL has not created
+the BB.  Make sure that the DBBL is booted first and did not die.
+Check that the
+IPCKEY in the
+UBBCONFIG
+configuration file
+is not being used by another application for shared memory.
+Check that enough shared memory has been configured.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="344"></A>
+<H3>LIBTUX MESSAGE #344</H3>
+<H2> ERROR: Could not allocate bulletin board shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the TUXEDO application, shared memory could not
+be allocated for the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+IPCKEY in the
+UBBCONFIG
+configuration file
+is not being used by another application for shared memory.
+Check that enough shared memory has been configured.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="345"></A>
+<H3>LIBTUX MESSAGE #345</H3>
+<H2> ERROR: Cannot find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to send a message to the
+DBBL
+and its whereabouts could not be ascertained either from the
+BB
+or from a
+BRIDGE
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, or if all
+administrative processes are running.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="346"></A>
+<H3>LIBTUX MESSAGE #346</H3>
+<H2> ERROR: Not a Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application's
+IPCKEY
+is clashing with another
+application's use of UNIX
+IPC
+resources, specifically with a UNIX
+IPC
+semaphore.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Choose another
+IPCKEY
+for your TUXEDO System application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="347"></A>
+<H3>LIBTUX MESSAGE #347</H3>
+<H2> ERROR: Bulletin Board version mismatch</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process trying to attach to the Bulletin Board differs
+in release from the Bulletin Board creator.  The process
+fails to join the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that $TUXDIR/bin
+points to the most current release of the TUXEDO System.
+Also, make sure application processes have been re-linked
+or re-compiled with the latest release.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="349"></A>
+<H3>LIBTUX MESSAGE #349</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc() failed.  This message is issued when a system process
+(for example, DBBL or BBL) initializes and its call to malloc() fails.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="350"></A>
+<H3>LIBTUX MESSAGE #350</H3>
+<H2> ERROR: Configuration file parameters do not match existing bulletin board.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a process initially tries to join the application, this
+message is issued when the process' configuration file parameters
+do not match the existing bulletin board.  This could happen, for example,
+if the application's ubbconfig file is modified and re-loaded with
+tmloadcf.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that your
+TUXCONFIG
+file matches that with which the system was initialized.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="351"></A>
+<H3>LIBTUX MESSAGE #351</H3>
+<H2> ERROR: Error building node tables</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a
+BBL
+initializes, it populates certain areas of the
+bulletin board.  This message is issued when a
+BBL
+encounters
+an error creating the node table in the bulletin board.
+The node table contains entries for the machines in the *MACHINES
+section of the ubbconfig file.  This error occurs when
+a node is running with a pre-4.2.1 release of the TUXEDO System.
+Releases before 4.2.1 supported at most 50 nodes
+in an application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If your application contains more than 50 nodes specified
+in your ubbconfig file, then all nodes in the application
+must be release 4.2.1 or higher.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="352"></A>
+<H3>LIBTUX MESSAGE #352</H3>
+<H2> ERROR: Error resetting ULOGPFX</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The program failed to set the prefix for the userlog file
+either because dynamic space allocation failed or because
+the TUXCONFIG file was corrupted.  The userlog prefix will
+be
+$APPDIR/ULOG .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If other messages in the userlog indicate that the TUXCONFIG file is
+corrupted, you should re-load the
+TUXCONFIG file
+at your earliest convenience.
+If other messages in the userlog indicate that your system is
+out of memory, then
+ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+ulimit(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="353"></A>
+<H3>LIBTUX MESSAGE #353</H3>
+<H2> ERROR: Error putting ENVFILE <I>file</I> into environment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when an error occurs putting the process'
+ENVFILE
+into its environment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the userlog for other messages that explain exactly which
+error occurred as part of processing the process'
+ENVFILE .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="354"></A>
+<H3>LIBTUX MESSAGE #354</H3>
+<H2> WARN: Error changing directory to appdir (<I>path</I>) for LMID (<I>lmid</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When this message is issued, an invalid
+APPDIR
+pathname
+is specified in the *MACHINES section for the
+LMID
+shown in the message.
+The processes associated with this
+LMID
+will use the default
+APPDIR
+for this TUXCONFIG.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+At your earliest convenience, you should set
+APPDIR
+to a valid pathname and re-load your TUXCONFIG
+with
+tmloadcf.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf(1), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="355"></A>
+<H3>LIBTUX MESSAGE #355</H3>
+<H2> ERROR: No BBL on this machine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process that issued this message tried to join a site
+that was in the midst of being shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="356"></A>
+<H3>LIBTUX MESSAGE #356</H3>
+<H2> ERROR: Reached UNIX limit on semaphore ids</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+could not create any more semaphore ids because the UNIX system-imposed
+limit on the maximum number of allowed semaphores system-wide
+would be exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support about resetting the number
+of UNIX semaphores as per the
+IPC
+tuning guidelines in the
+"TUXEDO Installation Guide" .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="357"></A>
+<H3>LIBTUX MESSAGE #357</H3>
+<H2> ERROR: Cannot create enough semaphores for BB, (UNIX limit), MAXACCESSERS too high</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a
+BBL
+initializes, it creates one or more sets of
+semaphores for serializing access to the bulletin board.
+The number of semaphores created per machine is roughly
+equal to the value of
+MAXACCESSERS
+on that machine.
+This message is printed when the
+BBL
+cannot create as many semaphores as it needs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If possible, decrease the value of
+MAXACCESSERS
+for the machine.
+If several machines are used in your application, it is advisable
+to specify for each *MACHINES section entry a
+MAXACCESSERS
+value
+that is roughly the number of System/T client and server processes
+that will run simultaneously on that machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="358"></A>
+<H3>LIBTUX MESSAGE #358</H3>
+<H2> ERROR: Reached UNIX limit on semaphore ids</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+could not create any more semaphore ids because the UNIX system-imposed
+limit on the maximum number of allowed semaphores system-wide
+would be exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support about resetting the number
+of UNIX system semaphores as per the
+IPC
+tuning guidelines in the
+"TUXEDO Installation Guide" .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="359"></A>
+<H3>LIBTUX MESSAGE #359</H3>
+<H2> ERROR: Cannot create enough semaphores for BB, (UNIX limit), MAXACCESSERS too high</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a
+BBL
+initializes, it creates one or more sets of
+semaphores for serializing access to the bulletin board.
+The number of semaphores created per machine is roughly
+equal to the value of
+MAXACCESSERS
+on that machine.
+This message is printed when the
+BBL
+cannot create as many semaphores as it needs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If possible, decrease the value of
+MAXACCESSERS
+for the machine.
+If several machines are used in your application, it is advisable
+to specify for each *MACHINES section entry a
+MAXACCESSERS
+value that is roughly the number of System/T client
+and server processes that will run simultaneously on that machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="360"></A>
+<H3>LIBTUX MESSAGE #360</H3>
+<H2> ERROR: semctl for initializing sems failed: <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Once the
+BBL
+creates a semaphore set used for serializing
+access to the
+BB ,
+it initializes it.
+This message is issued when the
+BBL
+fails to initialize a semaphore set as locked.
+The issued message contains the UNIX system error number, <I>errno</I>,
+which can be used to determine the exact nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+semctl(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="361"></A>
+<H3>LIBTUX MESSAGE #361</H3>
+<H2> ERROR: semctl for initializing sems failed: <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Once the
+BBL
+creates a semaphore set used for serializing
+access to the
+BB ,
+it initializes it.
+This message is issued when the
+BBL
+fails to initialize a semaphore set with
+the administrator's UNIX
+uid ,
+gid ,
+and permissions as specified in the
+ubbconfig
+file.
+The issued message contains the UNIX system error number, <I>errno</I>,
+which can be used to determine the exact nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+semctl(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="362"></A>
+<H3>LIBTUX MESSAGE #362</H3>
+<H2> ERROR: TPEOS time set errno <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of initializing the global transaction table,
+the
+BBL
+calls the time() system call.
+This message is issued when the call to time() fails.
+The message includes the error number, <I>errno</I>,
+which can be used to determine the exact nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the time(2) manual page to determine
+the exact nature of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+time(2)
+in UNIX system reference manuals
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="364"></A>
+<H3>LIBTUX MESSAGE #364</H3>
+<H2> ERROR: Failure during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while attempting to send a remote procedure call.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+DBBL
+is running, and retry the desired operation.  If the
+error occurs again, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="370"></A>
+<H3>LIBTUX MESSAGE #370</H3>
+<H2> ERROR: Error setting time for transaction counter, errno <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of starting a new transaction,
+the time() system call is issued.
+This message is issued when the call to time() fails.
+The message includes the error number, <I>errno</I>,
+which can be used to determine the exact nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the time(2) manual page to determine
+the exact nature of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+time(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="376"></A>
+<H3>LIBTUX MESSAGE #376</H3>
+<H2> ERROR: tpabort: xa_rollback returned <I>status</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if the process aborting a transaction
+encounters an error upon calling the database resource manager
+with xa_rollback().
+The message prints the error code that the function returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.  See the userlog for more information on the outcome
+of the transaction.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="377"></A>
+<H3>LIBTUX MESSAGE #377</H3>
+<H2> ERROR: tpabort state <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when a transaction is being aborted
+and the state of the transaction is such that the normal
+procedure for aborting the transaction could not be followed.
+The state of the transaction is printed as part of this message.
+If the state is
+TMGABORTED ,
+then the transaction has already
+been aborted; all other states reflect the various stages of
+two-phase commitment (including heuristic outcomes).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the userlog for more information about this
+transaction's completion.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="378"></A>
+<H3>LIBTUX MESSAGE #378</H3>
+<H2> ERROR: Failed to determine uname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to determine the machine id through a call to
+uname (2)
+has
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the machine's
+uname
+is correctly configured.
+Retry the desired operation;  if the error occurs again,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="381"></A>
+<H3>LIBTUX MESSAGE #381</H3>
+<H2> ERROR: Cannot call ATMI routines until you have joined system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if tpforward() is called outside
+of a service routine (for example, by a client).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change your application code to not use tpforward()
+in clients or outside of service routines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpforward(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="382"></A>
+<H3>LIBTUX MESSAGE #382</H3>
+<H2> ERROR: Performed tpforward() with outstanding replies</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when a service routine calls tpforward()
+with outstanding replies.  The client that invoked this service routine
+receives an error,
+TPESVCERR ,
+from either tpcall() or
+tpgetrply(), if it was expecting a reply.
+The service named by tpforward() is not invoked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You should alter your service routine to call either tpgetrply()
+or tpcancel() for all outstanding replies before calling
+tpforward().  If your service routine encounters an application
+error and you need to return from the service immediately, then use
+tpreturn() with
+TPFAIL .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcancel(3), <Font>tpgetrply(3), <Font>tpforward(3), <Font>tpreturn(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="389"></A>
+<H3>LIBTUX MESSAGE #389</H3>
+<H2> WARN: Failed to set priority for TMS request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a request is sent to the
+TMS
+to complete a transaction,
+the priority of the request is set to optimize performance.
+This message is issued as a warning when the system fails
+to override the default priority.  The request is sent at
+the default priority.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="390"></A>
+<H3>LIBTUX MESSAGE #390</H3>
+<H2> ERROR: tpcommit msg failure, check GTT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when the system encounters
+an error trying to receive the reply to a request
+sent to a TMS to complete a transaction.  This
+message is typically issued when a system-level
+failure occurs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the userlog for more information about this
+transaction's completion and about any communication
+error that may have occurred.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction and use the printnet command
+to see the status of all machine connections in the network.
+This command will report any network partitions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="391"></A>
+<H3>LIBTUX MESSAGE #391</H3>
+<H2> ERROR: No room to add group <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when a transaction has visited more than
+16 TUXEDO System groups (as defined in the *GROUPS section of
+the
+ubbconfig
+file).  At that point, the transaction will not
+continue to propagate nor will it complete successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consider combining groups or using data dependent routing to
+consolidate requests to servers within the same group in
+order to allow your transaction to stay within the 16 group
+maximum.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="392"></A>
+<H3>LIBTUX MESSAGE #392</H3>
+<H2> INFO: GTTELOG: GTRID: machine(<I>machine</I>) counter_time(0x<I>time</I>) counter(0x<I>count</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message prints out the contents of a global transaction
+table entry.  This includes the transaction
+identifier
+(GTRID) ,
+the transaction's state, and other
+pertinent information that can be used by support personnel
+to help locate problems with global transactions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages No. 393, 394, 395, and 396 in this chapter,
+and Message No. 408 in the chapter on CMDTUX messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="393"></A>
+<H3>LIBTUX MESSAGE #393</H3>
+<H2> INFO: coordinator(<I>group</I>) group_count(<I>count</I>) tran_state(<I>state</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is a continuation of message 392 in this
+chapter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages No. 392, 394, 395, and 396 in this chapter,
+and Message No. 408 in the chapter on CMDTUX messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="394"></A>
+<H3>LIBTUX MESSAGE #394</H3>
+<H2> INFO: cmchid(<I>val</I>) q(<I>val2</I>) type(<I>val3</I>) iter(<I>val4</I>) reg_index(<I>val5</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is a continuation of message 392 in this
+chapter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages No. 392, 393, 395, and 396 in this chapter,
+and Message No. 408 in the chapter on CMDTUX messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="395"></A>
+<H3>LIBTUX MESSAGE #395</H3>
+<H2> INFO: log_page(<I>val</I>) version(<I>val2</I>) tranflags(<I>val3</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is a continuation of message 392 in this
+chapter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages No. 392, 393, 394, and 396 in this chapter,
+and Message No. 408 in the chapter on CMDTUX messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="396"></A>
+<H3>LIBTUX MESSAGE #396</H3>
+<H2> INFO: GR[<I>val</I>]:name(<I>val1</I>)local(<I>val2</I>)state(<I>val3</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is a continuation of message 392 in this
+chapter.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages No. 392, 393, 394, and 395 in this chapter,
+and Message No. 408 in the chapter on CMDTUX messages.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="397"></A>
+<H3>LIBTUX MESSAGE #397</H3>
+<H2> ERROR: Cannot allocate entry on GTT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when no more room exists in the
+bulletin board to accommodate transactions.
+This message can occur for a new transaction, in which
+case the transaction will fail to begin.  Or, this
+message can occur when an existing transaction tries to
+instantiate itself on a server's bulletin board, in which
+case the transaction will fail to commit.
+This message might reflect a transient condition based on
+a large, "bursty" transaction volume.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consider increasing the
+MAXGTT
+entry in your application's
+ubbconfig file if this message occurs often or if too many
+transactions fail due to the current
+MAXGTT
+setting.  If you
+are already using the maximum value, and if you are also using
+either the
+LOGGED
+value for the
+CMTRET
+keyword in the ubbconfig
+file or the
+TP_CMT_LOGGED
+setting for tpscmt(3), then use the
+COMPLETE
+or
+TP_CMT_COMPLETE
+settings, respectively, so that
+new transactions will not start until current ones complete.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpscmt(3), <Font>tx_set_commit_return(3), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="398"></A>
+<H3>LIBTUX MESSAGE #398</H3>
+<H2> ERROR: Cannot allocate entry on GTT, TMID creation failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when no more room exists in the
+bulletin board to accommodate transactions.
+This message can occur for a new transaction, in which
+case the transaction will fail to begin.  Or, this
+message can occur when an existing transaction tries to
+instantiate itself on a server's bulletin board, in which
+case the transaction will fail to commit.
+This message might reflect a transient condition based on
+a large, "bursty" transaction volume.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consider increasing the
+MAXGTT
+entry in your application's
+ubbconfig
+file if this message occurs often or if too many
+transactions fail due to the current
+MAXGTT
+setting.  If you
+are already using the maximum value, and if you are also using
+either the
+LOGGED
+value for the
+CMTRET
+keyword in the ubbconfig
+file or the
+TP_CMT_LOGGED
+setting for tpscmt(3), then use the
+COMPLETE or
+TP_CMT_COMPLETE
+settings, respectively, so that
+new transactions will not start until current ones complete.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpscmt(3), <Font>tx_set_commit_return(3), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="399"></A>
+<H3>LIBTUX MESSAGE #399</H3>
+<H2> ERROR: xa_forget returned <I>status</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a database resource manager
+(RM)
+makes a unilateral
+decision to complete a global transaction and its decision
+is in conflict with the TUXEDO System's decision, this situation
+is known as a "heuristic decision".
+The
+RM
+is required to log on stable storage this decision
+until the TUXEDO System explicitly tells the
+RM
+to forget its decision.
+This error message is issued when the
+RM
+encounters an error
+while processing the "forget" request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system vendor.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

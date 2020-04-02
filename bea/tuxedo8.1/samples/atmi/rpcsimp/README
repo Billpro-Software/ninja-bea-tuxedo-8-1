@@ -1,0 +1,36 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/rpcsimp/README	$Revision: 1.5 $"
+
+rpcsimp is a demo of Tuxedo's TxRPC feature. It can be run by following
+the procedure outlined below.
+
+
+1. Copy the files from $TUXDIR/samples/atmi/rpcsimp into a separate DIR for building
+   all the application files. 
+
+2. Several environment variables need to be set and exported before using 
+   TUXEDO or running any TUXEDO application. They are:
+ 
+        TUXDIR - base directory of the TUXEDO software
+        PATH - must include $TUXDIR/bin
+        LD_LIBRARY_PATH - must include $TUXDIR/lib on systems that use
+                shared libraries (except HP-UX and AIX)
+        SHLIB_PATH - HP-UX only: must include $TUXDIR/lib
+        LIBPATH - AIX only: must include $TUXDIR/lib
+        TUXCONFIG - full pathname of binary tuxconfig file
+
+2. Edit the ubbconfig file and specify the entries present within <....>. 
+   These are UNAME, TUXDIR, APPDIR and TUXCONFIG. For UNAME enter the machine
+   name (The output of "uname -n" at the command prompt). 
+
+3. Build the TUXEDO config file.
+	$ tmloadcf -y ubbconfig
+
+4. Build the application files:
+	$ make -f rpcsimp.mk all
+
+5. Boot up the application.
+	$ tmboot -y
+
+6. Run the client.
+	$ client "HeLlO wOrLd"

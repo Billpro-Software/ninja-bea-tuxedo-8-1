@@ -1,0 +1,39 @@
+# ldap filter file
+#
+# lines like this that start with # or empty lines are ignored
+# 
+# syntax:
+#
+# <tag>
+#   <pattern1>	<delimiters>	<filter1-1>	<desc1-1>	[<scope>]
+# 		   		<filter1-2>	<desc1-2>	[<scope>]
+#
+#   <pattern2>	<delimiters>	<filter2-1>	<desc2-1>	[<scope>] ...
+#
+# The "desc" should describe the filter and it should correctly complete
+# both of the following phrases:
+#
+#	One <desc> match was found for...
+#	Three <desc> matches were found for...
+#
+# The scope is optional, and should be one of:
+#	"base"
+#	"onelevel"
+#	"subtree"
+# if it is included.
+#
+# For more information, refer to the Editing the LDAP Search Filter File section in 
+# the BEA WLE Implementing Security documentation.
+#
+# For additional information, refer to Chapter 7, Understanding Filter Configuration 
+# Files in the Netscape Directory SDK 3.0 for C Programmer's Guide available
+# at http://www.mozilla.org/directory/
+#
+
+"BEA_person_lookup"
+	".*"			" "	"(|(objectClass=strongAuthenticationUser)(mail=%v))"		"email address"
+					"(|(objectClass=strongAuthenticationUser) (mail=%v*))"		"start of email address"
+"BEA_issuer_lookup"
+	".*"	                " "     "(&(objectClass=certificationAuthority)(cn=%v)(sn=%v))"		"exact match on sn, cn"
+
+

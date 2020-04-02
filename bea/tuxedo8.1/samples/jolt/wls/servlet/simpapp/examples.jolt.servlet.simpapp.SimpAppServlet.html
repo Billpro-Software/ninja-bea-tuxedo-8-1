@@ -1,0 +1,161 @@
+
+ <!--	(c) 2003 BEA Systems, Inc. All Rights Reserved. -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--NewPage-->
+<html>
+<head>
+<title>
+  Class examples.jolt.servlet.simpapp.SimpAppServlet
+</title>
+</head>
+<body bgcolor="#FFFFFF" link=#DB1260 vlink=#828282>
+<a name="_top_"></a>
+<pre>
+<a href="../../../index.html">All Examples</a>  <a href="../../index.html">All Jolt Examples</a>  <a href="../index.html">All Jolt Servlet Examples</a>  <a href="index.html">This Package</a></pre>
+<hr>
+<h1>
+  Class examples.jolt.servlet.simpapp.SimpAppServlet
+</h1>
+<pre>
+javax.servlet.GenericServlet
+   |
+   +----javax.servlet.http.HttpServlet
+           |
+           +----examples.jolt.servlet.simpapp.SimpAppServlet
+</pre>
+<hr>
+<dl>
+  <dt> public class <b>SimpAppServlet</b>
+  <dt> extends HttpServlet
+</dl>
+This example demonstrates how a WebLogic Servlet may connect to TUXEDO 
+ and call upon one of its services; it should be invoked from the 
+ <i>simpapp.html</i> file. The servlet creates a session pool
+ manager at initialization, which is used to obtain a session when the 
+ doPost method is invoked. This session is used to connect to a service
+ in TUXEDO with a name described by the posted "SVCNAME" argument. In this 
+ example the service is called "TOUPPER", which transposes the posted 
+ "STRING" argument text into uppercase, and returns the result. This is 
+ returned to the client browser within some generated HTML.
+  <p>
+ THIS IS SOURCE CODE PUBLISHED FOR DEMONSTRATION PURPOSES.
+<p>
+<dl>
+  <dt> <b>Author:</b>
+  <dd> Copyright (c) 1998-2000 BEA Systems, Inc.  All rights reserved.
+</dl>
+<p>
+<hr>
+<a name="index"></a>
+<h2>
+  <img src="../../../images/constructor-index.gif" width=275 height=38 alt="Constructor Index">
+</h2>
+<dl>
+  <dt> <img src="../../../images/yellow-ball-small.gif" width=6 height=6 alt=" o ">
+	<a href="#SimpAppServlet()"><b>SimpAppServlet</b></a>()
+  <dd> 
+</dl>
+<h2>
+  <img src="../../../images/method-index.gif" width=207 height=38 alt="Method Index">
+</h2>
+<dl>
+  <dt> <img src="../../../images/red-ball-small.gif" width=6 height=6 alt=" o ">
+	<a href="#destroy()"><b>destroy</b></a>()
+  <dd>  Destroys this servlet.
+  <dt> <img src="../../../images/red-ball-small.gif" width=6 height=6 alt=" o ">
+	<a href="#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"><b>doGet</b></a>(HttpServletRequest, HttpServletResponse)
+  <dd>  Implements the <tt>doGet()</tt> HttpServlet method.
+  <dt> <img src="../../../images/red-ball-small.gif" width=6 height=6 alt=" o ">
+	<a href="#doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"><b>doPost</b></a>(HttpServletRequest, HttpServletResponse)
+  <dd>  Implements the HttpServlet <tt>doPost()</tt> method.
+  <dt> <img src="../../../images/red-ball-small.gif" width=6 height=6 alt=" o ">
+	<a href="#init(javax.servlet.ServletConfig)"><b>init</b></a>(ServletConfig)
+  <dd>  Initializes the servlet.
+</dl>
+<a name="constructors"></a>
+<h2>
+  <img src="../../../images/constructors.gif" width=231 height=38 alt="Constructors">
+</h2>
+<a name="SimpAppServlet"></a>
+<a name="SimpAppServlet()"><img src="../../../images/yellow-ball.gif" width=12 height=12 alt=" o "></a>
+<b>SimpAppServlet</b>
+<pre>
+ public SimpAppServlet()
+</pre>
+<a name="methods"></a>
+<h2>
+  <img src="../../../images/methods.gif" width=151 height=38 alt="Methods">
+</h2>
+<a name="init(javax.servlet.ServletConfig)"><img src="../../../images/red-ball.gif" width=12 height=12 alt=" o "></a>
+<a name="init"><b>init</b></a>
+<pre>
+ public void init(ServletConfig config) throws ServletException
+</pre>
+<dl>
+  <dd> Initializes the servlet.  The session pool manager and the
+ simpapp session pool have been established during the startup.
+<p>
+  <dd><dl>
+    <dt> <b>Parameters:</b>
+    <dd> config - Servlet configuration
+    <dt> <b>Throws:</b> ServletException
+    <dd> if the servlet fails
+    <dt> <b>Overrides:</b>
+    <dd> init in class GenericServlet
+  </dl></dd>
+</dl>
+<a name="destroy()"><img src="../../../images/red-ball.gif" width=12 height=12 alt=" o "></a>
+<a name="destroy"><b>destroy</b></a>
+<pre>
+ public void destroy()
+</pre>
+<dl>
+  <dd> Destroys this servlet.  The ServletSessionPoolManager resource
+  is deallocated.
+<p>
+  <dd><dl>
+    <dt> <b>Overrides:</b>
+    <dd> destroy in class GenericServlet
+  </dl></dd>
+</dl>
+<a name="doPost(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"><img src="../../../images/red-ball.gif" width=12 height=12 alt=" o "></a>
+<a name="doPost"><b>doPost</b></a>
+<pre>
+ public void doPost(HttpServletRequest req,
+                    HttpServletResponse resp) throws ServletException, IOException
+</pre>
+<dl>
+  <dd> Implements the HttpServlet <tt>doPost()</tt> method. 
+ This method expects POSTed arguments for:
+ <dl>
+ <dt>"SVCNAME"<dd>The name of the service to be invoked in TUXEDO.
+ <dt>"STRING"<dd>The text to be transposed to UPPER CASE. 
+ </dl> 
+ <p> See the provided simpapp.html for the HTML form used
+ to submit the data.
+<p>
+  <dd><dl>
+    <dt> <b>Overrides:</b>
+    <dd> doPost in class HttpServlet
+  </dl></dd>
+</dl>
+<a name="doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"><img src="../../../images/red-ball.gif" width=12 height=12 alt=" o "></a>
+<a name="doGet"><b>doGet</b></a>
+<pre>
+ public void doGet(HttpServletRequest req,
+                   HttpServletResponse resp) throws ServletException, IOException
+</pre>
+<dl>
+  <dd> Implements the <tt>doGet()</tt> HttpServlet method.
+  This simply invokes the <tt>doPost()</tt> method.
+<p>
+  <dd><dl>
+    <dt> <b>Overrides:</b>
+    <dd> doGet in class HttpServlet
+  </dl></dd>
+</dl>
+<hr>
+<pre>
+<a href="../../../index.html">All Examples</a>  <a href="../../index.html">All Jolt Examples</a>  <a href="../index.html">All Jolt Servlet Examples</a>  <a href="index.html">This Package</a></pre>
+</body>
+</html>

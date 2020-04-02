@@ -1,0 +1,2487 @@
+<!-- .if n .pH errman.h.qmsg3.htm @(#)qmsg3.htm	60.2 of 3/12/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBQM </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBQM MESSAGES 1500-1599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1500"></A>
+<H3>LIBQM MESSAGE #1500</H3>
+<H2> ERROR: Heuristic or one-phase commit - out of queue space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcommittrans
+command to heuristically commit a transaction,
+qmadmin
+was unable to record the heuristic commit because the queue
+space had no more room for messages.
+If the
+IPC
+resources for the queue space are removed before
+the transaction manager asks about the status of the
+heuristically completed transaction, the status will be lost.
+<P>
+This can also occur if the transaction manger does a one-phase
+commit.
+If the one-phase commit is interrupted before completion,
+the transaction may be inconsistent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1501"></A>
+<H3>LIBQM MESSAGE #1501</H3>
+<H2> ERROR: Heuristic rollback - out of queue space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qrollbacktrans
+command to heuristically rollback a transaction,
+qmadmin
+was unable to record the heuristic rollback because the queue
+space had no more room for messages.
+If the
+IPC
+resources for the queue space are removed before
+the transaction manager asks about the status of the
+heuristically completed transaction, the status will be lost.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1502"></A>
+<H3>LIBQM MESSAGE #1502</H3>
+<H2> ERROR: xa_open() - system time is older than the last restart time</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When opening (warm starting) a queue space, the current system time was found
+to be older than the last time that the queue space was started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-set the system time appropriately.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1505"></A>
+<H3>LIBQM MESSAGE #1505</H3>
+<H2> ERROR: Blocking factor must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric blocking factor was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric blocking factor.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1507"></A>
+<H3>LIBQM MESSAGE #1507</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacechange
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1508"></A>
+<H3>LIBQM MESSAGE #1508</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1510"></A>
+<H3>LIBQM MESSAGE #1510</H3>
+<H2> ERROR: IPC key must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, a non-numeric
+IPC
+key was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacechange
+command using a numeric value for the
+IPC
+key used to create the queue space shared memory and semaphores.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1512"></A>
+<H3>LIBQM MESSAGE #1512</H3>
+<H2> ERROR: Transaction count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, a non-numeric transaction count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacechange
+command using a numeric value for the maximum number
+of concurrent transactions in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1514"></A>
+<H3>LIBQM MESSAGE #1514</H3>
+<H2> ERROR: Process count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, a non-numeric process count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacechange
+command using a numeric value for the maximum number
+of concurrent processes accessing the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1516"></A>
+<H3>LIBQM MESSAGE #1516</H3>
+<H2> ERROR: Message count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, a non-numeric message count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacechange
+command using a numeric value for the maximum number of
+messages concurrently stored in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1518"></A>
+<H3>LIBQM MESSAGE #1518</H3>
+<H2> ERROR: Error queue name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command,
+the error queue name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with an error queue name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1521"></A>
+<H3>LIBQM MESSAGE #1521</H3>
+<H2> ERROR: Blocking factor must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, a non-numeric blocking factor was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacechange
+command using a numeric blocking factor.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1522"></A>
+<H3>LIBQM MESSAGE #1522</H3>
+<H2> ERROR: Queue space change failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command,
+qmadmin
+failed to change the specified queue space parameters.
+There are many possible reasons for the failure and the specific reason
+is written to the standard output or the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command when the problem has been resolved.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1525"></A>
+<H3>LIBQM MESSAGE #1525</H3>
+<H2> ERROR: List queue space - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacelist
+command, an invalid parameter was specified.
+The following are invalid:
+the device is not specified;
+the queue space name is not specified or is greater than 15 characters
+in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1526"></A>
+<H3>LIBQM MESSAGE #1526</H3>
+<H2> ERROR: Queue space change - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, an invalid parameter was specified.
+The following are invalid: the
+IPC
+key is less than or equal to 0; the number of queues, transactions,
+processes, or messages is less than or equal to 0; the configuration
+device is not specified;
+or the queue space name is not specified or is greater than 15 characters
+in length.
+or the extent size is less than or equal to 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1527"></A>
+<H3>LIBQM MESSAGE #1527</H3>
+<H2> ERROR: Queue space change - cannot lock queue space <I>queue_space_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command,
+qmadmin
+failed to lock the
+QMCONFIG
+device for exclusive update.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for further information about the process
+that has the configuration locked.
+Re-enter the command after the configuration has been unlocked.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1528"></A>
+<H3>LIBQM MESSAGE #1528</H3>
+<H2> ERROR: Queue space create - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while allocating a buffer based on the specified blocking
+factor.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+Reduce the blocking factor specified when creating the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1529"></A>
+<H3>LIBQM MESSAGE #1529</H3>
+<H2> ERROR: Add extent - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while allocating a buffer based on the specified blocking
+factor.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+Reduce the blocking factor specified when changing the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1563"></A>
+<H3>LIBQM MESSAGE #1563</H3>
+<H2> ERROR: QMCONFIG must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value of
+QMCONFIG ,
+the device containing the queue space,
+as specified on the
+qmadmin
+command line or in the shell environment
+is not an absolute pathname,
+meaning it does not begin with a /.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a full pathname for the
+QMCONFIG
+environment variable or
+qmadmin
+command line argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1564"></A>
+<H3>LIBQM MESSAGE #1564</H3>
+<H2> ERROR: Device name must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+crdl
+command,
+the device name specified is not an absolute pathname,
+meaning it does not begin with a /.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with an absolute pathname for the device name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1565"></A>
+<H3>LIBQM MESSAGE #1565</H3>
+<H2> ERROR: Device name must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+the device name specified is not an absolute pathname,
+meaning it does not begin with a /.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with an absolute pathname for the device name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1566"></A>
+<H3>LIBQM MESSAGE #1566</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcrm
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+ipcrm
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1567"></A>
+<H3>LIBQM MESSAGE #1567</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcrm
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1568"></A>
+<H3>LIBQM MESSAGE #1568</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcs
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+ipcs
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1569"></A>
+<H3>LIBQM MESSAGE #1569</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcs
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1570"></A>
+<H3>LIBQM MESSAGE #1570</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qopen
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qopen
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1571"></A>
+<H3>LIBQM MESSAGE #1571</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qopen
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1572"></A>
+<H3>LIBQM MESSAGE #1572</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacedestroy
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacedestroy
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1573"></A>
+<H3>LIBQM MESSAGE #1573</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacedestroy
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1574"></A>
+<H3>LIBQM MESSAGE #1574</H3>
+<H2> ERROR: Invalid queue name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qset
+command, an invalid queue name was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+qinfo
+command to get a list of the existing queue names.
+Re-execute the command with a valid queue name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1575"></A>
+<H3>LIBQM MESSAGE #1575</H3>
+<H2> ERROR: <I>command</I> - cannot change value that is not part of the queue ordering.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If
+<I>command</I>
+is
+qchangeprio ,
+then the command was executed on a queue without the "priority" sort criteria.
+If
+<I>command</I>
+is
+qchangetime ,
+then the command was executed on a queue without the "time" sort criteria.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command on a queue with the proper sort criteria.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1577"></A>
+<H3>LIBQM MESSAGE #1577</H3>
+<H2> ERROR: xa_open() - failed to get enough semaphores</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When opening (warm starting) a queue space, there were not enough
+system semaphores available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+qsize
+command can be used to compute the number of semaphores needed.
+Either shut down other applications that are using semaphores,
+or increase the operating system semaphore parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1578"></A>
+<H3>LIBQM MESSAGE #1578</H3>
+<H2> ERROR: Destroy queue - queue messages involved in one or more transactions</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+qdestroy ,
+command was executed while transactions are outstanding for messages
+on that queue (either being enqueued or dequeued).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command again.  It may be necessary to shut down
+any processes accessing the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1579"></A>
+<H3>LIBQM MESSAGE #1579</H3>
+<H2> INFO: Queue list - no messages queue <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qlist
+command for queue
+<I>name</I>,
+no messages were found on the queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1580"></A>
+<H3>LIBQM MESSAGE #1580</H3>
+<H2> ERROR: Queue space change - ipckey is already used -- choose another one or check existing semaphores</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacechange
+command, an IPC key was specified for which a semaphore already exists.
+This probably means that another application is using the IPC key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Choose another IPC key and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1582"></A>
+<H3>LIBQM MESSAGE #1582</H3>
+<H2> ERROR: Change queue - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchange
+command, an invalid parameter was specified.
+The following are invalid:
+an invalid out-of-order value; retries or delay time
+less than 0;
+the queue space name is not specified or greater than 15
+characters in length;
+the upper threshold less than or equal to 0 or less than the
+lower threshold value; or an invalid threshold type or a threshold
+type of '%' with a upper threshold value greater than 100.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1585"></A>
+<H3>LIBQM MESSAGE #1585</H3>
+<H2> ERROR: Queue change failed for queue <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchange
+command,
+qmadmin
+failed to change the specified queue.
+There are many possible reasons for the failure and the specific reason
+is written to the standard output or the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command when the problem has been resolved.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT1><P>
+<H1>LIBQM MESSAGES 1600-1699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1600"></A>
+<H3>LIBQM MESSAGE #1600</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed in
+TMQFORWARD
+while parsing and storing the command line queue names.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1601"></A>
+<H3>LIBQM MESSAGE #1601</H3>
+<H2> ERROR: realloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate memory from the operating system
+using
+realloc ()
+failed in
+TMQFORWARD
+while parsing and storing the command line queue names.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1602"></A>
+<H3>LIBQM MESSAGE #1602</H3>
+<H2> WARN: -t option ignored as argument must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument for the
+-t
+option on the command line for
+TMQFORWARD
+is non-numeric and is ignored.
+The default transaction time value will be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT,
+for the
+TMQFORWARD
+server such that the argument for the
+-t
+option is a numeric value indicating the number of seconds before
+transaction timeout occurs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1603"></A>
+<H3>LIBQM MESSAGE #1603</H3>
+<H2> WARN: -t option ignored as argument is too large</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The numeric argument for the
+-t
+option on the command line for
+TMQFORWARD
+is too large and is ignored.
+The default transaction time value will be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQFORWARD
+server such that the argument for the
+-t
+option is a numeric value less than 2147483648
+indicating the number of seconds before
+transaction timeout occurs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1604"></A>
+<H3>LIBQM MESSAGE #1604</H3>
+<H2> WARN: -i option ignored as argument must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument for the
+-i
+option on the command line for
+TMQFORWARD
+is non-numeric and is ignored.
+The default idle time value, 30 seconds, will be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQFORWARD
+server such that the argument for the
+-i
+option is a numeric value indicating the number of seconds
+that the server is idle after finding no messages on the queues
+before it reads the queues again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1605"></A>
+<H3>LIBQM MESSAGE #1605</H3>
+<H2> WARN: -i option ignored as argument is too large</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The numeric argument for the
+-i
+option on the command line for
+TMQFORWARD
+is too large and is ignored.
+The default idle time value, 30 seconds, will be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQFORWARD
+server such that the argument for the
+-i
+option is a numeric value less than 2147483648
+indicating the number of seconds
+that the server is idle after finding no messages on the queues
+before it reads the queues again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1606"></A>
+<H3>LIBQM MESSAGE #1606</H3>
+<H2> WARN: Invalid command line argument '<I>opt</I>' ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid option,
+<I>opt</I>,
+was specified on the command line for
+TMQFORWARD .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQFORWARD
+server to remove the invalid command line option.
+Check the manual page for valid options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1607"></A>
+<H3>LIBQM MESSAGE #1607</H3>
+<H2> ERROR: -q option not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-q
+option is a required option for the
+TMQFORWARD
+and was not specified in the command line options.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQFORWARD
+server to include the
+-q
+option with a list of one or more queues for which the server
+will forward queued messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1608"></A>
+<H3>LIBQM MESSAGE #1608</H3>
+<H2> ERROR: TMSNAME must be TMS_QM</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is configured such that the
+TMQFORWARD
+server is in a group in the *GROUPS section that does
+not have the
+TMSNAME
+set to
+TMS_QM.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+file to have the
+TMSNAME
+set to
+TMS_QM
+and reboot the
+TMQFORWARD
+server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1609"></A>
+<H3>LIBQM MESSAGE #1609</H3>
+<H2> WARN: [Unable to verify that TMSNAME is TMS_QM]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQFORWARD
+server was unable to verify that the
+TMSNAME
+for the group in the *GROUPS section associated with
+TMQFORWARD
+is set to
+TMS_QM
+(that is, it was unable to find the corresponding *GROUPS entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1610"></A>
+<H3>LIBQM MESSAGE #1610</H3>
+<H2> ERROR: Must not have a reply queue configured</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is configured such that the
+TMQFORWARD
+server has a reply queue.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+file such that the
+TMQFORWARD
+server does not have a reply queue
+(that is,
+REPLYQ=N ).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1611"></A>
+<H3>LIBQM MESSAGE #1611</H3>
+<H2> ERROR: Must not be configured as part of an MSSQ</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is configured such that the
+TMQFORWARD
+server is part of an multiple-server-single-queue,
+MSSQ ,
+set.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+file such that the
+TMQFORWARD
+server is not part of an
+MSSQ
+set (that is, don't specify a
+RQADDR ).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1612"></A>
+<H3>LIBQM MESSAGE #1612</H3>
+<H2> ERROR: Must not advertise services</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is configured such that the
+TMQFORWARD
+server advertised services as part of booting.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+file such that the
+CLOPT
+for the
+TMQFORWARD
+server does not include the
+-s
+option.
+If a custom version of
+TMQFORWARD
+is built using
+buildserver,
+don't specify the
+-s
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+buildserver(1),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1613"></A>
+<H3>LIBQM MESSAGE #1613</H3>
+<H2> ERROR: tpopen() failed, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the
+TMQFORWARD
+server,
+tpopen ()
+returned an error.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the returned
+<I>tperrno</I>
+and check the userlog to determine what the error was.
+Resolve the problem and re-boot the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1614"></A>
+<H3>LIBQM MESSAGE #1614</H3>
+<H2> ERROR: Queue <I>name</I> not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the queue names,
+<I>name</I>,
+specified as an argument to the
+-q
+option of the
+TMQFORWARD
+server is not valid for the associated queue space.
+The server will not boot.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+qinfo
+command of
+qmadmin
+to get a list of valid queues for the queue space.
+Change the
+TUXCONFIG
+file such that the
+CLOPT
+for the
+TMQFORWARD
+server has a valid list of queue names for the
+-q
+option and re-boot the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1615"></A>
+<H3>LIBQM MESSAGE #1615</H3>
+<H2> WARN: Dropping message received</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An application message was received by the
+TMQFORWARD
+server.
+Since the
+TMQFORWARD
+server is not set up to handle application messages directly,
+the message was dropped.
+(The
+TMQFORWARD
+server cannot be booted if it advertises services but there is
+no mechanism to keep an administrator from dynamically advertizing
+services for the server from
+tmadmin ).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Unadvertise any services that were accidentally advertised for the
+TMQFORWARD
+server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1616"></A>
+<H3>LIBQM MESSAGE #1616</H3>
+<H2> ERROR: Failed to start a transaction <I>count</I> times; exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQFORWARD
+server has failed to start a transaction via
+tpbegin
+<I>count</I>
+times.
+The server will exit (assuming that there something is wrong).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+TMQFORWARD
+server is set to restart, then the server will
+be restarted automatically.
+Check for other userlog messages that may indicate the problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1617"></A>
+<H3>LIBQM MESSAGE #1617</H3>
+<H2> INFO: no messages on queues - shutting down</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQFORWARD
+server tried to dequeue a message from each of the queues named
+in the
+-q
+command line option and found no messages on any queue.
+The
+-e
+command line option was specified and the server is shutting down
+gracefully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1618"></A>
+<H3>LIBQM MESSAGE #1618</H3>
+<H2> ERROR: tpalloc() failed - server exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate a typed buffer using
+tpalloc ()
+failed in
+TMQFORWARD.
+The failure will cause the server to exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+The server will restart automatically if it is configured
+as restartable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1619"></A>
+<H3>LIBQM MESSAGE #1619</H3>
+<H2> ERROR: tprealloc() failed - server exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate a typed buffer using
+tprealloc ()
+failed in
+TMQFORWARD.
+The failure will cause the server to exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+The server will restart automatically if it is configured
+as restartable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1620"></A>
+<H3>LIBQM MESSAGE #1620</H3>
+<H2> ERROR: _tpalloc() failed - server exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate space using
+_tpalloc ()
+failed in
+TMQFORWARD.
+The failure will cause the server to exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+The server will restart automatically if it is configured
+as restartable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1621"></A>
+<H3>LIBQM MESSAGE #1621</H3>
+<H2> WARN: Unable to dequeue message for deleting, diagnostic <I>diagnostic</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message was dequeued and forwarded to the associated service.
+The server returned failure and an application message.
+The
+-d
+option was specified on the
+TMQFORWARD
+server command line but
+TMQFORWARD
+was unable to delete the queued message from the queue.
+The associated diagnostic,
+<I>diagnostic</I>,
+is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine what caused the dequeuing to fail.
+Most likely, the message reached the retry limit and was moved to
+the error queue; in this case, the diagnostic would be
+QMENOMSG .
+In the worst case, the message will not be deleted from
+the queue and will be executed again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1622"></A>
+<H3>LIBQM MESSAGE #1622</H3>
+<H2> WARN: Unable to enqueue failure message, diagnostic <I>diagnostic</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message was dequeued and forwarded to the associated service.
+The server returned failure and an application message.
+The
+-d
+option was specified
+on the
+TMQFORWARD
+server command line but
+TMQFORWARD
+was unable to enqueue the reply message on the failure queue.
+The associated diagnostic,
+<I>diagnostic</I>,
+is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine what caused the enqueuing to fail based on the
+<I>diagnostic</I>
+and by looking for other messages in the userlog
+and take actions (based on the associated system message manual for
+the printed messages)
+to ensure that it doesn't happen again.
+In this case, the reply message is lost.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1623"></A>
+<H3>LIBQM MESSAGE #1623</H3>
+<H2> WARN: Failed to dequeue message and queue failure message, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message was dequeued and forwarded to the associated service.
+The server returned failure and an application message.
+The
+-d
+option was specified on the
+TMQFORWARD
+server command line but
+TMQFORWARD
+was unable to commit the transaction in which the original message
+was dequeued and the reply message was enqueued on the failure queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine what caused the transaction to fail by looking for
+other messages in the userlog
+and take actions (based on the associated system message manual for
+the printed messages)
+to ensure that it doesn't happen again.
+In this case, the reply message is lost.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tpcommit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1624"></A>
+<H3>LIBQM MESSAGE #1624</H3>
+<H2> WARN: Failed to start transaction to handle service failure, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message was dequeued and forwarded to the associated service.
+The server returned failure and an application message.
+The
+-d
+option was specified on the
+TMQFORWARD
+server command line but
+TMQFORWARD
+was unable to start a transaction in which the original message
+is dequeued and the reply message is enqueued on the failure queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine what caused the transaction start,
+tpbegin ,
+to fail by looking for other messages in the userlog
+and take actions (based on the associated system message manual for
+the printed messages)
+to ensure that it doesn't happen again.
+In this case, the reply message is lost.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD(5),
+tpbegin(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1625"></A>
+<H3>LIBQM MESSAGE #1625</H3>
+<H2> WARN: -t option ignored as argument must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument for the
+-t
+option on the command line for
+TMQUEUE
+is non-numeric and is ignored.
+The default transaction time value will be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQUEUE
+server such that the argument for the
+-t
+option is a numeric value indicating the number of seconds
+before transaction timeout occurs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1626"></A>
+<H3>LIBQM MESSAGE #1626</H3>
+<H2> WARN: -t option ignored as argument is too large</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The numeric argument for the
+-t
+option on the command line for
+TMQUEUE
+is too large and is ignored.
+The default transaction time value will be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQUEUE
+server such that the argument for the
+-t
+option is a numeric value less than 2147483648
+indicating the number of seconds before
+transaction timeout occurs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1627"></A>
+<H3>LIBQM MESSAGE #1627</H3>
+<H2> WARN: Invalid command line option '<I>opt</I>' ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid option,
+<I>opt</I>,
+was specified on the command line for
+TMQFORWARD
+and ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the server command line options,
+CLOPT ,
+for the
+TMQFORWARD
+server to remove the invalid command line option.
+Check the manual page for valid options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1628"></A>
+<H3>LIBQM MESSAGE #1628</H3>
+<H2> ERROR: TMSNAME must be TMS_QM</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is configured such that the
+TMQUEUE
+server is in a group in the *GROUPS section that does
+not have the
+TMSNAME
+set to
+TMS_QM.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+file to have the
+TMSNAME
+set to
+TMS_QM
+and reboot the
+TMQUEUE
+server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1629"></A>
+<H3>LIBQM MESSAGE #1629</H3>
+<H2> WARN: [Unable to verify that TMSNAME is TMS_QM]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQUEUE
+server was unable to verify that the
+TMSNAME
+for the group in the *GROUPS section associated with
+TMQUEUE
+is set to
+TMS_QM
+(that is, it was unable to find the corresponding *GROUPS entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1630"></A>
+<H3>LIBQM MESSAGE #1630</H3>
+<H2> ERROR: tpopen() failed, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing the
+TMQUEUE
+server,
+tpopen ()
+returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the returned
+<I>tperrno</I>
+and check the userlog to determine what the error was.
+When the problem has been resolved, re-boot the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1631"></A>
+<H3>LIBQM MESSAGE #1631</H3>
+<H2> WARN: TMQUEUE received the wrong buffer type - <I>type</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQUEUE
+server received a message from an application program that was sent
+via
+tpcall
+or
+tpconnect
+instead of
+tpenqueue
+or
+tpdequeue .
+A failure message is returned to the originator.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-write the application software or re-configuration the
+TUXCONFIG
+file so that messages are sent to the correct services using
+the correct primitives.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tpcall(3),
+tpconnect(3),
+tpdequeue(3),
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1632"></A>
+<H3>LIBQM MESSAGE #1632</H3>
+<H2> WARN: [TMQUEUE received a buffer for other than ENQUEUE or DEQUEUE, opcode <I>opcode</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQUEUE
+server received a message with an invalid operation code,
+<I>opcode</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1633"></A>
+<H3>LIBQM MESSAGE #1633</H3>
+<H2> ERROR: [Failed to get field <I>fieldname</I> from <I>operation</I> message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQUEUE
+server could not get the specified field,
+<I>fieldname</I>,
+while performing the operation.
+The
+<I>operation</I>
+can be
+"tpenqueue"
+or
+"tpdequeue" ,
+and the
+<I>fieldname</I>
+can be "FLAGS", "QNAME", "CORRID", "FAILUREQ", "MSGID", "PRIORITY", "REPLYQ",
+or "TIME".
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The operation will fail.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1634"></A>
+<H3>LIBQM MESSAGE #1634</H3>
+<H2> WARN: [Failed to set field <I>fieldname</I> in <I>operation</I> message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQUEUE
+server could not set the specified field,
+<I>fieldname,</I>
+in the reply message while performing the operation.
+The
+<I>operation</I>
+can be
+"tpenqueue"
+or
+"tpdequeue" ,
+and the
+<I>fieldname</I>
+can be "DIAGNOSTIC", "FLAGS", "CORRID", "FAILUREQ", "MSGID", "PRIORITY",
+or "REPLYQ".
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The operation will succeed but the associated information will not be
+passed back to the application from the
+tpenqueue
+or
+tpdequeue
+call.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tpdequeue(3),
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1635"></A>
+<H3>LIBQM MESSAGE #1635</H3>
+<H2> ERROR: <I>tranop</I> failed during <I>operation</I>, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQUEUE
+server received a request that was not in transaction mode
+and was unable to begin or commit a transaction.
+The
+<I>tranop</I>
+is either
+"tpbegin"
+or
+"tpcommit"
+and
+<I>operation</I>
+is either
+"tpenqueue"
+or
+"tpdequeue" .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+tpenqueue
+or
+tpdequeue
+operation will fail.
+Use the returned
+<I>tperrno</I>
+and check the userlog to determine what the error was.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tpdequeue(3),
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1636"></A>
+<H3>LIBQM MESSAGE #1636</H3>
+<H2> ERROR: tprealloc() failed - server exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate a typed buffer using
+tprealloc ()
+failed in
+TMQUEUE.
+The failure will cause the server to exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+The server will restart automatically if it is configured
+as restartable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1637"></A>
+<H3>LIBQM MESSAGE #1637</H3>
+<H2> ERROR: TMQUEUE cannot be a conversational server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is configured such that the
+TMQUEUE
+server is a conversational server
+(that is, its entry in the configuration has
+"CONV=Y" ).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXCONFIG
+file to configure
+TMQUEUE
+as a request/response server (without CONV=Y)
+and reboot the
+TMQUEUE
+server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQUEUE(5),
+tmconfig(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1638"></A>
+<H3>LIBQM MESSAGE #1638</H3>
+<H2> ERROR: Unable to re-enqueue message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TMQFORWARD
+server was run with the -n option which indicates that the forwarding
+is not being run within a transaction.
+In this case, the message was deleted from the queue, the associated
+service was called, the call failed, and the message cannot be put
+back on the queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the application cannot afford to lose messages, don't use
+the -n option on
+TMQFORWARD
+(atomicity can only be guaranteed within transactions).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TMQFORWARD (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1639"></A>
+<H3>LIBQM MESSAGE #1639</H3>
+<H2> ERROR: TA_MAXPAGES can only be increased</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An /AdminAPI request attempted to change
+the number of pages allocated to a queue space
+by specifying that the number be decreased or remain the same.
+This is an invalid request; the number of pages can only be increased.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To decrease the number of pages allocated to a queue space,
+the queue space must be deleted
+and then recreated with the desired number of pages.
+These operations will also delete all messages in the queue space
+unless the messages are first dequeued and then enqueued to another queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+APPQ_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1640"></A>
+<H3>LIBQM MESSAGE #1640</H3>
+<H2> ERROR: Cannot update TA_MAXQUEUES after queue space is created</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An /AdminAPI request specified a change to
+the maximum number of queues in a queue space.
+This is an invalid request; the maximum number of queues
+cannot be changed after the queue space is created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To change the maximum number of queues in a queue space,
+the queue space must first be deleted
+and then recreated with the desired maximum number of queues.
+These operations will also delete all messages in the queue space
+unless the messages are dequeued and then enqueued to another queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+APPQ_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1642"></A>
+<H3>LIBQM MESSAGE #1642</H3>
+<H2> ERROR: /Q error processing /Admin service request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during the processing of an /AdminAPI request.
+The cause of the error is recorded in the userlog on the machine
+where the queue space is located.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the userlog for more information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+APPQ_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1643"></A>
+<H3>LIBQM MESSAGE #1643</H3>
+<H2> ERROR: Invalid attribute value on SET request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+<!--  should be the same as LIBTMIB:148 -->
+The value specified on a
+SET
+request for the attribute indicated by the
+TA_BADFLD
+attribute in the reply buffer is invalid.
+Valid values for writable attributes are specified on the APPQ_MIB manual
+page for the appropriate class.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the attribute value in question to a valid value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+APPQ_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1644"></A>
+<H3>LIBQM MESSAGE #1644</H3>
+<H2> ERROR: Device specified in TA_QMCONFIG does not exist</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /AdminAPI request to create a new queue space failed because
+the device where the queue space is to be located does not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Create the device, then resubmit the request to create the queue space.
+The device can be created via the /AdminAPI
+(using
+SET
+NEW
+to create an object of the
+T_DEVICE
+class), or via the
+crdl
+command of
+qmadmin
+or
+tmadmin .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin (1),
+tmadmin (1),
+APPQ_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1645"></A>
+<H3>LIBQM MESSAGE #1645</H3>
+<H2> ERROR: Cannot update TA_APPQORDER after queue is created</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An /AdminAPI request attempted to change
+the order in which messages in the queue are to be processed.
+This is an invalid request; the order
+cannot be changed after the queue is created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To change the message processing order of a queue,
+the queue must be deleted
+and then recreated with the desired order.
+These operations will also delete all messages in the queue
+unless the messages are first moved to another queue.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+APPQ_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1646"></A>
+<H3>LIBQM MESSAGE #1646</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1647"></A>
+<H3>LIBQM MESSAGE #1647</H3>
+<H2> ERROR: No license for /Q</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use /Q.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for /Q.  If you believe that you
+own and have installed the license for /Q,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1648"></A>
+<H3>LIBQM MESSAGE #1648</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1649"></A>
+<H3>LIBQM MESSAGE #1649</H3>
+<H2> ERROR: No license for /Q</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use /Q.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for /Q.  If you believe that you
+own and have installed the license for /Q,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1650"></A>
+<H3>LIBQM MESSAGE #1650</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1651"></A>
+<H3>LIBQM MESSAGE #1651</H3>
+<H2> ERROR: No license for /Q</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use /Q.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for /Q.  If you believe that you
+own and have installed the license for /Q,
+contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

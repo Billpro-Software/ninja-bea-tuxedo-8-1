@@ -1,0 +1,910 @@
+<TITLE>LIBGW RELEASE 6.0</TITLE>
+<SECT1><P>
+<BODY BGCOLOR="#FFFFFF">
+<H1>LIBGW MESSAGES 3000-3099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3015"></A>
+<H3>LIBGW MESSAGE #3015</H3>
+<H2> ERROR: Can't attach to the shared memory segment(s)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The gateway process could not attach the shared memory segments created by the
+GWADM server to its address space. Check the UNIX IPC parameters to make sure that a process can attach the required number of segments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3016"></A>
+<H3>LIBGW MESSAGE #3016</H3>
+<H2> ERROR: Can't create additional shared memory segment(s)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server could not create additional shared memory segments. Check the UNIX IPC parameters to make sure that the total shared memory size is enough for the needs of the application(s).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3017"></A>
+<H3>LIBGW MESSAGE #3017</H3>
+<H2> ERROR: Can't create initial shared memory segment(s)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server could not create initial shared memory segments. Check the UNIX IPC parameters to make sure that the total shared memory size is enough for the needs of the application(s).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3018"></A>
+<H3>LIBGW MESSAGE #3018</H3>
+<H2> ERROR: Can't attach initial shared memory segment(s) to the process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server could not attach the initial shared memory segments to its address space. Check the UNIX IPC parameters to make sure that a process can attach the required number of segments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3019"></A>
+<H3>LIBGW MESSAGE #3019</H3>
+<H2> ERROR: Can't create additional shared memory segment(s)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server could not create additional shared memory segments. Check the UNIX IPC parameters to make sure that the total shared memory size is enough for the needs of the application(s).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3020"></A>
+<H3>LIBGW MESSAGE #3020</H3>
+<H2> ERROR: Can't attach additional shared memory segment(s) to the process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server could not attach the additional shared memory segments to its address space. Check the UNIX IPC parameters to make sure that a process can attach the required number of segments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3022"></A>
+<H3>LIBGW MESSAGE #3022</H3>
+<H2> ERROR: Can't add REMOTE DOMAIN ENTRY into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a REMOTE DOMAIN into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3023"></A>
+<H3>LIBGW MESSAGE #3023</H3>
+<H2> ERROR: Can't add TDOMAIN entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a TDOMAIN into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3024"></A>
+<H3>LIBGW MESSAGE #3024</H3>
+<H2> ERROR: Can't add OSITP entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load an OSITP into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3025"></A>
+<H3>LIBGW MESSAGE #3025</H3>
+<H2> ERROR: Can't add ACL entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load an ACL into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3026"></A>
+<H3>LIBGW MESSAGE #3026</H3>
+<H2> ERROR: Can't add LOCAL SERVICE entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a LOCAL SERVICE into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3027"></A>
+<H3>LIBGW MESSAGE #3027</H3>
+<H2> ERROR: Can't add REMOTE SERVICE entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a REMOTE SERVICE into shared memory. This should only occur if the GWADM administrative server couldn't find free space in the existing shared memory segments and it couldn't create additional shared memory segments to add the new entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3028"></A>
+<H3>LIBGW MESSAGE #3028</H3>
+<H2> ERROR: Can't add ROUTING entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a ROUTING into shared memory. The surrounding messages should indicate the nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog and if the problem can be fixed by setting FLDTBLS and FLDTBLDIR to the proper value, then shut down the application and re-start it with the new environment.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3029"></A>
+<H3>LIBGW MESSAGE #3029</H3>
+<H2> ERROR: Can't setup links from LOCAL DOMAIN entry to tdomain/ositp/snadom</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to initialize
+the Gateway Administrative server.  The process was unable to set up the links
+to the shared memory table for the local domain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3030"></A>
+<H3>LIBGW MESSAGE #3030</H3>
+<H2> ERROR: Can't setup links from REMOTE DOMAIN entry to tdomain/ositp/snadom</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server first loads the addresses for the remote domains and then sets up links from the remote domain information to the corresponding listening addresses. This message indicates that it couldn't set up the link. This message should only happen if the shared memory is corrupted for some reason.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3031"></A>
+<H3>LIBGW MESSAGE #3031</H3>
+<H2> ERROR: Can't setup links from LOCAL SERVICE entry to ACL entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server first loads all the ACL entries required by a local domain and then it loads all the LOCAL SERVICES advertised by this domain. This message happens when it can't set up a link from a LOCAL SERVICE entry to its corresponding ACL entry. This message should only happen if the shared memory is corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3032"></A>
+<H3>LIBGW MESSAGE #3032</H3>
+<H2> ERROR: Can't setup links from REMOTE SERVICE entry to routing/rdomENTRY</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWADM administrative server first loads all the ROUTING and REMOTE DOMAIN entries required by a local domain and then it loads all the REMOTE SERVICES advertised by this domain. This message happens when it can't set up a link from a REMOTE SERVICE entry to its corresponding ROUTING or RDOM entry. This message should only happen if the shared memory is corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3033"></A>
+<H3>LIBGW MESSAGE #3033</H3>
+<H2> ERROR: Can't add LOCAL DOMAIN entry into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the *DM_LOCAL_DOMAIN entry corresponding to its GROUP in UBBCONFIG, and then it stores this information in shared memory. This message indicates that the GWADM process couldn't write the LDOM info into shared memory. This should only happen if shared memory is corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3037"></A>
+<H3>LIBGW MESSAGE #3037</H3>
+<H2> ERROR: Can't attach initial shared memory segment to the gateway process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The gateway process could not attach the shared memory segments created by the
+GWADM server to its address space. Check the UNIX IPC parameters to make sure that a process can attach the required number of segments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3038"></A>
+<H3>LIBGW MESSAGE #3038</H3>
+<H2> ERROR: Can't attach additional shared memory segment to the gateway process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The gateway process could not attach the shared memory segments created by the
+GWADM server to its address space. Check the UNIX IPC parameters to make sure that a process can attach the required number of segments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the UNIX IPC parameters, if needed, make the new kernel, reboot the machine, and then restart the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3039"></A>
+<H3>LIBGW MESSAGE #3039</H3>
+<H2> ERROR: Can't detach shared memory segment from the process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A process could not detach a shared memory segment from its address space. This can happen if the pointer to the base address of the shared memory got corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3040"></A>
+<H3>LIBGW MESSAGE #3040</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_DOMAINS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_DOMAIN section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3041"></A>
+<H3>LIBGW MESSAGE #3041</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_TDOMAIN section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_TDOMAIN section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3042"></A>
+<H3>LIBGW MESSAGE #3042</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_OSITP section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_OSITP section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3043"></A>
+<H3>LIBGW MESSAGE #3043</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_ACCESS_CONTROL section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_ACCESS_CONTROL section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3044"></A>
+<H3>LIBGW MESSAGE #3044</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_LOCAL_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_LOCAL_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3045"></A>
+<H3>LIBGW MESSAGE #3045</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3046"></A>
+<H3>LIBGW MESSAGE #3046</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_ROUTING section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_ROUTING section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3047"></A>
+<H3>LIBGW MESSAGE #3047</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_DOMAINS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_DOMAIN section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3048"></A>
+<H3>LIBGW MESSAGE #3048</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_TDOMAIN section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_TDOMAIN section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3049"></A>
+<H3>LIBGW MESSAGE #3049</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_ACCESS_CONTROL section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_ACCESS_CONTROL section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3050"></A>
+<H3>LIBGW MESSAGE #3050</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_LOCAL_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_LOCAL_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3051"></A>
+<H3>LIBGW MESSAGE #3051</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3052"></A>
+<H3>LIBGW MESSAGE #3052</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_ROUTING section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_ROUTING section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3053"></A>
+<H3>LIBGW MESSAGE #3053</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_DOMAINS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_DOMAIN section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3055"></A>
+<H3>LIBGW MESSAGE #3055</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_LOCAL_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_LOCAL_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3056"></A>
+<H3>LIBGW MESSAGE #3056</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_LOCAL_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_LOCAL_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3057"></A>
+<H3>LIBGW MESSAGE #3057</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3058"></A>
+<H3>LIBGW MESSAGE #3058</H3>
+<H2> ERROR: Can't add own process entry in shared memory</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A gateway process couldn't find a free slot in the PROC table in shared memory.
+When a GWADM starts up, it reads the TUXCONFIG file to determine
+the maximum number of processes in its GROUP so that it can allocate space
+for that many slots.
+However, after the GWADM is booted, if the MAX parameter for this GROUP's
+gateway processes in the *SERVERS section of the TUXCONFIG file is increased
+using tmadmin, then the additional processes can't be booted
+because there is no more space in the shared memory that was computed at boot-time.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you want to increase the number of gateway processes in a domain, shut
+down the application and re-generate the TUXCONFIG file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3059"></A>
+<H3>LIBGW MESSAGE #3059</H3>
+<H2> ERROR: Can't remove shared memory segment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The last process (GWADM, GWTDOMAIN, or GWOSITP) in a domain will attempt to remove the IPC resources. This message indicates that the process couldn't remove the IPC entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the permissions on the IPC resources for this domain haven't been changed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3060"></A>
+<H3>LIBGW MESSAGE #3060</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_REMOTE_SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_REMOTE_SERVICES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3061"></A>
+<H3>LIBGW MESSAGE #3061</H3>
+<H2> ERROR: _dmcf_OLD_open failed: Can't open DM_OSITP section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM server is booted, it requests the configuration for its domain from the DMADM server. The DMADM server then retrieves all the entries from the BDMCONFIG file that are pertinent to this domain. This message indicates that DMADM couldn't open the BDMCONFIG file for reading the
+*DM_OSITP section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the BDMCONFIG file still exists and is accessible by the DMADM server, and re-start the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3067"></A>
+<H3>LIBGW MESSAGE #3067</H3>
+<H2> ERROR: Can't add DOMAIN ID entry for LDOM into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a DOMAINID entry for the local domain into shared memory. This should not occur normally.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3068"></A>
+<H3>LIBGW MESSAGE #3068</H3>
+<H2> ERROR: Can't add DOMAIN ID entry for RDOM into table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the GWADM administrative server is booted, it fetches the configuration information for its domain from the DMADM administrative server. It then loads the entries into shared memory. This message indicates that it couldn't load a DOMAINID entry for a REMOTE DOMAIN into shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3076"></A>
+<H3>LIBGW MESSAGE #3076</H3>
+<H2> WARN: Service GWA offered by more than one server in this group</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The GWA service can be offered by only one GWADM administrative server in a given group. This message indicates that a second GWADM attempted to boot for a local domain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the error and re-boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

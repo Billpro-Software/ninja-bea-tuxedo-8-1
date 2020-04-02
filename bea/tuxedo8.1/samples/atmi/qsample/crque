@@ -1,0 +1,50 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1999 BEA Systems, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/qsample/crque	$Revision: 1.5 $"
+#
+qmadmin ${APPDIR}/QUE <<!
+echo
+crdl ${APPDIR}/QUE 0 400
+qspacecreate -n 100B
+QSPACE
+62839
+100
+6
+4
+9
+3
+errque
+y
+16
+qopen QSPACE
+qcreate
+STRING
+fifo
+none
+2
+30
+80%
+0%
+
+qcreate
+RPLYQ
+fifo
+none
+2
+30
+80%
+0%
+
+qcreate
+errque
+fifo
+none
+2
+30
+80%
+0%
+
+q
+!
+

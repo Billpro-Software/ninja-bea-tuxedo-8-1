@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>IDE Extension Architecture</title>
+</head>
+<body>
+<h1>IDE Extension Packaging</h1>
+<h2>Introduction</h2>
+The IDE extension packaging is based on the concept of an Extension as
+a unit of functionality that when deployed, extends the IDE with new
+behavior.<br>
+<br>
+<span style="font-weight: bold;">Extensions </span>are code modules
+written with the purpose of extending an IDE with new functionality. An
+extension defines a set of integration points where new IDE
+functionality can be plugged-in. Extension writers define how specific
+extensions bind to one or more integration points by declaring the
+binding resolution in an Extension Manifest file. This file gets
+packaged in a jar file that when deployed onto an IDE's extension path
+(i.e., &lt;oracle-home&gt;\jdev\extensions), provides the IDE with the
+binding information needed to link-in the extension.<br>
+<br>
+By convention the <span style="font-style: italic;">extension jar</span>
+file should be named by appending the extension version number to the
+extension's unique identifier string.<br>
+<br>
+An extension may become a feature when the extension provider define
+the <span style="font-weight: bold;">feature </span>extension point. <br>
+<br>
+<span style="font-weight: bold;"></span>An extension can be defined as
+a feature that includes other extensions by declaring in the extension
+manifest the required feature information. A <span
+ style="font-weight: bold;">Feature </span>is comprised of one or more
+extensions that can be installed/uninstalled or enabled/disabled as a
+unit. <br>
+<h3>Packaging and Deployment<br>
+</h3>
+Extensions are package in&nbsp; jar files. An <span
+ style="font-style: italic;">extension jar</span> file contains:<br>
+<ul>
+  <li>The extension manifest placed in a directory named meta-inf.<br>
+  </li>
+  <li>An optional .properties resource file.</li>
+  <li>Optional files and/or directories that will be copied by the IDE
+to the system directory under a subdirectory whose name is derived from
+the extension's unique identifier and the extension's version. The copy
+happens once, when the extension is loaded for the first time. <br>
+  </li>
+  <li>Optional class files. When the extension jar file contains
+classes the extension classpath must be set to the extension jar file
+name.</li>
+</ul>
+Extension jar files can be deployed directly onto the IDE extension
+path, the <span style="font-style: italic;">jdev\extensions</span>
+directory. The IDE will automatically discover all extension jars there
+and process their extension manifest on startup. Extensions discovered
+in the IDE extension path cannot be disabled or uninstalled by the user
+using the IDE. To stop loading extensions on startup their extension
+jars must be removed from the IDE extension path. To allow extensions
+to be disabled or uninstalled by the user, they must be deployed along
+with a feature extension point..<br>
+<br>
+Extension jars can be read from j<span style="font-style: italic;">dev\extensions</span>
+and <i>jdev_user_home/extensions</i> directory. If two extensions are
+located which have the same identifier, the extension with the highest
+version number will be loaded.<br>
+<br>
+The old extension path <span style="font-style: italic;">jdev\lib\ext </span>exists
+only for backwards compatibility support only. 9.0.4 and 9.0.5
+extension jars must be deployed there in order to be picked up by the
+IDE.<br>
+<h2></h2>
+<span style="font-weight: bold;"></span>
+<h2>The Extension Manifest</h2>
+The extension manifest file, named by convention&nbsp; <span
+ style="font-style: italic;">extension.xml</span>, is the XML file
+where extension writers declare the extension's integration points to
+the IDE. The structure, content, and semantics of the extension
+manifest file are defined by JSR 198 xml schema file: <a
+ href="extension.xsd">extension.xsd</a>. The figure below shows the
+extension manifest schema. <br>
+<br>
+<img src="images/extension-manifest.png" title="" alt=""
+ style="width: 435px; height: 447px;"><br>
+<br>
+The <small style="font-weight: bold;"><span
+ style="font-family: courier new,courier,monospace;">extension </span></small>element
+defines the following attributes:<br>
+<ul>
+  <li><span style="font-weight: bold;">id </span>- a required unique
+string identifying the extension. To minimize identifier collisions,
+the identifier should be based on the Internet domain id of the
+extension provider. The domain name tokens should be reversed and
+additional name tokens should be separated by dots. For example,
+extension provider <span style="font-style: italic;">oracle.com</span>
+could identify an extension providing source control support with the
+identifier: <span style="font-style: italic;">com.oracle.SourceControlSystem</span>.
+The extension ID along with the extension version are used to create a
+unique directory name where extension data is placed.</li>
+  <li><span style="font-weight: bold;">rsbundle-class</span> - a fully
+qualified list resource bundle class, or a fully qualified Properties
+file path. Resource bundles are used to get the translated strings of
+elements of type i18n_string. If a resource bundle class is specified,
+the extension jar file must be added to the IDE classpath when
+processing the extension manifest. The extension jar file may be
+removed from the IDE classpath once the manifest is processed.</li>
+</ul>
+The <small style="font-weight: bold;"><span
+ style="font-family: courier new,courier,monospace;">extension </span></small>
+element also defines the following elements:<br>
+<ul>
+  <li><span style="font-weight: bold;">name</span>- name of the
+extension. The element type is <small
+ style="font-family: courier new,courier,monospace;">i18n_string </small>indicating
+that the label can be internationalized.</li>
+  <li><span style="font-weight: bold;">version </span>- the extension
+version number. The version number is a composite number formed by
+concatenating three dot-separated integers as follows: <span
+ style="font-style: italic;">major.minor.build</span>. A change in the <span
+ style="font-style: italic;">major </span>version number indicates an
+incompatible version change, a change in the <span
+ style="font-style: italic;">minor </span>version number indicates a
+compatible version change, and a change in the <span
+ style="font-style: italic;">build </span>version number indicates a
+patch upgrade. The <span style="font-style: italic;">build </span>or <span
+ style="font-style: italic;">minor </span>and <span
+ style="font-style: italic;">build </span>version numbers can be left
+out.</li>
+  <li><span style="font-weight: bold;">esdk-version </span>-&nbsp; the
+EDK version used to write the extension. The <small
+ style="font-family: courier new,courier,monospace;">edk-version</small>
+format is the same as the extension version format. The current version
+of the EDK is <span style="font-style: italic;">10.1.3. </span>An
+extension may not be loaded if the <span style="font-style: italic;">major&nbsp;</span><small
+ style="font-family: courier new,courier,monospace;">edk-version</small>
+number is older than the current EDK version. The extension will not be
+loaded if the <span style="font-style: italic;">major&nbsp;</span><small
+ style="font-family: courier new,courier,monospace;">edk-version</small>
+number is newer than the current EDK version.</li>
+  <li><span style="font-weight: bold;">owner</span>- user displayable
+name of the extension provider company. The element type is <small
+ style="font-family: courier new,courier,monospace;">i18n_string </small>indicating
+that the label can be internationalized.</li>
+  <li><span style="font-weight: bold;">platform-info</span> - Indicates
+what toolkit was used to implement the extension graphical user
+interfaces. The valid options are: swing or swt. If the platform-info
+is not specified, swing is assumed.<br>
+  </li>
+  <li><span style="font-weight: bold;">classpaths</span> - relative
+classpath pointing to where additional library jar files can be found.
+Multiple classpaths can be specified. All paths will be added to the
+IDE classpath.<br>
+  </li>
+  <li><span style="font-weight: bold;">hooks </span>-&nbsp; extensions
+have a set of predefined and custom extension points that extension
+writers use to add behavior to the IDE and/or other extensions.</li>
+  <li><span style="font-weight: bold;">dependencies </span>- extension
+can depend on other extensions. Such dependencies are expressed using
+this element.</li>
+</ul>
+<h3>Extension Dependencies</h3>
+<p>Extension dependencies are specified using the extension <b>dependencies</b>
+element. The figure below shows this element schema:</p>
+<p><img src="images/extension-dependencies.png" height="120" width="400"></p>
+<p>The dependencies element lists all extensions imported by another
+extension. An extension is only loaded when all imported extensions are
+available.</p>
+<p>The import element is used to declare the extension identifier of
+the imported extension along with the following attributes:</p>
+<ul>
+  <li><b>version</b> - the imported extension version. Clients can
+specify partial version numbers in order to indicate compatibility. For
+example, specifying only the major version number indicates that the
+dependent extension would work with any minor and qualifier version
+numbers. Similarly if the major and minor version numbers are given,
+then the dependent extension works with any qualifier version numbers.
+Finally, if the major, minor, and qualifier numbers are given, this
+indicates that the dependent extension works if the imported extension
+matches the given numbers. The match must be exact if the <b>match</b>
+element has been set to true.</li>
+  <li><b>match</b> - indicates that the version numbers specified must
+match exactly to the imported extension version numbers. The default
+attribute value is false, indicating that greater or equal matches are
+acceptable. The greater or equal comparison is done only on the last
+version number specified. For example, if the import element is set to
+X, the <b>version</b> attribute is set to 10.2, and the <b>match</b>
+attribute is false, an extension whose ID and version is X and 10.3.5,
+respectively, would work, but would not, if the extension version were
+11.1.0. For a 11.1.0 extension version to work the <b>import</b>
+element <b>version</b> attribute would have to be set to 10 instead of
+10.2. </li>
+</ul>
+<h4>Dependency example match = true</h4>
+<blockquote>
+  <pre>&lt;dependencies&gt;</pre>
+  <blockquote>
+    <pre>&lt;import version="10.1.3" match="true"&gt;mycompany.extension&lt;/import&gt;</pre>
+  </blockquote>
+  <pre>&lt;/dependencies&gt;<br></pre>
+</blockquote>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <td>This dependency would be satisfied by these versions of
+mycompany.extension</td>
+      <td>This dependency would <b>not</b> be satisfied by these
+versions of mycompany.extension</td>
+    </tr>
+    <tr>
+      <td>10.1.3</td>
+      <td>10.1.4</td>
+    </tr>
+    <tr>
+      <td>10.1.3.1</td>
+      <td>10.1</td>
+    </tr>
+    <tr>
+      <td>10.1.3.20.573</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+<h4><br>
+Dependency example match = false</h4>
+<blockquote>
+  <pre>&lt;dependencies&gt;</pre>
+  <blockquote>
+    <pre>&lt;import version="10.1.3" match="false"&gt;mycompany.extension&lt;/import&gt;</pre>
+  </blockquote>
+  <pre>&lt;/dependencies&gt;<br></pre>
+</blockquote>
+<table border="1" width="100%">
+  <tbody>
+    <tr>
+      <td>This dependency would be satisfied by these versions of
+mycompany.extension</td>
+      <td>This dependency would <b>not</b> be satisfied by these
+versions of mycompany.extension</td>
+    </tr>
+    <tr>
+      <td>10.1.3</td>
+      <td>10.2</td>
+    </tr>
+    <tr>
+      <td>10.1.3.0</td>
+      <td>10.2.5</td>
+    </tr>
+    <tr>
+      <td>10.1.3.20.498</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td>10.1.4.20</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>10.1.5</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<h3>The Hooks Element</h3>
+The <span style="font-weight: bold;">hooks </span>element defines the
+extension points. These are a set of predefined and custom hooks that
+extension providers use to add behavior to the IDE and/or other
+extensions. The figure below shows the JSR 198 <span
+ style="font-weight: bold;">hooks</span> element schema.<br>
+<br>
+<img src="images/extension-hooks.png" title="" alt=""><br>
+<br>
+Each individual hook allows an extension to provide specific binding
+information to plug into different areas of an IDE. Here are the main
+areas where extensions plug-in:<br>
+<ol>
+  <li>Menus and commands through the <small><span
+ style="font-family: courier new,courier,monospace;">menu-hook,</span></small></li>
+  <li>Document model through the <small><span
+ style="font-family: courier new,courier,monospace;">document-hook,</span></small></li>
+  <li>IDE events through the <small><span
+ style="font-family: courier new,courier,monospace;">ide-listener-hook,</span></small></li>
+  <li>Custom editors through the <small><span
+ style="font-family: courier new,courier,monospace;">editor-hook,</span></small></li>
+  <li>IDE preferences and project settings through the <small><span
+ style="font-family: courier new,courier,monospace;">property-hook,</span></small></li>
+  <li>Log pages through the <small><span
+ style="font-family: courier new,courier,monospace;">log-hook</span></small></li>
+  <li>New wizards through the <small><span
+ style="font-family: courier new,courier,monospace;">wizard-hook, and <br>
+    </span></small></li>
+  <li>The compiler through the <small><span
+ style="font-family: courier new,courier,monospace;">build-system-hook.</span></small></li>
+  <li>The <small><span
+ style="font-family: courier new,courier,monospace;">feature-hook</span></small>
+allows extensions to appear in an IDE's extension management UI as
+features that can be enabled/disabled.</li>
+  <li>The <small><span
+ style="font-family: courier new,courier,monospace;">custom-hook</span></small>
+and <small><span style="font-family: courier new,courier,monospace;">hook-handlers</span></small>
+allows extensions to define their own extension points.<br>
+  </li>
+</ol>
+JDeveloper defines the following custom hook schema:<br>
+<br>
+<img src="images/extension-jdeveloper-hooks.png" title="" alt=""><br>
+<br>
+The&nbsp; <small style="font-weight: bold;"><span
+ style="font-family: courier new,courier,monospace;">jdeveloper-hooks</span></small>
+element defines the following elements:<br>
+<ul>
+  <li><span style="font-weight: bold;">user-data</span> - relative
+paths to feature specific files that are copied to the IDE user home
+the first time the feature is loaded by the IDE. These files are copied
+to an extension specific directory located inside the system directory.
+The name of the extension directory is derived from the extension name
+and version.<br>
+  </li>
+  <li><span style="font-weight: bold;">addins</span> - a list of
+classes implementing the Addin interface.<br>
+  </li>
+  <li><span style="font-weight: bold;">gallery </span>- gallery
+extension point. Gallery pages and items are added using this extension
+point.<br>
+  </li>
+  <li><span style="font-weight: bold;">palette </span>-&nbsp; palette
+extension point. Palette pages and items are added using this extension
+point.</li>
+  <li><span style="font-weight: bold;">help </span>- help system
+extension point.<br>
+  </li>
+  <li><span style="font-weight: bold;">toolbar </span>- toolbar
+extension point. Buttons to specific toolbars can be defined using this
+extension point.<br>
+  </li>
+  <li><span style="font-weight: bold;">commands </span>- commands
+extension points.</li>
+  <li><span style="font-weight: bold;">settings-migrators</span> -
+responsible for migrating extension user settings when a new version of
+the extension is deployed. .</li>
+</ul>
+<p>The structure, content, and semantics of the jdeveloper-hooks
+element are defined by JDeveloper schema file <a
+ href="extension-jdeveloper-1013.xsd">extension-jdeveloper-1013.xsd</a>.</p>
+<h3>Custom Extension Points</h3>
+Custom extension points allow extension writers to define their own,
+extension specific, schema. When the IDE encounters a custom extension
+point it delegates to an extension specified namespace handler. The
+figure below shows the <span style="font-weight: bold;">namespace-handler</span>
+element schema.<br>
+<br>
+<img src="images/extension-hook-handler-hook.png" title="" alt=""><br>
+<br>
+The <small style="font-weight: bold;"><span
+ style="font-family: courier new,courier,monospace;">hook-handler-hook</span></small>
+element defines the following attributes:<br>
+<ul>
+  <li><span style="font-weight: bold;">tag-name </span>- the tag name
+of the extension provided custom extension point. All tags with the
+same name are processed by the specified handler class.<br>
+  </li>
+  <li><span style="font-weight: bold;">handler-class -</span> a fully
+qualified class name of the class used to process the custom extension
+point elements.</li>
+  <li><span style="font-weight: bold;">namespace </span>- namespace
+declared in the extension specific schema.<br>
+  </li>
+  <li><span style="font-weight: bold;">schema-location</span> -
+relative location where to find the custom extension point schema file.
+By convention, this file should be placed in the extension META-INF
+directory along with the extension manifest file.<br>
+  </li>
+</ul>
+<h4>Defining a Custom Extension Point</h4>
+An extension that introduces a custom extension point needs to:<br>
+<ol>
+  <li>Write a hook handler class and register that handler in their
+extension manifest using the hook-handler-hook described above.<br>
+  </li>
+  <li>Define the schema for the custom extension point.<br>
+  </li>
+</ol>
+<ol>
+</ol>
+For example, to define the schema for that extension point, an
+extension could introduce the following schema for a<span
+ style="font-weight: bold;"> widget-hook </span>extension point:<br>
+<pre>    &lt;?xml version="1.0" encoding="windows-1252" ?&gt;<br>    &lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<br>                xmlns:ext="http://jcp.org/jsr/198/extension-manifest"<br>                xmlns="http://xmlns.oracle.com/ide/samples/widget-hook"<br>                targetNamespace="http://xmlns.oracle.com/ide/samples/widget-hook"<br>                elementFormDefault="qualified"&gt;<br>      &lt;xsd:import schemaLocation="extension.xsd"<br>                  namespace="http://jcp.org/jsr/198/extension-manifest"/&gt;<br>      &lt;xsd:element name="widget-hook" substitutionGroup="ext:custom-hook"<br>                   type="widgetHookType"&gt;<br>      &lt;/xsd:element&gt;<br>      &lt;xsd:complexType name="widgetHookType"&gt;<br>        &lt;xsd:complexContent&gt;<br>          &lt;xsd:extension base="ext:customHookType"&gt;<br>            &lt;xsd:sequence&gt;<br>              &lt;xsd:element name="widget" maxOccurs="unbounded"&gt;<br>                &lt;xsd:complexType&gt;<br>                  &lt;xsd:sequence&gt;<br>                    &lt;xsd:element name="name" type="xsd:string"/&gt;<br>                    &lt;xsd:element name="icon" type="xsd:string" minOccurs="0"<br>                                 maxOccurs="1"/&gt;<br>                    &lt;xsd:element name="description" type="xsd:string"<br>                                 minOccurs="0"/&gt;<br>                    &lt;xsd:element name="class-name" type="ext:className"/&gt;<br>                  &lt;/xsd:sequence&gt;<br>                  &lt;xsd:attribute name="id" use="required"/&gt;<br>                &lt;/xsd:complexType&gt;<br>              &lt;/xsd:element&gt;<br>            &lt;/xsd:sequence&gt;<br>          &lt;/xsd:extension&gt;<br>        &lt;/xsd:complexContent&gt;<br>      &lt;/xsd:complexType&gt;<br>    &lt;/xsd:schema&gt;<br></pre>
+<h4>Binding to a Custom Extension Point</h4>
+An extension defining a extension manifest that binds to the <span
+ style="font-weight: bold;">widget-hook</span> would need to do the
+following in their extension manifest:<br>
+<div style="margin-left: 40px;">
+<pre>&lt;extension xmlns="http://jcp.org/jsr/198/extension-manifest"<br>           id="fusion.examples.widgethook"<br>           esdk-version="1.0"<br>           version="1.0"&gt;<br><br>  &lt;name&gt;Example Extension Using Custom Hook&lt;/name&gt;<br>  &lt;owner&gt;Oracle&lt;/owner&gt;<br><br>  &lt;!-- we are going to define the custom hook in <br>       oracle.ide.samples.customhook later, so we must import it --&gt;<br>  &lt;dependencies&gt;<br>    &lt;import&gt;oracle.ide.samples.customhook&lt;/import&gt;<br>  &lt;/dependencies&gt;<br><br>  &lt;hooks&gt;<br>    &lt;wgt:widget-hook xmlns:wgt="http://xmlns.oracle.com/ide/samples/widget-hook"&gt;<br><br>      &lt;wgt:widget id="firstWidget"&gt;<br>        &lt;wgt:name&gt;First Widget&lt;/wgt:name&gt;<br>        &lt;wgt:icon&gt;res:/fusion/examples/customhooktest/images/first.png&lt;/wgt:icon&gt;<br>        &lt;wgt:description&gt;This is the first widget.&lt;/wgt:description&gt;<br>        &lt;wgt:class-name&gt;fusion.examples.customhooktest.FirstWidget&lt;/wgt:class-name&gt;<br>      &lt;/wgt:widget&gt;<br><br>      &lt;wgt:widget id="secondWidget"&gt;<br>        &lt;wgt:name&gt;Second Widget&lt;/wgt:name&gt;<br>        &lt;wgt:icon&gt;res:/fusion/examples/customhooktest/images/second.png&lt;/wgt:icon&gt;<br>        &lt;wgt:description&gt;This is the second widget.&lt;/wgt:description&gt;<br>        &lt;wgt:class-name&gt;fusion.examples.customhooktest.SecondWidget&lt;/wgt:class-name&gt;<br>      &lt;/wgt:widget&gt;<br><br>    &lt;/wgt:widget-hook&gt;<br>  &lt;/hooks&gt;<br><br>&lt;/extension&gt;</pre>
+<p><small><span style="font-family: courier new,courier,monospace;"></span></small></p>
+</div>
+<h3>Defining an Feature</h3>
+An extension can be defined as a feature by declaring the <span
+ style="font-weight: bold;">feature </span>hook. The figure below
+shows the <span style="font-weight: bold;">feature</span> element
+schema.<br>
+<br>
+<img src="images/extension-feature.png" title="" alt=""><br>
+<br>
+The <small style="font-weight: bold;"><span
+ style="font-family: courier new,courier,monospace;">feature</span></small>
+element defines the following elements:<br>
+<ul>
+  <li><span style="font-weight: bold;">license</span> - feature
+licensing information. The element type is <small
+ style="font-family: courier new,courier,monospace;">i18n_string </small>indicating
+that the label can be internationalized.</li>
+  <li><span style="font-weight: bold;">copyright </span>- extension
+copyright information. The element type is <small
+ style="font-family: courier new,courier,monospace;">i18n_string </small>indicating
+that the label can be internationalized.</li>
+  <li><span style="font-weight: bold;">image</span> - a relative path
+to an image file. The image will be used to display the along with the
+extension name.<br>
+  </li>
+  <li><span style="font-weight: bold;">description</span>&nbsp; - a
+brief description of what the functionality provided by this feature.</li>
+  <li><b>optional</b> - indicates that the feature can be individually
+disabled by the user.<br>
+  </li>
+  <li>
+    <p><span style="font-weight: bold;">part-of</span>- extension is
+part of another feature..<br>
+    </p>
+  </li>
+</ul>
+<h3> Macros</h3>
+<p>Macro support is enabled through out the extension manifest. The
+following macros are available:</p>
+<ul>
+  <li> ${oracle.home} - translates to Oracle install directory.</li>
+  <li>${ide.user.dir} - translates to the directory where the user
+specific files are located. This is mainly the system, and mywork
+directories.</li>
+  <li>${jdev.lib}- translates to the lib directory under the Oracle
+JDeveloper install directory. </li>
+  <li>${oracle.lib}- translates to the lib directory under Oracle Home
+directory.</li>
+  <li>${ide.extension.user.home}- translates to the Oracle JDeveloper
+extension's system directory.</li>
+  <li>${ide.extension.install.home} - translates to the Oracle
+JDeveloper extensions installed extension directory<br>
+  </li>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>

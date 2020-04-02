@@ -1,0 +1,3417 @@
+<!-- .if n .pH errman.h.cdmsg.htm @(#)cdmsg.htm	60.4 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>CMDDES MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1>
+<H1>CMDDES MESSAGES 1-99</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3"></A>
+<H3>CMDDES MESSAGE #3</H3>
+<H2> ERROR: <I>program_name</I>: Could not open <I>file_name</I> for recording</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The filename specified with the
+-r
+option to
+mio
+(or
+wmio )
+could not be opened appropriately for recording the session.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the path and filename for permissions and reenter the
+mio
+(or
+wmio )
+command line with an updated recording filename specified.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="11"></A>
+<H3>CMDDES MESSAGE #11</H3>
+<H2> ERROR: Access to the initial mask is not permitted</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+According to the settings of the environment variables
+ OKXACTS
+and
+NGXACTS ,
+you are not allowed to access the initial mask specified on the
+mio
+command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Modify the setting of the environment variables
+ OKXACTS
+and
+NGXACTS
+to allow access to this form, or use a different form.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+compilation (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="12"></A>
+<H3>CMDDES MESSAGE #12</H3>
+<H2> ERROR: Could not find initial mask</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The initial mask specified with the
+-i
+option on the
+mio
+(or
+wmio )
+command line could not be found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the settings of the
+MASKPATH
+and
+TUXDIR
+environment variables.
+The mask file specified with the
+-i
+option could not be found in any of the
+MASKPATH
+or
+TUXDIR
+/locale
+directories.
+Reset
+MASKPATH
+or
+TUXDIR
+as necessary to find the initial mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+compilation (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="13"></A>
+<H3>CMDDES MESSAGE #13</H3>
+<H2> ERROR: Initial mask not found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The initial mask specified with the
+-m
+option on the
+mio
+command line or the default initial mask if no
+-m
+option is specified,
+msk1.M ,
+could not be found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the settings of the
+MASKPATH
+and
+TUXDIR
+environment variables.
+The mask file specified with the
+-m
+option could not be found in any of the
+MASKPATH
+or
+TUXDIR
+/locale
+directories.
+Reset
+MASKPATH
+or
+TUXDIR
+as necessary to find the initial mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+compilation (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="14"></A>
+<H3>CMDDES MESSAGE #14</H3>
+<H2> WARN: <I>login,</I> cannot print the initial form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The initial system mask cannot be printed and an attempt was made
+to print using the
+mio
+escape sequence that allows a form to
+be printed by sending it to the
+FRMPRT
+service.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3>CMDDES MESSAGE #15</H3>
+<H2> ERROR: <I>login,</I> you are not allowed to enter <I>mask_name</I> transactions</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The mask indicated by
+<I>mask_name</I>
+has been selected by the input to the current form.
+However,
+<I>mask_name</I>
+is not allowed to be accessed
+by this user according to the settings of the
+OKXACTS
+and
+NGXACTS
+environment variables.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Modify the setting of the environment variables
+OKXACTS
+and
+NGXACTS
+to allow access to this form, or use a different form.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+compilation (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3>CMDDES MESSAGE #16</H3>
+<H2> ERROR: <I>login,</I> could not find form <I>mask_name</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The next form to be displayed, indicated by
+<I>mask_name</I>,
+could not be found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the settings of the
+MASKPATH
+and
+TUXDIR
+environment variables.
+<I>mask_name</I>
+could not be found in any of the
+MASKPATH
+or
+TUXDIR
+/locale
+directories.
+Reset
+MASKPATH
+or
+TUXDIR
+as necessary to find the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+compilation (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3>CMDDES MESSAGE #17</H3>
+<H2> ERROR: Non-existent transaction</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The menu option selected maps to a choice with no mask/form associated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check your mask file to be sure the menu choice that resulted in this error
+is fully specified.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="18"></A>
+<H3>CMDDES MESSAGE #18</H3>
+<H2> ERROR: Form <I>mask_name</I> not found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The next form to be displayed, indicated by
+<I>mask_name</I>,
+could not be found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the settings of the
+MASKPATH
+and
+TUXDIR
+environment variables.
+<I>mask_name</I>
+could not be found in any of the
+MASKPATH
+or
+TUXDIR
+/locale
+directories.
+Reset
+MASKPATH
+or
+TUXDIR
+as necessary to find the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+compilation (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3>CMDDES MESSAGE #19</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed allocating a screen image.
+Additional information about the problem is printed as
+part of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="23"></A>
+<H3>CMDDES MESSAGE #23</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the fielded buffer associated with a form.
+The occurrence of this error will cause mio</> to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+malloc (3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="24"></A>
+<H3>CMDDES MESSAGE #24</H3>
+<H2> WARN: SYSTEM BUSY ... PLEASE WAIT A FEW SECONDS</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The application and/or operating system is busy to the point that
+the requested service cannot be satisfied immediately.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Wait a few seconds and try the transaction again.  If the problem persists,
+then contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="25"></A>
+<H3>CMDDES MESSAGE #25</H3>
+<H2> ERROR: NO SERVER AVAILABLE FOR THIS FORM</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The service associated with the selections made on this form is
+currently not offered or is suspended.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.  They will need to administer the
+application to make the service available.  This can be done by booting
+a new server, unsuspending a suspended service, or by advertising a new
+service on an existing server.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="26"></A>
+<H3>CMDDES MESSAGE #26</H3>
+<H2> ERROR: MEMORY ALLOCATION FAILURE</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+creating internal storage required to expand a date string for
+presentation on the screen.
+The occurrence of this error will cause mio</> to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+malloc (3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="27"></A>
+<H3>CMDDES MESSAGE #27</H3>
+<H2> ERROR: CANNOT SEND TO SERVER</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The service requested by the selections made on the current form could
+not be satisfied because the queue associated with the server or the
+local BRIDGE process has been abnormally removed from the system.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.  This error indicates an abnormal
+removal of UNIX System IPC resources that should be investigated.
+In any case, the service can be retried after the system restarts the
+server (abnormal removal of a queue results in a server exit)
+or after the administrator boots a new instance of the server.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="28"></A>
+<H3>CMDDES MESSAGE #28</H3>
+<H2> ERROR: unknown send failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A UNIX System message send or receive error was encountered while attempting
+to satisfy the service request selected on the current form.  The error
+is something other than
+EINVAL
+or
+EAGAIN ,
+which are reported on separate messages.
+Possible causes of this error are
+EACCESS ,
+which would indicate
+that the queue permissions of the server have been changed to deny access
+to the user running mio</>, or
+EFAULT ,
+which would indicate a memory corruption
+problem in application routines linked into mio</>.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+The UNIX
+message queue
+permissions should be checked for access rights.
+Additionally,
+memory access in application routines linked into
+mio
+should be
+reviewed.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+msgsnd (2),
+msgrcv (2)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="30"></A>
+<H3>CMDDES MESSAGE #30</H3>
+<H2> ERROR: FIELDED BUFFER ERROR</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Internal system fielded buffer error indicating use of a non-fielded or
+misaligned buffer within
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+Fchgs (3),
+Fojoin (3),
+Fupdate (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="32"></A>
+<H3>CMDDES MESSAGE #32</H3>
+<H2> ERROR: internal failure-get_page</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while initializing a new form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+See earlier messages that indicate the exact nature of the problem.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="42"></A>
+<H3>CMDDES MESSAGE #42</H3>
+<H2> ERROR: VALIDATION FUNCTION <I>valfunc</I> NOT FOUND</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The validation function <I>valfunc</I> could not be found in the version
+of
+mio
+being run.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The are two ways to resolve this problem.  The first way is to change the
+definition of the form being used to use a different validation function
+or to use built-in validation rules such as regular expression matching.
+The second way is to build or rebuild
+a customized version of
+mio
+containing the indicated
+validation function.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildmio</>(1), <Font>mio</>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="54"></A>
+<H3>CMDDES MESSAGE #54</H3>
+<H2> ERROR: Unexpected End of File encountered</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While reading input, end of file was reached before getting
+the entire message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="57"></A>
+<H3>CMDDES MESSAGE #57</H3>
+<H2> ERROR: Error in file <I>udfkfile</I> describing user defined keys</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+mio
+encountered a problem accessing and/or processing the user-defined
+function keys
+(UDFK)
+file specified with the
+-u
+option on the
+mio
+command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the
+UDFK
+file being used exists and conforms to the specifications
+described in the
+udfk (5)
+manual page.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+udfk (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="62"></A>
+<H3>CMDDES MESSAGE #62</H3>
+<H2> ERROR: Screen/window too small: must be at least 24x80</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The window in which
+mio
+is running is too small.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Expand your window or move to a larger window before running
+mio .
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+curses (3X)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="66"></A>
+<H3>CMDDES MESSAGE #66</H3>
+<H2> ERROR: operation not allowed in release</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+mio
+has attempted to make use of an interface semantic that is not
+available in the current release of the system.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+tpacall (3),
+tpbegin (3),
+tpcommit (3),
+tpgetrply (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="67"></A>
+<H3>CMDDES MESSAGE #67</H3>
+<H2> ERROR: Transaction could not be committed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction could not be committed by
+mio
+because either
+the work performed by the initiator or by one or
+more of its participants could not commit.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Depending on the situation that caused the transaction not to commit,
+a retry may be successful.  If multiple retries over a period
+of time are not successful, then contact your database administrator(s)
+to see if they can identify the reason why your transactions cannot
+be completed.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+tpcommit (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="68"></A>
+<H3>CMDDES MESSAGE #68</H3>
+<H2> ERROR: Service timed out - status unknown</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The service associated with the current screen was requested and
+a timeout occurred in one of three places.  Either the request could
+not be enqueued within the defined timeout interval (only applies
+if the
+-B
+option is specified to
+mio ),
+or the reply was not received
+within the timeout interval, or the transaction commit processing timed out.
+In most cases, the transaction (if any) will have timed out when this
+error occurs.  The only exception is when the transaction commit processing
+times out.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Depending on the situation that caused the request to timeout,
+a retry may be successful.  If multiple retries over a period
+of time are not successful, then contact your database administrator(s)
+to see if they can identify the reason why your request cannot
+be completed.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+tpacall (3),
+tpcommit (3),
+tpgetrply (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="69"></A>
+<H3>CMDDES MESSAGE #69</H3>
+<H2> ERROR: Desired service does not take FML buffers</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The service associated with the current form does not accept FML
+buffers as input.
+The set of buffer types accepted by a particular
+server is determined at compile time.
+This set may further be
+restricted by settings for the
+BUFTYPE
+parameter in the SERVICES section.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to determine why the requested
+service does not accept the FML buffer type.  Possible actions are
+to rebuild the server with the FML buffer type included, or to update
+the configuration file to allow for FML buffer types sent to this service.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildserver</>(1), <Font>mio</>(1), <Font>tpacall</>(3), <Font>typesw</>(5),
+tuxtypes</>(5), <Font>ubbconfig</>(5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="72"></A>
+<H3>CMDDES MESSAGE #72</H3>
+<H2> ERROR: Transaction could not be started</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A global transaction could not be started prior to requesting the
+service associated with the current form.  This may be caused by
+a full global transaction table on the local site or by some other
+system related problem.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The request should be retried a number of times and then the application
+administrator should be contacted to examine the userlog file for the
+machine on which
+mio
+was running.  In the case of an unrecoverable system
+problem, log messages will be generated to aid in diagnosis of the problem.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+tpbegin (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="73"></A>
+<H3>CMDDES MESSAGE #73</H3>
+<H2> WARN: Error allocating FML buffer for unsolicited processing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A memory allocation failure was encountered while attempting to
+generate a typed buffer to be used in processing unsolicited
+notification messages to the
+mio
+process.  This failure may have
+resulted from a failure on a call to
+malloc ().
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+tpalloc (3),
+malloc (3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="74"></A>
+<H3>CMDDES MESSAGE #74</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.  If the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="77"></A>
+<H3>CMDDES MESSAGE #77</H3>
+<H2> ERROR: Cannot open temporary file <I>file</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+buildmio</> could not open one of the temporary files it needs to
+build a customized version of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the permissions on the
+/tmp
+file system.
+This file system must be writable for
+buildmio
+to create temporary files.  If the
+directory is writable, then check remaining file space and inode
+restrictions to see if the file system is nearly or completely full.
+If it is full, then contact your system administrator to clean up temporary
+file space.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildmio</>(1),
+fopen</>(3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="78"></A>
+<H3>CMDDES MESSAGE #78</H3>
+<H2> ERROR: Cannot open temporary file <I>file</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+buildmio</> could not open one of the temporary files it needs to
+build a customized version of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the permissions on the /tmp file system.  This file system must
+be writable for
+buildmio
+to create temporary files.  If the
+directory is writable, then check remaining file space and inode
+restrictions to see if the file system is nearly or completely full.
+If it is full, then contact your system administrator to clean up temporary
+file space.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildmio</>(1),
+fopen</>(3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="79"></A>
+<H3>CMDDES MESSAGE #79</H3>
+<H2> ERROR: Cannot open temporary file <I>file</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+buildmio</> could not open one of the temporary files it needs to
+build a customized version of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the permissions on the
+/tmp
+file system.  This file system must
+be writable for
+buildmio
+to create temporary files.  If the
+directory is writable, then check remaining file space and inode
+restrictions to see if the file system is nearly or completely full.
+If it is full, then contact your system administrator to clean up temporary
+file space.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildmio</>(1),
+fopen</>(3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="80"></A>
+<H3>CMDDES MESSAGE #80</H3>
+<H2> WARN: Cannot open file <I>file</I></H2><HR>
+<P>
+could not be opened for writing by
+buildmio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the permissions on the directory and the file specified by <I>file</I>
+to make sure that the file can be created and/or written to.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildmio</>(1),
+fopen</>(3) in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="81"></A>
+<H3>CMDDES MESSAGE #81</H3>
+<H2> WARN: Failed to execute nm <I>nmflags</I> <I>files</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated invocation of the
+nm
+command on the file or files specified
+failed for some reason.  The symbols specified in the libraries in
+question will not be built in to the version of
+mio
+created; and if they
+are referenced at runtime, the reference will fail and
+mio
+will encounter an error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Attempt a manual invocation of the indicated
+nm
+command to determine
+the exact cause of the problem.  Possibilities include corrupted
+or invalid library names.  In this case, regenerate the desired library
+and retry the
+buildmio
+command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buildmio (1),
+nm (1)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="87"></A>
+<H3>CMDDES MESSAGE #87</H3>
+<H2> ERROR: <I>ipckey</I> is an illegal IPC key value (non-numeric)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated InterProcess Communication
+(IPC)
+key,
+<I>ipckey</I>,
+contains non-numeric characters and is therefore invalid.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the InterProcess Communication key to a completely numeric value
+and reenter the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+loadfiles (1),
+ipcs (1),
+shmget (2)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="89"></A>
+<H3>CMDDES MESSAGE #89</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to create an in-memory version of the file
+cache.
+The occurrence of this error will cause
+loadfiles
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error may indicate that you are trying to include too many files
+in a single shared memory file cache.  Try reducing the number of files
+being cached if you think this may be the problem.  However, the problem
+may also result from system limitations outside the direct control of the
+user.
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+loadfiles (1),
+malloc (3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="92"></A>
+<H3>CMDDES MESSAGE #92</H3>
+<H2> ERROR: Failed to open <I>filename</I> for caching</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file
+<I>filename</I>
+could not be opened for reading by
+loadfiles .
+This error is preceded by a call to the UNIX function
+perror (),
+which gives further indication of the cause of the error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the permissions on the indicated file for read access.  Correct the
+permissions or correct the input filename and reenter the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+loadfiles (1),
+open (2),
+perror (2)
+in UNIX reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="94"></A>
+<H3>CMDDES MESSAGE #94</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+realloc ()
+failed while attempting to create an in-memory version of the file
+cache.
+The occurrence of this error will cause
+loadfiles
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error may indicate that you are trying to include too many files
+in a single shared memory file cache.  Try reducing the number of files
+being cached if you think this may be the problem.  However, the problem
+may also result from system limitations outside the direct control of the
+user.
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+loadfiles (1),
+realloc (3)
+in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="95"></A>
+<H3>CMDDES MESSAGE #95</H3>
+<H2> ERROR: Too many files in cache</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The user has attempted to cache more than the system imposed limit on the
+number of files to be stored in the shared memory cache.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the number of files to be entered into this shared memory cache
+to less than 1000 and reenter the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+loadfiles (1)
+<SECT1>
+<H1>CMDDES MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="100"></A>
+<H3>CMDDES MESSAGE #100</H3>
+<H2> ERROR: Line too long in input form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A line or continued line in the input form to the command is longer
+than the system defined maximum of 1024 bytes.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit your form and shorten the offending line to make it meet the
+restrictions of the system.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="101"></A>
+<H3>CMDDES MESSAGE #101</H3>
+<H2> ERROR: #FORM statement appears out of sequence</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+#FORM
+statement appears in the form after a non-comment statement
+other than the
+#SERVICE
+statement.
+#FORM
+statements are optional,
+but if present must be preceded only by comments and the
+#SERVICE
+statement.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reorder the statements in your form to put the
+#FORM
+statement in the
+proper sequence and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="102"></A>
+<H3>CMDDES MESSAGE #102</H3>
+<H2> WARN: <I>command</I> is an unrecognized command</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The command
+<I>command</I>
+is an unrecognized command in the
+UFORM
+language.
+Valid commands are
+#SERVICE ,
+#FORM ,
+and
+#PAGE .
+The offending command
+is ignored and the rest of the form is processed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your form file and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="103"></A>
+<H3>CMDDES MESSAGE #103</H3>
+<H2> ERROR: Continuation line not found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The continuation line for a line ending with a backslash character
+was not found.  The form file cannot end with a line ending in
+a backslash.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form file and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="104"></A>
+<H3>CMDDES MESSAGE #104</H3>
+<H2> ERROR: Invalid argument to STATUSLINE</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The argument to the
+STATUSLINE
+parameter of the
+#PAGE
+statement must
+have a positive numeric argument.  An invalid argument has been
+supplied for this parameter.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form file and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="105"></A>
+<H3>CMDDES MESSAGE #105</H3>
+<H2> ERROR: <I>keyword</I> is an invalid keyword in a #PAGE statement</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<I>keyword</I>
+is an invalid keyword for the
+#PAGE
+statement line in the current form.
+The only supported keywords for the
+#PAGE
+statement
+line are
+STATUSLINE
+and
+FLAGS .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form to remove the invalid keyword from the
+#PAGE
+statement line.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="106"></A>
+<H3>CMDDES MESSAGE #106</H3>
+<H2> ERROR: Service name <I>svcname</I> is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The service name
+<I>svcname</I>
+is longer than the system defined maximum
+of 15 characters for a service name.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form to contain the correct service name and rerun
+the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="107"></A>
+<H3>CMDDES MESSAGE #107</H3>
+<H2> ERROR: <I>keyword</I> is an invalid keyword in a #SERVICE statement</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<I>keyword</I>
+is an invalid keyword for the
+#SERVICE
+statement line in the current form.
+The only supported keyword for the
+#SERVICE
+statement line is
+NAME .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form to remove the invalid keyword from the
+#SERVICE
+statement line.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc (1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="108"></A>
+<H3>CMDDES MESSAGE #108</H3>
+<H2> ERROR: Invalid keyword</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A keyword on the indicated
+#SERVICE ,
+#FORM ,
+or
+#PAGE
+statement line is not formatted correctly.
+All keywords must be alphanumeric identifiers beginning with a letter or
+an underscore (_).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="109"></A>
+<H3>CMDDES MESSAGE #109</H3>
+<H2> ERROR: Missing equals sign</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A keyword on the indicated
+#SERVICE ,
+#FORM ,
+or
+#PAGE
+statement line is not followed by an equals sign.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="110"></A>
+<H3>CMDDES MESSAGE #110</H3>
+<H2> ERROR: Invalid argument</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A keyword value on the indicated
+#SERVICE ,
+#FORM ,
+or
+#PAGE
+statement line is not formatted correctly.
+Keyword values must be double quoted strings or
+some other sequence of characters not containing blanks, tabs, or newlines.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="111"></A>
+<H3>CMDDES MESSAGE #111</H3>
+<H2> ERROR: Invalid FIRSTVAL function specification</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+FIRSTVAL
+function specification on the
+#FORM
+statement line is not formatted correctly.
+It must contain a function name, followed
+immediately by an open parentheses, '(', an optional user
+argument (no white space allowed, unless quoted), and a close parentheses, ')'.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="112"></A>
+<H3>CMDDES MESSAGE #112</H3>
+<H2> ERROR: FIRSTVAL user argument is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The user argument value specified for the
+FIRSTVAL
+validation function on the
+#FORM
+statement line is longer than the system imposed
+maximum of 11 characters.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="113"></A>
+<H3>CMDDES MESSAGE #113</H3>
+<H2> ERROR: FIRSTVAL function name is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The function name value specified for the
+FIRSTVAL
+validation function on the
+#FORM
+statement line is longer than the system imposed
+maximum of 11 characters.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="114"></A>
+<H3>CMDDES MESSAGE #114</H3>
+<H2> ERROR: Invalid LASTVAL function specification</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+LASTVAL
+function specification on the
+#FORM
+statement line is not formatted correctly.
+It must contain a function name, followed
+immediately by an open parentheses, '(', an optional user
+argument (no white space allowed, unless quoted), and a close parentheses, ')'.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="115"></A>
+<H3>CMDDES MESSAGE #115</H3>
+<H2> ERROR: LASTVAL user argument is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The user argument value specified for the
+LASTVAL
+validation function on the
+#FORM
+statement line is longer than the system imposed
+maximum of 11 characters.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="116"></A>
+<H3>CMDDES MESSAGE #116</H3>
+<H2> ERROR: LASTVAL function name is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The function name value specified for the
+LASTVAL
+validation function on the
+#FORM
+statement line is longer than the system imposed
+maximum of 11 characters.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="117"></A>
+<H3>CMDDES MESSAGE #117</H3>
+<H2> ERROR: Invalid argument to TRANMODE</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The argument specified for the
+TRANMODE
+keyword on the
+#FORM
+statement
+line is not one of the supported values.
+The supported values for this keyword are
+TRAN
+and
+NOTRAN .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="118"></A>
+<H3>CMDDES MESSAGE #118</H3>
+<H2> ERROR: Invalid argument to TRANTIME</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The argument specified for the
+TRANTIME
+keyword on the
+#FORM
+statement line has an invalid value.
+The value for this keyword must be a non-negative
+integer value.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="119"></A>
+<H3>CMDDES MESSAGE #119</H3>
+<H2> ERROR: Invalid argument to STATUSLINE</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The argument specified for the
+STATUSLINE
+keyword on the
+#FORM
+statement line has an invalid value.
+The value for this keyword must be a positive
+integer value.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="120"></A>
+<H3>CMDDES MESSAGE #120</H3>
+<H2> ERROR: Unrecognized keyword <I>keyword</I> in #FORM statement</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated keyword appeared on a
+#FORM
+statement line and is not one of the supported keywords.
+Supported keywords include
+FIRSTVAL ,
+LASTVAL ,
+STATUSLINE ,
+TRANMODE ,
+and
+TRANTIME .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="121"></A>
+<H3>CMDDES MESSAGE #121</H3>
+<H2> ERROR: File <I>file</I> does not have a .m extension</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<I>file</I> does not end with the required
+extension and is not a '-' (indicating
+that
+stdin
+should be used as input to the mask compiler).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your filename and retry the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="122"></A>
+<H3>CMDDES MESSAGE #122</H3>
+<H2> ERROR: Cannot start up m4</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+m4
+preprocessor could not be invoked by
+mc
+to preprocess the users mask.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Either correct your
+PATH
+setting to find
+m4
+on your system or use the
+-m
+option to disable the use of
+m4
+if your application does not
+make use of this capability.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="123"></A>
+<H3>CMDDES MESSAGE #123</H3>
+<H2> ERROR: Cannot open file <I>file</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<I>file</I> could not be opened by the mask compiler for processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your filename and retry the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="124"></A>
+<H3>CMDDES MESSAGE #124</H3>
+<H2> ERROR: File name too big</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file name for the form being compiled is longer than the system
+imposed maximum.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Shorten your file name and retry the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="125"></A>
+<H3>CMDDES MESSAGE #125</H3>
+<H2> ERROR: Cannot open output file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The output file for the form being compiled could not be opened by
+the mask compiler for writing.  The output file name is the input
+file name with the
+suffix changed to a
+suffix.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the permissions on your directory and/or on an existing
+file and retry the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="126"></A>
+<H3>CMDDES MESSAGE #126</H3>
+<H2> ERROR: Service name not specified</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A service name was not associated with this form through a
+#SERVICE
+statement in the mask.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit and correct your form and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="128"></A>
+<H3>CMDDES MESSAGE #128</H3>
+<H2> ERROR: Maximum page count of <I>maxpages</I> exceeded</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The system imposed maximum on the number of pages in a single form has
+been exceeded.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit your mask form to reduce the number of pages and rerun the mask
+compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="129"></A>
+<H3>CMDDES MESSAGE #129</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while allocating a fielded buffer for processing the form.
+The occurrence of this error will cause
+mc
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+If your form is exceptionally large, you may want to try reducing the
+size of your form and rerunning the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc(1),
+malloc(3) in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="130"></A>
+<H3>CMDDES MESSAGE #130</H3>
+<H2> ERROR: Too many fields on a page</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A page in the form has exceeded the system imposed limit on the
+number of distinct field areas that can exist on a single page.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit your mask form and reduce the number of fields in use on the
+offending page by combining them or splitting fields into different
+pages.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="131"></A>
+<H3>CMDDES MESSAGE #131</H3>
+<H2> ERROR: Default and validation machine size exceeded</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The form being compiled has exceeded the system imposed limit on the
+number of default and validation strings that may be specified on
+a single page in the form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit your form to reduce the number of default and validation fields
+in use and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="132"></A>
+<H3>CMDDES MESSAGE #132</H3>
+<H2> ERROR: Float pool size exceeded</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The limit on the size of the internal system pool used to map floating
+point input in the users mask has been exceeded.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Edit your form and reduce the use of floating point values in use and
+rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="133"></A>
+<H3>CMDDES MESSAGE #133</H3>
+<H2> ERROR: Literal pool full, mask compiler terminating</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The literal pool used internally in the mask compiler has been filled.
+This pool is 10,000 bytes in size and is used to hold images of
+strings in the mask being compiled.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Reduce the size and/or number of strings in your mask and rerun
+the mask compiler.  If this is not feasible, then you may need
+to split your mask into multiple masks to pass compilation.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="134"></A>
+<H3>CMDDES MESSAGE #134</H3>
+<H2> ERROR: More than one flag for one group in FLAGS field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+More than one flag that relates to a particular attribute was
+specified in a
+FLAGS
+field within the mask.
+For example, the
+L ,
+U ,
+and
+P
+flags all relate to the
+TYPE
+attribute and only
+one of them may be specified at a time.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Modify the mask to remove the extraneous flag specification and rerun
+the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="135"></A>
+<H3>CMDDES MESSAGE #135</H3>
+<H2> ERROR: <I>flag</I> is an invalid flag</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+<I>flag</I> is an invalid flag value for a mask.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="136"></A>
+<H3>CMDDES MESSAGE #136</H3>
+<H2> ERROR: row value greater than <I>max_rows</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A relative
+row
+specification in the mask file is greater than the maximum
+<I>max_rows</I>.
+The maximum number of rows is by default 24 but
+may be overridden by the
+-r
+option on the command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="137"></A>
+<H3>CMDDES MESSAGE #137</H3>
+<H2> ERROR: row value greater than <I>max_rows</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An absolute
+row
+specification in the mask file is greater than the maximum
+<I>max_rows</I>.
+The maximum number of rows is by default 24 but
+may be overridden by the
+-r
+option on the command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="138"></A>
+<H3>CMDDES MESSAGE #138</H3>
+<H2> ERROR: Syntax error in row field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+row
+parameter values must be integer numeric optionally preceded by
+a + or - to indicate a relative row number.
+A
+row
+specification in the current mask failed to match
+this specification.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="139"></A>
+<H3>CMDDES MESSAGE #139</H3>
+<H2> ERROR: COL value greater than <I>max_cols</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A relative
+COL
+specification in the mask file is greater than the maximum
+<I>max_cols</I>.
+The maximum number of columns is by default 80 but
+may be overridden by the
+-c
+option on the command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="140"></A>
+<H3>CMDDES MESSAGE #140</H3>
+<H2> ERROR: COL value greater than <I>max_cols</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An absolute
+COL
+specification in the mask file is greater than the maximum
+<I>max_cols</I>.
+The maximum number of columns is by default 80 but
+may be overridden by the
+-c
+option on the command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="141"></A>
+<H3>CMDDES MESSAGE #141</H3>
+<H2> ERROR: Syntax error in COL field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+COL
+parameter values must be integer numeric optionally preceded by
+a + or - to indicate a relative column number.
+A
+COL
+specification in
+the current mask failed to match this specification.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="142"></A>
+<H3>CMDDES MESSAGE #142</H3>
+<H2> ERROR: Number expected in MIN field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A non-numeric value was specified for a
+MIN
+parameter in the mask being compiled.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="143"></A>
+<H3>CMDDES MESSAGE #143</H3>
+<H2> ERROR: LINES attribute set to 0 for mask field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+LINES
+attribute for a mask field is specified as 0.
+LINES
+specifications must be either a - (indicating 1 line) or an
+unsigned positive integer.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="144"></A>
+<H3>CMDDES MESSAGE #144</H3>
+<H2> ERROR: Number expected in LINES field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A non-numeric value was specified for the
+LINES
+attribute of a mask entry.
+LINES
+specifications must be either a - (indicating 1 line) or an
+unsigned positive integer.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="145"></A>
+<H3>CMDDES MESSAGE #145</H3>
+<H2> ERROR: WIDTH attribute 0 or negative for mask field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+WIDTH
+attribute for a mask field was specified as 0 or a negative
+number.  This attribute must be a positive integer.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="146"></A>
+<H3>CMDDES MESSAGE #146</H3>
+<H2> ERROR: Required flag missing in FLAGS field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A flag from a required flag group has not been specified in the
+FLAGS
+attribute for a mask field.  There are currently no required
+flag groups so this error should not occur.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="147"></A>
+<H3>CMDDES MESSAGE #147</H3>
+<H2> ERROR: Literal field can not span multiple lines</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A mask field with the literal flag specified ("L") has a
+LINES
+attribute
+that is not 1.  Literal fields must be on a single line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="148"></A>
+<H3>CMDDES MESSAGE #148</H3>
+<H2> ERROR: WIDTH specified for literal field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A WIDTH attribute other than dash ("-") was specified for a literal
+field in the mask.  Literal fields must specify a dash for the width
+and allow the mask compiler to compute the width required.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="149"></A>
+<H3>CMDDES MESSAGE #149</H3>
+<H2> ERROR: Number expected in WIDTH field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A non-numeric value was specified for the
+WIDTH
+attribute of a non-literal mask field.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="150"></A>
+<H3>CMDDES MESSAGE #150</H3>
+<H2> ERROR: FML field identifier <I>fldid</I> could not be resolved</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The field identifier
+<I>fldid</I>
+could not be resolved through the
+application field tables.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and/or your field tables and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="151"></A>
+<H3>CMDDES MESSAGE #151</H3>
+<H2> ERROR: Syntax error in VALUE field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The syntax of a
+VALUE
+attribute in the mask is in error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="152"></A>
+<H3>CMDDES MESSAGE #152</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the fielded buffer identifiers associated with
+the mask.
+The occurrence of this error will cause
+mc
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+malloc</>(3) in UNIX system reference manuals
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="153"></A>
+<H3>CMDDES MESSAGE #153</H3>
+<H2> ERROR: FML field identifier <I>fldid</I> could not be resolved</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The field identifier <I>fldid</I> could not be resolved through the
+application field tables.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and/or your field tables and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="154"></A>
+<H3>CMDDES MESSAGE #154</H3>
+<H2> ERROR: Row is negative</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+row
+specified for a mask field is negative.
+This is most likely
+due to an incorrect negative relative row specification.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="155"></A>
+<H3>CMDDES MESSAGE #155</H3>
+<H2> ERROR: Column is negative</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+COL
+specified for a mask field is negative.
+This is most likely
+due to an incorrect negative relative column specification.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="156"></A>
+<H3>CMDDES MESSAGE #156</H3>
+<H2> ERROR: Column is too big</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+COL
+specification in the mask file is greater than the maximum.
+The maximum number of columns is by default 80 but
+may be overridden by the
+-c
+option on the command line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="157"></A>
+<H3>CMDDES MESSAGE #157</H3>
+<H2> ERROR: Extra fields at end of line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Extra fields are specified at the end of a basic descriptor statement
+in the mask.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="158"></A>
+<H3>CMDDES MESSAGE #158</H3>
+<H2> ERROR: MIN value is greater than WIDTH value</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MIN
+attribute value specified for a basic descriptor statement
+in the mask is greater than the
+WIDTH
+attribute value of the same statement.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="159"></A>
+<H3>CMDDES MESSAGE #159</H3>
+<H2> ERROR: <I>keyword</I> is an illegal keyword in an extended descriptor line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The indicated keyword,
+<I>keyword</I>,
+is not a valid keyword for an extended
+descriptor statement in a mask form.
+The valid keywords for extended descriptor statements are
+HELP ,
+ERR ,
+DFLT ,
+VAL ,
+MENU ,
+and
+FORMEXIT .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="160"></A>
+<H3>CMDDES MESSAGE #160</H3>
+<H2> ERROR: EDL line appears after a literal field description</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Extended descriptor statement lines are not allowed to appear after
+literal fields.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="161"></A>
+<H3>CMDDES MESSAGE #161</H3>
+<H2> ERROR: More than one <I>edltype</I> line for bdl</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A single basic descriptor statement line (bdl) has more than one of
+the indicated type,
+<I>edltype</I>,
+of extended descriptor statement lines associated with it.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="162"></A>
+<H3>CMDDES MESSAGE #162</H3>
+<H2> ERROR: Missing '=' on extended descriptor statement line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An extended descriptor statement line is missing the required
+equal (=) sign following the edl statement type identifier.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="163"></A>
+<H3>CMDDES MESSAGE #163</H3>
+<H2> ERROR: VAL or DFLT edl contains invalid separator <I>separator</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+DFLT
+or
+VAL
+extended descriptor statement line (edl) contains
+an invalid separator (<I>separator</I>) instead of the required colon (:).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="164"></A>
+<H3>CMDDES MESSAGE #164</H3>
+<H2> ERROR: More than one MENU/FORMEXIT extended descriptor line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A single basic descriptor statement line (bdl) has more than one
+MENU
+or
+FORMEXIT
+extended descriptor statement lines (edls)
+associated with it.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="165"></A>
+<H3>CMDDES MESSAGE #165</H3>
+<H2> ERROR: MENU line allowed only on unprotected field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+MENU
+extended descriptor statement lines are only allowed when
+associated with a basic descriptor statement line
+describing an unprotected field.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="166"></A>
+<H3>CMDDES MESSAGE #166</H3>
+<H2> ERROR: Only one MENU field allowed per form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Only one
+MENU
+extended descriptor statement line is allowed per form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="167"></A>
+<H3>CMDDES MESSAGE #167</H3>
+<H2> ERROR: MENU or FORMEXIT statement missing value specification</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+MENU
+or
+FORMEXIT
+extended descriptor statement line is missing the
+value portion of one of its "value=action" pairs in the comma
+separated list.  This is a violation of the syntax specified for these
+statements.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="168"></A>
+<H3>CMDDES MESSAGE #168</H3>
+<H2> ERROR: Invalid FORMEXIT value</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+FORMEXIT
+extended descriptor statement line contains a value that
+is not one of the permissible values,
+F0-F9 ,
+F11 ,
+or
+* .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="169"></A>
+<H3>CMDDES MESSAGE #169</H3>
+<H2> ERROR: Expected '=' in MENU/FORMEXIT list</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+MENU
+or
+FORMEXIT
+extended descriptor statement line contains a
+value that was not followed by the required equal sign (=).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="170"></A>
+<H3>CMDDES MESSAGE #170</H3>
+<H2> ERROR: Invalid MENU/FORMEXIT type <I>type</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+MENU
+or
+FORMEXIT
+extended descriptor statement line contains a type <I>type</I>
+that is not one of the permissible values (F</>,
+f ,
+S ,
+s ,
+C ,
+c ,
+A ,
+or
+a ).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="171"></A>
+<H3>CMDDES MESSAGE #171</H3>
+<H2> ERROR: Expected ':' in MENU/FORMEXIT line missing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+MENU
+or
+FORMEXIT
+extended descriptor statement line is missing the
+required colon (:) separator in the argument portion of the
+value=argument specification.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="172"></A>
+<H3>CMDDES MESSAGE #172</H3>
+<H2> ERROR: Invalid action type <I>type</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A
+MENU
+extended descriptor statement line has an invalid action type
+indicated in the suboption field
+for a value that has indicated action,
+'A'
+or
+'a' ,
+in the option field.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="173"></A>
+<H3>CMDDES MESSAGE #173</H3>
+<H2> ERROR: <I>value</I> not recognized on this edl line</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The extended descriptor statement line value <I>value</I> is not
+allowed for the extended descriptor statement type on which it
+is specified.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="174"></A>
+<H3>CMDDES MESSAGE #174</H3>
+<H2> ERROR: Mask value <I>value</I> is too large for processing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The mask value <I>value</I> is too large to be processed.
+The mask must
+be changed to reduce the size of the indicated value.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="175"></A>
+<H3>CMDDES MESSAGE #175</H3>
+<H2> ERROR: <I>val</I> is an illegal numeric range</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a validation line, a non-numeric value
+was found for a numeric range.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="176"></A>
+<H3>CMDDES MESSAGE #176</H3>
+<H2> ERROR: <I>val</I> is an illegal integer range</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a validation line, a non-numeric or decimal value
+was found for a integer range.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="177"></A>
+<H3>CMDDES MESSAGE #177</H3>
+<H2> ERROR: <I>val</I> is an illegal regular expression</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a validation line, an invalid value
+was found for a regular expresion validation.
+The valid syntax is specified by _gp_recomp(3).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+_gp_recomp</>(3),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="178"></A>
+<H3>CMDDES MESSAGE #178</H3>
+<H2> ERROR: <I>val</I> is an illegal literal</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a validation line, an invalid value
+was found for a literal value.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Currently, this error is never printed (the program
+prints another error and exits first).
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="179"></A>
+<H3>CMDDES MESSAGE #179</H3>
+<H2> ERROR: <I>val</I> is an illegal function declaration</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a validation line, an invalid function declaration
+was found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="180"></A>
+<H3>CMDDES MESSAGE #180</H3>
+<H2> ERROR: <I>val</I> is an illegal date description</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a validation line, an invalid date description
+was found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="181"></A>
+<H3>CMDDES MESSAGE #181</H3>
+<H2> ERROR: No arguments were expected on this edl since there was no colon</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The extended definition line did not have a tag followed by a colon
+but did have additional information on the line.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="182"></A>
+<H3>CMDDES MESSAGE #182</H3>
+<H2> ERROR: Too few arguments on edl. <I>val</I> is the minimum</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The extended definition line did not have enough information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="183"></A>
+<H3>CMDDES MESSAGE #183</H3>
+<H2> ERROR: Too many arguments on edl. <I>val</I> is the maximum</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The extended definition line had too much information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-compile the mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="184"></A>
+<H3>CMDDES MESSAGE #184</H3>
+<H2> ERROR: lseek failed..aborting</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An input/output error occurred while processing the mask.
+The program will exit.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="186"></A>
+<H3>CMDDES MESSAGE #186</H3>
+<H2> ERROR: READING LINE <I>number</I> OUT OF SPACE</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while processing a form in pic_uform.
+Additional information about the problem is printed as
+part of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="187"></A>
+<H3>CMDDES MESSAGE #187</H3>
+<H2> ERROR: line <I>val</I> -Inconsistent line length in multi-line field</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while processing a multi-line field.
+The length of the lines is not consistent.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the line lengths to be consistent.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+pic_uform</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="188"></A>
+<H3>CMDDES MESSAGE #188</H3>
+<H2> ERROR: line <I>val</I> -multi-line field not terminated</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while processing a multi-line field.
+The field was not properly terminated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the termination.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+pic_uform</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="189"></A>
+<H3>CMDDES MESSAGE #189</H3>
+<H2> ERROR: <I>program</I>: could not open <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The specified input file could not be opened for reading.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the file that it exists and that you have read permission.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+udfk</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="191"></A>
+<H3>CMDDES MESSAGE #191</H3>
+<H2> ERROR: <I>program</I>: line <I>lineno</I>...<I>keyword</I> is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A syntax error occurred while parsing the input file.
+The specified keyword is too long.  It must be less than or equal to 9
+characters in length.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+udfk</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="192"></A>
+<H3>CMDDES MESSAGE #192</H3>
+<H2> ERROR: <I>program</I>: line <I>lineno</I>..<I>keyword</I> is a nonexistent code</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A syntax error occurred while parsing the input file.
+The specified keyword is not recognized.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-run the command.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+udfk</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="199"></A>
+<H3>CMDDES MESSAGE #199</H3>
+<H2> ERROR: mcdis: Could not open <I>file</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file <I>file</I> could not be processed by
+mcdis .
+This error can occur for a number of reasons.
+The most common reasons are that the environment variable
+MASKPATH
+is not set correctly or the file name is specified incorrectly.
+The error can occur also if the mask file has been corrupted.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct you
+MASKPATH
+setting and/or filename if necessary and rerun
+the mask disassembler.
+If these things do not correct the problem, the mask
+may be corrupted and you may need to regenerate it before it can be used.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mcdis</>(1),
+"TUXEDO Data Entry System Guide"
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

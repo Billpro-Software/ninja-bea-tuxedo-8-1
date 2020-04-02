@@ -1,0 +1,2191 @@
+<!-- .if n .pH errman.h.tamsg.htm @(#)tamsg.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>TMADMIN MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>TMADMIN MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="109"></A>
+<H3>TMADMIN MESSAGE #109</H3>
+<H2> ERROR: Custom Error Message.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has been produced in a
+tmadmin
+command.
+A message should have been previously printed explaining the nature
+of this error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the parameters and retype the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="110"></A>
+<H3>TMADMIN MESSAGE #110</H3>
+<H2> ERROR: Argument too long.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is returned by the
+tmadmin
+command parser.
+The parser finds that an argument has more than 80 characters (the maximum).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the argument and retype the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="111"></A>
+<H3>TMADMIN MESSAGE #111</H3>
+<H2> ERROR: No such command.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unknown or invalid command has been entered to
+tmadmin .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and retype the command.
+You can type
+help
+if you are not
+sure of the commands available in
+tmadmin .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="112"></A>
+<H3>TMADMIN MESSAGE #112</H3>
+<H2> ERROR: Invalid option.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Unknown option or invalid argument given to a
+tmadmin
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the parameters and reenter the command.
+A message should have been
+already delivered indicating the offending option.
+If you are not sure of the parameters, you can type
+help
+with the command name as argument.
+The
+help
+command will provide information about required or
+optional parameters used by the requested
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="113"></A>
+<H3>TMADMIN MESSAGE #113</H3>
+<H2> ERROR: Too many arguments.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command has been entered with more arguments than required, or the
+maximum number of 10 arguments has been exceeded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the parameters and reenter the command.
+If you are not sure of the parameters, you can type
+help
+with the command name as argument.
+The
+help
+command will provide information about required or
+optional parameters used by the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="114"></A>
+<H3>TMADMIN MESSAGE #114</H3>
+<H2> ERROR: Duplicate arguments.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command has been entered with duplicate parameters.
+The
+tmadmin
+command parser does not allow duplicate arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the parameters and reenter the command.
+If you are not sure of
+the parameters, you can type
+help
+with the command name as argument.
+The
+help
+command will provide information about required or
+optional parameters used by the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="115"></A>
+<H3>TMADMIN MESSAGE #115</H3>
+<H2> ERROR: No bulletin board attached.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command that requires information from the Bulletin Board has been
+entered.
+However, the machine on which
+tmadmin
+is executing does not have
+a Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure that
+tmadmin
+is running on the Master machine, and then boot
+the application servers or the administrative servers
+(that is, use the
+boot
+command) on this machine or the other machines.
+Then reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="116"></A>
+<H3>TMADMIN MESSAGE #116</H3>
+<H2> ERROR: Memory allocation failure.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.
+Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+Increase the space on the swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in a UNIX System reference manual
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="117"></A>
+<H3>TMADMIN MESSAGE #117</H3>
+<H2> ERROR: No queues exist.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The selection criteria specified while trying to print queue information
+did not match any active queues.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the queue specification (the identifier, server identifier,
+group, etc.) and re-run the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="118"></A>
+<H3>TMADMIN MESSAGE #118</H3>
+<H2> ERROR: No such queue.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid queue name has been entered as an argument to a
+tmadmin
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the argument and reenter the command.
+You can use the
+"tmadmin printqueue"
+command to retrieve the names of the valid queues in your application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="119"></A>
+<H3>TMADMIN MESSAGE #119</H3>
+<H2> ERROR: Queue retrieval error.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced while retrieving information about a queue or
+queues defined in the application.
+An error message should have been written
+to the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the parameters entered for the
+tmadmin
+command, and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding
+error description to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="120"></A>
+<H3>TMADMIN MESSAGE #120</H3>
+<H2> ERROR: No servers exist.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command has been entered requiring information about a server or
+servers defined in the application.
+However,
+no servers are currently defined in the
+TUXCONFIG
+file
+or no servers have been booted for the specified machine or group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Boot the application servers for the required group or machine, and then reenter
+the
+tmadmin
+command.
+Be sure that the expected servers have been
+defined in the
+TUXCONFIG
+file.
+You can use the
+tmconfig
+program or
+the
+config
+command of
+tmadmin
+to retrieve or change the configuration parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="121"></A>
+<H3>TMADMIN MESSAGE #121</H3>
+<H2> ERROR: No such server.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid server identifier has been entered as argument to a
+tmadmin
+command.
+This error may also be produced when
+no servers are currently booted for the particular group or machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+"tmadmin printserver"
+command with no arguments
+to print the information about the current active servers.
+You can also use the
+printgroup
+command to find if a particular group
+or groups on a particular machine have been booted.
+You can boot servers
+on a particular machine or group with the
+boot
+command of
+tmadmin .
+After the servers have been booted, you can reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="122"></A>
+<H3>TMADMIN MESSAGE #122</H3>
+<H2> ERROR: Server retrieval error.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced while retrieving information about the defined
+servers in an application.
+An error message should have been written
+to the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the parameters entered for the
+tmadmin
+command, and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding
+error description to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="123"></A>
+<H3>TMADMIN MESSAGE #123</H3>
+<H2> ERROR: No services exist.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command has been entered requiring information about the different
+services currently advertised or defined by the application.
+However, no services are defined in the
+TUXCONFIG
+file,
+or the servers advertising these services have not been booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Boot the application servers for the required group or machine, and then reenter
+the
+tmadmin
+command.
+Be sure that the expected servers and services have been
+defined in the
+TUXCONFIG
+file.  You can use the
+tmconfig
+command or
+the
+"tmadmin config"
+command to retrieve or change the configuration parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="124"></A>
+<H3>TMADMIN MESSAGE #124</H3>
+<H2> ERROR: No such service.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command requiring information about
+a particular service has been entered,
+but this service is not currently advertised in the Bulletin Board or the
+server advertising the service has not been booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+"tmadmin printservice"
+command with no arguments
+to print the information about the current known services.
+You can also use the
+printgroup
+command to find if a particular group
+or the groups on a particular machine have been booted.
+You can boot
+a particular machine, group, or server with the
+"tmadmin boot"
+command.
+After the servers have been booted, you can reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="125"></A>
+<H3>TMADMIN MESSAGE #125</H3>
+<H2> ERROR: Service retrieval error.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced while retrieving information about a service or
+services advertised by an application. An error message explaining the problem
+should have been written to the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the parameters entered for the
+tmadmin
+command, and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding
+error description to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="126"></A>
+<H3>TMADMIN MESSAGE #126</H3>
+<H2> ERROR: No BBL exists for that machine.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command has been entered to display or change the Bulletin Board
+parameters defined for a particular machine.
+However, the particular machine has not been booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can use the
+"tmadmin boot"
+command to boot the administrative servers
+and (or) application servers on the required machine.
+Then you can reenter the
+tmadmin
+command to display or change the corresponding
+Bulletin Board parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="127"></A>
+<H3>TMADMIN MESSAGE #127</H3>
+<H2> ERROR: Invalid combination of options.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid combination of arguments has been entered in a
+tmadmin
+command.
+For example, an invalid server identifier has been specified in combination
+with a group name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments and reenter the
+tmadmin
+command.
+You may use the
+help
+command to display information about the valid argument combinations
+for
+tmadmin
+commands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="128"></A>
+<H3>TMADMIN MESSAGE #128</H3>
+<H2> ERROR: Error suspending resources.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while retrieving statistical information or suspending
+a service or set of services.
+An error message explaining the problem should
+be found in the
+ULOG.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the parameters entered for the
+tmadmin
+command, and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding
+error description to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="129"></A>
+<H3>TMADMIN MESSAGE #129</H3>
+<H2> ERROR: Group id is not set.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command requiring an argument with a server group name has been
+entered without this argument.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reenter the
+tmadmin
+command with the corresponding group name argument.
+You can find the available groups with the
+"tmadmin printgroup"
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="130"></A>
+<H3>TMADMIN MESSAGE #130</H3>
+<H2> ERROR: Server id is not set.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command requiring an argument with a server identifier has been
+entered without this argument.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reenter the
+tmadmin
+command with the corresponding server identifier argument.
+You can find the different servers with the
+printserver
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="131"></A>
+<H3>TMADMIN MESSAGE #131</H3>
+<H2> ERROR: Service name is not set.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command requiring an argument with a service name has been
+entered without this argument.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reenter the
+tmadmin
+command with the corresponding service name argument.
+You can find the different services with the
+printservice
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="132"></A>
+<H3>TMADMIN MESSAGE #132</H3>
+<H2> ERROR: No such machine.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid machine name has been specified as argument to a
+tmadmin
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the machine name and reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="133"></A>
+<H3>TMADMIN MESSAGE #133</H3>
+<H2> ERROR: Must be administrator to execute that command.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command failed because it can only be executed by the administrator.
+The current instance of the
+tmadmin
+program is run by a user who is not the administrator.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Terminate this instance of the
+tmadmin
+program;
+login as the administrator and start a new instance of the
+tmadmin
+program.
+Then re-execute the
+tmadmin
+subcommand that failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="134"></A>
+<H3>TMADMIN MESSAGE #134</H3>
+<H2> ERROR: Error resuming (un-suspending) resources.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command that resumes suspended resources
+(that is, a queue, server, or service)
+has failed.
+An error message explaining the failure should be
+found in the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the parameters entered for the
+tmadmin
+command, and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the error description of the
+ULOG
+message to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="135"></A>
+<H3>TMADMIN MESSAGE #135</H3>
+<H2> INFO: Break out of main loop.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+quit
+command has been entered.
+This instance of
+tmadmin
+will terminate.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="138"></A>
+<H3>TMADMIN MESSAGE #138</H3>
+<H2> ERROR: Command not allowed in private mode.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The default command was used to reset the default machine, but
+tmadmin
+is running in private mode.
+The default machine cannot be reset (it must be the local machine).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="140"></A>
+<H3>TMADMIN MESSAGE #140</H3>
+<H2> ERROR: No BBL exists on this machine.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command has been entered to check the integrity of all
+processes running on a particular machine.
+However, this command failed because the machine is down or the
+BBL
+administrative process is not running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+"tmadmin boot"
+command to start the servers on the required machine
+or to boot the
+BBL
+administrative server.
+Then reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="141"></A>
+<H3>TMADMIN MESSAGE #141</H3>
+<H2> ERROR: BBL dead on requested machine.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command that requires the services of the
+BBL
+administrative server
+failed because the
+BBL
+is not running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+BBL
+administrative server is automatically restarted by the system.
+Please wait a couple of minutes
+and then reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="142"></A>
+<H3>TMADMIN MESSAGE #142</H3>
+<H2> ERROR: Queue suspended for BBL on requested machine.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command that requires the administrative services advertised
+by the
+BBL
+server running on particular machine failed because these
+services are currently suspended, or
+the administrative services offered by the
+BBL
+on the requested machine may be suspended because of a failure
+(for example, the connection to the requested machine was lost
+or that machine failed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+"tmadmin resume"
+command to resume the activity on the queue
+used by the
+BBL
+on the requested machine.
+The
+resume
+command
+will un-suspend the administrative services advertised by the
+BBL
+server.
+If the error was due to a failure on the requested
+machine (or on the connection), use the
+reconnect
+command to reestablish the connection to the requested machine
+or wait a couple of minutes until the system automatically
+recovers from the network failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="143"></A>
+<H3>TMADMIN MESSAGE #143</H3>
+<H2> ERROR: No server is specified.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command failed because it requires an argument with a specific
+server identifier and this argument was not specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reenter the
+tmadmin
+command with the corresponding server identifier argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="144"></A>
+<H3>TMADMIN MESSAGE #144</H3>
+<H2> ERROR: Error retrieving service parms.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced while retrieving information about the requested
+service parameters.
+An error message should have been written
+to the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the parameters entered for the
+tmadmin
+command, and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding
+error description to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="145"></A>
+<H3>TMADMIN MESSAGE #145</H3>
+<H2> ERROR: Syntax error on command line.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A syntax error was found in the
+tmadmin
+command.
+A previous message should
+have been printed specifying the nature of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments or syntax and reenter the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="147"></A>
+<H3>TMADMIN MESSAGE #147</H3>
+<H2> ERROR: Error accessing system semaphore.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System uses an operating system semaphore to control access to
+structures in shared memory.
+An error occurred while accessing or retrieving
+information from the system level semaphore.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can run the
+"tmadmin bbclean"
+command to check the operating system resources,
+and then reenter the
+tmadmin
+command that failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="148"></A>
+<H3>TMADMIN MESSAGE #148</H3>
+<H2> ERROR: Error accessing message queue.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command failed while accessing or retrieving
+information from a message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can run the
+"tmadmin bbclean"
+command to check the operating system IPC resources,
+and then reenter the
+tmadmin
+command that failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="149"></A>
+<H3>TMADMIN MESSAGE #149</H3>
+<H2> ERROR: Error accessing shared memory.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command failed while trying to access system
+information stored in shared memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can run the
+"tmadmin bbclean"
+command to check the operating system IPC resources,
+and then reenter the
+tmadmin
+command that failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="151"></A>
+<H3>TMADMIN MESSAGE #151</H3>
+<H2> ERROR: Error dumping bulletin board.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while executing the
+"tmadmin dump"
+command.
+The error may have been produced while gathering information from
+the Bulletin Board (an error message may have been recorded in the
+ULOG
+file) or while the command was
+trying to write to the specified file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that you have permissions to write a file on the current directory
+or on the pathname specified as argument to the
+tmadmin
+command.
+Also, check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding error description to find the
+corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="154"></A>
+<H3>TMADMIN MESSAGE #154</H3>
+<H2> ERROR: No resources are specified.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+"tmadmin suspend"
+(or
+resume )
+command failed because no arguments have been specified.
+The command requires that either arguments are
+specified as default arguments (via the
+"tmadmin default"
+command) or that they are specified in the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reenter the
+tmadmin
+command with the required arguments.
+You can use
+the
+"tmadmin help"
+command to find out what arguments are required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="156"></A>
+<H3>TMADMIN MESSAGE #156</H3>
+<H2> ERROR: Incorrect release code.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While entering advanced administrator mode, the incorrect password
+was entered.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Call TUXEDO Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="158"></A>
+<H3>TMADMIN MESSAGE #158</H3>
+<H2> ERROR: DBBL migration failure.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+"tmadmin master"
+command failed while the
+DBBL
+was migrating to the backup machine.
+An error message may have been recorded in the
+ULOG
+file explaining the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+ULOG
+file for a log record explaining the failure, and
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="159"></A>
+<H3>TMADMIN MESSAGE #159</H3>
+<H2> ERROR: Can not create a new DBBL.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+"tmadmin master"
+command failed because it cannot start a new
+DBBL
+administrative server on the backup machine.
+An error record may have been
+recorded in the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+ULOG
+file for an error record explaining the problem.
+You should also check if there is already a
+DBBL
+server running on the backup machine.
+Please contact your TUXEDO System Technical Support for more
+information about how to correct the problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="160"></A>
+<H3>TMADMIN MESSAGE #160</H3>
+<H2> ERROR: Backup node is not specified in the UBBCONFIG file.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+"tmadmin master"
+command failed because there are no backup
+machines specified in the
+TUXCONFIG
+file for the Master node.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can use the
+tmconfig
+program or the
+"tmadmin config"
+command to define a backup machine for the Master machine.
+The
+"tmadmin master"
+command cannot be run for a Master machine that does
+not have a defined
+backup machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="161"></A>
+<H3>TMADMIN MESSAGE #161</H3>
+<H2> ERROR: tmadmin is not running on acting backup node.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+"tmadmin master"
+command failed because the
+tmadmin
+program is
+not executing on the machine that will become the Master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Terminate the current
+tmadmin
+session, and start a new instance of
+tmadmin
+on the backup machine.
+Then reenter the
+master
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="162"></A>
+<H3>TMADMIN MESSAGE #162</H3>
+<H2> ERROR: Can not clean up partitioned BB entries.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+"tmadmin pclean"
+command failed to execute on the required machine.
+An error log record explaining the failure
+may have been recorded in the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the requested machine has been booted or that the
+BBL
+administrative
+is running on that machine.
+Also, check the
+ULOG
+file for a record explaining the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="163"></A>
+<H3>TMADMIN MESSAGE #163</H3>
+<H2> ERROR: Network reconnection failure.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred while
+tmadmin
+was processing a
+reconnect
+command.
+An error log record explaining the failure may be found in the
+ULOG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the Bridge administrative process
+is running and check the
+ULOG
+file for a record explaining the problem.
+Please refer to the corresponding
+error description to find the corrective action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="164"></A>
+<H3>TMADMIN MESSAGE #164</H3>
+<H2> ERROR: Invalid server group name.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command failed because an invalid group name has been entered as
+an argument to the command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+tmadmin
+command arguments and reenter the command.
+You can use the
+printgroup
+command to print information
+about the current active groups running on a particular machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="165"></A>
+<H3>TMADMIN MESSAGE #165</H3>
+<H2> ERROR: Should not pclean the current machine.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is retuned by the
+"tmadmin pclean"
+command.
+This command cannot be executed when the application is running in
+SHM
+mode.
+The
+"tmadmin pclean"
+command is used when the application is running in
+MP
+mode to remove bulletin board entries for processes and
+services associated with a machine that has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the application is running in
+SHM
+mode, then you should not execute the
+"tmadmin pclean"
+command.
+This command should be used in
+MP
+mode to remove from the Bulletin Board
+information about partitioned (or failed) machines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="166"></A>
+<H3>TMADMIN MESSAGE #166</H3>
+<H2> ERROR: -z option is mandatory when FSCONFIG is not set.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command failed because the shell environment variable
+FSCONFIG
+is not set and the
+-z
+option was not used on the command line.
+The
+FSCONFIG
+variable is an optional variable that
+should be set to the pathname of the device that contains the
+Universal Device List (UDL).
+If the
+FSCONFIG
+variable is not set, then the
+-z
+option must be used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retype the
+tmadmin
+command with the
+-z
+option.
+This option has as argument the pathname of the device
+containing the Universal Device List (UDL).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="168"></A>
+<H3>TMADMIN MESSAGE #168</H3>
+<H2> WARN: master command not performed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This warning is returned by the master command of
+tmadmin (1).
+The master command was not performed because no explicit confirmation
+was provided.
+This command requires an explicit confirmation to be executed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reexecute the master command with the "-yes" option if you want to make
+the backup node take over as the master node.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="181"></A>
+<H3>TMADMIN MESSAGE #181</H3>
+<H2> ERROR: Invalid option: -W</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -W option was specified without giving the correct
+associated argument.
+This is an undocumented option, used only for TUXEDO Support.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="182"></A>
+<H3>TMADMIN MESSAGE #182</H3>
+<H2> ERROR: Invalid option: <I>option</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmadmin (1)
+has been invoked with an invalid option.
+The offending option is printed with this error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify options to tmadmin and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="183"></A>
+<H3>TMADMIN MESSAGE #183</H3>
+<H2> ERROR: Invalid argument: <I>argument</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmadmin (1)
+has been invoked with an invalid argument.
+The offending option and argument are printed with this error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify options to tmadmin and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="184"></A>
+<H3>TMADMIN MESSAGE #184</H3>
+<H2> ERROR: TUXCONFIG environment variable not set.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+environment variable was not set.
+Because of this, the
+tmadmin
+command failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXCONFIG
+environment variable to the pathname of the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="186"></A>
+<H3>TMADMIN MESSAGE #186</H3>
+<H2> INFO: Reattaching to regular bulletin board.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A special administrative command to instantiate a saved Bulletin Board
+failed.  The program will attached to the regular bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="187"></A>
+<H3>TMADMIN MESSAGE #187</H3>
+<H2> INFO: Reattaching to regular bulletin board.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After running a special administrative command to attach to
+a special Bulletin Board, the BB has been released and
+tmadmin will re-attach to the normal BB.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="188"></A>
+<H3>TMADMIN MESSAGE #188</H3>
+<H2> ERROR: Error while obtaining the Bulletin Board parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced in
+tmadmin
+while retrieving
+the Bulletin Board parameters.
+A more specific error explaining
+the situation should already exist in the user log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the user log for a more specific error message.
+Check that the
+TUXCONFIG
+is readable, and re-execute the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="189"></A>
+<H3>TMADMIN MESSAGE #189</H3>
+<H2> ERROR: Reinitialization after boot failed to set the Bulletin Board Model</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced in
+tmadmin
+while setting the
+Bulletin Board model.
+This error may occur while the system is
+reinitialized after a booting procedure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the Bulletin Board Model defined in the
+MODEL
+attribute of the
+*RESOURCES section of the
+TUXCONFIG
+file.
+Valid Bulletin Board Model values are
+SHM
+and
+MP .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="190"></A>
+<H3>TMADMIN MESSAGE #190</H3>
+<H2> ERROR: Failure setting the Bulletin Board Model to MSG</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+command failed to set the Bulletin Board to
+MSG .
+This failure can only be produced if the
+tmadmin
+program was not compiled with the system default libraries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="191"></A>
+<H3>TMADMIN MESSAGE #191</H3>
+<H2> ERROR: Error setting the Bulleting Board Model to SHM</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+command failed to set the Bulletin Board Model to
+SHM .
+This failure can only be produced if the
+tmadmin
+program was not compiled with the system default libraries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="192"></A>
+<H3>TMADMIN MESSAGE #192</H3>
+<H2> ERROR: Error setting the Bulleting Board Model to MP</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+command failed to set the Bulletin Board Model to MP.
+This failure can only be produced if the
+tmadmin
+program was not compiled with the system default libraries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="193"></A>
+<H3>TMADMIN MESSAGE #193</H3>
+<H2> ERROR: Could not setup internal tables to enter boot mode.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+program is going to try to enter boot mode but it
+was not able to find the right internal tables or it could not
+attach to the Bulletin Board.  In the latter case, another error message
+should have been recorded in the user log.  If there are no messages
+in the user log, then
+tmadmin
+may have been compiled with
+the wrong libraries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="194"></A>
+<H3>TMADMIN MESSAGE #194</H3>
+<H2> ERROR: Invalid TUXCONFIG value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+program is trying to perform an automatic boot
+procedure, and it finds that
+the value of the
+TUXCONFIG
+environment variable does not match the
+value defined in the *MACHINES
+section of the
+TUXCONFIG
+configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the value of the
+TUXCONFIG
+environment variable and re-run the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="195"></A>
+<H3>TMADMIN MESSAGE #195</H3>
+<H2> ERROR: Failure to obtain the Master Machine identifier.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+program failed to obtain the master machine identifier
+from internal tables or the
+TUXCONFIG
+file.
+This error may be produced when
+tmadmin
+enters in
+automatic boot mode
+(that is, the system either is not up or is partitioned).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+TUXCONFIG
+configuration file is readable.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="196"></A>
+<H3>TMADMIN MESSAGE #196</H3>
+<H2> ERROR: The boot mode is only available on the MASTER processor.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error is produced when
+tmadmin
+is run in boot mode on
+a machine that is not the
+MASTER
+machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reexecute
+tmadmin
+on the
+MASTER
+machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="199"></A>
+<H3>TMADMIN MESSAGE #199</H3>
+<H2> WARN: Cannot become administrator.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+program was not able to enter the administrative mode.
+A limited set of commands commands is available
+(that is, the set of commands available when
+tmadmin
+is run with the
+-r
+option).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT1><P>
+<H1>TMADMIN MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="202"></A>
+<H3>TMADMIN MESSAGE #202</H3>
+<H2> ERROR: Can not find DBBL on master and backup nodes.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmadmin
+is run in the administrative mode but there is no
+DBBL
+active on the Master or the Backup node.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the network connectivity, and then run the
+tmboot (1)
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="203"></A>
+<H3>TMADMIN MESSAGE #203</H3>
+<H2> WARN: Error while retrieving the Bulletin Board parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was produced while obtaining the Bulletin Board parameters.
+An error message explaining the error already exists in the user log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the user log for an error message explaining why
+tmadmin
+was not able to obtain the Bulletin Board parameters.
+Also, check that the
+TUXCONFIG
+file is readable, and re-execute the
+tmadmin
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="204"></A>
+<H3>TMADMIN MESSAGE #204</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating
+system using
+malloc
+failed in tmadmin during
+its initialization.  tmadmin will not start.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.  Reduce the memory usage on
+the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="205"></A>
+<H3>TMADMIN MESSAGE #205</H3>
+<H2> ERROR: Error executing <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A command was given to
+tmadmin
+that was to be executed by the shell.
+An error was encountered by the shell in executing the command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the command.  If it continues to fail, refer to the
+system (3S)
+manual page for reasons why the command
+may have failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+system (3S)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="207"></A>
+<H3>TMADMIN MESSAGE #207</H3>
+<H2> ERROR: Cannot advertise services for administrative processes</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either the queue or the server group and id pair
+match a System/T administrative process, such as
+the BBL.  The services advertised by System/T
+processes cannot be changed by the administrator.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the advertise command making sure that the
+options given to the command match application servers
+instead of System/T administrative processes.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="208"></A>
+<H3>TMADMIN MESSAGE #208</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating
+system using either malloc() or <Font>realloc() failed
+in tmadmin during the <Font>advertise command.
+The advertise command fails.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.  Reduce the memory usage on
+the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="209"></A>
+<H3>TMADMIN MESSAGE #209</H3>
+<H2> WARN: <I>service</I> is already advertised on queue <I>queue-id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service named in the advertise command is already advertised
+on the server(s) matching the queue id or server group/id criteria.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpadvertise(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="210"></A>
+<H3>TMADMIN MESSAGE #210</H3>
+<H2> ERROR: Error advertising <I>service</I> on queue <I>queue-id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service named in the
+tpadvertise
+command could not be
+advertised on the given queue.
+The two probable sources
+for this error are 1) an incorrect queue name,
+or 2) an incorrect service or function name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the queue name using the
+printqueue
+command.
+If it is correct, make sure that the server was built
+to be able to offer the specified service.  Also, make
+sure that if a function is specified, that it indeed
+exists within the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpadvertise(3), <Font>buildserver(1), <Font>servopts(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="211"></A>
+<H3>TMADMIN MESSAGE #211</H3>
+<H2> ERROR: Error advertising <I>service</I> on group <I>group-id</I>, server id <I>server-id</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service named in the
+advertise
+command could not be
+advertised for the server matching the specified group and id.
+The two probable sources for this error are 1) an
+incorrect server group name or server id, or 2) an incorrect
+service or function name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the server group name and id using the printserver command.
+If they are correct, make sure that the server was built
+to be able to offer the specified service.  Also, make
+sure that if a function is specified, that it indeed
+exists within the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpadvertise(3), <Font>buildserver(1), <Font>servopts(5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

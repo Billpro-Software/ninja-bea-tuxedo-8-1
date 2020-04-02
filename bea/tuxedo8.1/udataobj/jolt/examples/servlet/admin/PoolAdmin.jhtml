@@ -1,0 +1,169 @@
+<!-- 
+--   Copyright 1998-99 BEA Systems, Inc.
+--
+--   This PageCompileServlet serves the web admininstrative commands.
+-->
+<java type=import>
+bea.jolt.pool.*
+bea.jolt.pool.servlet.*
+</java>
+
+<java type=class>
+public void webStop( HttpServletResponse response, String id )
+{
+	SessionPoolManager mgr;
+	if ((mgr = ServletPoolManagerConfig.getSessionPoolManager()) != null)
+		mgr.stopSessionPool(id);
+}
+
+public void webSuspend( HttpServletResponse response, String id )
+{
+	SessionPoolManager mgr;
+	if ((mgr = ServletPoolManagerConfig.getSessionPoolManager()) != null)
+		mgr.suspendSessionPool(id, true);
+}
+
+public void webResume( HttpServletResponse response, String id )
+{
+	SessionPoolManager mgr;
+	if ((mgr = ServletPoolManagerConfig.getSessionPoolManager()) != null)
+		mgr.suspendSessionPool(id, false);
+}
+
+public void webMod( HttpServletResponse response, String id, String name,
+			int value )
+{
+	SessionPoolManager mgr;
+	if ((mgr = ServletPoolManagerConfig.getSessionPoolManager()) != null)
+	{
+		SessionPool pool = mgr.getSessionPool(id);
+		if ((pool != null) && name.equals("poolSize"))
+			pool.setMaxConnections(pool.getMaxConnections()+value);
+	}
+}
+
+public void webStatus( HttpServletResponse response, String id )
+					throws IOException
+{
+	ServletOutputStream out = response.getOutputStream();
+
+	out.println("<HTML><HEAD><TITLE>Session Pool Statistics: "+id+
+		"</TITLE></HEAD><BODY BGCOLOR=#FFFFFF>");
+
+	SessionPoolManager mgr;
+	if ((mgr = ServletPoolManagerConfig.getSessionPoolManager()) == null)
+	{
+		out.println("<H2>Session Pool Manager Is Not Initialized"+
+			    "</H2></BODY></HTML>");
+		return;
+	}
+
+	SessionPool pool = mgr.getSessionPool(id);
+	if (pool == null)
+	{
+		out.println("<H2>Invalid Session Pool ID: "+id+
+			"</H2></BODY></HTML>");
+		return;
+	}
+	if (pool.isSuspended())
+		out.println("<CENTER><H2><FONT COLOR=red>Suspended Connection Status</FONT></H2>");
+	else
+		out.println("<CENTER><H2>Active Connection Status</H2>");
+
+	out.println("<TABLE BORDER=1><TR><TD>&nbsp</TD>"+
+			"<TD ALIGN=CENTER><B>Address</B></TD>"+
+			"<TD ALIGN=CENTER><B>Status</B></TD>"+
+			"<TD ALIGN=CENTER><B>In Transaction</B></TD>"+
+			"<TD ALIGN=CENTER><B>Last Use Time</B></TD>"+
+			"<TD ALIGN=CENTER><B>Total Rqsts</B></TD>"+
+			"<TD ALIGN=CENTER><B>Pending Rqsts</B></TD>"+
+			"<TD ALIGN=CENTER><B>Errors</TD></B></TR>");
+
+	// Generate a table of status for all connections in a session pool.
+	int poolsize = pool.getMaxConnections();
+	for (int i = 0; i < poolsize; i++)
+	{
+		String atime = "&nbsp";
+		Connection con = pool.getConnection(i);
+		if (con.getAccessTime().getTime() != 0L)
+			atime = con.getAccessTime().toString();
+
+		out.println("<TR><TD ALIGN=RIGHT><FONT COLOR=blue>"+(i+1)+
+			"</FONT></TD>"+
+			"<TD ALIGN=LEFT>"+con.getAddr()+"</TD>"+
+			"<TD ALIGN=CENTER><FONT COLOR="+ (con.isAlive() ?
+				"green>Alive" : "red>Dead")+"</FONT></TD>"+
+			"<TD ALIGN=CENTER>"+(con.inTransaction() ?
+				"Yes" : "No")+"</TD>"+
+			"<TD ALIGN=CENTER>"+atime+"</TD>"+
+			"<TD ALIGN=CENTER>"+con.getRequestCount()+"</TD>"+
+			"<TD ALIGN=CENTER>"+con.getUseCount()+"</TD>"+
+			"<TD ALIGN=CENTER>"+con.getErrorCount()+"</TD></TR>");
+	}
+	out.println("</TABLE>");
+
+	out.println("<FORM NAME=admin ACTION=PoolAdmin.jhtml METHOD=GET>");
+	if (id != null)
+		out.println("<INPUT TYPE=hidden NAME=id VALUE="+id+">");
+	out.println("<INPUT TYPE=submit NAME=get VALUE=Status>\n"+
+		"<INPUT TYPE=submit NAME=get VALUE=Suspend>\n"+
+		"<INPUT TYPE=submit NAME=get VALUE=Resume>\n"+
+		"<INPUT TYPE=submit NAME=get VALUE=Increase>\n"+
+		"<FONT COLOR=red><INPUT TYPE=submit NAME=get VALUE=Stop>\n"+
+		"</FONT></FORM></CENTER></BODY></HTML>");
+}
+</java>
+
+<java>
+String pid;
+String cmd;
+
+// Retrieve the administrative command from the request
+String vals[] = request.getParameterValues("get");
+if (vals == null)
+{
+</java>
+	<HTML><BODY><H2>No Administrative Command Specified</H2></BODY></HTML>
+<java>
+	return;
+}
+cmd = vals[0];
+
+// Get the session pool id
+vals = request.getParameterValues("id");
+if ((vals == null) || (vals[0] == ""))
+	pid = null;
+else
+	pid = vals[0];
+
+if (cmd.equals("Status"))
+{
+	webStatus(response, pid);
+}
+else if (cmd.equals("Suspend"))
+{
+	webSuspend(response, pid);
+	webStatus(response, pid);
+}
+else if (cmd.equals("Resume"))
+{
+	webResume(response, pid);
+	webStatus(response, pid);
+}
+else if (cmd.equals("Stop"))
+{
+	webStop(response, pid);
+	webStatus(response, pid);
+}
+else if (cmd.equals("Increase"))
+{
+	webMod(response, pid, "poolSize", 1);
+	webStatus(response, pid);
+}
+else
+{
+</java>
+	<HTML><BODY><H2>Invalid Administrative Command</H2></BODY></HTML>
+<java>
+}
+</java>

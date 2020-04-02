@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<TITLE>DEPOSIT Result on <%=ACCOUNT_ID%></TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H2>The Result of the DEPOSIT Service is:</H2>
+</CENTER>
+<TABLE BORDER=0>
+<TR><TD ALIGN=RIGHT><B>Account Number:</B></TD><TD><%=ACCOUNT_ID%></TD></TR>
+<TR><TD ALIGN=RIGHT><B>Deposit Amount:</B></TD><TD><%=SAMOUNT%></TD></TR>
+<TR><TD ALIGN=RIGHT><B>Current Balance:</B></TD><TD><%=SBALANCE%></TD></TR>
+</TABLE>
+<CENTER>
+<FORM>
+<INPUT TYPE="button" VALUE="Back" onClick="history.go(-1)">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

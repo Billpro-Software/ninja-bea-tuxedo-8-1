@@ -1,0 +1,103 @@
+<!--
+ This file contains sample persistence-config contents for MDSConfig.xml. Examples are given
+ for various combinations as commented XML.
+--> 
+
+
+<!--
+Case 1: Persistence config using metadata-store-ref. This is generally for runtime 
+deployment. The actual metadata-store are defined using connection architecture
+(in the connections.xml file).
+--> 
+
+<mds-config version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <persistence-config>
+    <metadata-namespaces>
+      <namespace path="/app" metadata-store-usage="app" />
+      <namespace path="/sample" metadata-store-usage="sample">
+  		 <namespace-restriction type="CUSTOMIZATIONS" />
+	  </namespace>
+    </metadata-namespaces>
+    <metadata-store-usages>
+      <metadata-store-usage id="app">
+         <metadata-store-ref connection-name="mds/connections/app" />
+      </metadata-store-usage>
+      <metadata-store-usage id="sample">
+        <metadata-store-ref connection-name="mds/connections/sample" />
+      </metadata-store-usage>
+    </metadata-store-usages>
+  </persistence-config>
+</mds-config>
+
+<!--
+Case 2: Persistence config using metadata-store. Here the store connection details are present inline. This is only during development/testing.
+--> 
+
+<mds-config version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <persistence-config>
+    <metadata-namespaces>
+       <namespace path="/app1" metadata-store-usage="app1" />
+       <namespace path="/app2" metadata-store-usage="app2" >
+   			<namespace-restriction type="CUSTOMIZATIONS" />
+	   </namespace>
+    </metadata-namespaces>
+    <metadata-store-usages>
+       <metadata-store-usage id="app1">
+          <metadata-store name="fs1" class-name="oracle.mds.persistence.stores.file.FileMetadataStore">
+             <property name="metadata-path" value="C:\temp\mds\folder_a"/>
+	         <property name="partition-name" value="partitionName"/>
+          </metadata-store>
+       </metadata-store-usage>
+       <metadata-store-usage id="app2">
+         <metadata-store class-name="oracle.mds.persistence.stores.file.FileMetadataStore">        
+            <property name="metadata-path" value="C:\temp\mds\folder_c"/>
+            <property name="partition-name" value="partitionName"/>
+         </metadata-store>
+       </metadata-store-usage>
+    </metadata-store-usages>
+  </persistence-config>
+</mds-config>
+
+<!--
+Case 3: Persistence config using metadata-store and Label. The metadataStoreUsage
+with the label, binds the store and the namespace to the Label.
+--> 
+
+<mds-config version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <persistence-config>
+    <metadata-namespaces>
+        <namespace path="/samples" metadata-store-usage="sample" />
+    </metadata-namespaces>
+    <metadata-store-usages>
+        <metadata-store-usage id="sample">
+          <metadata-store class-name="oracle.mds.persistence.stores.file.FileMetadataStore">        
+             <property name="metadata-path" value="C:\temp\mds\folder_c"/>
+             <property name="partition-name" value="partitionName"/>
+          </metadata-store>
+          <label name="label_11.0.0.1"/>
+       </metadata-store-usage>
+    </metadata-store-usages>
+  </persistence-config>
+</mds-config>
+
+<!--
+Case 4: Persistence config where the web content is loaded from servlet context and
+the rest of the metadata is loaded from the classloader (default).
+--> 
+
+<mds-config version="11.1.1.000"  xmlns="http://xmlns.oracle.com/mds/config">
+  <persistence-config>
+    <metadata-namespaces>
+<!-- The webapproot is the namespace in which all web content MOs are located. -->
+<!-- Here we can use BASE restriction which is supported only on ServletContextMetadataStore. -->
+       <namespace path="/webapp1root" metadata-store-usage="webappl" >
+            <namespace-restriction type="BASE" />
+       </namespace>
+    </metadata-namespaces>
+    <metadata-store-usages>
+        <metadata-store-usage id="webappl">
+            <metadata-store class-name="oracle.mds.persistence.stores.file.ServletContextMetadataStore" />
+	</metadata-store-usage>
+    </metadata-store-usages>
+  </persistence-config>
+</mds-config>

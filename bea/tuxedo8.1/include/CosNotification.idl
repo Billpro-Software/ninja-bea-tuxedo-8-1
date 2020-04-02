@@ -1,0 +1,153 @@
+//--------------------------------------------------------------------
+//
+// Copyright (c) 1999 BEA Systems, Inc.
+// All rights reserved
+//
+// THIS IS UNPUBLISHED PROPRIETARY
+// SOURCE CODE OF BEA Systems, Inc.
+// The copyright notice above does not
+// evidence any actual or intended
+// publication of such source code.
+//
+// #ident "@(#)nts/idl/CosNotification.idl $Revision: 1.2 $"
+//
+//--------------------------------------------------------------------
+
+#ifndef _COS_NOTIFICATION_IDL_
+#define _COS_NOTIFICATION_IDL_
+
+#pragma prefix      "omg.org"
+#pragma javaPackage "org.omg"
+
+module CosNotification
+{
+  typedef string  Istring;
+  typedef Istring PropertyName;
+  typedef any     PropertyValue;
+
+  struct Property
+  {
+    PropertyName  name;
+    PropertyValue value;
+  };
+  typedef sequence<Property> PropertySeq;
+
+  typedef PropertySeq OptionalHeaderFields;
+  typedef PropertySeq FilterableEventBody;
+  typedef PropertySeq QoSProperties;
+  typedef PropertySeq AdminProperties;
+
+  struct EventType
+  {
+    string domain_name;
+    string type_name;
+  };
+  typedef sequence<EventType> EventTypeSeq;
+
+  struct PropertyRange
+  {
+    PropertyValue low_val;
+    PropertyValue high_val;
+  };
+
+  struct NamedPropertyRange
+  {
+    PropertyName  name;
+    PropertyRange range;
+  };
+  typedef sequence<NamedPropertyRange> NamedPropertyRangeSeq;
+
+  enum QoSError_code
+  {
+    UNSUPPORTED_PROPERTY,
+    UNAVAILABLE_PROPERTY,
+    UNSUPPORTED_VALUE,
+    UNAVAILABLE_VALUE,
+    BAD_PROPERTY,
+    BAD_TYPE,
+    BAD_VALUE
+  };
+
+  struct PropertyError {
+    QoSError_code code;
+    PropertyName  name;
+    PropertyRange available_range;
+  };
+  typedef sequence<PropertyError> PropertyErrorSeq;
+
+  exception UnsupportedQoS   { PropertyErrorSeq qos_err; };
+  exception UnsupportedAdmin { PropertyErrorSeq admin_err; };
+
+  struct FixedEventHeader
+  {
+    EventType event_type;
+    string    event_name;
+  };
+
+  struct EventHeader
+  {
+    FixedEventHeader     fixed_header;
+    OptionalHeaderFields variable_header;
+  };
+
+  struct StructuredEvent
+  {
+    EventHeader         header;
+    FilterableEventBody filterable_data;
+    any                 remainder_of_body;
+  };
+
+  typedef sequence<StructuredEvent> EventBatch;
+
+  const string EventReliability      = "EventReliability";
+  const short  BestEffort            = 0;
+  const short  Persistent            = 1;
+  const string ConnectionReliability = "ConnectionReliability";
+  const string Priority              = "Priority";
+  const short  LowestPriority        = -32767;
+  const short  HighestPriority       = 32767;
+  const short  DefaultPriority       = 0;
+  const string StartTime             = "StartTime";
+  const string StopTime              = "StopTime";
+  const string Timeout               = "Timeout";
+  const string OrderPolicy           = "OrderPolicy";
+  const short  AnyOrder              = 0;
+  const short  FifoOrder             = 1;
+  const short  PriorityOrder         = 2;
+  const short  DeadlineOrder         = 3;
+  const string DiscardPolicy         = "DiscardPolicy";
+  const short  LifoOrder             = 4;
+  const short  RejectNewEvents       = 5;
+  const string MaximumBatchSize      = "MaximumBatchSize";
+  const string PacingInterval        = "PacingInterval";
+  const string StartTimeSupported    = "StartTimeSupported";
+  const string StopTimeSupported     = "StopTimeSupported";
+  const string MaxEventsPerConsumer  = "MaxEventsPerConsumer";
+
+  interface QoSAdmin
+  {
+    QoSProperties get_qos();
+
+    void set_qos(in QoSProperties qos) raises (UnsupportedQoS);
+
+    void
+    validate_qos(
+      in  QoSProperties         required_qos,
+      out NamedPropertyRangeSeq available_qos
+    ) raises (
+      UnsupportedQoS
+    );
+  };
+
+  const string MaxQueueLength = "MaxQueueLength";
+  const string MaxConsumers   = "MaxConsumers";
+  const string MaxSuppliers   = "MaxSuppliers";
+
+  interface AdminPropertiesAdmin
+  {
+    AdminProperties get_admin();
+    void set_admin(in AdminProperties admin) raises (UnsupportedAdmin);
+  };
+};
+
+#endif

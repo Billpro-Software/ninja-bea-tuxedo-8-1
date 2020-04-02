@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<quickStartLayouts xmlns="http://xmlns.oracle.com/adfdt/view/quickstart">
+
+  <prefixMappings>
+    <prefixMapping prefix="af" namespace="http://xmlns.oracle.com/adf/faces/rich" />
+    <prefixMapping prefix="afh" namespace="http://xmlns.oracle.com/adf/faces/html" />
+    <prefixMapping prefix="h" namespace="http://java.sun.com/jsf/html" />
+    <prefixMapping prefix="f" namespace="http://java.sun.com/jsf/core" />
+  </prefixMappings>
+  
+  <layouts>
+  
+    <category 
+      displayText="User Layouts" 
+      graphic="/oracle/adfdtinternal/view/rich/quickstart/images/default.png">
+      
+      <layout 
+        displayText="Default" 
+        graphic="/oracle/adfdtinternal/view/rich/quickstart/images/default.png">
+        <description>
+          Default layout with a panelSplitter.
+        </description>
+        <pattern>
+          <![CDATA[
+            <af:panelStretchLayout>
+              <f:facet name="center" />
+            </af:panelStretchLayout>
+          ]]>
+        </pattern>
+      </layout>
+      
+    </category>
+  
+  </layouts>
+
+</quickStartLayouts>
+

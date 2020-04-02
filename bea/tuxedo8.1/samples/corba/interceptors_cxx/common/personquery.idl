@@ -1,0 +1,156 @@
+
+//--------------------------------------------------------------------
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//
+// personquery.idl
+//
+// IDL for the ORB interceptor sample application
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+#pragma prefix "beasys.com"
+
+interface PersonQuery
+{
+	enum MONTHS {Empty, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
+	struct date_ {
+		MONTHS month;
+		short day;
+		short year;
+	};
+	typedef date_ Date;
+
+
+	struct addr_ {
+		short number;
+		string street;
+		string town;
+		string state;
+		string country;
+	};
+	typedef addr_ Address;
+
+
+	enum COLOR {white, black, brown, yellow, red, green, blue, gray, violet, hazel, unknown, dontcare};
+	enum MARKINGS {dont_care, tattoo, scar, missing_limb, none};
+	enum MARRIAGE {not_known, single, married, divorced};
+	enum HOBBIES {who_cares, rocks, swim, tv, stamps, photo, weaving};
+	enum SEX {cant_tell, male, female};
+	struct person_ {
+		string		name;
+		Address		addr;
+		string		ss;
+		SEX		sex;
+		short		age;
+		MARRIAGE	mar;
+		HOBBIES		rec;
+		Date		dob;
+		short		ht;
+		long		wt;
+		COLOR	 	hair;
+		COLOR 		eyes;
+		COLOR 		skin;
+		MARKINGS	other;
+	};
+	typedef person_ Person;
+	typedef sequence <Person> Possibles;
+
+
+	union reason_ switch (short)
+		{
+		case 0:		string		name;
+		case 1:		Address		addr;
+		case 2:		string		ss;
+		case 3:		SEX		sex;
+		case 4:		short		age;
+		case 5:		MARRIAGE	mar;
+		case 6:		HOBBIES		rec;
+		case 7:		Date		dob;
+		case 8:		short		ht;
+		case 9:		long		wt;
+		case 10:	COLOR		hair;
+		case 11:	COLOR		eyes;
+		case 12:	COLOR		skin;
+		case 13:	MARKINGS	other;
+	};
+	typedef reason_ Reason;
+
+	exception DataOutOfRange
+	{
+		Reason	why;
+	};
+
+	boolean	findPerson (
+			in Person who,	out  Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByName (
+			in string name, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByAddress (
+			in Address addr, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonBySS (
+			in string ss, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonBySex (
+			in SEX ss, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByAge (
+			in short age, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByMarriage (
+			in MARRIAGE mar, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByHobby (
+			in HOBBIES hob, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonBydob (
+			in Date dob, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByHeight (
+			in short ht, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByWeight (
+			in long wt, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByHairColor (
+			in COLOR col, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonBySkinColor (
+			in COLOR col, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByEyeColor (
+			in COLOR col, out Possibles hits)
+				raises (DataOutOfRange);
+
+	boolean	findPersonByOther (
+			in MARKINGS other, out Possibles hits)
+				raises (DataOutOfRange);
+
+	void	exit();
+};
+
+
+
+interface QueryFactory
+{
+	PersonQuery createQuery (in string name);
+};
+
+
+

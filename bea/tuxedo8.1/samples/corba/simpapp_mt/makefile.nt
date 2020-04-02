@@ -1,0 +1,88 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefile.nt
+#
+# NT makefile for the simpapp_mt sample application
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+
+#---------------------------------------------------------------------
+# Declarations
+#---------------------------------------------------------------------
+
+REMOVE=-del /Q
+
+RMDIR=-rmdir /S /Q
+
+CPPFLAGS= -DWIN32
+
+#---------------------------------------------------------------------
+# Main build rules
+#---------------------------------------------------------------------
+
+all: simple_client.exe simple_per_object_server.exe simple_per_request_server.exe
+
+#---------------------------------------------------------------------
+# C++ Client
+#---------------------------------------------------------------------
+
+CLIENT_SRCS = simple_c.cpp simple_client.cpp
+
+simple_client.exe: $(CLIENT_SRCS)
+	buildobjclient -v -o $@ -f "$(CLIENT_SRCS) $(CPPFLAGS)"
+
+#---------------------------------------------------------------------
+# C++ Servers
+#---------------------------------------------------------------------
+
+SPO_SRCS= simple_c.cpp simple_s.cpp simple_per_object_i.cpp simple_per_object_server.cpp thread_macros.cpp
+
+simple_per_object_server.exe: $(SPO_SRCS)
+	buildobjserver -v -t -o $@ -f "$(SPO_SRCS) $(CPPFLAGS)"
+
+SPR_SRCS= simple_c.cpp simple_s.cpp simple_per_request_i.cpp simple_per_request_server.cpp thread_macros.cpp
+
+simple_per_request_server.exe: $(SPR_SRCS)
+	buildobjserver -v -t -b simple_per_request_server -o $@ -f "$(SPR_SRCS) $(CPPFLAGS)"
+
+#----------------------------------------------------------------------
+# IDL files
+#----------------------------------------------------------------------
+
+simple_c.cpp simple_c.h simple_s.cpp simple_s.h : simple.idl
+	idl simple.idl
+
+#---------------------------------------------------------------------
+# File Dependencies
+#---------------------------------------------------------------------
+
+simple_per_object_i.h : simple_s.h
+simple_per_object_i.cpp : simple_per_object_i.h
+simple_per_object_server.cpp : simple_per_object_i.h
+simple_per_request_i.h : simple_s.h
+simple_per_request_i.cpp : simple_per_request_i.h
+simple_per_request_server.cpp : simple_per_request_i.h
+simple_client.cpp : simple_c.h
+
+#----------------------------------------------------------------------
+# Housekeeping
+#----------------------------------------------------------------------
+
+clean:
+	$(REMOVE) OBB*
+	$(REMOVE) *.obj
+	$(REMOVE) simple_c.*
+	$(REMOVE) simple_s.*
+	$(REMOVE) ULOG*
+	$(REMOVE) *.dat
+	$(REMOVE) simple_client.exe
+	$(REMOVE) simple_per_object_server.exe
+	$(REMOVE) simple_per_request_server.exe
+	$(REMOVE) stderr
+	$(REMOVE) stdout
+	$(RMDIR)  $(RESULTSDIR)
+
+#----------------------------------------------------------------------

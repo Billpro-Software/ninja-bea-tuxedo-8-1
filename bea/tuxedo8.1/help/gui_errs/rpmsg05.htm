@@ -1,0 +1,837 @@
+<!-- .if n .pH errman.h.rpmsg05.htm @(#)rpmsg05.htm	60.3 of 3/12/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>TxRPC MESSAGES, Part 5 </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1>
+<H1>TxRPC MESSAGES 1500-1599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1500"></A>
+<H3>TxRPC MESSAGE #1500</H3>
+<H2> ERROR: -s option not supported</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with the -s option (generate a UUID string
+as a C structure), which was not supported.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-run the
+uuidgen
+program without this option.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1501"></A>
+<H3>TxRPC MESSAGE #1501</H3>
+<H2> ERROR: -t option not supported</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with the -t option (translate an old style uuid string),
+which was not supported.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-run the
+uuidgen
+program without this option.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1502"></A>
+<H3>TxRPC MESSAGE #1502</H3>
+<H2> ERROR: Can't specify both -n and -i options</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with both the -n and -i options.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-run the
+uuidgen
+program with only one of these options.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1503"></A>
+<H3>TxRPC MESSAGE #1503</H3>
+<H2> ERROR: Non-numeric option specified for -n</H2><HR>
+<P>
+\fRLEVEL</>
+ERROR
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with an invalid argument for the -n option, which indicates
+how many identifiers to generate.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-run the
+uuidgen
+program with a valid number for the -n option.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1504"></A>
+<H3>TxRPC MESSAGE #1504</H3>
+<H2> ERROR: Can't specify both -n and -i options</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with both the -n and -i options.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-run the
+uuidgen
+program with only one of these options.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1512"></A>
+<H3>TxRPC MESSAGE #1512</H3>
+<H2> ERROR: Cannot open <I>filename</I> for writing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was unable to open the output file,
+<I>filename</I>,
+for writing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that the directory, and file if it exists, have write permission.
+Re-run the
+uuidgen
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1513"></A>
+<H3>TxRPC MESSAGE #1513</H3>
+<H2> ERROR: Invalid NADDR <I>naddr</I> - must be num.num.num.num where num is a decimal number &lt; 256</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with an invalid value for the NADDR environment variable.
+The correct format is
+num.num.num.num[.num.num]
+where num is a value between 0 and 255, inclusive.  The last two numbers
+are optional.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the NADDR environment variable and re-run the
+uuidgen
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1514"></A>
+<H3>TxRPC MESSAGE #1514</H3>
+<H2> ERROR: Invalid WSNADDR <I>wsnaddr</I> - must be 0xnnnnnnnnnnnnnnnn where n is a hex digit</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run with an invalid value for the WSNADDR environment variable.
+The correct format is
+0xnnnnnnnnnnnnnnnn
+where n is a hex digit (16 hex characters).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the NADDR environment variable and re-run the
+uuidgen
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1515"></A>
+<H3>TxRPC MESSAGE #1515</H3>
+<H2> WARN: Could not find network address in /etc/hosts</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run without the NADDR or WSADDR environment variables set
+and the entry for the machine (the uname) could not be found
+in /etc/hosts.  The default address was used.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Set the NADDR or WSNADDR environment variables and re-run the
+uuidgen
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1516"></A>
+<H3>TxRPC MESSAGE #1516</H3>
+<H2> WARN: Using default address <I>addr</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+uuidgen
+command was run without the NADDR or WSADDR environment variables set
+and the entry for the machine (the uname) could not be found
+in /etc/hosts.  The default address,
+<I>addr</I>
+was used.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Set the NADDR or WSNADDR environment variables and re-run the
+uuidgen
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1521"></A>
+<H3>TxRPC MESSAGE #1521</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc</>() failed while
+parsing an IDL file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1522"></A>
+<H3>TxRPC MESSAGE #1522</H3>
+<H2> ERROR: Value <I>val</I><I>val</I> overflows long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a numeric value was too
+large to fit into a long integer.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1523"></A>
+<H3>TxRPC MESSAGE #1523</H3>
+<H2> WARN: No hex digits follow \\x</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a hex escape sequence contained
+non-hexidecimal characters.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1524"></A>
+<H3>TxRPC MESSAGE #1524</H3>
+<H2> WARN: Dubious escape \\<I>val</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file,
+a backslash escape preceding
+a character that is not a valid escape sequence (t, n, f, b, r, 0, backslash,
+n, x, or X) was found.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1525"></A>
+<H3>TxRPC MESSAGE #1525</H3>
+<H2> ERROR: End of input reached without terminating character literal</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a character literal was
+started but not completed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1526"></A>
+<H3>TxRPC MESSAGE #1526</H3>
+<H2> ERROR: Multiple-character character literal not allowed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a character literal was found
+with more than one character.  This is not valid (use a string
+literal for multi-character values).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1527"></A>
+<H3>TxRPC MESSAGE #1527</H3>
+<H2> ERROR: End of input reached without terminating comment</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a comment was started but not
+terminated.  Often this can cause other variables or functions
+to be missed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the input and re-run the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1528"></A>
+<H3>TxRPC MESSAGE #1528</H3>
+<H2> WARN: value <I>val</I> does not fit in character</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a hex escape sequence was found
+with a value larger than will fit in a single character (i.e.,
+greater than 0xff).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run tidl</>(1).
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1529"></A>
+<H3>TxRPC MESSAGE #1529</H3>
+<H2> WARN: Dubious escape \\<I>val</I><I>val</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a backslash escape preceding
+a character that is not a valid escape sequence (t, n, f, b, r, 0, backslash,
+n, x, or X).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run tmloadcf</>(1).
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1530"></A>
+<H3>TxRPC MESSAGE #1530</H3>
+<H2> WARN: value <I>val</I> does not fit in character</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, an octal escape sequence was found
+with a value larger than will fit in a single character (i.e.,
+greater than 0xff).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run tidl</>(1).
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1531"></A>
+<H3>TxRPC MESSAGE #1531</H3>
+<H2> WARN: Dubious escape \\<I>val</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL or ACF file, a backslash escape preceding
+a character that is not a valid escape sequence (t, n, f, b, r, 0, backslash,
+n, x, or X).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the value and re-run tidl</>(1).
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1532"></A>
+<H3>TxRPC MESSAGE #1532</H3>
+<H2> ERROR: End of input reached without terminating double quote</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an end-of-file while
+within a character string literal.
+For example,
+<PRE><KBD>
+const char *str = "error noend /* end of file error */
+</KBD></PRE>
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1533"></A>
+<H3>TxRPC MESSAGE #1533</H3>
+<H2> ERROR: Newline in string literal</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a string literal that begins
+on one line and ends on another line.
+For example,
+<PRE><KBD>
+const char *str = "first
+second";
+</KBD></PRE>
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1534"></A>
+<H3>TxRPC MESSAGE #1534</H3>
+<H2> ERROR: UUID syntax error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [uuid] attribute had an invalid syntax
+such as extra left parenthesis within the value.
+For example,
+<PRE><KBD>
+[uuid((0679E900-A387-110F-9215-930269220000)] /* error */
+</KBD></PRE>
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1535"></A>
+<H3>TxRPC MESSAGE #1535</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc</>() failed while
+parsing an IDL or ACF file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1536"></A>
+<H3>TxRPC MESSAGE #1536</H3>
+<H2> ERROR: VERSION syntax error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [version] attribute had an invalid syntax
+such as extra left parenthesis
+within the value.
+For example,
+<PRE><KBD>
+[local, version((0.0)] /* error */
+</KBD></PRE>
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1537"></A>
+<H3>TxRPC MESSAGE #1537</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc</>() failed while
+parsing an IDL or ACF file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1538"></A>
+<H3>TxRPC MESSAGE #1538</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc</>() failed while
+parsing an IDL or ACF file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1539"></A>
+<H3>TxRPC MESSAGE #1539</H3>
+<H2> WARN: Identifier <I>ident</I> is too long - truncating to <I>val</I> characters</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an identifier that was more
+than 31 characters in length.
+The identifier is truncated to 31 characters and processing continues.
+This may cause further processing errors.
+For example,
+<PRE><KBD>
+const long t2345678901234567890123456789012 = 60;
+</KBD></PRE>
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1543"></A>
+<H3>TxRPC MESSAGE #1543</H3>
+<H2> ERROR: Reached <I>count</I> errors; exiting</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tidl
+command encountered more than
+<I>count</I>
+errors (default 50) and was quitting.  To get all errors printed,
+use the -error all</> option.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1545"></A>
+<H3>TxRPC MESSAGE #1545</H3>
+<H2> ERROR: Reached <I>count</I> errors; exiting</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tidl
+command encountered more than
+<I>count</I>
+errors (default 50) and was quitting.  To get all errors printed,
+use the -error all</> option.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1546"></A>
+<H3>TxRPC MESSAGE #1546</H3>
+<H2> WARN: header base name <I>val</I> too long, truncating</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The generated file name for the header is based on the IDL file
+name suffixed with .mbr.  The base name for the IDL file is greater
+than 10 characters and will be truncated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1547"></A>
+<H3>TxRPC MESSAGE #1547</H3>
+<H2> ERROR: failed to create directory <I>val</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL file, tidl</>(1) was unable to create
+the named directory using crtsrcpf.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check that there is sufficient file space on the device.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1548"></A>
+<H3>TxRPC MESSAGE #1548</H3>
+<H2> ERROR: failed to copy file <I>val</I> to temp file</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing an IDL file, tidl</>(1) was unable to copy a
+temporary file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check to see that there is sufficient file space.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1549"></A>
+<H3>TxRPC MESSAGE #1549</H3>
+<H2> WARN: stub file base name <I>val</I> too long, truncating</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The generated file name for the stub file is based on the IDL file
+name.  The base name for the IDL file is greater
+than 10 characters and will be truncated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1550"></A>
+<H3>TxRPC MESSAGE #1550</H3>
+<H2> WARN: stub file name <I>val</I> too long, truncating</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The generated file name for the stub file is based on the IDL file
+name.  The base name for the IDL file is greater
+than 10 characters and will be truncated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1551"></A>
+<H3>TxRPC MESSAGE #1551</H3>
+<H2> WARN: stub file name <I>val</I> too long, truncating</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The generated file name for the stub file is based on the IDL file
+name.  The base name for the IDL file is greater
+than 10 characters and will be truncated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

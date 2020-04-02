@@ -1,0 +1,2674 @@
+<TITLE>TxRPC MESSAGES, Part 2 </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>TxRPC MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>TxRPC MESSAGE #1100</H3>
+<H2> WARN: Unreachable case label: <I>labelvalue</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union was defined with a case label,
+<I>labelvalue</I>,
+that cannot be reached because it was not in the range defined
+by the discriminant.  For example,
+<PRE>
+typedef union switch (short discriminant) myunion {
+ case 100000:  long u1;  /* warning */
+ default: long u2;
+ } myunion;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>TxRPC MESSAGE #1101</H3>
+<H2> ERROR: [context_handle] identifier must be less than 24 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the name of a type or a parameter with the
+[context_handle] attribute was longer than 23 characters in length.
+For example,
+<PRE>
+typedef [context_handle]void *t23456789012345678901234;  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3>TxRPC MESSAGE #1102</H3>
+<H2> ERROR: [handle] identifier must be less than 25 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the name of a type or a parameter with the
+[handle] attribute was longer than 24 characters in length.
+For example,
+<PRE>
+typedef [handle]void *t234567890123456789012345;  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1103"></A>
+<H3>TxRPC MESSAGE #1103</H3>
+<H2> ERROR: Variable declarations not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a variable was declared.  Only types, constants,
+and operations can be declared.
+For example,
+<PRE>
+long l1; /* error */
+typedef long l2; /* ok */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>TxRPC MESSAGE #1104</H3>
+<H2> ERROR: [transmit_as] identifier must be less than 22 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the name of a type with the
+[transmit_as] attribute was longer than 21 characters in length.
+For example,
+<PRE>
+typedef [transmit_as(long)] short *t234567890123456789012;  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1105"></A>
+<H3>TxRPC MESSAGE #1105</H3>
+<H2> ERROR: The void * type can only be used for context handles</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure or union field, or a parameter
+had a type of "void *" but does not have the [context_handle] attribute.
+For example,
+<PRE>
+typedef void *t1;
+typedef struct {
+ [ptr] void *s1;  /* error */
+ t1 s2;  /* error */
+} t2;
+void op1([in]t1 p1);  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1106"></A>
+<H3>TxRPC MESSAGE #1106</H3>
+<H2> ERROR: [context_handle] may only be specified for void * parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a parameter had a [context_handle] attribute but
+the base data type had more than one pointer to a void.
+For example,
+<PRE>
+typedef void **t1;
+void op1([in,context_handle]t1 p1);  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>TxRPC MESSAGE #1107</H3>
+<H2> ERROR: The void type can only be used for context handles and operation return</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure or union field, or a parameter
+had a "void" data type but does not have a [context_handle] attribute.
+For example,
+<PRE>
+typedef void t1;
+typedef struct {
+ void s1;  /* error */
+ t1 s2;  /* error */
+} t2;
+void op1([in]t1 p1);  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>TxRPC MESSAGE #1108</H3>
+<H2> ERROR: Pointers to context handles valid only on parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure or union field, or a type definition
+had a pointer to a type with the [context_handle] attribute.
+For example,
+<PRE>
+typedef [context_handle]void *t1;
+typedef t1 *t2;  /* error */
+typedef struct {
+ [context_handle]void **s1;  /* error */
+ [context_handle]t3 s1;  /* error */
+} t4;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>TxRPC MESSAGE #1109</H3>
+<H2> ERROR: Functions or function pointers are not valid in conformant arrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a conformant array (with at least one open bound)
+of function pointers or functions was defined.
+For example,
+<PRE>
+typedef long (*t1)(void);
+typedef t1 t2[];   /error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>TxRPC MESSAGE #1110</H3>
+<H2> ERROR: Array function return and function arrays not allowed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array of functions or a function returning an array
+was defined.
+For example,
+<PRE>
+typedef long (t1)(void);
+typedef long (t2)(void)[3]; /* error */
+typedef t1 t3[3]; /* error */
+typedef long (t2)[3](void); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try returning a structure that contains the array.
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>TxRPC MESSAGE #1111</H3>
+<H2> ERROR: Cannot have a pointer to a varying array</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a pointer to a varying array (an array with one
+or more varying dimensions defined by first_is, length_is, or
+last_is) was defined.
+For example,
+<PRE>
+typedef struct {
+ long length;
+ [length_is(length)]long (*s1)[10]; /* error */
+} t1;
+void op1([in]long length, [in,length_is(length)]long (*p2)[10]); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try using a pointer to the structure containing the varying array.
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1112"></A>
+<H3>TxRPC MESSAGE #1112</H3>
+<H2> ERROR: Cannot have [string] attribute for varying array</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a varying array (an array with one
+or more varying dimensions defined by first_is, length_is, or
+last_is) had the [string] attribute.
+Since the length of the value is determined at run-time by
+the non-NULL length of string, the varying attributes are not
+allowed.
+For example,
+<PRE>
+typedef [string]char str[10];
+typedef struct {
+ long length;
+ [length_is(length)]str s1; /* error */
+} t1;
+void op1([in]long length, [in,length_is(length)]str p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1113"></A>
+<H3>TxRPC MESSAGE #1113</H3>
+<H2> ERROR: [transmit_as] cannot be specified for pipe types</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition had the [transmit_as] attribute
+but the data type was a "pipe".
+For example,
+<PRE>
+typedef pipe long t1;
+typedef [transmit_as(long)]t1 t2; /* error */
+typedef [transmit_as(long)]pipe long t3; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1114"></A>
+<H3>TxRPC MESSAGE #1114</H3>
+<H2> ERROR: [transmit_as] cannot be specified for conformant arrays or structures, or varying arrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition had the [transmit_as] attribute
+but the data type was a conformant array, conformant structure, or
+varying array.
+For example,
+<PRE>
+typedef long t1[];
+typedef struct {
+ long max;
+ [max_is(max)]t1 s1;
+}t2;
+typedef [transmit_as(long)]t1 t3; /* error */
+typedef [transmit_as(long)]t2 t4; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1115"></A>
+<H3>TxRPC MESSAGE #1115</H3>
+<H2> ERROR: [transmit_as] cannot be specified for types used as the base type in a pipe definition</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition had the [transmit_as] attribute
+but the data type was a typed used in a "pipe" type definition.
+For example,
+<PRE>
+typedef long pipebase;
+typedef pipe pipebase t1;
+typedef [transmit_as(long)]pipebase t3; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1116"></A>
+<H3>TxRPC MESSAGE #1116</H3>
+<H2> ERROR: [transmit_as] cannot be specified for [context_handle] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition had the [transmit_as] attribute
+but the data type had the [context_handle] attribute.
+For example,
+<PRE>
+typedef [context_handle] void *ch_t;
+typedef [transmit_as(long)]ch_t t2; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1117"></A>
+<H3>TxRPC MESSAGE #1117</H3>
+<H2> ERROR: The base type for a pipe cannot be a conformant type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a pipe
+had a base data type that was a conformant array or structure.
+For example,
+<PRE>
+typedef long t1[];
+typedef struct {
+ long max;
+ [max_is(max)]long s1[];
+}t2;
+typedef pipe t1 t3; /* error */
+typedef pipe t2 t4; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1118"></A>
+<H3>TxRPC MESSAGE #1118</H3>
+<H2> ERROR: The base type for a pipe cannot be the [context_handle] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a pipe
+had a base data type that was a context handle.
+For example,
+<PRE>
+typedef [context_handle]void *ch_t;
+typedef pipe ch_t t1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1119"></A>
+<H3>TxRPC MESSAGE #1119</H3>
+<H2> ERROR: The base type for a pipe cannot be the handle_t type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a pipe
+had a base data type that was a handle_t type.
+For example,
+<PRE>
+typedef handle_t handle;
+typedef pipe handle t1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1120"></A>
+<H3>TxRPC MESSAGE #1120</H3>
+<H2> ERROR: The base type for a pipe cannot be the pipe type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a pipe
+had a base data type that was itself a pipe type.
+For example,
+<PRE>
+typedef pipe long pipe_t;
+typedef pipe pipe_t t1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1121"></A>
+<H3>TxRPC MESSAGE #1121</H3>
+<H2> ERROR: The base type for a pipe cannot be or contain a pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a pipe
+had a base data type that was or contained a pointer.
+For example,
+<PRE>
+typedef long *longp; /* error */
+typedef struct {
+ [ref]long *s1;
+} t2;
+typedef pipe longp t3; /* error */
+typedef pipe t2 t4; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1122"></A>
+<H3>TxRPC MESSAGE #1122</H3>
+<H2> ERROR: Handle parameter not allowed in function pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a function pointer
+contained a handle_t parameter.
+For example,
+<PRE>
+typedef void (*t1)([in]handle_t p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1123"></A>
+<H3>TxRPC MESSAGE #1123</H3>
+<H2> ERROR: Pipe identifier must be less than 30 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the name of a type in a pipe type definition
+was longer than 29 characters in length.
+For example,
+<PRE>
+typedef pipe short t23456789012345678901234567890;  /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1124"></A>
+<H3>TxRPC MESSAGE #1124</H3>
+<H2> ERROR: Operation return cannot be a pipe</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an operation return type was of type pipe.
+For example,
+<PRE>
+typedef pipe short t1;
+t1 op1(void); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1125"></A>
+<H3>TxRPC MESSAGE #1125</H3>
+<H2> ERROR: Pointers to pipes valid only on parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure or union field, or a function return
+had a pointer to a pipe type.
+This is only allowed for parameters.
+For example,
+<PRE>
+typedef pipe short *t1;
+typedef struct {
+ t1 s1; /* error */
+} t2;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1126"></A>
+<H3>TxRPC MESSAGE #1126</H3>
+<H2> ERROR: [ptr] attribute not valid on pipe parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a pipe contained the [ptr]
+attribute.
+For example,
+<PRE>
+typedef [ptr]pipe short *t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1127"></A>
+<H3>TxRPC MESSAGE #1127</H3>
+<H2> WARN: [switch_is] specified for non-union type - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a [switch_is()] attribute was specified for a
+parameter or a structure field with a
+data type that was not a union.  This attribute was ignored
+and processing continued.
+For example,
+<PRE>
+typedef struct {
+ long s1;
+} t1;
+void op1([in]long p1, [switch_is(p1),in]t1 p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1128"></A>
+<H3>TxRPC MESSAGE #1128</H3>
+<H2> WARN: [switch_type] specified for non-union type - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition
+contained a [switch_type()] attribute for a type that was not
+a union.
+For example,
+<PRE>
+typedef [switch_type (long) ] long t1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1129"></A>
+<H3>TxRPC MESSAGE #1129</H3>
+<H2> ERROR: [switch_is] must be specified for non-encapsulated union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a non-encapsulated union parameter or structure field
+does not have a [switch_is()] attribute.
+For example,
+<PRE>
+typedef [switch_type (long) ] union {
+ [case (1,3)] float u1;
+ [case (2)] short u2;
+ [default] ;
+} t1;
+typedef struct {
+ t1 s1; /* error */
+} t2;
+void op1([in]t1 p1); /* error */
+void op2([in,switch_is(p2)]t1 p1, [in]long p2); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1130"></A>
+<H3>TxRPC MESSAGE #1130</H3>
+<H2> ERROR: [switch_type] must be specified for non-encapsulated union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition for a non-encapsulated union
+does not contain a [switch_type()] attribute.
+For example,
+<PRE>
+typedef union { /* error */
+ [case (1,3)] float u1;
+ [case (2)] short u2;
+ [default] ;
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1131"></A>
+<H3>TxRPC MESSAGE #1131</H3>
+<H2> ERROR: Tag redeclared - <I>tagvalue</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure or union tag was redeclared
+(e.g., a structure or union tag was declared twice,
+a structure tag was re-declared as a union tag, or
+an encapsulated union tag was re-declared as a non-encapsulated union).
+For example,
+<PRE>
+typedef struct s1 {
+ long e1;
+} t1;
+typedef struct s1 { /* error */
+ long e1;
+} t2;
+typedef union s1 switch (long discriminant) { /* error */
+ case 0: long e1;
+} t3;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1132"></A>
+<H3>TxRPC MESSAGE #1132</H3>
+<H2> ERROR: Type <I>typeval</I> not defined</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type was used that had not been previously defined.
+For example,
+<PRE>
+typedef t1 t2; /* error - t1 not defined */
+typedef struct {
+ t1 s1; /* error */
+} t3;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1133"></A>
+<H3>TxRPC MESSAGE #1133</H3>
+<H2> ERROR: Duplicate <I>attr_val</I> attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an attribute value,
+<I>attr_val</I>,
+was specified more than
+once for a single type, field, or parameter.
+For example,
+<PRE>
+typedef [ptr,ptr]long *t1; /* error */
+typedef struct {
+ [string,string]char *s1; /* error */
+} t2;
+void op1([in,in]long p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1134"></A>
+<H3>TxRPC MESSAGE #1134</H3>
+<H2> ERROR: Can't specify [context_handle] with [transmit_as]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition with the [transmit_as] attribute
+contains a [context_handle] attribute.
+For example,
+<PRE>
+typedef [context_handle,transmit_as(long)]void *t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1135"></A>
+<H3>TxRPC MESSAGE #1135</H3>
+<H2> ERROR: Can't specify [min_is] with [string]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [min_is] and [string] attributes
+were defined for the same field or parameter.
+For example,
+<PRE>
+void op1([in,min_is(min),string]char p1[*..*], [in]long min); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try removing the [min_is()] attribute.
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1136"></A>
+<H3>TxRPC MESSAGE #1136</H3>
+<H2> ERROR: Can't specify [max_is] with [size_is]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [max_is] and [size_is] attributes
+were defined for the same field or parameter.
+For example,
+<PRE>
+void op1([in,max_is(p2),size_is(p2)]char p1[], [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1137"></A>
+<H3>TxRPC MESSAGE #1137</H3>
+<H2> WARN: Pointed-to type name <I>name</I> must be less than 29 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type name that has a pointer reference has a name
+longer than 28 characters in length.
+This may cause the compilation to fail since the generated function
+names for marshalling the type may not be unique.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1138"></A>
+<H3>TxRPC MESSAGE #1138</H3>
+<H2> ERROR: Can't specify [first_is] with [string]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [first_is] and [string] attributes
+were defined for the same field or parameter.
+For example,
+<PRE>
+void op1([in,first_is(p2),string]char p1[10], [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1139"></A>
+<H3>TxRPC MESSAGE #1139</H3>
+<H2> ERROR: Can't specify [last_is] with [length_is]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [last_is] and [length_is] attributes
+were defined for the same field or parameter.
+For example,
+<PRE>
+void op1([in,last_is(p2),length_is(p2)]char p1[10], [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1140"></A>
+<H3>TxRPC MESSAGE #1140</H3>
+<H2> ERROR: Can't specify [string] with [length_is] or [last_is]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [first_is] and [string] attributes
+were defined for the same field or parameter.
+For example,
+<PRE>
+void op1([in,length_is(p2),string]char p1[10], [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1143"></A>
+<H3>TxRPC MESSAGE #1143</H3>
+<H2> ERROR: More than one pointer attribute specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [ptr] and [ref] attributes
+were defined for the same type definition, field or parameter.
+For example,
+<PRE>
+void op1([in,ptr,ref]char *p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1146"></A>
+<H3>TxRPC MESSAGE #1146</H3>
+<H2> ERROR: Both [code] and [nocode] specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [code] and [nocode] attributes
+were defined for the same interface or operation.
+For example,
+<PRE>
+[nocode,code]op1(); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1148"></A>
+<H3>TxRPC MESSAGE #1148</H3>
+<H2> ERROR: Both [in_line] and [out_of_line] specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [in_line] and [out_of_line] attributes
+were defined for the same type definition or interface.
+For example,
+<PRE>
+[in_line,out_of_line]type t1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1151"></A>
+<H3>TxRPC MESSAGE #1151</H3>
+<H2> ERROR: Can't specify both [transaction_mandatory] and [transaction_optional]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [transaction_mandatory] and [transaction_optional]
+attributes
+were defined for the same interface or operation.
+For example,
+<PRE>
+[transaction_mandatory,transaction_optional] void op1(void); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1152"></A>
+<H3>TxRPC MESSAGE #1152</H3>
+<H2> ERROR: Array elements cannot be conformant structures or arrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array was defined whose elements are either
+a conformant structure or a conformant array.
+For example,
+<PRE>
+typedef struct {
+  long e1;
+  [max_is(e1)]long conf[];
+} confstruct;
+void op([in,max_is(p2)]confstruct *p1, [in]long p2);
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1153"></A>
+<H3>TxRPC MESSAGE #1153</H3>
+<H2> ERROR: Non-integer array bound</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the lower bound (or size if only a single bound was specified)
+for an array dimension was not an integer
+or a type whose derived type was an integer.
+Integer types must be (unsigned) long, short, and small.
+For example,
+<PRE>
+const char *size = "abc";
+typedef char t1[size]; /* error */
+typedef char t2[size..3]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1154"></A>
+<H3>TxRPC MESSAGE #1154</H3>
+<H2> ERROR: Non-zero lower bound not supported in C</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the lower bound for an array dimension was not 0
+or was an open lower bound.
+For example,
+<PRE>
+typedef char t1[-1..2]; /* error */
+typedef char t2[*..2]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1155"></A>
+<H3>TxRPC MESSAGE #1155</H3>
+<H2> ERROR: Non-integer array bound</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the upper bound
+for an array dimension was not an integer
+or a type whose derived type was an integer.
+Integer types must be (unsigned) long, short, and small.
+For example,
+<PRE>
+const char *size = "abc";
+typedef char t2[0..size]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1156"></A>
+<H3>TxRPC MESSAGE #1156</H3>
+<H2> ERROR: Upper bound must be greater than lower bound</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the lower bound was greater than the upper bound
+for an array dimension.
+For example,
+<PRE>
+typedef char t1[0..-4]; /* error */
+typedef char t1[-4]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1157"></A>
+<H3>TxRPC MESSAGE #1157</H3>
+<H2> ERROR: <I>sizetype</I> value '<I>var</I>' must be type long, short, or small</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the parameter name or field name
+<I>var</I>
+used to specify the array size for a conformant or varying array
+was not of type long, short, or small.
+<I>sizetype</I>
+may be one of [first_is()], [last_is()], [length_is()], [min_is()],
+[max_is()], or [size_is()].
+For example,
+<PRE>
+void op1([in,first_is(p2)]char p1[10], [in]char p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1158"></A>
+<H3>TxRPC MESSAGE #1158</H3>
+<H2> ERROR: <I>sizetype</I> value '<I>var</I>' must not be declared as a pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the parameter name or field name
+<I>var</I>
+used to specify the array size for a conformant or varying array
+was declared as a pointer in the attribute but not in its definition.
+<I>sizetype</I>
+may be one of [first_is()], [last_is()], [length_is()], [min_is()],
+[max_is()], or [size_is()].
+For example,
+<PRE>
+void op1([in,first_is(*p2)]char p1[10], [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1159"></A>
+<H3>TxRPC MESSAGE #1159</H3>
+<H2> ERROR: <I>sizetype</I> value '<I>var</I>' must be declared as a pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the parameter name or field name
+<I>var</I>
+used to specify the array size for a conformant or varying array
+was not declared as a pointer in the attribute but was a pointer
+in its definition.
+<I>sizetype</I>
+may be one of [first_is()], [last_is()], [length_is()], [min_is()],
+[max_is()], or [size_is()].
+For example,
+<PRE>
+void op1([in,first_is(p2)]char p1[10], [in]long *p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1160"></A>
+<H3>TxRPC MESSAGE #1160</H3>
+<H2> ERROR: <I>sizetype</I> value '<I>var</I>' must not have [ptr] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the parameter name or field name
+<I>var</I>
+used to specify the array size for a conformant or varying array
+had the [ptr] attribute in its definition.
+<I>sizetype</I>
+may be one of [first_is()], [last_is()], [length_is()], [min_is()],
+[max_is()], or [size_is()].
+For example,
+<PRE>
+void op1([in,out,first_is(*p2)]char p1[10], [in,out,ptr]long *p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1161"></A>
+<H3>TxRPC MESSAGE #1161</H3>
+<H2> ERROR: <I>sizetype</I> parameter '<I>var</I>' must have [in] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the parameter name or field name
+<I>var</I>
+used to specify the array size for a conformant or varying array
+does not have the [in] attribute in its definition, but the array
+itself had the [in] attribute.
+<I>sizetype</I>
+may be one of [first_is()], [last_is()], [length_is()], [min_is()],
+[max_is()], or [size_is()].
+For example,
+<PRE>
+void op1([in,out,first_is(*p2)]char p1[10], [out]long *p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1162"></A>
+<H3>TxRPC MESSAGE #1162</H3>
+<H2> ERROR: Array elements cannot be conformant structures or arrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array of conformant structures or conformant
+arrays was defined.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1163"></A>
+<H3>TxRPC MESSAGE #1163</H3>
+<H2> ERROR: <I>sizetype</I> value '<I>var</I>' not defined</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the parameter name or field name
+<I>var</I>
+used to specify the array size for a conformant or varying array
+was not defined.
+<I>sizetype</I>
+may be one of [first_is()], [last_is()], [length_is()], [min_is()],
+[max_is()], or [size_is()].
+For example,
+<PRE>
+typedef struct {
+ long s1;
+ [max_is(wrong)]long s2[]; /* error */
+}t1;
+void op1([in,out,first_is(*wrong2)]char p1[10], [out]long *p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1164"></A>
+<H3>TxRPC MESSAGE #1164</H3>
+<H2> ERROR: Array elements cannot be conformant structures or arrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array of conformant structures or conformant
+arrays was defined.
+For example,
+<PRE>
+typedef long conf[]; /* conformant array */
+typedef struct {
+ long s1;
+ [max_is(s1)]conf s2; /* conformant struct */
+} confstruct;
+typedef conf t3[10]; /* error */
+typedef conf t4[10]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1165"></A>
+<H3>TxRPC MESSAGE #1165</H3>
+<H2> ERROR: Array elements cannot be type pipe</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array of pipes
+was defined.
+For example,
+<PRE>
+typedef pipe long pipe_t;
+typedef pipe_t t2[10]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1166"></A>
+<H3>TxRPC MESSAGE #1166</H3>
+<H2> ERROR: Array elements cannot be type handle_t</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array of handle_t types
+was defined.
+For example,
+<PRE>
+typedef handle_t t2[10]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1167"></A>
+<H3>TxRPC MESSAGE #1167</H3>
+<H2> ERROR: Cannot have a pointer to a conformant array</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a pointer to a conformant array was defined.
+If necessary, use a pointer to a structure with a conformant array.
+For example,
+<PRE>
+typedef long conf[]; /* conformant array */
+typedef struct {
+ long max;
+ [max_is(max)]conf s1; /* conformant struct */
+} t1;
+void op([in, max_is(max)]conf *p1, [in]long max); /* error */
+void op2([in]t1 *p1); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1168"></A>
+<H3>TxRPC MESSAGE #1168</H3>
+<H2> ERROR: Array elements cannot be or have [context_handle] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array was defined with elements that have the
+[context_handle] attribute.
+For example,
+<PRE>
+typedef [context_handle] void *ch_t;
+typedef ch_t array[10]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1169"></A>
+<H3>TxRPC MESSAGE #1169</H3>
+<H2> ERROR: Missing [min_is()] value for <I>var</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a conformant array
+<I>var</I>,
+was missing one or more
+[min_is()] attribute variables.
+One [min_is()] attribute variable is needed for each array
+dimension where the lower bound is open.
+For example,
+<PRE>
+void op1([in,min_is(p2)]char p1[*..1][*..2], [in]long p2); /* error */
+void op2([in,min_is(p2,p2)]char p1[*..1][*..2], [in]long p2); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1170"></A>
+<H3>TxRPC MESSAGE #1170</H3>
+<H2> ERROR: Cannot have [min_is()] value for dimension <I>dim</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a conformant array
+had a [min_is()] attribute variable for an array
+dimension that was fixed (i.e., not open).
+For example,
+<PRE>
+void op1([in,min_is(p2,p2)]char p1[1][*..2], [in]long p2); /* error */
+void op2([in,min_is(,p2)]char p1[1][*..2], [in]long p2); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1171"></A>
+<H3>TxRPC MESSAGE #1171</H3>
+<H2> ERROR: Missing [max_is()] or [size_is()] value for '<I>var</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a conformant array
+<I>var</I>,
+was missing one or more
+[max_is()] or [size_is()] attribute variables.
+One [max_is()] or [size_is()] attribute variable is needed for each array
+dimension where the upper bound is open.
+For example,
+<PRE>
+void op1([in,max_is(p2)]char p1[][], [in]long p2); /* error */
+void op2([in,max_is(p2,p2)]char p1[][], [in]long p2); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1172"></A>
+<H3>TxRPC MESSAGE #1172</H3>
+<H2> ERROR: Cannot have [max_is()] or [size_is()] value for dimension <I>dim</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a conformant array
+had a [max_is()] or [size_is()] attribute variable for an array
+dimension that was fixed (i.e., not open).
+For example,
+<PRE>
+void op1([in,max_is(p2,p2)]char p1[1][2], [in]long p2); /* error */
+void op1([in,max_is(,p2)]char p1[1][], [in]long p2); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1173"></A>
+<H3>TxRPC MESSAGE #1173</H3>
+<H2> ERROR: Too many [min_is()] values specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with too many
+[min_is()] attribute variables.
+One [min_is()] attribute variable is needed for each array
+dimension where the lower bound is open.
+This error also occurs when defining the [min_is()] attribute
+for a variable that was not an array.
+For example,
+<PRE>
+void op1([in,min_is(p2,p2)]char p1[*..1], [in]long p2); /* error */
+void op2([in,min_is(p2)]char p1[*..1], [in]long p2); /* correct */
+void op3([in,min_is(p2)]char p1, [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1174"></A>
+<H3>TxRPC MESSAGE #1174</H3>
+<H2> ERROR: Too many [max_is()] values specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with too many
+[max_is()] attribute variables.
+One [max_is()] attribute variable is needed for each array
+dimension where the upper bound is open.
+This error also occurs when defining the [max_is()] attribute
+for a variable that was not an array or a pointer treated as
+an array.
+For example,
+<PRE>
+void op1([in,max_is(p2,p2)]char p1[], [in]long p2); /* error */
+void op1([in,max_is(p2)]char p1[], [in]long p2); /* correct */
+void op1([in,max_is(p2)]char *p1[], [in]long p2); /* correct */
+void op1([in,max_is(p2)]char p1, [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1175"></A>
+<H3>TxRPC MESSAGE #1175</H3>
+<H2> ERROR: Too many [size_is()] values specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with too many
+[size_is()] attribute variables.
+One [size_is()] attribute variable is needed for each array
+dimension where the upper bound is open.
+This error also occurs when defining the [size_is()] attribute
+for a variable that was not an array or a pointer treated as
+an array.
+For example,
+<PRE>
+void op1([in,size_is(p2,p2)]char p1[], [in]long p2); /* error */
+void op2([in,size_is(p2)]char p1[], [in]long p2); /* correct */
+void op3([in,size_is(p2)]char *p1, [in]long p2); /* correct */
+void op4([in,size_is(p2)]char p1, [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1176"></A>
+<H3>TxRPC MESSAGE #1176</H3>
+<H2> ERROR: Too many [length_is()] values specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with too many
+[length_is()] attribute variables.
+One [length_is()] attribute variable can be specified for each array
+dimension.
+This error can also occur when a pointer was intended to be treated
+as an array (using [size_is()] or [max_is()]) but the array size
+was missing, or if the defined type was not an array.
+For example,
+<PRE>
+void op1([in,length_is(p2,p2)]char p1[10], [in]long p2); /* error */
+void op2([in,length_is(p2)]char p1[10], [in]long p2); /* correct */
+void op3([in,length_is(p2)]char *p1, [in]long p2); /* error */
+void op4([in,length_is(p2)]char p1, [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1177"></A>
+<H3>TxRPC MESSAGE #1177</H3>
+<H2> ERROR: Too many [last_is()] values specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with too many
+[last_is()] attribute variables.
+One [last_is()] attribute variable can be specified for each array
+dimension.
+This error can also occur when a pointer was intended to be treated
+as an array (using [size_is()] or [max_is()]) but the array size
+was missing, or if the defined type was not an array.
+For example,
+<PRE>
+void op1([in,last_is(p2,p2)]char p1[10], [in]long p2); /* error */
+void op2([in,last_is(p2)]char p1[10], [in]long p2); /* correct */
+void op3([in,last_is(p2)]char *p1, [in]long p2); /* error */
+void op4([in,last_is(p2)]char p1, [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1178"></A>
+<H3>TxRPC MESSAGE #1178</H3>
+<H2> ERROR: Too many [first_is()] values specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with too many
+[first_is()] attribute variables.
+One [first_is()] attribute variable can be specified for each array
+dimension.
+This error can also occur when a pointer was intended to be treated
+as an array (using [size_is()] or [max_is()]) but the array size
+was missing, or if the defined type was not an array.
+For example,
+<PRE>
+void op1([in,first_is(p2,p2)]char p1[10], [in]long p2); /* error */
+void op2([in,first_is(p2)]char p1[10], [in]long p2); /* correct */
+void op3([in,first_is(p2)]char *p1, [in]long p2); /* error */
+void op4([in,first_is(p2)]char p1, [in]long p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1180"></A>
+<H3>TxRPC MESSAGE #1180</H3>
+<H2> ERROR: [string] attribute valid only for one-dimensional char, byte, or byte structure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [string] attribute was specified for a data type
+that was not a one-dimensional array of characters or bytes
+(or a pointer treated as a one-dimensional array),
+or a simple structure that contains only byte fields.
+For example,
+<PRE>
+typedef [string]struct {
+ struct {
+  byte s1; /* error */
+ } s1;
+} t1;
+typedef [string,ref] char *t2[10]; /* error */
+typedef [string,ref] char *t3; /* correct */
+typedef [string] char t4[10]; /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1181"></A>
+<H3>TxRPC MESSAGE #1181</H3>
+<H2> ERROR: Pointers to handle_t type are allowed only for parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, pointer to a handle_t type was defined
+in a type or field definition; this is allowed only for parameters.
+For example,
+<PRE>
+typedef [ref]handle_t *handlep_t; /* error */
+void op1([in,ref]handle_t *p1); /*correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1182"></A>
+<H3>TxRPC MESSAGE #1182</H3>
+<H2> ERROR: [context_handle] may not have [ptr] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a context handle parameter was defined with the [ptr]
+pointer attribute.
+For example,
+<PRE>
+typedef [context_handle] void *ch_t;
+void op1([in,ptr]ch_t **t1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1183"></A>
+<H3>TxRPC MESSAGE #1183</H3>
+<H2> ERROR: [ignore] attribute may only be specified for pointers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an [ignore] attribute was specified for a structure
+field that was not a pointer.
+For example,
+<PRE>
+typedef struct {
+ [ignore]long l; /* error */
+ } t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1184"></A>
+<H3>TxRPC MESSAGE #1184</H3>
+<H2> ERROR: [context_handle] may only be specified for void * parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure field or parameter
+was defined with the [context_handle] attribute but the data type
+was not "void *".
+For example,
+<PRE>
+typedef struct {
+ [context_handle]long p1; /* error */
+} t1;
+void op1([context_handle,in]long p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1185"></A>
+<H3>TxRPC MESSAGE #1185</H3>
+<H2> ERROR: Pointer attribute can only be specified for array parameters or pointer types</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type or field definition contained a [ref] or
+[ptr] pointer attribute but the definition did not contain an explicit
+pointer (i.e., "*").
+This error occurs for a parameter definition that was not an array
+or explicit pointer.
+Note that this error also occurs when specifying a pointer attribute
+on a "void *" data type.
+For example,
+<PRE>
+typedef [ref]long t1; /* error */
+typedef [context_handle,ptr] void *ch_t; /* error */
+typedef struct {
+ [ref]long s1; /* error */
+} t3;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1186"></A>
+<H3>TxRPC MESSAGE #1186</H3>
+<H2> ERROR: [out] parameter must be passed by reference</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a parameter was defined with the [out] attribute
+but does not have an explicit pointer ("*") and was not an array.
+For example,
+<PRE>
+void op1([out]long p1); /* error */
+void op1([out]long *p1); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1187"></A>
+<H3>TxRPC MESSAGE #1187</H3>
+<H2> ERROR: Pointer attribute not defined for '<I>var</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a structure or union field or typedef contained a pointer
+without a pointer attribute,
+or a field, type, or parameter had more than one pointer and
+the [pointer_default()] attribute was not set.
+For example,
+<PRE>
+typedef long *t1; /* error */
+typedef struct {
+ long *s1; /* error */
+}t2;
+void op1([in]long **p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1188"></A>
+<H3>TxRPC MESSAGE #1188</H3>
+<H2> ERROR: [out, ptr] not allowed - [in] attribute needed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a parameter was defined with the [out] and [ptr] attributes
+but not the [in] attribute.
+For example,
+<PRE>
+void op1([out,ptr]long *p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either add the [in] attribute or change the [ptr] attribute to [ref].
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1189"></A>
+<H3>TxRPC MESSAGE #1189</H3>
+<H2> ERROR: An [out] conformant [string] must have [max_is] or [size_is]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a [string] parameter was defined as [out] but
+was not defined as a fixed array nor does it not have the
+[max_is] or [size_is] attributes.  This combination
+makes it impossible to determine the size of the string to
+allocate in the server stub.
+For example,
+<PRE>
+void op1([out,string]char *p1); /* error */
+void op2([out,string]char p1[10]); /* correct */
+void op3([out,string,max_is(p2)]char *p1, [in]long p2); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either make the variable a fixed array (which will still be variable
+in length based on where the NULL occurs), or specify the
+[max_is()] or [size_is()] attribute.
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1190"></A>
+<H3>TxRPC MESSAGE #1190</H3>
+<H2> ERROR: An [out] conformant array must be a top-level parameter or under a full pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a conformant array was defined in an [out,ref] parameter.
+It must either were defined as a top-level [out] parameter, or under
+a full pointer ([ptr]).
+For example,
+<PRE>
+typedef long conf[];
+typedef struct {
+ long s1;
+ [max_is(s1)]conf s2;
+} t2;
+typedef struct {
+ long s1;
+ [ptr,max_is(s1)]long *s2; /* full pointer */
+} t3;
+void op1([out,ref]t2 *p1); /* error */
+void op2([in,out,ptr]t2 *p1); /* correct */
+void op3([out,max_is(p2)]conf p1, [in]long p2); /* correct */
+void op4([out]t3 *p1); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1192"></A>
+<H3>TxRPC MESSAGE #1192</H3>
+<H2> ERROR: Identifier redeclared - <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a duplicate name was used for a typedef,
+constant, or enumeration value name, or an operation name.
+These names are all in the same name space and must be unique.
+For example,
+<PRE>
+typedef long t1;
+typedef long t1; /* error */
+typedef enum { t1 } t1; /* two errors */
+const long t1 = 1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1193"></A>
+<H3>TxRPC MESSAGE #1193</H3>
+<H2> WARN: [ignore] attribute not allowed on union arm - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [ignore] attribute was specified for
+a union arm.  The attribute was ignored and processing
+continued.
+For example,
+<PRE>
+typedef union switch (short u1) {
+ case 0: ;
+ case 1: [ignore,ptr]long *l; /* error */
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1194"></A>
+<H3>TxRPC MESSAGE #1194</H3>
+<H2> ERROR: Context handles may not be members of a union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm was defined to be a context handle.
+For example,
+<PRE>
+typedef union switch (short u1) {
+ case 0: ;
+ case 1: [context_handle]void *handle; /* error */
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1195"></A>
+<H3>TxRPC MESSAGE #1195</H3>
+<H2> ERROR: Conformant arrays may not be members of a union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm was defined to be a conformant structure or array.
+For example,
+<PRE>
+typedef struct {
+ long s1;
+ [max_is(s1)]long s2[]; /* conformant structure */
+} t1;
+typedef union switch (short u1) {
+ case 0: ;
+ case 1: t1 u2; /* error */
+ case 2: long u3[]; /* error */
+} t2;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1196"></A>
+<H3>TxRPC MESSAGE #1196</H3>
+<H2> ERROR: Function pointers may not be members of a union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm was defined to be a function pointer.
+For example,
+<PRE>
+typedef union switch (short u1) {
+ case 0: ;
+ case 1: [ptr]long (*u2)(void); /* error */
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1197"></A>
+<H3>TxRPC MESSAGE #1197</H3>
+<H2> ERROR: Pipes may not be members of a union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm was defined to be a pipe or a type
+derived from a pipe.
+For example,
+<PRE>
+typedef pipe long pipe_t;
+typedef union switch (short u1) {
+ case 0: ;
+ case 1: pipe_t u2; /* error */
+} t2;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1198"></A>
+<H3>TxRPC MESSAGE #1198</H3>
+<H2> ERROR: handle_t values may not be members of a union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm was defined to be a handle_t type.
+For example,
+<PRE>
+typedef union switch (short u1) {
+ case 0: ;
+ case 1: handle_t u2; /* error */
+} t2;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Tuxedo System/TxRPC Guide
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

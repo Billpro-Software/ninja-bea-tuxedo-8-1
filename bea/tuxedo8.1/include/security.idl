@@ -1,0 +1,224 @@
+/*	Copyright (c) 1997 BEA Systems, Inc.
+	All rights reserved
+
+	THIS IS UNPUBLISHED PROPRIETARY
+	SOURCE CODE OF BEA Systems, Inc.
+	The copyright notice above does not
+	evidence any actual or intended
+	publication of such source code.
+*/
+/* #ident	"@(#) objtm/idl/security.idl	$Revision: 1.9 $" */
+
+#ifndef _OMG_SECURITY_IDL
+#define _OMG_SECURITY_IDL
+
+// Current is defined as a language object
+//module CORBA {
+//	/*
+//	 * Extensions to CORBA
+//	 */
+//	interface Current {
+//	};
+//};
+
+#ifdef _BLDJDKJAR
+#pragma prefix "omg.org"
+#endif
+
+/*
+ * From time service
+ */
+module TimeBase {
+#pragma prefix "omg.org/TimeBase"
+
+	// interim definition of type ulonglong pending the
+	// adoption of the type extension RFP
+	struct ulonglong {
+		unsigned long	low;
+		unsigned long	high;
+	};
+	typedef ulonglong	TimeT;
+	typedef short		TdfT;
+	struct UtcT {
+		TimeT		time;		// 8 octets
+		unsigned long	inacclo;	// 4 octets
+		unsigned short	inacchi;	// 2 octets
+		TdfT		tdf;		// 2 octets
+						// total 16 octets
+	};
+};
+#ifndef JDKORB
+#pragma ID TimeBase "IDL:omg.org/TimeBase:1.0"
+#endif
+
+module Security {
+#pragma prefix "omg.org/Security"
+
+	typedef sequence<octet> Opaque;
+
+	// Extensible families for standard data types
+	struct ExtensibleFamily {
+		unsigned short		family_definer;
+		unsigned short		family;
+	};
+	typedef unsigned long	SecurityAttributeType;
+
+	// identity attributes; family = 0
+
+	const SecurityAttributeType		AuditId = 1;
+	const SecurityAttributeType		AccountingId = 2;
+	const SecurityAttributeType		NonRepudiationId = 3;
+
+	// privilege attributes; family = 1
+
+	const SecurityAttributeType		_Public = 1;
+	const SecurityAttributeType		AccessId = 2;
+	const SecurityAttributeType		PrimaryGroupId = 3;
+	const SecurityAttributeType		GroupId = 4;
+	const SecurityAttributeType		Role = 5;
+	const SecurityAttributeType		AttributeSet = 6;
+	const SecurityAttributeType		Clearance = 7;
+	const SecurityAttributeType		Capability = 8;
+
+	struct AttributeType {
+		ExtensibleFamily		attribute_family;
+		SecurityAttributeType		attribute_type;
+	};
+
+	typedef sequence<AttributeType>	AttributeTypeList;
+
+	struct SecAttribute {
+		AttributeType			attribute_type;
+		Opaque				defining_authority;
+		Opaque				value;
+		// The value of this attribute can be
+		// interpreted only with knowledge of type
+	};
+
+	typedef sequence<SecAttribute> AttributeList;
+
+	// Authentication return status
+	enum AuthenticationStatus {
+		SecAuthSuccess,
+		SecAuthFailure,
+		SecAuthContinue,
+		SecAuthExpired
+	};
+	// Authentication method
+	typedef unsigned long AuthenticationMethod;
+
+	enum CredentialType {
+		SecInvocationCredentials,
+		SecOwnCredentials,
+		SecNRCredentials
+	};
+
+	// Pick up from TimeBase
+	typedef TimeBase::UtcT		UtcT;
+
+	// Association options which can be administered
+	// on secure invocation policy and used to
+	// initialize security context
+	typedef unsigned short AssociationOptions;
+
+	const AssociationOptions NoProtection = 1;
+	const AssociationOptions Integrity = 2;
+	const AssociationOptions Confidentiality = 4;
+	const AssociationOptions DetectReplay = 8;
+	const AssociationOptions DetectMisordering = 16;
+	const AssociationOptions EstablishTrustInTarget = 32;
+	const AssociationOptions EstablishTrustInClient = 64;
+	const AssociationOptions NoDelegation = 128;
+	const AssociationOptions SimpleDelegation = 256;
+	const AssociationOptions CompositeDelegation = 512;
+};
+#ifndef JDKORB
+#pragma ID Security "IDL:omg.org/Security:1.0"
+#endif
+
+module SecurityLevel1 {
+#pragma prefix "omg.org/SecurityLevel1"
+#ifdef _TOBJ
+	interface Current {
+		Security::AttributeList get_attributes(
+			in Security::AttributeTypeList	attributes
+		);
+	};
+#endif
+#ifdef JDKORB
+	interface JDKORBBugEmpty {
+	};
+#endif
+};
+#ifndef JDKORB
+#pragma ID SecurityLevel1 "IDL:omg.org/SecurityLevel1:1.0"
+#endif
+
+module SecurityLevel2 {
+#pragma prefix "omg.org/SecurityLevel2"
+
+	// Forward declaration of interfaces
+	interface PrincipalAuthenticator;
+	interface Credentials;
+#ifdef _TOBJ
+	interface Current;
+#endif
+
+	// Interface Principal Authenticator
+	interface PrincipalAuthenticator {
+		Security::AuthenticationStatus authenticate(
+			in  Security::AuthenticationMethod	method,
+			in  string				security_name,
+			in  Security::Opaque			auth_data,
+			in  Security::AttributeList		privileges,
+			out Credentials				creds,
+			out Security::Opaque			continuation_data,
+			out Security::Opaque			auth_specific_data
+		);
+
+		Security::AuthenticationStatus continue_authentication(
+			in  Security::Opaque			response_data,
+			in  Credentials					creds,
+			out Security::Opaque			continuation_data,
+			out Security::Opaque			auth_specific_data
+		);
+	};
+
+	// Interface Credentials
+	interface Credentials {
+		attribute Security::AssociationOptions
+					invocation_options_supported;
+		attribute Security::AssociationOptions
+					invocation_options_required;
+		Security::AttributeList get_attributes(
+			in Security::AttributeTypeList		attributes
+		);
+
+		boolean is_valid(
+			out Security::UtcT			expiry_time
+		);
+	};
+
+#ifdef _TOBJ
+ 	// Interface Current derived from SecurityLevel1::Current
+	// providing additional operations on Current at this
+	// security level. This is implemented by the ORB
+	interface Current : SecurityLevel1::Current {
+		void set_credentials(
+			in Security::CredentialType		cred_type,
+			in Credentials				cred
+		);
+
+		Credentials get_credentials(
+			in Security::CredentialType		cred_type
+		);
+
+		readonly attribute PrincipalAuthenticator principal_authenticator;
+	};
+#endif
+};
+#ifndef JDKORB
+#pragma ID SecurityLevel2 "IDL:omg.org/SecurityLevel2:1.0"
+#endif
+
+#endif /* _OMG_SECURITY_IDL */

@@ -1,0 +1,57 @@
+#
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE
+# OF BEA Systems, Inc.
+# The copyright notice above does not evidence
+# any actual or intended publication of such
+# source code
+#
+#ident	"@(#) samples/atmi/CSIMPAPP/UBBCSIMPLE.nt	$Revision: 1.5 $"
+
+#Skeleton UBBCONFIG file for the TUXEDO COBOL Simple Application.
+#Replace the <bracketed> items with the appropriate values.
+
+*RESOURCES
+IPCKEY		<Replace with a valid IPC Key>
+
+#Example:
+#IPCKEY		123456
+
+DOMAINID	UBBCSIMPLE
+MASTER		simple
+MAXACCESSERS	5
+MAXSERVERS	5
+MAXSERVICES	10
+MODEL		SHM
+LDBAL		N
+
+*MACHINES
+DEFAULT:
+		APPDIR="<Replace with the current directory pathname>"
+		TUXCONFIG="<Replace with your TUXCONFIG Pathname>"
+		TUXDIR="<Root directory of TUXEDO (not /)>"
+                ENVFILE="<Replace with the path name to the ENVFILE.nt>"
+#Example:
+#		APPDIR="c:\tuxedo\simpapp"
+#		TUXCONFIG="c:\tuxedo\simpapp\tuxconfig"
+#		TUXDIR="c:\tuxedo"
+#               ENVFILE="c:\tuxedo\simpapp\envfile.nt"
+
+<Machine-name>	LMID=simple
+
+#Example:
+#usltux		LMID=simple
+
+*GROUPS
+GROUP1
+	LMID=simple	GRPNO=1	OPENINFO=NONE
+
+*SERVERS
+DEFAULT:
+		CLOPT="-A"
+
+CSIMPSRV	SRVGRP=GROUP1 SRVID=1
+
+*SERVICES
+CSIMPSRV

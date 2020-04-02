@@ -1,0 +1,1399 @@
+<TITLE>LIBWSC </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBWSC MESSAGES 1300-1399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1310"></A>
+<H3>LIBWSC MESSAGE #1310</H3>
+<H2> ERROR: Option -d argument '<I>arg_value</I>' is not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-d
+option to the
+ud
+command specifies the maximum delay time in seconds before timeout.
+The
+-d
+option requires an argument, which must be numeric.
+The option argument supplied was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the argument to the
+ud
+command so that the
+-d
+option is numeric, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1311"></A>
+<H3>LIBWSC MESSAGE #1311</H3>
+<H2> ERROR: Cannot use the -d and -r options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-d
+and
+-r
+options to
+ud
+are mutually exclusive.
+The
+-d
+option specifies the maximum delay in receiving a reply before timeout.
+The
+-r
+option states that no reply is expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-d
+and
+-r
+options are not both specified, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1312"></A>
+<H3>LIBWSC MESSAGE #1312</H3>
+<H2> ERROR: Argument '<I>arg_value</I>' to option -e is not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-e
+option to
+ud
+specifies the maximum number of allowable errors before the process exits.
+This option requires a numeric argument.
+The argument specified was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to the
+ud
+command so that the
+-e
+option is numeric, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1313"></A>
+<H3>LIBWSC MESSAGE #1313</H3>
+<H2> ERROR: Argument '<I>arg_value</I>' to -s is not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-s
+option to
+ud
+specifies a sleep time between requests.
+This option requires an option argument, which must be numeric.
+The option argument specified by the user was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to the
+ud
+command so that the
+-s
+option is numeric, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1314"></A>
+<H3>LIBWSC MESSAGE #1314</H3>
+<H2> ERROR: Argument '<I>arg_value</I>' to -t is not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-t
+option to
+ud
+specifies a transaction timeout value in seconds.
+This option requires an option argument, which must be numeric.
+The option argument specified by the user was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to the
+ud
+command so that the
+-t
+option is numeric, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1315"></A>
+<H3>LIBWSC MESSAGE #1315</H3>
+<H2> ERROR: Cannot use the -t and -r options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user specified options to
+ud
+that combined the transaction mode option,
+-t ,
+with the no reply option,
+-r .
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-r
+and
+-t
+options are not both specified, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1316"></A>
+<H3>LIBWSC MESSAGE #1316</H3>
+<H2> ERROR: Cannot use the -t and -d options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user specified options to
+ud
+that combined the transaction mode option,
+-t ,
+with the message delay option,
+-d .
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-d
+and
+-t
+options are not both specified, and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1319"></A>
+<H3>LIBWSC MESSAGE #1319</H3>
+<H2> ERROR: ud detected syntax error in fielded buffer # <I>n</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the fielded buffers passed as input to the
+ud
+program has invalid syntax.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Inspect the input data to
+ud
+and correct any errors in the input format.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1320"></A>
+<H3>LIBWSC MESSAGE #1320</H3>
+<H2> ERROR: No service in FBFR</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the input buffers to
+ud
+did not contain a service name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure to include a line with fieldname
+SRVCNM ,
+a tab character, and the name of a service in every fielded buffer input
+to
+ud .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1322"></A>
+<H3>LIBWSC MESSAGE #1322</H3>
+<H2> ERROR: Cannot send buffer <I>buf</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+ud
+was unable to send a buffer to the requested service.
+It is also possible that the transaction or service timed out.
+A description of the particular error encountered is included
+in the latter half of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To deal with the most common causes of this error,
+verify that the service specified in the
+ud
+input buffer exists, is not a conversational service, and is available,
+that the service accepts FML input buffers, and that the server supports
+transactions if the
+-t
+option of
+ud
+was specified.
+The tpcall(3)
+manual page contains information on these and other conditions that could
+cause an error return from
+tpacall .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1324"></A>
+<H3>LIBWSC MESSAGE #1324</H3>
+<H2> ERROR: Return packet time out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service call request made by
+ud
+has timed out.
+This can occur either due to a transaction timeout or a blocking timeout.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine whether it is necessary to allocate a longer time for this
+transaction or service call to complete.
+If so, increase the time specified with the
+-t
+option if using transaction mode, or use the
+-d
+option if not running in transaction mode.
+Reexecute the failed request.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1325"></A>
+<H3>LIBWSC MESSAGE #1325</H3>
+<H2> ERROR: Reply failure - <I>tperrno_message</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpgetrply()
+function was called from within
+ud
+to receive the response from a service request, and returned an error.
+A description of the particular error encountered is included
+in the latter part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the tpcall(3)
+manual page for information on the particular errors returned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1329"></A>
+<H3>LIBWSC MESSAGE #1329</H3>
+<H2> ERROR: Too many errors encountered, exiting!</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ud
+command has encountered too many errors, and is exiting.
+The maximum number of allowable errors defaults to 25, and may be
+specified explicitly using the
+-e
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Investigate the earlier errors reported by
+ud ,
+and try to eliminate as many as possible.
+If it is an expected condition for a large number of service
+calls to return errors, invoke
+with the
+-e
+option to specify an explicit error limit.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1331"></A>
+<H3>LIBWSC MESSAGE #1331</H3>
+<H2> ERROR: Invalid option - argument to -u not n, u, or j</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The command option -u was specified
+for
+wud
+but the argument was not n, u, or j.
+This option specifies how the request buffer is modified before reading each
+new packet.
+The n argument indicates that the buffer should be
+re-initialized (treated as new).
+The u argument indicates that
+the buffer should be updated with the reply buffer using
+Fupdate (3).
+The j argument indicates that the reply buffer should
+be joined with the request buffer using
+Fojoin (3).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command using a valid -u argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1332"></A>
+<H3>LIBWSC MESSAGE #1332</H3>
+<H2> ERROR: Unable to set mode to NONBLOCK</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to set the mode of reading from the network to nonblocking
+has failed.
+This indicates a network problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is not down.
+If this is not the problem, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1333"></A>
+<H3>LIBWSC MESSAGE #1333</H3>
+<H2> ERROR: Unable to reset mode to BLOCK</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to change the mode of reading from the network to blocking
+has failed.
+This indicates a network problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is not down.
+If this is not the problem, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1334"></A>
+<H3>LIBWSC MESSAGE #1334</H3>
+<H2> ERROR: Unable to allocate connection buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory to store a message has failed.
+A message must be sent to the Workstation Listener process in order
+to get the network address of the Workstation Handler.
+The system has failed in an attempt to allocate space for this message.
+This error would indicate the workstation does not have
+sufficient memory to join an application successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1335"></A>
+<H3>LIBWSC MESSAGE #1335</H3>
+<H2> ERROR: Unable to allocate space to save session key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory to save a session key failed.
+The session key is needed when authentication is being enforced.
+The system has failed in an attempt to allocate space to save this key.
+This error would indicate the workstation does not have
+sufficient memory to join an application successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1336"></A>
+<H3>LIBWSC MESSAGE #1336</H3>
+<H2> ERROR: Invalid handle returned</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A handle with a negative value has been returned by the Workstation Handler.
+This message indicates a system problem with the Workstation Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for advice.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1337"></A>
+<H3>LIBWSC MESSAGE #1337</H3>
+<H2> ERROR: Handle must be 0 for TPNOREPLY</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A handle with a value other than zero has been returned by the Workstation Handler.
+When
+tpacall ()
+is invoked with a flag value of
+TPNOREPLY ,
+the handle returned should be zero.
+This message indicates that the Workstation Handler has returned
+a handle other than zero.
+This is a system problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for advice.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1338"></A>
+<H3>LIBWSC MESSAGE #1338</H3>
+<H2> ERROR: Unable to send ticket to WSH</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a message containing the security ticket to the
+Workstation Handler process has failed.
+This message indicates that the network may have gone down, the Workstation
+Handler process may not be running, or the host machine may have gone down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check with your system administrator for any of these problems.
+If there is still a problem, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1342"></A>
+<H3>LIBWSC MESSAGE #1342</H3>
+<H2> ERROR: Unable to establish signal handler, switching to DIP-IN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to set a signal handler function has failed.
+This function is called when
+LIBNET
+receives a signal.
+With this failure, the system has changed the method
+for receiving unsolicited messages to
+DIP-IN .
+This is an internal problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+It should be noted that the client will not receive unsolicited messages by
+DIP-IN
+notification if it has not called
+tpsetunsol ()
+to set the appropriate function.
+If there is a problem with signal based notification,
+some changes must be made to the client code to use
+DIP-IN .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1344"></A>
+<H3>LIBWSC MESSAGE #1344</H3>
+<H2> ERROR: Decryption of challenge request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+decrypting the challenge request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1345"></A>
+<H3>LIBWSC MESSAGE #1345</H3>
+<H2> ERROR: Encryption of challenge request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encrypting the challenge request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1346"></A>
+<H3>LIBWSC MESSAGE #1346</H3>
+<H2> ERROR: Couldn't create encryption/decryption schedule</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+the encryption or decryption schedule could not be created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1347"></A>
+<H3>LIBWSC MESSAGE #1347</H3>
+<H2> ERROR: Failed to encode/decode establish connection request message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding of the establish connection request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1348"></A>
+<H3>LIBWSC MESSAGE #1348</H3>
+<H2> ERROR: Decryption of challenge reply failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+decrypting the challenge reply message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1349"></A>
+<H3>LIBWSC MESSAGE #1349</H3>
+<H2> ERROR: Encryption of challenge reply failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encrypting the challenge reply message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1350"></A>
+<H3>LIBWSC MESSAGE #1350</H3>
+<H2> ERROR: Encoding/decoding of ticket request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding the ticket request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1351"></A>
+<H3>LIBWSC MESSAGE #1351</H3>
+<H2> ERROR: Encoding/decoding of ticket request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding the ticket request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1352"></A>
+<H3>LIBWSC MESSAGE #1352</H3>
+<H2> ERROR: Decryption of TPINIT buffer failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+decrypting the
+TPINIT
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1353"></A>
+<H3>LIBWSC MESSAGE #1353</H3>
+<H2> ERROR: Encoding/decoding of TPINIT buffer failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding the
+TPINIT
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1354"></A>
+<H3>LIBWSC MESSAGE #1354</H3>
+<H2> ERROR: Encryption of TPINIT buffer failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encrypting the
+TPINIT
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1355"></A>
+<H3>LIBWSC MESSAGE #1355</H3>
+<H2> ERROR: Unknown work station message to process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+an unknown message type was encountered for processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1356"></A>
+<H3>LIBWSC MESSAGE #1356</H3>
+<H2> ERROR: Tried to process unexpected message opcode 0x<I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+an unknown message type was encountered for processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1357"></A>
+<H3>LIBWSC MESSAGE #1357</H3>
+<H2> ERROR: Received message not intended for this client</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler has returned the wrong identifier to this client.
+This is an internal error.
+The Workstation Handler process may need to be restarted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1358"></A>
+<H3>LIBWSC MESSAGE #1358</H3>
+<H2> ERROR: Message data decrypt failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to decode a connection message has failed.
+This could be an internal error, or the Workstation Handler may have returned
+a message encoded with a different encryption scheme.
+The latter indicates the client has failed the authentication test.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+In either case, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1359"></A>
+<H3>LIBWSC MESSAGE #1359</H3>
+<H2> ERROR: Encrypting of message data failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to encrypt a message has failed.
+This is an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1360"></A>
+<H3>LIBWSC MESSAGE #1360</H3>
+<H2> ERROR: Security network address too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The network address of the Security server is too long.
+This would indicate a problem setting up the security server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1361"></A>
+<H3>LIBWSC MESSAGE #1361</H3>
+<H2> ERROR: Unable to open Security connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a network connection to a Security process failed.
+The client has successfully contacted the Workstation Listener.
+It is now failing to open a network connection to the Security process.
+This would indicate the client may have too many file descriptors open
+or there is a network problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1362"></A>
+<H3>LIBWSC MESSAGE #1362</H3>
+<H2> ERROR: Unable to establish Security connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to connect to the Security process failed.
+This would be unusual because the application has just
+communicated successfully with the Workstation Listener process.
+It is possible that the Security process is not running,
+the network has just gone down, or the host machine has just gone down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this is not the case, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1363"></A>
+<H3>LIBWSC MESSAGE #1363</H3>
+<H2> ERROR: Unable to close Security connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to close the connection to the Security process failed.
+This is a rare event because the application has just
+communicated successfully with the Security process.
+It is possible the network has just gone down.
+While this would not affect the disconnect from the application,
+it might indicate a network problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1364"></A>
+<H3>LIBWSC MESSAGE #1364</H3>
+<H2> ERROR: Unable to get TPINIT buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a message to the Security server failed
+because the buffer used was not obtained by a call to
+tpalloc ()
+with a buffer type of
+TPINIT .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+When attempting to join an application with authentication,
+the client application must pass a buffer of type
+TPINIT
+to the
+tpinit ()
+call.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1365"></A>
+<H3>LIBWSC MESSAGE #1365</H3>
+<H2> ERROR: System buffer already in use</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A system buffer was passed to
+tpinit ().
+This is an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1366"></A>
+<H3>LIBWSC MESSAGE #1366</H3>
+<H2> ERROR: Unable to get reply to challenge request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply to a
+challenge
+request has failed.
+This is an error that could be the result of the network going down,
+the Workstation Handler process not running, or the site of the
+Workstation Handler going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1367"></A>
+<H3>LIBWSC MESSAGE #1367</H3>
+<H2> ERROR: Received message not intended for this client</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply to a
+challenge
+request has resulted in an
+invalid client id being returned to the client.
+This is an internal error that indicates a problem between the Workstation
+Client and the Workstation Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1368"></A>
+<H3>LIBWSC MESSAGE #1368</H3>
+<H2> ERROR: Challenge reply returned an error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The return value in the
+challenge
+reply message indicates an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the value of
+tperrno
+for an indication of the nature of the error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1369"></A>
+<H3>LIBWSC MESSAGE #1369</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory to store a security ticket has failed.
+The system has failed in an attempt to allocate space for this structure.
+This error would indicate the workstation does not have
+sufficient memory to successfully join an application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1370"></A>
+<H3>LIBWSC MESSAGE #1370</H3>
+<H2> ERROR: Unable to send ticket message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a security ticket has failed.
+This error occurred on a network send.
+This would indicate either a network problem, a problem with the host machine,
+or that the Workstation Handler process is no longer running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For these situations, consult the TUXEDO System administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1371"></A>
+<H3>LIBWSC MESSAGE #1371</H3>
+<H2> ERROR: Unable to get reply to OWS_TICKET request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive the confirmation reply to the
+security ticket request has failed.
+This error occurred on a network receive.
+This would indicate either a network problem, a problem with the host machine,
+or that the Workstation Handler process is no longer running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For these situations, consult the TUXEDO System administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1372"></A>
+<H3>LIBWSC MESSAGE #1372</H3>
+<H2> ERROR: Received message not intended for this client</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The reply to the message that sent the
+ticket
+request contains an invalid client id.
+This is an internal error that indicates a problem between the Workstation
+Client and the Workstation Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1373"></A>
+<H3>LIBWSC MESSAGE #1373</H3>
+<H2> ERROR: System returned error to OWS_TICKET request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The return value in the
+ticket
+reply message indicates an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the value of
+tperrno
+for an indication of the nature of the error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1374"></A>
+<H3>LIBWSC MESSAGE #1374</H3>
+<H2> ERROR: Failed to create decryption schedule</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was detected during a call to
+_tpcryptinit ().
+This is an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1375"></A>
+<H3>LIBWSC MESSAGE #1375</H3>
+<H2> ERROR: Unable to send challenge request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a message containing the
+challenge
+request to the Workstation Handler process has failed.
+This message would indicate that the network may have gone down, the Workstation
+Handler process may not be running, or the host machine may have gone down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check with your system administrator for any of these problems.
+If there is still a problem, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1376"></A>
+<H3>LIBWSC MESSAGE #1376</H3>
+<H2> ERROR: Unable to save the password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to save the password with the
+_tppwtokey ()
+function has failed.
+This is an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1377"></A>
+<H3>LIBWSC MESSAGE #1377</H3>
+<H2> ERROR: Signal based notification not allowed for DOS client, changing to DIP-IN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The client has chosen to be notified of unsolicited messages by signals.
+However,
+DOS
+and
+MAC
+do not support signals, so the TUXEDO System has changed the method to
+DIP-IN .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This change means that the client will only receive these messages when it
+is receiving a reply to an
+ATMI
+call.
+The application developer may wish to use
+tpchkunsol ()
+for this purpose.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1379"></A>
+<H3>LIBWSC MESSAGE #1379</H3>
+<H2> ERROR: Unable to get user id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wtmconfig ,
+the program was unable to get the password entry based on the
+current user identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that a password entry exists for the administrator
+who is running the
+wtmconfig
+command.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wtmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1380"></A>
+<H3>LIBWSC MESSAGE #1380</H3>
+<H2> ERROR: tpchkauth failed - Uunixerr = <I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wtmconfig ,
+an operating system error occurred while attempting to determine the level
+of authentication required by the application configuration.
+A code is printed indicating the specific UNIX System call that failed.
+These codes may be referenced in the header file &lt;Uunix.h>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the UNIX System call is failing.
+Often, this error will occur if the
+TUXCONFIG
+shell variable is not set consistently in this process and in the rest of
+the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wtmconfig (1),
+tpchkauth (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1381"></A>
+<H3>LIBWSC MESSAGE #1381</H3>
+<H2> ERROR: Cannot determine authentication level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpchkauth()
+function returned an error when called by
+wtmconfig
+to determine the level of authentication required by the application
+configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Attempt to determine why the
+tpchkauth()
+function call is failing.
+Often, this will be due to an incorrect
+setting of the
+TUXCONFIG
+shell variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wtmconfig (1),
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1383"></A>
+<H3>LIBWSC MESSAGE #1383</H3>
+<H2> ERROR: Unable to obtain application password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+wtmconfig
+command was unable to obtain a value for the application password.
+This value is entered at the terminal if
+wtmconfig
+is being invoked interactively, and is gotten from the
+APP_PW
+environment variable if the standard input to the
+wtmconfig
+process is not a terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+wtmconfig
+command is being invoked in the background, be sure to set
+and export the
+APP_PW
+environment variable.
+If
+wtmconfig
+is being invoked at a terminal, be sure that the user enters a
+value at the
+Enter
+Application
+Password :
+prompt.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wtmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1386"></A>
+<H3>LIBWSC MESSAGE #1386</H3>
+<H2> ERROR: Cannot open <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When writing out the current buffer values,
+wtmconfig
+was unable to create and open a temporary file for writing
+(in the current directory for DOS, or /tmp for UNIX).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory has write
+and execute permissions set correctly, and that the file system has
+the proper resources for creating and writing a file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wtmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1389"></A>
+<H3>LIBWSC MESSAGE #1389</H3>
+<H2> ERROR: Cannot find the tpadmin field table in <I>dir</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+wtmconfig ,
+the program was unable to get the field identifier for
+TA_SECTION
+from the field table
+$TUXDIR/udataobj/tpadmin .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+tpadmin
+field table exists and is readable.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+wtmconfig (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

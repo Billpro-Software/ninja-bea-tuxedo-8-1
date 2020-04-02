@@ -1,0 +1,102 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/STOCKAPP/README	$Revision: 1.5 $"
+
+SIMPLE BUILD PROCEDURE
+
+INSTALLATION AND BUILD PROCEDURES FOR STOCKAPP
+
+The following ten steps describe procedures for building the
+sample application, STOCKAPP.
+
+Consult the TUXEDO System COBOL Guide for a more detailed description
+of these procedures.
+
+
+Step 1: Copy the Software 
+
+Make a new directory under your $HOME directory and copy all of 
+the source files from <TUXDIR>/apps/STOCKAPP into that directory.
+TUXDIR is the root directory under which your TUXEDO System
+software is installed.  We're calling the new directory
+$HOME/STOCKAPP.  The rest of the steps in this procedure are 
+done in the directory $HOME/STOCKAPP.
+
+
+Step 2: Edit STKVAR 
+
+STKVAR is a STOCKAPP source file that contains environment variables.
+The following variables should be edited to give them values appropriate 
+for your site.
+
+TUXDIR  	Root directory of the TUXEDO System.
+
+APPDIR 		Directory in which the banking application resides.
+		STKVAR initially is set to allow this to default
+		to the current working directory, which agrees with
+		our intention to use $HOME/STOCKAPP
+
+COBDIR		Directory where cobol has been installed, usually
+        	/usr/lib/cobol.
+
+
+Step 3: Edit the UBBCBSHM Configuration File
+
+The configuration file, often referred to as UBBCONFIG, is the source 
+file that contains a complete description of an application.  In Step 5
+the configuration file is compiled into the TUXCONFIG file.
+
+In the delivered version of STOCKAPP, the following parameters need 
+to be checked:
+
+IPCKEY 		This parameter may or may not need to be reset depending 
+		on whether it is unique across the computer.  If yours is 
+		the only application on the machine using IPC resources, 
+		you can leave this value as is.
+
+UID/GID 	Set the value for these to your user-id and group-id
+		as displayed by the UNIX system command, id(1).
+
+<SITE1's uname>	In the MACHINES section, substitute the node name 
+		of your computer as displayed by the UNIX system
+		command, uname -n
+
+<TUXDIR>	The root directory of the TUXEDO System.
+
+<APPDIR>	The directory from which you are running the application.
+
+
+Step 4: Modify the LD_LIBRARY_PATH, SHLIB_PATH, and LIBPATH parameter in
+        the ENVFILE.
+
+<LD_LIBRARY_PATH>  Should be set to $TUXDIR/lib:$COBDIR/lib.
+<SHLIB_PATH>  Should be set to $TUXDIR/lib:$COBDIR/lib.
+<LIBPATH>  Should be set to $TUXDIR/lib:$COBDIR/lib.
+
+
+Step 5: Edit and Run the makefile 
+
+Edit STOCKAPP.mk and change TUXDIR and APPDIR to the same values as in 
+STKVAR.  When you are satisfied that TUXDIR and APPDIR have the correct
+values, enter the following command:
+
+	nohup make -f STOCKAPP.mk install&
+
+Check nohup.out to make sure the build was successful.
+
+
+Step 6: Boot the Application Servers
+
+This step must be done from the master site.  The environment variable
+TUXCONFIG must be set and exported.  (This was done in Step 5, 
+if you're following the complete procedure)
+
+Use the following command to boot the application:
+
+	tmboot -y
+
+tmboot gives you feedback about servers started.
+
+Step 7: When ready, shutdown the application with the following
+        command:
+
+        tmshutdown -y

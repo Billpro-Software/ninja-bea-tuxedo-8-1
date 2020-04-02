@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+   <Reference name="Ninja" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="Ninja" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>NINJADEVMAIN</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="role">
+            <Contents>SYSOPER</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="serviceName">
+            <Contents>NINJATEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>212.45.180.141</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+      </RefAddresses>
+   </Reference>
+   <Reference name="NinjaTest" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="NinjaTest" xmlns="">
+      <Factory className="oracle.jdeveloper.db.adapter.DatabaseProviderFactory"/>
+      <RefAddresses>
+         <StringRefAddr addrType="subtype">
+            <Contents>oraJDBC</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="port">
+            <Contents>1521</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="hostname">
+            <Contents>212.45.180.141</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="user">
+            <Contents>ninjadevmain</Contents>
+         </StringRefAddr>
+         <SecureRefAddr addrType="password"/>
+         <StringRefAddr addrType="serviceName">
+            <Contents>NINJATEST</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="DeployPassword">
+            <Contents>true</Contents>
+         </StringRefAddr>
+         <StringRefAddr addrType="oraDriverType">
+            <Contents>thin</Contents>
+         </StringRefAddr>
+      </RefAddresses>
+   </Reference>
+</References>

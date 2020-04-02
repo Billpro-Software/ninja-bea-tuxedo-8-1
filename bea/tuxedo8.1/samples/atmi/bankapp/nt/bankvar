@@ -1,0 +1,118 @@
+rem	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+@echo off
+rem
+rem Copyright (c) 1995 BEA Systems, Inc.
+rem All rights reserved
+rem
+rem ident	"@(#) samples/atmi/bankapp/nt/bankvar	$Revision: 1.4 $"
+rem
+rem
+rem  This file sets all the environment variables needed by the TUXEDO software
+rem  to run the bankapp
+rem
+rem  This directory contains all the TUXEDO software
+rem  System administrator must set this variable
+rem
+rem 
+rem  This directory contains all the user written code
+rem 
+rem  Contains the full path name of the directory that the application
+rem  generator should place the files it creates
+rem
+set APPDIR=%TUXDIR%\apps\bankapp
+rem
+rem Path to message catalogs
+set NLSPATH=%TUXDIR%\locale\C\%%N
+rem 
+rem  Logical block size; Database Administrator must set this variable
+rem 
+set BLKSIZE=512
+rem 
+rem  Set default name of the database to be used by database utilities
+rem  and database creation scripts
+rem 
+set DBNAME=bankdb
+rem 
+rem  Indicate whether database is to be opened in share or private mode
+rem 
+set DBPRIVATE=no
+rem           
+rem  Set Ipc Key for the database; this MUST differ from the UBBCONFIG
+rem  *RESOURCES IPCKEY parameter
+rem 
+set DIPCKEY=80953
+rem 
+rem  Environment file to be used by tmloadcf
+rem 
+set ENVFILE=%APPDIR%\ENVFILE
+rem 
+rem  List of field table files to be used by mc, viewc, tmloadcf, etc.
+rem 
+set FIELDTBLS=Usysflds,bankflds,creditflds
+rem 
+rem  List of directories to search to find field table files
+rem 
+set FLDTBLDIR=%TUXDIR%\udataobj;%APPDIR%
+rem 
+rem  Universal Device List for database
+rem 
+set FSCONFIG=%APPDIR%\bankdl1
+rem
+rem  Network address, used in MENU script
+rem 
+set NADDR=
+rem 
+rem  Network device name
+rem 
+set NDEVICE=
+rem 
+rem  Network listener address, used in MENU script
+rem 
+set NLSADDR=
+rem 
+rem  Set device for the transaction log; this should match the TLOGDEVICE
+rem  parameter under this site's LMID in the *MACHINES section of the
+rem  UBBCONFIG file
+rem 
+set TLOGDEVICE=%APPDIR%\TLOG
+rem 
+rem  Device for binary file that gives /T all its information
+rem 
+set TUXCONFIG=%APPDIR%\tuxconfig
+rem 
+rem  Set the prefix of the file which is to contain the central user log;
+rem  this should match the ULOGPFX parameter under this site's LMID in the
+rem  *MACHINES section of the UBBCONFIG file
+rem 
+set ULOGPFX=%APPDIR%\ULOG
+rem 
+rem  System name, used by RUNME.sh
+rem 
+set UNAME=
+rem 
+rem  List of view files to be used by viewc, tmloadcf, etc.
+rem 
+set VIEWFILES=aud.vv
+set VIEWFILES32=mib_views,tmib_views
+rem 
+rem  List of directories to search to find view files
+rem 
+set VIEWDIR=%TUXDIR%\udataobj;%APPDIR%
+set VIEWDIR32=%TUXDIR%\udataobj;%APPDIR%
+rem
+rem Specify the Q device (if events included in demo)
+rem
+set QMCONFIG=%APPDIR%\qdevice
+rem
+rem  Add TUXDIR/bin to PATH
+rem 
+set PATH=%TUXDIR%\bin;%PATH%
+rem
+rem Set PATH, INCLUDE and LIB to point to 
+rem Microsoft Development tools to compile bankapp
+rem 
+set MSDEV=c:\msdev
+rem 
+set PATH=%PATH%;%MSDEV%\bin
+set INCLUDE=%INCLUDE%;%MSDEV%\include;%MSDEV%\mfc\include
+set LIB=%LIB%;%MSDEV%\lib;%MSDEV%\mfc\lib

@@ -1,0 +1,408 @@
+<!-- .if n .pH errman.h.ltmsg07.htm @(#)ltmsg07.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>LIBTUX MESSAGE #1100</H3>
+<H2> ERROR: Cannot send a message to a site with an unknown release, <I>release</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System is trying to convert a message to the message
+format of an unknown release: <I>release</I>.
+Interoperability allows a single application to have multiple (two)
+releases of the TUXEDO System exist on different nodes and
+interoperate with one another.
+The conversion is done by either the sender, if it has the latest
+software, or the receiver.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>LIBTUX MESSAGE #1104</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while converting Bulletin Board data to the
+TUXEDO System Release 4.1 format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>LIBTUX MESSAGE #1107</H3>
+<H2> ERROR: Invalid data length of 0, data not self describing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed in
+tpbroadcast (3).
+tpbroadcast (3)
+was most likely invoked with data that is not self-describing
+and with the length argument set to 0.
+Not self-describing data is defined as a buffer type that requires a length
+to be specified when sent, for example,
+CARRAY
+and
+X_OCTET .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the length argument to the
+tpbroadcast (3)
+call is not set to 0
+if the buffer type of the unsolicited message being sent is not
+self-describing.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpbroadcast(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>LIBTUX MESSAGE #1108</H3>
+<H2> ERROR: BBL not available on requested lmid (<I>site</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed in
+tpbroadcast (3)
+while trying to get
+the server table entry of the
+BBL
+on
+LMID
+<I>site</I> from the Bulletin Board.
+This is most likely due to the fact that the
+BBL
+on
+LMID
+<I>site</I> is not running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Boot the
+BBL
+on
+LMID
+<I>site</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpbroadcast(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>LIBTUX MESSAGE #1109</H3>
+<H2> ERROR: Could not retrieve BBL from specified lmid (<I>site</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed in
+tpbroadcast (3)
+while trying to get
+the server table entry of the
+BBL
+on
+LMID
+<I>site</I> from the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpbroadcast(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1114"></A>
+<H3>LIBTUX MESSAGE #1114</H3>
+<H2> ERROR: Unsolicited signal handler unable to get BB parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to get from the Bulletin Board
+the signal to be used for signal-based notification.
+This error may have occurred while the client was attempting to
+join the application, using
+tpinit (3),
+or while making an
+ATMI call prior to joining the application, or if the system
+the client is running on does not support reliable signals.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Parse through the user log to see if there are other messages related
+to this failure.
+If so, refer to the appropriate system messages.
+Otherwise, consult your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpinit(3), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1115"></A>
+<H3>LIBTUX MESSAGE #1115</H3>
+<H2> ERROR: Invalid USIGNAL parameter in BB</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process retrieved an invalid signal number from the
+Bulletin Board.
+This signal was to be used for signal-based notification.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Parse through the
+userlog
+to see if there are other messages related
+to this failure.
+If so, refer to the appropriate system messages.
+Otherwise, consult your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1117"></A>
+<H3>LIBTUX MESSAGE #1117</H3>
+<H2> ERROR: Unable to check for unsolicited messages, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed while checking for an unsolicited message
+upon receipt of a signal indicating that an unsolicited message had
+arrived.
+tperrno
+is set to the TUXEDO System/T error code that was returned by
+the system after trying to get the unsolicited message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+tperrno
+is most likely set to
+TPESYSTEM
+or
+TPEOS .
+In this case, parse through the
+userlog
+to find the exact nature of the
+failure as described in another message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpchkunsol(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1118"></A>
+<H3>LIBTUX MESSAGE #1118</H3>
+<H2> ERROR: Unable to check for unsolicited messages, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed while checking for unsolicited messages.
+tperrno
+is set to the TUXEDO System error code that was returned by
+the system after failing to check for unsolicited messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+tperrno
+is most likely set to
+TPESYSTEM
+or
+TPEOS .
+In this case, parse through the
+userlog
+to find the exact nature of the
+failure as described in another message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpchkunsol(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1119"></A>
+<H3>LIBTUX MESSAGE #1119</H3>
+<H2> ERROR: tpsetunsol() not called, dropping unsolicited message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to set the method of handling unsolicited
+messages prior to receiving its first unsolicited message.
+The unsolicited message will therefore be dropped since the system
+does not know what to do with it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the calling process calls
+tpsetunsol (3)
+as soon as it joins the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpchkunsol(3), <Font>tpsetunsol(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1122"></A>
+<H3>LIBTUX MESSAGE #1122</H3>
+<H2> ERROR: No space in Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to join the application due to the
+lack of space in the registry table portion of the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the calling process is an application client, the administrator
+will need to increase
+MAXACCESSERS
+in the *RESOURCES section of the configuration file.
+If the calling process is a server, the administrator will need to
+increase
+MAXACCESSERS
+and/or
+MAXSERVERS
+in the *RESOURCES section
+of the configuration file.
+Note that
+MAXACCESSERS
+specifies the maximum number of processes
+that can have access to a Bulletin Board on a particular machine
+at any one time.
+MAXSERVERS
+specifies the maximum number of servers to be accommodated
+by the entire application at any one time.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1187"></A>
+<H3>LIBTUX MESSAGE #1187</H3>
+<H2> ERROR: Invalid parameter passed to internal routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1198"></A>
+<H3>LIBTUX MESSAGE #1198</H3>
+<H2> ERROR: Cannot detach: operating system error: errno = <I>errno_val</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is running with the
+TMPROTECTED
+SYSTEM_ACCESS
+value.
+Detaching from the bulletin board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+<I>errno_val</I>
+to determine why the detach failed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1199"></A>
+<H3>LIBTUX MESSAGE #1199</H3>
+<H2> ERROR: Cannot re-attach: operating system error: errno = <I>errno_val</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is running with the
+TMPROTECTED
+SYSTEM_ACCESS
+value.
+The client or server was unable to re-attach to the bulletin board.
+This probably indicates that the application was shut down (abnormally) while
+the client or server was not attached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+<I>errno_val</I>
+to determine the reason for the failure.
+Check with the administrator to see if the application was shut down.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

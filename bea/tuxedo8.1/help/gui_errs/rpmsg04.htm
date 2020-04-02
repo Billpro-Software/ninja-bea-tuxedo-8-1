@@ -1,0 +1,1962 @@
+<TITLE>TxRPC MESSAGES, Part 4 </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>TxRPC MESSAGES 1300-1399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1301"></A>
+<H3>TxRPC MESSAGE #1301</H3>
+<H2> ERROR: Constant expression in union arm cannot be a string constant or NULL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm case value was a string constant or NULL,
+or a constant expression evaluating to one of these.
+For example,
+<PRE>
+typedef union switch(long u1) {
+ case "abc": short u1; /* error */
+ case NULL: short u2; /* error */
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1302"></A>
+<H3>TxRPC MESSAGE #1302</H3>
+<H2> ERROR: Variable not specified for [switch_is]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a non-encapsulated union was defined with a [switch_is()]
+attribute that was missing the variable name.
+For example,
+<PRE>
+typedef [switch_type (long) ] union t1 {
+ [case (1,3)] float u1;
+ [case (2)] short u2;
+ [default] ;
+} t1;
+void op1([switch_is(),in]t1 p1);
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1303"></A>
+<H3>TxRPC MESSAGE #1303</H3>
+<H2> ERROR: Too many enumeration values</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an enumeration was defined with more than 32767
+values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1304"></A>
+<H3>TxRPC MESSAGE #1304</H3>
+<H2> ERROR: [v1_struct] attribute not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [v1_struct] attribute was specified.  This
+attribute is only for backward compatibility with NIDL V1 and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1305"></A>
+<H3>TxRPC MESSAGE #1305</H3>
+<H2> ERROR: [v1_enum] attribute not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [v1_enum] attribute was specified.  This
+attribute is only for backward compatibility with NIDL V1 and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1306"></A>
+<H3>TxRPC MESSAGE #1306</H3>
+<H2> ERROR: [align()] attribute not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [align()] attribute was specified.  This
+attribute is not part of the standard but proposed in some dialects;
+it is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1307"></A>
+<H3>TxRPC MESSAGE #1307</H3>
+<H2> ERROR: [min_is()] attribute not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [min_is()] attribute was specified.  This
+attribute is not part of the standard but proposed in some dialects;
+it is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1310"></A>
+<H3>TxRPC MESSAGE #1310</H3>
+<H2> ERROR: [v1_string] attribute not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [v1_string] attribute was specified.  This
+attribute is only for backward compatibility with NIDL V1 and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1311"></A>
+<H3>TxRPC MESSAGE #1311</H3>
+<H2> ERROR: [v1_array] attribute not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [v1_array] attribute was specified.  This
+attribute is only for backward compatibility with NIDL V1 and is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1312"></A>
+<H3>TxRPC MESSAGE #1312</H3>
+<H2> ERROR: Transmitted type cannot be conformant or be or contain pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition had a [transmit_as()] attribute.
+The transmitted type had or contained a pointer or was a conformant
+array (transmission of conformant structures is supported).
+For example,
+<PRE>
+typedef long conf[];
+typedef [transmit_as(conf)] long t1; /* error */
+typedef [ptr]long *longp;
+typedef [transmit_as(longp)] long t2; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1313"></A>
+<H3>TxRPC MESSAGE #1313</H3>
+<H2> ERROR: The void type can only be used for context handles and operation return</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a type definition had a [transmit_as()] attribute and
+the transmitted type was type void.
+For example,
+<PRE>
+typedef void t1;
+typedef [transmit_as(t1)] long t2; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1314"></A>
+<H3>TxRPC MESSAGE #1314</H3>
+<H2> ERROR: All attribute variables are null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, one of the size attributes (size_is, max_is, min_is,
+length_is, last_is, or first_is) was specified but no attribute
+variables are specified within the size attribute.
+For example,
+<PRE>
+void op1([in,max_is()]long p1[]); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1315"></A>
+<H3>TxRPC MESSAGE #1315</H3>
+<H2> WARN: [unique] not supported; [ptr] assumed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [unique] pointer attribute was specified.  This
+attribute is not part of the standard but proposed in some dialects;
+it is not supported.  For further processing, [ptr] was assumed instead.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1316"></A>
+<H3>TxRPC MESSAGE #1316</H3>
+<H2> WARN: [idempotent] attribute not supported - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [idempotent] attribute was specified.  This
+attribute need not be supported in TxRPC (although part of DCE/RPC);
+it is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1317"></A>
+<H3>TxRPC MESSAGE #1317</H3>
+<H2> WARN: [broadcast] attribute not supported - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [broadcast] attribute was specified.  This
+attribute need not be supported in TxRPC (although part of DCE/RPC);
+it is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1318"></A>
+<H3>TxRPC MESSAGE #1318</H3>
+<H2> WARN: [maybe] attribute not supported - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [maybe] attribute was specified.  This
+attribute need not be supported in TxRPC (although part of DCE/RPC);
+it is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1319"></A>
+<H3>TxRPC MESSAGE #1319</H3>
+<H2> ERROR: Can't specify transaction attribute at interface and operation levels</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a transaction attribute ([transaction_mandatory] or
+[transaction_optional]) was specified at both the interface level
+and on an operation.
+For example,
+<PRE>
+[uuid(0679E900-A387-110F-9215-930269220000),
+transaction_mandatory]
+interface INTERFACE
+{
+[transaction_mandatory]void op1(void);
+}
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1320"></A>
+<H3>TxRPC MESSAGE #1320</H3>
+<H2> ERROR: Can't specify transaction attribute at interface and operation levels</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a transaction attribute ([transaction_mandatory] or
+[transaction_optional]) was specified at both the interface level
+and on an operation.
+For example,
+<PRE>
+[uuid(0679E900-A387-110F-9215-930269220000),
+transaction_mandatory]
+interface INTERFACE
+{
+[transaction_mandatory]void op1(void);
+}
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1321"></A>
+<H3>TxRPC MESSAGE #1321</H3>
+<H2> ERROR: Syntax error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a "void" was specified for an operation that had more
+than one parameter.  "void" is only valid if an operation has
+only one parameter and it appears by itself.
+For example,
+<PRE>
+void op1([in]long p1, void); /* error */
+void op2(void); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1322"></A>
+<H3>TxRPC MESSAGE #1322</H3>
+<H2> ERROR: Syntax error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an operation was defined with no parameters
+("void") but had parameter attributes.
+For example,
+<PRE>
+void op1([in]void); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1323"></A>
+<H3>TxRPC MESSAGE #1323</H3>
+<H2> WARN: [ignore] attribute not allowed on parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [ignore] attribute was specified for a parameter
+(it is allowed only for pointers within structures).
+For example,
+<PRE>
+void op1([in,ignore]long *p1);
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1324"></A>
+<H3>TxRPC MESSAGE #1324</H3>
+<H2> WARN: [shape] attribute not supported - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [shape] attribute was specified.  This
+attribute is not part of TxRPC but proposed in some dialects;
+it is not supported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1326"></A>
+<H3>TxRPC MESSAGE #1326</H3>
+<H2> ERROR: Function pointers supported only in local mode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the interface header had a [uuid()] and not a [local]
+attribute, and a function pointer type was defined.  Function pointers
+are only supported in [local] mode.
+For example,
+<PRE>
+typedef void (*op1)([in]long *p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1327"></A>
+<H3>TxRPC MESSAGE #1327</H3>
+<H2> ERROR: Function types supported only in local mode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the interface header had a [uuid()] and not a [local]
+attribute, and a function type was defined.  Function types
+are only supported in [local] mode.
+For example,
+<PRE>
+typedef void op1([in]long *p1); /* error */
+void op2([in]long *p1); /* correct */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this definition was simply for generating a header file,
+delete the [uuid()] attribute and add a [local] attribute.
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1328"></A>
+<H3>TxRPC MESSAGE #1328</H3>
+<H2> ERROR: [represent_as] cannot be specified for type used as a size attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a size attribute variable for a conformant or
+varying array has the [represent_as] attribute.
+For example,
+<PRE>
+/* IDL File */
+typedef long t1;
+void op([max_is(p2),in]long p1[], [in]t1 p2);
+/* ACS file */
+typedef [represent_as(long)]t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1329"></A>
+<H3>TxRPC MESSAGE #1329</H3>
+<H2> ERROR: [out_of_line] identifier <I>name</I> must be less than 29 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the name of a type that was specified as [out_of_line]
+had a name that was greater than 28 characters in length.
+For example,
+<PRE>
+/* ACS file */
+typedef [out_of_line]t2345678901234567890123456789;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1330"></A>
+<H3>TxRPC MESSAGE #1330</H3>
+<H2> WARN: [explicit_handle] not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [explicit_handle] attribute was specified.  This
+attribute need not be supported in TxRPC IDL-only (although part of DCE/RPC);
+it is not supported.
+If [explicit_handle] is specified and the first parameter of
+the operation is not a binding handle, a binding handle will be added
+with the name IDL_binding_handle.  While providing some compatibility
+with DCE, the binding handle is not transmitted from the client to the server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1331"></A>
+<H3>TxRPC MESSAGE #1331</H3>
+<H2> WARN: [implicit_handle] not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [implicit_handle] attribute was specified.  This
+attribute need not be supported in TxRPC IDL-only (although part of DCE/RPC);
+it is not supported.
+Specifically,
+the binding handle is not transmitted from the client to the server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1334"></A>
+<H3>TxRPC MESSAGE #1334</H3>
+<H2> ERROR: Type <I>typename</I> used in [transmit_as()] clause cannot have [represent_as()]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transmitted type,
+<I>typename</I>,
+has the [represent_as] attribute.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL or ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1335"></A>
+<H3>TxRPC MESSAGE #1335</H3>
+<H2> ERROR: Type name with [represent_as] must be less than 21 characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, a type whose name was greater than 20 characters was defined
+with the [represent_as] attribute.
+For example,
+<PRE>
+typedef [represent_as(t1)]  t123456789012345678901; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL and ACS input files and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1336"></A>
+<H3>TxRPC MESSAGE #1336</H3>
+<H2> WARN: Use ACS include for definition of <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, a [represent_as()] attribute was defined and the name
+of the type,
+<I>name</I>,
+that was not known (not defined in the IDL file).  In this case,
+a header file is needed to define the type (or the C language compiler
+will not be able to compile the stubs properly).
+The preferred method of including the header file is via the
+ACS include statement.
+For example,
+<PRE>
+typedef [represent_as(undef)]  t1; /* warning for undef */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+None.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1337"></A>
+<H3>TxRPC MESSAGE #1337</H3>
+<H2> ERROR: Operation <I>name</I> not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, an operation,
+<I>name</I>,
+was defined that was not defined in the IDL file.
+For example,
+<PRE>
+[code]op1(); /* error if op1 not in IDL file */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL or ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1338"></A>
+<H3>TxRPC MESSAGE #1338</H3>
+<H2> ERROR: [comm_status] operation must have type error_status_t</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, an operation was defined to have a [comm_status] return
+but the operation was not defined to return error_status_t.
+For example,
+<PRE>
+/* IDL file */
+long op1(void);
+/* ACS file */
+[comm_status]op1(); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1339"></A>
+<H3>TxRPC MESSAGE #1339</H3>
+<H2> ERROR: [fault_status] operation must have type error_status_t</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, an operation was defined to have a [fault_status] return
+but the operation was not defined to return error_status_t.
+For example,
+<PRE>
+/* IDL file */
+long op1(void);
+/* ACS file */
+[fault_status]op1(); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1340"></A>
+<H3>TxRPC MESSAGE #1340</H3>
+<H2> WARN: [comm_status] specified more than once for operation <I>name</I> - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [comm_status] attribute was specified for more than
+one parameter, or for a parameter and the operation return.
+For example,
+<PRE>
+/* IDL file */
+error_status_t op1([out]error_status_t *p1);
+/* ACS file */
+[comm_status]op1([comm_status] p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1341"></A>
+<H3>TxRPC MESSAGE #1341</H3>
+<H2> WARN: [fault_status] specified more than once for operation <I>name</I> - ignored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, the [fault_status] attribute was specified for more than
+one parameter, or for a parameter and the operation return.
+For example,
+<PRE>
+/* IDL file */
+error_status_t op1([out]error_status_t *p1);
+/* ACS file */
+[fault_status]op1([fault_status] p1); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1342"></A>
+<H3>TxRPC MESSAGE #1342</H3>
+<H2> ERROR: Value <I>val</I> overflows long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an integer value that was too large
+to fit into a 32-bit long integer.
+For example,
+<PRE>
+const unsigned long l = 0xEE6B28000;   /* error */
+const unsigned long l = 0356326240000; /* error */
+const unsigned long l = 4000000000;    /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1345"></A>
+<H3>TxRPC MESSAGE #1345</H3>
+<H2> WARN: No hex digits follow \x</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a '\x' character constant.
+The value was treated as the character x since it was not followed
+by any hexadecimal characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1346"></A>
+<H3>TxRPC MESSAGE #1346</H3>
+<H2> WARN: Dubious escape \<I>char</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character constant with
+an escape that was not one of the defined escape sequences
+(e.g., tab, newline, etc.).  The character was treated
+as if the backslash did not appear.
+For example,
+<PRE>
+const char i = '\i'; /* warning */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1347"></A>
+<H3>TxRPC MESSAGE #1347</H3>
+<H2> WARN: Character escape \<I>octal</I> does not fit in character</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character constant with
+an octal escape sequence that was too large to fit into a character
+(greater than 0377).
+For example,
+<PRE>
+const char c = '\477'; /* warning */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1348"></A>
+<H3>TxRPC MESSAGE #1348</H3>
+<H2> ERROR: Character escape <I>val</I> does not fit in character</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character constant with
+a hexadecimal escape sequence that was too large to fit into a character
+(greater than \xff).
+For example,
+<PRE>
+const char i = '\xfff'; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1349"></A>
+<H3>TxRPC MESSAGE #1349</H3>
+<H2> ERROR: Newline in character constant</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character constant that begins
+on one line and ends on another line.
+Often, this indicates a missing quote.
+For example,
+<PRE>
+const char i = '\xf
+f'; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1351"></A>
+<H3>TxRPC MESSAGE #1351</H3>
+<H2> ERROR: Invalid parenthesis</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [uuid] attribute had an extra left parenthesis
+within the value.
+For example,
+<PRE>
+[uuid((0679E900-A387-110F-9215-930269220000)] /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1353"></A>
+<H3>TxRPC MESSAGE #1353</H3>
+<H2> ERROR: Invalid parenthesis</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, the [version] attribute had an extra left parenthesis
+within the value.
+For example,
+<PRE>
+[local, version((0.0)] /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1354"></A>
+<H3>TxRPC MESSAGE #1354</H3>
+<H2> ERROR: Newline in string literal</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a string literal that begins
+on one line and ends on another line.
+For example,
+<PRE>
+const char *str = "first
+second";
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1355"></A>
+<H3>TxRPC MESSAGE #1355</H3>
+<H2> WARN: Character escape \<I>octal</I> does not fit in character</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character string with an
+octal escape sequence that was too large to fit into a character
+(greater than 0377).
+For example,
+<PRE>
+const char *str = "error \477";
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1356"></A>
+<H3>TxRPC MESSAGE #1356</H3>
+<H2> ERROR: Character escape <I>val</I> does not fit in character</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character string with an
+hexadecimal escape sequence that was too large to fit into a character
+(greater than \xff).
+For example,
+<PRE>
+const char *str = "error \x242";
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1357"></A>
+<H3>TxRPC MESSAGE #1357</H3>
+<H2> WARN: Dubious escape \<I>char</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character literal with
+an escape that was not one of the defined escape sequences
+(e.g., tab, newline, etc.).  The character was treated
+as if the backslash did not appear.
+For example,
+<PRE>
+const char *str = "error \e   ";
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1358"></A>
+<H3>TxRPC MESSAGE #1358</H3>
+<H2> ERROR: End of input reached without terminating comment</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an end-of-file while
+within a comment.
+For example,
+<PRE>
+const char *str = "string"; /* end of file error
+</PRE>
+Note that this error message will not be printed if the file was
+processed by the C pre-processor (which will detect the error);
+use -no_cpp to turn off pre-processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1359"></A>
+<H3>TxRPC MESSAGE #1359</H3>
+<H2> ERROR: Identifier or number must be preceded and followed by white space or punctuation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a number or an identifier
+that was not preceded or followed by white space or
+a punctuation character.
+Usually this indicates a typographical error.
+For example,
+<PRE>
+const long sec_per_min = 60;
+const long hour_per_sec = 60sec_per_min; /* missing * */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1360"></A>
+<H3>TxRPC MESSAGE #1360</H3>
+<H2> WARN: Character '\x<I>char</I>' not portable</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character in a character constant
+or character string constant that is not in the portable character set
+(0x20 to 0x7e, inclusive).
+For example,
+<PRE>
+const char control_A = '\1'; /* warning */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1361"></A>
+<H3>TxRPC MESSAGE #1361</H3>
+<H2> ERROR: End of input reached without terminating double quote</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an end-of-file while
+within a character string literal.
+For example,
+<PRE>
+const char *str = "error noend /* end of file error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1362"></A>
+<H3>TxRPC MESSAGE #1362</H3>
+<H2> ERROR: Reached <I>count</I> errors; exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tidl
+command encountered more than
+<I>count</I>
+errors (default 50) and was quitting.  To get all errors printed,
+use the -error all option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1363"></A>
+<H3>TxRPC MESSAGE #1363</H3>
+<H2> ERROR: Reached <I>count</I> errors; exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tidl
+command encountered more than
+<I>count</I>
+errors (default 50) and was quitting.  To get all errors printed,
+use the -error all option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1365"></A>
+<H3>TxRPC MESSAGE #1365</H3>
+<H2> WARN: Identifier <I>ident</I> is too long - truncating to 31 characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an identifier that was more
+than 31 characters in length.
+The identifier is truncated to 31 characters and processing continues.
+This may cause further processing errors.
+For example,
+<PRE>
+const long t2345678901234567890123456789012 = 60;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1366"></A>
+<H3>TxRPC MESSAGE #1366</H3>
+<H2> ERROR: Character constant too long '<I>const</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered an octal character constant
+that was more than 6 characters in length.
+For example,
+<PRE>
+const char c = '\0000006';
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1367"></A>
+<H3>TxRPC MESSAGE #1367</H3>
+<H2> ERROR: Invalid character constant <I>const</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lexical analyzer encountered a character constant that
+was multiple characters in length and not one of the valid
+escape sequences.
+For example,
+<PRE>
+const char l = 'ab';
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1372"></A>
+<H3>TxRPC MESSAGE #1372</H3>
+<H2> ERROR: Duplicate interface name '<I>inter_name</I>' in file <I>filename1</I> and file <I>filename2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an imported IDL file,
+<I>filename1</I>,
+an interface name was a duplicate of
+the interface name of a previously processed IDL file
+<I>filename2</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1373"></A>
+<H3>TxRPC MESSAGE #1373</H3>
+<H2> ERROR: Can't import [local] interface from non-local interface</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An IDL file with the [local] interface was imported by another IDL
+file that does not have the [local] interface.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1374"></A>
+<H3>TxRPC MESSAGE #1374</H3>
+<H2> ERROR: [switch_is] attribute not allowed on union arm</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a [switch_is] attribute was defined for a union arm.
+The [switch_is] attribute can appear only with a non-encapsulated
+union and non-encapsulated unions cannot appear in union arms.
+For example,
+<PRE>
+typedef [switch_type (long) ] union t1 {
+ [case (1,3)] float u1;
+ [case (2)] short u2;
+ [default] ;
+} t1;
+typedef union switch (short u0) t2 {
+ case 0: ;
+ case 1:
+ case 2: [switch_is(u3)]t1 u2; /* error */
+ case 3:
+ case 4: long u3;
+ } t2;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1375"></A>
+<H3>TxRPC MESSAGE #1375</H3>
+<H2> ERROR: [switch_is] specified for encapsulated union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a [switch_is] attribute was specified for
+an encapsulated union.  [switch_is] is allowed only for
+non-encapsulated unions.
+For example,
+<PRE>
+typedef union switch (short u0) t1 {
+	case 0: ;
+	case 1:
+	case 2: short u2;
+	case 3:
+	case 4: long u3;
+ } t1;
+typedef struct {
+ [switch_is(s2)]t1 s1; /* error */
+ long s2;
+} t2;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1376"></A>
+<H3>TxRPC MESSAGE #1376</H3>
+<H2> ERROR: [switch_type] specified for encapsulated union</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an encapsulated union was defined with the [switch_type]
+attribute.
+For example,
+<PRE>
+typedef [switch_type(long)]union switch (short u0) t1 { /* error */
+	case 0: ;
+	case 1:
+	case 2: short u2;
+	case 3:
+	case 4: long u3;
+ } t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1377"></A>
+<H3>TxRPC MESSAGE #1377</H3>
+<H2> ERROR: Missing [max_is()] or [size_is()] value for '<I>name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a pointer was defined as a conformant array because
+the [min_is()] attribute was specified, but the maximum size was
+not defined via a [size_is()] or [max_is()] attribute.
+For example,
+<PRE>
+void op1([in,min_is(p2)]long *p1, [in]long p2);
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1378"></A>
+<H3>TxRPC MESSAGE #1378</H3>
+<H2> ERROR: Types with [represent_as] cannot be nested</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, a type was specified as a [represent_as()] type
+that already had its own [represent_as()] attribute.
+For example,
+<PRE>
+/* IDL File */
+typedef long t1;
+typedef long t2;
+/* ACS file */
+typedef [represent_as(long)]t1;
+typedef [represent_as(t1)]t2; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ACS input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1379"></A>
+<H3>TxRPC MESSAGE #1379</H3>
+<H2> ERROR: The void type can only be used for context handles and operation return</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an array of the void data type was defined.
+For example,
+<PRE>
+typedef void t1[10]; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1380"></A>
+<H3>TxRPC MESSAGE #1380</H3>
+<H2> ERROR: The void type can only be used for context handles and operation return</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a pipe type was defined based on the void data type.
+For example,
+<PRE>
+typedef pipe void t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1381"></A>
+<H3>TxRPC MESSAGE #1381</H3>
+<H2> ERROR: Union arm may not contain [ref] pointer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a union arm was defined with a [ref] pointer attribute.
+For example,
+<PRE>
+typedef union switch(long u1) {
+ case 0: short u2;
+ default: [ref]long *u3; /* error */
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1383"></A>
+<H3>TxRPC MESSAGE #1383</H3>
+<H2> ERROR: <I>attrib</I> value '<I>name</I>' must not have [transmit_as] attribute</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an attribute variable was defined
+(e.g., for an array size attribute) that had the [transmit_as()]
+attribute.
+For example,
+<PRE>
+typedef [transmit_as(long)]long t1;
+void op1([max_is(p2),in]long p1[],[in]t1 p2); /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1384"></A>
+<H3>TxRPC MESSAGE #1384</H3>
+<H2> ERROR: Type <I>name</I> has [represent_as(<I>rep1</I>)] and [represent_as(<I>rep2</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an ACS file, a type was defined with more than [represent_as()]
+attribute.
+For example,
+<PRE>
+/* IDL file */
+typedef long t1;
+/* ACS file */
+typedef [represent_as(t2)]t1;
+typedef [represent_as(t3)]t1; /* error */
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1385"></A>
+<H3>TxRPC MESSAGE #1385</H3>
+<H2> ERROR: Attribute not allowed on tagged structure or union declaration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, a tagged structure or union declaration had an attribute
+specified.
+For example,
+<PRE>
+[transaction_mandatory]struct t1 { /* error */
+ long s1;
+};
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1386"></A>
+<H3>TxRPC MESSAGE #1386</H3>
+<H2> ERROR: <I>attrib</I> value '<I>name</I>' must not be a pointer to a field</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In an IDL file, an attribute variable (e.g., for defining an array
+size) was defined as a pointer to a structure field.
+When a conformant or varying array is defined within a structure,
+a pointer cannot be used.
+For example,
+<PRE>
+typedef struct {
+ [ref]long *s1;
+ [max_is(*s1)]long s2[]; /* error */
+} t1;
+</PRE>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1387"></A>
+<H3>TxRPC MESSAGE #1387</H3>
+<H2> ERROR: Invalid FBFR usage</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The FBFR type was used in an invalid position (in a varying or conformant
+array, with a transmit as attribute, with pipe, or without a pointer).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the IDL input file and re-run the
+tidl
+program.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO TxRPC Guide"
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

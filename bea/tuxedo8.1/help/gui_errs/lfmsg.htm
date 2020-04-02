@@ -1,0 +1,453 @@
+<TITLE>LIBFML MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBFML MESSAGES 1-99</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1"></A>
+<H3>LIBFML MESSAGE #1</H3>
+<H2> ERROR: Fielded buffer not aligned</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An
+FML
+function was called with a fielded buffer that is not
+properly aligned.
+Most machines require half-word alignment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use
+Falloc
+to get back a dynamically allocated, properly aligned buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Falloc(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="2"></A>
+<H3>LIBFML MESSAGE #2</H3>
+<H2> ERROR: Buffer not fielded</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A buffer was passed to an
+FML
+function that is not a fielded buffer,
+that is, that has not been properly initialized.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use
+Finit
+to initialize a buffer allocated directly by the application,
+or use
+Falloc
+dynamically to allocate and initialize a fielded buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Falloc(3), <Font>Finit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="3"></A>
+<H3>LIBFML MESSAGE #3</H3>
+<H2> ERROR: No space in fielded buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to add a field to a buffer, change a field to a larger
+value within a buffer, merge two buffers, or otherwise modify a buffer,
+and not enough space is available to complete the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use
+Frealloc
+dynamically to allocate a larger buffer
+or use
+Fcpy
+to copy the buffer to a larger buffer,
+and retry the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fcpy(3), <Font>Frealloc(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="4"></A>
+<H3>LIBFML MESSAGE #4</H3>
+<H2> ERROR: Field not present</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When trying to find, change, or delete a field,
+the specified field identifier and/or field occurrence did
+not exist in the fielded buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your request to make sure you have specified a
+field that is in the buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fchg(3), <Font>Fdelete(3) <Font>Ffind(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="5"></A>
+<H3>LIBFML MESSAGE #5</H3>
+<H2> ERROR: Unknown field number or type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid field identifier was specified for an
+FML
+function, or an invalid field number (0 or greater than 8192) was specified, or
+Fname
+could not find the associated field identifier for the specified name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Most of the
+FML
+functions can return this error; see the manual
+page associated with the function that returned this error.
+Check your code to make sure the field specified is valid.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="6"></A>
+<H3>LIBFML MESSAGE #6</H3>
+<H2> ERROR: Invalid field type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid (unknown) field type was specified to an
+FML
+function, or an invalid type was specified for a particular operation
+(for example, a non-string field was specified for a string operation).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify the proper field type or field identifier.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fmkfldid(3), <Font>Ftypcvt(3), <Font>Ftype(3), <Font>Fvall(3), <Font>Fvals(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="7"></A>
+<H3>LIBFML MESSAGE #7</H3>
+<H2> ERROR: UNIX system call error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during a UNIX system call when opening a field table file
+or view description file, or when reading or writing an
+FML
+buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the environment variables are set correctly for the
+field table and view files, and that the files have read permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fread(3), <Font>Fwrite(3), <Font>Fextread(3), <Font>field_tables(5),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="8"></A>
+<H3>LIBFML MESSAGE #8</H3>
+<H2> ERROR: Unknown field name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A field name could not be mapped into a field identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the environment variables are set correctly for the
+field table files and that the files have read permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fldid(3),
+Fextread(3),
+field_tables(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="9"></A>
+<H3>LIBFML MESSAGE #9</H3>
+<H2> ERROR: Memory allocation failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="10"></A>
+<H3>LIBFML MESSAGE #10</H3>
+<H2> ERROR: Bad syntax in boolean expression</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The syntax of a boolean expression passed to
+Fboolco
+is invalid.
+This message is also generated on failure to evaluate the boolean
+expression in
+Fboolev
+and
+Ffloatev
+and indicates that an invalid or corrupted value was passed
+to these functions.
+It is also generated when an invalid input format is read by
+Fextread .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the format of the boolean expression being processed by
+Fboolco
+or the external
+FML
+buffer format being processed by
+Fextread .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fboolco(3), <Font>Fextread(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="11"></A>
+<H3>LIBFML MESSAGE #11</H3>
+<H2> ERROR: Cannot find or open field table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When processing the field tables, one of the field tables was not
+found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the environment variables are set correctly for the
+field table files and that the files have read permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+field_tables(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="13"></A>
+<H3>LIBFML MESSAGE #13</H3>
+<H2> ERROR: Invalid argument to function</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument (other than an invalid fielded buffer, field identifier,
+or field type) was passed to an
+FML
+function.
+This can be a
+NULL
+parameter where a non-NULL parameter was expected,
+invalid buffer sizes, etc.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the manual page associated with the error return for the correct
+parameter values.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="14"></A>
+<H3>LIBFML MESSAGE #14</H3>
+<H2> ERROR: Destructive concurrent access to field table</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While reading the
+FML
+field tables, the program detected a concurrent change
+to the tables by another process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the program after the
+FML
+field tables have been updated.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3>LIBFML MESSAGE #15</H3>
+<H2> ERROR: Cannot find or get view</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+NULL
+or invalid view name was specified to an
+FML
+view function.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the view name and
+check that the environment variables are set correctly for the
+view files and that the files have read permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3>LIBFML MESSAGE #16</H3>
+<H2> ERROR: Syntax error in viewfile</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A specified view file (suffixed with
+is not in view file format
+(for example, does not have the correct magic number or format).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the environment variables are set correctly for the
+view files and that the view files are correctly compiled for
+the local machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+viewc(1),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3>LIBFML MESSAGE #17</H3>
+<H2> ERROR: Cannot find or open viewfile</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When processing the view files, one of the view files was not
+found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the environment variables are set correctly for the
+view files and that the files have read permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="18"></A>
+<H3>LIBFML MESSAGE #18</H3>
+<H2> ERROR: ACM contains negative value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+Fvstof
+to transfer data from a structure to a fielded buffer,
+an Associated Count Member value was negative.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the structure
+ACM
+value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fvstof(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3>LIBFML MESSAGE #19</H3>
+<H2> ERROR: Cname not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+Fvopt ,
+Fvnull ,
+or
+Fvselinit ,
+an unknown name was specified for an element in the view.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the view description and use the correct element name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Fvopt(3), <Font>Fvnull(3), <Font>Fvselinit(3), <Font>viewfile(5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

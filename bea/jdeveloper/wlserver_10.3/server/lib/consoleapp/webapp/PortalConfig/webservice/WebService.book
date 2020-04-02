@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the WebService pages in the j2ee subsystem
+    of the WebLogic Server administration console.
+
+    There are several main branches in this book:
+
+     - WebServiceApplicationBook is used for a standalone WebService
+     - WebServiceModuleBook is used for a WebService module within another app
+
+    Copyright (c) 2004,2009,2010, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="WebServiceModule" title="book.title" markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+
+      <!-- Definition for the WebServiceModuleBook configuration pages -->
+      <netuix:book definitionLabel="WebServiceModuleBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="WebServiceModulePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="WebServiceModuleTabsBook"
+                               title="AppBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the Overview tab -->
+                  <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceModuleOverviewPage"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.webservice.webserviceoverview.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleOverviewPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceModuleOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the Configuration tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="WebServiceModuleConfigurationPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for web service module configuration general page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceModuleConfigurationGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.webserviceconfigurationgeneral.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleConfigurationPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceConfigurationGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for web service module configuration handlers page -->
+                        <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceModuleConfigurationHandlersPage"
+                                       presentationClass="page-content"
+                                       title="tab.handlers.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.webserviceconfigurationhandlers.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                           <netuix:content>
+                             <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                               <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceConfigurationHandlersPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceConfigurationHandlers.portlet"/>
+                               </netuix:placeholder>
+                             </netuix:layout>
+                           </netuix:content>
+                         </netuix:page>
+
+                          <!-- Definition for web service module configuration web service policy page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceModuleConfigurationWebServicePolicyPage"
+                                       presentationClass="page-content"
+                                       title="tab.wspolicy.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicepoliciestable.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebServiceConfigurationWebServicePoliciesPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceConfigurationWebServicePolicies.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServicePortTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.webservicesports.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webserviceporttable.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortTablePortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServicePortTable.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="WebServiceModuleSecurityPage"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- definition for web service module roles table page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceModuleSecurityRolesTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.roles.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.module.role.table.page.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleSecurityRolesTablePortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceModuleRolesTable.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for web service module policies page -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceModuleSecurityPoliciesPage"
+                                       presentationClass="page-content"
+                                       title="tab.policies.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.module.policies.page.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleSecurityPoliciesPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceModulePolicies.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the testing tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceModuleTestingPage"
+                                   presentationClass="page-content"
+                                   title="tab.testing.label">
+                        <netuix:meta name="helpid" content="J2EE.webservice.webservicetesting.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceTestingPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceTesting.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="WebServiceModuleMonitorRunningPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the web service monitor general tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceWebServiceMonitorGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicemonitorgeneral.title;j2ee"/>
+                            <netuix:meta name="monitoring" content="WEBSERVICE"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceMonitorGeneralPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceMonitorGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                      <!-- Definition for the web service monitor invocations tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceWebServiceMonitorInvocationsPage"
+                                       presentationClass="page-content"
+                                       title="tab.invocations.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicemonitorinvocations.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceMonitorInvocationsPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceMonitorInvocations.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                      <!-- Definition for the web service monitor wspolicy tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceWebServiceMonitorWSPolicyPage"
+                                       presentationClass="page-content"
+                                       title="tab.wspolicy.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicemonitorwspolicy.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceMonitorWSPolicyPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceMonitorWSPolicy.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                      <!-- Definition for the web service monitor ports tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceWebServiceMonitorPortsPage"
+                                       presentationClass="page-content"
+                                       title="tab.webservicesports.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicemonitorports.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceMonitorPortsPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceMonitorPorts.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the web service client monitoring pages -->
+      <netuix:book definitionLabel="WebServiceWebServiceClientMonitorBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceWebServiceClientMonitorPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="WebServiceWebServiceClientMonitorTabsBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the web service client monitor general page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceWebServiceClientMonitorGeneralPage"
+                                   presentationClass="page-content"
+                                   title="tab.general.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.webserviceclientmonitorgeneral.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="monitoring" content="WebServiceClient"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceClientMonitorGeneralPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceClientMonitorGeneral.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the web service client monitor invocations page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceWebServiceClientMonitorInvocationsPage"
+                                   presentationClass="page-content"
+                                   title="tab.invocations.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.webserviceclientmonitorinvocations.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceClientMonitorInvocationsPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceClientMonitorInvocations.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the web service client monitor ws policy page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceWebServiceClientMonitorWSPolicyPage"
+                                   presentationClass="page-content"
+                                   title="tab.wspolicy.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.webserviceclientmonitorwspolicy.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceClientMonitorWSPolicyPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceClientMonitorWSPolicy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the web service client monitor servers tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceWebServiceClientMonitorServersPage"
+                                   presentationClass="page-content"
+                                   title="tab.servers.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.webserviceclientmonitorservers.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceWebServiceClientMonitorServersPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceClientMonitorServers.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the WebServiceTunablesGeneralDelete assistant page -->
+      <netuix:book definitionLabel="WebServiceTunablesGeneralDelete" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.variable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceTunablesGeneralDeletePage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="J2EE.webapp.stop.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceTunablesGeneralDeletePortlet"
+                                          contentUri="/PortalConfig/webservice/WebServiceTunablesGeneralDelete.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the create web service module roles assistant -->
+      <netuix:book definitionLabel="WebServiceModuleRolesCreate" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   title="assistant.webservice.module.create.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceModuleCreateRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webservice.module.role.create.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleCreateRolesPortlet"
+                                          contentUri="/PortalConfig/webservice/CreateWebServiceModuleRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the delete web service module roles assistant -->
+      <netuix:book definitionLabel="WebServiceModuleRolesDelete" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   title="assistant.webservice.module.delete.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceModuleDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webservice.module.role.delete.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleDeleteRolesPortlet"
+                                          contentUri="/PortalConfig/webservice/DeleteWebServiceModuleRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definiton for the web service module roles page -->
+      <netuix:book definitionLabel="WebServiceModuleRolesBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   title="assistant.webservice.module.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceModuleRolesTabPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webservice.module.role.manage.page.title;j2ee"/>
+            <netuix:meta name="breadcrumb" content="assistant.webservice.module.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceModuleRolesPortlet"
+                                          contentUri="/PortalConfig/webservice/WebServiceModuleRoles.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the web service policy configuration assistant page -->
+      <netuix:book definitionLabel="ConfigureWebServicePolicyBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   title="assistant.webservice.policy.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="ConfigureWebServicePolicyPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webservice.webservicepolicy.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ConfigureWebServicePolicyPortlet"
+                                          contentUri="/PortalConfig/webservice/ConfigureWebServicePolicy.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- Definition for the web service handlers configuration pages -->
+      <netuix:book definitionLabel="WebServiceConfigurationHandlersBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   title="webservice.webserviceconfigurationhandlers.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceConfigurationHandlersPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="WebServiceConfigurationHandlersTabsBook"
+                               title="WebServiceConfigurationHandlersTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the web service handlers configuration pages (why do we need another book here) -->
+                  <netuix:book markupName="book" markupType="Book"
+                                   definitionLabel="WebServiceConfigurationHandlersInnerBook"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the web service handlers general configuration page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceConfigurationHandlersGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.webserviceconfigurationhandlersgeneral.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="webservice.handlers.general.title"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebServiceConfigurationHandlersGeneralPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceConfigurationHandlersGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the web service handlers init params configuration page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="WebServiceConfigurationHandlersInitParamsPage"
+                                       presentationClass="page-content"
+                                       title="tab.initparams.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.webserviceconfigurationhandlersinitparams.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="webservice.handlers.initparams.title"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebServiceConfigurationHandlersInitParamsPortlet"
+                                                          contentUri="/PortalConfig/webservice/WebServiceConfigurationHandlersInitParams.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="WebServicePortConfigBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServicePortConfigPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="WebServicePortConfigTabsBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                      <!-- Definition for the port configure reliable messaging tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortConfigReliableMessagePage"
+                                   presentationClass="page-content"
+                                   title="tab.webservicesreliablemessage.label">
+                        <netuix:meta name="helpid" content="J2EE.webService.portconfigreliablemessage.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="configuration-page" content="weblogic.j2ee.descriptor.wl.PortComponentBean"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortConfigReliableMessagePortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServicePortConfigReliableMessage.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the port configure buffering tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortConfigBufferingPage"
+                                   presentationClass="page-content"
+                                   title="tab.webservicesbuffering.label">
+                        <netuix:meta name="helpid" content="J2EE.webService.portconfigbuffering.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortConfigBufferingPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServicePortConfigBuffering.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the port configure atomic transaction tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortConfigAtomicTransactionPage"
+                                   title="tab.webservicesatomictransaction.label"
+                                   presentationClass="page-content">
+                        <netuix:meta name="helpid" content="J2EE.webservice.webserviceconfigatomictransaction.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceConfigAtomicTransactionPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceConfigAtomicTransaction.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the port configure persistence tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortConfigPersistencePage"
+                                   presentationClass="page-content"
+                                   title="tab.webservicespersistence.label">
+                        <netuix:meta name="helpid" content="J2EE.webService.portconfigpersistence.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortConfigPersistencePortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServicePortConfigPersistence.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="WebServiceOperationConfigBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceOperationConfigPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="WebServiceOperationConfigTabsBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+
+                      <!-- Definition for the operation configure atomic transaction tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceOperationConfigAtomicTransactionPage"
+                                   title="tab.webservicesatomictransaction.label"
+                                   presentationClass="page-content">
+                        <netuix:meta name="helpid" content="J2EE.webservice.webserviceconfigatomictransaction.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="configuration-page" content="weblogic.j2ee.descriptor.wl.OperationComponentBean"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceConfigAtomicTransactionPortlet"
+                                                      contentUri="/PortalConfig/webservice/WebServiceConfigAtomicTransaction.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the port monitoring pages -->
+      <netuix:book definitionLabel="WebServicePortMonitorBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServicePortMonitorPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="WebServicePortMonitorTabsBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the port monitor general page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorGeneralPage"
+                                   presentationClass="page-content"
+                                   title="tab.general.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitorgeneral.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="monitoring" content="WseePortRuntime"/>
+                        <netuix:meta name="monitoring" content="WseeClientPortRuntime"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorGeneralPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorGeneral.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the port monitor invocations page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorInvocationsPage"
+                                   presentationClass="page-content"
+                                   title="tab.invocations.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitorinvocations.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorInvocationsPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorInvocations.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the port monitor cluster routing page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorClusterRoutingPage"
+                                   presentationClass="page-content"
+                                   title="tab.clusterrouting.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitorclusterrouting.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorClusterRoutingPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorClusterRouting.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the port monitor make connection anonymous endpoints page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorMakeConnectionAnonymousEndpointsPage"
+                                   presentationClass="page-content"
+                                   title="tab.makeconnection.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitormakeconnectionanonymousendpoints.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorMakeConnectionAnonymousEndpointsPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorMakeConnectionAnonymousEndpoints.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the port monitor reliable message sequences page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorReliableMessageSequencesPage"
+                                   presentationClass="page-content"
+                                   title="tab.webservicesreliablemessage.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitorreliablemessagesequences.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorReliableMessageSequencesPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorReliableMessageSequences.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the port monitor ws policy page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorWSPolicyPage"
+                                   presentationClass="page-content"
+                                   title="tab.wspolicy.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitorwspolicy.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorWSPolicyPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorWSPolicy.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the port monitor operations tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServicePortMonitorOperationsPage"
+                                   presentationClass="page-content"
+                                   title="tab.operations.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.portmonitoroperations.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServicePortMonitorOperationsPortlet"
+                                                      contentUri="/PortalConfig/webservice/PortMonitorOperations.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the operation monitoring pages -->
+      <netuix:book definitionLabel="WebServiceOperationMonitorBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="WebServiceOperationMonitorPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="OperationMonitorTabsBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the operation monitor general -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceOperationMonitorGeneralPage"
+                                   presentationClass="page-content"
+                                   title="tab.general.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.operationmonitorgeneral.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="monitoring" content="WseeOperationRuntime"/>
+                        <netuix:meta name="monitoring" content="WseeClientOperationRuntime"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceOperationMonitorGeneralPortlet"
+                                                      contentUri="/PortalConfig/webservice/OperationMonitorGeneral.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the operation monitor invocations -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="WebServiceOperationMonitorInvocationsPage"
+                                   presentationClass="page-content"
+                                   title="tab.invocations.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.operationmonitorinvocations.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceOperationMonitorInvocationsPortlet"
+                                                      contentUri="/PortalConfig/webservice/OperationMonitorInvocations.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the reliable message sequence monitoring pages -->
+      <netuix:book definitionLabel="WebServiceReliableMessageSequenceMonitorBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.WebServiceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <!-- Definition for the reliable message sequence monitor requests page -->
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="WebServiceReliableMessageSequenceMonitorRequestsPage"
+                       presentationClass="page-content"
+                       title="not.used">
+            <netuix:meta name="helpid" content="J2EE.webservice.reliablemessagesequencemonitorrequests.title;j2ee"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>
+            <netuix:meta name="monitoring" content="weblogic.management.runtime.WsrmSequenceInfo"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceReliableMessageSequenceMonitorRequestsPortlet"
+                                          contentUri="/PortalConfig/webservice/ReliableMessageSequenceMonitorRequests.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

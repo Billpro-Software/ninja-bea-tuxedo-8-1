@@ -1,0 +1,60 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/CSIMPAPP/WUBBCSIMPLE	$Revision: 1.5 $"
+
+#Skeleton UBBCONFIG file for the TUXEDO COBOL Simple Application for /WS.
+#Replace the <bracketed> items with the appropriate values.
+
+*RESOURCES
+IPCKEY		<IPC Key>
+
+#Example:
+#IPCKEY		123456
+
+DOMAINID	WUBBCSIMPLE
+MASTER		simple
+MAXACCESSERS	10
+MAXSERVERS	10
+MAXSERVICES	20
+MODEL		SHM
+LDBAL		N
+
+*MACHINES
+DEFAULT:
+		APPDIR="<current directory>"
+		TUXCONFIG="<path name of tuxconfig file>"
+		TUXDIR="<root directory of TUXEDO>"
+                ENVFILE="<path name of env file>"
+#Example:
+#		APPDIR="/home/me/simpapp"
+#		TUXCONFIG="/home/me/simpapp/tuxconfig"
+#		TUXDIR="/usr/tuxedo"
+#               ENVFILE="/home/me/simpapp/envfile"
+
+<machine-name>	LMID=simple
+		MAXWSCLIENTS=2
+
+#Example:
+#usltux		LMID=simple
+
+*GROUPS
+GROUP1
+	LMID=simple	GRPNO=1	OPENINFO=NONE
+
+*SERVERS
+DEFAULT:
+		CLOPT="-A"
+
+CSIMPSRV	SRVGRP=GROUP1 SRVID=1
+
+WSL		SRVGRP=GROUP1 SRVID=2
+		CLOPT=" -- -n <server-net-address> -d <server-net-device>"
+		RQPERM=0660	REPLYQ=Y	RPPERM=0660
+		MIN=1		MAX=1		CONV=N
+		SYSTEM_ACCESS=FASTPATH
+		MAXGEN=5	GRACE=86400	RESTART=Y
+
+#Example:
+#CLOPT=" -- -n 0x0002642393026e64 -d /dev/tcp"
+
+*SERVICES
+CSIMPSRV

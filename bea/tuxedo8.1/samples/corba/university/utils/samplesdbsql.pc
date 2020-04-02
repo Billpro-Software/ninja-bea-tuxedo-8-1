@@ -1,0 +1,861 @@
+/*      Copyright (c) 2003 BEA Systems, Inc. All Rights Reserved.
+
+	THIS IS UNPUBLISHED PROPRIETARY
+	SOURCE CODE OF BEA Systems, Inc.
+	The copyright notice above does not
+	evidence any actual or intended
+	publication of such source code.
+*/
+
+
+// MODULE NAME:
+//
+//    samplesdbsql.cpp
+//
+// FACILITY:
+//
+//    samples 
+//
+// ABSTRACT:
+//
+//    This include file contains C++ class methods that implements access to
+//    an SQL database. Classes are
+//
+//      CourseSynopsisSQL
+//      CourseSynopsisIteratorSQL
+//      ClassScheduleSQL
+//      CourseSQL
+//      StudentSQL
+//      DatabaseSQL
+//    
+//
+// CLASSES CONTAINED IN THIS MODULE:
+//    
+//
+// AUTHORS:     Mark Scanlon, Martin Varela
+//              
+// CREATION DATE: 4-Feb-1998
+//
+//
+
+#ifdef WIN32
+#include <windows.h>
+#else
+#include <ctype.h>
+#endif
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#if (defined(WIN32) && (!defined(ORACLE8I)))
+#include <sqlproto.h>
+#else
+#include <oraca.h>
+#endif
+// Include the SQL Communications Area
+// You can use #include or EXEC SQL INCLUDE
+EXEC SQL INCLUDE SQLCA;
+
+#include <TP.h>
+#include <userlog.h>
+
+#ifdef NO_TRACING
+#undef NO_TRACING
+#endif
+
+#ifndef DB_TRACING
+#define NO_TRACING
+#endif
+
+#include "samplesdbsql.h"
+
+// Parse=partial by default when code=cpp so, preprocessor directives are
+// recognized and parsed fully.
+
+#define CONN_STR_LEN    30
+
+#define USERNAME_LEN    10
+#define PASSWORD_LEN    USERNAME_LEN
+#define ICEB_NAM_LEN    30
+#define ICEB_DES_LEN    30
+
+// Declare section is required when CODE=CPP and/or PARSE={PARTIAL|NONE}
+EXEC SQL BEGIN DECLARE SECTION;
+
+    char *username= NULL;
+    char *password= NULL;
+
+    // Define a host structure for the output values of a SELECT statement
+    // Lets define separate structures for each of the classes so that these
+    // do not get trashed underneath us.
+
+    struct courseSynDat {
+        unsigned long     id;
+        VARCHAR title[21];
+    } CourseSynRec;
+
+    struct courseSIDat {
+        unsigned long     id;
+    } CourseSIRec;
+
+    struct courseDat {
+        unsigned long     id;
+        VARCHAR           title[21];
+        VARCHAR           desc[51];
+        float             amount;
+        VARCHAR           professor[31];
+        unsigned short    seats;
+        unsigned short    credits;
+        unsigned short    reg_students;
+    } CourseRec;
+
+    struct courseNIDat {
+        unsigned long     id;
+    } CourseNIRec;
+
+    struct RegnDat {
+        unsigned long     stud_id;
+        unsigned long     course_id;
+        unsigned short    seats;
+        unsigned short    reg_students;
+    } RegnRec;
+
+    struct classScheduleDat {
+        unsigned long     id;
+        unsigned short    start_hr;
+        unsigned short    duration;
+        char      monday_scheduled;
+        char      tuesday_scheduled;
+        char      wednesday_scheduled;
+        char      thursday_scheduled;
+        char      friday_scheduled;
+    } ClassScheduleRec;
+
+    struct studentDat {
+        unsigned long     id;
+        VARCHAR           name[21];
+        unsigned long     account;
+    } StudentRec;
+
+    // Input host variables
+    VARCHAR       sqlstmt[512];
+    VARCHAR       search[20];
+    int   count;
+
+EXEC SQL END DECLARE SECTION;
+
+// Forward declare the getEnvVariable function
+void sqlError();
+unsigned long   getEnvVariable( char * envVarName,
+				char * envVarValue,
+				unsigned long envValueLen);
+
+static unsigned short   sqlConnected = CORBA_FALSE;
+
+void _throwCannotConnectDatabase()
+    { sqlError(); throw SamplesCannotConnectDatabase(); }
+
+void _throwDatabaseNotConnected()
+    { sqlError(); throw SamplesDatabaseNotConnected(); }
+
+void _throwBadStudentId()
+    { sqlError(); throw SamplesBadStudentId(); }
+
+void _throwBadCourseId()
+    { sqlError(); throw SamplesBadCourseId(); }
+
+void _throwNoMoreItems()
+    { sqlError(); throw SamplesNoMoreItems(); }
+
+void _throwNoMatches()
+    { sqlError(); throw SamplesNoMatches(); }
+
+void _throwCourseRegFull()
+    { sqlError(); throw SamplesCourseRegFull(); }
+
+void _throwAlreadyRegistered()
+    { sqlError(); throw SamplesAlreadyRegistered(); }
+
+void _throwDbError()
+    { sqlError(); throw SamplesDbError(); }
+
+//
+//class CourseSynopsisSQL
+//
+CourseSynopsisSQL::CourseSynopsisSQL(CourseNumber course_number)
+{
+    // TRACE_METHOD("CourseSynopsisSQL");
+    // TRACE("CourseNumber : " << course_number);
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    // Query the database for the Course title
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwBadCourseId();
+
+    CourseSynRec.id = course_number;
+    EXEC SQL SELECT TITLE INTO :CourseSynRec.title FROM COURSE
+                        WHERE   COURSE_NO = :CourseSynRec.id;
+
+    // TRACE("Found COURSE : " << course_number);
+
+    m_course_number = course_number;
+
+    m_title = new char[ CourseSynRec.title.len + 1 ];
+    strncpy(m_title, (char *) CourseSynRec.title.arr, CourseSynRec.title.len);
+    m_title [ CourseSynRec.title.len ] = '\0';
+
+}
+
+CourseSynopsisSQL::~CourseSynopsisSQL()
+{
+    delete[] m_title;
+}
+
+
+//
+//class CourseSynopsisIteratorSQL
+//
+CourseSynopsisIteratorSQL::CourseSynopsisIteratorSQL(
+                            const char* search_criteria) 
+{
+    // SQL Command to select based on search_criteria
+
+    // TRACE_METHOD("CourseSynopsisIteratorSQL");
+    // TRACE("Search Criteria : " << search_criteria);
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    // Get the count of all courses matching the search criteria before actually
+    // getting each of the course description records.
+
+    if (search_criteria != NULL)
+    {
+        sprintf((char *) search.arr, "%%%s%%", search_criteria);
+
+    // Do a case-insensitive search of the search_criteria specified.
+        for (unsigned short i = 0; i < strlen((const char *) search.arr); i++)
+            search.arr[i] = toupper(search.arr[i]);
+
+        search.len = strlen((const char *) search.arr);
+        EXEC SQL SELECT count(*) INTO :count FROM COURSE
+			WHERE   UPPER(COURSE.TITLE) LIKE :search       OR
+				UPPER(COURSE.DESCR)  LIKE :search      OR
+				UPPER(COURSE.PROFESSOR) LIKE :search;
+    }
+    else
+        EXEC SQL SELECT count(*) INTO :count FROM COURSE;
+
+    if (count == 0)
+        throw SamplesNoMatches();
+
+    // TRACE("Found COURSE : " << search_criteria);
+
+    m_count = count;
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwDbError();
+
+    // Assign a SQL query to the VARCHAR sqlstmt.  Both the array and the
+    // length parts must be set properly. Note that the query contains one
+    // host-variable placeholder, v1, for which an actual input host
+    // variable must be supplied at OPEN time.
+
+    if (search_criteria != NULL)
+        sprintf((char *)sqlstmt.arr,
+        "SELECT COURSE_NO FROM COURSE WHERE UPPER(COURSE.TITLE) LIKE \'%s\' OR \
+ UPPER(COURSE.DESCR) LIKE \'%s\' OR \
+ UPPER(COURSE.PROFESSOR) LIKE \'%s\'", search.arr, search.arr, search.arr);
+    else
+        strcpy((char *)sqlstmt.arr, "SELECT COURSE_NO FROM COURSE");
+
+    sqlstmt.len = (short) strlen((char *)sqlstmt.arr);
+
+    // The PREPARE statement associates a statement name with a string
+    // containing a SELECT statement. The statement name is a SQL
+    // identifier, not a host variable, and therefore does not appear
+    // in the Declare Section.
+
+    // A single statement name can be PREPAREd more than once, optionally
+    // FROM a different string variable.
+
+    EXEC SQL PREPARE S FROM :sqlstmt;
+
+    // The DECLARE statement associates a cursor with a PREPAREd statement.
+    // The cursor name, like the statement name, does not appear in the
+    // Declare Section.
+
+    // A single cursor name can not be DECLAREd more than once.
+
+    EXEC SQL DECLARE C CURSOR FOR S;
+
+    // The OPEN statement evaluates the active set of the PREPAREd query
+    // USING the specified input host variables, which are substituted
+    // positionally for placeholders in the PREPAREd query. For each
+    // occurrence of a placeholder in the statement there must be a
+    // variable in the USING clause. That is, if a placeholder occurs
+    // multiple times in the statement, the corresponding variable must
+    // appear multiple times in the USING clause.
+
+    // The USING clause can be omitted only if the statement contains no
+    // placeholders. OPEN places the cursor at the first row of the active
+    // set in preparation for a FETCH.
+
+    // A single DECLAREd cursor can be OPENed more than once, optionally
+    // USING different input host variables.
+
+    EXEC SQL OPEN C;
+
+    m_num_remaining = count;
+}
+
+CourseSynopsisIteratorSQL::~CourseSynopsisIteratorSQL()
+{
+    // The CLOSE statement releases resources associated with
+    // the cursor.
+
+    EXEC SQL CLOSE C;
+
+    // Caused problems where the cursor was held
+    // Commit any pending changes and Disconnect from ORACLE
+
+    // EXEC SQL COMMIT WORK RELEASE;
+
+}
+
+CourseSynopsis CourseSynopsisIteratorSQL::next()
+{
+    // TRACE_METHOD("CourseSynopsisIteratorSQL::next");
+
+    // SQL Command to get next CourseSynopsis record
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwNoMoreItems();
+
+    // if (isDone())
+        // return NULL;
+
+    EXEC SQL FETCH C INTO :CourseSIRec.id;
+
+    // Not sure we would like CourseSynopsisSQL to do another database query
+    // to get the title when we could very well copy it in here.
+
+    // TRACE("Found CourseSynopsisIteratorSQL::next : " << CourseSIRec.id);
+
+    m_num_remaining--;
+    return CourseSynopsis(new CourseSynopsisSQL(CourseSIRec.id) );
+}
+
+
+//
+//class CourseNumberIteratorSQL
+//
+CourseNumberIteratorSQL::CourseNumberIteratorSQL(
+				StudentId student_id)
+{
+    // TRACE_METHOD("CourseNumberIteratorSQL");
+    // TRACE("StudentId : " << student_id);
+
+    // SQL Command to get all courses this student is registered for
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    // Get the count of all courses before actually getting each of the
+    // course number records.
+
+    CourseNIRec.id = student_id;
+    EXEC SQL SELECT count(*) INTO :count FROM REGISTRATION WHERE
+                        STUD_ID = :CourseNIRec.id;
+
+    if (count == 0)
+        throw SamplesNoMatches();
+
+    // TRACE("Found CourseNumberIteratorSQL : " << student_id);
+
+    sprintf((char *)sqlstmt.arr,
+            "SELECT COURSE_NO FROM REGISTRATION WHERE \
+ STUD_ID = %d", student_id);
+
+    m_count = count;
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwDbError();
+
+    // Assign a SQL query to the VARCHAR sqlstmt.  Both the array and the
+    // length parts must be set properly. Note that the query contains one
+    // host-variable placeholder, v1, for which an actual input host
+    // variable must be supplied at OPEN time.
+
+    sqlstmt.len = (short) strlen((char *)sqlstmt.arr);
+
+    // The PREPARE statement associates a statement name with a string
+    // containing a SELECT statement. The statement name is a SQL
+    // identifier, not a host variable, and therefore does not appear
+    // in the Declare Section.
+
+    // A single statement name can be PREPAREd more than once, optionally
+    // FROM a different string variable.
+
+    EXEC SQL PREPARE T FROM :sqlstmt;
+
+    // The DECLARE statement associates a cursor with a PREPAREd statement.
+    // The cursor name, like the statement name, does not appear in the
+    // Declare Section.
+
+    // A single cursor name can not be DECLAREd more than once.
+
+    EXEC SQL DECLARE D CURSOR FOR T;
+
+    // The OPEN statement evaluates the active set of the PREPAREd query
+    // USING the specified input host variables, which are substituted
+    // positionally for placeholders in the PREPAREd query. For each
+    // occurrence of a placeholder in the statement there must be a
+    // variable in the USING clause. That is, if a placeholder occurs
+    // multiple times in the statement, the corresponding variable must
+    // appear multiple times in the USING clause.
+
+    // The USING clause can be omitted only if the statement contains no
+    // placeholders. OPEN places the cursor at the first row of the active
+    // set in preparation for a FETCH.
+
+    // A single DECLAREd cursor can be OPENed more than once, optionally
+    // USING different input host variables.
+
+    EXEC SQL OPEN D;
+
+    m_num_remaining = count;
+
+}
+
+CourseNumberIteratorSQL::~CourseNumberIteratorSQL()
+{
+    // The CLOSE statement releases resources associated with
+    // the cursor.
+
+    EXEC SQL CLOSE D;
+
+    // EXEC SQL COMMIT WORK RELEASE;
+
+}
+
+CourseNumber CourseNumberIteratorSQL::next()
+{
+    // TRACE_METHOD("CourseNumberIteratorSQL::next");
+
+    // SQL Command to get next CourseNumber record
+    if (!sqlConnected)
+	throw SamplesDatabaseNotConnected();
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwNoMoreItems();
+
+    EXEC SQL FETCH D INTO :CourseNIRec.id;
+
+    // TRACE("Found CourseNumberIteratorSQL::next : " << CourseNIRec.id);
+
+    m_num_remaining--;
+    return CourseNIRec.id;
+}
+
+
+//
+//class ClassScheduleSQL
+//
+ClassScheduleSQL::ClassScheduleSQL(CourseNumber course_number)
+{
+    // TRACE_METHOD("ClassScheduleSQL");
+    // TRACE("CourseNumber : " << course_number);
+
+    // SQL Command to get ClassSchedule info
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwBadCourseId();
+
+    // Query the database for the Class schedule information
+
+    ClassScheduleRec.id = course_number;
+    EXEC SQL SELECT COURSE_NO, START_HR, DURATION, MONDAY,
+                    TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
+                INTO :ClassScheduleRec FROM COURSE
+                    WHERE   COURSE_NO = :ClassScheduleRec.id;
+
+    // TRACE("Found ClassScheduleSQL : " << course_number);
+
+    m_start_hour = ClassScheduleRec.start_hr;
+    m_duration   = ClassScheduleRec.duration;
+
+    m_days_scheduled = 0;
+
+    if (ClassScheduleRec.monday_scheduled == 'Y')
+        m_days_scheduled |= MON;
+
+    if (ClassScheduleRec.tuesday_scheduled == 'Y')
+        m_days_scheduled |= TUE;
+
+    if (ClassScheduleRec.wednesday_scheduled == 'Y')
+        m_days_scheduled |= WED;
+
+    if (ClassScheduleRec.thursday_scheduled == 'Y')
+        m_days_scheduled |= THU;
+
+    if (ClassScheduleRec.friday_scheduled == 'Y')
+        m_days_scheduled |= FRI;
+
+}
+
+ClassScheduleSQL::~ClassScheduleSQL() 
+{  
+}
+
+
+//
+//class CourseSQL
+//
+
+CourseSQL::CourseSQL(CourseNumber course_number)
+{
+    // TRACE_METHOD("CourseSQL");
+    // TRACE("CourseNumber : " << course_number);
+
+    // SQL Command to get Course info
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwBadCourseId();
+
+    // Query the database for the Course details and save it aside
+
+    CourseRec.id = course_number;
+    EXEC SQL SELECT COURSE_NO, TITLE, DESCR, AMOUNT,
+                    PROFESSOR, SEATS, CREDITS, REG_STUD
+                INTO :CourseRec FROM COURSE
+                    WHERE   COURSE_NO = :CourseRec.id;
+
+    // TRACE("Found CourseSQL : " << course_number);
+
+    m_course_number = course_number;
+
+    m_title = new char[ CourseRec.title.len + 1 ];
+    strncpy(m_title, (char *) CourseRec.title.arr, CourseRec.title.len);
+    m_title [ CourseRec.title.len ] = '\0';
+
+    m_description = new char[ CourseRec.desc.len + 1 ];
+    strncpy(m_description, (char *) CourseRec.desc.arr, CourseRec.desc.len);
+    m_description [ CourseRec.desc.len ] = '\0';
+
+    m_professor = new char[ CourseRec.professor.len + 1 ];
+    strncpy(m_professor, (char *) CourseRec.professor.arr,
+                CourseRec.professor.len);
+    m_professor [ CourseRec.professor.len ] = '\0';
+
+    // Is number_of_credits a float or unsigned short?
+    // Is cost a double or simply a float?
+
+    m_cost              = CourseRec.amount;
+    m_number_of_seats   = CourseRec.seats;
+    m_number_of_credits = CourseRec.credits;
+    m_number_of_registered_students = CourseRec.reg_students;
+
+}
+	
+CourseSQL::~CourseSQL()
+{
+    if ( m_title != NULL )
+        delete [] m_title;
+
+    if ( m_description != NULL )
+        delete [] m_description;
+
+    if ( m_professor != NULL )
+        delete [] m_professor;
+	
+}
+
+
+//
+//class Student
+//
+	
+StudentSQL::StudentSQL(StudentId student_id)
+{
+    // TRACE_METHOD("StudentSQL");
+    // TRACE("StudentId : " << student_id);
+
+    // SQL Command to get Student info
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwBadStudentId();
+
+    // Query the database for the Student information
+
+    StudentRec.id = student_id;
+    EXEC SQL SELECT STUD_ID, NAME, ACCOUNT
+                INTO :StudentRec FROM STUDENT
+                    WHERE   STUD_ID = :StudentRec.id;
+
+    // TRACE("Found StudentSQL : " << student_id);
+
+    m_student_id = student_id;
+
+    m_name = new char[ StudentRec.name.len + 1 ];
+    strncpy(m_name, (char *) StudentRec.name.arr, StudentRec.name.len);
+    m_name [ StudentRec.name.len ] = '\0';
+
+    m_account_number = StudentRec.account;
+
+}
+
+
+CourseNumberIterator	StudentSQL::get_registered_courses()
+{
+    // TRACE_METHOD("StudentSQL::get_registered_courses");
+
+    return ( CourseNumberIterator ( new CourseNumberIteratorSQL( m_student_id ) ) );
+}
+
+
+StudentSQL::~StudentSQL()
+{
+    delete [] m_name;
+}
+
+
+Student  DatabaseSQL::get_student(StudentId student_id)
+{
+    // TRACE_METHOD("DatabaseSQL::get_student");
+
+    return ( Student( new StudentSQL( student_id ) ) );
+}
+
+Course   DatabaseSQL::get_course(CourseNumber course_number)
+{
+    // TRACE_METHOD("DatabaseSQL::get_course");
+    // TRACE("CourseNumber : " << course_number);
+
+    return ( Course( new CourseSQL(course_number) ) );
+}
+
+CourseSynopsisIterator DatabaseSQL::get_courses(const char* search_criteria)
+{
+    // TRACE_METHOD("DatabaseSQL::get_courses");
+    // TRACE("Search Criteria : " << search_criteria);
+
+    return ( CourseSynopsisIterator( new CourseSynopsisIteratorSQL(search_criteria) ) );
+}
+    
+
+void DatabaseSQL::add_registration(StudentId student_id,
+				       CourseNumber course_number)
+{
+    // TRACE_METHOD("DatabaseSQL::add_registration");
+    // TRACE("StudentId : " << student_id);
+    // TRACE("CourseNumber : " << course_number);
+
+    // SQL Command to register a student for a specified course
+
+    if (!sqlConnected)
+        throw SamplesDatabaseNotConnected();
+
+    // Do we have a valid student id?
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwBadStudentId();
+
+    RegnRec.stud_id = student_id;
+    EXEC SQL SELECT STUD_ID INTO :RegnRec.stud_id FROM STUDENT
+                        WHERE   STUD_ID = :RegnRec.stud_id;
+
+    // Do we have a valid Course id?
+    // If yes, then is the registration for this course open?
+
+    EXEC SQL WHENEVER NOT FOUND DO _throwBadCourseId();
+
+    RegnRec.course_id = course_number;
+    EXEC SQL SELECT SEATS, REG_STUD INTO :RegnRec.seats,
+                                         :RegnRec.reg_students
+                FROM COURSE WHERE   COURSE_NO = :RegnRec.course_id
+                FOR UPDATE OF SEATS, REG_STUD;
+
+    if (RegnRec.reg_students == RegnRec.seats)
+        throw SamplesCourseRegFull();
+
+    // Register the student for this course
+
+    EXEC SQL WHENEVER NOT FOUND continue;
+    EXEC SQL WHENEVER SQLERROR DO _throwAlreadyRegistered();
+
+    // TRACE("Doing add_registration : ");
+
+    EXEC SQL INSERT INTO REGISTRATION VALUES (:RegnRec.stud_id, :RegnRec.course_id);
+
+    EXEC SQL WHENEVER SQLERROR DO _throwDbError();
+
+    // TRACE("Doing update COURSE reg_stud : ");
+
+    // Increment the number of registered students for this Course
+
+    EXEC SQL UPDATE COURSE SET REG_STUD = REG_STUD + 1
+                    WHERE COURSE_NO = :RegnRec.course_id;
+
+    // When we introduce transactions, we commit/rollback at a higher level
+    // EXEC SQL COMMIT WORK;
+
+}
+
+Database Database::open_db()
+{
+    // TRACE_METHOD("Database::open_db");
+
+    // If we are doing the Transactional Sample, we will let the XA RM handle the
+    // connect, commit and rollbacks.
+
+    sqlConnect();
+    sqlConnected = CORBA_TRUE;
+    return ( Database( new DatabaseSQL( ) ) );
+}
+
+
+//
+// FUNCTION NAME:
+//
+//      sqlConnectDb()
+//
+// DESCRIPTION:
+//
+//      This routine performs a connect to an Oracle instance
+//
+// FORMAL PARAMETERS:
+//
+//      NONE
+//
+// RETURN VALUE:
+//
+//      NONE
+//
+void    sqlConnectDb()
+{
+
+    // TRACE_METHOD("sqlConnectDb");
+
+    if (sqlConnected)
+        return;
+
+    // Save text of SQL current statement in the ORACA if an error occurs.
+
+    EXEC SQL WHENEVER SQLERROR DO _throwCannotConnectDatabase();
+    oraca.orastxtf = ORASTFERR;
+
+    // Retrieve the value of the environment variable USERID
+    // Connect using the connect string obtained from USERID.
+
+    char          connect_string[CONN_STR_LEN+1];    
+    unsigned long envvar_len;
+
+    if ((envvar_len = getEnvVariable( "USERID", connect_string,
+ 				       CONN_STR_LEN )) == 0)
+        throw SamplesCannotConnectDatabase();
+
+    username = connect_string;
+
+    // Connect to ORACLE. Program will throw a SamplesCannotConnectDatabase()
+    // exception if an error occurs when connecting to the default database.
+
+    // To connect to a remote instance you will need to specify a service name in
+    // the connect string. ie. EXEC SQL CONNECT "<Username>/<Password>@<ServiceName>";
+    // EXEC SQL CONNECT :connect_string;
+
+    EXEC SQL CONNECT :username;
+
+    // cout << "\nConnected to ORACLE as user: "
+    //      << (char *)username << endl << endl;
+
+}
+
+
+//
+// FUNCTION NAME:
+//
+//      sqlError()
+//
+// DESCRIPTION:
+//
+//      This routine outputs an Oracle error when one occurs
+//
+// FORMAL PARAMETERS:
+//
+//      NONE
+//
+// RETURN VALUE:
+//
+//      NONE
+//
+void sqlError()
+{
+//    EXEC SQL WHENEVER SQLERROR CONTINUE;
+      TP::userlog( "sqlError %s\n", sqlca.sqlerrm.sqlerrmc );
+//    EXEC SQL ROLLBACK RELEASE;
+}
+
+//
+// FUNCTION NAME:
+//
+//      getEnvVariable()
+//
+// DESCRIPTION:
+//
+//      This routine gets an environment variable
+//
+// FORMAL PARAMETERS:
+//
+//      NONE
+//
+// RETURN VALUE:
+//
+//      NONE
+//
+unsigned long   getEnvVariable( char * envVarName,
+                                char * envVarValue,
+                                unsigned long envValueLen)
+{
+    unsigned long return_len;
+#ifndef WIN32
+    char *        cptr;
+#endif
+
+#ifdef WIN32
+    return_len = GetEnvironmentVariable( (LPTSTR) envVarName,
+                                         (LPTSTR) envVarValue,
+                                         (DWORD) envValueLen );
+#else   //  ifdef unix
+    cptr       = getenv( envVarName );
+#endif
+
+    //  If environment variable name not found
+#ifdef WIN32
+    if ( return_len == 0 )
+        return( return_len );
+
+#else   //  ifdef unix
+    if ( cptr == NULL )
+        return( 0 );
+
+    return_len = (unsigned long)strlen( cptr );
+#endif
+
+    //  If buffer is too small, return 0
+    if ( return_len  > envValueLen )
+        return( 0 );
+
+#ifndef WIN32
+    // Copy the value to the buffer
+    strcpy( envVarValue, cptr );
+#endif
+
+    //  Return number of characters stored in envVarValue buffer
+    return( return_len );
+}

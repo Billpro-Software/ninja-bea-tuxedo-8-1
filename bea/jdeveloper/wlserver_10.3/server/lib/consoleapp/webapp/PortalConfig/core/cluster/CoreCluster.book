@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the pages for interacting with cluster
+    configurations in WebLogic Server.
+
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="ClusterBook" title="book.title" markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="CoreClusterBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="CoreClusterTabsBook"
+                               title="CoreClusterTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ClusterconfigTabPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="CoreClusterClusterConfigGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfiggeneral.title;core"/>
+                            <netuix:meta name="configuration-page" content="Cluster"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterClusterConfigGeneralPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigGeneral.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the messaging tab, formerly multicast -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterMulticastTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.messaging.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfigmulticast.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterClusterConfigMulticastPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigMulticast.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the servers tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="CoreClusterClusterConfigServersPage"
+                                       presentationClass="page-content"
+                                       title="tab.servers.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfigservers.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterClusterConfigServersPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigServers.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the replication tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterConfigReplicationPage"
+                                       presentationClass="page-content"
+                                       title="tab.replication.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfigreplication.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterConfigReplicationPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigReplication.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterConfigMigrationPage"
+                                       presentationClass="page-content"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfigmigration.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterConfigMigrationPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigMigration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Singleton Services tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterConfigSingletonServicesPage"
+                                       presentationClass="page-content"
+                                       title="tab.singletonservices.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.cluster.clusterconfigsingletonservices.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterConfigSingletonServicesPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigSingletonServices.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the scheduler tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterConfigSchedulerPage"
+                                       presentationClass="page-content"
+                                       title="tab.scheduling.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfigscheduler.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterConfigSchedulerPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigScheduler.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the overload tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterConfigOverloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.overload.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfigoverload.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterConfigOverloadPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigOverload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the health tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterConfigHealthPage"
+                                       presentationClass="page-content"
+                                       title="tab.healthmonitoring.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfighealth.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterConfigHealthPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigHealth.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the http tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterhttpTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.http.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterconfighttp.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterClusterConfigHttpPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterConfigHttp.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the monitor tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ClusterMonitorPage"
+                                   title="tab.monitor.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the summary tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterMonitorSummaryPage"
+                                       presentationClass="page-content"
+                                       title="tab.summary.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clustermonitorsummary.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterMonitorSummaryPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterMonitorSummary.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the health tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterMonitorHealthPage"
+                                       presentationClass="page-content"
+                                       title="tab.health.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clustermonitorhealth.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterMonitorHealthPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterMonitorHealth.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the failover tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterMonitorFailoverPage"
+                                       presentationClass="page-content"
+                                       title="tab.failover.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clustermonitorfailover.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterMonitorFailoverPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterMonitorFailover.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ClusterControlPages"
+                                   title="tab.control.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the startstop tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterControlServersPage"
+                                       presentationClass="page-content"
+                                       title="tab.startstop.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.servercontrol.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterControlServersPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterControlServers.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterControlSingletonServiceMigrationPage"
+                                       presentationClass="page-content"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.cluster.controlsingletonservicemigration.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="ClusterControlSingletonServiceMigrationPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterControlSingletonServiceMigration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the deployments tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterDeploymentsPage"
+                                   presentationClass="page-content"
+                                   title="tab.deployments.label">
+                        <netuix:meta name="helpid" content="Core.core.cluster.clusterdeployments.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterDeploymentsPortlet"
+                                                      contentUri="/PortalConfig/core/cluster/ClusterDeployments.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the services tab -->
+                      <netuix:book markupName="book" markupType="Book" definitionLabel="ClusterServicesPages"
+                                   title="tab.services.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the jdbc tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterServicesJDBCPage"
+                                       presentationClass="page-content"
+                                       title="tab.jdbc.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesjdbc.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesJDBCPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesJDBC.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jms tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterServicesJMSPage"
+                                       presentationClass="page-content"
+                                       title="tab.jms.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesjms.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesJMSPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesJMS.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the workmanager tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterServicesWorkManagerPage"
+                                       presentationClass="page-content"
+                                       title="tab.workmanager.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesworkmanager.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesWorkManagerPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesWorkManager.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the classes tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterServicesClassesPage"
+                                       presentationClass="page-content"
+                                       title="tab.classes.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesclasses.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesClassesPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesClasses.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the bridge tab -->
+                          <netuix:page markupName="page" markupType="Page"
+                                       definitionLabel="ClusterServicesMessagingBridgePage"
+                                       presentationClass="page-content"
+                                       title="tab.bridge.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesbridge.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesMessagingBridgePortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesMessagingBridge.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the mail tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterServicesMailPage"
+                                       presentationClass="page-content"
+                                       title="tab.mail.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesmail.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesMailPortlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesMail.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the filet3 tab -->
+                          <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterServicesFileT3Page"
+                                       presentationClass="page-content"
+                                       title="tab.filet3.label">
+                            <netuix:meta name="helpid" content="Core.core.cluster.clusterservicesfilet3.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterServicesFileT3Portlet"
+                                                          contentUri="/PortalConfig/core/cluster/ClusterServicesFileT3.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- End Services Tab Definition -->
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="ClusterNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.cluster.clusternotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Server creation assistant page -->
+      <netuix:book definitionLabel="CoreClusterAddServerBook" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.add.server.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterAddServer"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.cluster.addserver.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterAddServerPortlet"
+                                          contentUri="/PortalConfig/core/cluster/AddServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Remove Server assistant page -->
+      <netuix:book definitionLabel="CoreClusterRemoveServerBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.remove.server.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterRemoveServer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.removeserver.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterRemoveServerPortlet"
+                                          contentUri="/PortalConfig/core/cluster/RemoveServer.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the create Singleton Service assistant page -->
+      <netuix:book definitionLabel="CoreClusterCreateSingletonServiceBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.singletonservice.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterCreateSingletonService"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Core.core.singletonservice.createsingletonservice.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterCreateSingletonServicePortlet"
+                                          contentUri="/PortalConfig/core/cluster/CreateSingletonService.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Remove Singleton Service assistant page -->
+      <netuix:book definitionLabel="CoreClusterDeleteSingletonServiceBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.singletonservice.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterDeleteSingletonService"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="Core.core.singletonservice.deletesingletonservice.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterDeleteSingletonServicePortlet"
+                                          contentUri="/PortalConfig/core/cluster/DeleteSingletonService.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Migrate Singleton Service assistant page -->
+      <netuix:book definitionLabel="ClusterMigrateSingletonServiceBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.migrate.singletonservice.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="ClusterMigrateSingletonService"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="Core.core.singletonservice.migratesingletonservice.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="ClusterMigrateSingletonServicePortlet"
+                                          contentUri="/PortalConfig/core/cluster/MigrateSingletonService.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Cluster table page -->
+      <netuix:book definitionLabel="CoreClusterClusterTableBook" markupName="book"
+                   markupType="Book"
+                   title="clusters.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterClusterTablePage"
+                       title="not.used"
+                       hidden="true"
+                       backingFile="com.bea.console.utils.GeneralBackingFile"
+                       threadsafe="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Core.core.cluster.table.title;core"/>
+            <netuix:meta name="breadcrumb" content="clusters.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterClusterTablePortlet"
+                                          contentUri="/PortalConfig/core/cluster/ClusterTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the cluster migration data source creation assistant page -->
+      <netuix:book definitionLabel="CoreClusterCreateMigrationDataSourceBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jdbcdatasource.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterCreateMigrationDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.createjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="CoreClusterCreateMigrationDataSourcePortlet"
+                                          contentUri="/PortalConfig/core/cluster/CreateMigrationDataSource.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Cluster creation assistant page -->
+      <netuix:book definitionLabel="CoreClusterCreateClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.cluster.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterCreateCluster"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.cluster.createcluster.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterCreateClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/CreateCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Cluster clone assistant page -->
+      <netuix:book definitionLabel="CoreClusterCloneClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.clone.cluster.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterCloneCluster"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.cluster.createcluster.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterCloneClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/CloneCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Cluster deletion assistant page -->
+      <netuix:book definitionLabel="CoreClusterDeleteClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.cluster.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterDeleteCluster"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.cluster.deletecluster.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterDeleteClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/DeleteCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Start Cluster assistant -->
+      <netuix:book definitionLabel="CoreClusterStartClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.cluster.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterStartCluster"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterStartClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/StartCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Shutdown Cluster assistant -->
+      <netuix:book definitionLabel="CoreClusterShutdownClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.cluster.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterShutdownCluster"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterShutdownClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/ShutdownCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Shutdown Cluster assistant -->
+      <netuix:book definitionLabel="CoreClusterForceShutdownClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.cluster.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterForceShutdownCluster"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterForceShutdownClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/ForceShutdownCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Suspend Cluster assistant -->
+      <netuix:book definitionLabel="CoreClusterSuspendClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.cluster.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterSuspendCluster"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterSuspendClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/SuspendCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Suspend Cluster assistant -->
+      <netuix:book definitionLabel="CoreClusterForceSuspendClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.cluster.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="CoreClusterForceSuspendCluster"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterForceSuspendClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/ForceSuspendCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Resume Cluster assistant -->
+      <netuix:book definitionLabel="CoreClusterResumeClusterBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.cluster.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="CoreClusterResumeCluster"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.cluster.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="CoreClusterResumeClusterPortlet"
+                                          contentUri="/PortalConfig/core/cluster/ResumeCluster.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

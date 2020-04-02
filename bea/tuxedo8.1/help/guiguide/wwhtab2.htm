@@ -1,0 +1,79 @@
+<HTML>
+<!--
+// Copyright (c) 1999 Quadralay Corporation.  All rights reserved.
+//
+// The information in this file is confidential and proprietary to
+// Quadralay Corporation.  Unauthorized use or duplication is
+// strictly prohibited.
+-->
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
+function setDisplayAttributes(){
+   searchDisplay.document.bgColor=parent.tab["tab2"][2];
+   searchDisplay.document.alinkColor=parent.tab["tab2"][3];
+   searchDisplay.document.linkColor=parent.tab["tab2"][4];
+   searchDisplay.document.vlinkColor=parent.tab["tab2"][5];
+}
+function searchTerm(t){
+   searchForm.document.search.term.value=t;
+   searchDisplay.document.open("text/html","replace");
+   setDisplayAttributes();
+   t=t.replace(/^\s+/,"");
+   if (t.length>0){
+      t=t.replace(/\s+$/,"");
+      t=t.replace(/\s+/," ");
+      var ts=t.split(" ");
+      var ds=new Array;
+      searchDisplay.document.write("<TABLE>");
+      var sterm,label;
+      var stf=new Array();
+      var sdisp=new Array();
+      for (var j=0;j<ts.length;j++){
+         stf[ts[j]]=false;
+         for (var s=0;s<parent.st.length;s++){
+            sterm=(ts[j].substring(0,parent.wlen[s])).toLowerCase();
+            if (parent.st[s][sterm.charCodeAt(0)]){
+               if (parent.st[s][sterm.charCodeAt(0)][sterm]){
+                  stf[ts[j]]=true;
+                  for (var i=1;i<parent.st[s][sterm.charCodeAt(0)][sterm].length;i++){
+                     if (parent.desc[s][parent.st[s][sterm.charCodeAt(0)][sterm][i]][1]!=""){
+                        label=parent.msgsrch;
+                        if (parent.desc[s][parent.st[s][sterm.charCodeAt(0)][sterm][i]][0]!="")label=parent.desc[s][parent.st[s][sterm.charCodeAt(0)][sterm][i]][0];
+                        if (!ds[parent.st[s][sterm.charCodeAt(0)][sterm][i]]){
+                           searchDisplay.document.write("<TR><TD NOWRAP><FONT FACE='"+parent.tff+"' SIZE="+parent.tfs+"><A HREF='javascript:parent.parent.displaySearchResult(\""+parent.desc[s][parent.st[s][sterm.charCodeAt(0)][sterm][i]][1]+"\",\""+t+"\");'>"+label+"</A></FONT></TD></TR>");
+                           ds[parent.st[s][sterm.charCodeAt(0)][sterm][i]]=1;
+                        }else ds[parent.st[s][sterm.charCodeAt(0)][sterm][i]]=ds[parent.st[s][sterm.charCodeAt(0)][sterm][i]]++;
+                     }
+                  }
+               }
+            }
+         }
+      }
+      searchDisplay.document.write("</TABLE>");
+      var strstf="No entries found for term(s):";
+      for (var j=0;j<ts.length;j++) {
+         if (stf[ts[j]]==false)
+            strstf=strstf+" \""+ts[j]+"\"";
+         delete stf[ts[j]];
+      }
+      stf.length=0;
+      if (strstf.length>("No entries found for term(s):").length)alert(strstf);
+      for (var z=0;z<ds.length;z++)delete ds[z];
+      ds.length=0;
+      parent.document.cookie="cst="+escape(t);
+   }else
+      searchDisplay.document.write("<FONT FACE='"+parent.tff+"' SIZE="+parent.tfs+">No search terms entered</FONT>");
+   searchDisplay.document.close();
+}
+function init(){
+   var cst=parent.GetCookie("cst");
+   if(cst!=null)searchTerm(cst);
+}
+</SCRIPT>
+</HEAD>
+<FRAMESET ROWS="65,*" border="0" onLoad="init();">
+   <FRAME SRC="./wwhsfrm.htm" ID="searchForm" NAME="searchForm" SCROLLING="no" FRAMEBORDER=no NORESIZE> 
+   <FRAME SRC="./wwhblnk.htm" ID="searchDisplay" NAME="searchDisplay" SCROLLING="auto" FRAMEBORDER=no">
+</FRAMESET>
+</HTML>
+

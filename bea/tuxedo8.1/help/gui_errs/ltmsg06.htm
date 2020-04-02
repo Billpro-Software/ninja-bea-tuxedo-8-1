@@ -1,0 +1,1836 @@
+<!-- .if n .pH errman.h.ltmsg06.htm @(#)ltmsg06.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>LIBTUX MESSAGE #1000</H3>
+<H2> ERROR: System clock has been reset to prior time. Reset again to time after <I>time</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system clock as been reset such that the current time precedes the
+timestamps in the transaction log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reset the system clock to the correct time. Retry the operation again,
+and if the problem persists, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>LIBTUX MESSAGE #1001</H3>
+<H2> ERROR: Cannot receive reply because MSSQ is specified but REPLYQ is N</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred in receiving a reply from either a tpcall(3) or
+tpacall(3) because the configuration file specifies that there should
+be no reply queue established for that particular server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the server is expected to receive tpacall(3) or <Font>tpcall(3) replies,
+check and edit the UBBCONFIG(5) file and specify REPLYQ=Y to establish
+a reply queue for that particular server.
+If the server is not to receive replies, then use tpacall(3) with
+the flags parameter set to TPNOREPLY.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+UBBCONFIG (5),
+tpcall (3),
+tpacall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>LIBTUX MESSAGE #1002</H3>
+<H2> ERROR: tpforward called in conversational server; service error returned to originator</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpforward() cannot be used within a conversational service routine.
+The service returns
+TPESVCERR
+or the
+TPEV_SVCERR
+event to the process on the
+other end of the conversation.  The conversation is terminated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The service routine should be changed to use tpreturn() instead
+of tpforward().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpforward(3), <Font>tprecv(3), <Font>tpsend(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>LIBTUX MESSAGE #1003</H3>
+<H2> ERROR: xa_end <I>flags</I> returned error <I>status</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued if the process receiving a reply
+encounters an error upon calling the database resource manager
+with xa_end().
+The transaction fails to commit.  The message prints the
+error code that the function returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system vendor.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1004"></A>
+<H3>LIBTUX MESSAGE #1004</H3>
+<H2> ERROR: xa_abort returned <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is issued when System/T tries unsuccessfully to rollback
+a transaction via xa_rollback() after receiving a reply.
+The message prints the the error code that the function returned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or your database system
+vendor.  See the userlog for more information on the outcome
+of the transaction.  Also, use tmadmin's
+printtrans command to find out more information
+about the transaction.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3>LIBTUX MESSAGE #1005</H3>
+<H2> INFO: Switched to dip-in based notification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the client is joining the application, the specified
+or default notification is set to signal based.  But to
+use signal based notification, the userid must be the
+administrator's.  This message alerts the switch in the
+notification mechanism.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action necessary.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>LIBTUX MESSAGE #1006</H3>
+<H2> INFO: Using dip-in based notification instead of application default setting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the client is joining the application, the notification
+mechanism is set to signal based (the application default).
+But to use signal based notification, the user must be the
+administrator.  This message alerts the switch in the
+notification mechanism.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action necessary.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>LIBTUX MESSAGE #1007</H3>
+<H2> INFO: Notification mechanism unknown. Switching to dip-in based notification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The notification mechanism is not specified, so the default
+(dip-in based) is used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action necessary.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>LIBTUX MESSAGE #1008</H3>
+<H2> ERROR: Cannot open TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During authentication, the TUXCONFIG file cannot be opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and
+exported, or that the TUXCONFIG file is not corrupted (try a
+tmunloadcf ),
+or the TUXCONFIG file was propagated to all machines in
+the configuration.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>LIBTUX MESSAGE #1009</H3>
+<H2> ERROR: Cannot read the RESOURCES section of the TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During authentication, the TUXCONFIG file is opened and the
+RESOURCES section is read.  The RESOURCES section cannot be read.
+The TUXCONFIG file has probably been corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To verify that the TUXCONFIG file is not corrupted, try a
+tmunloadcf .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>LIBTUX MESSAGE #1010</H3>
+<H2> ERROR: Failed to allocate space for authentication service reply message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+tpalloc()
+failed while setting up space for an authentication service reply.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>LIBTUX MESSAGE #1013</H3>
+<H2> ERROR: Migration failed: invalid type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The migration type code passed to the migration function
+is not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>LIBTUX MESSAGE #1014</H3>
+<H2> ERROR: Migration failed: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating
+system using
+malloc()
+failed while setting up a temporary data structure for the
+server table entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>LIBTUX MESSAGE #1015</H3>
+<H2> ERROR: Migration failed: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating
+system using
+malloc()
+failed while setting up a temporary data structure for the
+server group entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>LIBTUX MESSAGE #1016</H3>
+<H2> ERROR: Migration failed: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating
+system using
+malloc()
+failed while setting up a temporary data structure for the
+group process table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>LIBTUX MESSAGE #1017</H3>
+<H2> ERROR: Migration failed: no group name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The group name passed to the migration function was empty.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the group name for the migration request is valid.
+If so, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>LIBTUX MESSAGE #1018</H3>
+<H2> ERROR: Migration failed: bad group name, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The group name passed to the migration function was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the group name for the migration request is valid.
+If so, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>LIBTUX MESSAGE #1019</H3>
+<H2> ERROR: Migration failed: no machine name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The machine name passed to the migration function was empty.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the machine name for the migration request is valid.
+If so, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>LIBTUX MESSAGE #1020</H3>
+<H2> ERROR: Migration failed: bad machine name, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The machine name passed to the migrate function was invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the machine name for the migration request is valid.
+If so, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>LIBTUX MESSAGE #1021</H3>
+<H2> ERROR: Migration failed: invalid current location</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The entry in the server group table for the current lmid
+(the location that the servers are to be migrated from)
+is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>LIBTUX MESSAGE #1023</H3>
+<H2> ERROR: Migration failed: cannot update server group information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt failed trying to update the entry or entries in the server
+group table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3>LIBTUX MESSAGE #1024</H3>
+<H2> ERROR: Migration failed: cannot update server information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While updating the local bulletin board, an error occurred.  This
+error could be caused by the following:
+<UL>
+<LI><P>
+A failure to lock the bulletin board.
+<LI><P>
+Queue or server information could not be retrieved.
+<LI><P>
+The failure to unlock the bulletin board.
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for more information.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>LIBTUX MESSAGE #1026</H3>
+<H2> ERROR: Migration failed: cannot migrate group on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to migrate the server group(s) to the BBL on the alternate
+location has failed.  This error could be caused by the following:
+<UL>
+<LI><P>
+The failure to retrieve information from the bulletin board.
+<LI><P>
+The request message itself could not be built.
+<LI><P>
+A failure occurred during the send/receive of the request.
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for more information.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>LIBTUX MESSAGE #1027</H3>
+<H2> ERROR: Migration failed: cannot retrieve new server information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The verification of the alternate location has failed.  The
+bulletin board has been checked for consistency, and one of the
+following errors has happened:
+<UL>
+<LI><P>
+A timeout occurred before the information could be verified.
+<LI><P>
+A lock was not granted for the bulletin board.
+<LI><P>
+The server information could not be retrieved.
+<LI><P>
+The bulletin board lock could not be released.
+<LI><P>
+The server has been "cleaning up" for an inordinate period of time.
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional information to properly diagnose
+this error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>LIBTUX MESSAGE #1029</H3>
+<H2> ERROR: Migration failed: cannot find BBL information for <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to retrieve the server table entry for the servers
+to be migrated failed.  The requested entry was not found.
+This error is probably the result of an
+internal corruption of the bulletin board
+and not the result of anything the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>LIBTUX MESSAGE #1030</H3>
+<H2> ERROR: Migration failed: cannot retrieve BBL information for <I>lmid</I>, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to retrieve the server table entry for the servers
+to be migrated failed.
+This error is probably the result of an
+internal corruption of the bulletin board
+and not the result of anything the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>LIBTUX MESSAGE #1031</H3>
+<H2> ERROR: Migration failed: cannot make request message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Creating an internal system message for the migrating servers
+fails.  This error is due to the inability to allocate enough
+memory for the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.  Reduce the physical memory usage
+on the machine or increase the amount of physical memory on the
+machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>LIBTUX MESSAGE #1032</H3>
+<H2> ERROR: Migration failed: cannot send service request to BBL on <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The service request to start the migrating servers on the new
+site has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional information to determine the
+proper action to be taken.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3>LIBTUX MESSAGE #1033</H3>
+<H2> ERROR: Migration failed: invalid response from BBL on <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The response for the request to start the migrated servers on
+<I>lmid</I>
+returns an error.
+The bulletin board on the machine
+<I>lmid</I>
+was unstable at the time of the migration request and therefore
+was aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the status of the bulletin board on
+<I>lmid</I>
+by using the
+tmadmin()
+sub-command
+printserver .
+If the system is still running, try the command again and if it
+fails again, contact your TUXEDO System Technical Support.  Otherwise, the
+machine
+<I>lmid</I>
+must be restarted before a migration may occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1034"></A>
+<H3>LIBTUX MESSAGE #1034</H3>
+<H2> ERROR: Migration failed: invalid response from BBL on <I>lmid</I>, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The response for the request to start the migrated servers on
+<I>lmid</I>
+returns an unknown status code.
+The bulletin board on the machine
+<I>lmid</I>
+was unstable at the time of the migration request and therefore
+was aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the status of the bulletin board on
+<I>lmid</I>
+by using the
+tmadmin()
+sub-command
+printserver .
+If the system is still running, try the command again and if it
+fails again, contact your TUXEDO System Technical Support.  Otherwise, the
+machine
+<I>lmid</I>
+must be restarted before a migration may occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>LIBTUX MESSAGE #1035</H3>
+<H2> ERROR: Migration failed: cannot lock BB, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While confirming that all relevant servers are shut down for
+migration, the lock for the bulletin board has not been granted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>LIBTUX MESSAGE #1036</H3>
+<H2> ERROR: Migration failed: cannot retrieve server information, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While confirming that all relevant servers are shut down for
+migration, the server information in the bulletin board
+cannot be retrieved.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>LIBTUX MESSAGE #1037</H3>
+<H2> ERROR: Migration failed: server not shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to migrate server(s) to another machine, the system
+is unable to process this request because a server remains running.
+All of the servers affected by this request must be shut down before
+a migration command is issued.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the desired servers with the relocate (-R) option and retry
+the request.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3>LIBTUX MESSAGE #1038</H3>
+<H2> ERROR: Migration failed: cannot unlock BB, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to update internal information of server(s)
+to be migrated, the local bulletin board is unable to be unlocked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3>LIBTUX MESSAGE #1039</H3>
+<H2> ERROR: Migration failed: cannot lock BB, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to update internal information of server(s)
+to be migrated, the local bulletin board is unable to be locked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>LIBTUX MESSAGE #1040</H3>
+<H2> ERROR: Migration failed: cannot retrieve queue information, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to update the queue table entry of the servers
+to be migrated, the queue table entry cannot be retrieved.  This
+error is probably the result of an internal corruption of the
+bulletin board and not the result of anything the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3>LIBTUX MESSAGE #1041</H3>
+<H2> ERROR: Migration failed: cannot update server information, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to update the server table entry for the servers
+to be migrated, the required entry cannot be retrieved.  This
+error is probably the result of an internal corruption of the
+bulletin board and not the result of anything the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>LIBTUX MESSAGE #1042</H3>
+<H2> ERROR: Migration failed: cannot unlock BB, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to update internal information of server(s)
+to be migrated, the local bulletin board is unable to be unlocked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3>LIBTUX MESSAGE #1043</H3>
+<H2> ERROR: Migration failed: time out occurred</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the verification of the alternate location
+after the servers have been migrated, a failure
+has occurred.  The verification request has timed out.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the status of the bulletin board on the alternate location.
+This may be accomplished by using the
+tmadmin()
+subcommand
+printserver.
+If this location is still running, try the migrate command again
+and if a failure occurs, contact your TUXEDO System Technical Support.  If
+the alternate location doesn't respond, you will have to reboot
+this site before migration may occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3>LIBTUX MESSAGE #1044</H3>
+<H2> ERROR: Migration failed: cannot lock BB, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the migration verification of the alternate location
+after the servers have been migrated, a failure
+has occurred.  The bulletin board was not able to be locked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1045"></A>
+<H3>LIBTUX MESSAGE #1045</H3>
+<H2> ERROR: Migration failed: server(<I>server_id</I>/<I>group_id</I>) failed to migrate, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bulletin board of an alternate location reported that the server
+information requested was not found.  This error is probably the result
+of an internal corruption of the bulletin board and not the result
+of anything the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3>LIBTUX MESSAGE #1046</H3>
+<H2> ERROR: Migration failed: cannot retrieve server (<I>server_id</I>/<I>group_id</I>) information, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The bulletin board of an alternate location reported that the server
+information requested was not found.  This error is probably the result
+of an internal corruption of the bulletin board and not the result
+of anything the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1047"></A>
+<H3>LIBTUX MESSAGE #1047</H3>
+<H2> ERROR: Migration failed: cannot unlock BB, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the migration verification of the alternate location
+after the servers have been migrated, a failure
+has occurred.  The bulletin board was not able to be unlocked
+(or released).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may be the result of a transitive failure of a process
+attached to the bulletin board.  Try the command again;
+if this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3>LIBTUX MESSAGE #1048</H3>
+<H2> ERROR: Migration failed: server (<I>server_id</I>/<I>group_id</I>) still cleaning</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The verification of the alternate location has failed because the
+server
+<I>server_id</I>
+is still cleaning up its entries in the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3>LIBTUX MESSAGE #1052</H3>
+<H2> ERROR: Request/response request received in conversational server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message request was received by a conversational server from a
+request/response server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the service name used in a
+tpcall ,
+tpacall ,
+or
+tpforward
+belongs to a request/response server and not a conversational server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3>LIBTUX MESSAGE #1053</H3>
+<H2> ERROR: Conversational request received in request/response server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message request was received by a request/response server from a conversational
+server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the service name in
+tpconnect
+belongs to a conversational
+server and not a request/response server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3>LIBTUX MESSAGE #1055</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart a server, the TUXEDO System needed to
+allocate a memory buffer.
+This memory allocation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your UNIX System Administrator.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>LIBTUX MESSAGE #1056</H3>
+<H2> ERROR: Char range with MAX as lower value has values out of order</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If MAX is specified for the char lower routing range,
+then its corresponding upper routing range must also be
+specified as MAX.  That is:
+MAX - MAX : server_group
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the char routing range in the ROUTING section of the
+UBBCONFIG
+file.  If MAX is specified for the lower routing
+range, then its corresponding upper routing range must be MAX.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>LIBTUX MESSAGE #1057</H3>
+<H2> ERROR: Char range with MIN as upper value has values out of order</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If MIN is specified for the char upper routing range,
+then its corresponding lower routing range must also be
+specified as MIN.  That is:
+MIN - MIN : server_group
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the char routing range in the ROUTING section of the
+UBBCONFIG
+file.  If MIN is specified for the upper routing
+range, then its corresponding lower routing range must be MIN.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>LIBTUX MESSAGE #1058</H3>
+<H2> ERROR: Range values out of order for the packed decimal routing data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the packed decimal routing data are out order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the packed decimal routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+decimal (3),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3>LIBTUX MESSAGE #1059</H3>
+<H2> ERROR: Invalid format for decimal</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The data for a decimal routing range is specified incorrectly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range decimal data in the ROUTING section of the
+UBBCONFIG
+file.  The data must be in the correct format.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+decimal (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>LIBTUX MESSAGE #1060</H3>
+<H2> ERROR: Cannot have a '-' in front of MAX or MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have a '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the ROUTING section of the
+UBBCONFIG
+file.  Remove any '-' sign in front of the MAX or MIN value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>LIBTUX MESSAGE #1061</H3>
+<H2> ERROR: Cannot have a '-' and a '+' sign in front of a number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing range cannot have both a '-' and a '+' sign in front of a number.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range data in the ROUTING section of the
+UBBCONFIG
+file.  If a '-' and a '+' sign are both in front of a number,
+remove the '+' sign.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1065"></A>
+<H3>LIBTUX MESSAGE #1065</H3>
+<H2> ERROR: xa_end TMSUSPEND returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process called xa_end() just prior to blocking
+for a reply message.  This would happen, for example,
+when an XA server does a tpcall() to another server.
+An unexpected return code,
+<I>errstring</I>,
+was returned from xa_end().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or database system vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3>LIBTUX MESSAGE #1066</H3>
+<H2> ERROR: xa_start TMRESUME returned <I>errstring</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process called xa_start() just after receiving
+a reply message.
+This would happen, for example,
+when an XA server does a tpcall() to another server.
+An unexpected return code,
+<I>errstring</I>,
+was returned from xa_start().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support or database system vendor.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1067"></A>
+<H3>LIBTUX MESSAGE #1067</H3>
+<H2> ERROR: Request/response service name matches conversational service name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while a service was
+being added to the bulletin board's tables.
+The same service name cannot be used for both
+conversational and request/response
+types of services.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Rename the services being offered so that
+the each service name is used consistently
+throughout the system as either
+conversational or request/response.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcall (3),
+tpconnect (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>LIBTUX MESSAGE #1074</H3>
+<H2> ERROR: Connection information invalid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to create
+a connection table entry in the Bulletin Board and supplies incorrect or NULL
+arguments.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>LIBTUX MESSAGE #1076</H3>
+<H2> ERROR: Tried to set up a duplicate connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a client or server is requesting to create
+a connection table entry in the Bulletin Board and tries to set up a
+duplicate entry.
+This happens if there is a bug in the calling routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>LIBTUX MESSAGE #1077</H3>
+<H2> ERROR: Bad event: <I>status</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when
+tprecv (3)
+gets a message from the other end of a conversation and the
+tperrno
+information in the message header
+is set to
+TPEEVENT
+and the event is set to an invalid event.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>LIBTUX MESSAGE #1078</H3>
+<H2> ERROR: errno TPEEVENT but event flag not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when
+tprecv (3)
+gets a message from the other end of a conversation and the
+tperrno
+information in the message header is set to
+TPEEVENT
+and the event is set to zero.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Report this failure to your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>LIBTUX MESSAGE #1079</H3>
+<H2> ERROR: Failed to create connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when
+tpconnect (3)
+fails to add a connection table
+entry into the Bulletin Board.  This can happen if the table is full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Increase the number of connection table entries in the Bulletin Board
+by increasing the
+MAXCONV
+parameter in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3>LIBTUX MESSAGE #1080</H3>
+<H2> WARN: Failed to disconnect process <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a conversational
+disconnect
+event is sent by
+a server to a client on the same machine via a message, and the server
+is unable to send the message to the client.  The client could have
+died before the
+disconnect
+event is sent or if there is an error queueing the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the UNIX system message queue kernel parameters and increase them
+if necessary.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3>LIBTUX MESSAGE #1081</H3>
+<H2> ERROR: Failed to allocate space for disconnect msg</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a conversational disconnect message is sent
+to the
+BBL
+and there is not enough memory in the system to allocate the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.  Increase the space on
+the Swap device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>LIBTUX MESSAGE #1082</H3>
+<H2> ERROR: Disconnect failed, couldn't find BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a conversational disconnect message has to
+be sent to the
+BBL
+and the server table entry for the
+BBL
+is missing from the Bulletin Board.
+This is a severe error and the system is unstable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System administrator and restart the TUXEDO System.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3>LIBTUX MESSAGE #1083</H3>
+<H2> ERROR: Disconnect failed, message send/receive error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a conversational
+disconnect
+event is sent by a process to the remote
+BBL
+via a message, and the server is unable to
+send the message to the
+BBL .
+This can happen if the limit on the
+number of bytes on the message queue is reached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the UNIX system message queue kernel parameters and increase them
+if necessary.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1084"></A>
+<H3>LIBTUX MESSAGE #1084</H3>
+<H2> ERROR: Failed to get acknowledgement message for connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This error occurs when a conversational client or server issues
+a
+tprecv (3)
+with
+TPRECVONLY .
+This requires an acknowledgment from
+the other connection.  If there is a failure in getting that acknowledgment,
+this message is printed.  This could happen if the UNIX system message queue
+has reached its capacity.  This could also happen if the remote server
+for that connection could not be started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the UNIX system message queue kernel parameters and increase them
+if necessary.
+Check the
+userlog
+for error messages regarding the remote server.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3>LIBTUX MESSAGE #1085</H3>
+<H2> ERROR: Invalid mid value during spawn</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While getting ready to spawn a conversational server, the calling process
+failed to retrieve its machine table entry.
+The machine identifier that is used to retrieve the entry is invalid.
+The conversational server will therefore not be spawned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look through the
+userlog
+to see if there are other messages related
+to this failure.
+If so, refer to the appropriate system messages.
+Otherwise, contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1086"></A>
+<H3>LIBTUX MESSAGE #1086</H3>
+<H2> ERROR: Argument vector formation error during spawn</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While getting ready to spawn a conversational server, the calling process
+failed to build the command line arguments for that server.
+An attempt to dynamically allocate memory from the operating system
+using
+malloc (3)
+or
+realloc (3)
+failed while building the command line.
+The conversational server will therefore not be spawned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>LIBTUX MESSAGE #1087</H3>
+<H2> ERROR: aout=<I>aout</I>: too many arguments</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While getting ready to spawn a conversational server, the calling process
+failed to set the argument vector for that server.
+The calling process attempted to pass more than 256 arguments to the
+conversational server.
+The conversational server will therefore not be spawned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the number of arguments passed to the conversational
+server is not greater than 256.
+Note that the system may be adding up to eight arguments to the command line
+obtained from the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>LIBTUX MESSAGE #1088</H3>
+<H2> ERROR: spawn error: cannot fork</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server.
+The call to
+fork (2)
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The system-imposed limit on the total number of processes under
+execution by a single user may be exceeded.
+In this case you may either reduce the number of processes the
+TUXEDO System application administrator is running on the system or increase
+the total number of processes allowed per user
+by reconfiguring the UNIX kernel.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+fork (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>LIBTUX MESSAGE #1089</H3>
+<H2> ERROR: Cannot exec, executable file not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server.
+The call to
+exec (2)
+failed.
+The conversational server to be spawned does not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the conversational server is in the application directory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+exec (2)
+in UNIX system reference manuals,
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>LIBTUX MESSAGE #1090</H3>
+<H2> ERROR: Cannot exec, network send error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server due to
+a networking problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the network has not been partitioned and that the remote
+site is booted.
+If the remote site is not booted, call
+tmboot (1).
+If the remote site is booted, use
+tmadmin (1)
+to determine the
+status of the network, and reconnect the remote site if necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+exec (2)
+in UNIX system reference manuals,
+tmadmin (1),
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>LIBTUX MESSAGE #1091</H3>
+<H2> WARN: process id=<I>pid</I> ... Assume started (network).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process attempted to spawn a conversational server.
+The conversational server with a process ID of
+<I>pid</I>
+is believed to have been started.
+However the calling process did not receive an acknowledgment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure a conversational server with process ID
+<I>pid</I>
+is running.
+If not, look for a core dump in the application directory.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>LIBTUX MESSAGE #1092</H3>
+<H2> WARN: process id=<I>pid</I> ... Assume started (pipe).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process attempted to spawn a conversational server.
+The conversational server with a process ID of
+<I>pid</I>
+is believed to have been started.
+However the calling process did not receive an acknowledgment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure a conversational server with process ID
+<I>pid</I>
+is running.
+If not, look for a core dump in the application directory.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3>LIBTUX MESSAGE #1094</H3>
+<H2> ERROR: No BBL available, cannot boot</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server.
+The
+BBL
+is not active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+BBL
+is booted on the site the conversational server
+is being spawned.
+Use
+tmadmin (1)
+to check the status of the application.
+If the
+BBL
+needs to be booted, use
+tmboot (1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1095"></A>
+<H3>LIBTUX MESSAGE #1095</H3>
+<H2> ERROR: No DBBL available, cannot boot</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server.
+The
+DBBL
+is not active on the master site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+DBBL
+is booted on the master site.
+Use
+tmadmin (1)
+to check the status of the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3>LIBTUX MESSAGE #1096</H3>
+<H2> ERROR: Spawning process failed.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look through the
+userlog
+to see if there are other messages related
+to this failure.
+If so, refer to the appropriate system messages.
+Otherwise, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+See Messages No. 1097 and 1098 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3>LIBTUX MESSAGE #1097</H3>
+<H2> ERROR: Process <I>process</I> at <I>site</I> failed with /T error (<I>errmsg</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server,
+<I>process</I>.
+The spawned server failed on site
+<I>site</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Take corrective measures based on
+<I>errmsg</I>.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>LIBTUX MESSAGE #1098</H3>
+<H2> ERROR: Process <I>process</I> at <I>site</I> failed with code <I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process failed to spawn a conversational server,
+<I>process</I>.
+The spawned server failed on site
+<I>site</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Take corrective measures based on error code
+<I>code</I>.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>LIBTUX MESSAGE #1099</H3>
+<H2> ERROR: Cannot process a message with an unknown release, <I>release</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid release number, <I>release</I>, was found in a message while
+being converted.
+Interoperability allows a single application to have multiple (two)
+releases of the TUXEDO System exist on different nodes and
+interoperate with one another.
+The conversion is done by either the sender, if it has the latest
+software, or the receiver.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the release of the TUXEDO System software and make sure that the
+master and backup nodes are running the later release.
+Also make sure the
+TUXDIR
+parameter is set correctly in the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

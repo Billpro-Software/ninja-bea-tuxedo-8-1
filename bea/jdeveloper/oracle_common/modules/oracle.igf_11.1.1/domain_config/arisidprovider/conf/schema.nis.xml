@@ -1,0 +1,333 @@
+<dsml:dsml xmlns:dsml="http://www.dsml.org/DSML">
+  <dsml:directory-schema>
+   <dsml:class
+         id="posixAccount"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>posixAccount</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.0</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#uid" required="true"/>
+   <dsml:attribute ref="#uidNumber" required="true"/>
+   <dsml:attribute ref="#gidNumber" required="true"/>
+   <dsml:attribute ref="#homeDirectory" required="true"/>
+   <dsml:attribute ref="#userPassword" required="false"/>
+   <dsml:attribute ref="#loginShell" required="false"/>
+   <dsml:attribute ref="#gecos" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="shadowAccount"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>shadowAccount</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.1</dsml:object-identifier>
+   <dsml:attribute ref="#uid" required="true"/>
+   <dsml:attribute ref="#userPassword" required="false"/>
+   <dsml:attribute ref="#shadowLastChange" required="false"/>
+   <dsml:attribute ref="#shadowMin" required="false"/>
+   <dsml:attribute ref="#shadowMax" required="false"/>
+   <dsml:attribute ref="#shadowWarning" required="false"/>
+   <dsml:attribute ref="#shadowInactive" required="false"/>
+   <dsml:attribute ref="#shadowExpire" required="false"/>
+   <dsml:attribute ref="#shadowFlag" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="posixGroup"
+         type="structural"
+         superior="#top">
+   <dsml:name>posixGroup</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.2</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#gidNumber" required="true"/>
+   <dsml:attribute ref="#userPassword" required="false"/>
+   <dsml:attribute ref="#memberUid" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="ipService"
+         type="structural"
+         superior="#top">
+   <dsml:name>ipService</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.3</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#ipServicePort" required="true"/>
+   <dsml:attribute ref="#ipServiceProtocol" required="true"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="ipProtocol"
+         type="structural"
+         superior="#top">
+   <dsml:name>ipProtocol</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.4</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#ipProtocolNumber" required="true"/>
+   <dsml:attribute ref="#description" required="true"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="oncRpc"
+         type="structural"
+         superior="#top">
+   <dsml:name>oncRpc</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.5</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#oncRpcNumber" required="true"/>
+   <dsml:attribute ref="#description" required="true"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="ipHost"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>ipHost</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.6</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#ipHostNumber" required="true"/>
+   <dsml:attribute ref="#l" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+   <dsml:attribute ref="#manager" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="ipNetwork"
+         type="structural"
+         superior="#top">
+   <dsml:name>ipNetwork</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.7</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#ipNetworkNumber" required="true"/>
+   <dsml:attribute ref="#ipNetmaskNumber" required="false"/>
+   <dsml:attribute ref="#l" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+   <dsml:attribute ref="#manager" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="nisNetgroup"
+         type="structural"
+         superior="#top">
+   <dsml:name>nisNetgroup</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.8</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#nisNetgroupTriple" required="false"/>
+   <dsml:attribute ref="#memberNisNetgroup" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="nisMap"
+         type="structural"
+         superior="#top">
+   <dsml:name>nisMap</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.9</dsml:object-identifier>
+   <dsml:attribute ref="#nisMapName" required="true"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="nisObject"
+         type="structural"
+         superior="#top">
+   <dsml:name>nisObject</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.10</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#nisMapEntry" required="true"/>
+   <dsml:attribute ref="#nisMapName" required="true"/>
+   <dsml:attribute ref="#description" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="ieee802Device"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>ieee802Device</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.11</dsml:object-identifier>
+   <dsml:attribute ref="#macAddress" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="bootableDevice"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>bootableDevice</dsml:name>
+   <dsml:object-identifier>1.3.6.1.1.1.2.12</dsml:object-identifier>
+   <dsml:attribute ref="#bootFile" required="false"/>
+   <dsml:attribute ref="#bootParameter" required="false"/>
+  </dsml:class>
+    <dsml:attribute-type id="uidNumber">
+      <dsml:name>uidNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.0</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="gidNumber">
+      <dsml:name>gidNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.1</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="gecos">
+      <dsml:name>gecos</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.2</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseIgnoreIA5Match</dsml:equality>
+      <dsml:substring>caseIgnoreIA5SubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="homeDirectory">
+      <dsml:name>homeDirectory</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.3</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactIA5Match</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="loginShell">
+      <dsml:name>loginShell</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.4</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactIA5Match</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowLastChange">
+      <dsml:name>shadowLastChange</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.5</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowMin">
+      <dsml:name>shadowMin</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.6</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowMax">
+      <dsml:name>shadowMax</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.7</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowWarning">
+      <dsml:name>shadowWarning</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.8</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowInactive">
+      <dsml:name>shadowInactive</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.9</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowExpire">
+      <dsml:name>shadowExpire</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.10</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="shadowFlag">
+      <dsml:name>shadowFlag</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.11</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="memberUid">
+      <dsml:name>memberUid</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.12</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactIA5Match</dsml:equality>
+      <dsml:substring>caseExactIA5SubstringsMatch</dsml:substring>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="memberNisNetgroup">
+      <dsml:name>memberNisNetgroup</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.13</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactIA5Match</dsml:equality>
+      <dsml:substring>caseExactIA5SubstringsMatch</dsml:substring>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="nisNetgroupTriple">
+      <dsml:name>nisNetgroupTriple</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.14</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.1.1.0.0</dsml:syntax>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="ipServicePort">
+      <dsml:name>ipServicePort</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.15</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="ipServiceProtocol" superior="#name">
+      <dsml:name>ipServiceProtocol</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.16</dsml:object-identifier>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="ipProtocolNumber">
+      <dsml:name>ipProtocolNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.17</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="oncRpcNumber">
+      <dsml:name>oncRpcNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.18</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+      <dsml:equality>integerMatch</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="ipHostNumber">
+      <dsml:name>ipHostNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.19</dsml:object-identifier>
+      <dsml:syntax bound='128'>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseIgnoreIA5Match</dsml:equality>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="ipNetworkNumber">
+      <dsml:name>ipNetworkNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.20</dsml:object-identifier>
+      <dsml:syntax bound='128'>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseIgnoreIA5Match</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="ipNetmaskNumber">
+      <dsml:name>ipNetmaskNumber</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.21</dsml:object-identifier>
+      <dsml:syntax bound='128'>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseIgnoreIA5Match</dsml:equality>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="macAddress">
+      <dsml:name>macAddress</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.22</dsml:object-identifier>
+      <dsml:syntax bound='128'>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseIgnoreIA5Match</dsml:equality>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="bootParameter">
+      <dsml:name>bootParameter</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.23</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.1.1.0.1</dsml:syntax>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="bootFile">
+      <dsml:name>bootFile</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.24</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactIA5Match</dsml:equality>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="nisMapName" superior="#name">
+      <dsml:name>nisMapName</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.26</dsml:object-identifier>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="nisMapEntry">
+      <dsml:name>nisMapEntry</dsml:name>
+      <dsml:object-identifier>1.3.6.1.1.1.1.27</dsml:object-identifier>
+      <dsml:syntax bound='1024'>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactIA5Match</dsml:equality>
+      <dsml:substring>caseExactIA5SubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+  </dsml:directory-schema>
+</dsml:dsml>

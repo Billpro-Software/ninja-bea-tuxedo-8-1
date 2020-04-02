@@ -1,0 +1,1586 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 600-699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="601"></A>
+<H3>CMDTUX MESSAGE #601</H3>
+<H2> ERROR: Memory allocation failure for receive buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+allocating a buffer to receive network messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="602"></A>
+<H3>CMDTUX MESSAGE #602</H3>
+<H2> ERROR: Network access error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There are two possible causes:
+1) A networking error was encountered
+when sending back a reply message.
+2) The requesting process was running a version of the TUXEDO System
+more than one release old.
+Interoperability is supported
+with only one previous release.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+1) Check for and resolve any networking problems.
+2) Upgrade the TUXEDO System version on the remote machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="603"></A>
+<H3>CMDTUX MESSAGE #603</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+the
+tagent
+was processing a request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="604"></A>
+<H3>CMDTUX MESSAGE #604</H3>
+<H2> ERROR: Could not decode request message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process received an invalid request message that
+it could not decode.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Verify that the correct release of the TUXEDO System
+is running on both machines.
+The master machine can be at most one release ahead
+of other machines in the network.
+<LI><P>
+Contact your TUXEDO System Technical Support.
+</UL>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="605"></A>
+<H3>CMDTUX MESSAGE #605</H3>
+<H2> ERROR: Could not set uid/gid for request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process received a failure from the
+setgid ()
+or
+setuid ()
+kernel calls.
+This indicates that it is not running
+with the correct login user id or group id.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+tlisten
+process must be started with a
+UNIX user id and group id
+that matches the configuration file.
+Refer to the
+UID
+and
+GID
+parameters of the *RESOURCES and *MACHINES sections.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="606"></A>
+<H3>CMDTUX MESSAGE #606</H3>
+<H2> ERROR: Invalid version number for request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process received a request from
+an incompatible version of the TUXEDO System.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the correct release of the TUXEDO System
+is running on both machines.
+The master machine can be at most one release ahead
+of other machines in the network.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="607"></A>
+<H3>CMDTUX MESSAGE #607</H3>
+<H2> ERROR: Error encoding reply message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A reply message from the
+tagent
+process could not be encoded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="609"></A>
+<H3>CMDTUX MESSAGE #609</H3>
+<H2> ERROR: Invalid arguments for opcode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process received a request message
+containing invalid argument values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="610"></A>
+<H3>CMDTUX MESSAGE #610</H3>
+<H2> ERROR: Could not creat temp file for TUXCONFIG</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process could not create or write a temporary file
+for propagation of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the directory permissions and free disk space in
+the system's temporary file directory.
+The
+tagent
+uses UNIX's
+tmpnam ()
+library function to obtain temporary file names.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="611"></A>
+<H3>CMDTUX MESSAGE #611</H3>
+<H2> ERROR: tmloadcf failed when creating new configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process was attempting to load a new configuration
+file, and
+tmloadcf
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Examine
+tmboot
+output for any userlog or error messages.
+<LI><P>
+Verify that
+$TUXDIR/bin/tmloadcf
+exists and is executable.
+<LI><P>
+Verify that the
+TUXCONFIG
+file name, directory permissions, and file permissions are set correctly.
+<LI><P>
+If the
+TUXCONFIG
+file already exists, try removing it and then running
+tmboot
+again.
+<LI><P>
+If these steps fail, contact your TUXEDO System Technical Support.
+</UL>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="612"></A>
+<H3>CMDTUX MESSAGE #612</H3>
+<H2> ERROR: Could not set environment variable</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process encountered an error when attempting
+to set an environment variable using UNIX's
+putenv ()
+call.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Remove any unnecessary UNIX System environment variables
+that may have been set when
+tlisten
+was started.
+<LI><P>
+Expand the UNIX kernel per-process limit for environment
+variables.
+</UL>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="613"></A>
+<H3>CMDTUX MESSAGE #613</H3>
+<H2> ERROR: Could not retrieve parameters from TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process encountered an error when attempting
+to read an existing
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="614"></A>
+<H3>CMDTUX MESSAGE #614</H3>
+<H2> ERROR: Unknown error, terminating</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tagent
+process encountered an unknown error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="615"></A>
+<H3>CMDTUX MESSAGE #615</H3>
+<H2> INFO: Terminating tlisten process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process will print this message in the tlisten log file
+when terminating.
+The only valid exit for the
+tlisten
+process is when it receives a
+SIGTERM
+termination signal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="617"></A>
+<H3>CMDTUX MESSAGE #617</H3>
+<H2> ERROR: Invalid tlisten option <I>option</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid option,
+<I>option,</I>
+was passed to
+tlisten .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Select the appropriate option(s) from
+the usage line that follows.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="624"></A>
+<H3>CMDTUX MESSAGE #624</H3>
+<H2> ERROR: tlisten network address not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user needs to pass the network address where the
+tlisten
+process is to listen for connection requests.
+The address should be passed as an argument to the
+-l
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Invoke
+tlisten
+with the
+-l
+<I>nlsaddr</I>
+option.
+The value passed as
+<I>nlsaddr</I>
+should be the same as that specified for the
+NLSADDR
+parameter in the *NETWORK section of the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="625"></A>
+<H3>CMDTUX MESSAGE #625</H3>
+<H2> ERROR: tlisten invalid hexadecimal network address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When a network address starts with "0x",
+tlisten
+interprets the address as being an
+ASCII
+representation
+of a hexadecimal value.
+The network address passed to
+tlisten
+is an invalid
+ASCII
+representation of a
+hexadecimal value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that if the argument to the
+"tlisten -l"
+option starts with "0x" that this argument is a valid
+ASCII
+representation of a hexadecimal value.
+Also, the value passed as argument to the
+-l
+option should be the same as that specified for the
+NLSADDR
+parameter in the *NETWORK section of the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="626"></A>
+<H3>CMDTUX MESSAGE #626</H3>
+<H2> ERROR: tlisten could not find entry for user <I>username</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user has the option to reset the user id and group id of the
+tlisten
+process through the
+-u
+option.
+If the user id or user name passed as an argument is invalid, the
+tlisten
+process will print this message and terminate.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the argument to the
+"tlisten -u"
+option is a valid user id or user name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="627"></A>
+<H3>CMDTUX MESSAGE #627</H3>
+<H2> ERROR: tlisten cannot run as root</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process was most likely invoked by
+root .
+For security purposes, this is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The user should use the
+-u
+option to specify an alternate
+user id or user name instead of
+root ,
+or invoke the
+tlisten
+process from another login.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="628"></A>
+<H3>CMDTUX MESSAGE #628</H3>
+<H2> ERROR: tlisten could not set user id to <I>user_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process failed to reset its user id.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the user name or user id passed as an argument to the
+-u
+option has a valid entry in the
+/etc/passwd
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="629"></A>
+<H3>CMDTUX MESSAGE #629</H3>
+<H2> ERROR: tlisten invoked by non-root, can't change user id.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user id of the
+tlisten
+process may only be changed if the
+tlisten
+process was originally invoked by
+root .
+When invoked by someone other than
+root ,
+the user id of the
+tlisten
+process may not be reset.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the user wishes to have the
+tlisten
+process run with a specific user id,
+tlisten
+should either be invoked by that user, or by
+root .
+When invoked by
+root ,
+the
+-u
+option should be used to reset the user id.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="634"></A>
+<H3>CMDTUX MESSAGE #634</H3>
+<H2> ERROR: Error receiving data from network</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was detected when attempting to receive data from the network.
+The
+tlisten
+process was unable to read the expected service code from the
+sender in ASCII format.
+The
+tlisten
+process will close the connection and attempt to open
+a new one and accept the next service request.
+The problem associated with this error is not likely to be
+caused by something that the invoker of the
+tlisten
+process will have done.
+Nor is it likely to be a TUXEDO System error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try repeating the same operation.
+If this fails with the same error,
+contact your UNIX System administrator
+or your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="636"></A>
+<H3>CMDTUX MESSAGE #636</H3>
+<H2> WARN: Error sending acknowledgment back to requester</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process was unable to send
+an acknowledgment back to the requester.
+The problem associated with this error is not likely to be
+caused by something that the invoker of the
+tlisten
+process will have done.
+Nor is it likely to be a TUXEDO System error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try repeating the same operation.
+If this fails with the same error,
+contact your UNIX System administrator
+or your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="642"></A>
+<H3>CMDTUX MESSAGE #642</H3>
+<H2> ERROR: Invalid service request received, bad message header</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+or
+BBL
+process received an invalid service request message.
+It will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="644"></A>
+<H3>CMDTUX MESSAGE #644</H3>
+<H2> ERROR: Cannot remove BRIDGE on machine <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process could not remove the bulletin board entry
+for
+<I>machine</I>'s
+BRIDGE
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="645"></A>
+<H3>CMDTUX MESSAGE #645</H3>
+<H2> ERROR: Cannot unregister BBL on machine <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process could not remove the bulletin board entry
+for
+<I>machine</I>'s
+BBL
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="646"></A>
+<H3>CMDTUX MESSAGE #646</H3>
+<H2> ERROR: Could not restore DBBL entry after temp change for shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL 's
+server table entry in the bulletin board had been
+temporarily modified to allow a partitioned shutdown.
+The original entry could not be restored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="647"></A>
+<H3>CMDTUX MESSAGE #647</H3>
+<H2> ERROR: Failed to update status of restarting BRIDGE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The local
+BRIDGE
+process was marked in the bulletin board as restarting
+when a new bulletin board upload arrived.
+This status could not be restored after the upload
+request was processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="648"></A>
+<H3>CMDTUX MESSAGE #648</H3>
+<H2> ERROR: DBBL should not receive an O_MIGGRPS opcode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process
+received an internal migration operation code intended for
+BBLs
+only.
+The request will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="649"></A>
+<H3>CMDTUX MESSAGE #649</H3>
+<H2> ERROR: BBL should not receive an O_UPDGRPS opcode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+BBL
+process received an internal operation code intended for
+DBBLs
+only.
+The request will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="650"></A>
+<H3>CMDTUX MESSAGE #650</H3>
+<H2> ERROR: Could not create message queue for temporary DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary
+DBBL
+was being created for partitioned shutdown.
+There was an error when creating its message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="651"></A>
+<H3>CMDTUX MESSAGE #651</H3>
+<H2> ERROR: Could not update bulletin board for temporary DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary
+DBBL
+was being created for partitioned shutdown.
+There was an error when updating its server table
+entry in the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="652"></A>
+<H3>CMDTUX MESSAGE #652</H3>
+<H2> ERROR: Could not create message queue for DBBL migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process is migrating to this machine.
+However, a message queue could not be created for it.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If after the migration the
+DBBL
+process is not running on either the master or backup machine,
+try a partitioned shutdown and reboot of the master.
+If this does not solve the problem, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="653"></A>
+<H3>CMDTUX MESSAGE #653</H3>
+<H2> ERROR: Could not update DBBL server table entry for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process is migrating to this machine.
+However, its new server table entry in the bulletin board
+could not be updated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If after this shaky migration the
+DBBL
+process is not running on either the master or backup machine,
+try a partitioned shutdown and reboot of the master.
+If this does not work, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="654"></A>
+<H3>CMDTUX MESSAGE #654</H3>
+<H2> ERROR: Could not retrieve own bulletin board entry for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process is migrating to another machine.
+However, it could not find its own server table entry in the bulletin board.
+This prevents the old
+DBBL
+from broadcasting where the new
+DBBL
+is located.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+After this shaky migration it is possible that a
+DBBL
+process is running on both the master or backup machines.
+If so, shut down the machine with the newest one (that is, the destination
+of the last migrate command).
+Then boot that machine up and try to migrate again.
+If the error persists,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="655"></A>
+<H3>CMDTUX MESSAGE #655</H3>
+<H2> INFO: Exiting system for migration from <I>mach1</I> to <I>mach2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process has migrated to another machine.
+The old
+DBBL
+outputs this message just before exiting.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+migrate
+command
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="656"></A>
+<H3>CMDTUX MESSAGE #656</H3>
+<H2> ERROR: DBBL should not receive an O_WARMSTART opcode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process received an internal operation code intended for
+BBLs
+only.  The request will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="657"></A>
+<H3>CMDTUX MESSAGE #657</H3>
+<H2> ERROR: DBBL should not receive an O_LOADTLOG opcode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process received an internal operation code intended for
+BBLs
+only.  The request will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="662"></A>
+<H3>CMDTUX MESSAGE #662</H3>
+<H2> ERROR: Incompatible TLOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The data file being loaded into the TLOG
+assumes a different maximum number of groups
+involved per transaction than this TUXEDO System software
+release allows.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="663"></A>
+<H3>CMDTUX MESSAGE #663</H3>
+<H2> INFO: Exiting system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A temporary
+DBBL
+that was running to facilitate partitioned shutdown
+is now exiting.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="664"></A>
+<H3>CMDTUX MESSAGE #664</H3>
+<H2> ERROR: Service request from process <I>pid</I> failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A serious failure occurred when processing a service request,
+and an error response message could not be returned to the originator.
+Possible causes of the error are:  memory allocation failure,
+software version mismatch, or a shutdown is in progress.
+<I>pid</I>
+is the UNIX System process id number of the requester.
+However, it might be located on a remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="665"></A>
+<H3>CMDTUX MESSAGE #665</H3>
+<H2> ERROR: Could not unsuspend reconnected node <I>nodename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+<I>nodename</I>
+is a remote machine that had been previously partitioned.
+It is now back and reconnected to the
+DBBL .
+There was a problem unsuspending
+<I>nodename</I>'s
+services while accepting it back into the network.
+It will remain partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+On the master machine, perform a
+"tmadmin pclean"
+command for the partitioned node.
+On the partitioned machine, do a partitioned shutdown
+and then reboot.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+pclean
+command,
+tmshutdown (1),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="668"></A>
+<H3>CMDTUX MESSAGE #668</H3>
+<H2> WARN: Stale message received from BBL on machine <I>machinename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During collection of responses to a
+DBBL
+broadcast,
+a stale message (from a previous broadcast)
+was received from
+<I>machinename</I>'s
+BBL.
+The stale message will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the status of
+<I>machinename</I>,
+and its network connections.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="669"></A>
+<H3>CMDTUX MESSAGE #669</H3>
+<H2> WARN: Stray <I>ack</I> received from process <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During collection of responses to a
+DBBL
+broadcast,
+an ACK or NACK message
+was received from
+an unrecognized process.
+The ACK/NACK message will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="670"></A>
+<H3>CMDTUX MESSAGE #670</H3>
+<H2> ERROR: Cannot restore message queue, key <I>queuekey</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If the
+DBBL 's
+UNIX System message queue is ever removed,
+the
+DBBL
+will attempt to recreate it.
+This should never happen, but the
+DBBL
+has recovery code for extra reliability.
+This error means the message
+queue recovery code itself failed.
+It is a serious error because the
+DBBL
+cannot function without a message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the UNIX System
+kill
+command to force a
+DBBL
+restart.
+If it does not restart successfully within a few minutes,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+kill (1)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="672"></A>
+<H3>CMDTUX MESSAGE #672</H3>
+<H2> INFO: Sending BBL on machine <I>name</I> new version of bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+on machine
+<I>name</I>
+is being sent a new copy of the bulletin board
+by the
+DBBL .
+This would occur if a previous bulletin board update
+request failed, or if machine
+<I>name</I>
+had been partitioned and now is reconnected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="680"></A>
+<H3>CMDTUX MESSAGE #680</H3>
+<H2> ERROR: Cannot find own table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If the
+DBBL 's
+UNIX System message queue is ever removed,
+the
+DBBL
+will attempt to recreate it.
+This should never happen, but the
+DBBL
+has recovery code for extra reliability.
+This error means the message
+queue recovery code itself failed.
+It is a serious error because the
+DBBL
+cannot function without a message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the UNIX System
+kill
+command to force a
+DBBL
+restart.
+If it does not restart successfully within a few minutes,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="681"></A>
+<H3>CMDTUX MESSAGE #681</H3>
+<H2> ERROR: Cannot update own table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If the
+DBBL 's
+UNIX System message queue is ever removed,
+the
+DBBL
+will attempt to recreate it.
+This should never happen, but the
+DBBL
+has recovery code for extra reliability.
+This error means the message
+queue recovery code itself failed.
+It is a serious error because the
+DBBL
+cannot function without a message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the UNIX System
+kill
+command to force a
+DBBL
+restart.
+If it does not restart successfully within a few minutes,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="682"></A>
+<H3>CMDTUX MESSAGE #682</H3>
+<H2> WARN: New message queue created, key =<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If the
+DBBL 's
+UNIX System message queue is ever removed,
+the
+DBBL
+will attempt to recreate it.
+This should never happen, but the
+DBBL
+has recovery code for extra reliability.
+This message is output after the
+DBBL
+successfully recreates its queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="683"></A>
+<H3>CMDTUX MESSAGE #683</H3>
+<H2> ERROR: Group id for migration is missing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One or more server groups could not be
+migrated because an internal system
+message is missing necessary data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="684"></A>
+<H3>CMDTUX MESSAGE #684</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while
+migrating one or more groups.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="685"></A>
+<H3>CMDTUX MESSAGE #685</H3>
+<H2> ERROR: Could not retrieve server entries for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One or more server groups could not be
+migrated because server table entries
+in the bulletin board could not be retrieved.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="686"></A>
+<H3>CMDTUX MESSAGE #686</H3>
+<H2> ERROR: Could not update migrating server's status</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A migrating server's status could not be updated in
+the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="687"></A>
+<H3>CMDTUX MESSAGE #687</H3>
+<H2> INFO: Server process marked for migration restart, srvgrp=<I>number,</I> srvid=<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The server process has been migrated,
+and is about to be restarted on the current machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+migrategroup
+and
+migratemach
+commands
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="688"></A>
+<H3>CMDTUX MESSAGE #688</H3>
+<H2> ERROR: Running server cannot be migrated, srvgrp=<I>number,</I> srvid=<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request was made to migrate this server process.
+The migration could not proceed because it
+is still running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the process using
+tmshutdown 's
+-R option
+before migrating it.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+migrategroup
+and
+migratemach
+commands
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="692"></A>
+<H3>CMDTUX MESSAGE #692</H3>
+<H2> ERROR: Cannot retrieve BBL entry for pclean operation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When attempting to clean up after a dead or partitioned
+machine, the
+DBBL
+could not find any record of that machine's
+BBL
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+pclean
+command
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="694"></A>
+<H3>CMDTUX MESSAGE #694</H3>
+<H2> ERROR: Cannot lock bulletin board for pclean operation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A bulletin board lock could not be obtained
+when attempting to clean up after a dead or partitioned
+machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try again after a few seconds, giving the bulletin board lock recovery
+algorithm time to run.
+If this error continues, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+pclean
+command
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="695"></A>
+<H3>CMDTUX MESSAGE #695</H3>
+<H2> ERROR: Could not remove server entry for tmid <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When attempting to clean up after a dead or partitioned
+machine, a server table entry could not be
+removed from the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+pclean
+command
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="697"></A>
+<H3>CMDTUX MESSAGE #697</H3>
+<H2> ERROR: Could not access *RESOURCES section of TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When attempting to update the version number of
+the master copy
+TUXCONFIG
+file, the
+*RESOURCES section could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Apparently something has happened to the master
+machine's
+TUXCONFIG
+file.
+It can be restored by shutting down the entire
+application, and then running
+tmloadcf
+on a backup
+ASCII
+copy.
+Running
+tmunloadcf
+on a different machine's
+TUXCONFIG
+file should provide a recent backup version.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="698"></A>
+<H3>CMDTUX MESSAGE #698</H3>
+<H2> ERROR: Could not read *RESOURCES section of TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When attempting to update the version number of
+the master copy of the
+TUXCONFIG
+file, the
+*RESOURCES section could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Apparently something has happened to the master
+machine's
+TUXCONFIG
+file.
+It can be restored by shutting down the entire
+application, and then running
+tmloadcf
+on a backup
+ASCII version.
+Running
+tmunloadcf
+on a different machine's
+TUXCONFIG
+file should provide a recent backup version.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="699"></A>
+<H3>CMDTUX MESSAGE #699</H3>
+<H2> ERROR: Could not update *GROUPS section of TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The location of a server group was
+being updated in the master copy of the
+TUXCONFIG
+file,
+to reflect a new location after migration.
+An error prevented the *GROUPS section from being read
+(or updated).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Apparently something has happened to the master
+machine's
+TUXCONFIG
+file.
+It can be restored by shutting down the entire
+application, and then running
+tmloadcf
+on a backup
+ASCII version.
+Running
+tmunloadcf
+on a different machine's
+TUXCONFIG
+file should provide a recent backup version.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

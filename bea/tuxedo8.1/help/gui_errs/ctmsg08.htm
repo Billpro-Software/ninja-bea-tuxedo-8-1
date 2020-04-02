@@ -1,0 +1,1805 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 800-899</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="802"></A>
+<H3>CMDTUX MESSAGE #802</H3>
+<H2> ERROR: Cannot start servers, memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the booting of servers,
+memory could not be allocated for an internal
+structure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="803"></A>
+<H3>CMDTUX MESSAGE #803</H3>
+<H2> ERROR: Cannot start servers, memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the booting of servers,
+memory could not be allocated for an internal
+structure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="804"></A>
+<H3>CMDTUX MESSAGE #804</H3>
+<H2> ERROR: Cannot start TMS servers, error reading *GROUP section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the *GROUPS section of the configuration file could not be
+read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and exported, or that
+TUXCONFIG
+is not corrupted (try a
+tmunloadcf ),
+or
+TUXCONFIG
+was propagated to
+all machines in the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="805"></A>
+<H3>CMDTUX MESSAGE #805</H3>
+<H2> ERROR: Cannot start servers, error reading *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the SERVERS section of the configuration file could not
+be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and exported.
+Make sure the
+TUXCONFIG
+file is not corrupted (try a
+tmunloadcf ).
+Verify that the
+TUXCONFIG
+file was propagated to
+all machines in the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="808"></A>
+<H3>CMDTUX MESSAGE #808</H3>
+<H2> ERROR: Skipping aout=<I>a.out</I>, LOC=<I>lmid</I> - illegal LMID specification.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the server specification used an illegal
+<I>lmid</I>
+and consequently the server
+<I>a.out</I>
+was not started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the correct
+<I>lmid</I>
+is used in the configuration file and reload the configuration
+once the server entry has been corrected.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="809"></A>
+<H3>CMDTUX MESSAGE #809</H3>
+<H2> ERROR: Argument vector formation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the command line options for a server to be booted is
+generated.  An error has occurred in forming this string.  The
+problem associated with this error is probably not caused by
+something the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="810"></A>
+<H3>CMDTUX MESSAGE #810</H3>
+<H2> ERROR: Aout=<I>a.out</I> - too many arguments</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the command line options for a server to be booted are
+generated.  The resultant command line options string is longer that
+256 characters and cannot be processed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reduce the number of arguments or the length of parameters set,
+such as path names, wherever possible.  Note that internal options
+may be added to the command line.  Therefore, even if the command
+line options specified by the user have fewer than 256 characters,
+this error may occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="812"></A>
+<H3>CMDTUX MESSAGE #812</H3>
+<H2> ERROR: Illegal machine id value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the specified servers are booted.  The machine section
+of the
+TUXCONFIG
+file is read and an error has occurred in retrieving
+this information.
+The problem associated with this error is probably not caused by
+something the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="813"></A>
+<H3>CMDTUX MESSAGE #813</H3>
+<H2> ERROR: Illegal machine id value, <I>mid</I>, for <I>a.out</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the specified servers are booted.  The machine section
+of the
+TUXCONFIG
+file is read and an error has occurred in retrieving
+this information.  The
+problem associated with this error is probably not caused by
+something the user has done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="814"></A>
+<H3>CMDTUX MESSAGE #814</H3>
+<H2> ERROR: Cannot propagate TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the
+TUXCONFIG
+file was not successfully
+propagated to the remote machine.  This error may occur in a variety
+of ways.
+<UL>
+<LI><P>
+The network listener process
+tlisten
+may not be reached.  This could be due to a mismatch of the
+network listener address in the
+UBBCONFIG
+file (the
+NLSADDR
+value)
+and the actual address that the tlisten process is using.
+<LI><P>
+If the
+TAGENT
+on a remote node encounters an error
+while trying to process the configuration file.
+</UL>
+<P>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Verify the network listener address in the
+TUXCONFIG
+and the address
+used for the
+tlisten
+process.
+<LI><P>
+Examine the userlog for further error messages from the
+TAGENT
+process.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1),
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="815"></A>
+<H3>CMDTUX MESSAGE #815</H3>
+<H2> ERROR: Cannot fork</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmboot
+was unable to
+fork()
+a child process in order to start a TUXEDO System process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The system resources are being used intensively.  Try the boot
+command again.  If this situation persists, contact your
+UNIX system administrator.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="816"></A>
+<H3>CMDTUX MESSAGE #816</H3>
+<H2> ERROR: Cannot exec, executable file not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While starting a TUXEDO System or server process, the executable file
+was not found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For a TUXEDO System process, make sure that the
+TUXDIR
+value of the
+<I>lmid</I>
+is set properly.  The executables should be found in
+${TUXDIR}/bin.
+For a server process, check the value of
+APPDIR
+for that
+<I>lmid.</I>
+Make sure that the server executable file is located in that
+directory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="817"></A>
+<H3>CMDTUX MESSAGE #817</H3>
+<H2> ERROR: Cannot exec, network send error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to contact a remote site to start TUXEDO System processes
+or servers, a network error has occurred.  Check the userlog to find
+out specific details of the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The boot command may be tried again.  If the error persists, contact
+your network administrator.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="818"></A>
+<H3>CMDTUX MESSAGE #818</H3>
+<H2> WARN: Process id=<I>pid...</I> Assume started (network).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting TUXEDO System processes or servers,
+tmboot
+did not receive the status from a network call.  The system issues
+this message to point out that it is not aware of the process status.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is necessary, however, it is useful to note the status of
+system processes during this scenario.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="819"></A>
+<H3>CMDTUX MESSAGE #819</H3>
+<H2> INFO: Process id=<I>pid...</I> Assume started (pipe).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While booting TUXEDO System processes,
+tmboot
+receives an interrupt and the system issues this message to point out
+that it is not aware of
+the process status.
+Even though the
+boot
+process is interrupted (and
+perhaps aborted by the administrator), the local TUXEDO System process
+currently being started may succeed or fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is necessary, however, it is useful to note the status of
+system processes during this scenario.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="821"></A>
+<H3>CMDTUX MESSAGE #821</H3>
+<H2> INFO: Duplicate server.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+boot
+command has been issued for a server that is already running.
+This message is issued to inform the administrator that a redundant
+boot
+command has been issued.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is necessary.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="822"></A>
+<H3>CMDTUX MESSAGE #822</H3>
+<H2> ERROR: No BBL available, cannot boot</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While starting a server process, the
+BBL
+was not available; the server
+cannot join the application without this system process.  All
+outstanding requests to boot servers will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+BBL
+is running on the site that failed, and reissue
+the
+boot
+command that originally failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="823"></A>
+<H3>CMDTUX MESSAGE #823</H3>
+<H2> ERROR: No DBBL available, cannot boot</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While starting a server process on the master site, the
+DBBL
+was not
+available; the server cannot join the application without this system
+process.  All outstanding requests to boot servers will be ignored.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+DBBL
+is running on the master site, and reissue
+the
+boot
+command that originally failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="825"></A>
+<H3>CMDTUX MESSAGE #825</H3>
+<H2> ERROR: Process <I>a.out</I> at <I>lmid</I> failed with /T tperrno (<I>tperrno_val</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message prints out a TUXEDO System /T error that has occurred in the process
+<I>a.out</I>
+while booting on the machine
+<I>lmid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for messages from the
+<I>a.out</I>
+process to further determine what failure has occurred.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="826"></A>
+<H3>CMDTUX MESSAGE #826</H3>
+<H2> ERROR: Process <I>a.out</I> at <I>lmid</I> failed with code <I>error_code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message prints out a TUXEDO System/T error number that has occurred in the
+process
+<I>a.out</I>
+while booting on the machine
+<I>lmid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check userlog messages for the
+<I>a.out</I>
+process to further determine what failure has occurred.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="827"></A>
+<H3>CMDTUX MESSAGE #827</H3>
+<H2> ERROR: Fatal error encountered; initiating user error handler</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A fatal error has occurred and the user error handler is invoked.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check previous userlog messages to further determine what
+failure has occurred.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="828"></A>
+<H3>CMDTUX MESSAGE #828</H3>
+<H2> ERROR: Cannot create error process - fork() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system, in trying to initiate the user error handler, could not
+fork a new process (the
+fork()
+system call returns -1).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error is directly related to system resources (too many
+processes, lack of swap space, etc).  Consult your UNIX system
+administrator for appropriate actions.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="829"></A>
+<H3>CMDTUX MESSAGE #829</H3>
+<H2> ERROR: Error executing `<I>error_cmd'</I> - <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user has specified a command
+<I>error_cmd</I>
+to be executed if any process fails
+to boot (via the -e option).  The system, in trying to initiate the
+user error handler, could not exec a new process (the
+execl()
+system call returns an
+<I>error</I>).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The command specified should be checked.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="830"></A>
+<H3>CMDTUX MESSAGE #830</H3>
+<H2> ERROR: Could not get BB parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error has occurred while trying to read the data from the Bulletin
+Board.  This error could occur in a variety of situations including
+not being able to open the
+TUXCONFIG
+file, an error in reading
+information from the
+TUXCONFIG
+file, trying to read a
+TUXCONFIG
+file
+from an old release, etc.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and
+exported, or that the
+TUXCONFIG
+file is not corrupted (try a
+tmunloadcf ).
+Also make sure that the
+TUXCONFIG
+file was propagated to
+all machines in the configuration.  Check the userlog for additional
+details on this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="835"></A>
+<H3>CMDTUX MESSAGE #835</H3>
+<H2> ERROR: Could not read *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the *MACHINES section of the configuration
+file could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and
+exported, or that the
+TUXCONFIG
+file is not corrupted (try a
+tmunloadcf ),
+or the
+TUXCONFIG
+file was propagated to all machines in the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="840"></A>
+<H3>CMDTUX MESSAGE #840</H3>
+<H2> ERROR: Could not read *GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmboot
+process, the *GROUPS section of the configuration
+file could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and
+exported, or that the
+TUXCONFIG
+file is not corrupted (try a
+tmunloadcf ),
+or the
+TUXCONFIG
+file was propagated to all machines in
+the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="841"></A>
+<H3>CMDTUX MESSAGE #841</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc()
+failed while setting up an entry for the
+IPC
+sizing
+information requested.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="842"></A>
+<H3>CMDTUX MESSAGE #842</H3>
+<H2> ERROR: Could not read *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the tmboot process, the SERVERS section of the configuration
+file could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and
+exported, or that the
+TUXCONFIG
+file is not corrupted (try a
+tmunloadcf ),
+or the
+TUXCONFIG
+file was propagated to all machines in
+the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="843"></A>
+<H3>CMDTUX MESSAGE #843</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc()
+failed while setting up an entry for the IPC sizing
+information requested.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="844"></A>
+<H3>CMDTUX MESSAGE #844</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc()
+failed while setting up an entry for system processes
+to be started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="845"></A>
+<H3>CMDTUX MESSAGE #845</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc()
+failed while setting up an entry for system processes
+to be started.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="846"></A>
+<H3>CMDTUX MESSAGE #846</H3>
+<H2> ERROR: Illegal ctype</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The ctype of this entry in the
+TODO
+list is not
+CT_MCHID
+as expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="847"></A>
+<H3>CMDTUX MESSAGE #847</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc()
+failed while setting up a list of message queues
+to be created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process.  Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="848"></A>
+<H3>CMDTUX MESSAGE #848</H3>
+<H2> ERROR: Machine id mismatch for GROUP set <I>group_number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+<I>group_number</I>
+used is present in the internal groups structure but the
+corresponding machine id doesn't match.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="853"></A>
+<H3>CMDTUX MESSAGE #853</H3>
+<H2> ERROR: tmloadcf error on <I>lmid</I> for TUXCONFIG file <I>file</I> creation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a remote machine, an error occurred whe running
+tmloadcf
+to load the TUXCONFIG file.
+Additional information will be printed if tmloadcf printed
+any errors.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This output may be used to further diagnose what has occurred during
+the
+tmloadcf
+failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="854"></A>
+<H3>CMDTUX MESSAGE #854</H3>
+<H2> ERROR: tmloadcf error on <I>lmid,</I> tmloadcf output:</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message prints the output that occurred from
+tmloadcf
+from the remote site when the
+TUXCONFIG
+file was being propagated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This output may be used to further diagnose what has occurred during
+the
+tmloadcf
+failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="856"></A>
+<H3>CMDTUX MESSAGE #856</H3>
+<H2> ERROR: tmdump failed - can't find BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to dump the Bulletin Board a system process, the
+BBL
+was not available; we cannot join the application without this
+system process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+BBL
+is running on the site that failed, and reissue
+the dump command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="857"></A>
+<H3>CMDTUX MESSAGE #857</H3>
+<H2> ERROR: tmdump failed - can't find DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to dump the Bulletin Board a system process, the
+DBBL
+was not available; we cannot join the application without this
+system process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+DBBL
+is running on the site that failed, and reissue
+the dump command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="858"></A>
+<H3>CMDTUX MESSAGE #858</H3>
+<H2> ERROR: tmdump failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system was unable to create a buffer for the dump request message
+to be sent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="859"></A>
+<H3>CMDTUX MESSAGE #859</H3>
+<H2> ERROR: tmdump failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Sending the system message to request a dump of the
+BBL
+has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the userlog for additional error messages.  Contact your TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="860"></A>
+<H3>CMDTUX MESSAGE #860</H3>
+<H2> ERROR: Invalid option <I>option_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The option specified is not a valid option to the
+tmloadcf
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the options to the
+tmloadcf
+command as per the usage message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="862"></A>
+<H3>CMDTUX MESSAGE #862</H3>
+<H2> ERROR: Current work directory path name is too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an attempt to get the current working directory path failed.
+This can indicate that either the directory pathname is greater than
+78 characters in length or that the directory hierarchy is not
+readable.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory hierarchy has the proper permissions and
+is not longer than 78 characters,
+and re-execute the command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="863"></A>
+<H3>CMDTUX MESSAGE #863</H3>
+<H2> ERROR: Absolute path name of the output file is too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The length of the absolute path name of the output file is greater than
+MAXTLSTRING. This file is given as the argument to the <Font>-o
+command line option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a shorter path name.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="864"></A>
+<H3>CMDTUX MESSAGE #864</H3>
+<H2> ERROR: Can't open file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the specified input file cannot be opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the input (UBBCONFIG) file exists and is readable,
+and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="865"></A>
+<H3>CMDTUX MESSAGE #865</H3>
+<H2> ERROR: <I>command</I>: Parse failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an error occurred parsing the input
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Earlier warning or error messages will indicate the nature of the
+error.  Correct these problems and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="866"></A>
+<H3>CMDTUX MESSAGE #866</H3>
+<H2> ERROR: <I>command</I>: Severe error found. Stop syntax checking.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an error occurred in the input
+UBBCONFIG
+file such that the
+TUXCONFIG
+file cannot be loaded.
+These errors include missing sections, multiple occurrences of
+sections, dynamic space allocation errors, etc, such that
+parsing of the input
+UBBCONFIG
+file was terminated before reading the entire file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Earlier warning or error messages will indicate the nature of the
+error.  Correct these problems and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="867"></A>
+<H3>CMDTUX MESSAGE #867</H3>
+<H2> ERROR: <I>command</I>: Above errors found during syntax checking</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+one or more errors occurred in the input
+UBBCONFIG
+file such that the
+TUXCONFIG
+file cannot be loaded.
+Normally, this message indicates that the entire
+UBBCONFIG
+file was read and checked for errors.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Earlier warning or error messages will indicate the nature of the
+error.  Correct these problems and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="868"></A>
+<H3>CMDTUX MESSAGE #868</H3>
+<H2> ERROR: <I>command</I> cannot run on a non-master node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tmloadcf
+was run on a machine whose
+uname ()
+does not match the physical machine name associated with the
+MASTER
+LMID
+in the *RESOURCES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the value of
+MASTER
+in the *RESOURCES section,
+or change the machine name associated with the
+LMID
+associated with
+MASTER
+in the *MACHINES section,
+or run the command on the
+MASTER
+machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="869"></A>
+<H3>CMDTUX MESSAGE #869</H3>
+<H2> ERROR: Can't open file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the specified file,
+<I>filename</I>,
+could not be opened for reading.
+tmloadcf
+works by reading the input twice, and this failure occurs on
+the second pass.  If the input is not from a file
+(for example, from the standard input), then the input is put into a
+temporary file and this file cannot be opened for reading.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that this file still exists and has read permission.
+Re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="870"></A>
+<H3>CMDTUX MESSAGE #870</H3>
+<H2> ERROR: <I>command</I>: Error found in parsing input</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an error was found during the second pass of parsing the input.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command.
+If the problem happens again,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="871"></A>
+<H3>CMDTUX MESSAGE #871</H3>
+<H2> INFO: TUXCONFIG file <I>filename</I> has been created</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the input
+UBBCONFIG
+has been successfully processed
+and a new
+TUXCONFIG
+file or device,
+<I>filename</I>,
+has been created (that is, it did not exist and a new one was created).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="872"></A>
+<H3>CMDTUX MESSAGE #872</H3>
+<H2> INFO: TUXCONFIG file <I>filename</I> has been updated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the input
+UBBCONFIG
+file has been processed
+and an existing
+TUXCONFIG
+file or device has been updated with the information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="873"></A>
+<H3>CMDTUX MESSAGE #873</H3>
+<H2> ERROR: TUXCONFIG environment variable not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the
+TUXCONFIG
+environment variable has not been set and exported.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXCONFIG
+environment variable and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="874"></A>
+<H3>CMDTUX MESSAGE #874</H3>
+<H2> ERROR: TUXOFFSET environment variable must >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the
+TUXOFFSET
+environment variable is not set correctly to a non-negative
+integer offset.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXOFFSET
+environment variable to a non-negative
+integer offset and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="875"></A>
+<H3>CMDTUX MESSAGE #875</H3>
+<H2> ERROR: TUXCONFIG not set or incorrectly set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an error occurred in checking the
+TUXCONFIG
+device.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that either the
+TUXCONFIG
+device or file does not exist (if it is being created for the first time)
+or that it exists and  is a valid configuration file.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="876"></A>
+<H3>CMDTUX MESSAGE #876</H3>
+<H2> ERROR: The value of -b option (<I>blocks</I>) is too small.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the size specified for the -b option on the command
+is too small to hold the configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If
+TUXCONFIG
+is a UNIX file, it is recommended that the -b option not be specified
+such that
+tmloadcf
+will size the configuration file correctly.
+If
+TUXCONFIG
+is a raw device, then the -b option should be used to specify the
+total size in blocks of the device; if this was done, then a larger
+raw device is needed.
+System message CT877 indicates the minimum number of blocks needed
+for the
+file or device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="877"></A>
+<H3>CMDTUX MESSAGE #877</H3>
+<H2> ERROR: TUXCONFIG file needs at least <I>nblocks</I> <I>size</I>-byte blocks</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the size specified for the -b command line option was too small.
+The minimum size needed is specified as
+<I>nblocks</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If
+TUXCONFIG
+is a UNIX file, it is recommended that the -b option not be specified
+such that
+tmloadcf
+will size the configuration file correctly.
+If
+TUXCONFIG
+is a raw device, then the -b option should be used to specify the
+total size in blocks of the device; if this was done, then a larger
+raw device is needed.
+The minimum number of blocks needed is specified
+in this message,
+<I>nblocks</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="878"></A>
+<H3>CMDTUX MESSAGE #878</H3>
+<H2> ERROR: Can't create TUXCONFIG <I>tuxconfig</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+creation of the
+TUXCONFIG
+file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A subsequent system message will indicate the nature of the failure.
+Correct the problem and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="879"></A>
+<H3>CMDTUX MESSAGE #879</H3>
+<H2> INFO: A new file system has been created. (size = <I>nblocks</I> <I>size</I>-byte blocks)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+a new
+TUXCONFIG
+file or device was created with the specified size,
+<I>nblocks</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="880"></A>
+<H3>CMDTUX MESSAGE #880</H3>
+<H2> ERROR: Can't create <I>tablename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+a failure occurred while trying to create the specified
+<I>tablename</I>.
+One table is created for each of the sections in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A subsequent system message will indicate the nature of the error.
+Correct the problem and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="881"></A>
+<H3>CMDTUX MESSAGE #881</H3>
+<H2> ERROR: Can't open <I>tablename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+a failure occurred while trying to open the specified
+<I>tablename</I>.
+One table is created and opened for each of the sections in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A subsequent system message will indicate the nature of the error.
+Correct the problem and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="882"></A>
+<H3>CMDTUX MESSAGE #882</H3>
+<H2> ERROR: Can't write <I>tablename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+a failure occurred while trying to write the specified
+<I>tablename</I>.
+One table is created, opened, and written for each of the sections in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A subsequent system message will indicate the nature of the error.
+Correct the problem and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="883"></A>
+<H3>CMDTUX MESSAGE #883</H3>
+<H2> ERROR: tmloadcf cannot run on an active node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the configuration file could not be loaded
+because the application is active on the current machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the application is active, shut down the application using
+tmshutdown ,
+or make the change using the dynamic reconfiguration program
+tmconfig .
+If the application is not active, then another application is
+using the same
+IPC
+key.
+Choose another
+IPC
+key and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tmloadcf (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="885"></A>
+<H3>CMDTUX MESSAGE #885</H3>
+<H2> WARN: TUXCONFIG file not created: exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the
+TUXCONFIG
+file did not exist.  When asked if the
+TUXCONFIG
+file should be created, the administrator did not respond positively
+so the file was not created and loaded.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="887"></A>
+<H3>CMDTUX MESSAGE #887</H3>
+<H2> WARN: TUXCONFIG file not updated: exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+the
+TUXCONFIG
+file already exists.  When asked if the
+TUXCONFIG
+file should be overwritten, the administrator did not respond positively
+so the file was not updated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="892"></A>
+<H3>CMDTUX MESSAGE #892</H3>
+<H2> ERROR: Error processing configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf
+for an existing
+TUXCONFIG ,
+an error occurred in reading the *RESOURCES section of the configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+TUXCONFIG
+VTOC
+is only being used to hold the
+TUXCONFIG
+tables
+(and not the
+TLOG
+or a
+TUXEDO/D
+database), then the first thing to try
+is to recreate a new
+TUXCONFIG.
+If the
+TUXCONFIG
+is a UNIX file, simply remove it.
+If it is stored on a raw disk, erase it by doing:
+	echo "" >$TUXCONFIG
+If the error continues to happen, check for disk-type error conditions
+that might cause problems reading the file.
+Finally, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="893"></A>
+<H3>CMDTUX MESSAGE #893</H3>
+<H2> WARN: Continuing processing - overwriting old TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf
+for an existing
+TUXCONFIG ,
+an error occurred in reading the *RESOURCES section of the configuration
+but the configuration does not appear to be for the current release.
+The configuration will be overwritten.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

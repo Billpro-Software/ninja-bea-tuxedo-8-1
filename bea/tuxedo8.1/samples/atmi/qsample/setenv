@@ -1,0 +1,18 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1990 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/qsample/setenv	$Revision: 1.5 $"
+#
+TUXDIR=<full path of TUXEDO software>; export TUXDIR
+LD_LIBRARY_PATH=$TUXDIR/lib:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH
+SHLIB_PATH=$TUXDIR/lib:$SHLIB_PATH; export SHLIB_PATH
+LIBPATH=$TUXDIR/lib:$LIBPATH; export LIBPATH
+APPDIR=`pwd`; export APPDIR
+PATH=${TUXDIR}/bin:${APPDIR}:${PATH}; export PATH
+#for SUN machines uncomment the next line by removing the pound sign.
+#PATH=/usr/5bin:$PATH; export PATH
+QMCONFIG=$APPDIR/QUE; export QMCONFIG
+TUXCONFIG=$APPDIR/tuxconfig; export TUXCONFIG
+chmod ug+x crlog crque rmipc runsample setenv
+

@@ -1,0 +1,68 @@
+			SimpApp Sample
+
+The "simpapp" application illustrates how the servlet interfaces with
+the Servlet Connectivity for Tuxedo.  It shows how to use a property file
+to create a session pool, how to get the session pool manager, how to
+retrieve the session pool by name, how to invoke a TUXEDO service and
+how to process the result set.
+
+REQUIREMENT
+===========
+Any Web Application Server with Servlet JSDK 1.1 or above
+TUXEDO 6.4 or above with SimpApp sample running
+Jolt 1.2
+
+INSTALLATION INSTRUCTIONS
+=========================
+1. Install the Jolt class library (jolt.jar) and Servlet Connectivity for
+   Tuxedo class library (joltjse.jar) to the web application server.  Extract
+   the class files if it is required by your web application server.
+
+2. Compile the SimpAppServlet.java.  Make sure that you include the standard
+   JDK 1.1.x classes.zip, JSDK 1.1 classes, Jolt classes library and Servlet
+   Connectivity for Tuxedo class library in the classpath.
+
+   javac -classpath $(JAVA_HOME)/lib/classes.zip:$(JSDK)/lib/servlet.jar:
+		    $(JOLTHOME)/jolt.jar:$(JOLTHOME)/joltjse.jar:./classes
+	 -d ./classes SimpAppServlet.java
+
+   The package name of the SimpAppServlet example is
+   "examples.jolt.servlet.simpapp".
+
+3. Put the simpapp.html and simpapp.properties files in the public HTML
+   directory.
+
+4. Modify the simpapp.properties file.  Change the "appaddrlist" and
+   "failoverlist" with the proper Jolt server hosts and ports.  Specify
+   the proper TUXEDO authentication information if the SimpApp has security
+   turned on.  For example,
+	#simpapp
+	#Fri Apr 16 00:43:30 PDT 1999
+	poolname=simpapp
+	appaddrlist=//host:7000,//host:8000
+	failoverlist=//backup:9000
+	minpoolsize=1
+	maxpoolsize=3
+	userrole=tester
+	apppassword=appPass
+	username=guest
+	userpassword=myPass
+
+5. Register "simpapp" for the SimpAppServlet.  Consult your web application
+   server for details.  For WebLogic users, add the following line to the
+   weblogic.properties file,
+
+	weblogic.httpd.register.simpapp=examples.jolt.servlet.SimpAppServlet
+
+6. To access the SimpApp initial page "simpapp.html", type
+
+	http://mywebserver:8080/simpapp.html
+
+REFERENCES
+==========
+1. Java Servlets
+	http://jserv.java.sun.com/products/java-server/documentation/
+		webserver1.1/index_developer.html
+
+2. Servlet Interest Group:
+	servlet-interest@java.sun.com

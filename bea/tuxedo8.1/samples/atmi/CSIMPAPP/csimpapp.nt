@@ -1,0 +1,22 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1996 BEA Systems
+#	All rights reserved
+#
+#	THIS IS UNPUBLISHED PROPRIETARY
+#	SOURCE CODE OF BEA Systems
+#	The copyright notice above does not
+#	evidence any actual or intended
+#	publication of such source code.
+#
+#ident	"@(#) samples/atmi/CSIMPAPP/csimpapp.nt	$Revision: 1.5 $"
+all: CSIMPCL.exe CSIMPSRV.exe
+
+CSIMPCL.exe: CSIMPCL.obj
+	cblnames -v -mCSIMPCL CSIMPCL.obj
+	buildclient -C -o CSIMPCL  -f CSIMPCL.obj -f cbllds.obj
+
+CSIMPSRV.exe: CSIMPSRV.obj TPSVRINIT.obj
+	buildserver -C -o CSIMPSRV -s CSIMPSRV -f CSIMPSRV.obj -f TPSVRINIT.obj
+
+.cbl.obj:
+	(set COBCPY=$(TUXDIR)\cobinclude) & cobol $*.cbl obj litlink;

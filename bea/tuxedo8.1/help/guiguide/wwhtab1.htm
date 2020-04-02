@@ -1,0 +1,32 @@
+<HTML>
+<!--
+// Copyright (c) 1999 Quadralay Corporation.  All rights reserved.
+//
+// The information in this file is confidential and proprietary to
+// Quadralay Corporation.  Unauthorized use or duplication is
+// strictly prohibited.
+-->
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
+function setDisplayAttributes(){
+   document.bgColor=parent.tab["tab1"][2];
+   document.alinkColor=parent.tab["tab1"][3];
+   document.linkColor=parent.tab["tab1"][4];
+   document.vlinkColor=parent.tab["tab1"][5];
+}
+function init(){
+document.open("text/html","replace");
+document.bgColor=parent.tab["tab1"][2];
+document.alinkColor=parent.tab["tab1"][3];
+document.linkColor=parent.tab["tab1"][4];
+document.vlinkColor=parent.tab["tab1"][5];
+document.write("<BASEFONT FACE='"+parent.tff+"' SIZE="+parent.tfs+">");
+parent.displayIndex();
+document.close();
+}
+</SCRIPT>
+</HEAD>
+<!-- <BODY onLoad="init();" onResize="setDisplayAttributes();" background="wwhgifs/tabs_backgrnd.gif"></BODY> -->
+<BODY onLoad="init();" onResize="setDisplayAttributes();"></BODY>
+</HTML>
+

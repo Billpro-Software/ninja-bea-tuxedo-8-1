@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude">
+<head>
+<title>Design Databases</title>
+<style type="text/css">
+	BODY {
+		font-family:Tohoma;
+		font-size:11pt;
+		background-color:#FFFFFF;
+		color:#006699;
+	}
+	TABLE {
+		border:none;
+		border-width:0px;
+		padding:0px;
+		vertical-align:top;
+		font-family:Tohoma;
+		font-size:11pt;
+	
+	}
+	TR {
+		vertical-align:top;
+	}
+	#each_block {
+		color: #006666;
+		position:relative;
+		width: 247px;
+		text-align: left;
+		padding: 3px;
+	}
+	.menuItemEna{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:11px;
+		font-weight:normal;
+		color:#000000;
+		background-color: #F0F0F0;
+	}
+	.menuItemOver{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:11px;
+		font-weight:normal;
+		color:#FFFFFF;
+		background-color: #316AC4;
+	}
+	#header_text {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		font-style: normal;
+		font-weight: bold;
+		color: #003399;
+	}
+	#icon_area {
+		width:20px;
+		margin-top:2px;
+	}
+	#top_menu_home_style {
+		margin-right: 20px;
+		margin-left: 10px;
+		color:#000000;
+	}
+	#top_menu_current_style {
+		font-weight: bold;
+		color: #000000;
+	}
+	#bottom_menu_bar {
+		width: 100%;
+		background-color:#666666;
+		min-width: 800px;
+		font-family:tokoma;
+		color:#FFFFFF;
+		height: 40px;
+		font-size:11pt;
+		vertical-align:middle;
+		margin-bottom: 10px;
+	}
+	#each_item{
+		padding:4px;
+		position:relative;
+		top:30%;
+	}
+	#instructional {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		font-weight: normal;
+		color: #666666;
+	}
+	#title_text{
+		color:#000000;
+		font-size:11px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		position:absolute;
+		top:5px;
+		left: 64px;
+		width:324px;
+		top:7px;
+	}
+	#title_area {
+		position:absolute; 
+		top:0px; 
+		left:0px;
+	}
+	#coming_soon {
+		color:#3366FF;
+		font-size:11px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-weight: bold;
+	}
+#footer{
+	height: 55px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color:#FFFFFF;
+	font-size: 13px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+#footer_content{
+	background-color:#9da3ad;
+	height: 33px;
+	vertical-align: middle;
+}
+#links{
+	margin-top: 10px;
+	width: 100%;
+	min-width:800px;
+}
+#copyRight_block {
+	background-color:#FFFFFF;
+	margin-top:5px;
+	height:20px;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+A.bottomBannerItem{
+	font-size: 12px;
+	color: #ffffff;
+	text-decoration:none;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+A.bottomBannerItem:hover {
+	font-size: 12px;
+	color: #003399;
+	text-decoration:none;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+A.bottomBannerItem:focus {
+	font-size: 12px;
+	color: #003399;
+	text-decoration:none;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+
+A.copyRight:link{
+	color: #333333;
+	font-size:9px;
+	text-decoration:none;
+	margin-left: 7px;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+A.copyRight:hover{
+	color: #003399;
+	font-size:9px;
+	text-decoration:none;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+A.copyRight:focus{
+	color: #003399;
+	font-size:9px;
+	text-decoration:none;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+}
+#each_item {
+	color:#FFFFFF;
+}
+#seperator {
+	color:#ffffff; 
+	font-family:arial; 
+	font-size:10px;
+}
+#go_home {
+	margin-left:4px;
+	margin-top:2px;
+	font-size:11px;
+	font-family: Tahoma, Kalimati, FreeSans, Verdana, Arial, sans-serif;
+	height:21px;
+	width:35px;
+}
+.go_home_init {
+	color:#000000;
+	border:thin;
+	border-color:#ffffff;
+	border-style:solid;
+	border-width:1px;
+	background:#ffffff;
+}
+.go_home_over {
+	color:#000000;
+	border:thin;
+	border-color:#a7a7a7;
+	border-style:solid;
+	border-width:1px;
+	background:#efefef;
+}
+.go_home_down{
+	color:#ffffff;
+	border:thin;
+	border-color:#a7a7a7;
+	border-style:solid;
+	border-width:1px;
+	background:#316ac4;
+}
+#home_text{
+	margin-left:5px;
+	margin-top:3px;
+}
+A#home_link:link{
+	color:#000000;
+	text-decoration:none;
+}
+A#home_link:active{
+	color:#ffffff;
+	text-decoration:none;
+}
+</style>
+<script language="JavaScript" type="text/javascript" src="subPage_script.js"></script>
+<script language="JavaScript" type="text/javascript" src="startPage_script.js"></script>
+</head>
+<body onLoad="iniDrop('DD', 'go_home'); MM_preloadImages('welcomeImages/navigation_r1_c1_f2.png','welcomeImages/navigation_r1_c1_f3.png','welcomeImages/navigation_r1_c5_f2.png','welcomeImages/navigation_r1_c5_f3.png','welcomeImages/navigation_r1_c8_f2.png','welcomeImages/navigation_r1_c8_f3.png','welcomeImages/navigation_r1_c10_f2.png','welcomeImages/navigation_r1_c10_f3.png','welcomeImages/navigation_r1_c12_f2.png','welcomeImages/navigation_r1_c12_f3.png','welcomeImages/navigation_r2_c1_f2.png','welcomeImages/navigation_r2_c1_f3.png')">
+<div id="title_area">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+<a target="_parent" id="home_link" onclick="gotoLink('welcome.html');">
+<div class="go_home_init" id="go_home" onmouseover="mouse_over_home('go_home');" onmousedown="mouse_down_home('go_home');" onmouseout="mouse_out_home('go_home');">
+<div id="home_text">Home</div>
+</div>
+</a>
+</td>
+<td><img id="dropButton" name="welcome_r2_c3" src="welcomeImages/welcome_r2_c3.png" width="24" height="25" border="0" alt=""/></td>
+<td width="100%" height="25"><span id="title_text" style="top:7px; font-size: 11px"><strong>Design Databases</strong></span></td>
+</tr>
+</table>
+</div>
+<br/>
+<table>
+<tr>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/cuecardsicon.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowCueCard:cuecard_set_15" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Design and Build Database Tables </span><br/>
+<span id="instructional">Learn how to create a database connection, diagram database objects, and generate database objects. </span><br/>
+</div>
+</a>
+</td>
+<td width="16">
+</td>
+<td>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:cdb_aconnections_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Connect to a Database</span><br/>
+<span id="instructional">Define connections in the Connection Navigator to live databases in order to create, edit, and use database objects. </span><br/>
+</div>
+</a>
+</td>
+</td>
+</tr>
+<tr>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:bdb_p_db_via_jdbc_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Browse Online Databases</span><br/>
+<span id="instructional">View schemas and the objects they contain via a JDBC connection to an online database.</span><br/>
+</div>
+</a>
+</td>
+<td width="16">
+</td>
+<td>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:off_browse_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Browse Offline Databases and Schemas</span><br/>
+<span id="instructional">Browse offline schemas in the navigator to find objects such as offline tables or view. </span><br/>
+</div>
+</a>
+</td>
+</td>
+</tr>
+<tr>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:bdb_editdata_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Edit Table Data </span><br/>
+<span id="instructional">Change the value in a single cell, add and delete rows, and commit the changes to the database. </span><br/>
+</div>
+</a>
+</td>
+<td width="16">
+</td>
+<td>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:bdb_p_create_online_table_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Create Database Tables</span><br/>
+<span id="instructional">Use a wizard to create a table through a database connection. </span><br/>
+</div>
+</a>
+</td>
+</td>
+</tr>
+<tr>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:bdb_p_create_plsql_subprograms_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Create PL/SQL Functions, Procedures, Packages, and Triggers </span><br/>
+<span id="instructional">Create PL/SQL functions, procedures, packages and triggers directly in a database from the Connection Navigator.</span><br/>
+</div>
+</a>
+</td>
+<td width="16">
+</td>
+<td>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:bdb_p_create_offline_plsql_subprograms_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Create Offline PL/SQL Functions, Procedures, and Packages </span><br/>
+<span id="instructional">Create an offline definition of a PL/SQL package, function, or procedure in the Application Navigator. </span><br/>
+</div>
+</a>
+</td>
+</td>
+</tr>
+<tr>
+<td>
+<div id="icon_area">
+<img src="welcomeImages/kd_coach.png"/>
+</div>
+</td>
+<td width="247" onmouseover="this.style.backgroundColor='#d8ecfd';" onmouseout="this.style.backgroundColor='white';">
+<a href="custom:jdevShowTopic:odb_model_diagram_html" style="text-decoration:none;">
+<div id="each_block">
+<span id="header_text">Create a Database Diagram </span><br/>
+<span id="instructional">Create a diagram on which to graphically model offline tables and foreign key relationships, views, synonyms and sequences. </span><br/>
+</div>
+</a>
+</td>
+<td width="16">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td height="55"></td>
+<td></td>
+</tr>
+</table>
+<div id="footer">
+<div id="footer_content">
+<div id="links">
+<span>&#160;</span>
+<a class="bottomBannerItem" href="custom:external:http://www.oracle.com/technology/products/jdev/collateral/papers/11/newfeatures/index.html">
+<span>What's New</span>
+</a>
+<span id="seperator"> | </span>
+<a class="bottomBannerItem" href="custom:jdevInvokableAction:oracle.jdevimpl.help.HelpSystemConstants.WEBLINK_README_CMD_ID">
+<span>Release Notes</span>
+</a>
+<span id="seperator"> | </span>
+<a class="bottomBannerItem" href="custom:external:http://www.oracle.com/technology/products/jdev/samples/fod/index.html">
+<span>Samples</span>
+</a>
+<span id="seperator"> | </span>
+<a class="bottomBannerItem" href="custom:external:http://forums.oracle.com/forums/forum.jspa?forumID=83">
+<span>Discussion Forum</span>
+</a>
+<span id="seperator"> | </span>
+<a class="bottomBannerItem" href="custom:external:http://www.oracle.com/technology/products/jdev/collateral/training11g.html">
+<span>Books and Training</span>
+</a>
+<span id="seperator"> | </span>
+<a class="bottomBannerItem" href="custom:external:http://www.oracle.com/technology/products/jdev/11/index.html">
+<span>Online Resources</span>
+</a>
+</div>
+</div>
+<div id="copyRight_block">
+<a href="custom:jdevShowHelpInWindow:help_legalnotices_html" class="copyRight">Copyright &#169;  1997, 2009 Oracle and/or its affiliates. All rights reserved.</a>
+</div>
+</div>
+</body>
+</html>

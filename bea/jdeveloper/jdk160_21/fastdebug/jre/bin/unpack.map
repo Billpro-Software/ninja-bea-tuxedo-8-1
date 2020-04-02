@@ -1,0 +1,541 @@
+ unpack
+
+ Timestamp is 4cfae281 (Sat Dec 04 16:53:21 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00014a14H .text                   CODE
+ 0002:00000000 000000ccH .idata$5                DATA
+ 0002:000000d0 00004548H .rdata                  DATA
+ 0002:00004618 0000007fH .rdata$debug            DATA
+ 0002:000046a0 00000004H .rdata$sxdata           DATA
+ 0002:000046a4 00000004H .rtc$IAA                DATA
+ 0002:000046a8 00000004H .rtc$IZZ                DATA
+ 0002:000046ac 00000004H .rtc$TAA                DATA
+ 0002:000046b0 00000004H .rtc$TZZ                DATA
+ 0002:000046b4 00000050H .idata$2                DATA
+ 0002:00004704 00000014H .idata$3                DATA
+ 0002:00004718 000000ccH .idata$4                DATA
+ 0002:000047e4 00000254H .idata$6                DATA
+ 0002:00004a40 00000211H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000b64H .data                   DATA
+ 0003:00000b78 00000498H .bss                    DATA
+ 0004:00000000 000000a0H .rsrc$01                DATA
+ 0004:000000a0 00000748H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       ?readData@band@@QAEXH@Z    10001000 f   bands.obj
+ 0001:000006f0       ?dump@band@@QAEXXZ         100016f0 f   bands.obj
+ 0001:000009b0       ?setIndex@band@@QAEXPAUcpindex@@@Z 100019b0 f   bands.obj
+ 0001:000009f0       ?setIndexByTag@band@@QAEXC@Z 100019f0 f   bands.obj
+ 0001:00000a20       ?getRefCommon@band@@QAEPAUentry@@PAUcpindex@@_N@Z 10001a20 f   bands.obj
+ 0001:00000af0       ?getLong@band@@QAE_JAAU1@_N@Z 10001af0 f   bands.obj
+ 0001:00000b80       ?getIntTotal@band@@QAEHXZ  10001b80 f   bands.obj
+ 0001:00000c60       ?getIntCount@band@@QAEHH@Z 10001c60 f   bands.obj
+ 0001:00000db0       ?makeBands@band@@SAPAU1@PAUunpacker@@@Z 10001db0 f   bands.obj
+ 0001:00000f00       ?initIndexes@band@@SAXPAUunpacker@@@Z 10001f00 f   bands.obj
+ 0001:00000f80       ?endsWith@@YA_NPBD0@Z      10001f80 f i bands.obj
+ 0001:00000fe0       ?B@coding@@QAEHXZ          10001fe0 f i bands.obj
+ 0001:00001000       ?H@coding@@QAEHXZ          10002000 f i bands.obj
+ 0001:00001020       ?S@coding@@QAEHXZ          10002020 f i bands.obj
+ 0001:00001040       ?D@coding@@QAEHXZ          10002040 f i bands.obj
+ 0001:00001060       ?L@coding@@QAEHXZ          10002060 f i bands.obj
+ 0001:00001080       ?rewind@band@@QAEXXZ       10002080 f i bands.obj
+ 0001:000010a0       ?input_scan@unpacker@@QAEPACXZ 100020a0 f i jni.obj
+ 0001:000010a0       ?minRP@band@@QAEPACXZ      100020a0 f i bands.obj
+ 0001:000010c0       ?maxRP@band@@QAEPACXZ      100020c0 f i bands.obj
+ 0001:000010e0       ?size@band@@QAEIXZ         100020e0 f i bands.obj
+ 0001:00001110       ?aborting@band@@QAE_NXZ    10002110 f i bands.obj
+ 0001:00001130       ?aborting@unpacker@@QAE_NXZ 10002130 f i bands.obj
+ 0001:00001150       ?getIndex@cpool@@QAEPAUcpindex@@C@Z 10002150 f i bands.obj
+ 0001:00001190       ?abort@band@@QAEXPBD@Z     10002190 f i bands.obj
+ 0001:000011b0       ?getInt@band@@QAEHXZ       100021b0 f i bands.obj
+ 0001:000011e0       ?makeLong@band@@SA_JII@Z   100021e0 f i bands.obj
+ 0001:00001220       ?scale_size@@YAIII@Z       10002220 f i bands.obj
+ 0001:00001250       ?alloc@unpacker@@QAEPAXI@Z 10002250 f i bands.obj
+ 0001:00001270       ?init@band@@QAEXPAUunpacker@@HPAUcoding@@@Z 10002270 f i bands.obj
+ 0001:000012b0       ?inBounds@bytes@@QAE_NPBX@Z 100022b0 f   bytes.obj
+ 0001:000012f0       ?malloc@bytes@@QAEXI@Z     100022f0 f   bytes.obj
+ 0001:00001360       ?realloc@bytes@@QAEXI@Z    10002360 f   bytes.obj
+ 0001:00001450       ?free@bytes@@QAEXXZ        10002450 f   bytes.obj
+ 0001:000014a0       ?indexOf@bytes@@QAEHC@Z    100024a0 f   bytes.obj
+ 0001:000014f0       ?writeTo@bytes@@QAEPACPAC@Z 100024f0 f   bytes.obj
+ 0001:00001520       ?compareTo@bytes@@QAEHAAU1@@Z 10002520 f   bytes.obj
+ 0001:000015a0       ?saveFrom@bytes@@QAEXPBXI@Z 100025a0 f   bytes.obj
+ 0001:00001600       ?copyFrom@bytes@@QAEXPBXII@Z 10002600 f   bytes.obj
+ 0001:00001690       ?string@bytes@@QAEPBDXZ    10002690 f   bytes.obj
+ 0001:000016f0       ?grow@fillbytes@@QAEPACI@Z 100026f0 f   bytes.obj
+ 0001:00001830       ?ensureSize@fillbytes@@QAEXI@Z 10002830 f   bytes.obj
+ 0001:00001880       ?indexOf@ptrlist@@QAEHPBX@Z 10002880 f   bytes.obj
+ 0001:000018e0       ?freeAll@ptrlist@@QAEXXZ   100028e0 f   bytes.obj
+ 0001:00001940       ?indexOf@intlist@@QAEHH@Z  10002940 f   bytes.obj
+ 0001:000019a0       ?limit@bytes@@QAEPACXZ     100029a0 f i bytes.obj
+ 0001:000019c0       ?set@bytes@@QAEXPACI@Z     100029c0 f i bytes.obj
+ 0001:000019e0       ?add_size@@YAIII@Z         100029e0 f i bytes.obj
+ 0001:00001a20       ?saveFrom@bytes@@QAEXAAU1@@Z 10002a20 f i bytes.obj
+ 0001:00001a50       ?limit@fillbytes@@QAEPACXZ 10002a50 f i bytes.obj
+ 0001:00001a70       ?size@fillbytes@@QAEIXZ    10002a70 f i bytes.obj
+ 0001:00001a90       ?loc@fillbytes@@QAEPACI@Z  10002a90 f i bytes.obj
+ 0001:00001ac0       ?free@fillbytes@@QAEXXZ    10002ac0 f i bytes.obj
+ 0001:00001af0       ?length@intlist@@QAEHXZ    10002af0 f i bytes.obj
+ 0001:00001af0       ?length@ptrlist@@QAEHXZ    10002af0 f i bytes.obj
+ 0001:00001b10       ?get@intlist@@QAEAAHH@Z    10002b10 f i bytes.obj
+ 0001:00001b10       ?get@ptrlist@@QAEAAPBXH@Z  10002b10 f i bytes.obj
+ 0001:00001b30       ?init@coding@@QAEPAU1@XZ   10002b30 f   coding.obj
+ 0001:00001f20       ?findBySpec@coding@@SAPAU1@H@Z 10002f20 f   coding.obj
+ 0001:00001fb0       ?findBySpec@coding@@SAPAU1@HHHH@Z 10002fb0 f   coding.obj
+ 0001:00002020       ?free@coding@@QAEXXZ       10003020 f   coding.obj
+ 0001:00002050       ?reset@coding_method@@QAEXPAUvalue_stream@@@Z 10003050 f   coding.obj
+ 0001:000020b0       ?parse@coding@@SAIAAPACHH@Z 100030b0 f   coding.obj
+ 0001:000021a0       ?parse_lgH@coding@@SAIAAPACHHH@Z 100031a0 f   coding.obj
+ 0001:000022b0       ?parseMultiple@coding@@SAXAAPACHPACHH@Z 100032b0 f   coding.obj
+ 0001:000023b0       ?hasHelper@value_stream@@QAE_NXZ 100033b0 f   coding.obj
+ 0001:000023d0       ?init@value_stream@@QAEXPAC0PAUcoding@@@Z 100033d0 f   coding.obj
+ 0001:00002410       ?setCoding@value_stream@@QAEXPAUcoding@@@Z 10003410 f   coding.obj
+ 0001:000025b0       ?sumInUnsignedRange@coding@@QAEHHH@Z 100035b0 f   coding.obj
+ 0001:000026b0       ?hasValue@value_stream@@QAE_NXZ 100036b0 f   coding.obj
+ 0001:00002710       ?getInt@value_stream@@QAEHXZ 10003710 f   coding.obj
+ 0001:00002ef0       ?init@coding_method@@QAEXAAPACPAC0HPAUcoding@@HPAUintlist@@@Z 10003ef0 f   coding.obj
+ 0001:00003c30       ?findByIndex@coding@@SAPAU1@H@Z 10004c30 f   coding.obj
+ 0001:00003c60       ?string@coding@@QAEPBDXZ   10004c60 f   coding.obj
+ 0001:00003d60       ?initFrom@coding@@QAEPAU1@H@Z 10004d60 f i coding.obj
+ 0001:00003da0       ?helper@value_stream@@QAEPAU1@XZ 10004da0 f i coding.obj
+ 0001:00003dd0       ?abort@coding@@SAXPBD@Z    10004dd0 f i coding.obj
+ 0001:00003df0       ?clear@bytes@@QAEXH@Z      10004df0 f i coding.obj
+ 0001:00003e20       ?of@bytes@@SA?AU1@PACI@Z   10004e20 f i coding.obj
+ 0001:00003e50       ?init@fillbytes@@QAEXXZ    10004e50 f i coding.obj
+ 0001:00003e80       ?add@intlist@@QAEXH@Z      10004e80 f i coding.obj
+ 0001:00003e80       ?add@ptrlist@@QAEXPBX@Z    10004e80 f i unpack.obj
+ 0001:00003ea0       ?done@value_stream@@QAEXXZ 10004ea0 f i coding.obj
+ 0001:00003ed0       ?abort@coding_method@@QAEXPBD@Z 10004ed0 f i coding.obj
+ 0001:00003ef0       ?aborting@coding_method@@QAE_NXZ 10004ef0 f i coding.obj
+ 0001:00003f10       ?saveTo@unpacker@@QAEXAAUbytes@@0@Z 10004f10 f i coding.obj
+ 0001:00003f40       ?current@unpacker@@SAPAU1@XZ 10004f40 f   jni.obj
+ 0001:00004100       _Java_com_sun_java_util_jar_pack_NativeUnpack_initIDs@8 10005100 f   jni.obj
+ 0001:000041d0       _Java_com_sun_java_util_jar_pack_NativeUnpack_start@20 100051d0 f   jni.obj
+ 0001:000042f0       _Java_com_sun_java_util_jar_pack_NativeUnpack_getNextFile@12 100052f0 f   jni.obj
+ 0001:00004510       _Java_com_sun_java_util_jar_pack_NativeUnpack_getUnusedInput@8 10005510 f   jni.obj
+ 0001:00004590       _Java_com_sun_java_util_jar_pack_NativeUnpack_finish@8 10005590 f   jni.obj
+ 0001:00004650       _Java_com_sun_java_util_jar_pack_NativeUnpack_setOption@16 10005650 f   jni.obj
+ 0001:000046d0       _Java_com_sun_java_util_jar_pack_NativeUnpack_getOption@12 100056d0 f   jni.obj
+ 0001:00004740       ?CallStaticObjectMethod@JNIEnv_@@QAAPAV_jobject@@PAV_jclass@@PAU_jmethodID@@ZZ 10005740 f i jni.obj
+ 0001:00004780       ?GetEnv@JavaVM_@@QAEJPAPAXJ@Z 10005780 f i jni.obj
+ 0001:000047b0       ?NewGlobalRef@JNIEnv_@@QAEPAV_jobject@@PAV2@@Z 100057b0 f i jni.obj
+ 0001:000047d0       ?GetLongField@JNIEnv_@@QAE_JPAV_jobject@@PAU_jfieldID@@@Z 100057d0 f i jni.obj
+ 0001:00004800       ?SetLongField@JNIEnv_@@QAEXPAV_jobject@@PAU_jfieldID@@_J@Z 10005800 f i jni.obj
+ 0001:00004830       ?CallLongMethod@JNIEnv_@@QAA_JPAV_jobject@@PAU_jmethodID@@ZZ 10005830 f i jni.obj
+ 0001:00004870       ?NewDirectByteBuffer@JNIEnv_@@QAEPAV_jobject@@PAX_J@Z 10005870 f i jni.obj
+ 0001:000048a0       ?GetMethodID@JNIEnv_@@QAEPAU_jmethodID@@PAV_jclass@@PBD1@Z 100058a0 f i jni.obj
+ 0001:000048d0       ?GetFieldID@JNIEnv_@@QAEPAU_jfieldID@@PAV_jclass@@PBD1@Z 100058d0 f i jni.obj
+ 0001:00004900       ?GetStaticMethodID@JNIEnv_@@QAEPAU_jmethodID@@PAV_jclass@@PBD1@Z 10005900 f i jni.obj
+ 0001:00004930       ?GetDirectBufferAddress@JNIEnv_@@QAEPAXPAV_jobject@@@Z 10005930 f i jni.obj
+ 0001:00004950       ?GetDirectBufferCapacity@JNIEnv_@@QAE_JPAV_jobject@@@Z 10005950 f i jni.obj
+ 0001:00004970       ?get_files_remaining@unpacker@@QAEHXZ 10005970 f i jni.obj
+ 0001:00004990       ?get_segments_remaining@unpacker@@QAEHXZ 10005990 f i jni.obj
+ 0001:000049b0       ?NewStringUTF@JNIEnv_@@QAEPAV_jstring@@PBD@Z 100059b0 f i jni.obj
+ 0001:000049d0       ?GetObjectArrayElement@JNIEnv_@@QAEPAV_jobject@@PAV_jobjectArray@@J@Z 100059d0 f i jni.obj
+ 0001:00004a00       ?SetObjectArrayElement@JNIEnv_@@QAEXPAV_jobjectArray@@JPAV_jobject@@@Z 10005a00 f i jni.obj
+ 0001:00004a30       ?GetIntArrayElements@JNIEnv_@@QAEPAJPAV_jintArray@@PAE@Z 10005a30 f i jni.obj
+ 0001:00004a60       ?ReleaseIntArrayElements@JNIEnv_@@QAEXPAV_jintArray@@PAJJ@Z 10005a60 f i jni.obj
+ 0001:00004a90       ?deflate_hint@file@unpacker@@QAE_NXZ 10005a90 f i jni.obj
+ 0001:00004ab0       ?input_remaining@unpacker@@QAEIXZ 10005ab0 f i jni.obj
+ 0001:00004ad0       ?input_consumed@unpacker@@QAEIXZ 10005ad0 f i jni.obj
+ 0001:00004b00       ?base@fillbytes@@QAEPACXZ  10005b00 f i jni.obj
+ 0001:00004b10       ?DeleteGlobalRef@JNIEnv_@@QAEXPAV_jobject@@@Z 10005b10 f i jni.obj
+ 0001:00004b30       ?GetStringUTFChars@JNIEnv_@@QAEPBDPAV_jstring@@PAE@Z 10005b30 f i jni.obj
+ 0001:00004b60       ?ReleaseStringUTFChars@JNIEnv_@@QAEXPAV_jstring@@PBD@Z 10005b60 f i jni.obj
+ 0001:00004b90       ?get@cpindex@@QAEPAUentry@@I@Z 10005b90 f   unpack.obj
+ 0001:00004bd0       ?typeSize@entry@@QAEHXZ    10005bd0 f   unpack.obj
+ 0001:00004d40       ?free@unpacker@@QAEXXZ     10005d40 f   unpack.obj
+ 0001:00004f70       ?ensure_input@unpacker@@QAE_N_J@Z 10005f70 f   unpack.obj
+ 0001:00005210       ?close_output@unpacker@@QAEPAUfillbytes@@PAU2@@Z 10006210 f   unpack.obj
+ 0001:000052e0       ?ensure_put_space@unpacker@@QAEXI@Z 100062e0 f   unpack.obj
+ 0001:00005360       ?put_space@unpacker@@QAEPACI@Z 10006360 f   unpack.obj
+ 0001:000053d0       ?putu2_at@unpacker@@SAXPACH@Z 100063d0 f   unpack.obj
+ 0001:00005410       ?putu4_at@unpacker@@SAXPACH@Z 10006410 f   unpack.obj
+ 0001:00005450       ?putu8_at@unpacker@@SAXPAC_J@Z 10006450 f   unpack.obj
+ 0001:00005490       ?putu2@unpacker@@QAEXH@Z   10006490 f   unpack.obj
+ 0001:000054c0       ?putu4@unpacker@@QAEXH@Z   100064c0 f   unpack.obj
+ 0001:000054f0       ?putu8@unpacker@@QAEX_J@Z  100064f0 f   unpack.obj
+ 0001:00005520       ?putref_index@unpacker@@QAEHPAUentry@@H@Z 10006520 f   unpack.obj
+ 0001:000055e0       ?putref@unpacker@@QAEXPAUentry@@@Z 100065e0 f   unpack.obj
+ 0001:00005620       ?putu1ref@unpacker@@QAEXPAUentry@@@Z 10006620 f   unpack.obj
+ 0001:00005660       ?alloc_heap@unpacker@@QAEPAXI_N0@Z 10006660 f   unpack.obj
+ 0001:00005770       ?saveTo@unpacker@@QAEXAAUbytes@@PACI@Z 10006770 f   unpack.obj
+ 0001:000057e0       ?read_file_header@unpacker@@QAEXXZ 100067e0 f   unpack.obj
+ 0001:000068b0       ?finish@unpacker@@QAEXXZ   100078b0 f   unpack.obj
+ 0001:00006a00       ?init@cpool@@QAEXPAUunpacker@@QAH@Z 10007a00 f   unpack.obj
+ 0001:00006c80       ?read_double_words@unpacker@@QAEXAAUband@@PAUentry@@H@Z 10007c80 f   unpack.obj
+ 0001:00006d00       ?read_single_refs@unpacker@@QAEXAAUband@@CPAUentry@@H@Z 10007d00 f   unpack.obj
+ 0001:00006e30       ?read_double_refs@unpacker@@QAEXAAUband@@CCPAUentry@@H@Z 10007e30 f   unpack.obj
+ 0001:00006f20       ?read_signature_values@unpacker@@QAEXPAUentry@@H@Z 10007f20 f   unpack.obj
+ 0001:00007120       ?read_cp@unpacker@@QAEXXZ  10008120 f   unpack.obj
+ 0001:00007710       ?defineLayout@attr_definitions@unpacker@@QAEPAUlayout_definition@2@HPBD0@Z 10008710 f   unpack.obj
+ 0001:00007870       ?buildBands@attr_definitions@unpacker@@QAEPAPAUband@@PAUlayout_definition@2@@Z 10008870 f   unpack.obj
+ 0001:00007ad0       ?parseIntLayout@attr_definitions@unpacker@@QAEPBDPBDAAPAUband@@C_N@Z 10008ad0 f   unpack.obj
+ 0001:00007c60       ?parseNumeral@attr_definitions@unpacker@@QAEPBDPBDAAH@Z 10008c60 f   unpack.obj
+ 0001:00007d80       ?popBody@attr_definitions@unpacker@@QAEPAPAUband@@H@Z 10008d80 f   unpack.obj
+ 0001:00007e50       ?parseLayout@attr_definitions@unpacker@@QAEPBDPBDAAPAPAUband@@H@Z 10008e50 f   unpack.obj
+ 0001:00008850       ?read_attr_defs@unpacker@@QAEXXZ 10009850 f   unpack.obj
+ 0001:00008c90       ?getIC@cpool@@QAEPAUinner_class@@PAUentry@@@Z 10009c90 f   unpack.obj
+ 0001:00008d10       ?getFirstChildIC@cpool@@QAEPAUinner_class@@PAUentry@@@Z 10009d10 f   unpack.obj
+ 0001:00008d90       ?getNextChildIC@cpool@@QAEPAUinner_class@@PAU2@@Z 10009d90 f   unpack.obj
+ 0001:00008dd0       ?read_ics@unpacker@@QAEXXZ 10009dd0 f   unpack.obj
+ 0001:000094c0       ?read_classes@unpacker@@QAEXXZ 1000a4c0 f   unpack.obj
+ 0001:000096f0       ?predefCount@attr_definitions@unpacker@@QAEHI@Z 1000a6f0 f   unpack.obj
+ 0001:00009730       ?read_attrs@unpacker@@QAEXHH@Z 1000a730 f   unpack.obj
+ 0001:0000a480       ?readBandData@attr_definitions@unpacker@@QAEXH@Z 1000b480 f   unpack.obj
+ 0001:0000a5e0       ?readBandData@attr_definitions@unpacker@@QAEXPAPAUband@@I@Z 1000b5e0 f   unpack.obj
+ 0001:0000a870       ?putlayout@unpacker@@QAEXPAPAUband@@@Z 1000b870 f   unpack.obj
+ 0001:0000ad10       ?read_files@unpacker@@QAEXXZ 1000bd10 f   unpack.obj
+ 0001:0000ae80       ?get_code_header@unpacker@@QAEXAAH000@Z 1000be80 f   unpack.obj
+ 0001:0000af90       ?read_code_headers@unpacker@@QAEXXZ 1000bf90 f   unpack.obj
+ 0001:0000b1a0       ?ref_band_for_op@unpacker@@QAEPAUband@@H@Z 1000c1a0 f   unpack.obj
+ 0001:0000b390       ?ref_band_for_self_op@unpacker@@QAEPAUband@@HAA_NAAH@Z 1000c390 f   unpack.obj
+ 0001:0000b500       ?read_bands@unpacker@@QAEXXZ 1000c500 f   unpack.obj
+ 0001:0000b6c0       ?hashTabRef@cpool@@QAEAAPAUentry@@CAAUbytes@@@Z 1000c6c0 f   unpack.obj
+ 0001:0000b8b0       ?ensureUtf8@cpool@@QAEPAUentry@@AAUbytes@@@Z 1000c8b0 f   unpack.obj
+ 0001:0000b9e0       ?ensureClass@cpool@@QAEPAUentry@@AAUbytes@@@Z 1000c9e0 f   unpack.obj
+ 0001:0000bb30       ?expandSignatures@cpool@@QAEXXZ 1000cb30 f   unpack.obj
+ 0001:0000bea0       ?initMemberIndexes@cpool@@QAEXXZ 1000cea0 f   unpack.obj
+ 0001:0000c510       ?requestOutputIndex@entry@@QAEXAAUcpool@@H@Z 1000d510 f   unpack.obj
+ 0001:0000c600       ?resetOutputIndexes@cpool@@QAEXXZ 1000d600 f   unpack.obj
+ 0001:0000c6c0       _outputEntry_cmp           1000d6c0 f   unpack.obj
+ 0001:0000c910       ?computeOutputIndexes@cpool@@QAEXXZ 1000d910 f   unpack.obj
+ 0001:0000cb30       ?string@entry@@QAEPADXZ    1000db30 f   unpack.obj
+ 0001:0000cd90       ?print_cp_entry@@YAXH@Z    1000dd90 f   unpack.obj
+ 0001:0000ce10       ?print_cp_entries@@YAXHH@Z 1000de10 f   unpack.obj
+ 0001:0000ce40       ?print_cp@@YAXXZ           1000de40 f   unpack.obj
+ 0001:0000ce60       ?get_option@unpacker@@QAEPBDPBD@Z 1000de60 f   unpack.obj
+ 0001:0000cf90       ?set_option@unpacker@@QAE_NPBD0@Z 1000df90 f   unpack.obj
+ 0001:0000d1c0       ?reset@unpacker@@QAEXXZ    1000e1c0 f   unpack.obj
+ 0001:0000d600       ?init@unpacker@@QAEXP6A_JPAU1@PAX_J2@Z@Z 1000e600 f   unpack.obj
+ 0001:0000d6f0       ?get_abort_message@unpacker@@QAEPBDXZ 1000e6f0 f   unpack.obj
+ 0001:0000d710       ?dump_options@unpacker@@QAEXXZ 1000e710 f   unpack.obj
+ 0001:0000d790       ?start@unpacker@@QAEXPAXI@Z 1000e790 f   unpack.obj
+ 0001:0000d7d0       ?check_options@unpacker@@QAEXXZ 1000e7d0 f   unpack.obj
+ 0001:0000d880       ?reset_cur_classfile@unpacker@@QAEXXZ 1000e880 f   unpack.obj
+ 0001:0000d900       ?getKQIndex@cpool@@QAEPAUcpindex@@XZ 1000e900 f   unpack.obj
+ 0001:0000d9f0       ?to_bci@unpacker@@QAEII@Z  1000e9f0 f   unpack.obj
+ 0001:0000da90       ?put_stackmap_type@unpacker@@QAEXXZ 1000ea90 f   unpack.obj
+ 0001:0000db20       ?put_label@unpacker@@QAEXHH@Z 1000eb20 f   unpack.obj
+ 0001:0000db70       ?write_attrs@unpacker@@QAEHH_K@Z 1000eb70 f   unpack.obj
+ 0001:0000eb40       ?write_members@unpacker@@QAEXHH@Z 1000fb40 f   unpack.obj
+ 0001:0000ed30       _raw_address_cmp           1000fd30 f   unpack.obj
+ 0001:0000ed70       ?write_classfile_tail@unpacker@@QAEXXZ 1000fd70 f   unpack.obj
+ 0001:0000f560       ?write_classfile_head@unpacker@@QAEXXZ 10010560 f   unpack.obj
+ 0001:0000f7c0       ?get_next_file@unpacker@@QAEPAUfile@1@XZ 100107c0 f   unpack.obj
+ 0001:0000fe00       ?write_file_to_jar@unpacker@@QAEXPAUfile@1@@Z 10010e00 f   unpack.obj
+ 0001:00010170       ?redirect_stdio@unpacker@@QAEXXZ 10011170 f   unpack.obj
+ 0001:000103e0       ?printcr_if_verbose@unpacker@@QAAHHPBDZZ 100113e0 f   unpack.obj
+ 0001:00010480       ?abort@unpacker@@QAEXPBD@Z 10011480 f   unpack.obj
+ 0001:000104e0       ?tagMatches@entry@@QAE_NC@Z 100114e0 f i unpack.obj
+ 0001:00010570       ?contains@ptrlist@@QAE_NPBX@Z 10011570 f i unpack.obj
+ 0001:000105a0       ?reset@jar@@QAEXXZ         100115a0 f i unpack.obj
+ 0001:000105d0       ?free@jar@@QAEXXZ          100115d0 f i unpack.obj
+ 0001:00010600       ?free@attr_definitions@unpacker@@QAEXXZ 10011600 f i unpack.obj
+ 0001:00010650       ?setLimit@fillbytes@@QAEXPAC@Z 10011650 f i unpack.obj
+ 0001:00010690       ?end@fillbytes@@QAEPACXZ   10011690 f i unpack.obj
+ 0001:000106b0       ?isAllocated@fillbytes@@QAE_NPAC@Z 100116b0 f i unpack.obj
+ 0001:000106f0       ?addByte@fillbytes@@QAEXC@Z 100116f0 f i unpack.obj
+ 0001:00010710       ?wpoffset@unpacker@@QAEIXZ 10011710 f i unpack.obj
+ 0001:00010730       ?ref@entry@@QAEPAU1@H@Z    10011730 f i unpack.obj
+ 0001:00010770       ?putu1_at@unpacker@@SAXPACH@Z 10011770 f i unpack.obj
+ 0001:000107a0       ?init@fillbytes@@QAEXI@Z   100117a0 f i unpack.obj
+ 0001:000107d0       ?canAppend@fillbytes@@QAE_NI@Z 100117d0 f i unpack.obj
+ 0001:000107f0       ?copyFrom@bytes@@QAEXAAU1@I@Z 100117f0 f i unpack.obj
+ 0001:00010820       ?set@fillbytes@@QAEXAAUbytes@@@Z 10011820 f i unpack.obj
+ 0001:00010850       ?set@fillbytes@@QAEXPACI@Z 10011850 f i unpack.obj
+ 0001:00010880       ?add_size@@YAIIIH@Z        10011880 f i unpack.obj
+ 0001:000108b0       ?init@value_stream@@QAEXPAC0H@Z 100118b0 f i unpack.obj
+ 0001:000108e0       ?init@cpindex@@QAEXHPAUentry@@H@Z 100118e0 f i unpack.obj
+ 0001:00010920       ?abort@cpool@@QAEXPBD@Z    10011920 f i unpack.obj
+ 0001:00010940       ?aborting@cpool@@QAE_NXZ   10011940 f i unpack.obj
+ 0001:00010960       ?nextBand@band@@QAEAAU1@XZ 10011960 f i unpack.obj
+ 0001:00010980       ?getRef@band@@QAEPAUentry@@XZ 10011980 f i unpack.obj
+ 0001:000109c0       ?utf8String@entry@@QAEPBDXZ 100119c0 f i unpack.obj
+ 0001:00010a20       ?set@bytes@@QAEXPBD@Z      10011a20 f i unpack.obj
+ 0001:00010a50       ?read_Utf8_values@unpacker@@QAEXPAUentry@@H@Z 10011a50 f i unpack.obj
+ 0001:00011330       ?free_temps@unpacker@@QAEXXZ 10012330 f i unpack.obj
+ 0001:00011360       ?temp_alloc@unpacker@@QAEPAXI@Z 10012360 f i unpack.obj
+ 0001:00011380       ?read_single_words@unpacker@@QAEXAAUband@@PAUentry@@H@Z 10012380 f i unpack.obj
+ 0001:000113d0       ?isRedefined@attr_definitions@unpacker@@QAE_NI@Z 100123d0 f i unpack.obj
+ 0001:00011410       ?aborting@attr_definitions@unpacker@@QAE_NXZ 10012410 f i unpack.obj
+ 0001:00011430       ?abort@attr_definitions@unpacker@@QAEXPBD@Z 10012430 f i unpack.obj
+ 0001:00011450       ?popTo@ptrlist@@QAEXH@Z    10012450 f i unpack.obj
+ 0001:00011490       ?hasCallables@layout_definition@unpacker@@QAE_NXZ 10012490 f i unpack.obj
+ 0001:000114b0       ?bands@layout_definition@unpacker@@QAEPAPAUband@@XZ 100124b0 f i unpack.obj
+ 0001:000114e0       ?init@band@@QAEXPAUunpacker@@HH@Z 100124e0 f i unpack.obj
+ 0001:00011510       ?initRef@band@@QAEXH_N@Z   10012510 f i unpack.obj
+ 0001:00011540       ?strval@bytes@@QAEPADXZ    10012540 f i unpack.obj
+ 0001:00011580       ?getByte@band@@QAEHXZ      10012580 f i unpack.obj
+ 0001:000115b0       ?getByte@value_stream@@QAEHXZ 100125b0 f i unpack.obj
+ 0001:00011620       ?setHaveLongFlags@attr_definitions@unpacker@@QAEX_N@Z 10012620 f i unpack.obj
+ 0001:00011660       ?defineLayout@attr_definitions@unpacker@@QAEPAUlayout_definition@2@HPAUentry@@PBD@Z 10012660 f i unpack.obj
+ 0001:000116c0       ?slice@bytes@@QAE?AU1@II@Z 100126c0 f i unpack.obj
+ 0001:00011740       ?getRefN@band@@QAEPAUentry@@XZ 10012740 f i unpack.obj
+ 0001:00011780       ?isPredefined@attr_definitions@unpacker@@QAE_NI@Z 10012780 f i unpack.obj
+ 0001:000117d0       ?getLayout@attr_definitions@unpacker@@QAEPAUlayout_definition@2@I@Z 100127d0 f i unpack.obj
+ 0001:00011810       ?haveLongFlags@attr_definitions@unpacker@@QAE_NXZ 10012810 f i unpack.obj
+ 0001:00011850       ?flagIndexMask@attr_definitions@unpacker@@QAE_KXZ 10012850 f i unpack.obj
+ 0001:00011880       ?isIndex@attr_definitions@unpacker@@QAE_NI@Z 10012880 f i unpack.obj
+ 0001:00011900       ?getCount@attr_definitions@unpacker@@QAEAAHI@Z 10012900 f i unpack.obj
+ 0001:00011960       ?xxx_flags_hi@attr_definitions@unpacker@@QAEAAUband@@XZ 10012960 f i unpack.obj
+ 0001:00011980       ?fixed_band@attr_definitions@unpacker@@QAEAAUband@@H@Z 10012980 f i unpack.obj
+ 0001:000119b0       ?xxx_flags_lo@attr_definitions@unpacker@@QAEAAUband@@XZ 100129b0 f i unpack.obj
+ 0001:000119d0       ?xxx_attr_count@attr_definitions@unpacker@@QAEAAUband@@XZ 100129d0 f i unpack.obj
+ 0001:000119f0       ?xxx_attr_indexes@attr_definitions@unpacker@@QAEAAUband@@XZ 100129f0 f i unpack.obj
+ 0001:00011a10       ?xxx_attr_calls@attr_definitions@unpacker@@QAEAAUband@@XZ 10012a10 f i unpack.obj
+ 0001:00011a30       ?expectMoreLength@band@@QAEXH@Z 10012a30 f i unpack.obj
+ 0001:00011ab0       ?getRefUsing@band@@QAEPAUentry@@PAUcpindex@@@Z 10012ab0 f i unpack.obj
+ 0001:00011af0       ?putu1@unpacker@@QAEXH@Z   10012af0 f i unpack.obj
+ 0001:00011b20       ?read_bcs@unpacker@@QAEXXZ 10012b20 f i unpack.obj
+ 0001:00012230       ?getByte@fillbytes@@QAEHI@Z 10013230 f i unpack.obj
+ 0001:00012260       ?equals@bytes@@QAE_NAAU1@@Z 10013260 f i unpack.obj
+ 0001:00012280       ?empty@fillbytes@@QAEXXZ   10013280 f i unpack.obj
+ 0001:000122a0       ?append@fillbytes@@QAEAAU1@AAUbytes@@@Z 100132a0 f i unpack.obj
+ 0001:000122d0       ?append@fillbytes@@QAEAAU1@PBXI@Z 100132d0 f i unpack.obj
+ 0001:00012300       ?className@entry@@QAEPAU1@XZ 10013300 f i unpack.obj
+ 0001:00012340       ?isUtf8@entry@@QAE_NAAUbytes@@@Z 10013340 f i unpack.obj
+ 0001:00012390       ?asUtf8@entry@@QAEAAUbytes@@XZ 10013390 f i unpack.obj
+ 0001:000123c0       ?init@cpindex@@QAEXHPAPAUentry@@H@Z 100133c0 f i unpack.obj
+ 0001:00012400       ?memberClass@entry@@QAEPAU1@XZ 10013400 f i unpack.obj
+ 0001:00012440       ?getFieldIndex@cpool@@QAEPAUcpindex@@PAUentry@@@Z 10013440 f i unpack.obj
+ 0001:000124a0       ?getMethodIndex@cpool@@QAEPAUcpindex@@PAUentry@@@Z 100134a0 f i unpack.obj
+ 0001:00012500       ?base@ptrlist@@QAEPAPBXXZ  10013500 f i unpack.obj
+ 0001:00012500       ?base@intlist@@QAEPAHXZ    10013500 f i unpack.obj
+ 0001:00012520       ?isDoubleWord@entry@@QAE_NXZ 10013520 f i unpack.obj
+ 0001:00012560       ?strcat@bytes@@QAEAAU1@PBD@Z 10013560 f i unpack.obj
+ 0001:00012590       ?saveIntStr@unpacker@@QAEPBDH@Z 10013590 f i unpack.obj
+ 0001:000125d0       ?saveStr@unpacker@@QAEPBDPBD@Z 100135d0 f i unpack.obj
+ 0001:00012600       ?saveTo@unpacker@@QAEXAAUbytes@@PBD@Z 10013600 f i unpack.obj
+ 0001:00012630       ?saveFrom@bytes@@QAEXPBD@Z 10013630 f i unpack.obj
+ 0001:00012660       ?descrType@entry@@QAEPAU1@XZ 10013660 f i unpack.obj
+ 0001:000126a0       ?put_empty@unpacker@@QAEII@Z 100136a0 f i unpack.obj
+ 0001:000126d0       ?strcat@bytes@@QAEAAU1@AAU1@@Z 100136d0 f i unpack.obj
+ 0001:00012700       ?wp_at@unpacker@@QAEPACI@Z 10013700 f i unpack.obj
+ 0001:00012720       ?write_code@unpacker@@QAEXXZ 10013720 f i unpack.obj
+ 0001:000129a0       ?write_bc_ops@unpacker@@QAEXXZ 100139a0 f i unpack.obj
+ 0001:00013900       ?curRP@band@@QAEAAPACXZ    10014900 f i unpack.obj
+ 0001:00013920       ?putu1_fast@unpacker@@QAEXH@Z 10014920 f i unpack.obj
+ 0001:00013960       ?memberDescr@entry@@QAEPAU1@XZ 10014960 f i unpack.obj
+ 0001:000139a0       ?descrName@entry@@QAEPAU1@XZ 100149a0 f i unpack.obj
+ 0001:000139e0       ?set_output@unpacker@@QAEXPAUfillbytes@@@Z 100149e0 f i unpack.obj
+ 0001:00013a50       ?getOutputIndex@entry@@QAEHXZ 10014a50 f i unpack.obj
+ 0001:00013a80       ?put_bytes@unpacker@@QAEXAAUbytes@@@Z 10014a80 f i unpack.obj
+ 0001:00013ab0       ?must_malloc@@YAPAXI@Z     10014ab0 f   utils.obj
+ 0001:00013b20       ?mkdirs@@YAXHPAD@Z         10014b20 f   utils.obj
+ 0001:00013bb0       _breakpoint                10014bb0 f   utils.obj
+ 0001:00013bc0       ?assert_failed@@YAXPBD@Z   10014bc0 f   utils.obj
+ 0001:00013c20       ?unpack_abort@@YAXPBDPAUunpacker@@@Z 10014c20 f   utils.obj
+ 0001:00013c80       ?unpack_aborting@@YA_NPAUunpacker@@@Z 10014c80 f   utils.obj
+ 0001:00013cc0       ?init@jar@@QAEXPAUunpacker@@@Z 10014cc0 f   zip.obj
+ 0001:00013d00       ?write_data@jar@@QAEXPAXH@Z 10014d00 f   zip.obj
+ 0001:00013d90       ?add_to_jar_directory@jar@@QAEXPBD_NHHHK@Z 10014d90 f   zip.obj
+ 0001:00013f00       ?write_jar_header@jar@@QAEXPBD_NHHHI@Z 10014f00 f   zip.obj
+ 0001:00014010       ?write_central_directory@jar@@QAEXXZ 10015010 f   zip.obj
+ 0001:00014150       ?openJarFile@jar@@QAEXPBD@Z 10015150 f   zip.obj
+ 0001:000141d0       ?addJarEntry@jar@@QAEXPBD_NHAAUbytes@@2@Z 100151d0 f   zip.obj
+ 0001:00014370       ?addDirectoryToJarFile@jar@@QAEXPBD@Z 10015370 f   zip.obj
+ 0001:000143c0       ?closeJarFile@jar@@QAEX_N@Z 100153c0 f   zip.obj
+ 0001:00014440       ?get_dostime@jar@@QAEKH@Z  10015440 f   zip.obj
+ 0001:000144f0       ?free@gunzip@@QAEXXZ       100154f0 f   zip.obj
+ 0001:00014500       ?write_data@jar@@QAEXAAUbytes@@@Z 10015500 f i zip.obj
+ 0001:00014530       ?deflate_bytes@jar@@QAE_NAAUbytes@@0@Z 10015530 f i zip.obj
+ 0001:00014540       ?get_crc32@jar@@SAIIPAEI@Z 10015540 f i zip.obj
+ 0001:00014550       ?dostime@jar@@QAEKHHHHHH@Z 10015550 f i zip.obj
+ 0001:000145bc       _JNU_ThrowIOException@8    100155bc f   java:java.dll
+ 0001:000145d0       __allmul                   100155d0 f   MSVCRT:llmul.obj
+ 0001:00014604       _strcmp                    10015604 f   MSVCRT:MSVCR71.dll
+ 0001:0001460a       _strlen                    1001560a f   MSVCRT:MSVCR71.dll
+ 0001:00014610       __aullshr                  10015610 f   MSVCRT:ullshr.obj
+ 0001:00014630       __allshl                   10015630 f   MSVCRT:llshl.obj
+ 0001:00014650       _memset                    10015650 f   MSVCRT:MSVCR71.dll
+ 0001:00014656       _memcpy                    10015656 f   MSVCRT:MSVCR71.dll
+ 0001:0001465c       _memcmp                    1001565c f   MSVCRT:MSVCR71.dll
+ 0001:00014662       _strcpy                    10015662 f   MSVCRT:MSVCR71.dll
+ 0001:00014668       ??2@YAPAXI@Z               10015668 f   MSVCRT:MSVCR71.dll
+ 0001:0001466e       ??3@YAXPAX@Z               1001566e f   MSVCRT:MSVCR71.dll
+ 0001:00014680       __aulldiv                  10015680 f   MSVCRT:ulldiv.obj
+ 0001:000146e8       _strcat                    100156e8 f   MSVCRT:MSVCR71.dll
+ 0001:000146f0       __chkstk                   100156f0 f   MSVCRT:chkstk.obj
+ 0001:000146f0       __alloca_probe             100156f0     MSVCRT:chkstk.obj
+ 0001:0001472d       __CRT_INIT@12              1001572d f   MSVCRT:crtdll.obj
+ 0001:000147eb       __DllMainCRTStartup@12     100157eb f   MSVCRT:crtdll.obj
+ 0001:000148d0       __initterm                 100158d0 f   MSVCRT:MSVCR71.dll
+ 0001:000148d6       __onexit                   100158d6 f   MSVCRT:atonexit.obj
+ 0001:000148fc       _atexit                    100158fc f   MSVCRT:atonexit.obj
+ 0001:0001490e       __RTC_Initialize           1001590e f   MSVCRT:initsect.obj
+ 0001:00014952       __RTC_Terminate            10015952 f   MSVCRT:initsect.obj
+ 0001:00014996       ___CppXcptFilter           10015996 f   MSVCRT:MSVCR71.dll
+ 0001:0001499c       _DllMain@12                1001599c f   MSVCRT:dllmain.obj
+ 0001:000149bc       __SEH_prolog               100159bc f   MSVCRT:sehprolg.obj
+ 0001:000149f7       __SEH_epilog               100159f7 f   MSVCRT:sehprolg.obj
+ 0001:00014a08       __except_handler3          10015a08 f   MSVCRT:MSVCR71.dll
+ 0001:00014a0e       ___dllonexit               10015a0e f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__GetTempPathA@8      10016000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__Sleep@4             10016004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__DisableThreadLibraryCalls@4 10016008     kernel32:KERNEL32.dll
+ 0002:0000000c       \177KERNEL32_NULL_THUNK_DATA 1001600c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__strcmp              10016010     MSVCRT:MSVCR71.dll
+ 0002:00000014       __imp__strlen              10016014     MSVCRT:MSVCR71.dll
+ 0002:00000018       __imp__fprintf             10016018     MSVCRT:MSVCR71.dll
+ 0002:0000001c       __imp__sprintf             1001601c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp__memset              10016020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp__realloc             10016024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp__free                10016028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp__memchr              1001602c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp__memcpy              10016030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp__memcmp              10016034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__strcpy              10016038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp_??2@YAPAXI@Z         1001603c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__getenv              10016040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp_??3@YAXPAX@Z         10016044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__strchr              10016048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__fclose              1001604c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp__fflush              10016050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp___iob                10016054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp__strncmp             10016058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp__tempnam             1001605c     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp___tempnam            1001605c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp__strcat              10016060     MSVCRT:MSVCR71.dll
+ 0002:00000064       __imp__mkdir               10016064     MSVCRT:MSVCR71.dll
+ 0002:00000064       __imp___mkdir              10016064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp__time                10016068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp__atoi                1001606c     MSVCRT:MSVCR71.dll
+ 0002:00000070       __imp__strncat             10016070     MSVCRT:MSVCR71.dll
+ 0002:00000074       __imp__fopen               10016074     MSVCRT:MSVCR71.dll
+ 0002:00000078       __imp__vfprintf            10016078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp__malloc              1001607c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp__strrchr             10016080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp__abort               10016084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp__exit                10016088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp___errno              1001608c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp__fwrite              10016090     MSVCRT:MSVCR71.dll
+ 0002:00000094       __imp__gmtime              10016094     MSVCRT:MSVCR71.dll
+ 0002:00000098       __imp___initterm           10016098     MSVCRT:MSVCR71.dll
+ 0002:0000009c       __imp___adjust_fdiv        1001609c     MSVCRT:MSVCR71.dll
+ 0002:000000a0       __imp____CppXcptFilter     100160a0     MSVCRT:MSVCR71.dll
+ 0002:000000a4       __imp___except_handler3    100160a4     MSVCRT:MSVCR71.dll
+ 0002:000000a8       __imp____dllonexit         100160a8     MSVCRT:MSVCR71.dll
+ 0002:000000ac       __imp___onexit             100160ac     MSVCRT:MSVCR71.dll
+ 0002:000000b0       __imp__qsort               100160b0     MSVCRT:MSVCR71.dll
+ 0002:000000b4       __imp__printf              100160b4     MSVCRT:MSVCR71.dll
+ 0002:000000b8       \177MSVCR71_NULL_THUNK_DATA 100160b8     MSVCRT:MSVCR71.dll
+ 0002:000000bc       __imp__JNU_ThrowIOException@8 100160bc     java:java.dll
+ 0002:000000c0       \177java_NULL_THUNK_DATA   100160c0     java:java.dll
+ 0002:000000c4       __imp__JNI_GetCreatedJavaVMs@12 100160c4     jvm:jvm.dll
+ 0002:000000c8       \177jvm_NULL_THUNK_DATA    100160c8     jvm:jvm.dll
+ 0002:000018ac       ??_C@_0BL@FKDKOOEM@?$CIuint?$CJtag?5?$DM?5CONSTANT_Limit?$AA@ 100178ac     bands.obj
+ 0002:000018c8       ??_C@_0L@PKDIKJAE@ix?5?$DN?$DN?5null?$AA@ 100178c8     bands.obj
+ 0002:00001994       ??_C@_09FMOIANBE@o?5?$DM?5b?4len?$AA@ 10017994     bytes.obj
+ 0002:00001ff0       ??_C@_0BA@DIEMDEPI@this?9?$DOspec?5?$DN?$DN?50?$AA@ 10017ff0     coding.obj
+ 0002:00002000       ??_C@_0M@HONJGIAM@hasHelper?$CI?$CJ?$AA@ 10018000     coding.obj
+ 0002:0000200c       ??_C@_0M@JEMONLCI@?$CBhasValue?$CI?$CJ?$AA@ 1001800c     coding.obj
+ 0002:00003e90       ??_C@_0BA@MFBLPBEG@isAllocated?$CIlp?$CJ?$AA@ 10019e90     unpack.obj
+ 0002:00003ea0       ??_C@_0BF@HGJHCHFJ@?$CIuint?$CJrefnum?5?$DM?5nrefs?$AA@ 10019ea0     unpack.obj
+ 0002:00003eb8       ??_C@_0BA@ENINMDK@n?5?$DN?$DN?5?$CIn?5?$CG?50xFF?$CJ?$AA@ 10019eb8     unpack.obj
+ 0002:00003ec8       ??_C@_0L@NBCMINGA@ix?5?$CB?$DN?5null?$AA@ 10019ec8     unpack.obj
+ 0002:00003ed4       ??_C@_0DA@KFAAOIDN@value?4b?4len?5?$DN?$DN?5strlen?$CI?$CIconst?5cha@ 10019ed4     unpack.obj
+ 0002:00003f04       ??_C@_0BK@NEJLBAOB@tagMatches?$CICONSTANT_Utf8?$CJ?$AA@ 10019f04     unpack.obj
+ 0002:00003f20       ??_C@_0BH@BJONJNDB@bigbuf?4inBounds?$CIfillp?$CJ?$AA@ 10019f20     unpack.obj
+ 0002:00003f38       ??_C@_0BF@HNBIPEII@utf8?5prefix?5overflow?$AA@ 10019f38     unpack.obj
+ 0002:00003f50       ??_C@_0BC@PFGHMAGC@chars?4ptr?5?$CB?$DN?5null?$AA@ 10019f50     unpack.obj
+ 0002:00003f64       ??_C@_0BC@NOHDOEAG@chars?4ptr?5?$DN?$DN?5null?$AA@ 10019f64     unpack.obj
+ 0002:00003f78       ??_C@_0BA@HHOGEFOO@bad?5utf8?5prefix?$AA@ 10019f78     unpack.obj
+ 0002:00003f88       ??_C@_0CG@JHCAJFDM@strlen?$CI?$CIchar?$CK?$CJchars?4ptr?$CJ?5?$DN?$DN?5char@ 10019f88     unpack.obj
+ 0002:00003fb0       ??_C@_0CD@JHILBAPE@chars?4limit?$CI?$CJ?5?$DN?$DN?5charbuf?4limit?$CI?$CJ@ 10019fb0     unpack.obj
+ 0002:00003fd4       ??_C@_0DM@IMKIMNML@charbuf?4allocated?5?$DN?$DN?50?5?$HM?$HM?5tmallo@ 10019fd4     unpack.obj
+ 0002:00004010       ??_C@_0BA@BMKLBFBL@bad?5utf8?5suffix?$AA@ 1001a010     unpack.obj
+ 0002:00004020       ??_C@_0BB@FBGMFJEO@idx?5?$DM?5flag_limit?$AA@ 1001a020     unpack.obj
+ 0002:00004034       ??_C@_0O@OKGOGIOC@l?5?$DM?$DN?5length?$CI?$CJ?$AA@ 1001a034     unpack.obj
+ 0002:00004044       ??_C@_0O@POPFEMH@elems?5?$CB?$DN?5null?$AA@ 1001a044     unpack.obj
+ 0002:00004054       ??_C@_0BK@DCEFNFBP@strlen?$CI?$CIchar?$CK?$CJptr?$CJ?5?$DN?$DN?5len?$AA@ 1001a054     unpack.obj
+ 0002:00004070       ??_C@_0N@FENLGBNM@rp?5?$DM?5rplimit?$AA@ 1001a070     unpack.obj
+ 0002:00004080       ??_C@_0BB@HHJFEJDN@cmk?5?$DN?$DN?5cmk_BYTE1?$AA@ 1001a080     unpack.obj
+ 0002:00004094       ??_C@_0BA@OECGOAJK@flag_limit?5?$DN?$DN?50?$AA@ 1001a094     unpack.obj
+ 0002:000040a4       ??_C@_0DN@OMOAKDJM@res?4len?5?$DN?$DN?50?5?$HM?$HM?5inBounds?$CIres?4ptr@ 1001a0a4     unpack.obj
+ 0002:000040e8       ??_C@_0EO@LNGGNNEO@flag_limit?5?$DN?$DN?5X_ATTR_LIMIT_NO_FL@ 1001a0e8     unpack.obj
+ 0002:00004138       ??_C@_0BA@EBDGJKBJ@flag_limit?5?$CB?$DN?50?$AA@ 1001a138     unpack.obj
+ 0002:00004148       ??_C@_0N@NLCMJNGN@isIndex?$CIidx?$CJ?$AA@ 1001a148     unpack.obj
+ 0002:00004158       ??_C@_0M@FGHCGMD@length?5?$DO?$DN?5l?$AA@ 1001a158     unpack.obj
+ 0002:00004164       ??_C@_0BA@KABBFMLB@rplimit?5?$DN?$DN?5null?$AA@ 1001a164     unpack.obj
+ 0002:00004174       ??_C@_0M@IFDHJGGD@?$CIint?$CJl?5?$DO?$DN?50?$AA@ 1001a174     unpack.obj
+ 0002:00004180       ??_C@_0M@BDGJDEJL@length?5?$DO?$DN?50?$AA@ 1001a180     unpack.obj
+ 0002:0000418c       ??_C@_0DH@KIPGLBPK@scanned?5?$CFd?5opcode?5and?5?$CFd?5operand@ 1001a18c     unpack.obj
+ 0002:000041c4       ??_C@_0BK@CGDHCOMN@switch?5bc?$DN?$CFd?5caseCount?$DN?$CFd?$AA@ 1001a1c4     unpack.obj
+ 0002:000041e0       ??_C@_09BNAMKKPO@rp?5?$DN?$DN?5rp0?$AA@ 1001a1e0     unpack.obj
+ 0002:000041ec       ??_C@_0BI@CHDAOECG@bc?5?$CB?$DN?5bc_multianewarray?$AA@ 1001a1ec     unpack.obj
+ 0002:00004204       ??_C@_0CE@EABAOHHA@ref_band_for_op?$CIbc?$CJ?5?$DN?$DN?5?$CGbc_class@ 1001a204     unpack.obj
+ 0002:00004228       ??_C@_0DK@OALHOJFF@reading?5compressed?5bytecodes?5and@ 1001a228     unpack.obj
+ 0002:00004264       ??_C@_0BL@OHAKFHFN@tagMatches?$CICONSTANT_Class?$CJ?$AA@ 1001a264     unpack.obj
+ 0002:00004280       ??_C@_0BM@OOLAFIEP@tagMatches?$CICONSTANT_Member?$CJ?$AA@ 1001a280     unpack.obj
+ 0002:0000429c       ??_C@_0DC@BMJEEABE@?$CIuint?$CJclassRef?9?$DOinord?5?$DM?5tag_coun@ 1001a29c     unpack.obj
+ 0002:000042d0       ??_C@_0CF@BILHCFIG@classRef?9?$DOtagMatches?$CICONSTANT_Cl@ 1001a2d0     unpack.obj
+ 0002:000042f8       ??_C@_02DPKJAMEF@?$CFd?$AA@ 1001a2f8     unpack.obj
+ 0002:000042fc       ??_C@_0CB@NMDFBLFN@tagMatches?$CICONSTANT_NameandType?$CJ@ 1001a2fc     unpack.obj
+ 0002:00004320       ??_C@_0BH@OPCPNALO@bc?5?$DM?5bc_bytecode_limit?$AA@ 1001a320     unpack.obj
+ 0002:00004338       ??_C@_0P@BEAPFIIP@bc?5?$DM?$DN?5bc_jsr_w?$AA@ 1001a338     unpack.obj
+ 0002:00004348       ??_C@_0BP@CLAKIFHB@ref?9?$DOtag?5?$DN?$DN?5CONSTANT_Methodref?$AA@ 1001a348     unpack.obj
+ 0002:00004368       ??_C@_0CM@HCGMKOMB@bc?5?$DN?$DN?5_invokeinit_op?$CL_invokeinit@ 1001a368     unpack.obj
+ 0002:00004394       ??_C@_05LAPONLG@false?$AA@ 1001a394     unpack.obj
+ 0002:0000439c       ??_C@_0BH@EBFFOOIO@to_bci?$CIcurIP?$CJ?5?$DN?$DN?5curPC?$AA@ 1001a39c     unpack.obj
+ 0002:000043b4       ??_C@_0BK@NDOHNPMC@opptr?5?$DM?$DN?5bc_codes?4maxRP?$CI?$CJ?$AA@ 1001a3b4     unpack.obj
+ 0002:000043d0       ??_C@_0L@BFGPAGDN@wp?5?$DN?$DN?5null?$AA@ 1001a3d0     unpack.obj
+ 0002:000043dc       ??_C@_0BM@HJABHPAF@outputIndex?5?$DO?5NOT_REQUESTED?$AA@ 1001a3dc     unpack.obj
+ 0002:000045d0       __load_config_used         1001a5d0     MSVCRT:loadcfg.obj
+ 0002:000046a0       ___safe_se_handler_table   1001a6a0     <linker-defined>
+ 0002:000046a4       ___rtc_iaa                 1001a6a4     MSVCRT:initsect.obj
+ 0002:000046a8       ___rtc_izz                 1001a6a8     MSVCRT:initsect.obj
+ 0002:000046ac       ___rtc_taa                 1001a6ac     MSVCRT:initsect.obj
+ 0002:000046b0       ___rtc_tzz                 1001a6b0     MSVCRT:initsect.obj
+ 0002:000046b4       __IMPORT_DESCRIPTOR_java   1001a6b4     java:java.dll
+ 0002:000046c8       __IMPORT_DESCRIPTOR_jvm    1001a6c8     jvm:jvm.dll
+ 0002:000046dc       __IMPORT_DESCRIPTOR_MSVCR71 1001a6dc     MSVCRT:MSVCR71.dll
+ 0002:000046f0       __IMPORT_DESCRIPTOR_KERNEL32 1001a6f0     kernel32:KERNEL32.dll
+ 0002:00004704       __NULL_IMPORT_DESCRIPTOR   1001a704     java:java.dll
+ 0003:00000000       ___xc_a                    1001b000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    1001b004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    1001b008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1001b00c     MSVCRT:cinitexe.obj
+ 0003:00000010       ?basic_codings@@3PAUcoding@@A 1001b010     coding.obj
+ 0003:00000b70       ___security_cookie         1001bb70     MSVCRT:seccook.obj
+ 0003:00000f90       ?debug_u@@3PAUunpacker@@A  1001bf90     unpack.obj
+ 0003:00001000       __adjust_fdiv              1001c000     <common>
+ 0003:00001004       ___onexitend               1001c004     <common>
+ 0003:00001008       ___onexitbegin             1001c008     <common>
+ 0003:0000100c       __pRawDllMain              1001c00c     <common>
+
+ entry point at        0001:000147eb
+
+ Static symbols
+
+ 0001:00001ed0       ?decode_sign@@YAHHI@Z      10002ed0 f   coding.obj
+ 0001:00002e10       ?getPopValue@@YAHPAUvalue_stream@@I@Z 10003e10 f   coding.obj
+ 0001:00002e60       ?getDeltaValue@@YAHPAUvalue_stream@@I_N@Z 10003e60 f   coding.obj
+ 0001:00003be0       ?moreCentral@@YAHHH@Z      10004be0 f   coding.obj
+ 0001:00003f50       ?get_unpacker@@YAPAUunpacker@@XZ 10004f50 f   jni.obj
+ 0001:00003fd0       ?get_unpacker@@YAPAUunpacker@@PAUJNIEnv_@@PAV_jobject@@_N@Z 10004fd0 f   jni.obj
+ 0001:000040b0       ?read_input_via_jni@@YA_JPAUunpacker@@PAX_J2@Z 100050b0 f   jni.obj
+ 0001:000045f0       ?free_unpacker@@YAXPAUJNIEnv_@@PAV_jobject@@PAUunpacker@@@Z 100055f0 f   jni.obj
+ 0001:000075e0       ?store_Utf8_char@@YAPACPACG@Z 100085e0 f   unpack.obj
+ 0001:000076b0       ?skip_Utf8_chars@@YAPACPACH@Z 100086b0 f   unpack.obj
+ 0001:000093f0       ?isDigitString@@YA_NAAUbytes@@HH@Z 1000a3f0 f   unpack.obj
+ 0001:00009450       ?lastIndexOf@@YAHHHAAUbytes@@H@Z 1000a450 f   unpack.obj
+ 0001:0000ac70       ?findMatchingCase@@YAPAPAUband@@HPAPAU1@@Z 1000bc70 f   unpack.obj
+ 0001:0000b4a0       ?is_field_op@@YA_NH@Z      1000c4a0 f   unpack.obj
+ 0001:0000b4c0       ?is_in_range@@YA_NIII@Z    1000c4c0 f   unpack.obj
+ 0001:0000b4e0       ?is_self_linker_op@@YA_NH@Z 1000c4e0 f   unpack.obj
+ 0001:0000b5e0       ?is_invoke_init_op@@YA_NH@Z 1000c5e0 f   unpack.obj
+ 0001:0000b600       ?is_branch_op@@YA_NH@Z     1000c600 f   unpack.obj
+ 0001:0000b660       ?is_local_slot_op@@YA_NH@Z 1000c660 f   unpack.obj
+ 0001:0000b9c0       ?insert_extra@@YAXPAUentry@@AAUptrlist@@@Z 1000c9c0 f   unpack.obj
+ 0001:0000c7c0       ?compare_Utf8_chars@@YAHAAUbytes@@0@Z 1000d7c0 f   unpack.obj
+ 0001:0000cd20       ?getbuf@@YAAAUbytes@@H@Z   1000dd20 f   unpack.obj

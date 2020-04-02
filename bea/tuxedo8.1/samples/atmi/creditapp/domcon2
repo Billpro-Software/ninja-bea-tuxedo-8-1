@@ -1,0 +1,111 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1990, 1994 Novell, Inc.
+#	Copyright (c) 1994 Novell
+#	  All Rights Reserved
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+#	UNIX System Laboratories, Inc.
+#	The copyright notice above does not evidence any
+#	actual or intended publication of such source code.
+
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/domcon2	$Revision: 1.5 $"
+
+#
+# TUXEDO DOMAIN CONFIGURATION FILE
+#
+*DM_RESOURCES
+#
+VERSION=U22
+# 
+
+#
+#
+*DM_LOCAL_DOMAINS
+#
+#
+
+TDOM1 	GWGRP=BANKB1
+	TYPE=TDOMAIN
+	DOMAINID="TDOM1"
+	BLOCKTIME=10   
+	MAXDATALEN=56  
+	MAXRDOM=89         
+	DMTLOGDEV="<APPDIR2>/DMTLOG" 
+	AUDITLOG="<APPDIR2>/AUDITLOG"
+	DMTLOGNAME="DMTLOG_TDOM1"    
+
+XDOM2 	GWGRP=BANKB3
+	TYPE=TDOMAIN
+	DOMAINID="XDOM2"
+	BLOCKTIME=10   
+	MAXDATALEN=56  
+	MAXRDOM=89         
+	DMTLOGDEV="<APPDIR2>/DMTLOG" 
+	AUDITLOG="<APPDIR2>/AUDITLOG"
+	DMTLOGNAME="DMTLOG_TDOM2"    
+
+
+
+#
+#
+*DM_REMOTE_DOMAINS
+#
+#
+QDOM1 	TYPE=TDOMAIN
+	DOMAINID="QDOM1"
+
+
+ZDOM2 	TYPE=TDOMAIN
+	DOMAINID="ZDOM2"
+#
+#
+*DM_TDOMAIN
+#
+QDOM1	NWADDR="<network address of SITE1>"
+	NWDEVICE="<device of provider1>"
+ZDOM2	NWADDR="<network address of SITE3>"
+	NWDEVICE="<device of provider3>"
+XDOM2	NWADDR="<network address of SITE2>"
+	NWDEVICE="<device of provider2>"
+TDOM1	NWADDR="<network address of SITE2A>"
+	NWDEVICE="<device of provider2>"
+#
+#
+
+
+
+
+#
+#
+*DM_LOCAL_SERVICES
+#
+#
+
+
+WITHDRAWAL
+INQUIRY
+TRANSFER
+DEPOSIT
+OPEN_ACCT
+CLOSE_ACCT
+
+#
+#
+*DM_REMOTE_SERVICES
+#
+#
+
+
+WITHDRAWALA	RDOM=QDOM1    LDOM=TDOM1     RNAME="WITHDRAWALA"
+INQUIRYA	RDOM=QDOM1    LDOM=TDOM1     RNAME="INQUIRYA"
+OPENCA		RDOM=QDOM1    LDOM=TDOM1     RNAME="OPENCA"
+CLOSECA		RDOM=QDOM1    LDOM=TDOM1     RNAME="CLOSECA"
+WITHDRAWAL	RDOM=ZDOM2    LDOM=XDOM2     RNAME="WITHDRAWAL"
+INQUIRY		RDOM=ZDOM2    LDOM=XDOM2     RNAME="INQUIRY"
+OPEN_ACCT	RDOM=ZDOM2    LDOM=XDOM2     RNAME="OPEN_ACCT"
+CLOSE_ACCT	RDOM=ZDOM2    LDOM=XDOM2     RNAME="CLOSE_ACCT"
+TRANSFER  	RDOM=ZDOM2    LDOM=XDOM2     RNAME="TRANSFER"
+DEPOSIT   	RDOM=ZDOM2    LDOM=XDOM2     RNAME="DEPOSIT"

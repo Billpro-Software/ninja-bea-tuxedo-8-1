@@ -1,0 +1,33 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefile.nt
+#
+# Windows makefile for the interceptor c++ sample common area
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+#
+# check that "setenv.cmd" was run first:
+#
+!IF "$(INTERCEPTOR_CXX_SETUP)" == ""
+error1:
+	@echo "ERROR : setenv.cmd has not been run"
+	@exit
+!ENDIF
+
+#---------------------------------------------------------------------
+#
+# platform specific constants:
+#
+! include "common.nt"
+! include $(MAKEFILE_PREFIX).inc
+
+#---------------------------------------------------------------------
+#
+# build rules for sample common directory :
+#
+! include "makefile.inc"
+
+#---------------------------------------------------------------------

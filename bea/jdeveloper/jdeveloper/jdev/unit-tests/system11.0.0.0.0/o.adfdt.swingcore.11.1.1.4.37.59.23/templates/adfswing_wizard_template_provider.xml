@@ -1,0 +1,86 @@
+<!-- Change the location with to the location where templates are kept. 
+This location is with respect to ADFSWing extension directory 
+default location/no location attribute with search for velocity templates in
+templates/jclient/wizards foder with respect to ADFSWing extension directory
+
+NOTE :: If a template is not provided then
+		JDeveloper will create required Java file without using any template
+-->
+
+<wizardTemplates location="templates/jclient/wizards">
+
+	<wizard id="EMPTY_PANEL">
+		<template id = "EMPTY_PANEL_TEMPLATE" file="emptyPanelTemplate.vm"/>
+	  	<template id="EMPTY_PANEL_INTERNALFRAME_TEMPLATE" file="emptyPanelInternalFrameTemplate.vm"/>
+	</wizard>
+
+	<wizard id="EMPTY_FORM">
+		<template id = "EMPTY_FORM_TEMPLATE" file="emptyFormTemplate.vm"/>
+		<template id = "LOGIN_DIALOG_TEMPLATE" file="loginDialogTemplate.vm"/>
+	</wizard>
+
+
+	<!-- Templates to be used when user Selects FORM WIZARD.
+		Different templates will be called on inputs from FORM WIZARD
+
+		CASE A) User selects Single Table, then 
+				FORM_FOR_PANEL template and either of the template under
+				MASTER_PANEL will be called based on the user input for template 
+
+		CASE B) User selects MASTER-DETAIL TableS, then	following templates will be called
+				i)template for FORM_FOR_PANEL
+				ii)either of the template from MASTER_PANEL
+				iii)either of the template from DETAILS_PANEL
+				iv) template for MASTER-DETAILS-PANEL
+				
+				FORM_FOR_PANEL template and either of the template under
+				MASTER_PANEL will be called based on the user input for template 
+		
+		CASE C & D) Replace FORM_FOR_PANEL with APPLET_FOR_PANEL from Case A and B 
+				if user selects Applet to be created instead of FORM
+		
+		
+		CASE E) In addition to case A and B if user selectes MDI form to be selected,
+				MDI_FORM template will be used for creation of MDI form.
+
+		Template LOGIN_DIALOG will be used to generate LOGIN DIALOG.
+	-->
+	<wizard id="FORM">
+		<template id="FORM_FOR_PANEL_TEMPLATE" file="formForPanelTemplate.vm"/>
+		<template id="APPLET_FOR_PANEL_TEMPLATE" file="appletForPanelsTemplate.vm"/>
+		<template id="MASTER_DETAIL_PANEL_TEMPLATE" file="masterDetailPanelTemplate.vm"/>
+		<template id="MASTER_PANEL_LABEL_LEFT_TEMPLATE" file="panelLabelLeftTemplate.vm"/>
+		<template id="MASTER_PANEL_LABEL_TOP_TEMPLATE" file="panelLabelTopTemplate.vm"/>
+		<template id="MASTER_PANEL_TABLE_TEMPLATE" file="panelTableTemplate.vm"/>
+		<template id="DETAILS_PANEL_LABEL_LEFT_TEMPLATE" file="panelLabelLeftTemplate.vm"/>
+		<template id="DETAILS_PANEL_LABEL_TOP_TEMPLATE" file="panelLabelTopTemplate.vm"/>
+		<template id="DETAILS_PANEL_TABLE_TEMPLATE" file="panelTableTemplate.vm"/>
+		<template id="MDI_FORM_TEMPLATE" file="mdiFormTemplate.vm"/>
+		<template id="LOGIN_DIALOG_TEMPLATE" file="loginTemplate.vm"/>
+	</wizard>
+	<wizard id="PANEL">
+		<template id="PANEL_LABEL_LEFT_TEMPLATE" file="panelLabelLeftTemplate.vm"/>
+		<template id="PANEL_LABEL_TOP_TEMPLATE" file="panelLabelTopTemplate.vm"/>
+		<template id="PANEL_TABLE_TEMPLATE" file="panelTableTemplate.vm"/>
+	</wizard>
+
+	<!-- Templates to be used when independently for wizard.
+	This is being called from Drag and Drop. e.g
+		Drop of Edit Form calls template PANEL_LABEL_LEFT
+
+	-->
+	<wizard id="GENERIC_ADFSWING">
+		<template id="EMPTY_PANEL_TEMPLATE" file="emptyPanelTemplate.vm"/>
+		<template id="EMPTY_PANEL_INTERNALFRAME_TEMPLATE" file="emptyPanelInternalFrameTemplate.vm"/>
+		<template id="EMPTY_FORM_TEMPLATE" file="emptyFormTemplate.vm"/>
+		<template id="PANEL_LABEL_LEFT_TEMPLATE" file="panelLabelLeftTemplate.vm"/>
+		<template id="PANEL_LABEL_TOP_TEMPLATE" file="panelLabelTopTemplate.vm"/>
+		<template id="PANEL_LABEL_TABLE_TEMPLATE" file="panelTableTemplate.vm"/>
+		<template id="MASTER_DETAILS_PANEL_TEMPLATE" file="masterDetailPanelTemplate.vm"/>
+		<template id="FORM_FOR_PANEL_TEMPLATE" file="formForPanelTemplate.vm"/>
+		<template id="APPLET_FOR_PANEL_TEMPLATE" file="appletForPanelTemplate.vm"/>
+		<template id="LOGIN_DIALOG_TEMPLATE" file="loginDialogTemplate.vm"/>
+                <template id="PANEL_DETAILS_CONTAINER_TEMPLATE" file="multipleDetailsContainerPanel.vm"/>
+	</wizard>
+
+</wizardTemplates>

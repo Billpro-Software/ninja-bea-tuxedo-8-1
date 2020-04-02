@@ -1,0 +1,319 @@
+<HTML>
+<!--
+// WWHFSET.ASP
+//
+// Copyright (c) 1999 Quadralay Corporation.  All rights reserved.
+//
+// The information in this file is confidential and proprietary to
+// Quadralay Corporation.  Unauthorized use or duplication is
+// strictly prohibited.
+-->
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:48:08">
+<title>BEA Tuxedo Administration Console Help</title>
+<SCRIPT LANGUAGE="Javascript">
+var isNav4, isIE4, isNav4Mac;
+if (navigator.appVersion.charAt(0) == "4") {
+   if (navigator.appName == "Netscape") {
+      isNav4 = true;
+      isIE4 = false;
+      if (navigator.appVersion.indexOf("Macintosh") != -1)
+         isNav4Mac=true;
+   } else if (navigator.appVersion.indexOf("MSIE") != -1) {
+      isIE4 = true;
+      isNav4 = false;
+   }
+}
+var contentshref="";
+var st=new Array;
+var desc=new Array;
+var wlen=new Array;
+var ndx=new Array;
+var sl=dl=ndxanchor=0;
+var ct=null;
+function ndxItem(anchor,group,term,level,hrefs){
+   this.group=group.toLowerCase();
+   this.term=term;
+   this.level=level;
+   this.hrefs=hrefs;
+   this.anchor=anchor;
+}
+var useTOCTextLinks=true; 
+var indexOfEntries=new Array(); 
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="wwhcust.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="wwhtree.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+var hsmain = "BEA Tuxedo Administration Console Help";
+var foldersTree = new Folder(hsmain,"");
+</SCRIPT>
+<!--
+Include the helpset module search terms
+-->
+<SCRIPT LANGUAGE="JavaScript" SRC="wwhsrch.js"></SCRIPT>
+<!--
+End of helpset module search term inclusion
+-->
+
+<SCRIPT LANGUAGE="JavaScript" SRC="achelpww.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="achelpwa.js"></SCRIPT>
+
+<SCRIPT LANGUAGE="Javascript">
+var folderOpen=new Array(indexOfEntries.length);
+foldersTree.initialize(0,1,"");
+folderOpen[0]=true;
+function compareTerms(a,b){
+  if (a.group < b.group) return -1;
+  else if (a.group > b.group) return 1;
+  else
+  {
+    if (a.term.toLowerCase() < b.term.toLowerCase()) return -1;
+    if (a.term.toLowerCase() > b.term.toLowerCase()) return 1;
+  }
+
+  return 0;
+}
+if (srtndx)ndx.sort(compareTerms);
+var wwhfvs=new Array();
+var wwhfvsndx=0;
+var favorites=new Array();
+// Bill Dortch getCookieVal and GetCookie routines
+function getCookieVal(offset) {
+  var endstr=document.cookie.indexOf(";",offset);
+  if (endstr==-1)endstr=document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie(name) {
+  var arg=name+"=";
+  var alen=arg.length;
+  var clen=document.cookie.length;
+  var i=0;
+  while(i<clen){
+    var j=i+alen;
+    if(document.cookie.substring(i,j)==arg)return getCookieVal(j);
+    i=document.cookie.indexOf(" ",i)+1;
+    if(i==0)break; 
+  }
+  return null;
+}
+function displayTOCSelection(href){
+   helpcontents.location.href=href;
+   contentshref=helpcontents.location.href;
+}
+function link(label, href){
+   this.label=label;
+   this.href=href;
+}
+function favorite(label,href,timestamp){
+   this.label=label;
+   this.href=href;
+   this.timestamp=timestamp;
+}
+function compareNulls(a,b){
+   if ((a==null)&&(b==null))return 1;
+   if (a==null)return 1;
+   if (b==null)return -1;
+   return 0;
+}
+function compareTimestamp(a,b){
+   return a.timestamp-b.timestamp;
+}
+function compareLabels(a,b){
+   if (a.label.toLowerCase() < b.label.toLowerCase()) return -1;
+   if (a.label.toLowerCase() > b.label.toLowerCase()) return 1;
+   return 0;
+}
+function getFavorites(){
+   var f="";
+   var hs="";
+   for (var i=0;i<maxfvs;i++){
+      f=GetCookie("wwh"+i);
+      if(f!=null)wwhfvs[wwhfvs.length]=f;
+   }
+   for (var i=0;i<wwhfvs.length;i++){
+      if ((wwhfvs[i].substring(0,hsmain.length)==hsmain)&&(wwhfvs[i].length>hsmain.length)){
+         wwhfvsndx=i;
+         var n=b=f=0;
+         var r=hsmain.length;
+         for (var j=r;j<wwhfvs[i].length;j++){
+            switch (wwhfvs[i].charAt(j)) {
+               case "\b":
+                  b=j;
+                  break;
+               case "\f":
+                  f=j;
+                  break;
+               case "\n":
+                  n=j;
+                  favorites[favorites.length]=new favorite(wwhfvs[i].substring(b+1,f),wwhfvs[i].substring(f+1,n),wwhfvs[i].substring(r+1,b))
+                  r=n;
+                  break;
+            }
+         }
+         return;
+      }
+   }
+}
+function saveFavorites(){
+   if (favorites.length) {
+      favorites.sort(compareTimestamp);
+      wwhfvs[wwhfvsndx]=hsmain;
+      for (var i=0;i<favorites.length;i++)if (favorites[i])wwhfvs[wwhfvsndx]=wwhfvs[wwhfvsndx]+favorites[i].timestamp+"\b"+favorites[i].label+"\f"+favorites[i].href+"\n";
+   // make sure the current cookie is less than max cookie length
+   // if it is longer, chop the last favorite(s) in this string
+      var exp=new Date();
+      exp.setTime(exp.getTime()+fvexp);
+      document.cookie="wwh"+wwhfvsndx+"="+escape(wwhfvs[wwhfvsndx])+"; expires="+exp.toGMTString();
+   }else document.cookie="wwh"+wwhfvsndx+"=; expires=Thu, 01-Jan-98 00:00:01 GMT";
+}
+function displayFavorSelection(href){
+   helpcontents.location.href=href;
+   contentshref=helpcontents.location.href;
+}
+function displayFavorites(){
+   tabDisplay.favorDisplay.document.open("text/html","replace");
+   tabDisplay.favorDisplay.document.bgColor=tab["tab3"][2];
+   if (favorites.length){
+      var label;
+      tabDisplay.favorDisplay.document.alinkColor=tab["tab3"][3];
+      tabDisplay.favorDisplay.document.linkColor=tab["tab3"][4];
+      tabDisplay.favorDisplay.document.vlinkColor=tab["tab3"][5];
+      tabDisplay.favorDisplay.document.write("<FORM NAME='fvs' onSubmit='parent.parent.deleteSelectedFavorites();'>");
+      tabDisplay.favorDisplay.document.write("<TABLE WIDTH='100%'>");
+      for (var i=0;i<favorites.length;i++)
+         if (favorites[i]) {
+            var label=msgfvr;
+            if (favorites[i].label!="")label=favorites[i].label;
+            else label=label+" ("+favorites[i].href+")";
+            tabDisplay.favorDisplay.document.write("<TR><TD WIDTH='20'><FONT FACE='"+tff+"' SIZE="+tfs+"><INPUT ID='fdel' TYPE='checkbox'></FONT></TD>");
+            tabDisplay.favorDisplay.document.write("<TD NOWRAP><FONT FACE='"+tff+"' SIZE="+tfs+"><A HREF='javascript:parent.parent.displayFavorSelection(\""+favorites[i].href+"\")'>"+label+"</A></FONT></TD></TR>");
+         }
+      tabDisplay.favorDisplay.document.write("</TABLE>");
+      tabDisplay.favorDisplay.document.write("</FORM>");
+   }
+   tabDisplay.favorDisplay.document.close();
+}
+function addFavorite(){
+   for (var i=0;i<favorites.length;i++)
+      if (favorites[i].href==helpcontents.location.href)return;
+   favorites[favorites.length]=new favorite(helpcontents.document.title,helpcontents.location.href,(new Date()).getTime());
+   if (srtfvr)favorites.sort(compareLabels);
+   displayFavorites();
+}
+function deleteSelectedFavorites(){
+   if (tabDisplay.favorDisplay.document.forms.length){
+      for (var i=0;i<tabDisplay.favorDisplay.document.fvs.elements.length;i++) {
+         if (tabDisplay.favorDisplay.document.fvs.elements[i].checked){
+            delete favorites[i];
+            favorites[i]=null;
+         }
+      }
+      favorites.sort(compareNulls);
+      for (var i=favorites.length-1;i>=0;i--)if(favorites[i]==null)favorites.length=i;else break;
+      displayFavorites();
+   }
+}
+function displayIndexSelection(href){
+   helpcontents.location.href=href;
+   contentshref=helpcontents.location.href;
+}
+
+function displayIndex()
+{
+  var lastTerm;
+
+  if (ndx.length)
+  {
+    tabDisplay.document.write("<TABLE COLS=1>");
+    for (var i=0;i<ndx.length;i++)
+    {
+      if ((srtndx == false) ||
+          (ndx[i].hrefs.length) ||
+          (lastTerm != ndx[i].term))
+      {
+        lastTerm = ndx[i].term;
+
+        tabDisplay.document.write("<TR><A NAME='"+ndx[i].anchor+"'></A><TD NOWRAP ALIGN='left' VALIGN='top'><FONT FACE='"+tff+"' SIZE="+tfs+">");
+
+        if (ndx[i].level>1)
+	{
+          for (var j=0;j<ndx[i].level-1;j++)
+             tabDisplay.document.write("&nbsp;&nbsp;&nbsp;");
+          tabDisplay.document.write(ndxbull+"&nbsp;");
+        }
+
+        if(ndx[i].hrefs.length)
+	{
+          tabDisplay.document.write("<A HREF='javascript:parent.displayIndexSelection(\""+ndx[i].hrefs[0]+"\")'>"+ndx[i].term+"</A>");
+
+          if (ndx[i].hrefs.length>1)
+	  {
+            tabDisplay.document.write(" (<A HREF='javascript:parent.displayIndexSelection(\""+ndx[i].hrefs[1]+"\")'>2</A>");
+
+            for (var j=2;j<ndx[i].hrefs.length;j++)
+	      tabDisplay.document.write(", <A HREF='javascript:parent.displayIndexSelection(\""+ndx[i].hrefs[j]+"\")'>"+(j+1)+"</A>");
+
+            tabDisplay.document.write(")");
+          }
+        }
+	else
+	{
+	  tabDisplay.document.write(ndx[i].term);
+	}
+
+        tabDisplay.document.write("</FONT></TD></TR>");
+      }
+    }
+
+    tabDisplay.document.write("</TABLE>");
+  }
+}
+
+function sortAscending(a,b){return b-a}
+function displaySearchResult(href,t){
+   helpcontents.location.href=href;
+   contentshref=helpcontents.location.href;
+}
+function disablePrev(){
+   if(tabControl.document.next)tabControl.document.prev.src=brwse["prev"][2];
+   brwse["prev"][4]=false;
+}
+function enablePrev(){
+   if(tabControl.document.next)tabControl.document.prev.src=brwse["prev"][0];
+   brwse["prev"][4]=true;
+}
+function disableNext(){
+   if(tabControl.document.next)tabControl.document.next.src=brwse["next"][2];
+   brwse["next"][4]=false;
+}
+function enableNext(){
+   if(tabControl.document.next)tabControl.document.next.src=brwse["next"][0];
+   brwse["next"][4]=true;
+}
+function handleResize(){
+   tabControl.location.href="wwhtabs.htm";
+   tabDisplay.location.href="wwh"+ct+".htm";
+   if (contentshref!="")helpcontents.location.href=contentshref;
+}
+function init() {
+   if(ct==null){ct=GetCookie("ct");if(ct==null)ct=dt;}
+   tabDisplay.location.href="wwh"+ct+".htm";
+   document.cookie="ct="+ct;
+   getFavorites();
+}
+function shutdown(){
+   saveFavorites();
+}
+</SCRIPT>
+</HEAD>
+<FRAMESET COLS="252,*" border="1" onLoad="init();" onUnLoad="shutdown();" onResize="if(isNav4)handleResize();">
+   <FRAMESET ROWS="68,*" border="0">
+      <FRAME SRC="wwhtabs.htm" ID="tabControl" NAME="tabControl" SCROLLING="no" FRAMEBORDER="yes"> 
+      <FRAME SRC="wwhblnk.htm" ID="tabDisplay" NAME="tabDisplay" SCROLLING="auto" FRAMEBORDER="no">
+   </FRAMESET>
+   <FRAME SRC="wwhsplsh.htm" ID="helpcontents" NAME="helpcontents" SCROLLING="auto" FRAMEBORDER="yes">
+</FRAMESET> 
+</HTML>

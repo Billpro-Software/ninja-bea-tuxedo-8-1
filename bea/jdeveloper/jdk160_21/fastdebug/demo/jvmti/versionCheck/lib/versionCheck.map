@@ -1,0 +1,110 @@
+ versionCheck
+
+ Timestamp is 4cfae5ca (Sat Dec 04 17:07:22 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000c28H .text                   CODE
+ 0002:00000000 0000005cH .idata$5                DATA
+ 0002:00000060 00000098H .rdata                  DATA
+ 0002:000000f8 0000007bH .rdata$debug            DATA
+ 0002:00000180 00000004H .rdata$sxdata           DATA
+ 0002:00000184 00000004H .rtc$IAA                DATA
+ 0002:00000188 00000004H .rtc$IZZ                DATA
+ 0002:0000018c 00000004H .rtc$TAA                DATA
+ 0002:00000190 00000004H .rtc$TZZ                DATA
+ 0002:00000194 00000028H .idata$2                DATA
+ 0002:000001bc 00000014H .idata$3                DATA
+ 0002:000001d0 0000005cH .idata$4                DATA
+ 0002:0000022c 00000118H .idata$6                DATA
+ 0002:00000350 00000070H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00000260H .data                   DATA
+ 0003:00000270 00000018H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000378H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000000       _Agent_OnLoad@12           10001000 f   versionCheck.obj
+ 0001:00000200       _Agent_OnUnload@4          10001200 f   versionCheck.obj
+ 0001:00000210       _stdout_message            10001210 f   agent_util.obj
+ 0001:00000240       _fatal_error               10001240 f   agent_util.obj
+ 0001:00000290       _get_token                 10001290 f   agent_util.obj
+ 0001:00000320       _interested                10001320 f   agent_util.obj
+ 0001:00000570       _check_jvmti_error         10001570 f   agent_util.obj
+ 0001:000005f0       _deallocate                100015f0 f   agent_util.obj
+ 0001:00000630       _allocate                  10001630 f   agent_util.obj
+ 0001:00000670       _add_demo_jar_to_bootclasspath 10001670 f   agent_util.obj
+ 0001:00000928       _memset                    10001928 f   MSVCRT:MSVCR71.dll
+ 0001:0000092e       _strlen                    1000192e f   MSVCRT:MSVCR71.dll
+ 0001:00000934       _strcat                    10001934 f   MSVCRT:MSVCR71.dll
+ 0001:0000093a       _strcpy                    1000193a f   MSVCRT:MSVCR71.dll
+ 0001:00000940       __CRT_INIT@12              10001940 f   MSVCRT:crtdll.obj
+ 0001:000009fe       __DllMainCRTStartup@12     100019fe f   MSVCRT:crtdll.obj
+ 0001:00000ae2       __initterm                 10001ae2 f   MSVCRT:MSVCR71.dll
+ 0001:00000ae8       __onexit                   10001ae8 f   MSVCRT:atonexit.obj
+ 0001:00000b0e       _atexit                    10001b0e f   MSVCRT:atonexit.obj
+ 0001:00000b20       __RTC_Initialize           10001b20 f   MSVCRT:initsect.obj
+ 0001:00000b64       __RTC_Terminate            10001b64 f   MSVCRT:initsect.obj
+ 0001:00000ba8       ___CppXcptFilter           10001ba8 f   MSVCRT:MSVCR71.dll
+ 0001:00000bae       _DllMain@12                10001bae f   MSVCRT:dllmain.obj
+ 0001:00000bd0       __SEH_prolog               10001bd0 f   MSVCRT:sehprolg.obj
+ 0001:00000c0b       __SEH_epilog               10001c0b f   MSVCRT:sehprolg.obj
+ 0001:00000c1c       __except_handler3          10001c1c f   MSVCRT:MSVCR71.dll
+ 0001:00000c22       ___dllonexit               10001c22 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DisableThreadLibraryCalls@4 10002000     kernel32:KERNEL32.dll
+ 0002:00000004       \177KERNEL32_NULL_THUNK_DATA 10002004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp___iob                10002008     MSVCRT:MSVCR71.dll
+ 0002:0000000c       __imp__exit                1000200c     MSVCRT:MSVCR71.dll
+ 0002:00000010       __imp__fflush              10002010     MSVCRT:MSVCR71.dll
+ 0002:00000014       __imp__strncpy             10002014     MSVCRT:MSVCR71.dll
+ 0002:00000018       __imp__strcspn             10002018     MSVCRT:MSVCR71.dll
+ 0002:0000001c       __imp__strspn              1000201c     MSVCRT:MSVCR71.dll
+ 0002:00000020       __imp__strncmp             10002020     MSVCRT:MSVCR71.dll
+ 0002:00000024       __imp__strlen              10002024     MSVCRT:MSVCR71.dll
+ 0002:00000028       __imp__strcat              10002028     MSVCRT:MSVCR71.dll
+ 0002:0000002c       __imp__vfprintf            1000202c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp__free                10002030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp___initterm           10002034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__malloc              10002038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp___adjust_fdiv        1000203c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp____CppXcptFilter     10002040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp___except_handler3    10002044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp____dllonexit         10002048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp___onexit             1000204c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp__strcpy              10002050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp__memset              10002054     MSVCRT:MSVCR71.dll
+ 0002:00000058       \177MSVCR71_NULL_THUNK_DATA 10002058     MSVCRT:MSVCR71.dll
+ 0002:000000b0       __load_config_used         100020b0     MSVCRT:loadcfg.obj
+ 0002:00000180       ___safe_se_handler_table   10002180     <linker-defined>
+ 0002:00000184       ___rtc_iaa                 10002184     MSVCRT:initsect.obj
+ 0002:00000188       ___rtc_izz                 10002188     MSVCRT:initsect.obj
+ 0002:0000018c       ___rtc_taa                 1000218c     MSVCRT:initsect.obj
+ 0002:00000190       ___rtc_tzz                 10002190     MSVCRT:initsect.obj
+ 0002:00000194       __IMPORT_DESCRIPTOR_MSVCR71 10002194     MSVCRT:MSVCR71.dll
+ 0002:000001a8       __IMPORT_DESCRIPTOR_KERNEL32 100021a8     kernel32:KERNEL32.dll
+ 0002:000001bc       __NULL_IMPORT_DESCRIPTOR   100021bc     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    10003000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10003004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10003008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000300c     MSVCRT:cinitexe.obj
+ 0003:0000026c       ___security_cookie         1000326c     MSVCRT:seccook.obj
+ 0003:00000278       __adjust_fdiv              10003278     <common>
+ 0003:0000027c       ___onexitend               1000327c     <common>
+ 0003:00000280       ___onexitbegin             10003280     <common>
+ 0003:00000284       __pRawDllMain              10003284     <common>
+
+ entry point at        0001:000009fe
+
+ Static symbols
+
+ 0001:000000f0       _vm_init@12                100010f0 f   versionCheck.obj
+ 0001:00000140       _version_check             10001140 f   versionCheck.obj
+ 0001:00000390       _covered_by_list           10001390 f   agent_util.obj
+ 0001:00000430       _covered_by_list_item      10001430 f   agent_util.obj

@@ -1,0 +1,3881 @@
+<!-- .if n .pH errman.h.tamsg2.htm @(#)tamsg2.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>TMADMIN_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>TMADMIN MESSAGES 400-499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="473"></A>
+<H3>TMADMIN MESSAGE #473</H3>
+<H2> ERROR: Error reading file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to read a saved Bulletin Board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The BB may be the wrong size or corrupted, or the specified file
+may not be a saved BB.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="474"></A>
+<H3>TMADMIN MESSAGE #474</H3>
+<H2> ERROR: Error setting auth type to CLIENT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a saved Bulletin Board file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to see that the specified file exist and that you have
+read permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="475"></A>
+<H3>TMADMIN MESSAGE #475</H3>
+<H2> ERROR: Error setting bb type to PRIVATE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to attach to a saved bulletin board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="476"></A>
+<H3>TMADMIN MESSAGE #476</H3>
+<H2> ERROR: Error attaching to private bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to attach to a saved bulletin board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="477"></A>
+<H3>TMADMIN MESSAGE #477</H3>
+<H2> ERROR: Error opening file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a saved bulletin board failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="494"></A>
+<H3>TMADMIN MESSAGE #494</H3>
+<H2> ERROR: Cannot stop processes from non-master node</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+shutdown
+command invokes
+tmshutdown (1)
+to shut down processes.
+Because
+tmshutdown (1)
+needs access to the
+DBBL
+for successful processing, it must run on the master node
+(that is, where the
+DBBL
+resides).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the
+MASTER
+keyword of the *RESOURCES section of the
+ubbconfig (5)
+file to determine your application's master
+node.  This is the node on which
+tmadmin (1)'s
+shutdown
+command must be executed.
+Note that if the
+master
+command was previously executed, the
+DBBL
+may be running on
+the backup node instead.
+In this case, the
+shutdown
+command must be executed from
+tmadmin (1)
+running on the backup node.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>tmshutdown(1), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="498"></A>
+<H3>TMADMIN MESSAGE #498</H3>
+<H2> ERROR: The new <I>value</I> is not within the range of <I>min</I>-<I>max</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is printed when an illegal value has been given
+to one of the changeload, <Font>changepriority, or
+changetrantime commands of <Font>tmadmin(1).
+Service loads must be between 1 and 32767, inclusive;
+service priorities must be between 1 and 100, inclusive;
+and transaction times must be between 0 and 2,147,483,647, inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command using a value within the appropriate range.
+The SERVICES section of the
+ubbconfig (5)
+manual page describes
+the correct ranges and defaults for these service attributes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="499"></A>
+<H3>TMADMIN MESSAGE #499</H3>
+<H2> ERROR: Error changing <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered trying to update a service's
+priority with the
+changepriority
+command, or its transaction timeout value with the
+changetrantime
+command.
+This error may have occurred because of a communication
+failure between
+tmadmin (1)
+and the
+DBBL
+or one of the
+BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+userlog (3)
+file to see if a communication
+error occurred that caused the requested command
+to fail.
+<SECT1><P>
+<H1>TMADMIN MESSAGES 500-599</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="512"></A>
+<H3>TMADMIN MESSAGE #512</H3>
+<H2> ERROR: Cannot create device <I>devname</I>, start <I>val</I>, size <I>val</I> on <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Creation of a new device using crdl failed.
+The parameters to the creation are printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to ensure that you have write permission on the device, that
+tlid values are specified, and that the slice does
+not overlap with an existing device (use the lidl command to check
+existing devices).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="515"></A>
+<H3>TMADMIN MESSAGE #515</H3>
+<H2> WARN: Not destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing dsdl to destroy a device list entry,
+a "yes" answer was not provided to the prompt to ensure that
+the operation should be done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="516"></A>
+<H3>TMADMIN MESSAGE #516</H3>
+<H2> ERROR: Cannot list device <I>devindex</I> on <I>config-file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying a device using dsdl, the specified index
+on the configuration file could not be listed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the lidl command to see what devices are available and
+specified a valid device index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="517"></A>
+<H3>TMADMIN MESSAGE #517</H3>
+<H2> ERROR: Cannot destroy device <I>index</I> on <I>device</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying a device using dsdl, the specified index
+on the configuration file could not be destroyed.
+This could occur for many reasons including the file is
+being updated by another process, entry 0 is being destroyed
+and other files or device entries exist, or an I/O error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For device entry 0, use litc and livtoc to ensure that other
+entries don't exist.  Re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="520"></A>
+<H3>TMADMIN MESSAGE #520</H3>
+<H2> WARN: Not re-initialized</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing indir to re-initialize a configuration,
+a "yes" answer was not provided to the prompt to ensure that
+the operation should be done.
+This operation wipes out all files and device entries
+for the file - use with care!
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="521"></A>
+<H3>TMADMIN MESSAGE #521</H3>
+<H2> ERROR: Can't open <I>file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing indir to re-initialize a configuration file,
+the specified file could not be opened.
+This operation wipes out all files and device entries
+for the file - use with care!
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the proper value was specified for the -z option and
+that the file has read and write permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="523"></A>
+<H3>TMADMIN MESSAGE #523</H3>
+<H2> ERROR: Can't write <I>file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing indir to re-initialize a configuration file,
+the specified file could not be updated.
+This operation wipes out all files and device entries
+for the file - use with care!
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the proper value was specified for the -z option and
+that the file has read and write permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="526"></A>
+<H3>TMADMIN MESSAGE #526</H3>
+<H2> WARN: Not initialized</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing indl to re-initialize a decide list entry,
+a "yes" answer was not provided to the prompt to ensure that
+the operation should be done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="527"></A>
+<H3>TMADMIN MESSAGE #527</H3>
+<H2> ERROR: Cannot list device <I>index</I> on <I>file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing indl to initialize a device list entry,
+an error occurred while reading information about the entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to see that the file is a valid TUXEDO configuration file,
+that you have read permission,
+and that the index is valid (use lidl).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="528"></A>
+<H3>TMADMIN MESSAGE #528</H3>
+<H2> ERROR: Cannot re-initialize device <I>index</I> on <I>file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing indl to initialize a device list entry,
+an error occurred while reading information about the entry.
+This operation frees up all space on that entry - don't do
+this operation if TUXEDO tables are using space on the entry.
+Freeing up entry 0 clears all other device entries - use with care!
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to see that the file is a valid TUXEDO configuration file,
+that you have write permission,
+and that the index is valid (use lidl).
+Another program may have the file locked for update.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="530"></A>
+<H3>TMADMIN MESSAGE #530</H3>
+<H2> ERROR: Device list not initialized</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The lidl was executed for a configuration device that was not initialized.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the device specified with the -z option is correct.
+If it has not already been initialized, use the
+crdl command to initialize it and create a device entry.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="539"></A>
+<H3>TMADMIN MESSAGE #539</H3>
+<H2> ERROR: Can't get vtoc on <I>device</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The livtoc was executed for a configuration device that was not
+initialized or for which the user does not have access permissions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the device specified with the -z option is correct,
+and that you have read permissions.
+If it has not already been initialized, you must also have update permissions,
+and you should use the
+crdl command to initialize the device and create a device entry.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="544"></A>
+<H3>TMADMIN MESSAGE #544</H3>
+<H2> WARN: No entries found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A "printgroup" or "pg" was executed but no groups were found
+to match the specified group (-g) or machine (-m) options,
+or no groups exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="552"></A>
+<H3>TMADMIN MESSAGE #552</H3>
+<H2> ERROR: Migration not allowed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The "migg" or "migrategroup" command was executed but the application
+is not configured with the MIGRATE option set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration to have the MIGRATE option, and configure
+backup machines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="553"></A>
+<H3>TMADMIN MESSAGE #553</H3>
+<H2> ERROR: Invalid group name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The "migg" or "migrategroup" command was executed but an invalid
+group name was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the pg command to print a list of valid group names.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="554"></A>
+<H3>TMADMIN MESSAGE #554</H3>
+<H2> ERROR: Error occurred (<I>errval</I>): Check ULOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A "migg" or "migrategroup" command was executed
+but the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for messages indicating the nature of the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="555"></A>
+<H3>TMADMIN MESSAGE #555</H3>
+<H2> ERROR: Migration time out: Check ULOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A "migg" or "migrategroup" command was executed
+but the operation did not complete within the configured timeout value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for messages indicating the state of the
+migration.  It may still complete after the time-out occurs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="557"></A>
+<H3>TMADMIN MESSAGE #557</H3>
+<H2> ERROR: Migration not allowed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The "migm" or "migratemach" command was executed but the application
+is not configured with the MIGRATE option set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration to have the MIGRATE option, and configure
+backup machines.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="558"></A>
+<H3>TMADMIN MESSAGE #558</H3>
+<H2> ERROR: Invalid machine name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The "migm" or "migratemach" command was executed but an invalid
+machine name was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the pg command to print a list of valid group names
+and their associated machine names.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="559"></A>
+<H3>TMADMIN MESSAGE #559</H3>
+<H2> ERROR: Error occurred (<I>errval</I>): Check ULOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A "migm" or "migratemach" command was executed
+but the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for messages indicating the nature of the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="560"></A>
+<H3>TMADMIN MESSAGE #560</H3>
+<H2> ERROR: Migration time out: Check ULOG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A "migm" or "migratemach" command was executed
+but the operation did not complete within the configured timeout value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for messages indicating the state of the
+migration.  It may still complete after the time-out occurs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="562"></A>
+<H3>TMADMIN MESSAGE #562</H3>
+<H2> ERROR: Not running on Master</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The crlog or crlg command was run but not from the configured
+master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the command from the configured master machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="563"></A>
+<H3>TMADMIN MESSAGE #563</H3>
+<H2> ERROR: Can't get log information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The crlog or crlg command was executed but the log information
+for the specified or default machine could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the TUXCONFIG file is loaded and that the
+machine name specified is valid.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="564"></A>
+<H3>TMADMIN MESSAGE #564</H3>
+<H2> ERROR: TLOGDEVICE must be specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The crlog or crlg command was executed but the configuration
+for the specified machine does not have a TLOGDEVICE specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration for the machine to define a TLOGDEVICE
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1),
+tmconfig(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="565"></A>
+<H3>TMADMIN MESSAGE #565</H3>
+<H2> ERROR: remote log creation failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The crlog or crlg command was executed for a remote machine
+but the operation failed.
+This is most often because tlisten(1) is not running on
+the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure tlisten is running on the remote machine.
+Check the event log on the local and remote machine for related
+messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="566"></A>
+<H3>TMADMIN MESSAGE #566</H3>
+<H2> ERROR: local log creation failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The crlog or crlg command was executed for the local machine
+but the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log on the local for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="568"></A>
+<H3>TMADMIN MESSAGE #568</H3>
+<H2> ERROR: can't open dump file - errno = <I>errval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but
+the output file could not be created and opened.
+The errno value is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the errno value to determine the reason for the fopen() failure.
+It may be that you don't have permissions on the directory or
+the file, or a lack of resources (files or space).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="569"></A>
+<H3>TMADMIN MESSAGE #569</H3>
+<H2> ERROR: command failed, check ULOG file for message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but getting information about the
+associated log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the prior failure message (_gp_litbl).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="570"></A>
+<H3>TMADMIN MESSAGE #570</H3>
+<H2> ERROR: command failed, check ULOG file for message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but opening the transaction
+log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the prior failure message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="571"></A>
+<H3>TMADMIN MESSAGE #571</H3>
+<H2> ERROR: command failed, check ULOG file for message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but reading the transaction
+log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the prior failure message (_gp_tblread).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="572"></A>
+<H3>TMADMIN MESSAGE #572</H3>
+<H2> ERROR: command failed, check ULOG file for message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but updating the transaction
+log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the prior failure message (_gp_tblwrite).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="573"></A>
+<H3>TMADMIN MESSAGE #573</H3>
+<H2> ERROR: Tmdumptlog: Page <I>num</I> skipped, chksum unmatch</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a dl or dumptlog command,
+a page was found in the transaction log that was invalid.
+The page is skipped and processing continues.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="575"></A>
+<H3>TMADMIN MESSAGE #575</H3>
+<H2> ERROR: command failed, check ULOG file for message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but reading a page from the
+transaction log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the prior failure message (_gp_tblread).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="576"></A>
+<H3>TMADMIN MESSAGE #576</H3>
+<H2> ERROR: command failed, check ULOG file for message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dumptlog or dl command was executed but reading a page from the
+transaction log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the prior failure message (_gp_tblread).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="579"></A>
+<H3>TMADMIN MESSAGE #579</H3>
+<H2> ERROR: Not running on Master</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dslog or dslg command was run but not from the configured
+master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the command from the configured master machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="580"></A>
+<H3>TMADMIN MESSAGE #580</H3>
+<H2> ERROR: Not enough log information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dslog or dslg command was executed but the log information
+for the specified or default machine could not be found,
+or a TLOGDEVICE was not configured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the TUXCONFIG file is loaded and that the
+machine name specified is valid.
+Change the configuration for the machine to define a TLOGDEVICE
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="581"></A>
+<H3>TMADMIN MESSAGE #581</H3>
+<H2> ERROR: Application is still active</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dslog or dslg command was executed but the one or more servers
+are still active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shutdown the application and re-run the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="583"></A>
+<H3>TMADMIN MESSAGE #583</H3>
+<H2> ERROR: Not destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing dslog or dslg to destroy a transaction log,
+a "yes" answer was not provided to the prompt to ensure that
+the operation should be done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="584"></A>
+<H3>TMADMIN MESSAGE #584</H3>
+<H2> ERROR: remote log destroy failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dslog or dslg command was executed for a remote machine
+but the operation failed.
+This is most often because tlisten(1) is not running on
+the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure tlisten is running on the remote machine.
+Check the event log on the local and remote machine for related
+messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="585"></A>
+<H3>TMADMIN MESSAGE #585</H3>
+<H2> ERROR: tlog_destroy failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dslog or dslg command was executed for the local machine
+but the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log on the local for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="587"></A>
+<H3>TMADMIN MESSAGE #587</H3>
+<H2> ERROR: Not running on Master</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The inlog or inlg command was run but not from the configured
+master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the command from the configured master machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="588"></A>
+<H3>TMADMIN MESSAGE #588</H3>
+<H2> ERROR: Not enough log information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The inlog or inlg command was executed but the log information
+for the specified or default machine could not be found,
+or a TLOGDEVICE was not configured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the TUXCONFIG file is loaded and that the
+machine name specified is valid.
+Change the configuration for the machine to define a TLOGDEVICE
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="589"></A>
+<H3>TMADMIN MESSAGE #589</H3>
+<H2> ERROR: Application is still active</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The inlog or inlg command was executed but the one or more servers
+are still active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shutdown the application and re-run the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="591"></A>
+<H3>TMADMIN MESSAGE #591</H3>
+<H2> ERROR: remote log init failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The inlog or inlg command was executed for a remote machine
+but the operation failed.
+This is most often because tlisten(1) is not running on
+the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure tlisten is running on the remote machine.
+Check the event log on the local and remote machine for related
+messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="592"></A>
+<H3>TMADMIN MESSAGE #592</H3>
+<H2> ERROR: tlog_reinit failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The inlog or inlg command was executed for the local machine
+but the operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log on the local for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="594"></A>
+<H3>TMADMIN MESSAGE #594</H3>
+<H2> ERROR: The system is not active</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The loadtlog command was executed but the application is not
+currently active or there is an error in finding the master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for messages related to the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="595"></A>
+<H3>TMADMIN MESSAGE #595</H3>
+<H2> ERROR: loadtlog failed, can't open tlog file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The loadtlog command was executed but the transaction log file
+could not be opened for reading/writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the file specified is valid (e.g., that the directory
+and file specified exists and has read and write permission).
+Check for limited resources (out of files or disk space).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="596"></A>
+<H3>TMADMIN MESSAGE #596</H3>
+<H2> ERROR: can't write tlog dump file - errno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The loadtlog command was executed but the status of the transaction
+log file could not be determined.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="597"></A>
+<H3>TMADMIN MESSAGE #597</H3>
+<H2> ERROR: loadtlog failed, can't get msgbuf. tperrno = <I>sub</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to load a transaction log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="598"></A>
+<H3>TMADMIN MESSAGE #598</H3>
+<H2> ERROR: loadtlog failed, can't read logfile. errno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The loadtlog command was executed but a read of the transaction
+log file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the file specified is a valid transaction log.
+The file is character-based and can be read using any text editor.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="599"></A>
+<H3>TMADMIN MESSAGE #599</H3>
+<H2> ERROR: can't close tlog dump file - errno = <I>errno</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The loadtlog command was executed.
+After reading the transaction log, the close of the file failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error is ignored and processing continues.  No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT1><P>
+<H1>TMADMIN MESSAGES 600-699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="600"></A>
+<H3>TMADMIN MESSAGE #600</H3>
+<H2> ERROR: error during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a loadtlog command, processing the administrative
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related problems.
+Re-try the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="601"></A>
+<H3>TMADMIN MESSAGE #601</H3>
+<H2> ERROR: loadtlog failed, tperrno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a loadtlog command, processing the administrative
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related problems.
+Re-try the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="602"></A>
+<H3>TMADMIN MESSAGE #602</H3>
+<H2> ERROR: loadtlog failed, tperrno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a loadtlog command, processing the administrative
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related problems.
+Re-try the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="604"></A>
+<H3>TMADMIN MESSAGE #604</H3>
+<H2> ERROR: The system is not active</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The warmstart command was executed but the application is not
+currently active or there is an error in finding the master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for messages related to the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="605"></A>
+<H3>TMADMIN MESSAGE #605</H3>
+<H2> ERROR: tlog warmstart failed, tperrno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to warmstart a transaction log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="606"></A>
+<H3>TMADMIN MESSAGE #606</H3>
+<H2> ERROR: error during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a warmstart command, processing the administrative
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related problems.
+Re-try the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="607"></A>
+<H3>TMADMIN MESSAGE #607</H3>
+<H2> ERROR: tlog warmstart failed, tperrno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a warmstart command, processing the administrative
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related problems.
+Re-try the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="608"></A>
+<H3>TMADMIN MESSAGE #608</H3>
+<H2> ERROR: tlog warmstart failed, tperrno = <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a warmstart command, processing the administrative
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related problems.
+Re-try the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="610"></A>
+<H3>TMADMIN MESSAGE #610</H3>
+<H2> ERROR: Invalid tranindex value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction index passed to the aborttrans command
+is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the printtrans command to find the correct index
+for the transaction that you wish to abort.  Note that the
+transaction will not be reported by printtrans if it
+has already been either committed or aborted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="611"></A>
+<H3>TMADMIN MESSAGE #611</H3>
+<H2> INFO: No RM users in transaction</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction passed to the aborttrans command
+has not been aborted.  The transaction
+is not associated with any group that accesses an
+XA-compliant
+resource manager.
+Thus, the transaction
+has not yet been assigned a coordinating group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the description of the
+aborttrans
+command
+for details on how to remove a transaction
+for the system.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="612"></A>
+<H3>TMADMIN MESSAGE #612</H3>
+<H2> ERROR: Use printtrans to check results</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction passed to the
+aborttrans
+command
+may not have been aborted due to a timeout communicating
+with a
+TMS.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+printtrans
+command should be used to check the results
+of the
+aborttrans
+operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="613"></A>
+<H3>TMADMIN MESSAGE #613</H3>
+<H2> ERROR: aborttrans: error <I>errorcode</I>; use printtrans to check results</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction passed to the
+aborttrans
+command
+may not have been aborted due to an error communicating
+with a
+TMS.
+This error may occur, for example, when
+using the
+-g
+option to the
+aborttrans
+command for a group that has no
+TMSs
+booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+printtrans
+command should be used to check the results
+of the
+aborttrans
+operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="614"></A>
+<H3>TMADMIN MESSAGE #614</H3>
+<H2> ERROR: Invalid tranindex value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction index passed to the committrans command
+is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the printtrans command to find the correct index
+for the transaction that you wish to commit.  Note that the
+transaction will not be reported by printtrans if it
+has already been either committed or aborted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="615"></A>
+<H3>TMADMIN MESSAGE #615</H3>
+<H2> ERROR: Use printtrans to check results</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction passed to the committrans command
+may not have been committed due to a timeout communicating
+with a
+TMS .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The printtrans command should be used to check the results
+of the committrans operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="616"></A>
+<H3>TMADMIN MESSAGE #616</H3>
+<H2> ERROR: committrans: error <I>error</I>; use printtrans to check results</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction passed to the committrans command
+may not have been committed due to an error communicating
+with a
+TMS.
+This error may occur, for example, when
+trying to commit a transaction at a group that has no
+TMSs
+booted.
+Also, this error can occur if the transaction
+has been marked abort-only.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The printtrans command should be used to check the results
+of the committrans operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="618"></A>
+<H3>TMADMIN MESSAGE #618</H3>
+<H2> INFO: No transaction entries to print</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is printed when the maximum number of global
+transaction table entries (MAXGTT) defined in the
+ubbconfig (5)
+file is 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="619"></A>
+<H3>TMADMIN MESSAGE #619</H3>
+<H2> ERROR: make msg failed, tperrno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating
+system using malloc() failed in the <Font>printconn
+command.  The printconn command failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.	Reduce the memory usage on
+the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit(2)
+in UNIX System reference manuals
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="620"></A>
+<H3>TMADMIN MESSAGE #620</H3>
+<H2> ERROR: Error during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during the printconn command
+trying to contact a BBL.  tmadmin retrieves
+connection information from each node in the system
+by contacting the BBL on every node.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue the bbclean command to ensure that all connections
+with remote sites are in working order.  Also, issue the
+printnet command which reports on any links with
+remote sites that are partitioned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="629"></A>
+<H3>TMADMIN MESSAGE #629</H3>
+<H2> INFO: No outstanding transactions</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+No transaction entries were found after scanning the transaction
+tables for the specified machines and groups.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="644"></A>
+<H3>TMADMIN MESSAGE #644</H3>
+<H2> INFO: Not destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction log specified to the inlog command
+was not initialized because the appropriate affirmative
+response was not given at the prompt to initialize the log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="646"></A>
+<H3>TMADMIN MESSAGE #646</H3>
+<H2> ERROR: can't read TLOG, different release</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The dl or dumptlog was executed but the release of the
+current program does not match the release of the program
+that wrote the log.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use tmadmin from the release that created the log to
+dump the transaction log.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT1><P>
+<H1>TMADMIN MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>TMADMIN MESSAGE #1073</H3>
+<H2> ERROR: Gateway server failed, tperrno=<I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing a command to access information
+about foreign services, an error occurred in the /Domain gateway.
+The associated tperrno value is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>TMADMIN MESSAGE #1074</H3>
+<H2> ERROR: Foreign host failed, hosterrno=<I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing a command to access information
+about foreign services, an error occurred at the foreign host.
+The associated host error value is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>TMADMIN MESSAGE #1075</H3>
+<H2> ERROR: Remote procedure call failed, tperrno=<I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing a command to access information
+about foreign services, an error occurred.
+The associated tperrno value is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Currently, this error cannot occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>TMADMIN MESSAGE #1076</H3>
+<H2> ERROR: Illegal return code, rtn=<I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the a command to access information
+about foreign services, an invalid error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error should not occur, call TUXEDO Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>TMADMIN MESSAGE #1077</H3>
+<H2> ERROR: printservice (psc) request failed, service=<I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing printservice or psc for a foreign service, the
+request failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Look for earlier messages regarding the nature of the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>TMADMIN MESSAGE #1078</H3>
+<H2> ERROR: stats service request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the stats command to print statistical information
+about foreign services, an error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See earlier messages about the nature of the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>TMADMIN MESSAGE #1091</H3>
+<H2> ERROR: Partial success: Check ULOG</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error prevented the
+migrategroup
+command from succeeding.
+The exact nature of the error was written to the
+userlog (3).
+This message is usually
+the result of a network partition occurring during the
+migration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the
+userlog (3)
+for the exact reason that the
+migrategroup
+command failed.
+Also, use the
+printnet
+command to see the status of all machine connections in the network.
+This command reports any network partitions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>TMADMIN MESSAGE #1092</H3>
+<H2> ERROR: Partial success: Check ULOG</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error prevented the
+migratemach
+command from succeeding.
+The exact nature of the error was written to the
+userlog (3).
+This message is usually
+the result of a network partition occurring during the
+migration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the
+userlog (3)
+for the exact reason that the
+migratemach
+command failed.
+Also, use the
+printnet
+command to see the status of all machine connections in the network.
+This command will report any network partitions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>TMADMIN MESSAGE #1099</H3>
+<H2> ERROR: Foreign administrative service not allowed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+It is an error to specify the foreign administrative service name
+to
+tmadmin 's
+stats
+command.
+This command will show statistical information
+pertaining only to application service names.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try the
+stats
+command again with another service name, or leave off the
+-s
+option to see statistical information
+for all the application service names.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+"TUXEDO /Host Guide"
+<SECT1><P>
+<H1>TMADMIN MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1106"></A>
+<H3>TMADMIN MESSAGE #1106</H3>
+<H2> ERROR: Could not determine level of authentication required.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When
+tmadmin
+starts up, it calls
+tpchkauth (3)
+to see what level of authentication is required by the application.
+This message is issued when
+tpchkauth (3)
+fails.
+tpchkauth (3)
+can fail if
+tmadmin
+cannot find the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+TUXCONFIG
+environment variable is set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>TMADMIN MESSAGE #1107</H3>
+<H2> ERROR: Memory allocation failure.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from
+the operating system using
+malloc()
+failed.
+When
+tmadmin
+initializes, it calls
+tpalloc ()
+to get an initial buffer for
+tpinit ().
+When this message is issued,
+tpalloc ()'s
+call to
+malloc()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>TMADMIN MESSAGE #1108</H3>
+<H2> ERROR: Could not find entry for user <I>number</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When
+tmadmin
+is invoked, the invoker's login id is used as
+the "User Name" when
+tmadmin
+joins the application.
+If there is an error retrieving the invoker's
+login id from the system password file,
+this message is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your system administrator to ensure that your
+password entry contains your user id (uid) and your
+login.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+getpwuid (3),
+passwd (4)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>TMADMIN MESSAGE #1110</H3>
+<H2> ERROR: Unable to obtain application password.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If an application password is required,
+tmadmin
+either prompts for it (if the invoker is attached
+to a terminal), or
+it reads it from the environment variable,
+APP_PW ,
+if standard input is not a terminal.
+This message is issued when the password
+cannot be obtained.
+The most common cause for this is that
+APP_PW
+is not set and standard input is not a terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If
+tmadmin
+is not attached to a terminal when invoked, then
+check that the environment variable,
+APP_PW ,
+is set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1130"></A>
+<H3>TMADMIN MESSAGE #1130</H3>
+<H2> ERROR: Broadcast failed, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+broadcast
+command failed.
+This
+tmadmin
+command called the ATMI verb
+tpbroadcast (3)
+which encountered an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error number, <I>tperrno</I>,
+that is printed with this
+message can be used to look up the exact error on the
+ATMI
+tpbroadcast (3)
+manual page.  The mapping of the numeric
+value of <I>tperrno</I>
+to the symbolic constant shown on
+the
+tpbroadcast (3)
+manual page can be found in the
+intro (3)
+manual page or in $TUXDIR/include/atmi.h.
+SEE ALSO
+tmadmin (1),
+intro (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1131"></A>
+<H3>TMADMIN MESSAGE #1131</H3>
+<H2> ERROR: Memory allocation failure, tperrno = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed.  The
+broadcast
+command calls
+tpalloc()
+to allocate a typed buffer for
+text
+to be broadcast.
+When this message is issued,
+tpalloc ()'s
+call to
+malloc()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1134"></A>
+<H3>TMADMIN MESSAGE #1134</H3>
+<H2> ERROR: make msg failed, tperrno = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed.
+When this message is issued, the attempt by the
+printclient
+command to allocate memory for
+retrieving client information failed.
+The
+printclient
+command calls
+tpalloc()
+which in turn calls
+malloc ().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1135"></A>
+<H3>TMADMIN MESSAGE #1135</H3>
+<H2> ERROR: error during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during the
+printclient
+command
+trying to retrieve client information from a
+BBL.
+tmadmin
+retrieves client information by contacting
+BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue the
+bbclean
+command to ensure that all connections
+with remote sites are in working order.  Also, issue the
+printnet
+command which reports on any links with
+remote sites that are partitioned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1143"></A>
+<H3>TMADMIN MESSAGE #1143</H3>
+<H2> WARN: Application security not enabled</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+passwd
+command cannot be used when application
+security is not enabled for the application.  That is,
+the
+SECURITY
+keyword in the
+ubbconfig
+file must
+be set to
+APP_PW
+before an application password can be assigned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If application security is desired, add the
+SECURITY
+keyword
+to the *RESOURCES section of your
+ubbconfig
+file and set its value to
+APP_PW.
+Then, run
+tmloadcf ()
+which prompts you for an initial application password.
+A new password can now be assigned to your application using the
+passwd
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1144"></A>
+<H3>TMADMIN MESSAGE #1144</H3>
+<H2> ERROR: The passwd command must be run from the terminal</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+passwd
+command must be run from a terminal
+as opposed to, say, a shell script, since
+tmadmin
+prompts for a new password on the terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the use of the
+passwd
+command from any non-terminal invocations of
+tmadmin .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1146"></A>
+<H3>TMADMIN MESSAGE #1146</H3>
+<H2> ERROR: Error obtaining Application Password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+passwd
+command failed because
+tmadmin
+could not open the terminal device
+(/dev/tty)
+for reading.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1148"></A>
+<H3>TMADMIN MESSAGE #1148</H3>
+<H2> ERROR: Error obtaining Application Password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+passwd
+command failed because
+tmadmin
+could not open the terminal device
+(/dev/tty)
+for reading.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1150"></A>
+<H3>TMADMIN MESSAGE #1150</H3>
+<H2> ERROR: Too many failed attempts</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+passwd
+command requires a new password to be entered
+and re-entered identically.  If after three attempts this does
+not occur, the command fails and prints this message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the
+passwd
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1151"></A>
+<H3>TMADMIN MESSAGE #1151</H3>
+<H2> ERROR: Memory allocation failure, tperrno = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc()
+failed.
+When this message is issued, the attempt by the
+passwd
+command to allocate memory for
+sending the new passwd to the
+DBBL
+failed.
+The
+passwd
+command calls
+tpalloc ()
+which in turn calls
+malloc ().
+The application password is not changed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1152"></A>
+<H3>TMADMIN MESSAGE #1152</H3>
+<H2> ERROR: Passwd update failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+passwd
+command requests the
+DBBL
+to change the application password to the new password.
+The request could not be processed by the
+DBBL .
+The most likely reason for the failure is that the request
+could not be sent to the
+DBBL .
+The application password is not changed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+userlog (3)
+file to see if a communication
+error occurred that caused the requested command
+to fail.
+<!-- .1B -->
+<!-- SEE ALSO -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1173"></A>
+<H3>TMADMIN MESSAGE #1173</H3>
+<H2> ERROR: -b option: argument must be numeric.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the
+-b
+option is used as an argument to a
+tmadmin
+command, its argument must be a numeric value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try the command again with a numeric value for the
+-b
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+isdigit (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1174"></A>
+<H3>TMADMIN MESSAGE #1174</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc()
+failed.
+When this message is issued, the attempt by the
+printdomain
+command to allocate memory for
+requesting host domain-specific information failed.
+The
+printdomain
+command calls
+tpalloc (),
+which in turn calls
+malloc ().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1175"></A>
+<H3>TMADMIN MESSAGE #1175</H3>
+<H2> ERROR: printdomain (pd) service request failed, group=<I>groupname</I> queue=<I>queuename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+printdomain
+command failed to send a request for information
+to a gateway group due to a communication error.
+The
+printdomain
+command continues to send requests to other gateway groups.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+userlog (3)
+to see if a communication
+error occurred that caused the requested command
+to fail.
+<!-- .1B -->
+<!-- SEE ALSO -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1178"></A>
+<H3>TMADMIN MESSAGE #1178</H3>
+<H2> ERROR: could not retrieve server group entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+printdomain
+command failed to retrieve a gateway group's
+addressing information while preparing to send the group a request
+for information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+userlog (3)
+to see if a communication
+error occurred that caused the requested command to fail.
+<!-- .1B -->
+<!-- SEE ALSO -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1179"></A>
+<H3>TMADMIN MESSAGE #1179</H3>
+<H2> ERROR: make msg failed, tperrno = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating
+system using
+malloc ()
+failed while preparing to send a message to a host gateway group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on
+the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ulimit (2)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1180"></A>
+<H3>TMADMIN MESSAGE #1180</H3>
+<H2> ERROR: could not send message to gateway server, tperrno = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered while trying to send a message to
+a host gateway group.
+The issued command fails.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the
+userlog (3)
+file for the exact reason that the command failed.
+Also, use the
+printnet
+command to see the
+status of all machine connections in the network.
+This command reports any network partitions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1181"></A>
+<H3>TMADMIN MESSAGE #1181</H3>
+<H2> ERROR: error receiving reply from gateway server, tperrno = <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A host administration command was issued and successfully sent to one
+or more gateway servers.
+However, an error occurred retrieving the response.
+A timeout waiting for the reply or a network failure may
+have occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+userlog (3)
+to see if a communication
+error occurred that prevented the reply from reaching
+tmadmin .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1182"></A>
+<H3>TMADMIN MESSAGE #1182</H3>
+<H2> ERROR: did not receive successful reply from gateway, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A host administration command was issued and successfully sent to one
+or more gateway servers.
+However, the reply contains an error that is
+reflected in the variable, <I>tperrno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error number, <I>tperrno</I>,
+that is printed with this
+message can be used to look up the exact error.
+The mapping of the numeric value of <I>tperrno</I>
+to a symbolic constant can be found in the
+intro (3)
+manual page or in
+$TUXDIR/include/atmi.h .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1184"></A>
+<H3>TMADMIN MESSAGE #1184</H3>
+<H2> ERROR: Service GATE_ADMIN not offered</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command was issued for one or more host
+gateway servers.
+However, there are no gateways currently
+offering the
+GATE_ADMIN
+service which is required for host
+related administrative requests.
+Either no gateway servers
+have been booted, or the
+CLOPT
+specified in the ubbconfig file
+for the gateway servers do not have the
+-A
+option specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If there are gateways servers currently running, use the
+printservice
+command to see whether the
+GATE_ADMIN
+service is offered.
+If it is not, then make sure that
+the gateway servers offer this service either by dynamically
+advertising it (via the
+advertise
+command) or by
+adding the
+-A
+option to the
+CLOPT
+in the
+ubbconfig
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Host Guide" ,
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1185"></A>
+<H3>TMADMIN MESSAGE #1185</H3>
+<H2> ERROR: Queue specified by -q option not part of group specified by -g option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+For those host-related
+tmadmin
+commands where both a queue
+and a group can be specified, this message is issued when the
+queue specified does not belong to the specified group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+printserver
+command to determine the correct
+queue and group combinations, and re-issue your command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1186"></A>
+<H3>TMADMIN MESSAGE #1186</H3>
+<H2> ERROR: Server with ID <I>serverid</I> not offered on queue <I>queuename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+For those host-related
+tmadmin
+commands where both a queue
+and a server id can be specified, this message is issued when the
+server specified does not read from the queue specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+printserver
+command to determine the correct
+queue and server id combinations, and re-issue your command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1187"></A>
+<H3>TMADMIN MESSAGE #1187</H3>
+<H2> ERROR: Service GATE_ADMIN not offered</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+tmadmin
+command was issued for one or more host
+gateway servers.
+However, there are no gateways currently
+offering the
+GATE_ADMIN
+service which is required for host
+related administrative requests.
+Either no gateway servers
+have been booted, or the
+CLOPT
+specified in the
+ubbconfig
+file for the gateway servers do not have the
+-A
+option specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If there are gateways servers currently running, use the
+printservice
+command to see whether the
+GATE_ADMIN
+service is offered.
+If it is not, then make sure that
+the gateway servers offer this service either by dynamically
+advertising it (via the
+advertise
+command) or by adding the
+-A
+option to the
+CLOPT
+in the
+ubbconfig
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Host Guide" ,
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1198"></A>
+<H3>TMADMIN MESSAGE #1198</H3>
+<H2> ERROR: -i option: argument must be numeric.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the
+-i
+option is used as an argument to a
+tmadmin
+command, its argument must be a numeric value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try the command again with a numeric value for the
+-i
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+isdigit (3)
+in UNIX System reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1199"></A>
+<H3>TMADMIN MESSAGE #1199</H3>
+<H2> ERROR: -o option: argument must be numeric.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the
+-o
+option is used as an argument to a
+tmadmin
+command, its argument must be a numeric value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try the command again with a numeric value for the
+-o
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+isdigit (3)
+in UNIX System reference manuals
+<SECT1><P>
+<H1>TMADMIN MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1200"></A>
+<H3>TMADMIN MESSAGE #1200</H3>
+<H2> ERROR: -O option: argument must be numeric.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the
+-O
+(upper case Oh) option is used as an option to a
+tmadmin
+command, its argument must be a numeric value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try the command again with a numeric value for the
+-O
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+isdigit (3)
+in UNIX System reference manuals
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1230"></A>
+<H3>TMADMIN MESSAGE #1230</H3>
+<H2> ERROR: error during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when the
+printclient
+command tried to retrieve client information from a
+BBL.
+tmadmin
+retrieves client information by contacting
+BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue the
+bbclean
+command to ensure that all connections
+with remote sites are in working order.
+Also, issue the
+printnet
+command, which reports on any links with
+remote sites that are partitioned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1231"></A>
+<H3>TMADMIN MESSAGE #1231</H3>
+<H2> ERROR: failure on remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when the
+printclient
+command tried to retrieve client information from a
+BBL.
+tmadmin
+retrieves client information by contacting
+BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See the
+userlog (3)
+for the exact reason that the
+printclient
+command failed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1232"></A>
+<H3>TMADMIN MESSAGE #1232</H3>
+<H2> ERROR: error during send/receive of remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when the
+printconn
+command tried to retrieve connection information from a
+BBL.
+tmadmin
+retrieves connection information by contacting
+BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue the
+bbclean
+command to ensure that all connections
+with remote sites are in working order.
+Also, issue the
+printnet
+command, which reports on any links with
+remote sites that are partitioned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>TMADMIN MESSAGE #1233</H3>
+<H2> ERROR: failure on remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when the
+printconn
+command tried to retrieve connection information from a
+BBL.
+tmadmin
+retrieves connection information by contacting
+BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue the
+bbclean
+command to ensure that all connections
+with remote sites are in working order.
+Also, issue the
+printnet
+command, which reports on any links with
+remote sites that are partitioned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1234"></A>
+<H3>TMADMIN MESSAGE #1234</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while executing the shmstats command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1235"></A>
+<H3>TMADMIN MESSAGE #1235</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while executing the shmstats command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1236"></A>
+<H3>TMADMIN MESSAGE #1236</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while executing the shmstats command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1246"></A>
+<H3>TMADMIN MESSAGE #1246</H3>
+<H2> ERROR: Client information could not be retrieved from site <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the printclient or pclt command,
+the specified target machine is suspended.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the command when the machine is available again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1274"></A>
+<H3>TMADMIN MESSAGE #1274</H3>
+<H2> ERROR: Connection information could not be retrieved from site <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+printconn
+command in
+tmadmin ,
+the specified machine,
+<I>machine</I>,
+was found to be partitioned and no connection information could
+be retrieved.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If information for all machines is being retrieved, then information
+from other available machines will be printed.
+The specified machine must be reconnected via the
+tmadmin
+reconnect
+command, possibly after restarting the application on that machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1291"></A>
+<H3>TMADMIN MESSAGE #1291</H3>
+<H2> ERROR: TUXCONFIG must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing tmadmin, the TUXCONFIG environment variable is
+not a rooted (full) pathname.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-set the TUXCONFIG value to a rooted path for the configuration
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1292"></A>
+<H3>TMADMIN MESSAGE #1292</H3>
+<H2> ERROR: FSCONFIG must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing tmadmin, the FSCONFIG environment variable is
+set but not a rooted (full) pathname.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-set the FSCONFIG value to a rooted path or unset the value.
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1293"></A>
+<H3>TMADMIN MESSAGE #1293</H3>
+<H2> ERROR: -z option must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A command was executed with the -z option but the specified configuration
+pathname was not an absolute pathname.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the command specifying a full pathname for the device
+(for example, on a POSIX operating system, it must start with a forward
+slash (/)).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1294"></A>
+<H3>TMADMIN MESSAGE #1294</H3>
+<H2> ERROR: New device must be an absolute pathname.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the crdl command, new device name is not a rooted
+pathname.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the command with a full pathname for the new device.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1295"></A>
+<H3>TMADMIN MESSAGE #1295</H3>
+<H2> ERROR: Failure return from <I>command</I> - 0x<I>retval</I>, errno <I>val</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The execution of <I>command</I> (tmboot, tmshutdown, or tmconfig) failed.
+The return value of the command and the errno value are printed.
+Additional information may be printed on the standard error output.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for additional information messages.
+Make sure that the PATH includes TUXDIR/bin.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1300"></A>
+<H3>TMADMIN MESSAGE #1300</H3>
+<H2> ERROR: can't become a client - tpinit() failed - <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Execution of tmadmin failed because the user could not join the application.
+The printed string indicates the reason for the failure.
+This message can be printed either because no more clients can join
+the application or because the user failed security permissions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the reason is that no more clients can join the application, re-try
+the operation a later time.  The system should be configured to allow for
+more clients.
+<P>
+If a security problem occurs, the command must be run by the
+TUXEDO administrator.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1301"></A>
+<H3>TMADMIN MESSAGE #1301</H3>
+<H2> ERROR: Foreign host already booted, hosterrno=<I>sub</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A command to boot a foreign host with
+foreign services was executed when the host was already booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This operation cannot be done from tmadmin, thus it cannot occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1302"></A>
+<H3>TMADMIN MESSAGE #1302</H3>
+<H2> ERROR: Foreign host already shutdown, hosterrno=<I>sub</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A command to shutdown a foreign host with
+foreign services was executed when the host was already shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This operation cannot be done from tmadmin, thus it cannot occur.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1303"></A>
+<H3>TMADMIN MESSAGE #1303</H3>
+<H2> ERROR: Unlicensed TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to execute tmadmin in an unlicensed TUXEDO binary.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1304"></A>
+<H3>TMADMIN MESSAGE #1304</H3>
+<H2> ERROR: Expired TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to execute tmadmin in an expired TUXEDO binary.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1315"></A>
+<H3>TMADMIN MESSAGE #1315</H3>
+<H2> ERROR: Memory allocation failure, tperrno = <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while executing changetrance or chtr.
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1316"></A>
+<H3>TMADMIN MESSAGE #1316</H3>
+<H2> ERROR: Can't change trace configuration on machine <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred while trying to change the tracing configuration
+on the specified machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1318"></A>
+<H3>TMADMIN MESSAGE #1318</H3>
+<H2> ERROR: Can't change trace configuration of server <I>name</I> in group <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred while trying to change the tracing configuration
+on the specified server and group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1320"></A>
+<H3>TMADMIN MESSAGE #1320</H3>
+<H2> ERROR: Update of trace configuration to R4.2 machine not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The chtr or changetrace command was executed for a machine
+that is running a release earlier than 5.0.  This feature
+was not supported on those releases.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1321"></A>
+<H3>TMADMIN MESSAGE #1321</H3>
+<H2> ERROR: Invalid trace specification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The trace specified for the chtr or changetrace command was not
+valid syntax.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-run the command
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1322"></A>
+<H3>TMADMIN MESSAGE #1322</H3>
+<H2> ERROR: Trace specification too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The trace specified for the chtr or changetrace command was greater than
+78 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the trace specification and re-run the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1323"></A>
+<H3>TMADMIN MESSAGE #1323</H3>
+<H2> ERROR: Update of trace configuration for server <I>name</I> in group <I>groupname</I> on R4.2 machine not supported</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The chtr or changetrace command was executed for a server on a machine
+that is running a release earlier than 5.0.  This feature
+was not supported on those releases.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1324"></A>
+<H3>TMADMIN MESSAGE #1324</H3>
+<H2> ERROR: Can't change trace configuration of server <I>name</I> in group <I>groupname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred while trying to change the tracing configuration
+on the specified server and group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1326"></A>
+<H3>TMADMIN MESSAGE #1326</H3>
+<H2> ERROR: You must print the transaction table (printtrans) before aborting it</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The aborttrans or at command was executed before executing printtrans.
+The information from printtrans is needed to specify an index
+of the entry to be aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the printtrans command and then the aborttrans command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1327"></A>
+<H3>TMADMIN MESSAGE #1327</H3>
+<H2> ERROR: You must print the transaction table (printtrans) before committing it</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The committrans or ct command was executed before executing printtrans.
+The information from printtrans is needed to specify an index
+of the entry to be committed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the printtrans command and then the committrans command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1330"></A>
+<H3>TMADMIN MESSAGE #1330</H3>
+<H2> INFO: Command: <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+All commands that are not read-only or boot (or quit)
+are written to the event log as a trace of administrative
+actions that are done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1331"></A>
+<H3>TMADMIN MESSAGE #1331</H3>
+<H2> ERROR: Could not send message to tlisten</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to execute crlog to create a transaction log
+on a remote machine, tmadmin was unable to contact
+the tlisten on the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that tlisten is running on the remote machine.
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1332"></A>
+<H3>TMADMIN MESSAGE #1332</H3>
+<H2> ERROR: Could not send message to tlisten</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to execute dslg to destroy the transaction log
+on a remote machine, tmadmin was unable to contact
+the tlisten on the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that tlisten is running on the remote machine.
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1333"></A>
+<H3>TMADMIN MESSAGE #1333</H3>
+<H2> ERROR: Could not send message to tlisten</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to execute inlog to re-initialize the transaction log
+on a remote machine, tmadmin was unable to contact
+the tlisten on the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that tlisten is running on the remote machine.
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1341"></A>
+<H3>TMADMIN MESSAGE #1341</H3>
+<H2> ERROR: Size of Shared Memory file is too large for the existing SHMID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to load a file into shared memory via "loadmem" failed because
+the size of the file was too large for the existing shared memory id.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-create (if possible) the file that is being loaded with the correct size.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1344"></A>
+<H3>TMADMIN MESSAGE #1344</H3>
+<H2> ERROR: Invalid IPCKEY. IPCKEY must be between 32768 and 262143.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The IPCKEY that was used was not in the valid range of keys. Valid keys are
+between 32768 and 262143.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Enter a new IPCKEY within the valid range.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1345"></A>
+<H3>TMADMIN MESSAGE #1345</H3>
+<H2> ERROR: Invalid filename for load memory function.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The filename that was used was not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the file specified is valid (e.g., that the directory
+and file specified exists and has read permission).
+Check for limited resources (out of files or disk space).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1348"></A>
+<H3>TMADMIN MESSAGE #1348</H3>
+<H2> ERROR: Could not send message to tlisten</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to execute stoptlisten to stop tlisten
+on a remote machine, tmadmin was unable to contact
+the tlisten on the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that tlisten is running on the remote machine.
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1349"></A>
+<H3>TMADMIN MESSAGE #1349</H3>
+<H2> ERROR: Failed to stop tlisten</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to execute stoptlisten to stop tlisten
+on a remote machine, a failure occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten(1),
+tmadmin(1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

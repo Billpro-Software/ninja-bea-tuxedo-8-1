@@ -1,0 +1,196 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1994 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/creditapp/README	$Revision: 1.5 $"
+
+SIMPLE BUILD PROCEDURE
+
+The creditapp application is an enhancement of the bankapp
+application.
+ 
+The creditapp application is designed to be a 4 domain application.
+
+Step 1: Copy the Software for creditapp.
+
+Make a new directory under your $HOME directory and copy all of 
+the source files from <TUXDIR>/samples/atmi/creditapp into that directory.
+TUXDIR is the root directory under which your TUXEDO System
+software is installed.  We're calling the new directory
+$HOME/creditapp.  The rest of the steps in this procedure are 
+done in the directory $HOME/creditapp.
+
+
+Step 2 :
+ 
+On each of the remaining 3 machines :
+
+Make a directory creditapp in a directory that can be used for the application.
+
+We are calling this directory $HOME/creditapp.
+ 
+Make a note of the full directory path for $HOME/creditapp and TUXDIR for 
+for each machine . These will be needed in the RUNME.sh script.
+
+
+Step 3 : On the "master site" execute the "RUNME.sh" script.
+
+
+The shell script "RUNME.sh" is an interactive program designed to
+lead users through initialization, booting, shutdown and cleanup
+of the 4 domain creditapp application.  The shell is interactive
+and requires no command line arguments.  All you need in the directory
+is the source from the creditapp directory.
+
+
+IT IS VERY IMPORTANT THAT THE VALUES FOR RSH AND RCP BE ENNTERED AS THESE ARE
+
+USED TO REMOTE COPY AND EXECUTE THE NECESSARY SCRIPTS.
+
+
+
+TUXDIR 	Root directory of the TUXEDO System.
+
+APPDIR 		Directory in which the creditapp application resides.
+		crdtvar.dm1 initially is set to allow this to default
+		to the current working directory, which agrees with
+		our intention to use $HOME/creditapp
+
+BLKSIZE 	Logical blocksize for the database in bytes.
+		Must be an integral multiple of the physical 
+		page size of the computer.
+
+
+
+
+RUNME.sh
+________
+
+
+
+OPTION 1. Initialize configuration files and makefiles.
+
+	  This option sets up makefiles, UBBCONFIG and DMCONFIG files that are
+	  necessary for the application.
+
+	  All questions must be answered.
+
+	  ENTER the system name : enter uname for machines you are using 
+				  beginning with the current machine you are on.
+
+
+          ENTER TUXDIR for each machine.
+
+	  ENTER APPDIR for each machine.
+
+
+	  Continue to answer all queries.
+
+
+	  An example of 4 hexadecimal digits may be (beef, cfff, 6774, aeef).
+
+	  NOTE: EACH MACHINE MUST HAVE A UNIQUE HEX SEQUENCE.
+
+
+	  
+
+OPTION 2. Copies the files to the other domains in the configuration.
+
+
+OPTION 3. Builds clients and servers on all machines.                  
+           
+          NOTE : CAREFULLY CHECK THAT THE BUILDS ARE COMPLETED SUCCESSFULLY ON
+		 EACH SITE. IF NECESSARY YOU MAY RUN THE BUILD YOURSELF.
+
+		 ON THE SPECIFIC SITE ENTER
+
+		 nohup make -f CRDT{$MACH}.mk2
+
+		 where ${MACH} is the uname for the machine you are building on.
+
+		      e.g nohup make -f CRDTtux1.mk2
+
+
+
+
+OPTION 4. Builds the databases on each site.                           
+           
+          NOTE : ON EACH SITE MAKE SURE THE BLKSIZE VALUE IN files 
+
+		 crdt${MACH}.dm1 for the primary site 
+
+		 or crdt${MACH}.dm2 for the remote sites
+
+		 where ${MACH} is the uname for the machine you are building on.
+
+		 ARE CORRECT FOR THAT SPECIFIC MACHINE.
+
+
+
+OPTION 5. Generates the tuxconfig and bdmconfig files.                 
+
+
+
+All other options are similar to bankapp.
+
+
+After OPTION 8 : Populate the database
+
+	         Enter q to Quit the menu.
+
+
+
+RUNNING CREDITAPP.
+__________________
+
+
+	  On each machine a script run.sh exists.
+
+
+	  Execute  run.sh.
+
+
+		   run
+
+ At the response :
+
+ 		Is this machine the Credit Card Authorization Center(y/n) ?
+
+
+	        If machine is the primary machine answer y . 
+
+	        If machine is any other answer n. 
+
+
+ On the primary machine a different menu will be seen than the other 3 machines.
+
+
+
+ All Credit accounts exits on primary machine and all machines can access any
+ account.
+
+	 ACCOUNTS 10000000 - 120000000
+
+
+ Machines 2,3,4 are the enhanced bankapp application.
+
+	 ACCOUNTS 10000 - 39999 exits on machine  2
+	 ACCOUNTS 40000 - 79999 exits on machine  3
+	 ACCOUNTS 80000 - 109999 exits on machine 4
+	  
+ All processing is done using the /DOMAIN software.
+
+
+ A tail -f of the ULOG###### will show the actual processing of the requests.
+
+ On the machine that will process the request enter :
+
+	   tail -f ULOG###### where ###### is today's date.
+
+
+NOTE : If you see the ERROR : "Database access error",  after the first try then
+
+       you may need to shutdown the system using menu option 9 and reboot
+
+       using menu option 7.
+

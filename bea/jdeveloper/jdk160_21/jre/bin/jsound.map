@@ -1,0 +1,1031 @@
+ jsound
+
+ Timestamp is 4cfabf92 (Sat Dec 04 14:24:18 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00019e0aH .text                   CODE
+ 0001:00019e0a 00000016H .text$yc                CODE
+ 0001:00019e20 0000000aH .text$yd                CODE
+ 0002:00000000 00000168H .idata$5                DATA
+ 0002:00000170 00002628H .rdata                  DATA
+ 0002:00002798 0000006dH .rdata$debug            DATA
+ 0002:00002810 00000004H .rdata$sxdata           DATA
+ 0002:00002814 00000004H .rtc$IAA                DATA
+ 0002:00002818 00000004H .rtc$IZZ                DATA
+ 0002:0000281c 00000004H .rtc$TAA                DATA
+ 0002:00002820 00000004H .rtc$TZZ                DATA
+ 0002:00002824 0000003cH .idata$2                DATA
+ 0002:00002860 00000014H .idata$3                DATA
+ 0002:00002874 00000168H .idata$4                DATA
+ 0002:000029dc 00000600H .idata$6                DATA
+ 0002:00002fe0 00002a3dH .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCU                DATA
+ 0003:00000008 00000004H .CRT$XCZ                DATA
+ 0003:0000000c 00000004H .CRT$XIA                DATA
+ 0003:00000010 00000004H .CRT$XIZ                DATA
+ 0003:00000020 000001f4H .data                   DATA
+ 0003:00000218 0000035cH .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000350H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0001:00000000       _getMidiSongCount          10001000 f   Utilities.obj
+ 0001:0000000e       _ThrowJavaMessageException 1000100e f   Utilities.obj
+ 0001:0000002e       _SleepMillisInJava         1000102e f   Utilities.obj
+ 0001:00000075       _TranslateOPErr            10001075 f   Utilities.obj
+ 0001:00000169       _ThrowJavaOpErrException   10001169 f   Utilities.obj
+ 0001:00000184       _Java_com_sun_media_sound_MixerThread_runNative@16 10001184 f   MixerThread.obj
+ 0001:00000197       _HAE_CreateFrameThread     10001197 f   MixerThread.obj
+ 0001:0000030e       _HAE_SleepFrameThread      1000130e f   MixerThread.obj
+ 0001:00000341       _Java_com_sun_media_sound_HeadspaceMixer_nOpenMixer@36 10001341 f   HeadspaceMixer.obj
+ 0001:0000041b       _Java_com_sun_media_sound_HeadspaceMixer_nCloseMixer@8 1000141b f   HeadspaceMixer.obj
+ 0001:0000043a       _Java_com_sun_media_sound_HeadspaceMixer_nSetMixerFormat@20 1000143a f   HeadspaceMixer.obj
+ 0001:000004c0       _Java_com_sun_media_sound_HeadspaceMixer_nPause@8 100014c0 f   HeadspaceMixer.obj
+ 0001:000004d5       _Java_com_sun_media_sound_HeadspaceMixer_nResume@8 100014d5 f   HeadspaceMixer.obj
+ 0001:0000050c       _Java_com_sun_media_sound_HeadspaceMixer_nDrain@8 1000150c f   HeadspaceMixer.obj
+ 0001:0000050c       _Java_com_sun_media_sound_SimpleInputDevice_nDrain@8 1000150c f   SimpleInputDevice.obj
+ 0001:0000050c       _Java_com_sun_media_sound_HeadspaceMixer_nFlush@8 1000150c f   HeadspaceMixer.obj
+ 0001:0000050f       _Java_com_sun_media_sound_HeadspaceMixer_nGetPosition@8 1000150f f   HeadspaceMixer.obj
+ 0001:00000516       _Java_com_sun_media_sound_HeadspaceMixer_nGetCpuLoad@8 10001516 f   HeadspaceMixer.obj
+ 0001:00000516       _Java_com_sun_media_sound_HeadspaceMixer_nGetLevel@8 10001516 f   HeadspaceMixer.obj
+ 0001:0000051f       _Java_com_sun_media_sound_HeadspaceMixer_nAllocateVoices@16 1000151f f   HeadspaceMixer.obj
+ 0001:00000551       _Java_com_sun_media_sound_HeadspaceMixer_nSetMixLevel@12 10001551 f   HeadspaceMixer.obj
+ 0001:00000583       _Java_com_sun_media_sound_HeadspaceMixer_nSetInterpolation@12 10001583 f   HeadspaceMixer.obj
+ 0001:000005be       _Java_com_sun_media_sound_HeadspaceMixer_nGetTotalVoices@8 100015be f   HeadspaceMixer.obj
+ 0001:000005c4       _Java_com_sun_media_sound_HeadspaceMixer_nGetDefaultBufferSize@8 100015c4 f   HeadspaceMixer.obj
+ 0001:000005d9       _Java_com_sun_media_sound_HeadspaceMixer_nSetReverb@12 100015d9 f   HeadspaceMixer.obj
+ 0001:000005ee       _Java_com_sun_media_sound_HeadspaceMixer_nCreateLinkedStreams@12 100015ee f   HeadspaceMixer.obj
+ 0001:00000671       _Java_com_sun_media_sound_HeadspaceMixer_nStartLinkedStreams@16 10001671 f   HeadspaceMixer.obj
+ 0001:00000683       _Java_com_sun_media_sound_HeadspaceMixer_nStopLinkedStreams@16 10001683 f   HeadspaceMixer.obj
+ 0001:00000759       _Java_com_sun_media_sound_MixerClip_nOpen@32 10001759 f   MixerClip.obj
+ 0001:00000813       _Java_com_sun_media_sound_MixerClip_nSetup@40 10001813 f   MixerClip.obj
+ 0001:000008b4       _Java_com_sun_media_sound_MixerClip_nStart@12 100018b4 f   MixerClip.obj
+ 0001:000008da       _Java_com_sun_media_sound_MixerClip_nStop@12 100018da f   MixerClip.obj
+ 0001:000008ec       _Java_com_sun_media_sound_MixerClip_nClose@20 100018ec f   MixerClip.obj
+ 0001:00000942       _Java_com_sun_media_sound_MixerClip_nFlush@12 10001942 f   MixerClip.obj
+ 0001:00000942       _Java_com_sun_media_sound_MixerClip_nDrain@12 10001942 f   MixerClip.obj
+ 0001:00000945       _Java_com_sun_media_sound_MixerClip_nGetPosition@12 10001945 f   MixerClip.obj
+ 0001:00000954       _Java_com_sun_media_sound_MixerClip_nSetLinearGain@16 10001954 f   MixerClip.obj
+ 0001:0000098c       _Java_com_sun_media_sound_MixerClip_nSetPan@16 1000198c f   MixerClip.obj
+ 0001:000009c4       _Java_com_sun_media_sound_MixerClip_nSetSampleRate@16 100019c4 f   MixerClip.obj
+ 0001:00000b22       _Java_com_sun_media_sound_MixerSourceLine_nStart@16 10001b22 f   MixerSourceLine.obj
+ 0001:00000b3d       _Java_com_sun_media_sound_MixerSourceLine_nClose@16 10001b3d f   MixerSourceLine.obj
+ 0001:00000b4f       _Java_com_sun_media_sound_MixerSourceLine_nPause@16 10001b4f f   MixerSourceLine.obj
+ 0001:00000b5c       _Java_com_sun_media_sound_MixerSourceLine_nResume@16 10001b5c f   MixerSourceLine.obj
+ 0001:00000b69       _Java_com_sun_media_sound_MixerSourceLine_nDrain@16 10001b69 f   MixerSourceLine.obj
+ 0001:00000b7b       _Java_com_sun_media_sound_MixerSourceLine_nFlush@16 10001b7b f   MixerSourceLine.obj
+ 0001:00000b88       _Java_com_sun_media_sound_MixerSourceLine_nGetPosition@16 10001b88 f   MixerSourceLine.obj
+ 0001:00000b95       _Java_com_sun_media_sound_MixerSourceLine_nGetLevel@16 10001b95 f   MixerSourceLine.obj
+ 0001:00000b9e       _Java_com_sun_media_sound_MixerSourceLine_nSetLinearGain@20 10001b9e f   MixerSourceLine.obj
+ 0001:00000bd8       _Java_com_sun_media_sound_MixerSourceLine_nSetPan@20 10001bd8 f   MixerSourceLine.obj
+ 0001:00000c10       _Java_com_sun_media_sound_MixerSourceLine_nSetSampleRate@20 10001c10 f   MixerSourceLine.obj
+ 0001:00000da1       _Java_com_sun_media_sound_MixerSourceLine_nOpen@24 10001da1 f   MixerSourceLine.obj
+ 0001:00000e14       _CreateGlobalArray         10001e14 f   SimpleInputDevice.obj
+ 0001:00000ec0       _DestroyGlobalArray        10001ec0 f   SimpleInputDevice.obj
+ 0001:00001010       _Java_com_sun_media_sound_SimpleInputDevice_nGetFormats@32 10002010 f   SimpleInputDevice.obj
+ 0001:00001464       _Java_com_sun_media_sound_SimpleInputDevice_nOpen@32 10002464 f   SimpleInputDevice.obj
+ 0001:0000159e       _Java_com_sun_media_sound_SimpleInputDevice_nClose@8 1000259e f   SimpleInputDevice.obj
+ 0001:00001629       _Java_com_sun_media_sound_SimpleInputDevice_nStart@8 10002629 f   SimpleInputDevice.obj
+ 0001:0000163d       _Java_com_sun_media_sound_SimpleInputDevice_nStop@8 1000263d f   SimpleInputDevice.obj
+ 0001:00001651       _Java_com_sun_media_sound_SimpleInputDevice_nPause@8 10002651 f   SimpleInputDevice.obj
+ 0001:00001659       _Java_com_sun_media_sound_SimpleInputDevice_nResume@8 10002659 f   SimpleInputDevice.obj
+ 0001:00001661       _Java_com_sun_media_sound_SimpleInputDevice_nFlush@8 10002661 f   SimpleInputDevice.obj
+ 0001:00001672       _Java_com_sun_media_sound_SimpleInputDevice_nGetPosition@8 10002672 f   SimpleInputDevice.obj
+ 0001:00001687       _Java_com_sun_media_sound_SimpleInputDevice_nGetBufferSizeInFrames@8 10002687 f   SimpleInputDevice.obj
+ 0001:0000168f       _Java_com_sun_media_sound_SimpleInputDevice_nSupportsSampleRate@12 1000268f f   SimpleInputDevice.obj
+ 0001:000016f6       _Java_com_sun_media_sound_SimpleInputDevice_nSupportsSampleSizeInBits@12 100026f6 f   SimpleInputDevice.obj
+ 0001:00001717       _Java_com_sun_media_sound_SimpleInputDevice_nSupportsChannels@12 10002717 f   SimpleInputDevice.obj
+ 0001:00001733       _Java_com_sun_media_sound_SimpleInputDevice_nGetNumPorts@8 10002733 f   SimpleInputDevice.obj
+ 0001:00001738       _Java_com_sun_media_sound_SimpleInputDevice_nGetPortName@12 10002738 f   SimpleInputDevice.obj
+ 0001:0000173d       _Java_com_sun_media_sound_SimpleInputDeviceProvider_nGetNumDevices@8 1000273d f   SimpleInputDeviceProvider.obj
+ 0001:00001745       _Java_com_sun_media_sound_SimpleInputDeviceProvider_nGetName@12 10002745 f   SimpleInputDeviceProvider.obj
+ 0001:00001776       _Java_com_sun_media_sound_SimpleInputDeviceProvider_nGetVendor@12 10002776 f   SimpleInputDeviceProvider.obj
+ 0001:000017b0       _Java_com_sun_media_sound_SimpleInputDeviceProvider_nGetDescription@12 100027b0 f   SimpleInputDeviceProvider.obj
+ 0001:000017ec       _Java_com_sun_media_sound_SimpleInputDeviceProvider_nGetVersion@12 100027ec f   SimpleInputDeviceProvider.obj
+ 0001:00001823       _Java_com_sun_media_sound_HeadspaceSoundbank_nOpenResource@12 10002823 f   HeadspaceSoundbank.obj
+ 0001:00001879       _Java_com_sun_media_sound_HeadspaceSoundbank_nOpenResourceFromByteArray@16 10002879 f   HeadspaceSoundbank.obj
+ 0001:000018c6       _Java_com_sun_media_sound_HeadspaceSoundbank_nCloseResource@16 100028c6 f   HeadspaceSoundbank.obj
+ 0001:000018dd       _Java_com_sun_media_sound_HeadspaceSoundbank_nGetName@16 100028dd f   HeadspaceSoundbank.obj
+ 0001:00001966       _Java_com_sun_media_sound_HeadspaceSoundbank_nGetVersionMajor@16 10002966 f   HeadspaceSoundbank.obj
+ 0001:000019a1       _Java_com_sun_media_sound_HeadspaceSoundbank_nGetVersionMinor@16 100029a1 f   HeadspaceSoundbank.obj
+ 0001:000019dc       _Java_com_sun_media_sound_HeadspaceSoundbank_nGetVersionSubMinor@16 100029dc f   HeadspaceSoundbank.obj
+ 0001:00001a17       _Java_com_sun_media_sound_HeadspaceSoundbank_nGetInstruments@20 10002a17 f   HeadspaceSoundbank.obj
+ 0001:00001b54       _Java_com_sun_media_sound_HeadspaceSoundbank_nGetSamples@20 10002b54 f   HeadspaceSoundbank.obj
+ 0001:00001cad       _Java_com_sun_media_sound_MixerMidiChannel_nNoteOn@36 10002cad f   MixerMidiChannel.obj
+ 0001:00001d0a       _Java_com_sun_media_sound_MixerMidiChannel_nNoteOff@36 10002d0a f   MixerMidiChannel.obj
+ 0001:00001d64       _Java_com_sun_media_sound_MixerMidiChannel_nControlChange@36 10002d64 f   MixerMidiChannel.obj
+ 0001:00001dbe       _Java_com_sun_media_sound_MixerMidiChannel_nGetController@24 10002dbe f   MixerMidiChannel.obj
+ 0001:00001dd8       _Java_com_sun_media_sound_MixerMidiChannel_nProgramChange__JIIJ@32 10002dd8 f   MixerMidiChannel.obj
+ 0001:00001e2f       _Java_com_sun_media_sound_MixerMidiChannel_nProgramChange__JIIIJ@36 10002e2f f   MixerMidiChannel.obj
+ 0001:00001eaf       _Java_com_sun_media_sound_MixerMidiChannel_nSetPitchBend@36 10002eaf f   MixerMidiChannel.obj
+ 0001:00001f0c       _Java_com_sun_media_sound_MixerMidiChannel_nGetPitchBend@20 10002f0c f   MixerMidiChannel.obj
+ 0001:00001f36       _Java_com_sun_media_sound_MixerMidiChannel_nAllNotesOff@28 10002f36 f   MixerMidiChannel.obj
+ 0001:00001f8f       _Java_com_sun_media_sound_MixerMidiChannel_nResetAllControllers@20 10002f8f f   MixerMidiChannel.obj
+ 0001:00001fa4       _Java_com_sun_media_sound_MixerMidiChannel_nSetMute@24 10002fa4 f   MixerMidiChannel.obj
+ 0001:00001fdd       _Java_com_sun_media_sound_MixerMidiChannel_nSetSolo@24 10002fdd f   MixerMidiChannel.obj
+ 0001:00002016       _Java_com_sun_media_sound_MixerMidiChannel_nGetSolo@20 10003016 f   MixerMidiChannel.obj
+ 0001:00002035       _Java_com_sun_media_sound_AbstractPlayer_nClose@16 10003035 f   AbstractPlayer.obj
+ 0001:000020a0       _Java_com_sun_media_sound_AbstractPlayer_nAddReceiver@24 100030a0 f   AbstractPlayer.obj
+ 0001:000020e8       _Java_com_sun_media_sound_AbstractPlayer_nRemoveReceiver@24 100030e8 f   AbstractPlayer.obj
+ 0001:0000211b       _Java_com_sun_media_sound_AbstractPlayer_nLoadInstrument@20 1000311b f   AbstractPlayer.obj
+ 0001:00002140       _Java_com_sun_media_sound_AbstractPlayer_nUnloadInstrument@20 10003140 f   AbstractPlayer.obj
+ 0001:00002165       _Java_com_sun_media_sound_AbstractPlayer_nRemapInstrument@24 10003165 f   AbstractPlayer.obj
+ 0001:000022e0       _Java_com_sun_media_sound_MixerSequencer_nOpenMidiSequencer@16 100032e0 f   MixerSequencer.obj
+ 0001:000023d9       _Java_com_sun_media_sound_MixerSequencer_nAddControllerEventCallback@20 100033d9 f   MixerSequencer.obj
+ 0001:000023f5       _Java_com_sun_media_sound_MixerSequencer_nOpenRmfSequencer@16 100033f5 f   MixerSequencer.obj
+ 0001:00002505       _Java_com_sun_media_sound_MixerSequencer_nStartSequencer@16 10003505 f   MixerSequencer.obj
+ 0001:0000251d       _Java_com_sun_media_sound_MixerSequencer_nPauseSequencer@16 1000351d f   MixerSequencer.obj
+ 0001:0000252a       _Java_com_sun_media_sound_MixerSequencer_nResumeSequencer@16 1000352a f   MixerSequencer.obj
+ 0001:0000254b       _Java_com_sun_media_sound_MixerSequencer_nGetSequencerTickPosition@16 1000354b f   MixerSequencer.obj
+ 0001:0000255a       _Java_com_sun_media_sound_MixerSequencer_nSetSequencerTickPosition@24 1000355a f   MixerSequencer.obj
+ 0001:00002578       _Java_com_sun_media_sound_MixerSequencer_nGetSequencerMicrosecondPosition@16 10003578 f   MixerSequencer.obj
+ 0001:00002587       _Java_com_sun_media_sound_MixerSequencer_nSetSequencerMicrosecondPosition@24 10003587 f   MixerSequencer.obj
+ 0001:000025a5       _Java_com_sun_media_sound_MixerSequencer_nGetTempoInBPM@16 100035a5 f   MixerSequencer.obj
+ 0001:000025b2       _Java_com_sun_media_sound_MixerSequencer_nSetTempoInBPM@20 100035b2 f   MixerSequencer.obj
+ 0001:000025ce       _Java_com_sun_media_sound_MixerSequencer_nGetTempoInMPQ@16 100035ce f   MixerSequencer.obj
+ 0001:000025db       _Java_com_sun_media_sound_MixerSequencer_nSetTempoInMPQ@20 100035db f   MixerSequencer.obj
+ 0001:000025f7       _Java_com_sun_media_sound_MixerSequencer_nGetMasterTempo@16 100035f7 f   MixerSequencer.obj
+ 0001:0000261c       _Java_com_sun_media_sound_MixerSequencer_nSetMasterTempo@20 1000361c f   MixerSequencer.obj
+ 0001:0000265b       _Java_com_sun_media_sound_MixerSequencer_nSetTrackMute@24 1000365b f   MixerSequencer.obj
+ 0001:0000267c       _Java_com_sun_media_sound_MixerSequencer_nGetTrackMute@20 1000367c f   MixerSequencer.obj
+ 0001:000026a6       _Java_com_sun_media_sound_MixerSequencer_nSetTrackSolo@24 100036a6 f   MixerSequencer.obj
+ 0001:000026c7       _Java_com_sun_media_sound_MixerSequencer_nGetTrackSolo@20 100036c7 f   MixerSequencer.obj
+ 0001:000026f1       _Java_com_sun_media_sound_MixerSequencer_nGetSequenceTickLength@16 100036f1 f   MixerSequencer.obj
+ 0001:00002708       _Java_com_sun_media_sound_MixerSequencer_nGetSequenceMicrosecondLength@16 10003708 f   MixerSequencer.obj
+ 0001:0000271f       _Java_com_sun_media_sound_MixerSynth_nCreateSynthesizer@8 1000371f f   MixerSynth.obj
+ 0001:00002750       _Java_com_sun_media_sound_MixerSynth_nDestroySynthesizer@16 10003750 f   MixerSynth.obj
+ 0001:00002774       _Java_com_sun_media_sound_MixerSynth_nStartSynthesizer@16 10003774 f   MixerSynth.obj
+ 0001:0000278a       _Java_com_sun_media_sound_MixerSynth_nLoadInstrument@20 1000378a f   MixerSynth.obj
+ 0001:000027a1       _Java_com_sun_media_sound_MixerSynth_nUnloadInstrument@20 100037a1 f   MixerSynth.obj
+ 0001:000027b8       _Java_com_sun_media_sound_MixerSynth_nRemapInstrument@24 100037b8 f   MixerSynth.obj
+ 0001:000027d4       _Java_com_sun_media_sound_MixerSynth_nGetLatency@8 100037d4 f   MixerSynth.obj
+ 0001:000027ea       _Java_com_sun_media_sound_Platform_nIsBigEndian@8 100037ea f   Platform.obj
+ 0001:000027f2       _Java_com_sun_media_sound_Platform_nIsSigned8@8 100037f2 f   Platform.obj
+ 0001:000027f7       _Java_com_sun_media_sound_Platform_nGetExtraLibraries@8 100037f7 f   Platform.obj
+ 0001:0000280c       _Java_com_sun_media_sound_Platform_nGetLibraryForFeature@12 1000380c f   Platform.obj
+ 0001:00002828       _XNewSongPtr               10003828 f   DriverTools.obj
+ 0001:00002918       _XGetKeySplitFromPtr       10003918 f   DriverTools.obj
+ 0001:00002985       _XGetSongResourceObjectID  10003985 f   DriverTools.obj
+ 0001:000029a7       _XGetSongResourceObjectType 100039a7 f   DriverTools.obj
+ 0001:000029cc       _XGetMidiData              100039cc f   DriverTools.obj
+ 0001:00002b44       _XGetSoundResourceByID     10003b44 f   DriverTools.obj
+ 0001:00002be1       _XGetSongVolume            10003be1 f   DriverTools.obj
+ 0001:00002c06       _XGetBankStatus            10003c06 f   DriverTools.obj
+ 0001:00002ca9       _XGetVersionNumber         10003ca9 f   DriverTools.obj
+ 0001:00002d83       _GM_AudioCaptureStreamSetup 10003d83 f   GenAudioCaptureStreams.obj
+ 0001:00002f42       _GM_AudioCaptureStreamStart 10003f42 f   GenAudioCaptureStreams.obj
+ 0001:00002f6d       _GM_AudioCaptureStreamStop 10003f6d f   GenAudioCaptureStreams.obj
+ 0001:00002f96       _GM_AudioCaptureStreamGetSamplesCaptured 10003f96 f   GenAudioCaptureStreams.obj
+ 0001:00002fab       _GM_AudioCaptureStreamCleanup 10003fab f   GenAudioCaptureStreams.obj
+ 0001:00002fe4       _GM_SetStreamResample      10003fe4 f   GenAudioStreams.obj
+ 0001:000034a1       _GM_AudioStreamPause       100044a1 f   GenAudioStreams.obj
+ 0001:000034e1       _GM_AudioStreamResume      100044e1 f   GenAudioStreams.obj
+ 0001:00003540       _GM_AudioStreamError       10004540 f   GenAudioStreams.obj
+ 0001:00003558       _GM_AudioStreamSetup       10004558 f   GenAudioStreams.obj
+ 0001:000038e9       _GM_AudioStreamPreroll     100048e9 f   GenAudioStreams.obj
+ 0001:00003965       _GM_SetSyncAudioStreamReference 10004965 f   GenAudioStreams.obj
+ 0001:00003987       _GM_SyncAudioStreamStart   10004987 f   GenAudioStreams.obj
+ 0001:000039a2       _GM_AudioStreamStart       100049a2 f   GenAudioStreams.obj
+ 0001:00003a6e       _GM_AudioStreamGetFileSamplePosition 10004a6e f   GenAudioStreams.obj
+ 0001:00003ae1       _GM_AudioStreamSetStereoPosition 10004ae1 f   GenAudioStreams.obj
+ 0001:00003b05       _GM_AudioStreamGetStereoPosition 10004b05 f   GenAudioStreams.obj
+ 0001:00003b1f       _GM_AudioStreamGetSamplesPlayed 10004b1f f   GenAudioStreams.obj
+ 0001:00003b41       _GM_AudioStreamFlush       10004b41 f   GenAudioStreams.obj
+ 0001:00003b9d       _GM_AudioStreamSetVolume   10004b9d f   GenAudioStreams.obj
+ 0001:00003bc8       _GM_AudioStreamGetVolume   10004bc8 f   GenAudioStreams.obj
+ 0001:00003be2       _GM_AudioStreamSetRate     10004be2 f   GenAudioStreams.obj
+ 0001:00003c02       _GM_AudioStreamGetRate     10004c02 f   GenAudioStreams.obj
+ 0001:00003c17       _GM_IsAudioStreamValid     10004c17 f   GenAudioStreams.obj
+ 0001:00003c27       _PV_ServeStreamFades       10004c27 f   GenAudioStreams.obj
+ 0001:00003cd3       _GM_AudioStreamUpdateSamplesPlayed 10004cd3 f   GenAudioStreams.obj
+ 0001:00003e5f       _GM_NewLinkedStreamList    10004e5f f   GenAudioStreams.obj
+ 0001:00003e90       _GM_FreeLinkedStreamList   10004e90 f   GenAudioStreams.obj
+ 0001:00003ea9       _GM_AddLinkedStream        10004ea9 f   GenAudioStreams.obj
+ 0001:00003ed8       _GM_StartLinkedStreams     10004ed8 f   GenAudioStreams.obj
+ 0001:00003f44       _GM_AudioStreamStop        10004f44 f   GenAudioStreams.obj
+ 0001:00003fe5       _GM_AudioStreamService     10004fe5 f   GenAudioStreams.obj
+ 0001:000044ab       _GM_EndLinkedStreams       100054ab f   GenAudioStreams.obj
+ 0001:000044c7       _GM_AudioStreamDrain       100054c7 f   GenAudioStreams.obj
+ 0001:00004540       _PV_Generate8outputStereo  10005540 f   GenOutput.obj
+ 0001:000046cf       _PV_Generate8outputMono    100056cf f   GenOutput.obj
+ 0001:00004794       _PV_Generate16outputStereo 10005794 f   GenOutput.obj
+ 0001:00004add       _PV_Generate16outputMono   10005add f   GenOutput.obj
+ 0001:00004e74       _GM_SetCacheSamples        10005e74 f   GenPatch.obj
+ 0001:00004e93       _PV_SetSampleIntoCache     10005e93 f   GenPatch.obj
+ 0001:000055b2       _PV_GetInstrument          100065b2 f   GenPatch.obj
+ 0001:00005a6f       _GM_RemapInstrument        10006a6f f   GenPatch.obj
+ 0001:00005ab3       _GM_AnyStereoInstrumentsLoaded 10006ab3 f   GenPatch.obj
+ 0001:00005aea       _GM_LoadInstrument         10006aea f   GenPatch.obj
+ 0001:00005b56       _GM_UnloadInstrument       10006b56 f   GenPatch.obj
+ 0001:00005c2e       _GM_UnloadSongInstruments  10006c2e f   GenPatch.obj
+ 0001:00005c67       _GM_SetUsedInstrument      10006c67 f   GenPatch.obj
+ 0001:00005cd8       _GM_IsInstrumentUsed       10006cd8 f   GenPatch.obj
+ 0001:00005d57       _GM_GetInstrumentUsedRange 10006d57 f   GenPatch.obj
+ 0001:00005d90       _GM_SetInstrumentUsedRange 10006d90 f   GenPatch.obj
+ 0001:00005dc0       _GM_LoadSongInstruments    10006dc0 f   GenPatch.obj
+ 0001:0000700d       _GM_ProcessReverb          1000800d f   GenReverb.obj
+ 0001:0000706b       _GM_GetReverbEnableThreshold 1000806b f   GenReverb.obj
+ 0001:00007091       _GM_IsReverbFixed          10008091 f   GenReverb.obj
+ 0001:000070b7       _GM_SetReverbType          100080b7 f   GenReverb.obj
+ 0001:000071bc       _GM_GetReverbType          100081bc f   GenReverb.obj
+ 0001:00007207       _GM_CleanupReverb          10008207 f   GenReverb.obj
+ 0001:00007216       _GM_SetupReverb            10008216 f   GenReverb.obj
+ 0001:00007243       _PV_ServeEffectCallbacks   10008243 f   GenSample.obj
+ 0001:000072cb       _GM_IsSoundReferenceValid  100082cb f   GenSample.obj
+ 0001:000072f6       _PV_GetSoundReferenceFromVoice 100082f6 f   GenSample.obj
+ 0001:00007327       _PV_GetVoiceFromSoundReference 10008327 f   GenSample.obj
+ 0001:00007358       _GM_IsSoundDone            10008358 f   GenSample.obj
+ 0001:000073a3       _GM_SetupSampleDoubleBuffer 100083a3 f   GenSample.obj
+ 0001:00007517       _GM_SetupSample            10008517 f   GenSample.obj
+ 0001:000076bd       _GM_SetupSampleFromInfo    100086bd f   GenSample.obj
+ 0001:0000772d       _GM_SetSyncSampleStartReference 1000872d f   GenSample.obj
+ 0001:00007757       _GM_SyncStartSample        10008757 f   GenSample.obj
+ 0001:00007781       _GM_StartSample            10008781 f   GenSample.obj
+ 0001:000077ab       _GM_EndSample              100087ab f   GenSample.obj
+ 0001:000077cd       _GM_EndAllSamples          100087cd f   GenSample.obj
+ 0001:00007834       _GM_ReleaseSample          10008834 f   GenSample.obj
+ 0001:0000787a       _GM_ReleaseAllSamples      1000887a f   GenSample.obj
+ 0001:00007911       _GM_GetSamplePlaybackPosition 10008911 f   GenSample.obj
+ 0001:0000792c       _GM_GetSamplePitch         1000892c f   GenSample.obj
+ 0001:0000794d       _GM_ChangeSamplePitch      1000894d f   GenSample.obj
+ 0001:00007970       _GM_GetSampleVolume        10008970 f   GenSample.obj
+ 0001:000079b2       _GM_ChangeSampleVolume     100089b2 f   GenSample.obj
+ 0001:00007a05       _GM_GetSampleStereoPosition 10008a05 f   GenSample.obj
+ 0001:00007a1f       _GM_ChangeSampleStereoPosition 10008a1f f   GenSample.obj
+ 0001:00007a37       _GM_SetSampleResampleFromVoice 10008a37 f   GenSample.obj
+ 0001:00007b08       _GM_SetSampleResample      10008b08 f   GenSample.obj
+ 0001:00007b4e       _GM_RemoveSampleResampleExtern 10008b4e f   GenSample.obj
+ 0001:00007bad       _GM_FreeWaveform           10008bad f   GenSample.obj
+ 0001:00007bc8       _PV_ServeEffectsFades      10008bc8 f   GenSample.obj
+ 0001:00007c69       _GM_SetSampleResampleExtern 10008c69 f   GenSample.obj
+ 0001:00007d41       _PV_ResetControlers        10008d41 f   GenSeq.obj
+ 0001:00007e23       _PV_ConfigureInstruments   10008e23 f   GenSeq.obj
+ 0001:00007f1e       _PV_ConfigureMusic         10008f1e f   GenSeq.obj
+ 0001:000081c5       _GM_BeginSong              100091c5 f   GenSeq.obj
+ 0001:000082a3       _GM_PauseSequencer         100092a3 f   GenSeq.obj
+ 0001:000082c4       _GM_ResumeSequencer        100092c4 f   GenSeq.obj
+ 0001:000082df       _GM_PauseSong              100092df f   GenSeq.obj
+ 0001:0000830d       _GM_ResumeSong             1000930d f   GenSeq.obj
+ 0001:00008323       _GM_IsSongDone             10009323 f   GenSeq.obj
+ 0001:00008345       _GM_SetSongCallback        10009345 f   GenSeq.obj
+ 0001:0000835e       _GM_SetSongMetaEventCallback 1000935e f   GenSeq.obj
+ 0001:0000837e       _GM_EndSong                1000937e f   GenSeq.obj
+ 0001:00008436       _GM_SetControllerCallback  10009436 f   GenSeq.obj
+ 0001:00008479       _GM_SetSongLoopFlag        10009479 f   GenSeq.obj
+ 0001:00008492       _GM_SetSongLoopMax         10009492 f   GenSeq.obj
+ 0001:000084ad       _GM_GetChannelVolume       100094ad f   GenSeq.obj
+ 0001:000084d4       _GM_SetSongVolume          100094d4 f   GenSeq.obj
+ 0001:0000859d       _GM_SetMasterSongTempo     1000959d f   GenSeq.obj
+ 0001:000085bf       _GM_GetMasterSongTempo     100095bf f   GenSeq.obj
+ 0001:000085cd       _GM_GetSongTempo           100095cd f   GenSeq.obj
+ 0001:000085e3       _GM_SetSongTempo           100095e3 f   GenSeq.obj
+ 0001:0000863f       _GM_GetSongTempoInBeatsPerMinute 1000963f f   GenSeq.obj
+ 0001:0000865d       _GM_SetSongTempInBeatsPerMinute 1000965d f   GenSeq.obj
+ 0001:000086e5       _PV_IsMuted                100096e5 f   GenSeq.obj
+ 0001:000087a4       _PV_ProcessProgramChange   100097a4 f   GenSeq.obj
+ 0001:000088cd       _PV_ProcessNoteOff         100098cd f   GenSeq.obj
+ 0001:00008968       _PV_ProcessNoteOn          10009968 f   GenSeq.obj
+ 0001:00008a3d       _PV_ProcessPitchBend       10009a3d f   GenSeq.obj
+ 0001:00008b71       _PV_ProcessController      10009b71 f   GenSeq.obj
+ 0001:00008f26       _GM_GetControllerValue     10009f26 f   GenSeq.obj
+ 0001:00009042       _QGM_ClearSongFromQueue    1000a042 f   GenSeq.obj
+ 0001:000090c3       _QGM_NoteOn                1000a0c3 f   GenSeq.obj
+ 0001:000090ef       _QGM_NoteOff               1000a0ef f   GenSeq.obj
+ 0001:0000911b       _QGM_ProgramChange         1000a11b f   GenSeq.obj
+ 0001:00009141       _QGM_PitchBend             1000a141 f   GenSeq.obj
+ 0001:0000916d       _QGM_Controller            1000a16d f   GenSeq.obj
+ 0001:00009199       _GM_NoteOn                 1000a199 f   GenSeq.obj
+ 0001:000091cc       _GM_NoteOff                1000a1cc f   GenSeq.obj
+ 0001:000091ff       _GM_ProgramChange          1000a1ff f   GenSeq.obj
+ 0001:0000922f       _GM_PitchBend              1000a22f f   GenSeq.obj
+ 0001:00009262       _GM_GetPitchBend           1000a262 f   GenSeq.obj
+ 0001:000092b8       _GM_Controller             1000a2b8 f   GenSeq.obj
+ 0001:000092eb       _PV_CleanExternalQueue     1000a2eb f   GenSeq.obj
+ 0001:000098f9       _PV_ProcessMidiSequencerSlice 1000a8f9 f   GenSeq.obj
+ 0001:0000a000       _GM_MuteChannel            1000b000 f   GenSeq.obj
+ 0001:0000a05d       _GM_UnmuteChannel          1000b05d f   GenSeq.obj
+ 0001:0000a0b1       _GM_GetChannelMuteStatus   1000b0b1 f   GenSeq.obj
+ 0001:0000a13e       _GM_SoloChannel            1000b13e f   GenSeq.obj
+ 0001:0000a1bc       _GM_UnsoloChannel          1000b1bc f   GenSeq.obj
+ 0001:0000a23a       _GM_GetChannelSoloStatus   1000b23a f   GenSeq.obj
+ 0001:0000a34c       _GM_MuteTrack              1000b34c f   GenSeq.obj
+ 0001:0000a3a9       _GM_UnmuteTrack            1000b3a9 f   GenSeq.obj
+ 0001:0000a3fd       _GM_GetTrackMuteStatus     1000b3fd f   GenSeq.obj
+ 0001:0000a487       _GM_SoloTrack              1000b487 f   GenSeq.obj
+ 0001:0000a505       _GM_UnsoloTrack            1000b505 f   GenSeq.obj
+ 0001:0000a583       _GM_GetTrackSoloStatus     1000b583 f   GenSeq.obj
+ 0001:0000a66d       _GM_RemoveFromSongsToPlay  1000b66d f   GenSeq.obj
+ 0001:0000a6a3       _PV_ProcessSequencerEvents 1000b6a3 f   GenSeq.obj
+ 0001:0000a754       _GM_ConvertFromOutputQualityToRate 1000b754 f   GenSetup.obj
+ 0001:0000a7aa       _GM_GetSystemVoices        1000b7aa f   GenSetup.obj
+ 0001:0000a7f6       _GM_ChangeSystemVoices     1000b7f6 f   GenSetup.obj
+ 0001:0000a89f       _GM_InitGeneralSound       1000b89f f   GenSetup.obj
+ 0001:0000abda       _GM_FinisGeneralSound      1000bbda f   GenSetup.obj
+ 0001:0000ac14       _PV_ScaleVolumeFromChannelAndSong 1000bc14 f   GenSetup.obj
+ 0001:0000ac83       _PV_CalculateStereoVolume  1000bc83 f   GenSetup.obj
+ 0001:0000ad33       _SetChannelVolume          1000bd33 f   GenSetup.obj
+ 0001:0000adae       _PV_ChangeSustainedNotes   1000bdae f   GenSetup.obj
+ 0001:0000ae15       _SetChannelStereoPosition  1000be15 f   GenSetup.obj
+ 0001:0000ae6e       _SetChannelModWheel        1000be6e f   GenSetup.obj
+ 0001:0000aebc       _SetChannelPitchBend       1000bebc f   GenSetup.obj
+ 0001:0000af2c       _GM_SetAudioTask           1000bf2c f   GenSetup.obj
+ 0001:0000af40       _GM_StartHardwareSoundManager 1000bf40 f   GenSetup.obj
+ 0001:0000af8b       _GM_UpdateSamplesPlayed    1000bf8b f   GenSetup.obj
+ 0001:0000afbd       _GM_GetSyncTimeStamp       1000bfbd f   GenSetup.obj
+ 0001:0000afd0       _GM_ResumeGeneralSound     1000bfd0 f   GenSetup.obj
+ 0001:0000b011       _GM_StopHardwareSoundManager 1000c011 f   GenSetup.obj
+ 0001:0000b048       _GM_PauseGeneralSound      1000c048 f   GenSetup.obj
+ 0001:0000b092       _GM_ChangeAudioModes       1000c092 f   GenSetup.obj
+ 0001:0000b359       _GM_MergeExternalSong      1000c359 f   GenSong.obj
+ 0001:0000b502       _GM_AddSongSynth           1000c502 f   GenSong.obj
+ 0001:0000b566       _GM_RemoveSongSynth        1000c566 f   GenSong.obj
+ 0001:0000b597       _GM_GetSongSynth           1000c597 f   GenSong.obj
+ 0001:0000b5b6       _GM_CreateLiveSong         1000c5b6 f   GenSong.obj
+ 0001:0000b66d       _GM_LoadSongInstrument     1000c66d f   GenSong.obj
+ 0001:0000b6a5       _GM_FreeSong               1000c6a5 f   GenSong.obj
+ 0001:0000b726       _GM_GetSongTickLength      1000c726 f   GenSong.obj
+ 0001:0000b821       _GM_SetSongTickPosition    1000c821 f   GenSong.obj
+ 0001:0000b923       _GM_SongTicks              1000c923 f   GenSong.obj
+ 0001:0000b947       _GM_SongMicroseconds       1000c947 f   GenSong.obj
+ 0001:0000b96b       _GM_GetSongMicrosecondLength 1000c96b f   GenSong.obj
+ 0001:0000b9a2       _GM_SetSongMicrosecondPosition 1000c9a2 f   GenSong.obj
+ 0001:0000bab2       _GM_StartLiveSong          1000cab2 f   GenSong.obj
+ 0001:0000bc0c       _GM_LoadSong               1000cc0c f   GenSong.obj
+ 0001:0000bcbc       _PV_ModifyVelocityFromCurve 1000ccbc f   GenSynth.obj
+ 0001:0000bd03       _PV_DoCallBack             1000cd03 f   GenSynth.obj
+ 0001:0000bd2e       _PV_CleanNoteEntry         1000cd2e f   GenSynth.obj
+ 0001:0000bd4b       _PV_CalcScaleBack          1000cd4b f   GenSynth.obj
+ 0001:0000bda0       _PV_DoubleBufferCallbackAndSwap 1000cda0 f   GenSynth.obj
+ 0001:0000be07       _PV_GetWavePitch           1000ce07 f   GenSynth.obj
+ 0001:0000c1c7       _HAE_GetSliceTimeInMicroseconds 1000d1c7 f   GenSynth.obj
+ 0001:0000c1cd       _HAE_GetMaxSamplePerSlice  1000d1cd f   GenSynth.obj
+ 0001:0000c262       _ServeMIDINote             1000d262 f   GenSynth.obj
+ 0001:0000cc16       _StopMIDINote              1000dc16 f   GenSynth.obj
+ 0001:0000cd50       _GM_EndSongNotes           1000dd50 f   GenSynth.obj
+ 0001:0000cd62       _GM_EndSongChannelNotes    1000dd62 f   GenSynth.obj
+ 0001:0000cd76       _GM_EndAllNotes            1000dd76 f   GenSynth.obj
+ 0001:0000cd7f       _GM_KillSongNotes          1000dd7f f   GenSynth.obj
+ 0001:0000d57a       _PV_ProcessSampleFrame     1000e57a f   GenSynth.obj
+ 0001:0000d70f       _HAE_BuildMixerSlice       1000e70f f   GenSynth.obj
+ 0001:0000d7e6       _PV_ServeInterp2FilterPartialBuffer 1000e7e6 f   GenSynthFilters.obj
+ 0001:0000db90       _PV_ServeStereoInterp2FilterPartialBuffer 1000eb90 f   GenSynthFilters.obj
+ 0001:0000dfa7       _PV_ServeInterp2FilterFullBuffer 1000efa7 f   GenSynthFilters.obj
+ 0001:0000e275       _PV_ServeStereoInterp2FilterFullBuffer 1000f275 f   GenSynthFilters.obj
+ 0001:0000e59c       _PV_ServeInterp2FilterPartialBuffer16 1000f59c f   GenSynthFilters.obj
+ 0001:0000e951       _PV_ServeStereoInterp2FilterPartialBuffer16 1000f951 f   GenSynthFilters.obj
+ 0001:0000ed58       _PV_ServeInterp2FilterFullBuffer16 1000fd58 f   GenSynthFilters.obj
+ 0001:0000ed6b       _PV_ServeStereoInterp2FilterFullBuffer16 1000fd6b f   GenSynthFilters.obj
+ 0001:0000ed7e       _PV_ServeInterp2FullBuffer 1000fd7e f   GenSynthInterp2.obj
+ 0001:0000ef6c       _PV_ServeInterp2PartialBuffer 1000ff6c f   GenSynthInterp2.obj
+ 0001:0000f1ab       _PV_ServeStereoInterp2FullBuffer 100101ab f   GenSynthInterp2.obj
+ 0001:0000f410       _PV_ServeStereoInterp2PartialBuffer 10010410 f   GenSynthInterp2.obj
+ 0001:0000f927       _PV_ServeInterp2FullBuffer16 10010927 f   GenSynthInterp2.obj
+ 0001:0000fb12       _PV_ServeInterp2PartialBuffer16 10010b12 f   GenSynthInterp2.obj
+ 0001:0000ff65       _PV_ServeStereoInterp2FullBuffer16 10010f65 f   GenSynthInterp2.obj
+ 0001:000101e9       _PV_ServeStereoInterp2PartialBuffer16 100111e9 f   GenSynthInterp2.obj
+ 0001:000105c5       _PV_ServeResampleFullBuffer 100115c5 f   GenSynthResample.obj
+ 0001:000105ca       _PV_ServeResamplePartialBuffer 100115ca f   GenSynthResample.obj
+ 0001:000105cf       _PV_ServeResampleFullBuffer16 100115cf f   GenSynthResample.obj
+ 0001:000105d4       _PV_ServeResamplePartialBuffer16 100115d4 f   GenSynthResample.obj
+ 0001:000105d9       _PV_ServeStereoResampleFullBuffer16 100115d9 f   GenSynthResample.obj
+ 0001:00010723       _PV_ServeStereoResamplePartialBuffer16 10011723 f   GenSynthResample.obj
+ 0001:00010923       _PV_ServeStereoResampleFullBuffer 10011923 f   GenSynthResample.obj
+ 0001:00010928       _PV_ServeStereoResamplePartialBuffer 10011928 f   GenSynthResample.obj
+ 0001:000109a7       _LZSSUncompress            100119a7 f   NewNewLZSS.obj
+ 0001:000109be       _LZSSUncompressDeltaMono8  100119be f   NewNewLZSS.obj
+ 0001:000109f1       _LZSSUncompressDeltaStereo8 100119f1 f   NewNewLZSS.obj
+ 0001:00010a29       _LZSSUncompressDeltaMono16 10011a29 f   NewNewLZSS.obj
+ 0001:00010a5f       _LZSSUncompressDeltaStereo16 10011a5f f   NewNewLZSS.obj
+ 0001:00010b3a       _XGetSamplePtrFromSnd      10011b3a f   SampleTools.obj
+ 0001:00010f2f       _VolumeAmpScaler           10011f2f f   SMOD_Volume_Scaler.obj
+ 0001:0001109f       _XBlockMove                1001209f f   X_API.obj
+ 0001:000110bb       _XSetMemory                100120bb f   X_API.obj
+ 0001:000110d8       _XSetBit                   100120d8 f   X_API.obj
+ 0001:000110f6       _XClearBit                 100120f6 f   X_API.obj
+ 0001:00011116       _XTestBit                  10012116 f   X_API.obj
+ 0001:00011143       _XIsStereoSupported        10012143 f   X_API.obj
+ 0001:00011148       _XWaitMicroseocnds         10012148 f   X_API.obj
+ 0001:0001114d       _XMicroseconds             1001214d f   X_API.obj
+ 0001:00011152       _XIs16BitSupported         10012152 f   X_API.obj
+ 0001:00011157       _XIs8BitSupported          10012157 f   X_API.obj
+ 0001:0001115c       _XFixedMultiply            1001215c f   X_API.obj
+ 0001:0001119a       _XFixedDivide              1001219a f   X_API.obj
+ 0001:000111d5       _XGetShort                 100121d5 f   X_API.obj
+ 0001:000111e4       _XGetLong                  100121e4 f   X_API.obj
+ 0001:00011202       _XPutShort                 10012202 f   X_API.obj
+ 0001:00011211       _XPutLong                  10012211 f   X_API.obj
+ 0001:00011234       _XConvertNativeFileToXFILENAME 10012234 f   X_API.obj
+ 0001:00011280       _XFileRead                 10012280 f   X_API.obj
+ 0001:000112fd       _XFileWrite                100122fd f   X_API.obj
+ 0001:00011337       _XFileSetPosition          10012337 f   X_API.obj
+ 0001:000113a6       _XFileGetPosition          100123a6 f   X_API.obj
+ 0001:00011427       _XSwapLongsInAccessCache   10012427 f   X_API.obj
+ 0001:0001148c       _XFileGetCurrentResourceFile 1001248c f   X_API.obj
+ 0001:0001149e       _XFileUseThisResourceFile  1001249e f   X_API.obj
+ 0001:000114f2       _XStrCpy                   100124f2 f   X_API.obj
+ 0001:00011531       _XStrLen                   10012531 f   X_API.obj
+ 0001:0001154a       _XLStrnCmp                 1001254a f   X_API.obj
+ 0001:000115a9       _XStrnToLong               100125a9 f   X_API.obj
+ 0001:00011600       _XPtoCstr                  10012600 f   X_API.obj
+ 0001:0001165c       _XIsOurMemoryPtr           1001265c f   X_API.obj
+ 0001:000116a6       _XNewPtr                   100126a6 f   X_API.obj
+ 0001:000116f4       _XGetPtrSize               100126f4 f   X_API.obj
+ 0001:00011718       _XGetFileResource          10012718 f   X_API.obj
+ 0001:000119cd       _XGetIndexedFileResource   100129cd f   X_API.obj
+ 0001:00011ca7       _XGetAndDetachResource     10012ca7 f   X_API.obj
+ 0001:00011d46       _XDisposePtr               10012d46 f   X_API.obj
+ 0001:00011d83       _XFileOpenResourceFromMemory 10012d83 f   X_API.obj
+ 0001:00011e1a       _XFileClose                10012e1a f   X_API.obj
+ 0001:00011e74       _XCreateAccessCache        10012e74 f   X_API.obj
+ 0001:00012012       _XGetIndexedResource       10013012 f   X_API.obj
+ 0001:0001205c       _XDecompressPtr            1001305c f   X_API.obj
+ 0001:0001213b       _XFileOpenResource         1001313b f   X_API.obj
+ 0001:00012293       _XExpandULawto16BitLinear  10013293 f   X_Decompress.obj
+ 0001:000122c1       _XExpandALawto16BitLinear  100132c1 f   X_Decompress.obj
+ 0001:00012354       _XDecryptData              10013354 f   X_Decompress.obj
+ 0001:00012689       _XExpandAiffIma            10013689 f   X_IMA.obj
+ 0001:000126bf       _PV_ServeInterp2FilterPartialBufferNewReverb 100136bf f   GenFiltersReverb.obj
+ 0001:00012adc       _PV_ServeStereoInterp2FilterPartialBufferNewReverb 10013adc f   GenFiltersReverb.obj
+ 0001:00012f59       _PV_ServeInterp2FilterFullBufferNewReverb 10013f59 f   GenFiltersReverb.obj
+ 0001:0001328a       _PV_ServeStereoInterp2FilterFullBufferNewReverb 1001428a f   GenFiltersReverb.obj
+ 0001:0001361c       _PV_ServeInterp2FilterPartialBufferNewReverb16 1001461c f   GenFiltersReverb.obj
+ 0001:00013a31       _PV_ServeStereoInterp2FilterPartialBufferNewReverb16 10014a31 f   GenFiltersReverb.obj
+ 0001:00013ec2       _PV_ServeInterp2FullBufferNewReverb 10014ec2 f   GenInterp2Reverb.obj
+ 0001:00014189       _PV_ServeInterp2PartialBufferNewReverb 10015189 f   GenInterp2Reverb.obj
+ 0001:00014444       _PV_ServeStereoInterp2FullBufferNewReverb 10015444 f   GenInterp2Reverb.obj
+ 0001:0001479e       _PV_ServeStereoInterp2PartialBufferNewReverb 1001579e f   GenInterp2Reverb.obj
+ 0001:00014cad       _PV_ServeInterp2FullBuffer16NewReverb 10015cad f   GenInterp2Reverb.obj
+ 0001:00014f64       _PV_ServeInterp2PartialBuffer16NewReverb 10015f64 f   GenInterp2Reverb.obj
+ 0001:000153f4       _PV_ServeStereoInterp2FullBuffer16NewReverb 100163f4 f   GenInterp2Reverb.obj
+ 0001:00015758       _PV_ServeStereoInterp2PartialBuffer16NewReverb 10016758 f   GenInterp2Reverb.obj
+ 0001:00015ab1       _SR_resample32_add         10016ab1 f   SincResample.obj
+ 0001:00015d6d       _SR_change_samplerate      10016d6d f   SincResample.obj
+ 0001:00015d9f       _SR_init                   10016d9f f   SincResample.obj
+ 0001:00015e1d       _SR_exit                   10016e1d f   SincResample.obj
+ 0001:00015e37       _HAE_Cleanup               10016e37 f   HAE_API_WinOS.obj
+ 0001:00015e37       _HAE_DestroyFrameThread    10016e37 f   MixerThread.obj
+ 0001:00015e37       _HAE_Setup                 10016e37 f   HAE_API_WinOS.obj
+ 0001:00015e37       _UTIL_IsBigEndianPlatform  10016e37 f   Utilities.obj
+ 0001:00015e3a       _HAE_Allocate              10016e3a f   HAE_API_WinOS.obj
+ 0001:00015e58       _HAE_Deallocate            10016e58 f   HAE_API_WinOS.obj
+ 0001:00015e7f       _HAE_IsBadReadPointer      10016e7f f   HAE_API_WinOS.obj
+ 0001:00015e94       _HAE_SizeOfPointer         10016e94 f   HAE_API_WinOS.obj
+ 0001:00015eb8       _HAE_BlockMove             10016eb8 f   HAE_API_WinOS.obj
+ 0001:00015edf       _HAE_IsStereoSupported     10016edf f   HAE_API_WinOS.obj
+ 0001:00015f2e       _HAE_Is16BitSupported      10016f2e f   HAE_API_WinOS.obj
+ 0001:00015f8e       _HAE_Is8BitSupported       10016f8e f   HAE_API_WinOS.obj
+ 0001:00015fee       _HAE_Microseconds          10016fee f   HAE_API_WinOS.obj
+ 0001:00016015       _HAE_WaitMicroseocnds      10017015 f   HAE_API_WinOS.obj
+ 0001:00016036       _HAE_CopyFileNameNative    10017036 f   HAE_API_WinOS.obj
+ 0001:0001605c       _HAE_FileCreate            1001705c f   HAE_API_WinOS.obj
+ 0001:0001608c       _HAE_FileOpenForRead       1001708c f   HAE_API_WinOS.obj
+ 0001:000160b3       _HAE_FileOpenForReadWrite  100170b3 f   HAE_API_WinOS.obj
+ 0001:000160d9       _HAE_FileClose             100170d9 f   HAE_API_WinOS.obj
+ 0001:000160e4       _HAE_ReadFile              100170e4 f   HAE_API_WinOS.obj
+ 0001:00016115       _HAE_WriteFile             10017115 f   HAE_API_WinOS.obj
+ 0001:00016146       _HAE_SetFilePosition       10017146 f   HAE_API_WinOS.obj
+ 0001:00016164       _HAE_GetFilePosition       10017164 f   HAE_API_WinOS.obj
+ 0001:0001639b       _HAE_GetAudioBufferCount   1001739b f   HAE_API_WinOS.obj
+ 0001:000163a1       _HAE_ReleaseAudioCard      100173a1 f   HAE_API_WinOS.obj
+ 0001:0001642e       _HAE_GetDeviceSamplesPlayedPosition 1001742e f   HAE_API_WinOS.obj
+ 0001:0001648e       _HAE_MaxDevices            1001748e f   HAE_API_WinOS.obj
+ 0001:0001649d       _XGetRealTimeSyncCount     1001749d f   HAE_API_WinOS.obj
+ 0001:000164d6       _HAE_AquireAudioCard       100174d6 f   HAE_API_WinOS.obj
+ 0001:00016669       _PV_AudioWaveInFrameThread 10017669 f   HAE_API_WinOS_Capture.obj
+ 0001:00016826       _HAE_MaxCaptureFormats     10017826 f   HAE_API_WinOS_Capture.obj
+ 0001:0001682a       _createWaveFormat          1001782a f   HAE_API_WinOS_Capture.obj
+ 0001:000168d3       _HAE_GetSupportedCaptureFormats 100178d3 f   HAE_API_WinOS_Capture.obj
+ 0001:000169bd       _HAE_PauseAudioCapture     100179bd f   HAE_API_WinOS_Capture.obj
+ 0001:000169d7       _HAE_ResumeAudioCapture    100179d7 f   HAE_API_WinOS_Capture.obj
+ 0001:000169f4       _HAE_MaxCaptureDevices     100179f4 f   HAE_API_WinOS_Capture.obj
+ 0001:00016a2f       _HAE_SetCaptureDeviceID    10017a2f f   HAE_API_WinOS_Capture.obj
+ 0001:00016a44       _HAE_GetCaptureDeviceName  10017a44 f   HAE_API_WinOS_Capture.obj
+ 0001:00016a9c       _HAE_GetCaptureBufferSizeInFrames 10017a9c f   HAE_API_WinOS_Capture.obj
+ 0001:00016aa2       _HAE_FlushAudioCapture     10017aa2 f   HAE_API_WinOS_Capture.obj
+ 0001:00016ac7       _HAE_StartAudioCapture     10017ac7 f   HAE_API_WinOS_Capture.obj
+ 0001:00016b4d       _HAE_StopAudioCapture      10017b4d f   HAE_API_WinOS_Capture.obj
+ 0001:00016ba0       _HAE_ReleaseAudioCapture   10017ba0 f   HAE_API_WinOS_Capture.obj
+ 0001:00016bf1       _HAE_AquireAudioCapture    10017bf1 f   HAE_API_WinOS_Capture.obj
+ 0001:00016d02       ?MIDI_IN_PutMessage@@YGXPAUHMIDIIN__@@IIII@Z 10017d02 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016dab       ??1Data@MidiIn_OpenHelper@@QAE@XZ 10017dab f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016de1       ?ThreadProc@MidiIn_OpenHelper@@KGKPAX@Z 10017de1 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016e2a       ?midiInOpen@MidiIn_OpenHelper@@SAIHPAUtag_MidiDeviceHandle@@@Z 10017e2a f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016e84       _MIDI_IN_GetErrorStr       10017e84 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016ea5       _MIDI_IN_GetNumDevices     10017ea5 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016eab       ?getMidiInCaps@@YAHHPAUtagMIDIINCAPSA@@PAH@Z 10017eab f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016ecb       _MIDI_IN_GetDeviceName     10017ecb f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016f12       _MIDI_IN_GetDeviceVersion  10017f12 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016f64       ?prepareBuffers@@YAHPAUtag_MidiDeviceHandle@@@Z 10017f64 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016fb0       ?unprepareBuffers@@YAHPAUtag_MidiDeviceHandle@@@Z 10017fb0 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00016ff1       _MIDI_IN_OpenDevice        10017ff1 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:000170ab       _MIDI_IN_CloseDevice       100180ab f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:000170fe       _MIDI_IN_StartDevice       100180fe f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00017151       _MIDI_IN_StopDevice        10018151 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:0001719c       _MIDI_IN_GetMessage        1001819c f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:000171e2       _MIDI_IN_ReleaseMessage    100181e2 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00017229       ??0Data@MidiIn_OpenHelper@@QAE@XZ 10018229 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00017275       _MIDI_OUT_GetErrorStr      10018275 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017296       _MIDI_OUT_GetNumDevices    10018296 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:0001729e       _getMidiOutCaps            1001829e f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:000172c9       _MIDI_OUT_GetDeviceName    100182c9 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017310       _MIDI_IN_GetDeviceDescription 10018310 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00017310       _MIDI_OUT_GetDeviceVendor  10018310 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017310       _MIDI_IN_GetDeviceVendor   10018310 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00017316       _MIDI_OUT_GetDeviceDescription 10018316 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:000173a0       _MIDI_OUT_GetDeviceVersion 100183a0 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:000173eb       _unprepareLongBuffers      100183eb f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017432       _freeLongBuffer            10018432 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:0001748e       _freeLongBuffers           1001848e f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:000174cd       _MIDI_OUT_OpenDevice       100184cd f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:000175a4       _MIDI_OUT_CloseDevice      100185a4 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017634       _MIDI_OUT_GetTimeStamp     10018634 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017634       _MIDI_IN_GetTimeStamp      10018634 f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00017639       _MIDI_OUT_SendShortMessage 10018639 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:00017654       _MIDI_OUT_SendLongMessage  10018654 f   PLATFORM_API_WinOS_MidiOut.obj
+ 0001:0001778e       _MIDI_SetStartTime         1001878e f   PLATFORM_API_WinOS_Util.obj
+ 0001:000177a6       _MIDI_GetTimeStamp         100187a6 f   PLATFORM_API_WinOS_Util.obj
+ 0001:000177e7       _MIDI_CreateLock           100187e7 f   PLATFORM_API_WinOS_Util.obj
+ 0001:000177fe       _MIDI_DestroyLock          100187fe f   PLATFORM_API_WinOS_Util.obj
+ 0001:00017818       _MIDI_Lock                 10018818 f   PLATFORM_API_WinOS_Util.obj
+ 0001:0001782a       _MIDI_Unlock               1001882a f   PLATFORM_API_WinOS_Util.obj
+ 0001:0001783c       _MIDI_WinCreateLongBufferQueue 1001883c f   PLATFORM_API_WinOS_Util.obj
+ 0001:000178cc       _MIDI_WinDestroyLongBufferQueue 100188cc f   PLATFORM_API_WinOS_Util.obj
+ 0001:000178fb       _MIDI_WinCreateEmptyLongBufferQueue 100188fb f   PLATFORM_API_WinOS_Util.obj
+ 0001:00017910       _sendMIDIEvent             10018910 f   HAE_API_WinOS_Synth.obj
+ 0001:00017934       _PV_ProcessExternalSynthSoundOff 10018934 f   HAE_API_WinOS_Synth.obj
+ 0001:0001798b       _PV_ProcessExternalSynthProgramChange 1001898b f   HAE_API_WinOS_Synth.obj
+ 0001:000179b6       _PV_ProcessExternalSynthNoteOff 100189b6 f   HAE_API_WinOS_Synth.obj
+ 0001:00017a13       _PV_ProcessExternalSynthNoteOn 10018a13 f   HAE_API_WinOS_Synth.obj
+ 0001:00017a70       _PV_ProcessExternalSynthPitchBend 10018a70 f   HAE_API_WinOS_Synth.obj
+ 0001:00017ad1       _PV_ProcessExternalSynthController 10018ad1 f   HAE_API_WinOS_Synth.obj
+ 0001:00017b29       _PV_CreateExternalSynthForDevice 10018b29 f   HAE_API_WinOS_Synth.obj
+ 0001:00017b6a       _PORT_GetPortMixerCount    10018b6a f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017b70       _getMixerLineByDestination 10018b70 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017ba5       _getMixerLineBySource      10018ba5 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017be1       _getControlInfo            10018be1 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017c57       _lineHasControls           10018c57 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017cd3       _PORT_GetPortMixerDescription 10018cd3 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017d4a       _getDestinationCount       10018d4a f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017d6e       _PORT_Close                10018d6e f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017dd0       _PORT_GetPortCount         10018dd0 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017de1       _componentType2type        10018de1 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017e40       _PORT_GetPortType          10018e40 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017e71       _PORT_GetPortName          10018e71 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017ebd       _getControlCount           10018ebd f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017f67       _findDestLine              10018f67 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00017f9e       _createMuxControl          10018f9e f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001818e       _createPortControl         1001918e f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00018312       _createLineControls        10019312 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001841b       _addCompoundControl        1001941b f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001844c       _addAllControls            1001944c f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00018476       _PORT_GetControls          10019476 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001866a       _getControlValue           1001966a f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00018687       _setControlValue           10019687 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:000186a4       _PORT_GetIntValue          100196a4 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:000186ea       _PORT_SetIntValue          100196ea f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00018760       _getFakeBalance            10019760 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:000187e7       _getFakeVolume             100197e7 f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001881b       _setFakeVolume             1001981b f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001889a       _PORT_GetFloatValue        1001989a f   PLATFORM_API_WinOS_Ports.obj
+ 0001:0001890c       _PORT_SetFloatValue        1001990c f   PLATFORM_API_WinOS_Ports.obj
+ 0001:000189ac       _PORT_Open                 100199ac f   PLATFORM_API_WinOS_Ports.obj
+ 0001:00018c15       _Java_com_sun_media_sound_MidiInDevice_nOpen@12 10019c15 f   MidiInDevice.obj
+ 0001:00018c59       _Java_com_sun_media_sound_MidiInDevice_nClose@16 10019c59 f   MidiInDevice.obj
+ 0001:00018c66       _Java_com_sun_media_sound_MidiInDevice_nStart@16 10019c66 f   MidiInDevice.obj
+ 0001:00018c8f       _Java_com_sun_media_sound_MidiInDevice_nStop@16 10019c8f f   MidiInDevice.obj
+ 0001:00018c9c       _Java_com_sun_media_sound_MidiInDevice_nGetMessages@16 10019c9c f   MidiInDevice.obj
+ 0001:00018e55       _Java_com_sun_media_sound_MidiInDeviceProvider_nGetNumDevices@8 10019e55 f   MidiInDeviceProvider.obj
+ 0001:00018e5d       _Java_com_sun_media_sound_MidiInDeviceProvider_nGetName@12 10019e5d f   MidiInDeviceProvider.obj
+ 0001:00018eb7       _Java_com_sun_media_sound_MidiOutDeviceProvider_nGetVendor@12 10019eb7 f   MidiOutDeviceProvider.obj
+ 0001:00018eb7       _Java_com_sun_media_sound_MidiInDeviceProvider_nGetVendor@12 10019eb7 f   MidiInDeviceProvider.obj
+ 0001:00018f11       _Java_com_sun_media_sound_MidiInDeviceProvider_nGetDescription@12 10019f11 f   MidiInDeviceProvider.obj
+ 0001:00018f6b       _Java_com_sun_media_sound_MidiInDeviceProvider_nGetVersion@12 10019f6b f   MidiInDeviceProvider.obj
+ 0001:00018fc5       _Java_com_sun_media_sound_MidiOutDevice_nOpen@12 10019fc5 f   MidiOutDevice.obj
+ 0001:00019000       _Java_com_sun_media_sound_MidiOutDevice_nClose@16 1001a000 f   MidiOutDevice.obj
+ 0001:0001900d       _Java_com_sun_media_sound_MidiOutDevice_nGetTimeStamp@16 1001a00d f   MidiOutDevice.obj
+ 0001:0001900d       _Java_com_sun_media_sound_MidiInDevice_nGetTimeStamp@16 1001a00d f   MidiInDevice.obj
+ 0001:0001902b       _Java_com_sun_media_sound_MidiOutDevice_nSendShortMessage@28 1001a02b f   MidiOutDevice.obj
+ 0001:00019042       _Java_com_sun_media_sound_MidiOutDevice_nSendLongMessage@32 1001a042 f   MidiOutDevice.obj
+ 0001:0001908e       _Java_com_sun_media_sound_MidiOutDeviceProvider_nGetNumDevices@8 1001a08e f   MidiOutDeviceProvider.obj
+ 0001:00019096       _Java_com_sun_media_sound_MidiOutDeviceProvider_nGetName@12 1001a096 f   MidiOutDeviceProvider.obj
+ 0001:000190f0       _Java_com_sun_media_sound_MidiOutDeviceProvider_nGetDescription@12 1001a0f0 f   MidiOutDeviceProvider.obj
+ 0001:0001914a       _Java_com_sun_media_sound_MidiOutDeviceProvider_nGetVersion@12 1001a14a f   MidiOutDeviceProvider.obj
+ 0001:000191a4       _GetInternalErrorStr       1001a1a4 f   PlatformMidi.obj
+ 0001:000191e8       _MIDI_IN_InternalGetErrorString 1001a1e8 f   PlatformMidi.obj
+ 0001:0001920c       _MIDI_OUT_InternalGetErrorString 1001a20c f   PlatformMidi.obj
+ 0001:00019230       _MIDI_CreateQueue          1001a230 f   PlatformMidi.obj
+ 0001:00019268       _MIDI_DestroyQueue         1001a268 f   PlatformMidi.obj
+ 0001:00019293       _MIDI_QueueAddShort        1001a293 f   PlatformMidi.obj
+ 0001:0001931c       _MIDI_QueueAddLong         1001a31c f   PlatformMidi.obj
+ 0001:000193c6       _MIDI_QueueRead            1001a3c6 f   PlatformMidi.obj
+ 0001:000193fd       _MIDI_QueueRemove          1001a3fd f   PlatformMidi.obj
+ 0001:0001944a       _MIDI_QueueClear           1001a44a f   PlatformMidi.obj
+ 0001:00019471       _getPortMixerDescription   1001a471 f   PortMixerProvider.obj
+ 0001:000194c6       _Java_com_sun_media_sound_PortMixerProvider_nGetNumDevices@8 1001a4c6 f   PortMixerProvider.obj
+ 0001:000194ce       _Java_com_sun_media_sound_PortMixerProvider_nNewPortMixerInfo@12 1001a4ce f   PortMixerProvider.obj
+ 0001:00019581       _Java_com_sun_media_sound_PortMixer_nOpen@12 1001a581 f   PortMixer.obj
+ 0001:0001958f       _Java_com_sun_media_sound_PortMixer_nClose@16 1001a58f f   PortMixer.obj
+ 0001:000195a6       _Java_com_sun_media_sound_PortMixer_nGetPortCount@16 1001a5a6 f   PortMixer.obj
+ 0001:000195bf       _Java_com_sun_media_sound_PortMixer_nGetPortType@20 1001a5bf f   PortMixer.obj
+ 0001:000195dd       _Java_com_sun_media_sound_PortMixer_nGetPortName@20 1001a5dd f   PortMixer.obj
+ 0001:00019622       _Java_com_sun_media_sound_PortMixer_nControlSetIntValue@20 1001a622 f   PortMixer.obj
+ 0001:0001963e       _Java_com_sun_media_sound_PortMixer_nControlGetIntValue@16 1001a63e f   PortMixer.obj
+ 0001:00019657       _Java_com_sun_media_sound_PortMixer_nControlSetFloatValue@20 1001a657 f   PortMixer.obj
+ 0001:00019677       _Java_com_sun_media_sound_PortMixer_nControlGetFloatValue@16 1001a677 f   PortMixer.obj
+ 0001:00019692       _PORT_NewBooleanControl    1001a692 f   PortMixer.obj
+ 0001:00019722       _PORT_NewCompoundControl   1001a722 f   PortMixer.obj
+ 0001:000197ec       _PORT_NewFloatControl      1001a7ec f   PortMixer.obj
+ 0001:000198f0       _PORT_AddControl           1001a8f0 f   PortMixer.obj
+ 0001:0001991c       _Java_com_sun_media_sound_PortMixer_nGetControls@24 1001a91c f   PortMixer.obj
+ 0001:000199b0       __ftol2                    1001a9b0 f   MSVCRT:ftol2.obj
+ 0001:00019a30       __alloca_probe             1001aa30     MSVCRT:chkstk.obj
+ 0001:00019a30       __chkstk                   1001aa30 f   MSVCRT:chkstk.obj
+ 0001:00019a70       __aulldiv                  1001aa70 f   MSVCRT:ulldiv.obj
+ 0001:00019ad8       _memset                    1001aad8 f   MSVCRT:MSVCR71.dll
+ 0001:00019ade       _memcpy                    1001aade f   MSVCRT:MSVCR71.dll
+ 0001:00019ae4       __onexit                   1001aae4 f   MSVCRT:atonexit.obj
+ 0001:00019b0a       _atexit                    1001ab0a f   MSVCRT:atonexit.obj
+ 0001:00019b20       __allmul                   1001ab20 f   MSVCRT:llmul.obj
+ 0001:00019b54       _strcpy                    1001ab54 f   MSVCRT:MSVCR71.dll
+ 0001:00019b5a       __CRT_INIT@12              1001ab5a f   MSVCRT:crtdll.obj
+ 0001:00019c18       __DllMainCRTStartup@12     1001ac18 f   MSVCRT:crtdll.obj
+ 0001:00019cfc       ___dllonexit               1001acfc f   MSVCRT:MSVCR71.dll
+ 0001:00019d02       __initterm                 1001ad02 f   MSVCRT:MSVCR71.dll
+ 0001:00019d08       __RTC_Initialize           1001ad08 f   MSVCRT:initsect.obj
+ 0001:00019d4c       __RTC_Terminate            1001ad4c f   MSVCRT:initsect.obj
+ 0001:00019d90       ___CppXcptFilter           1001ad90 f   MSVCRT:MSVCR71.dll
+ 0001:00019d96       _DllMain@12                1001ad96 f   MSVCRT:dllmain.obj
+ 0001:00019db8       __SEH_prolog               1001adb8 f   MSVCRT:sehprolg.obj
+ 0001:00019df3       __SEH_epilog               1001adf3 f   MSVCRT:sehprolg.obj
+ 0001:00019e04       __except_handler3          1001ae04 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__DeleteCriticalSection@4 1001b000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__InitializeCriticalSection@4 1001b004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__CreateThread@24     1001b008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__CreateEventA@16     1001b00c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__WaitForSingleObject@8 1001b010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__EnterCriticalSection@4 1001b014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__LeaveCriticalSection@4 1001b018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__SetEvent@4          1001b01c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetVersion@0        1001b020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__SetFilePointer@16   1001b024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__WriteFile@20        1001b028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__ReadFile@20         1001b02c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__CreateFileA@28      1001b030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__CloseHandle@4       1001b034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__Sleep@4             1001b038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__GlobalSize@4        1001b03c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__IsBadReadPtr@8      1001b040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__GlobalHandle@4      1001b044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__GlobalUnlock@4      1001b048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__GlobalFree@4        1001b04c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__GlobalAlloc@8       1001b050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__GlobalLock@4        1001b054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__DisableThreadLibraryCalls@4 1001b058     kernel32:KERNEL32.dll
+ 0002:0000005c       \177KERNEL32_NULL_THUNK_DATA 1001b05c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp____dllonexit         1001b060     MSVCRT:MSVCR71.dll
+ 0002:00000064       __imp___except_handler3    1001b064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp____CppXcptFilter     1001b068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp___adjust_fdiv        1001b06c     MSVCRT:MSVCR71.dll
+ 0002:00000070       __imp___initterm           1001b070     MSVCRT:MSVCR71.dll
+ 0002:00000074       __imp___onexit             1001b074     MSVCRT:MSVCR71.dll
+ 0002:00000078       __imp__strcpy              1001b078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp__sprintf             1001b07c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp__strncpy             1001b080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp__memcpy              1001b084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp__memset              1001b088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp__malloc              1001b08c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp__free                1001b090     MSVCRT:MSVCR71.dll
+ 0002:00000094       \177MSVCR71_NULL_THUNK_DATA 1001b094     MSVCRT:MSVCR71.dll
+ 0002:00000098       __imp__midiOutReset@4      1001b098     winmm:WINMM.dll
+ 0002:0000009c       __imp__midiOutLongMsg@12   1001b09c     winmm:WINMM.dll
+ 0002:000000a0       __imp__midiOutPrepareHeader@12 1001b0a0     winmm:WINMM.dll
+ 0002:000000a4       __imp__mixerGetNumDevs@0   1001b0a4     winmm:WINMM.dll
+ 0002:000000a8       __imp__mixerGetLineInfoA@12 1001b0a8     winmm:WINMM.dll
+ 0002:000000ac       __imp__midiInGetNumDevs@0  1001b0ac     winmm:WINMM.dll
+ 0002:000000b0       __imp__midiOutClose@4      1001b0b0     winmm:WINMM.dll
+ 0002:000000b4       __imp__mixerClose@4        1001b0b4     winmm:WINMM.dll
+ 0002:000000b8       __imp__mixerGetControlDetailsA@12 1001b0b8     winmm:WINMM.dll
+ 0002:000000bc       __imp__mixerSetControlDetails@12 1001b0bc     winmm:WINMM.dll
+ 0002:000000c0       __imp__mixerOpen@20        1001b0c0     winmm:WINMM.dll
+ 0002:000000c4       __imp__midiOutOpen@20      1001b0c4     winmm:WINMM.dll
+ 0002:000000c8       __imp__midiOutShortMsg@8   1001b0c8     winmm:WINMM.dll
+ 0002:000000cc       __imp__midiOutUnprepareHeader@12 1001b0cc     winmm:WINMM.dll
+ 0002:000000d0       __imp__midiOutGetDevCapsA@12 1001b0d0     winmm:WINMM.dll
+ 0002:000000d4       __imp__midiOutGetNumDevs@0 1001b0d4     winmm:WINMM.dll
+ 0002:000000d8       __imp__midiOutGetErrorTextA@12 1001b0d8     winmm:WINMM.dll
+ 0002:000000dc       __imp__midiInStop@4        1001b0dc     winmm:WINMM.dll
+ 0002:000000e0       __imp__midiInGetDevCapsA@12 1001b0e0     winmm:WINMM.dll
+ 0002:000000e4       __imp__midiInStart@4       1001b0e4     winmm:WINMM.dll
+ 0002:000000e8       __imp__midiInReset@4       1001b0e8     winmm:WINMM.dll
+ 0002:000000ec       __imp__midiInClose@4       1001b0ec     winmm:WINMM.dll
+ 0002:000000f0       __imp__midiInUnprepareHeader@12 1001b0f0     winmm:WINMM.dll
+ 0002:000000f4       __imp__midiInPrepareHeader@12 1001b0f4     winmm:WINMM.dll
+ 0002:000000f8       __imp__mixerGetDevCapsA@12 1001b0f8     winmm:WINMM.dll
+ 0002:000000fc       __imp__midiInGetErrorTextA@12 1001b0fc     winmm:WINMM.dll
+ 0002:00000100       __imp__midiInOpen@20       1001b100     winmm:WINMM.dll
+ 0002:00000104       __imp__midiInAddBuffer@12  1001b104     winmm:WINMM.dll
+ 0002:00000108       __imp__waveInClose@4       1001b108     winmm:WINMM.dll
+ 0002:0000010c       __imp__waveInGetDevCapsA@12 1001b10c     winmm:WINMM.dll
+ 0002:00000110       __imp__waveInGetNumDevs@0  1001b110     winmm:WINMM.dll
+ 0002:00000114       __imp__waveInStop@4        1001b114     winmm:WINMM.dll
+ 0002:00000118       __imp__waveInOpen@24       1001b118     winmm:WINMM.dll
+ 0002:0000011c       __imp__waveInPrepareHeader@12 1001b11c     winmm:WINMM.dll
+ 0002:00000120       __imp__waveInAddBuffer@12  1001b120     winmm:WINMM.dll
+ 0002:00000124       __imp__waveInStart@4       1001b124     winmm:WINMM.dll
+ 0002:00000128       __imp__waveInReset@4       1001b128     winmm:WINMM.dll
+ 0002:0000012c       __imp__waveInUnprepareHeader@12 1001b12c     winmm:WINMM.dll
+ 0002:00000130       __imp__waveOutOpen@24      1001b130     winmm:WINMM.dll
+ 0002:00000134       __imp__timeBeginPeriod@4   1001b134     winmm:WINMM.dll
+ 0002:00000138       __imp__waveOutClose@4      1001b138     winmm:WINMM.dll
+ 0002:0000013c       __imp__timeEndPeriod@4     1001b13c     winmm:WINMM.dll
+ 0002:00000140       __imp__waveOutReset@4      1001b140     winmm:WINMM.dll
+ 0002:00000144       __imp__waveOutGetPosition@12 1001b144     winmm:WINMM.dll
+ 0002:00000148       __imp__waveOutPrepareHeader@12 1001b148     winmm:WINMM.dll
+ 0002:0000014c       __imp__waveOutWrite@12     1001b14c     winmm:WINMM.dll
+ 0002:00000150       __imp__waveOutUnprepareHeader@12 1001b150     winmm:WINMM.dll
+ 0002:00000154       __imp__timeGetTime@0       1001b154     winmm:WINMM.dll
+ 0002:00000158       __imp__waveOutGetNumDevs@0 1001b158     winmm:WINMM.dll
+ 0002:0000015c       __imp__mixerGetLineControlsA@12 1001b15c     winmm:WINMM.dll
+ 0002:00000160       __imp__waveOutGetDevCapsA@12 1001b160     winmm:WINMM.dll
+ 0002:00000164       \177WINMM_NULL_THUNK_DATA  1001b164     winmm:WINMM.dll
+ 0002:0000018c       ??_C@_05PCJCMMHD@sleep?$AA@ 1001b18c     Utilities.obj
+ 0002:00000194       ??_C@_04OHLIFDMD@?$CIJ?$CJV?$AA@ 1001b194     Utilities.obj
+ 0002:0000019c       ??_C@_0BB@NOKBFPFO@java?1lang?1Thread?$AA@ 1001b19c     Utilities.obj
+ 0002:000001b0       ??_C@_0BB@MLKPAFAP@Unexpected?5Error?$AA@ 1001b1b0     Utilities.obj
+ 0002:000001c4       ??_C@_0BA@FHPFPJPA@General?5Failure?$AA@ 1001b1c4     Utilities.obj
+ 0002:000001d4       ??_C@_0O@FNODIMCI@Bad?5File?5Type?$AA@ 1001b1d4     Utilities.obj
+ 0002:000001e4       ??_C@_0P@IJNHHALM@No?5Free?5Voices?$AA@ 1001b1e4     Utilities.obj
+ 0002:000001f4       ??_C@_0BB@EGELJFOB@Buffer?5Too?5Small?$AA@ 1001b1f4     Utilities.obj
+ 0002:00000208       ??_C@_0L@MHLPMCNH@Not?5Set?5Up?$AA@ 1001b208     Utilities.obj
+ 0002:00000214       ??_C@_0P@JJAAIKB@Not?5Re?9entrant?$AA@ 1001b214     Utilities.obj
+ 0002:00000224       ??_C@_08EFFMLFPD@Bad?5File?$AA@ 1001b224     Utilities.obj
+ 0002:00000230       ??_C@_0BH@LNPIJMBG@Too?5Many?5Songs?5Playing?$AA@ 1001b230     Utilities.obj
+ 0002:00000248       ??_C@_09HKLOAMI@No?5Volume?$AA@ 1001b248     Utilities.obj
+ 0002:00000254       ??_C@_0O@KJPNGCIC@Still?5Playing?$AA@ 1001b254     Utilities.obj
+ 0002:00000264       ??_C@_0BA@JLAFOKNK@No?5Song?5Playing?$AA@ 1001b264     Utilities.obj
+ 0002:00000274       ??_C@_0BJ@PLPAFCFI@Audio?5Device?5Unavailable?$AA@ 1001b274     Utilities.obj
+ 0002:00000290       ??_C@_0BA@KDNLMHNA@Already?5Resumed?$AA@ 1001b290     Utilities.obj
+ 0002:000002a0       ??_C@_0P@JMDFJIJJ@Already?5Paused?$AA@ 1001b2a0     Utilities.obj
+ 0002:000002b0       ??_C@_0O@CHGOIDDE@Bad?5Midi?5Data?$AA@ 1001b2b0     Utilities.obj
+ 0002:000002c0       ??_C@_0P@EKLPPDCN@Bad?5Instrument?$AA@ 1001b2c0     Utilities.obj
+ 0002:000002d0       ??_C@_0BA@DBMEBIOL@Bad?5Sample?5Data?$AA@ 1001b2d0     Utilities.obj
+ 0002:000002e0       ??_C@_0O@BPALFKAJ@Out?5of?5Memory?$AA@ 1001b2e0     Utilities.obj
+ 0002:000002f0       ??_C@_0P@OIOCKOHO@Bad?5Parameters?$AA@ 1001b2f0     Utilities.obj
+ 0002:00000300       ??_C@_0CC@OJCIKPLO@STREAM_STOP_PLAY?5is?5not?5an?5error@ 1001b300     Utilities.obj
+ 0002:00000324       ??_C@_0BI@BGCPLPAE@NO_ERR?5is?5not?5an?5error?4?$AA@ 1001b324     Utilities.obj
+ 0002:0000033c       ??_C@_05FAGFPHJG@start?$AA@ 1001b33c     MixerThread.obj
+ 0002:00000344       ??_C@_07BIEIMCKD@unpause?$AA@ 1001b344     MixerThread.obj
+ 0002:0000034c       ??_C@_03GAEACAIP@?$CI?$CJV?$AA@ 1001b34c     MixerThread.obj
+ 0002:00000350       ??_C@_0BD@KALMNHHG@getNewThreadObject?$AA@ 1001b350     MixerThread.obj
+ 0002:00000364       ??_C@_0BI@NGBJHJOE@getExistingThreadObject?$AA@ 1001b364     MixerThread.obj
+ 0002:0000037c       ??_C@_0CF@CCJNHGPD@?$CIJ?$CJLcom?1sun?1media?1sound?1MixerThr@ 1001b37c     MixerThread.obj
+ 0002:000003a4       ??_C@_0CA@KIHIIFFK@com?1sun?1media?1sound?1MixerThread?$AA@ 1001b3a4     MixerThread.obj
+ 0002:000003c4       ??_C@_0CN@NFCAPHID@javax?1sound?1sampled?1LineUnavaila@ 1001b3c4     HeadspaceMixer.obj
+ 0002:000003f4       ??_C@_0BL@ENCPOIKC@java?1lang?1OutOfMemoryError?$AA@ 1001b3f4     HeadspaceMixer.obj
+ 0002:00000410       __real@00000000            1001b410     HeadspaceMixer.obj
+ 0002:00000414       ??_C@_0BC@BFOGPGCJ@callbackSampleEnd?$AA@ 1001b414     MixerClip.obj
+ 0002:00000428       ??_C@_0BD@NEGBONJJ@callbackSampleLoop?$AA@ 1001b428     MixerClip.obj
+ 0002:0000043c       ??_C@_03MMPFGPID@?$CI?$CJZ?$AA@ 1001b43c     MixerClip.obj
+ 0002:00000440       __real@47800000            1001b440     MixerClip.obj
+ 0002:00000444       __real@42fe0000            1001b444     MixerClip.obj
+ 0002:00000448       __real@427c0000            1001b448     MixerClip.obj
+ 0002:0000044c       __real@3c010204            1001b44c     MixerClip.obj
+ 0002:00000450       __real@3c820821            1001b450     MixerClip.obj
+ 0002:00000454       ??_C@_0L@CIAPDGLE@dataBuffer?$AA@ 1001b454     MixerSourceLine.obj
+ 0002:00000460       ??_C@_02KCBIMKDL@?$FLB?$AA@ 1001b460     MixerSourceLine.obj
+ 0002:00000464       ??_C@_0BH@PAHOCMDI@callbackStreamInactive?$AA@ 1001b464     MixerSourceLine.obj
+ 0002:0000047c       ??_C@_0BF@FAGCPDGF@callbackStreamActive?$AA@ 1001b47c     MixerSourceLine.obj
+ 0002:00000494       ??_C@_0BC@JCOLIKNK@callbackStreamEOM?$AA@ 1001b494     MixerSourceLine.obj
+ 0002:000004a8       ??_C@_0BD@LKOICGLK@callbackStreamStop?$AA@ 1001b4a8     MixerSourceLine.obj
+ 0002:000004bc       ??_C@_0BE@IDAGKNBL@callbackStreamStart?$AA@ 1001b4bc     MixerSourceLine.obj
+ 0002:000004d0       ??_C@_0BG@NKKNMKL@callbackStreamGetData?$AA@ 1001b4d0     MixerSourceLine.obj
+ 0002:000004e8       ??_C@_06CKIADKPD@?$CI?$FLBI?$CJI?$AA@ 1001b4e8     MixerSourceLine.obj
+ 0002:000004f0       ??_C@_0BG@OPMFHPMP@callbackStreamDestroy?$AA@ 1001b4f0     MixerSourceLine.obj
+ 0002:00000508       ??_C@_0BN@EHAAAPLB@callbackCaptureStreamDestroy?$AA@ 1001b508     SimpleInputDevice.obj
+ 0002:00000528       ??_C@_0BG@BMAKHIFH@callbackStreamPutData?$AA@ 1001b528     SimpleInputDevice.obj
+ 0002:00000540       ??_C@_06OHNKDEGN@?$CI?$FLBI?$CJV?$AA@ 1001b540     SimpleInputDevice.obj
+ 0002:00000548       __real@4f800000            1001b548     SimpleInputDevice.obj
+ 0002:0000054c       ??_C@_06FALKBLGB@?$DMinit?$DO?$AA@ 1001b54c     SimpleInputDevice.obj
+ 0002:00000554       ??_C@_0DE@NJPDGLDO@?$CILjavax?1sound?1sampled?1AudioForma@ 1001b554     SimpleInputDevice.obj
+ 0002:00000588       ??_C@_0CA@BNKPHABF@javax?1sound?1sampled?1AudioFormat?$AA@ 1001b588     SimpleInputDevice.obj
+ 0002:000005a8       ??_C@_0L@MNLDOJKN@addElement?$AA@ 1001b5a8     SimpleInputDevice.obj
+ 0002:000005b4       ??_C@_0BG@JLFLBLJI@?$CILjava?1lang?1Object?$DL?$CJV?$AA@ 1001b5b4     SimpleInputDevice.obj
+ 0002:000005cc       ??_C@_0CI@OCLIDDHD@Another?5capture?5device?5is?5alread@ 1001b5cc     SimpleInputDevice.obj
+ 0002:000005f4       __real@473b8000            1001b5f4     SimpleInputDevice.obj
+ 0002:000005f8       __real@472c4400            1001b5f8     SimpleInputDevice.obj
+ 0002:000005fc       __real@46ac4400            1001b5fc     SimpleInputDevice.obj
+ 0002:00000600       __real@462c4400            1001b600     SimpleInputDevice.obj
+ 0002:00000604       __real@45fa0000            1001b604     SimpleInputDevice.obj
+ 0002:00000608       ??_C@_0P@JELLBOOJ@Unknown?5Vendor?$AA@ 1001b608     SimpleInputDeviceProvider.obj
+ 0002:00000618       ??_C@_0BF@LIAFPILD@No?5details?5available?$AA@ 1001b618     SimpleInputDeviceProvider.obj
+ 0002:00000630       ??_C@_0BA@LFHNEBGG@Unknown?5Version?$AA@ 1001b630     SimpleInputDeviceProvider.obj
+ 0002:00000640       ??_C@_0EA@KAFOLCCP@?$CILcom?1sun?1media?1sound?1HeadspaceS@ 1001b640     HeadspaceSoundbank.obj
+ 0002:00000680       ??_C@_0CI@MGKMFJFJ@com?1sun?1media?1sound?1HeadspaceIns@ 1001b680     HeadspaceSoundbank.obj
+ 0002:000006a8       ??_C@_0EB@CDBLEBFH@?$CILcom?1sun?1media?1sound?1HeadspaceS@ 1001b6a8     HeadspaceSoundbank.obj
+ 0002:000006ec       ??_C@_0CE@IANONGBO@com?1sun?1media?1sound?1HeadspaceSam@ 1001b6ec     HeadspaceSoundbank.obj
+ 0002:00000710       ??_C@_0BI@LICCJDOF@callbackControllerEvent?$AA@ 1001b710     MixerSequencer.obj
+ 0002:00000728       ??_C@_07CBAIJIEJ@?$CIIIII?$CJV?$AA@ 1001b728     MixerSequencer.obj
+ 0002:00000730       ??_C@_0BC@DOCDKPMH@callbackMetaEvent?$AA@ 1001b730     MixerSequencer.obj
+ 0002:00000744       ??_C@_08EKGKJAPD@?$CIIII?$FLB?$CJV?$AA@ 1001b744     MixerSequencer.obj
+ 0002:00000750       ??_C@_0BA@CLBFJIMI@callbackSongEnd?$AA@ 1001b750     MixerSequencer.obj
+ 0002:00000760       __real@37800000            1001b760     MixerSequencer.obj
+ 0002:00000764       ??_C@_09EHCBEJNP@?5jsoundds?$AA@ 1001b764     Platform.obj
+ 0002:0000076e       ??_C@_00CNPNBAHC@?$AA@     1001b76e     DriverTools.obj
+ 0002:00000770       __real@46fffe00            1001b770     GenSeq.obj
+ 0002:00000774       __real@42800000            1001b774     GenSeq.obj
+ 0002:00000778       __real@42700000            1001b778     GenSeq.obj
+ 0002:0000077c       ??_C@_07CPDHLLJG@loopend?$AA@ 1001b77c     GenSeq.obj
+ 0002:00000784       ??_C@_0L@NAJHPBEN@loopstart?$DN?$AA@ 1001b784     GenSeq.obj
+ 0002:00000790       ??_C@_09KPIPPGPE@loopstart?$AA@ 1001b790     GenSeq.obj
+ 0002:00002374       ??_C@_0BN@LFCLFIAB@WinOS?0waveOut?0multi?5threaded?$AA@ 1001d374     HAE_API_WinOS.obj
+ 0002:00002394       ??_C@_05KBEOJPB@?$CFd?4?$CFd?$AA@ 1001d394     PLATFORM_API_WinOS_MidiIn.obj
+ 0002:0000239c       ??_C@_0BD@GIDICAOP@External?5MIDI?5Port?$AA@ 1001d39c     PLATFORM_API_WinOS_MidiOut.obj
+ 0002:000023b0       ??_C@_0BP@HFJPHHGA@Internal?5synthesizer?5?$CIgeneric?$CJ?$AA@ 1001d3b0     PLATFORM_API_WinOS_MidiOut.obj
+ 0002:000023d0       ??_C@_0CB@BKPHBOPD@Internal?5square?5wave?5synthesizer@ 1001d3d0     PLATFORM_API_WinOS_MidiOut.obj
+ 0002:000023f4       ??_C@_0BI@BENILECD@Internal?5FM?5synthesizer?$AA@ 1001d3f4     PLATFORM_API_WinOS_MidiOut.obj
+ 0002:0000240c       ??_C@_0BE@GKHJJDH@Windows?5MIDI_MAPPER?$AA@ 1001d40c     PLATFORM_API_WinOS_MidiOut.obj
+ 0002:00002420       ??_C@_0BO@JHOFOEDM@Internal?5software?5synthesizer?$AA@ 1001d420     PLATFORM_API_WinOS_MidiOut.obj
+ 0002:00002440       ??_C@_0L@CPKCBHCN@Port?5Mixer?$AA@ 1001d440     PLATFORM_API_WinOS_Ports.obj
+ 0002:0000244c       __real@40000000            1001d44c     PLATFORM_API_WinOS_Ports.obj
+ 0002:00002450       __real@3f800000            1001d450     PLATFORM_API_WinOS_Ports.obj
+ 0002:00002454       __real@bf800000            1001d454     PLATFORM_API_WinOS_Ports.obj
+ 0002:00002458       __real@3f000000            1001d458     PLATFORM_API_WinOS_Ports.obj
+ 0002:0000245c       ??_C@_0CK@BNIEGIBB@javax?1sound?1midi?1MidiUnavailable@ 1001d45c     MidiInDevice.obj
+ 0002:00002488       ??_C@_0BE@CLHHHCK@callbackLongMessage?$AA@ 1001d488     MidiInDevice.obj
+ 0002:0000249c       ??_C@_06PFGPJLID@?$CI?$FLBJ?$CJV?$AA@ 1001d49c     MidiInDevice.obj
+ 0002:000024a4       ??_C@_0BF@LEBFAHIB@callbackShortMessage?$AA@ 1001d4a4     MidiInDevice.obj
+ 0002:000024bc       ??_C@_05NPPFNMNL@?$CIIJ?$CJV?$AA@ 1001d4bc     MidiInDevice.obj
+ 0002:000024c4       ??_C@_0N@JNOBNNBP@Unknown?5name?$AA@ 1001d4c4     MidiInDeviceProvider.obj
+ 0002:000024d4       ??_C@_0P@FLAGCHHF@Unknown?5vendor?$AA@ 1001d4d4     MidiInDeviceProvider.obj
+ 0002:000024e4       ??_C@_0BA@EMALCDDA@Unknown?5version?$AA@ 1001d4e4     MidiInDeviceProvider.obj
+ 0002:000024f4       ??_C@_0O@BNNCBLEN@out?5of?5memory?$AA@ 1001d4f4     PlatformMidi.obj
+ 0002:00002504       ??_C@_0BP@CMLKCPDD@internal?5error?3?5invalid?5handle?$AA@ 1001d504     PlatformMidi.obj
+ 0002:00002524       ??_C@_0BC@GOGOPKAK@invalid?5device?5ID?$AA@ 1001d524     PlatformMidi.obj
+ 0002:00002538       ??_C@_0BG@PNPJGPKL@feature?5not?5supported?$AA@ 1001d538     PlatformMidi.obj
+ 0002:00002550       ??_C@_0N@FMCAPCBL@Unknown?5Name?$AA@ 1001d550     PortMixerProvider.obj
+ 0002:00002560       ??_C@_0EN@JGCFGEEO@?$CIILjava?1lang?1String?$DLLjava?1lang?1S@ 1001d560     PortMixerProvider.obj
+ 0002:000025b0       ??_C@_0DE@HOKEHCEP@com?1sun?1media?1sound?1PortMixerPro@ 1001d5b0     PortMixerProvider.obj
+ 0002:000025e4       ??_C@_06HJGPBJLE@Select?$AA@ 1001d5e4     PortMixer.obj
+ 0002:000025ec       ??_C@_04IOCNJLNK@Mute?$AA@ 1001d5ec     PortMixer.obj
+ 0002:000025f4       ??_C@_0BH@DOGHFNPN@?$CIJLjava?1lang?1String?$DL?$CJV?$AA@ 1001d5f4     PortMixer.obj
+ 0002:0000260c       ??_C@_0CH@PANCBAOC@com?1sun?1media?1sound?1PortMixer$Bo@ 1001d60c     PortMixer.obj
+ 0002:00002634       ??_C@_0BM@GDMEENBL@javax?1sound?1sampled?1Control?$AA@ 1001d634     PortMixer.obj
+ 0002:00002650       ??_C@_0DE@OMOINGJL@?$CILjava?1lang?1String?$DL?$FLLjavax?1sound@ 1001d650     PortMixer.obj
+ 0002:00002684       ??_C@_0CH@ECCNHGI@com?1sun?1media?1sound?1PortMixer$Co@ 1001d684     PortMixer.obj
+ 0002:000026ac       ??_C@_0BL@HJNALIL@?$CIJIFFFLjava?1lang?1String?$DL?$CJV?$AA@ 1001d6ac     PortMixer.obj
+ 0002:000026c8       ??_C@_0CM@PEFBHGMP@?$CIJLjava?1lang?1String?$DLFFFLjava?1lan@ 1001d6c8     PortMixer.obj
+ 0002:000026f4       ??_C@_0CI@OPKAAKLF@com?1sun?1media?1sound?1PortMixer$Fl@ 1001d6f4     PortMixer.obj
+ 0002:00002750       __load_config_used         1001d750     MSVCRT:loadcfg.obj
+ 0002:00002810       ___safe_se_handler_table   1001d810     <linker-defined>
+ 0002:00002814       ___rtc_iaa                 1001d814     MSVCRT:initsect.obj
+ 0002:00002818       ___rtc_izz                 1001d818     MSVCRT:initsect.obj
+ 0002:0000281c       ___rtc_taa                 1001d81c     MSVCRT:initsect.obj
+ 0002:00002820       ___rtc_tzz                 1001d820     MSVCRT:initsect.obj
+ 0002:00002824       __IMPORT_DESCRIPTOR_WINMM  1001d824     winmm:WINMM.dll
+ 0002:00002838       __IMPORT_DESCRIPTOR_MSVCR71 1001d838     MSVCRT:MSVCR71.dll
+ 0002:0000284c       __IMPORT_DESCRIPTOR_KERNEL32 1001d84c     kernel32:KERNEL32.dll
+ 0002:00002860       __NULL_IMPORT_DESCRIPTOR   1001d860     winmm:WINMM.dll
+ 0003:00000000       ___xc_a                    10021000     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xc_z                    10021008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_a                    1002100c     MSVCRT:cinitexe.obj
+ 0003:00000010       ___xi_z                    10021010     MSVCRT:cinitexe.obj
+ 0003:00000020       _currentInputDeviceIndex   10021020     SimpleInputDevice.obj
+ 0003:00000210       ___security_cookie         10021210     MSVCRT:seccook.obj
+ 0003:00000238       _globalSystemDeviceObj     10021238     HeadspaceMixer.obj
+ 0003:0000023c       _globalSystemDeviceClass   1002123c     HeadspaceMixer.obj
+ 0003:00000240       _callbackOutputProcMethodID 10021240     HeadspaceMixer.obj
+ 0003:00000244       _outputProcByteArray       10021244     HeadspaceMixer.obj
+ 0003:00000248       _g_mixerClipClass          10021248     MixerClip.obj
+ 0003:0000024c       _g_sampleLoopMethodID      1002124c     MixerClip.obj
+ 0003:00000250       _g_sampleEndMethodID       10021250     MixerClip.obj
+ 0003:00000254       _g_mixerSourceLineClass    10021254     MixerSourceLine.obj
+ 0003:00000258       _g_destroyMethodID         10021258     MixerSourceLine.obj
+ 0003:0000025c       _g_getDataMethodID         1002125c     MixerSourceLine.obj
+ 0003:00000260       _g_startMethodID           10021260     MixerSourceLine.obj
+ 0003:00000264       _g_stopMethodID            10021264     MixerSourceLine.obj
+ 0003:00000268       _g_eomMethodID             10021268     MixerSourceLine.obj
+ 0003:0000026c       _g_activeMethodID          1002126c     MixerSourceLine.obj
+ 0003:00000270       _g_inactiveMethodID        10021270     MixerSourceLine.obj
+ 0003:00000274       _g_dataArrayFieldID        10021274     MixerSourceLine.obj
+ 0003:00000278       _reference                 10021278     SimpleInputDevice.obj
+ 0003:0000027c       _globalCaptureDeviceClass  1002127c     SimpleInputDevice.obj
+ 0003:00000280       _callbackPutDataMethodID   10021280     SimpleInputDevice.obj
+ 0003:00000284       _callbackDestroyMethodID   10021284     SimpleInputDevice.obj
+ 0003:00000288       _globalArray               10021288     SimpleInputDevice.obj
+ 0003:0000028c       _callbacksOk               1002128c     SimpleInputDevice.obj
+ 0003:00000290       _currentCallbacks          10021290     SimpleInputDevice.obj
+ 0003:00000294       _g_mixerSequencerClass     10021294     MixerSequencer.obj
+ 0003:00000298       _g_songEndMethodID         10021298     MixerSequencer.obj
+ 0003:0000029c       _g_metaEventMethodID       1002129c     MixerSequencer.obj
+ 0003:000002a0       _g_controllerEventMethodID 100212a0     MixerSequencer.obj
+ 0003:000002b0       _MusicGlobals              100212b0     GenSynth.obj
+ 0003:00000320       _g_checkpointMicros        10021320     HAE_API_WinOS.obj
+ 0003:00000328       _g_checkpointSyncCount     10021328     HAE_API_WinOS.obj
+ 0003:00000440       ?data@MidiIn_OpenHelper@@1VData@1@A 10021440     PLATFORM_API_WinOS_MidiIn.obj
+ 0003:0000053c       _g_audioFramesToGenerate   1002153c     <common>
+ 0003:00000540       _g_audioFramesPerBuffer    10021540     <common>
+ 0003:00000544       _g_channels                10021544     <common>
+ 0003:00000548       _g_sampleRate              10021548     <common>
+ 0003:0000054c       _bufferSizeInBytes         1002154c     <common>
+ 0003:00000550       _g_sampleSizeInBits        10021550     <common>
+ 0003:00000554       _g_encoding                10021554     <common>
+ 0003:00000558       _mixerQuality              10021558     <common>
+ 0003:0000055c       _mixerTerp                 1002155c     <common>
+ 0003:00000560       _mixerModifiers            10021560     <common>
+ 0003:00000564       __adjust_fdiv              10021564     <common>
+ 0003:00000568       __pRawDllMain              10021568     <common>
+ 0003:0000056c       ___onexitend               1002156c     <common>
+ 0003:00000570       ___onexitbegin             10021570     <common>
+
+ entry point at        0001:00019c18
+
+ Static symbols
+
+ 0001:00000336       _AudioTaskCallbackProc     10001336 f   HeadspaceMixer.obj
+ 0001:0000069a       _initializeJavaClipCallbackVars 1000169a f   MixerClip.obj
+ 0001:00000702       _PV_SampleLoopDoneCallback 10001702 f   MixerClip.obj
+ 0001:00000729       _PV_SampleDoneCallback     10001729 f   MixerClip.obj
+ 0001:000009ec       _initializeJavaCallbackVars 100019ec f   MixerSourceLine.obj
+ 0001:00000c33       _MixerSourceLineCallbackProc 10001c33 f   MixerSourceLine.obj
+ 0001:00000ef5       _CallToJavaStreamHaveData  10001ef5 f   SimpleInputDevice.obj
+ 0001:00000f7a       _AudioInputCallbackProc    10001f7a f   SimpleInputDevice.obj
+ 0001:0000218f       _initializeJavaSequencerCallbackVars 1000318f f   MixerSequencer.obj
+ 0001:00002213       _PV_SongEndCallback        10003213 f   MixerSequencer.obj
+ 0001:00002240       _PV_MetaEventCallback      10003240 f   MixerSequencer.obj
+ 0001:0000229b       _PV_ControllerEventCallback 1000329b f   MixerSequencer.obj
+ 0001:00002d0f       _PV_CaptureAudioStreamGetFromReference 10003d0f f   GenAudioCaptureStreams.obj
+ 0001:00002d2e       _PV_FreeCaptureAudioStream 10003d2e f   GenAudioCaptureStreams.obj
+ 0001:00002ecf       _PV_AudioCaptureCallback   10003ecf f   GenAudioCaptureStreams.obj
+ 0001:000030be       _PV_AudioStreamGetFromReference 100040be f   GenAudioStreams.obj
+ 0001:000030e0       _PV_AddStream              100040e0 f   GenAudioStreams.obj
+ 0001:00003117       _PV_FreeStream             10004117 f   GenAudioStreams.obj
+ 0001:000031a8       _PV_FillBufferEndWithSilence 100041a8 f   GenAudioStreams.obj
+ 0001:00003200       _PV_CopyLastSamplesToFirst 10004200 f   GenAudioStreams.obj
+ 0001:00003244       _PV_AudioBufferFinished    10004244 f   GenAudioStreams.obj
+ 0001:0000325a       _PV_AudioBufferCallback    1000425a f   GenAudioStreams.obj
+ 0001:000032fc       _PV_StartStreamBuffers     100042fc f   GenAudioStreams.obj
+ 0001:00003334       _PV_PrepareThisBufferForPlaying 10004334 f   GenAudioStreams.obj
+ 0001:000039df       _PV_AudioStreamStopAndFreeNow 100049df f   GenAudioStreams.obj
+ 0001:00004d3c       _PV_GetSampleData          10005d3c f   GenPatch.obj
+ 0001:00004df5       _PV_FindCacheIndexFromPtr  10005df5 f   GenPatch.obj
+ 0001:00004e22       _PV_FreeCacheEntryFromPtr  10005e22 f   GenPatch.obj
+ 0001:00004f5c       _PV_GetSampleFromID        10005f5c f   GenPatch.obj
+ 0001:00005008       _PV_ProcessSampleWithSMOD  10006008 f   GenPatch.obj
+ 0001:0000505f       _PV_GetEnvelopeData        1000605f f   GenPatch.obj
+ 0001:000054d2       _PV_CreateInstrumentFromResource 100064d2 f   GenPatch.obj
+ 0001:00006014       _PV_RunMonoFixedReverb     10007014 f   GenReverb.obj
+ 0001:000066e5       _PV_RunStereoFixedReverb   100076e5 f   GenReverb.obj
+ 0001:00006fab       _PV_SetupFixedReverb       10007fab f   GenReverb.obj
+ 0001:000071cf       _PV_CleanupFixedReverb     100081cf f   GenReverb.obj
+ 0001:00007cd8       _PV_ScaleDivision          10008cd8 f   GenSeq.obj
+ 0001:000080b1       _GM_PrerollSong            100090b1 f   GenSeq.obj
+ 0001:0000818d       _PV_GetMaxVoicesPlayingFromAllSongs 1000918d f   GenSeq.obj
+ 0001:00008686       _PV_SetChannelReverb       10009686 f   GenSeq.obj
+ 0001:00008837       _PV_ConvertPatchBank       10009837 f   GenSeq.obj
+ 0001:0000887b       _PV_DetermineInstrumentToUse 1000987b f   GenSeq.obj
+ 0001:00008a9d       _PV_ProcessRegisteredParameters 10009a9d f   GenSeq.obj
+ 0001:00009081       _PV_GetNextStorableQueueEvent 1000a081 f   GenSeq.obj
+ 0001:00009334       _PV_ProcessExternalMIDIQueue 1000a334 f   GenSeq.obj
+ 0001:000095d0       _PV_ProcessIgorResource    1000a5d0 f   GenSeq.obj
+ 0001:000096b3       _PV_ProcessIgorMeta        1000a6b3 f   GenSeq.obj
+ 0001:000097d3       _PV_ProcessMetaMarkerEvents 1000a7d3 f   GenSeq.obj
+ 0001:000098d5       _PV_ReadVariableLengthMidi 1000a8d5 f   GenSeq.obj
+ 0001:00009f7b       _PV_EndSongChannelNotes    1000af7b f   GenSeq.obj
+ 0001:0000a2c7       _PV_EndSongTrackNotes      1000b2c7 f   GenSeq.obj
+ 0001:0000a60f       _PV_ServeSongFade          1000b60f f   GenSeq.obj
+ 0001:0000b2b2       _PV_CreateSongFromMidi     1000c2b2 f   GenSong.obj
+ 0001:0000b318       _PV_SetTempo               1000c318 f   GenSong.obj
+ 0001:0000b4ec       _PV_ClearSongInstruments   1000c4ec f   GenSong.obj
+ 0001:0000be7d       _PV_GetWaveShape           1000ce7d f   GenSynth.obj
+ 0001:0000bef6       _PV_ServeInstrumentCurves  1000cef6 f   GenSynth.obj
+ 0001:0000c142       _PV_ClearMixBuffers        1000d142 f   GenSynth.obj
+ 0001:0000c1e2       _PV_ProcessSyncronizedVoiceStart 1000d1e2 f   GenSynth.obj
+ 0001:0000ccb4       _PV_EndNotes               1000dcb4 f   GenSynth.obj
+ 0001:0000cd91       _PV_ADSRModule             1000dd91 f   GenSynth.obj
+ 0001:0000cef6       _PV_ServeThisInstrument    1000def6 f   GenSynth.obj
+ 0001:0000d474       _PV_ServeMonoInstruments   1000e474 f   GenSynth.obj
+ 0001:0000d474       _PV_ServeStereoInstruments 1000e474 f   GenSynth.obj
+ 0001:0001092d       _doLZSSDecode              1001192d f   NewNewLZSS.obj
+ 0001:00010aa5       _PV_Swap16BitSamples       10011aa5 f   SampleTools.obj
+ 0001:00010ac9       _PV_GetSoundHeaderPtr      10011ac9 f   SampleTools.obj
+ 0001:00010fd2       _PV_XFileValid             10011fd2 f   X_API.obj
+ 0001:00011002       _PV_AddResourceFileToOpenFiles 10012002 f   X_API.obj
+ 0001:00011037       _PV_RemoveResourceFileFromOpenFiles 10012037 f   X_API.obj
+ 0001:00011382       _PV_GetFilePositionFromMemoryResource 10012382 f   X_API.obj
+ 0001:000113da       _PV_XGetCacheEntry         100123da f   X_API.obj
+ 0001:0001151a       _PV_LowerCase              1001251a f   X_API.obj
+ 0001:0001232b       _PV_Decrypt                1001332b f   X_Decompress.obj
+ 0001:0001238a       _PV_ExpandIma8             1001338a f   X_IMA.obj
+ 0001:00012491       _PV_ExpandIma16            10013491 f   X_IMA.obj
+ 0001:0001259a       _PV_ExpandAiffIma          1001359a f   X_IMA.obj
+ 0001:00016175       _PV_AudioWaveOutFrameThread 10017175 f   HAE_API_WinOS.obj
+ 0001:00019e0a       _$E1                       1001ae0a f   PLATFORM_API_WinOS_MidiIn.obj
+ 0001:00019e20       _$E2                       1001ae20 f   PLATFORM_API_WinOS_MidiIn.obj

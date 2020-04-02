@@ -1,0 +1,4706 @@
+<TITLE>LIBGP MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>GP MESSAGES 100-199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="114"></A>
+<H3>GP MESSAGE #114</H3>
+<H2> ERROR: Regular expression compilation - Internal error (<I>value</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While compiling a regular expression,
+an internal error occurred.
+The message is printed to the standard error and the program is
+exited with
+abort ().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT1><P>
+<H1>GP MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="200"></A>
+<H3>GP MESSAGE #200</H3>
+<H2> ERROR: rex: Bad flag, `<I>flag</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex ,
+a bad command line option
+<I>flag</I>
+was specified on the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command with the correct command line options and arguments.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="201"></A>
+<H3>GP MESSAGE #201</H3>
+<H2> ERROR: rex: Can't open `<I>filename</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to test a regular expression against the data in one or more files,
+the specified file,
+<I>filename</I>,
+could not be opened for reading.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the file exists and has read permission, and re-execute the
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="204"></A>
+<H3>GP MESSAGE #204</H3>
+<H2> ERROR: rex: Pattern too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to compile a regular expression from the pattern file,
+the result of concatenating multiple regular expression patterns
+was too long (greater than 512 characters).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the pattern file to shorten the regular expression patterns,
+and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="205"></A>
+<H3>GP MESSAGE #205</H3>
+<H2> ERROR: rex: Name missing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to compile a regular expression from the pattern file,
+the regular expression pattern name was not found on an input line.
+Input lines must consist of optional white space followed by
+a name and double-quoted pattern, separated by white space.
+The name must begin with an alphabetic or underscore character and contain
+alphanumeric or underscore characters, and
+may be up to 30 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the pattern file and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="206"></A>
+<H3>GP MESSAGE #206</H3>
+<H2> ERROR: rex: Pattern too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to compile a regular expression from the pattern file,
+a regular expression pattern was too long (longer than 512 characters).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the pattern file and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="208"></A>
+<H3>GP MESSAGE #208</H3>
+<H2> ERROR: <I>filename</I> file open error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The program failed to create and/or open the userlog file
+<I>filename</I>
+for writing in append mode.
+This message will be written to the standard error output of
+the program.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the directory for the specified
+<I>filename</I>
+exists and has write permission, and if the file exists,
+that it also has write permission.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+userlog(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="209"></A>
+<H3>GP MESSAGE #209</H3>
+<H2> ERROR: Write error <I>errno</I>, file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The program failed to write a message to the userlog file
+<I>filename</I>,
+with the error value set to
+<I>errno</I>.
+This message will be written to the standard error output of
+the program.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Normally, this indicates that the file system in which the file
+exists is full; in this case, free up space in the file system
+and subsequent userlog messages will succeed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+userlog(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="210"></A>
+<H3>GP MESSAGE #210</H3>
+<H2> ERROR: Failed to reset log prefix, memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The program failed to reset the prefix for the userlog file
+because dynamic space allocation failed.
+The userlog file prefix is not reset, and this message
+will be written to the
+userlog
+using the current prefix value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+userlog(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="211"></A>
+<H3>GP MESSAGE #211</H3>
+<H2> WARN: Process <I>pid</I> died holding VTOC lock.  Lock recovered.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a TUXEDO System/T file system for exclusive access,
+it was discovered that another process had locked the file system
+and died while holding the lock.
+The lock is removed and processing continues.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="212"></A>
+<H3>GP MESSAGE #212</H3>
+<H2> INFO: Could not obtain VTOC lock after 20 attempts.  Lock is held by PID <I>pid</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a TUXEDO System/T file system for exclusive access,
+it was discovered that another process is holding the lock.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the process identifier,
+<I>pid</I>,
+that is printed in the message to determine the process and user
+running the process, using the
+ps
+command.
+After that process has completed, re-execute the command that failed
+waiting for the lock.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="213"></A>
+<H3>GP MESSAGE #213</H3>
+<H2> INFO: Name of VTOC lock file is <I>filename</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a TUXEDO System/T file system for exclusive access,
+it was discovered that another process has locked the file system,
+and the name of the associated lock file,
+<I>filename,</I>
+is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="214"></A>
+<H3>GP MESSAGE #214</H3>
+<H2> ERROR: Null version of xa_open() found non-null info string</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System/T provides a "null" (non-resource manager) version of the
+XA Transaction Interface for linking when a resource manager is not
+associated with a client or server.
+This client or server may only be involved in a group that is configured
+with the
+TMS
+name set to
+TMS
+and no
+OPENINFO
+string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration (TUXCONFIG) such that
+the group is properly
+configured, or associate the client or server with another group,
+or rebuild the client or server with the proper XA interface linked
+in using the -r option of
+buildserver
+or
+buildclient .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclient(1), <Font>buildserver(1), <Font>ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="215"></A>
+<H3>GP MESSAGE #215</H3>
+<H2> WARN: Could not obtain VTOC lock after 80 seconds.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a TUXEDO System/T file system for exclusive access,
+it was discovered that another process is holding the lock.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A subsequent message will indicate the lock file.
+After that process holding the lock has completed, re-execute the command that failed
+waiting for the lock.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="216"></A>
+<H3>GP MESSAGE #216</H3>
+<H2> INFO: Name of VTOC lock file is <I>filename</I>.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a TUXEDO System/T file system for exclusive access,
+it was discovered that another process has locked the file system,
+and the name of the associated lock file,
+<I>filename,</I>
+is printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.  It may be necessary to remove the lock file
+if the process holding the lock has died (or if the machine
+went down while the lock was held).
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT1><P>
+<H1>GP MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>GP MESSAGE #1001</H3>
+<H2> WARN: rex: name <I>pattern_name</I> truncated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to compile a regular expression from the pattern file,
+the regular expression name was longer than 30 characters in length
+and truncated.
+The first 30 characters of the name,
+<I>pattern_name</I>,
+are printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the pattern file and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>GP MESSAGE #1002</H3>
+<H2> ERROR: rex: missing regular expression value for name <I>pattern_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to compile a regular expression from the pattern file,
+the regular expression pattern was not found on an input line.
+Input lines must consist of optional white space followed by
+a name and double-quoted pattern, separated by white space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the pattern file and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>GP MESSAGE #1003</H3>
+<H2> ERROR: rex: unexpected end of file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+rex
+to compile a regular expression from the pattern file,
+an unexpected end-of-file was found while reading
+a regular expression value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the pattern file and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+rex(1)
+<SECT2><P>
+<!-- <BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3>GP MESSAGE #1005</H3>
+<H2> ERROR: Null command string given to run in background</H2><HR> -->
+<!-- <P> -->
+<!-- <SECT3><P> -->
+<!-- <H3>DESCRIPTION</H3> -->
+<!-- <P> -->
+<!-- A null command string was given to the -->
+<!-- bq () -->
+<!-- function for running in the background. -->
+<!-- <SECT3><P> -->
+<!-- <H3>ACTION</H3> -->
+<!-- <P> -->
+<!-- Pass a valid command string to be run in the background -->
+<!-- by -->
+<!-- BQ , -->
+<!-- the background queue server. -->
+<!-- <SECT3><P> -->
+<!-- <H3>SEE ALSO</H3> -->
+<!-- <P> -->
+<!-- bq (3), -->
+<!-- BQ (5) -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>GP MESSAGE #1006</H3>
+<H2> ERROR: _tmreinitbuf returned failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While dequeuing a message using
+tpdequeue ,
+the
+_tmreinitbuf
+function for the typed buffer returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for any messages printed by
+_tmreinitbuf .
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>GP MESSAGE #1007</H3>
+<H2> ERROR: Invalid parameter passed to internal routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>GP MESSAGE #1008</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space for an encryption key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>GP MESSAGE #1009</H3>
+<H2> ERROR: Invalid parameter passed to internal routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>GP MESSAGE #1010</H3>
+<H2> ERROR: Invalid parameter passed to internal routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>GP MESSAGE #1011</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space for an encryption session key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1012"></A>
+<H3>GP MESSAGE #1012</H3>
+<H2> ERROR: Invalid parameter passed to internal routine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to encrypt a password and generate
+a session key received an invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>GP MESSAGE #1013</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space for a session key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>GP MESSAGE #1014</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space while encrypting a password
+to generate a session key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>GP MESSAGE #1015</H3>
+<H2> ERROR: tpdequeue - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while dequeuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>GP MESSAGE #1016</H3>
+<H2> ERROR: [tpdequeue - failed to get DIAGNOSTIC field from tpdequeue message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpdequeue
+could not get the
+DIAGNOSTIC
+field value from the reply message for the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+tpdequeue
+operation will fail.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>GP MESSAGE #1017</H3>
+<H2> WARN: [tpdequeue - failed to get <I>fieldname</I> field from tpdequeue message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpdequeue
+could not get the specified field,
+<I>fieldname</I>,
+from the reply message for the operation.
+The
+<I>fieldname</I>
+can be "FLAGS", "CORRID", "FAILUREQ", "MSGID", "PRIORITY",
+or "REPLYQ".
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The operation will succeed but the associated information will not be
+passed back to the application from the
+tpdequeue
+call.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>GP MESSAGE #1018</H3>
+<H2> ERROR: [tpdequeue - failed to set <I>fieldname</I> field for tpdequeue message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpdequeue
+could not set the specified field,
+<I>fieldname</I>,
+in the message while performing the operation.
+The
+<I>fieldname</I>
+can be "FLAGS", "QNAME", or "MSGID".
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The operation will fail.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>GP MESSAGE #1019</H3>
+<H2> ERROR: [tpdequeue - invalid internal buffer type]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+tpdequeue ,
+an invalid buffer type was received internally.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>GP MESSAGE #1020</H3>
+<H2> ERROR: [tpenqueue - invalid internal buffer type]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+tpenqueue ,
+an invalid buffer type was received internally.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>GP MESSAGE #1021</H3>
+<H2> ERROR: tpenqueue - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using
+malloc ()
+failed while enqueuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3>GP MESSAGE #1022</H3>
+<H2> ERROR: [tpenqueue - failed to get DIAGNOSTIC field from tpenqueue message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpenqueue
+could not get the
+DIAGNOSTIC
+field value from the reply message for the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+tpenqueue
+operation will fail.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>GP MESSAGE #1023</H3>
+<H2> WARN: [tpenqueue - failed to get <I>fieldname</I> field from tpenqueue message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpenqueue
+could not get the specified field,
+<I>fieldname,</I>
+from the reply message for the operation.
+The
+<I>fieldname</I>
+can be "FLAGS" or "MSGID".
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The operation will succeed but the associated information will not be
+passed back to the application from the
+tpenqueue
+call.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3>GP MESSAGE #1024</H3>
+<H2> ERROR: [tpenqueue - failed to set <I>fieldname</I> field for tpenqueue message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpenqueue
+could not set the specified field,
+<I>fieldname</I>,
+in the message while performing the operation.
+The
+<I>fieldname</I>
+can be
+"FLAGS" ,
+"QNAME" ,
+"CORRID" ,
+"FAILUREQ" ,
+"MSGID" ,
+"PRIORITY" ,
+"REPLYQ" ,
+or
+"TIME" .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The operation will fail.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3>GP MESSAGE #1025</H3>
+<H2> ERROR: Cannot reallocate FML buffer to smaller than its unindexed size</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to reallocate an FML typed buffer using
+tpalloc ()
+to a smaller size
+failed because the specified size was smaller than the buffer size
+needed to hold the data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reallocate the type buffer to a size that is large enough to hold
+the FML data (which is returned by
+Fneeded )
+or re-initialize the buffer first using
+Finit .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Finit(3),
+Fneeded(3),
+tpalloc(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>GP MESSAGE #1026</H3>
+<H2> ERROR: tmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type FML</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+<I>routing_name</I>
+was specified for a
+*SERVICE
+entry in the
+UBBCONFIG
+file that does not appear in the
+*ROUTING
+section, and the standard FML routing function is used
+(which requires a matching
+*ROUTING
+entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the
+UBBCONFIG
+file or provide an application-specific routing function for FML
+typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>GP MESSAGE #1027</H3>
+<H2> ERROR: Routing field for '<I>routing_field</I>' null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing for an FML buffer,
+the specified
+<I>routing_field</I>
+value in the FML buffer did not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field is correctly set in the FML buffer.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1028"></A>
+<H3>GP MESSAGE #1028</H3>
+<H2> ERROR: Field type of buffer does not match routing criteria type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML typed buffer,
+the field type for the routing field didn't match the
+field type for the typed buffer.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>GP MESSAGE #1029</H3>
+<H2> ERROR: Unknown field type used for FML routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML typed buffer,
+an unknown field type was encountered for the routing field.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>GP MESSAGE #1030</H3>
+<H2> ERROR: Routing field value for '<I>service</I>' not valid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing data-dependent routing on an FML typed buffer
+for the specified
+<I>service</I>,
+the routing field value did not match any of the ranges specified
+in the routing criteria and the criteria did not contain a wild-card
+pattern.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field value is valid.
+Correct the routing criteria in the
+RANGES
+value of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>GP MESSAGE #1031</H3>
+<H2> ERROR: Bad header from network, size=<I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a message from the network, the message size
+is too small to be valid.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is functioning properly.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>GP MESSAGE #1032</H3>
+<H2> ERROR: Bad header from network, release=<I>release</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a message from the network, the message contained
+a release value of 0.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is functioning properly.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1034"></A>
+<H3>GP MESSAGE #1034</H3>
+<H2> ERROR: Error decoding BRIDGE RPC msg</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a message from the network, a failure occurred in
+trying to decode the header of the message.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is functioning properly.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>GP MESSAGE #1035</H3>
+<H2> ERROR: Network device not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message is generated by the
+BRIDGE
+process when the
+BRIDGE
+parameter is not specified in the *NETWORK section entry in the TUXEDO System/T
+configuration file for a machine that is using the
+TLI
+transport provider (it is not necessary when using Sockets).
+This message is generated by a workstation client that is using the
+TLI
+transport provider when the
+WSDEVICE
+environment variable is not
+set or is set to the null string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+When generated by the
+BRIDGE
+process, correct the TUXEDO System/T configuration file to specify a
+BRIDGE
+parameter.
+For a /WS client,
+check that the
+WSDEVICE
+environment variable is set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>GP MESSAGE #1036</H3>
+<H2> ERROR: Bad TLI Call sequence number <I>seq</I>, Will not send disconnect sequence</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While accepting a network connection, an error occurred indicating a
+bad TLI sequence number.  In this case, the connection is
+not explicitly disconnected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is functioning properly.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>GP MESSAGE #1037</H3>
+<H2> ERROR: Unable to find view file for <I>type</I> <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate a
+VIEW
+typed buffer using
+tpalloc
+failed because the description for the
+<I>view</I>
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+<I>view_name</I>
+to the
+VIEWFILES
+(environment variable) list,
+and make sure that
+VIEWDIR
+environment variable is set to the directory where viewfiles
+can be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3>GP MESSAGE #1038</H3>
+<H2> ERROR: Insufficient space allocated for <I>type</I> <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate a
+VIEW
+typed buffer using
+tpalloc
+failed because
+the buffer length specified was smaller than the size of the view.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Allocate a larger buffer based on the size of the structure associated
+with the view.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3>GP MESSAGE #1039</H3>
+<H2> ERROR: Unable to find view file for <I>type</I> <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to re-allocate a
+VIEW
+typed buffer using
+tprealloc
+failed because the description for the
+<I>view</I>
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+<I>view_name</I>
+to the
+VIEWFILES
+(environment variable) list,
+and make sure that
+VIEWDIR
+environment variable is set to the directory where viewfiles
+can be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc(3),
+viewfile(5)P
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>GP MESSAGE #1040</H3>
+<H2> ERROR: Insufficient space reallocated for <I>type</I> <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to re-allocate a
+VIEW
+typed buffer using
+tprealloc
+failed because
+the buffer length specified was smaller than the size of the view.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Allocate a larger buffer based on the size of the structure associated
+with the view.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3>GP MESSAGE #1041</H3>
+<H2> ERROR: Can't find view file for <I>type</I> <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to transmit a
+VIEW
+typed buffer
+failed because the description for the
+<I>view</I>
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+<I>view_name</I>
+to the
+VIEWFILES
+(environment variable) list,
+and make sure that
+VIEWDIR
+environment variable is set to the directory where viewfiles
+can be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>GP MESSAGE #1042</H3>
+<H2> ERROR: tmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type <I>type</I> subtype <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+<I>routing_name</I>
+was specified for a
+*SERVICE
+entry in the
+UBBCONFIG
+file that does not appear in the
+*ROUTING
+section, and the standard VIEW routing function is used
+(which requires a matching
+*ROUTING
+entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the
+UBBCONFIG
+file or provide an application-specific routing function for VIEW
+typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3>GP MESSAGE #1043</H3>
+<H2> ERROR: Illegal offset value for <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Data-dependent routing failed for a
+VIEW
+typed buffer because the offset for the routing field is invalid.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3>GP MESSAGE #1044</H3>
+<H2> ERROR: Routing field for '<I>routing_field</I>' null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing for a
+VIEW
+buffer,
+the specified
+<I>routing_field</I>
+value in the
+VIEW
+buffer was null.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field is correctly set in the
+VIEW
+buffer.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3>GP MESSAGE #1046</H3>
+<H2> ERROR: Unknown field type used for routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of a
+VIEW
+typed buffer,
+an unknown field type was encountered for the routing field.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1047"></A>
+<H3>GP MESSAGE #1047</H3>
+<H2> ERROR: Routing field value for '<I>service</I>' not valid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing data-dependent routing on a
+VIEW
+typed buffer
+for the specified
+<I>service</I>,
+the routing field value did not match any of the ranges specified
+in the routing criteria and the criteria did not contain a wild-card
+pattern.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field value is valid.
+Correct the routing criteria in the
+RANGES
+value of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3>GP MESSAGE #1048</H3>
+<H2> ERROR: Don't know how to encode/decode data for request opcode 0x<I>opcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While sending a request, the internal opcode,
+<I>opcode</I>,
+was not recognized.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1049"></A>
+<H3>GP MESSAGE #1049</H3>
+<H2> ERROR: Don't know how to encode/decode data for reply opcode 0x<I>opcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a reply, the internal opcode,
+<I>opcode</I>,
+was not recognized.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1050"></A>
+<H3>GP MESSAGE #1050</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1051"></A>
+<H3>GP MESSAGE #1051</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space for an encryption key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3>GP MESSAGE #1052</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3>GP MESSAGE #1053</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to manage TUXEDO System/T data structures received an
+invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1054"></A>
+<H3>GP MESSAGE #1054</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space for an encryption session key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3>GP MESSAGE #1055</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the internal routines to encrypt a password and generate
+a session key received an invalid parameter.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>GP MESSAGE #1056</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to allocate space for a session key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>GP MESSAGE #1057</H3>
+<H2> ERROR: Unable to find view file for VIEW32 <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate a
+VIEW32
+typed buffer using
+tpalloc
+failed because the description for the
+<I>view</I>
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+<I>view_name</I>
+to the
+VIEWFILES32
+(environment variable) list,
+and make sure that
+VIEWDIR32
+environment variable is set to the directory where viewfiles
+can be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>GP MESSAGE #1058</H3>
+<H2> ERROR: Insufficient space allocated for VIEW32 <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate a
+VIEW32
+typed buffer using
+tpalloc
+failed because
+the buffer length specified was smaller than the size of the view.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Allocate a larger buffer based on the size of the structure associated
+with the view.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3>GP MESSAGE #1059</H3>
+<H2> ERROR: Unable to find view file for VIEW32 <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to re-allocate a
+VIEW32
+typed buffer using
+tprealloc
+failed because the description for the
+<I>view</I>
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+<I>view_name</I>
+to the
+VIEWFILES32
+(environment variable) list,
+and make sure that
+VIEWDIR32
+environment variable is set to the directory where viewfiles
+can be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>GP MESSAGE #1060</H3>
+<H2> ERROR: Insufficient space reallocated for VIEW32 <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to re-allocate a
+VIEW32
+typed buffer using
+tprealloc
+failed because
+the buffer length specified was smaller than the size of the view.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Allocate a larger buffer based on the size of the structure associated
+with the view.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc(3),
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>GP MESSAGE #1061</H3>
+<H2> ERROR: Can't find VIEW32 file for view <I>view_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to transmit a
+VIEW32
+typed buffer
+failed because the description for the
+<I>view</I>
+could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+<I>view_name</I>
+to the
+VIEWFILES32
+(environment variable) list,
+and make sure that
+VIEWDIR32
+environment variable is set to the directory where viewfiles
+can be found.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+viewfile(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1062"></A>
+<H3>GP MESSAGE #1062</H3>
+<H2> ERROR: Cannot reallocate FML buffer to smaller than its unindexed size</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to reallocate an FML32 typed buffer using
+tpalloc ()
+to a smaller size
+failed because the specified size was smaller than the buffer size
+needed to hold the data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reallocate the type buffer to a size that is large enough to hold
+the FML32 data (which is returned by
+Fneeded32 )
+or re-initialize the buffer first using
+Finit32 .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Finit32(3),
+Fneeded32(3),
+tpalloc32(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3>GP MESSAGE #1063</H3>
+<H2> ERROR: tmroute failed, could not find routing criteria of <I>routing_name</I> for buffer type FML32</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+<I>routing_name</I>
+was specified for a
+*SERVICE
+entry in the
+UBBCONFIG
+file that does not appear in the
+*ROUTING
+section, and the standard FML32 routing function is used
+(which requires a matching
+*ROUTING
+entry).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct and re-load the
+UBBCONFIG
+file or provide an application-specific routing function for FML32
+typed buffers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1064"></A>
+<H3>GP MESSAGE #1064</H3>
+<H2> ERROR: Routing field for '<I>routing_field</I>' null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing for an FML32 buffer,
+the specified
+<I>routing_field</I>
+value in the FML32 buffer did not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field is correctly set in the FML32 buffer.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1065"></A>
+<H3>GP MESSAGE #1065</H3>
+<H2> ERROR: Field type of buffer does not match routing criteria type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML32 typed buffer,
+the field type for the routing field didn't match the
+field type for the typed buffer.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3>GP MESSAGE #1066</H3>
+<H2> ERROR: Unknown field type used for FML32 routing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During data-dependent routing of an FML32 typed buffer,
+an unknown field type was encountered for the routing field.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1067"></A>
+<H3>GP MESSAGE #1067</H3>
+<H2> ERROR: Routing field value for '<I>service</I>' not valid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While doing data-dependent routing on an FML32 typed buffer
+for the specified
+<I>service</I>,
+the routing field value did not match any of the ranges specified
+in the routing criteria and the criteria did not contain a wild-card
+pattern.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the routing field value is valid.
+Correct the routing criteria in the
+RANGES
+value of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1068"></A>
+<H3>GP MESSAGE #1068</H3>
+<H2> WARN: Could not index FML buffer in postrecv</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The FML buffer type's
+"post receive"
+function failed to build
+an index for a buffer just received by the process.
+Although the buffer is usable, performance may be
+degraded when accessing its fields.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either reduce the amount of data stored in the buffer,
+or use the
+FML32
+buffer type instead.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Findex (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1069"></A>
+<H3>GP MESSAGE #1069</H3>
+<H2> WARN: Could not index FML32 buffer in postrecv</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+FML32
+buffer type's
+"post receive"
+function failed to build
+an index for a buffer just received by the process.
+Although the buffer is usable, performance may be
+degraded when accessing its fields.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Findex (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3>GP MESSAGE #1070</H3>
+<H2> ERROR: Received message with unknown release number <I>release</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While receiving a message from the network, the message contained
+an invalid release value.
+This should not occur during normal system operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is functioning properly.
+Check that the configuration does not contain much older releases of
+the TUXEDO System software, connected to newer version of the software.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>GP MESSAGE #1071</H3>
+<H2> ERROR: Memory allocation failure resynchronizing buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to prepare an FML for transport in _fpresend.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1072"></A>
+<H3>GP MESSAGE #1072</H3>
+<H2> ERROR: Memory allocation failure resynchronizing buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to prepare an FML for transport in _froute.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>GP MESSAGE #1073</H3>
+<H2> ERROR: Memory allocation failure resynchronizing FML32 buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to prepare an FML32 for transport in _fpresend32.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>GP MESSAGE #1074</H3>
+<H2> ERROR: Memory allocation failure resynchronizing FML32 buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to prepare an FML32 for transport in _froute32.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>GP MESSAGE #1075</H3>
+<H2> ERROR: tmroute failed, invalid field identifier for routing criteria <I>routing_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While converting a routing field to its identifier, the field could not
+be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the environment file for the site in question to ensure that the
+environment variables FIELDTBLS and <Font>FLDTBLDIR are set
+correctly for the application.
+Also check that the field name is specified correctly in the
+ubbconfig(5) file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+compilation (5),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>GP MESSAGE #1076</H3>
+<H2> ERROR: tmroute failed, invalid field identifier for routing criteria <I>routing_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While converting a routing field to its identifier, the field could not
+be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the environment file for the site in question to ensure that the
+environment variables FIELDTBLS and <Font>FLDTBLDIR are set
+correctly for the application.
+Also check that the field name is specified correctly in the
+ubbconfig(5) file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+compilation (5),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>GP MESSAGE #1077</H3>
+<H2> ERROR: Unable to open environment file <I>filename</I> for reading</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified <I>filename</I> could not be processed when
+trying to set environment variables.
+This may be processed when reading ENVFILE files (e.g., the
+machine or server ENVFILE), when clients and servers initialize
+on certain platforms, etc.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the specified file name to ensure that the file
+exists and that the user has read permission on the file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>GP MESSAGE #1078</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while trying to process an environment file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>GP MESSAGE #1079</H3>
+<H2> WARN: Label <I>label</I> not found in environment file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to process an environment variable file, the
+specified <I>label</I> could not be found.
+The label is specified using the -E option on most TUXEDO System
+commands.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the <I>label</I> value is correct in the
+environment variable file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3>GP MESSAGE #1080</H3>
+<H2> ERROR: child dup error, rc=<I>rc</I>, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on", but the program was unable to set up the
+paginated output to the standard output.
+The return code, <I>rc</I>, and the associated error number, <I>errno</I>,
+are printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The output will not be paginated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>dup(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1081"></A>
+<H3>GP MESSAGE #1081</H3>
+<H2> ERROR: <I>pager</I>:  return code 0x<I>rc</I>, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on", but the pager command, pager, returned
+an error, <I>rc</I>, and the associated error number, <I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error is sometimes produced when an interrupt is received by
+tmadmin while paging output from a command.
+Command output is terminated and execution continues with a prompt for
+the next command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>GP MESSAGE #1082</H3>
+<H2> ERROR: could not fork, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on".
+The starting of a separate process to run the pager (via fork())
+failed with the associated error number, <I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reset the operating system tunable parameters that limit the number of
+processes in the system and/or the limit for a single user, or stop
+other processes running on the system by the same user, and re-run the
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>fork(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3>GP MESSAGE #1083</H3>
+<H2> ERROR: parent dup error while saving stdout, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on", but the program was unable to set up the
+paginated output to the standard output.
+The associated error number, <I>errno</I>, for the dup</I>() system
+call is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The output will not be paginated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+dup(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1084"></A>
+<H3>GP MESSAGE #1084</H3>
+<H2> ERROR: <I>pager</I>:  wait status 0x<I>rc</I>, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on".
+The pager command, <I>pager</I>, completed with an abnormal return code,
+<I>rc</I>, and the associated error number, <I>errno</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error is sometimes produced when an interrupt is received by
+tmadmin while paging output from a command.
+Command output is terminated and execution continues with a prompt for
+the next command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>wait(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3>GP MESSAGE #1085</H3>
+<H2> ERROR: parent dup error for pipe, rc=<I>rc</I>, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on", but the program was unable to set up the
+paginated output to the standard output.
+The associated error number, <I>errno</I>, is printed as part of the
+message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The output will not be paginated.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>dup(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1086"></A>
+<H3>GP MESSAGE #1086</H3>
+<H2> ERROR: restore dup error, rc=<I>rc</I>, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on", but the program was unable to set up the
+paginated output to the standard output.
+The return code from dup</I>(), <I>rc</I>, and the associated error
+number, <I>errno</I>, are printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The output will probably not be seen and it may be necessary to quit
+tmadmin and restart the program in order to correctly view command
+output.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>dup(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>GP MESSAGE #1087</H3>
+<H2> ERROR: could not make pipe, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A tmadmin command was executed that has paginated output and the
+paginate option is "on", but the program was unable to
+create a pipe to the pager.
+The associated pipe</I>() error number, <I>errno</I>, is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The output will not be paginated.
+The failure may be due to a limit of file descriptors for programs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin(1), <Font>pipe(2) in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>GP MESSAGE #1088</H3>
+<H2> ERROR: malloc failed, errno=<I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc() failed while starting the pager process.
+The pager will not start.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly for the
+amount of memory that can be used by a process.
+Reduce the amount of memory usage on the machine or increase the amount
+of physical memory in the system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>GP MESSAGE #1089</H3>
+<H2> ERROR: tpsubscribe - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Memory allocation failed for retrieving service table entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process. Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsubscribe(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>GP MESSAGE #1090</H3>
+<H2> ERROR: [tpsubscribe - failed to set <I>fieldname</I> field for tpsubscribe message. Ferror32=<I>error</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpsubscribe</I>(3) couldn't insert <I>fieldname</I> into FML32 buffer
+using Fchg32().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support and provide the
+<I>error</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsubscribe(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>GP MESSAGE #1091</H3>
+<H2> ERROR: tppost - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Memory allocation failed for retrieving service table entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process. Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tppost(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>GP MESSAGE #1092</H3>
+<H2> ERROR: [tppost - failed to set <I>fieldname</I> field for tppost message]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tppost</I>(3) couldn't insert <I>fieldname</I> into FML32 buffer
+using Fchg32().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tppost(3), <Font>Fchg(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1093"></A>
+<H3>GP MESSAGE #1093</H3>
+<H2> ERROR: tppost - Can't add field <I>fieldname</I> to FML32 buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tppost</I>(3) couldn't insert <I>fieldname</I> into FML32 buffer
+using Fchg32().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tppost(3), <Font>Fchg32(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3>GP MESSAGE #1094</H3>
+<H2> ERROR: tpalloc failed. error=<I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Memory allocation failed for retrieving service table entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process. Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1095"></A>
+<H3>GP MESSAGE #1095</H3>
+<H2> ERROR: tppost failed when posting event <I>eventname</I>, tperrmsg=<I>errmsg</I>, dropping the message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that posting of event <I>eventname</I> failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error message and take appropriate action.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tppost(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3>GP MESSAGE #1096</H3>
+<H2> ERROR: tpunsubscribe - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Memory allocation failed for retrieving service table entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly for the
+amount of memory on the machine and the amount of memory that can be
+used by a process. Reduce the memory usage on the machine or increase
+the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpunsubscribe(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3>GP MESSAGE #1097</H3>
+<H2> ERROR: [tpunsubscribe - failed to set <I>fieldname</I> field for tpunsubscribe message. Ferror32=<I>error</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+tpunsubscribe</I>(3) couldn't insert <I>fieldname</I> into FML32 buffer
+using Fchg().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support and provide the
+<I>error</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpunsubscribe(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>GP MESSAGE #1098</H3>
+<H2> ERROR: Unexpected TLI return number <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An event was received from the network (using TLI as a provider).
+The event is not a recognized value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>GP MESSAGE #1099</H3>
+<H2> ERROR: restore dup error, rc=<I>return</I>, errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After completing a pagination operation (from one of the
+command line interpretors), an error occurred in
+restoring the standard output.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This may occur if the user interrups the pager processing or
+another error occurs with the pager.
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>GP MESSAGE #1100</H3>
+<H2> ERROR: TUXDIR environment variable not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to read the $TUXDIR/udataobj/RM file to include
+a resource manager into a client or server,
+the TUXDIR environment variable was not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the TUXDIR environment variable and re-run
+the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>GP MESSAGE #1101</H3>
+<H2> ERROR: Cannot open file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The program was unable to read the RM file in $TUXDIR/udataobj/RM.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the TUXDIR environment variable is set correctly
+and that the user has read permission on the RM file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3>GP MESSAGE #1102</H3>
+<H2> ERROR: Cannot find RM <I>rmname</I> in file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While searching $TUXDIR/udataobj/RM, an entry
+for the specified RM, <I>rmname</I>, could not be found.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the correct RM name is specified and an
+entry exists for it in $TUXDIR/udataobj/RM.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1103"></A>
+<H3>GP MESSAGE #1103</H3>
+<H2> ERROR: Can't allocate space for _gp_pgHand struct</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while setting up for pagination from one of the
+command interpretors on the Netware platform,
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>GP MESSAGE #1104</H3>
+<H2> ERROR: Can't create temporary paging file, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up for pagination from one of the
+command interpretors on the Netware platform,
+a temporary file could not be created.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+The problem may be related to security, permissions, file system
+space, etc.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1105"></A>
+<H3>GP MESSAGE #1105</H3>
+<H2> ERROR: Can't open temporary paging file <I>filename</I> for writing, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up for pagination from one of the
+command interpretors on the Netware platform,
+a temporary file could not be opened for writing.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+The problem may be related to security, permissions, file system
+space, etc.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1106"></A>
+<H3>GP MESSAGE #1106</H3>
+<H2> ERROR: Can't reopen temporary paging file <I>filename</I> as stdout, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up for pagination from one of the
+command interpretors on the Netware platform,
+an I/O error occured.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+The problem may be related to security, permissions, file system
+space, etc.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>GP MESSAGE #1107</H3>
+<H2> ERROR: Can't open temporary paging file <I>filename</I> for reading, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up for pagination from one of the
+command interpretors on the Netware platform,
+a temporary file could not be opened for writing.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+The problem may be related to security, permissions, file system
+space, etc.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>GP MESSAGE #1108</H3>
+<H2> ERROR: Can't get status of temporary paging file <I>filename</I>, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up for pagination from one of the
+command interpretors on the Netware platform,
+a temporary file could not be accessed.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+The problem may be related to security, permissions, file system
+space, etc.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>GP MESSAGE #1109</H3>
+<H2> ERROR: Can't allocate <I>num</I> bytes for paging</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while setting up for pagination from one of the
+command interpretors on the Netware platform.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>GP MESSAGE #1110</H3>
+<H2> ERROR: Error in processing temporary paging file <I>filename</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While setting up for pagination from one of the
+command interpretors on the Netware platform,
+a temporary file could not be read correctly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>GP MESSAGE #1111</H3>
+<H2> ERROR: Can't reallocate <I>num</I> bytes for paging</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+realloc ()
+failed while setting up for pagination from one of the
+command interpretors on the Netware platform.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1112"></A>
+<H3>GP MESSAGE #1112</H3>
+<H2> ERROR: AllocateResourceTag failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While finishing up pagination from one of the
+command interpretors on the Netware platform,
+AllocateResourceTag failed for the NLM.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1113"></A>
+<H3>GP MESSAGE #1113</H3>
+<H2> ERROR: Invalid current screen, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While finishing up pagination from one of the
+command interpretors on the Netware platform,
+the current screen information could not be retrieved.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1114"></A>
+<H3>GP MESSAGE #1114</H3>
+<H2> ERROR: NWSInitializeNut failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While finishing up pagination from one of the
+command interpretors on the Netware platform,
+NWSInitializeNut failed for the NLM.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1115"></A>
+<H3>GP MESSAGE #1115</H3>
+<H2> ERROR: Can't reopen stdout, <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While finishing up pagination from one of the
+command interpretors on the Netware platform,
+the standard output could not be re-set.
+The message prints additional information regarding why the
+operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the additional information printed.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1116"></A>
+<H3>GP MESSAGE #1116</H3>
+<H2> ERROR: Can't open socket.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While establishing a network connection using the socket servide
+provider,
+the open failed on the socket.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is configured correctly and that
+sufficient resources are allocated.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1200"></A>
+<H3>GP MESSAGE #1200</H3>
+<H2> ERROR: Invalid length passed to _tuxdftcmpexp</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1201"></A>
+<H3>GP MESSAGE #1201</H3>
+<H2> ERROR: Failed to initialize deflate structure: (<I>error</I>/<I>error_info</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing data structures for compression, an
+error occurred.
+One likely cause of the error is a dynamic memory allocation failure.
+Additional information is printing indicating the exact cause
+of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the reason for the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1202"></A>
+<H3>GP MESSAGE #1202</H3>
+<H2> ERROR: Failed to destroy deflate structure: (<I>error</I>/<I>error_info</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying data structures for compression, an
+error occurred.
+Additional information is printing indicating the reason for the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the reason for the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1203"></A>
+<H3>GP MESSAGE #1203</H3>
+<H2> ERROR: Failed to initialize inflate structure: (<I>error</I>/<I>error_info</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While initializing data structures for compression, an
+error occurred.
+One likely cause of the error is a dynamic memory allocation failure.
+Additional information is printing indicating the exact cause
+of the problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the reason for the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1204"></A>
+<H3>GP MESSAGE #1204</H3>
+<H2> ERROR: Failed to destroy inflate structure: (<I>error</I>/<I>error_info</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying data structures for compression, an
+error occurred.
+Additional information is printing indicating the reason for the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the reason for the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1205"></A>
+<H3>GP MESSAGE #1205</H3>
+<H2> ERROR: Failed to decompress message: (<I>error</I>/<I>error_info</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While decompressing a message, an error occurred.
+Additional information is printing indicating the reason for the failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the reason for the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1206"></A>
+<H3>GP MESSAGE #1206</H3>
+<H2> ERROR: Invalid opcode <I>val</I> passed to _tuxdftcmpexp</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1207"></A>
+<H3>GP MESSAGE #1207</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying processing a network message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1208"></A>
+<H3>GP MESSAGE #1208</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying processing a network message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1209"></A>
+<H3>GP MESSAGE #1209</H3>
+<H2> ERROR: Memory allocation error: <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying processing a network message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1210"></A>
+<H3>GP MESSAGE #1210</H3>
+<H2> ERROR: Memory allocation error: <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying processing a network message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1211"></A>
+<H3>GP MESSAGE #1211</H3>
+<H2> ERROR: Memory allocation error: <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying processing a network message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1212"></A>
+<H3>GP MESSAGE #1212</H3>
+<H2> ERROR: Could not expand multiple messages</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing network messages,
+an internal error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1213"></A>
+<H3>GP MESSAGE #1213</H3>
+<H2> ERROR: Bad header from network, size=<I>size</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a network message,
+an invalid message header was received (with an invalid size).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the network is working correctly.
+Contact TUXEDO Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1214"></A>
+<H3>GP MESSAGE #1214</H3>
+<H2> ERROR: Memory allocation error: <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying processing a network message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1215"></A>
+<H3>GP MESSAGE #1215</H3>
+<H2> ERROR: Cannot compile event expression <I>expr</I>, error=<I>errstr</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid event expression was detected in a subscription record.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Event Server failed to compile the event expression <I>expr</I>.
+The error string returned from _gp_recomp() is printed in the userlog
+message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsubscribe (3),
+_gp_recomp (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1216"></A>
+<H3>GP MESSAGE #1216</H3>
+<H2> WARN: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while
+creating file internal storage required to compress or decompress a message.
+This message is only warning when it is related to a compression request
+since the message may simply be sent uncompressed.
+If this situation occurs during decompression, then an
+error message will
+follow this one in the userlog file indicating that decompression has
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<P>
+Additionally, if a large number of files are specified to be loaded into
+the file cache, then this may contribute to any memory problems experienced
+in the use of
+load_files .
+Reduction of the file list may help alleviate
+the problem.
+<P>
+As a last resort, you may need to turn off data compression.
+The use of data compression trades increased use of
+CPU
+and memory for decreased use of the network and/or message queues.
+If memory limitations are being
+reached, then compression may need to be disabled.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1217"></A>
+<H3>GP MESSAGE #1217</H3>
+<H2> WARN: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while
+creating file internal storage required to compress or decompress a message.
+This message is only warning when it is related to a compression request
+since the message may simply be sent uncompressed.
+If this situation occurs during decompression, then an
+error message will
+follow this one in the userlog file indicating that decompression has
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<P>
+Additionally, if a large number of files are specified to be loaded into
+the file cache, then this may contribute to any memory problems experienced
+in the use of
+load_files .
+Reduction of the file list may help alleviate the problem.
+<P>
+As a last resort, you may need to turn off data compression.
+The use of data compression trades increased use of
+CPU
+and memory for decreased use of the network and/or message queues.
+If memory limitations are being
+reached, then compression may need to be disabled.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1218"></A>
+<H3>GP MESSAGE #1218</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to read an environment file.
+Look for subsequent messages indicating the problem file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1219"></A>
+<H3>GP MESSAGE #1219</H3>
+<H2> ERROR: Unable to open TUXCONFIG file to Resources section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to read the application password, the WSL or WSH had
+a problem opening the *RESOURCES section of the TUXCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the TUXCONFIG environment variable points to the appropriate
+configuration file.  If the configuration file does not exist, it can
+be created from the UBBCONFIG file using tmloadcf.  If it does exist, the
+file may be corrupted, or may have been a file generated by an older release
+of TUXEDO.  Shut down the system, remove the file, and recreate it with
+tmloadcf.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1220"></A>
+<H3>GP MESSAGE #1220</H3>
+<H2> ERROR: Unable to open Resources section of TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to read the application password, the WSL or WSH had
+a problem reading the *RESOURCES section of the TUXCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the TUXCONFIG environment variable points to the appropriate
+configuration file.  If the configuration file does not exist, it can
+be created from the UBBCONFIG file using tmloadcf.  If it does exist, the
+file may be corrupted, or may have been a file generated by an older release
+of TUXEDO.  Shut down the system, remove the file, and recreate it with
+tmloadcf.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1221"></A>
+<H3>GP MESSAGE #1221</H3>
+<H2> ERROR: Possibly corrupted key in database</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid password was detected while the WSH or WSL was reading the
+TUXCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the TUXCONFIG environment variable points to the appropriate
+configuration file.  If the configuration file does not exist, it can
+be created from the UBBCONFIG file using tmloadcf.  If it does exist, the
+file may be corrupted, or may have been a file generated by an older release
+of TUXEDO.  Shut down the system, remove the file, and recreate it with
+tmloadcf.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1222"></A>
+<H3>GP MESSAGE #1222</H3>
+<H2> ERROR: Error while decrypting password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid password was detected while the WSH or WSL was reading the
+TUXCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the TUXCONFIG environment variable points to the appropriate
+configuration file.  If the configuration file does not exist, it can
+be created from the UBBCONFIG file using tmloadcf.  If it does exist, the
+file may be corrupted, or may have been a file generated by an older release
+of TUXEDO.  Shut down the system, remove the file, and recreate it with
+tmloadcf.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1223"></A>
+<H3>GP MESSAGE #1223</H3>
+<H2> ERROR: Invalid password in TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid password was detected while the WSH or WSL was reading the
+TUXCONFIG file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the TUXCONFIG environment variable points to the appropriate
+configuration file.  If the configuration file does not exist, it can
+be created from the UBBCONFIG file using tmloadcf.  If it does exist, the
+file may be corrupted, or may have been a file generated by an older release
+of TUXEDO.  Shut down the system, remove the file, and recreate it with
+tmloadcf.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1224"></A>
+<H3>GP MESSAGE #1224</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while encrypting the application password
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1225"></A>
+<H3>GP MESSAGE #1225</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While creating an encryption schedule the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory on the system where the process was running.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1226"></A>
+<H3>GP MESSAGE #1226</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while encrypting the application password
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1227"></A>
+<H3>GP MESSAGE #1227</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while manipulating the application password
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1228"></A>
+<H3>GP MESSAGE #1228</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While creating a key the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1229"></A>
+<H3>GP MESSAGE #1229</H3>
+<H2> ERROR: Invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while getting a session key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1230"></A>
+<H3>GP MESSAGE #1230</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While creating a session key the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1231"></A>
+<H3>GP MESSAGE #1231</H3>
+<H2> ERROR: Reply queue full</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+ud or ud32 ran out of space for concurrent requests to the sytem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+At most fifty request can be made simultaneously to the system from ud or
+ud32.  Limit the number of requests made by ud or ud32 to 50.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1232"></A>
+<H3>GP MESSAGE #1232</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+malloc failed in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>GP MESSAGE #1233</H3>
+<H2> ERROR: Could not create random algorithm object</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Could not create the object used for generating random numbers
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the memory of the system.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1234"></A>
+<H3>GP MESSAGE #1234</H3>
+<H2> ERROR: Could not use MD5 random algorithm</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encryption subsystem could not find the MD5 algorithm
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1235"></A>
+<H3>GP MESSAGE #1235</H3>
+<H2> ERROR: Could not initialize random algorithm</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1236"></A>
+<H3>GP MESSAGE #1236</H3>
+<H2> ERROR: Could not get random seed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1237"></A>
+<H3>GP MESSAGE #1237</H3>
+<H2> ERROR: Could not update random algorithm</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1238"></A>
+<H3>GP MESSAGE #1238</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A memory failure occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1239"></A>
+<H3>GP MESSAGE #1239</H3>
+<H2> ERROR: New encryption buffer, but offset(<I>offset</I>) is not zero</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1240"></A>
+<H3>GP MESSAGE #1240</H3>
+<H2> ERROR: Invalid attempt to use 40-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1241"></A>
+<H3>GP MESSAGE #1241</H3>
+<H2> ERROR: An error occured in the encryption subsystem code(<I>code</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support with the code number ready.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1242"></A>
+<H3>GP MESSAGE #1242</H3>
+<H2> ERROR: New encryption buffer, but offset(<I>offset</I>) is not zero</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1243"></A>
+<H3>GP MESSAGE #1243</H3>
+<H2> ERROR: Invalid attempt to use 40-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1244"></A>
+<H3>GP MESSAGE #1244</H3>
+<H2> ERROR: Invalid packet from network</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid buffer was given to the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the network.  If it appears that the network is
+functioning properly, then contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1245"></A>
+<H3>GP MESSAGE #1245</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An memory error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1246"></A>
+<H3>GP MESSAGE #1246</H3>
+<H2> ERROR: Could not generate negative encryption packet</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured during encryption negotiation
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1247"></A>
+<H3>GP MESSAGE #1247</H3>
+<H2> ERROR: An error occured in the encryption subsystem code (<I>code</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support with the code number ready.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1248"></A>
+<H3>GP MESSAGE #1248</H3>
+<H2> ERROR: The encryption packet is invalid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid buffer was given to the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the network.  If it appears that the network is
+functioning properly, then contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1249"></A>
+<H3>GP MESSAGE #1249</H3>
+<H2> ERROR: Invalid packet from network (0x<I>num</I>, <I>num</I>, <I>num</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid buffer was given to the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the network.  If it appears that the network is
+functioning properly, then contact the TUXEDO System Technical Support.
+Make sure you have the three codes provided in the message.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1251"></A>
+<H3>GP MESSAGE #1251</H3>
+<H2> ERROR: Remote system returns an error (<I>code</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the encryption negotiation process, the remote site had a fatal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the diagnostic messages on the remote site.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1252"></A>
+<H3>GP MESSAGE #1252</H3>
+<H2> ERROR: An error occured in the encryption subsystem code (<I>code</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support with the code number ready.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1253"></A>
+<H3>GP MESSAGE #1253</H3>
+<H2> ERROR: Invalid number of encryption bits</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1254"></A>
+<H3>GP MESSAGE #1254</H3>
+<H2> ERROR: An error occured in the encryption subsystem code (<I>code</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support with the code number ready.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1258"></A>
+<H3>GP MESSAGE #1258</H3>
+<H2> ERROR: internal error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1259"></A>
+<H3>GP MESSAGE #1259</H3>
+<H2> ERROR: Cannot authenticate, encryption is unavailable</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to perform an operation which requires authentication,
+it was determined that the MD5 algorithm used is not available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+tlisten and the processes which may attempt to contact tlisten must be
+able to compute the MD5 hash of the password file.  If MD5 is not available,
+the authentication process cannot be completed.  You must disable tlisten
+authentication by removing the files $TUXDIR/udataobj/tlisten.pw and
+$APPDIR/.adm/tlisten.pw.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1260"></A>
+<H3>GP MESSAGE #1260</H3>
+<H2> ERROR: Encryption failure <I>code</I> at break point <I>break-point</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to perform an operation which requires authentication,
+their was an error using the MD5 algorithm.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support, with the values of <I>code</I>
+and <I>break-point</I>.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1261"></A>
+<H3>GP MESSAGE #1261</H3>
+<H2> ERROR: Badly aligned offset(<I>offset</I>) value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1262"></A>
+<H3>GP MESSAGE #1262</H3>
+<H2> ERROR: Bad encryption handle(<I>handle</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured when getting the first Diffie-Hellman packet.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support, with the value of <I>handle</I>.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1263"></A>
+<H3>GP MESSAGE #1263</H3>
+<H2> ERROR: Encryption handle in unexpected state <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1264"></A>
+<H3>GP MESSAGE #1264</H3>
+<H2> ERROR: Invalid attempt to use 128-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1265"></A>
+<H3>GP MESSAGE #1265</H3>
+<H2> ERROR: Invalid attempt to use 128-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1266"></A>
+<H3>GP MESSAGE #1266</H3>
+<H2> ERROR: Invalid attempt to use 40-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1267"></A>
+<H3>GP MESSAGE #1267</H3>
+<H2> ERROR: Invalid attempt to use 128-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1268"></A>
+<H3>GP MESSAGE #1268</H3>
+<H2> ERROR: Badly aligned offset(<I>offset</I>) value</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1269"></A>
+<H3>GP MESSAGE #1269</H3>
+<H2> ERROR: The encryption packet is invalid</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1270"></A>
+<H3>GP MESSAGE #1270</H3>
+<H2> ERROR: Bad encryption handle(<I>num</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1271"></A>
+<H3>GP MESSAGE #1271</H3>
+<H2> ERROR: Encryption handle in unexpected state <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1272"></A>
+<H3>GP MESSAGE #1272</H3>
+<H2> ERROR: Invalid attempt to use 128-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1273"></A>
+<H3>GP MESSAGE #1273</H3>
+<H2> ERROR: Invalid attempt to use 128-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1274"></A>
+<H3>GP MESSAGE #1274</H3>
+<H2> ERROR: Invalid attempt to use 40-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1275"></A>
+<H3>GP MESSAGE #1275</H3>
+<H2> ERROR: Invalid attempt to use 128-bit encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A routine in the encryption subsystem was called in an improper context
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1276"></A>
+<H3>GP MESSAGE #1276</H3>
+<H2> ERROR: Bad encryption handle(<I>num</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1277"></A>
+<H3>GP MESSAGE #1277</H3>
+<H2> ERROR: Encryption handle in unexpected state <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1278"></A>
+<H3>GP MESSAGE #1278</H3>
+<H2> ERROR: Invalid negotiation parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1279"></A>
+<H3>GP MESSAGE #1279</H3>
+<H2> ERROR: Invalid negotiation parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1280"></A>
+<H3>GP MESSAGE #1280</H3>
+<H2> ERROR: Invalid negotiation parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1281"></A>
+<H3>GP MESSAGE #1281</H3>
+<H2> ERROR: Received message with invalid release number <I>num</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The network stream may have become corrupted
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the network.  If it appears that the network is
+functioning properly, then contact the TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1282"></A>
+<H3>GP MESSAGE #1282</H3>
+<H2> ERROR: Received message with invalid release number <I>num</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The network stream may have become corrupted
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the network.  If it appears that the network is
+functioning properly, then contact the TUXEDO System Technical Support.
+<SECT2><P>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The FML or FML32 default routing function _froute was called, found the group
+to route the request to, but found that the service <I>service</I> is not
+offered in that group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the routing criteria specified for the FML or FML32 buffer type
+is correct.  Offer <I>service</I> in group <I>group</I>.  Make sure that
+<I>service</I> is not suspended.
+<SECT2><P>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The VIEW or VIEW32 default routing function _vroute was called, found the
+group to route the request to, but found that the service <I>service</I> is not
+offered in that group.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the routing criteria specified for the VIEW or VIEW32 buffer
+type is correct.  Offer <I>service</I> in group <I>group</I>.  Make sure that
+<I>service</I> is not suspended.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1285"></A>
+<H3>GP MESSAGE #1285</H3>
+<H2> ERROR: Can't resolve host name in address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to resolve the host name portion of <I>address</I>,
+an error occured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  Make sure that
+DNS is working properly in your network, and that the host name portion of
+<I>address</I> can be located by your DNS server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1286"></A>
+<H3>GP MESSAGE #1286</H3>
+<H2> ERROR: Can't resolve port number in address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to resolve the port number portion of <I>address</I>,
+an error occured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  Make sure that
+DNS is working properly in your network, and that the port number portion of
+<I>address</I> can be located by your server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1287"></A>
+<H3>GP MESSAGE #1287</H3>
+<H2> ERROR: Can't parse the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to resolve <I>address</I>, an error occured.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  Make sure that
+DNS is working properly in your network, and that the host name and
+port number portion of <I>address</I> can be located by your server.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1288"></A>
+<H3>GP MESSAGE #1288</H3>
+<H2> ERROR: Invalid parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An irregularity was detected in the encryption protocol
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1289"></A>
+<H3>GP MESSAGE #1289</H3>
+<H2> ERROR: Invalid parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An irregularity was detected in the encryption protocol
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1290"></A>
+<H3>GP MESSAGE #1290</H3>
+<H2> ERROR: Invalid parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An irregularity was detected in the encryption protocol
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1291"></A>
+<H3>GP MESSAGE #1291</H3>
+<H2> ERROR: Invalid parameter from remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An irregularity was detected in the encryption protocol
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1292"></A>
+<H3>GP MESSAGE #1292</H3>
+<H2> ERROR: Unknown address type: <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The given <I>address</I> does not correspond to a type known by the system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The TUXEDO System understands several types of address format.  Addresses
+which start with // must be internet addresses.  Addresses which start
+with 0x are hexadecimal representations of the address.  Other formats may
+or may not be understood by the TUXEDO System.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1293"></A>
+<H3>GP MESSAGE #1293</H3>
+<H2> ERROR: Can't convert the address <I>address</I> to binary format</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured while converting <I>address</I> to an internal binary
+representation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1294"></A>
+<H3>GP MESSAGE #1294</H3>
+<H2> ERROR: Illegal character in the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The port number portion of <I>address</I> had an illegal character.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  port_number
+may also be a symbolic name, but must only have digits or alphanumeric
+letters.  Change the port_number portion of <I>address</I> to comply with
+these formats.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1295"></A>
+<H3>GP MESSAGE #1295</H3>
+<H2> ERROR: Missing port number in the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The port number portion of <I>address</I> is missing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  port_number
+may not be of zero length.  Add the port_number portion of <I>address</I> to
+comply with this formats.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1296"></A>
+<H3>GP MESSAGE #1296</H3>
+<H2> ERROR: Port number cant be bigger than <I>max-port</I> in the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The port number portion of <I>address</I> is too large.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  port_number
+must be less than <I>max-port</I>.  Ensure that the port_number portion of
+<I>address</I> complies with this limit.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1297"></A>
+<H3>GP MESSAGE #1297</H3>
+<H2> ERROR: Illegal character in the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The port number portion of <I>address</I> had an illegal character.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  port_number
+may also be a symbolic name, but must only have digits or alphanumeric
+letters.  Change the port_number portion of <I>address</I> to comply with
+these formats.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1298"></A>
+<H3>GP MESSAGE #1298</H3>
+<H2> ERROR: Missing port number in the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The port number portion of <I>address</I> is missing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  port_number
+may not be of zero length.  Add the port_number portion of <I>address</I> to
+comply with this formats.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1299"></A>
+<H3>GP MESSAGE #1299</H3>
+<H2> ERROR: Port number cant be bigger than <I>max-port</I> in the address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The port number portion of <I>address</I> is too large.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet address.  The
+following formats are recognized by the system: //host.name:port_number
+and //#.#.#.#:port_number.  Other formats may be recognized.  port_number
+must be less than <I>max-port</I>.  Ensure that the port_number portion of
+<I>address</I> complies with this limit.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1303"></A>
+<H3>GP MESSAGE #1303</H3>
+<H2> ERROR: Invalid internal buffer: <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact TUXEDO support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1304"></A>
+<H3>GP MESSAGE #1304</H3>
+<H2> ERROR: An error occured in the encryption subsystem code (<I>code</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occured in the encryption subsystem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the TUXEDO System Technical Support with the code number ready.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1305"></A>
+<H3>GP MESSAGE #1305</H3>
+<H2> ERROR: tpsubscribe failed to due a permissions violation in the EVENT_MIB</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A call to tpsubscribe(3) failed because of permissions checking within
+the EVENT_MIB(5).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and possibly retune the permissions on the EVENT_MIB object being
+accessed.  For example, if you are subscribing to have a service called
+when an event occurs, check the T_EVENT_SERVICE class in the EVENT_MIB.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

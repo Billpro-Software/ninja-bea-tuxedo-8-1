@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.jrockit.mc.memleak.ui.startMemleak"
+            targetID="com.jrockit.mc.browser.views.JRockitBrowserView">
+         <action
+               class="com.jrockit.mc.memleak.ui.actions.StartMemleak"
+               enablesFor="+"
+               helpContextId="com.jrockit.mc.memleak.ui.action_start"
+               icon="icons/memleak.png"
+               id="com.jrockit.mc.memleak.ui.actions.startMemleak"
+               label="%ACTION_START_MEMLEAK_LABEL"
+               menubarPath="additions"
+               style="push"
+               toolbarPath="additions"
+               tooltip="%ACTION_START_MEMLEAK_TOOLTIP"/>
+      </viewContribution>
+   </extension>
+   <extension point="org.eclipse.ui.popupMenus">
+   	<viewerContribution id="com.jrockit.mc.memleak.ui.startMemleakContext"
+		targetID="com.jrockit.mc.browser.views.JRockitBrowserView">
+         <action
+               class="com.jrockit.mc.memleak.ui.actions.StartMemleak"
+               enablesFor="+"
+               helpContextId="com.jrockit.mc.memleak.ui.action_start"
+               icon="icons/memleak.png"
+               id="com.jrockit.mc.memleak.ui.actions.startMemleakContext"
+               label="%ACTION_START_MEMLEAK_LABEL"
+               menubarPath="additions"
+               tooltip="%ACTION_START_MEMLEAK_TOOLTIP"/>
+    </viewerContribution>   
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.jrockit.mc.memleak.ui.actionSet"
+            label="Memleak Action Set"
+            visible="true">
+         <menu
+               id="com.jrockit.mc.core.mcMenu"
+               label="%MENU_LABEL_MISSION_CONTROL"
+               >
+            <groupMarker name="mcGroup"/>
+         </menu>
+         <menu
+               id="memleakMenu"
+               label="%MENU_MEMLEAK_LABEL"
+               path="com.jrockit.mc.core.mcMenu/mcGroup">
+            <separator name="memleakGroup"/>
+         </menu>
+         <action
+               class="com.jrockit.mc.memleak.ui.actions.StartMemleak"
+               enablesFor="+"
+               helpContextId="com.jrockit.mc.console.ui.action_startconsole"
+               icon="icons/memleak.png"
+               id="com.jrockit.mc.memleak.ui.actions.StartMemleakWorkbench"
+               label="%ACTION_START_MEMLEAK_LABEL"
+               menubarPath="com.jrockit.mc.core.mcMenu/memleakMenu/memleakGroup"
+               toolbarPath="com.jrockit.mc.core.actionSet/mcGroup"
+               tooltip="%ACTION_START_MEMLEAK_TOOLTIP"/>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.jrockit.mc.browser.views.JRockitBrowserConnectionNode"
+            class="com.jrockit.mc.memleak.ui.MemleakEditorInputAdapterFactory">
+         <adapter type="com.jrockit.mc.memleak.ui.DirectMemleakEditorInput"/>
+      </factory>
+   </extension>
+   <extension
+         id="com.jrockit.mc.memleak.ui.editors"
+         name="Memleak editors"
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.jrockit.mc.memleak.ui.MemleakEditor"
+            default="false"
+            icon="icons/memleak.png"
+            id="com.jrockit.mc.memleak.ui.editor"
+            name="%MEMLEAK_EDITOR_NAME"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.jrockit.mc.core.preferences.MissionControlPage"
+            class="com.jrockit.mc.memleak.ui.preferences.GeneralPage"
+            id="com.jrockit.mc.memleak.ui.preferences.GeneralPage"
+            name="%MEMLEAK_PREFS_NAME"/>
+      <page
+            category="com.jrockit.mc.memleak.ui.preferences.GeneralPage"
+            class="com.jrockit.mc.memleak.ui.preferences.TrendPage"
+            id="com.jrockit.mc.memleak.ui.preferences.TrendPage"
+            name="%TREND_PREFS_NAME"/>
+      <page
+            category="com.jrockit.mc.memleak.ui.preferences.GeneralPage"
+            class="com.jrockit.mc.memleak.ui.preferences.GraphPage"
+            id="com.jrockit.mc.memleak.ui.preferences.GraphPage"
+            name="%GRAPHS_PREFS_NAME"/>
+      <page
+            category="com.jrockit.mc.memleak.ui.preferences.GeneralPage"
+            class="com.jrockit.mc.memleak.ui.preferences.InstancePage"
+            id="com.jrockit.mc.memleak.ui.preferences.InstancePage"
+            name="%INSTANCE_PREFS_NAME"/>
+      <page
+            category="com.jrockit.mc.memleak.ui.preferences.GeneralPage"
+            class="com.jrockit.mc.memleak.ui.preferences.CommunicationPage"
+            id="com.jrockit.mc.memleak.ui.preferences.CommunicationPage"
+            name="%COMMUNCATION_PREFS_NAME"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.jrockit.mc.memleak.ui.preferences.Initializer"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="com.jrockit.mc.memleak.ui.MemleakEditorInputAdapterFactory"
+            id="com.jrockit.mc.memleak.ui.editorInputFactory"/>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc file="toc.xml"/>
+   </extension>
+</plugin>

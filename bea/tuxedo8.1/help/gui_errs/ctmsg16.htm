@@ -1,0 +1,1580 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1600-1699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1600"></A>
+<H3>CMDTUX MESSAGE #1600</H3>
+<H2> ERROR: Unable to register - another DBBL already exists on <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The TUXEDO System application was unable to unregister the DBBL process
+because another DBBL was found to have been booted already.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1601"></A>
+<H3>CMDTUX MESSAGE #1601</H3>
+<H2> ERROR: TUXCONFIG,TUXOFFSET <I>device1,</I> <I>offset1</I> doesn't match first device entry on configuration <I>device2,</I> <I>offset2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While loading a
+TUXCONFIG
+file using
+tmloadcf ,
+the device and offset specified by the
+TUXCONFIG
+and
+TUXOFFSET
+environment variables,
+<I>device1</I>
+and
+<I>offset1</I>,
+don't match the information stored for the first
+entry in the configuration file,
+<I>device2</I>
+and
+<I>offset2</I>.
+This occurs when the device (file) is moved from one name to
+another.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the configuration file before loading it with
+tmloadcf .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1603"></A>
+<H3>CMDTUX MESSAGE #1603</H3>
+<H2> ERROR: TLOGDEVICE must be an absolute pathname</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+TLOGDEVICE
+parameter as specified in the *MACHINES
+section of the
+UBBCONFIG
+file must be an absolute pathname.  Relative
+paths and environment variables are not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+TLOGDEVICE
+as specified in the *MACHINES section
+of the
+UBBCONFIG
+file to be an absolute pathname.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1604"></A>
+<H3>CMDTUX MESSAGE #1604</H3>
+<H2> ERROR: <I>section_name</I> entry <I>entry_name</I> - duplicate type(<I>type_name</I>)/subtype(<I>subtype_name</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BUFTYPE
+parameter of a SERVICES section entry or ROUTING section entry in the
+UBBCONFIG file specified duplicate type/subtype pairs.
+(For types without any subtype specified, the
+BUFTYPE
+parameter specified duplicate type pairs.)
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the
+BUFTYPE
+parameter so that the same type/subtype pair is not specified more than once.
+Reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1605"></A>
+<H3>CMDTUX MESSAGE #1605</H3>
+<H2> ERROR: SERVICES entry <I>entry_name</I> - must have the same BUFTYPE for all SERVICE entries.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If multiple entries exist in the SERVICES section with the same service name
+but with different
+SRVGRP
+parameters, the
+BUFTYPE
+parameter must be the same for all of the entries.
+This rule was violated for the service entry named in the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify the same
+BUFTYPE
+parameters for all instances of a particular service name.
+Then reload the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1606"></A>
+<H3>CMDTUX MESSAGE #1606</H3>
+<H2> ERROR: Unlicensed TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The files in your TUXEDO System installation
+do not contain the expected software license information,
+such as the maximum number of licensed users.
+The installation program prompted the installer for this information
+at installation time.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reinstall the TUXEDO System software,
+using the license token and serial number
+supplied with the distribution media.
+Make sure not to terminate the installation program prematurely,
+because the license information is processed at the end.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1607"></A>
+<H3>CMDTUX MESSAGE #1607</H3>
+<H2> ERROR: Unlicensed TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 1606 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 1606 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1609"></A>
+<H3>CMDTUX MESSAGE #1609</H3>
+<H2> ERROR: Expired TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Your copy of the TUXEDO System software is an evaluation copy,
+and the expiration date has passed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you wish to continue using the TUXEDO System,
+contact the company from which you received the the product.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1610"></A>
+<H3>CMDTUX MESSAGE #1610</H3>
+<H2> ERROR: Expired TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 1609 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 1609 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1614"></A>
+<H3>CMDTUX MESSAGE #1614</H3>
+<H2> WARN: Network device does not exist</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The device specified for the \-d option of
+tlisten
+does not exist or is not a character special device.
+If the sockets network provider is being used, the device is not needed
+and will be ignored.
+If the TLI network provider is being used, the network open will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If TLI is being used, specify the correct network device pathname.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1615"></A>
+<H3>CMDTUX MESSAGE #1615</H3>
+<H2> ERROR: Identifier or number must be followed by white space or punctuation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a UBBCONFIG file, invalid syntax was found.
+This generally occurs when a keyword or operator is missing (for example,
+two numbers appear together).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1624"></A>
+<H3>CMDTUX MESSAGE #1624</H3>
+<H2> ERROR: Invalid or unspecified administrative password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An administrative request generated by
+tmboot
+to the remote
+machine indicated in subsequent messages produced to
+stderr
+was rejected because either an invalid administrative
+password was passed to the remote site or no administrative
+password was available to be passed to the remote site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If no administrative password was specified locally,
+then determine an appropriate administrative password and set the local
+environment to pass it to remote sites as indicated in
+tmboot .
+If an administrative password was specified locally, then either the local
+setting will have to change to match that expected by the remote site, or
+the administrative password used by this application will have to be added
+to the password file used by
+tlisten
+on the remote site.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1626"></A>
+<H3>CMDTUX MESSAGE #1626</H3>
+<H2> ERROR: Machine \</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a UBBCONFIG file, an invalid machine name was specified.
+The name has a value of the form "name.number" (this is restricted
+only in the development copy, compiled to allow what is called "fake mp").
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax error and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1627"></A>
+<H3>CMDTUX MESSAGE #1627</H3>
+<H2> ERROR: LMID <I>value</I> must not contain comma </H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a UBBCONFIG file, an invalid LMID value was found.
+The LMID value contains a comma.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1628"></A>
+<H3>CMDTUX MESSAGE #1628</H3>
+<H2> ERROR: LMID <I>value</I> must not contain comma </H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a UBBCONFIG file, an invalid LMID value was found.
+The LMID value contains a comma.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1629"></A>
+<H3>CMDTUX MESSAGE #1629</H3>
+<H2> ERROR: Cannot allow only release 4.2.x BBLs to join system with a configuration of <I>number</I> machines or more</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to boot a 4.2.x site into an application with more
+than <I>number</I> configured machines.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either reduce the number of configured machines and reboot the site, or
+upgrade the site to release 5.0.x or later.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1631"></A>
+<H3>CMDTUX MESSAGE #1631</H3>
+<H2> ERROR:  MAXMACHINES parameter must be >= <I>number</I> and &lt; 8191</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXMACHINES
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was specified outside of the
+acceptable range of <I>number</I> to 8190.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1633"></A>
+<H3>CMDTUX MESSAGE #1633</H3>
+<H2> ERROR:  MAXQUEUES parameter must be > 0 and &lt; 8192</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXQUEUES
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was specified outside of the
+acceptable range of 1 to 8191.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1634"></A>
+<H3>CMDTUX MESSAGE #1634</H3>
+<H2> ERROR: MAXQUEUES(<I>number</I>) and MAXSERVERS(<I>number</I>) must be equal to interoperate with release <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to boot a 4.2.x site with the
+MAXQUEUES
+and
+MAXSERVERS
+parameters in the
+*RESOURCES
+section of the ubbconfig(5) file set to different values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either reconfigure the application to have equivalent values for these
+parameters and reboot the site, or upgrade the 4.2.x site to release 5.0.x or later.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1636"></A>
+<H3>CMDTUX MESSAGE #1636</H3>
+<H2> ERROR:  MAXGROUPS parameter must be >= <I>number</I> and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXGROUPS
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was specified outside of the
+acceptable range of <I>number</I> to 32767.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1638"></A>
+<H3>CMDTUX MESSAGE #1638</H3>
+<H2> ERROR:  Invalid CMPLIMIT value <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+CMPLIMIT
+parameter in the
+*MACHINES
+section of the ubbconfig(5) file has been specified with an
+invalid value <I>string</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for this parameter to the acceptable format
+and rerun tmloadcf(1).
+The acceptable format for this parameter is
+<I>remote[,local]</I> where both <I>remote</I> and <I>local</I>
+may be either the string
+<KBD>MAXLONG</KBD>
+or a non-negative numeric value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1640"></A>
+<H3>CMDTUX MESSAGE #1640</H3>
+<H2> ERROR:  NETLOAD parameter must be >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NETLOAD
+parameter in the
+*MACHINES
+section of the ubbconfig(5) file was specified as a negative value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1642"></A>
+<H3>CMDTUX MESSAGE #1642</H3>
+<H2> ERROR:  SPINCOUNT parameter must be >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SPINCOUNT
+parameter in the
+*MACHINES
+section of the ubbconfig(5) file was specified as a negative value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1643"></A>
+<H3>CMDTUX MESSAGE #1643</H3>
+<H2> ERROR:  More than MAXGROUPS(<I>number</I>) groups in configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application was configured to handle up to <I>number</I> configured
+server groups (see the
+MAXGROUPS
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file) and has excess server groups defined
+in the ubbconfig(5) file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either reset the
+MAXGROUPS
+parameter in the
+*RESOURCES
+section or delete server groups from the
+*GROUPS
+section of the ubbconfig(5) file and rerun <Font>tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1644"></A>
+<H3>CMDTUX MESSAGE #1644</H3>
+<H2> ERROR:  More than MAXMACHINES(<I>number</I>) machines in configuration file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application was configured to handle up to <I>number</I> configured
+machines (see the
+MAXMACHINES
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file) and has excess machines defined
+in the
+*MACHINES
+section of the ubbconfig(5) file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either reset the
+MAXMACHINES
+parameter in the
+*RESOURCES
+section or delete machines from the
+*MACHINES
+section of the ubbconfig(5) file and rerun <Font>tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1645"></A>
+<H3>CMDTUX MESSAGE #1645</H3>
+<H2> ERROR: Illegal opcode (<I>number</I>) sent to tagent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid opcode <I>number</I> was sent to the tagent</I> process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The most likely cause of this problem is a non-TUXEDO System process incorrectly
+connecting to the TUXEDO System listener (tlisten(1)) process and attempting
+to interact with the tagent.  In this case, the non-TUXEDO System process
+should be changed to not connect to tlisten.
+If this is not the case, then contact your TUXEDO System Technical Support
+for further assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1646"></A>
+<H3>CMDTUX MESSAGE #1646</H3>
+<H2> ERROR: MAXGROUPS(<I>num1</I>) must be <I>num2</I> to interoperate with release <I>num3</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configured value <I>num1</I> for the maximum number of configured
+groups in the application (see the
+MAXGROUPS
+parameter in the
+*RESOURCES
+section of the ubbconfig</I>(5) file) is not set to the value <I>num2</I>
+required for interoperability with release <I>num3</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either modify the value of this parameter in the configuration file and
+rerun tmloadcf(1), or upgrade the site in question to a later release
+of the TUXEDO System.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+tmunloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1647"></A>
+<H3>CMDTUX MESSAGE #1647</H3>
+<H2> ERROR: Cannot migrate master from release <I>num1</I> to release <I>num2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Master migration from a release <I>num1</I> site to a <I>num2</I> site was
+attempted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the backup site to be one of the same release as the master site.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin (1),
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1649"></A>
+<H3>CMDTUX MESSAGE #1649</H3>
+<H2> ERROR: Backup master is running invalid release <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The backup master site attempted to boot with an invalid release <I>number</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either change the backup master site to one of the same release as the
+master site, or upgrade the backup master site release.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin (1),
+tmboot (1),
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1651"></A>
+<H3>CMDTUX MESSAGE #1651</H3>
+<H2> ERROR: Cannot join system with DBBL running older release <I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A BBL attempted to boot into an application with a master site running an
+older release than its own, <I>number</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either run the older release on the site in question, or upgrade the master
+site to be one running the latest TUXEDO System release desired.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1655"></A>
+<H3>CMDTUX MESSAGE #1655</H3>
+<H2> ERROR:  SVCTIMEOUT parameter must not be &lt; 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SVCTIMEOUT
+parameter in the
+*SERVICES
+section of the ubbconfig(5) file was specified as a negative value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the parameter value in the ubbconfig(5) file and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1666"></A>
+<H3>CMDTUX MESSAGE #1666</H3>
+<H2> WARN: Could not terminate server(<I>pid</I>) processing after SVCTIMEOUT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BBL could not abortively deactivate the server with process id <I>pid</I>
+after the server exceeded the configured
+SVCTIMEOUT
+value for the service it was currently processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5),
+kill (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1667"></A>
+<H3>CMDTUX MESSAGE #1667</H3>
+<H2> WARN: Server(<I>pid</I>) processing terminated after SVCTIMEOUT</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BBL has terminated the local server with process id <I>pid</I>
+using the kill(2) system call to generate a
+SIGKILL
+signal because the server exceeded the maximum service processing time
+for the current service as configured via the
+SVCTIMEOUT
+parameter in the
+*SERVICES
+section of the ubbconfig(5) file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either increase the configured service timeout value, or modify the
+server to complete the service within the allotted time interval.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5),
+kill (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1668"></A>
+<H3>CMDTUX MESSAGE #1668</H3>
+<H2> WARN: Cannot shutdown BBL on <I>machine</I>. Clients and/or servers may be running</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shutdown request has been received, but the BBL cannot be shut down
+because processes are still attached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check on what processes are running to see if they can be
+individually killed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1),
+kill (2)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1669"></A>
+<H3>CMDTUX MESSAGE #1669</H3>
+<H2> ERROR: If SECURITY is not set, then AUTHSVC must not be specified.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While parsing a UBBCONFIG file, an AUTHSVR value was found but
+the SECURITY parameter is not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the syntax and re-load the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1670"></A>
+<H3>CMDTUX MESSAGE #1670</H3>
+<H2> ERROR:  IPCKEY parameter must be > <I>number</I> and &lt; 262143</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+IPCKEY
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file is not within the acceptable limits
+as indicated by the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for this parameter in the configuration file and
+rerun tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1671"></A>
+<H3>CMDTUX MESSAGE #1671</H3>
+<H2> ERROR: Could not initialize /Admin service</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The DBBL could not initialize the administrative services necessary for
+application administration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the local userlog file and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1672"></A>
+<H3>CMDTUX MESSAGE #1672</H3>
+<H2> ERROR: Could not initialize /Admin service</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BBL could not initialize the administrative services necessary for
+application administration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the local userlog file and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1673"></A>
+<H3>CMDTUX MESSAGE #1673</H3>
+<H2> ERROR: Invalid logical machine</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to handle a TMIB request for the T_NETWORK class,
+an invalid logical machine name (TA_LMID) was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that a valid logical machine name is specified (one that is
+already configured) and re-run the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1674"></A>
+<H3>CMDTUX MESSAGE #1674</H3>
+<H2> ERROR: Failed to establish connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to satisfy a MIB request for the T_NETWORK class
+to change the state of a connection to ACTIVE, the connection
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the machine to which the connection is being made
+and the network are available and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1675"></A>
+<H3>CMDTUX MESSAGE #1675</H3>
+<H2> ERROR: Unable to allocate buffer for master migration reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying migrate the master to the backup machine.
+No response will be returned to the requester of the operation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1676"></A>
+<H3>CMDTUX MESSAGE #1676</H3>
+<H2> ERROR: System tables corrupted</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred while trying to migrate the master.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1677"></A>
+<H3>CMDTUX MESSAGE #1677</H3>
+<H2> ERROR: Master migration attempted in non-LAN application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A master migration to the backup was requested but the
+configuration does not have the LAN option configured (and
+thus doesn't have a backup).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1678"></A>
+<H3>CMDTUX MESSAGE #1678</H3>
+<H2> ERROR: Invalid parameters for master migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A master migration to the backup was requested, but the master
+and backup are on the same machine or the DBBL is has already
+been migrated.  This should not occur.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1679"></A>
+<H3>CMDTUX MESSAGE #1679</H3>
+<H2> ERROR: Master migration failed, no available backup site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A master migration was requested but the BBL is not running on
+the backup site (or the site is already partitioned).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The migration cannot occur in this situation.
+Make sure that the backup machine and the network are available,
+and that the application is booted on the machine.
+Then re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1680"></A>
+<H3>CMDTUX MESSAGE #1680</H3>
+<H2> ERROR: Master migration failed, could not modify queue parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A master migration was requested but the operation failed because
+the queue for the DBBL could not be re-set to take no more messages.
+This could occur if the queue were manually deleted or an error
+occurred with the IPC sub-system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.  For subsequent failures, shutdown and
+re-boot the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1681"></A>
+<H3>CMDTUX MESSAGE #1681</H3>
+<H2> ERROR: Master migration failed, could not requeue message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A master migration was requested but the operation failed because
+an error failed in putting a message on the queue for the DBBL.
+This could occur if the queue were manually deleted or an error
+occurred with the IPC sub-system (e.g., the message queues were full).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1682"></A>
+<H3>CMDTUX MESSAGE #1682</H3>
+<H2> ERROR: Could not retrieve own BB entry for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+process is migrating to another machine.
+However, it could not find its own server table entry in the bulletin board.
+This prevents the old
+DBBL
+from broadcasting where the new
+DBBL
+is located.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+After this shaky migration it is possible that a
+DBBL
+process is running on both the master or backup machines.
+If so, shut down the machine with the newest one (that is, the destination
+of the last migrate command).
+Then boot that machine up and try to migrate again.
+If the error persists,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1683"></A>
+<H3>CMDTUX MESSAGE #1683</H3>
+<H2> ERROR: Connection received from inactive machine <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The machine indicated by the logical machine identifier <I>lmid</I>
+attempted to connect to the local site but
+is not active in the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is caused when a partitioned live node is cleaned up in the non-partitioned
+part of the application (see the pclean subcommand of <Font>tmadmin(1))
+and then later reconnects to one of the non-partitioned sites.
+The problem can be resolved using the tmshutdown(1) command with
+the -P option on the partitioned site to bring down the application,
+followed by a reboot of the site from the non-partitioned master site.
+The problem can be avoided by carefully checking the status of a partitioned
+site prior to invoking the pclean subcommand.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmadmin (1),
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1684"></A>
+<H3>CMDTUX MESSAGE #1684</H3>
+<H2> ERROR: Application initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Server failed to restart due to application initialization failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an application specific failure and must be resolved with
+application knowledge of server initialization.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Programmer's Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1685"></A>
+<H3>CMDTUX MESSAGE #1685</H3>
+<H2> ERROR: Application initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Server failed to boot due to application initialization failure
+from tpsvrinit(3).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Identify application initialization problem and resolve prior to booting
+the server again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Programmer's Guide" ,
+tpopen (3),
+tpsvrinit (3),
+servopts (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1686"></A>
+<H3>CMDTUX MESSAGE #1686</H3>
+<H2> ERROR: Older release sites cannot join an application with deleted machines in the *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An activation request was received for a a computer running a version
+prior to release 5.0.  However, one or more machines were dynamically
+deleted from the configuration.  A pre-5.0 machine cannot join the
+application in this situation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shutdown the entire application and then re-boot (including the
+older release machines).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot(1),
+TM_MIB(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1687"></A>
+<H3>CMDTUX MESSAGE #1687</H3>
+<H2> ERROR: No active servers found in class instance</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A deactivation (shutdown) request was received.
+However, based on the values of TA_SRVGRP, TA_SRVID,
+TA_GRPNO, TA_SERVERNAME, TA_LMID and TA_SEQUENCE for the T_SERVER class,
+no servers match the desired criteria and no servers will be deactivated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.  Check the activated servers and re-try
+the operation with valid selection criteria.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1688"></A>
+<H3>CMDTUX MESSAGE #1688</H3>
+<H2> ERROR: Could not retrieve information on servers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A deactivation (shutdown) request was received.
+However, based on the values of TA_SRVGRP, TA_SRVID,
+TA_GRPNO, TA_SERVERNAME, TA_LMID and TA_SEQUENCE for the T_SERVER class,
+no servers match the desired criteria and no servers will be deactivated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.  Check the activated servers and re-try
+the operation with valid selection criteria.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1689"></A>
+<H3>CMDTUX MESSAGE #1689</H3>
+<H2> ERROR: Could not shutdown any servers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request was received to deactivate one or more servers.
+Although some servers matched the requested criteria, no servers
+were shutdown.
+This could be because the servers could not be contacted, they might
+be looping, or administrative servers might not shutdown because
+other clients or servers are still running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.
+It may be necessary to request a forced shutdown, setting the state to DEAd, in which servers
+will be killed and administrative servers are shutdown even if
+clients exist.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown(1),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1690"></A>
+<H3>CMDTUX MESSAGE #1690</H3>
+<H2> ERROR: System error (<I>error_string</I>) while shutting down server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A MIB request was received to shutdown a server but the request
+to the server failed, due to a system error.
+More information regarding the failure is printed as part of
+the message.
+For example, it could be that the message queues are full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1691"></A>
+<H3>CMDTUX MESSAGE #1691</H3>
+<H2> ERROR: System server cannot shutdown with clients and/or servers attached</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to shutdown an administrative server failed because
+one or more clients and/or servers is still active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop active clients and shutdown application servers before shutting
+down the administrative servers, or use a forced shutdown that ignores
+clients and kills application servers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1692"></A>
+<H3>CMDTUX MESSAGE #1692</H3>
+<H2> ERROR: Application server will not shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to shutdown an application server failed because
+server refused to shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use a forced shutdown, setting the state to DEAd, which
+kills application servers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1693"></A>
+<H3>CMDTUX MESSAGE #1693</H3>
+<H2> WARN: Timeout period expired on /Admin blocking request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A MIB request was received to shutdown a server but the request
+to the server failed, due to timeout.
+This indicates that the server took too long to shutdown.
+This could indicate that the server is busy (or looping).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.
+To force a shutdown, set the state to DEAd.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1694"></A>
+<H3>CMDTUX MESSAGE #1694</H3>
+<H2> WARN: Alternate site for group is not currently active</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request was received to deactivate a server for migration
+to the backup site.  The server was shutdown but the backup site
+is not available so the server cannot be re-activated on the backup.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue another operation to activate the server on the backup site.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1695"></A>
+<H3>CMDTUX MESSAGE #1695</H3>
+<H2> WARN: Server not restartable, will not be migrated</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request was received to deactivate a server for migration
+to the backup site.  The server was shutdown but the server is not
+configured to be restartable
+so the server cannot be re-activated on the backup.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Issue another operation to activate the server on the backup site.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1696"></A>
+<H3>CMDTUX MESSAGE #1696</H3>
+<H2> ERROR: No active machines available for activation of server group</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request was received to activate a server, but the primary and
+backup machines for the group with which the server is associated are
+not active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Activate one of the associated machines before activating the application
+server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1697"></A>
+<H3>CMDTUX MESSAGE #1697</H3>
+<H2> ERROR: Could not format command line options</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to activate a server failed during processing
+to start the server.
+An attempt dynamically to allocate memory from the operating system
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1698"></A>
+<H3>CMDTUX MESSAGE #1698</H3>
+<H2> ERROR: Could not format command line arguments</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to activate a server failed during processing
+to start the server.
+An attempt dynamically to allocate memory from the operating system
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1699"></A>
+<H3>CMDTUX MESSAGE #1699</H3>
+<H2> ERROR: Could not fork</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a server, the new program could not be started
+(forked or spawned).
+This usually indicates that system resources
+did not exist to allow for the execution (e.g., a shortage
+of process table entries or swap space).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for administrative events that might keep
+a program from being started (either on the console, in administrative
+logs, or in the OS event monitor).
+Re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

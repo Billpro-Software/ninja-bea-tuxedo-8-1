@@ -1,0 +1,37 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1992 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/qsample/runsample	$Revision: 1.5 $"
+#
+#set the environment
+. ./setenv
+chmod +w ubb.sample
+uname="`uname -n`"
+ed ubb.sample<<!
+g;<uname -n>;s;;${uname};
+g;<full path of TUXEDO software>;s;;${TUXDIR};
+g;<full path of APPDIR>;s;;${APPDIR};
+w
+q
+!
+#build the client and server
+make client server
+#create the tuxconfig file
+tmloadcf -y ubb.sample
+#create the TLOG
+./crlog
+#create the QUE
+./crque
+#boot the application
+tmboot -y
+#run the client
+client
+#shutdown the application
+tmshutdown -y
+#remove the client and server 
+make clean
+#remove the QUE ipc resources
+./rmipc
+#remove all files created
+rm tuxconfig QUE stdout stderr TLOG ULOG*

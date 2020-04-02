@@ -1,0 +1,2866 @@
+<TITLE>LIBQM MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBQM MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>LIBQM MESSAGE #1100</H3>
+<H2> ERROR: Invalid option - <I>option</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid option,
+<I>option</I>,
+was specified on the
+qmadmin
+command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Select the appropriate option(s) from
+the usage line that follows the error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>LIBQM MESSAGE #1101</H3>
+<H2> ERROR: QMCONFIG not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value of
+QMCONFIG ,
+the device containing the queue space,
+was not specified on the
+qmadmin
+command line or in the shell environment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+QMCONFIG
+environment variable must be set and exported or must be specified
+on the
+qmadmin
+command line.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3>LIBQM MESSAGE #1102</H3>
+<H2> ERROR: Invalid argument <I>arg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument,
+<I>arg</I>,
+was specified on the
+qmadmin
+command line following the
+QMCONFIG
+value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Select the appropriate command line option(s) and argument from
+the usage line that follows the error message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>LIBQM MESSAGE #1104</H3>
+<H2> ERROR: Failed to get status of <I>qmconfig_device</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+qmadmin
+was unable to get the status of the device,
+<I>qmconfig_device</I>,
+specified for
+QMCONFIG .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that
+QMCONFIG
+is properly set to a raw disk slice or a regular
+file accessible to
+qmadmin,
+or to a file name to be created in an existing directory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1105"></A>
+<H3>LIBQM MESSAGE #1105</H3>
+<H2> ERROR: Effective user id, <I>userid</I>, must match the owner of QMCONFIG, <I>qmconfig_userid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+qmadmin
+was run by a user whose effective user identifier,
+<I>userid</I>,
+is not the same
+as the owner of the device specified for
+QMCONFIG ,
+<I>qmconfig_userid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ownership of the
+QMCONFIG
+device or file, or run the program as the corresponding user.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>LIBQM MESSAGE #1107</H3>
+<H2> ERROR: Must have white space following quoted string</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While entering a
+qmadmin
+command, a double quoted string was entered without white space,
+spaces and/or tabs,
+preceding and following the string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command line surrounding any quoted strings with white
+space (spaces and/or tabs).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>LIBQM MESSAGE #1108</H3>
+<H2> ERROR: No matching double quote</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While entering a
+qmadmin
+command, a double quoted string was started without a matching
+quote to terminate the string.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command line with matching double quotes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>LIBQM MESSAGE #1109</H3>
+<H2> ERROR: Failed to execute <I>command</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A shell command,
+<I>command</I>,
+was specified for execution using the
+qmadmin
+exclamation mark (!) command, but the shell command failed to execute.
+The error number,
+<I>errno</I>,
+is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+PATH
+environment variable is set appropriately
+and that the shell command to be executed exists, and re-enter
+the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>LIBQM MESSAGE #1110</H3>
+<H2> ERROR: Syntax -</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid option or argument was entered for a
+qmadmin
+command.
+The correct syntax is printed as part of the message as
+<I>syntax</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct syntax.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>LIBQM MESSAGE #1111</H3>
+<H2> ERROR: Command <I>command</I> not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A command,
+<I>command</I>,
+was entered that does not exist in
+qmadmin .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+help
+command to get a list of valid
+qmadmin
+commands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1120"></A>
+<H3>LIBQM MESSAGE #1120</H3>
+<H2> ERROR: Queue space must be opened first</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+qmadmin
+command was executed before a queue space was opened.
+This can happen with the queue commands
+qcreate,
+qchangeprio,
+qchangequeue,
+qchangetime,
+qdeletemsg,
+qdestroy,
+qinfo,
+qlist,
+qprinttrans,
+qaborttrans,
+qcommittrans,
+and
+qset.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Open a queue space using the
+qopen
+command and re-enter the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1121"></A>
+<H3>LIBQM MESSAGE #1121</H3>
+<H2> WARN: xa_close() returned <I>rc</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+xa_close()
+function was called to close the currently open
+queue space as part of executing a
+qmadmin
+command
+(qaddext ,
+qclose ,
+qopen ,
+qspacecreate ,
+qspacedestroy ,
+or
+quit)
+and it returned an error,
+<I>rc</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Further information about the cause of the failure should
+be printed in the
+userlog .
+Check the
+userlog
+for further information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1122"></A>
+<H3>LIBQM MESSAGE #1122</H3>
+<H2> ERROR: Queue name must be set with qset</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+qmadmin
+command
+(qchangeprio ,
+qchangequeue ,
+qchangetime ,
+qdeletemsg ,
+or
+qlist)
+was executed without setting the target queue name using the
+qset
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the
+qinfo
+command to get a list of queues in the queue space.
+Select a queue name in currently open queue space by
+executing
+qset
+and re-enter the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1124"></A>
+<H3>LIBQM MESSAGE #1124</H3>
+<H2> ERROR: Device index must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command, a non-numeric device index was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+chdl
+command using a numeric device index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1125"></A>
+<H3>LIBQM MESSAGE #1125</H3>
+<H2> ERROR: Cannot read the device list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+qmadmin
+failed to read the volume table of contents and universal device list
+associated with
+QMCONFIG.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to see that
+QMCONFIG
+is set correctly (that the device or file exists) and has been
+properly initialized, and re-enter the command.
+The
+livtoc
+command can be used to list the current volume table of contents
+and
+lidl
+can be used to list the current universal device list.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1126"></A>
+<H3>LIBQM MESSAGE #1126</H3>
+<H2> ERROR: Invalid device index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+a device index was specified for a device that has not been
+created on the universal device list associated with the
+QMCONFIG
+device.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+lidl
+command to list the current contents of the universal device list
+and re-enter the
+chdl
+command with a valid device index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1129"></A>
+<H3>LIBQM MESSAGE #1129</H3>
+<H2> ERROR: Device name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+the new device name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a device name that is 64
+characters or less in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1130"></A>
+<H3>LIBQM MESSAGE #1130</H3>
+<H2> ERROR: Cannot lock the device list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+qmadmin
+failed to lock the
+QMCONFIG
+device for exclusive update.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for further information about the process
+that has the configuration locked.
+Re-enter the command after the configuration has been unlocked.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1131"></A>
+<H3>LIBQM MESSAGE #1131</H3>
+<H2> ERROR: Cannot read the device list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+qmadmin
+failed to re-read the volume table of contents and universal device list
+associated with
+QMCONFIG
+after locking the configuration for exclusive access.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to see that
+the device or file specified by
+QMCONFIG
+still exists, is properly initialized, and re-enter the command.
+The
+livtoc
+command can be used to list the current volume table of contents
+and
+lidl
+can be used to list the current universal device list.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1132"></A>
+<H3>LIBQM MESSAGE #1132</H3>
+<H2> ERROR: Invalid device index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+a device index was specified for a device that has not been
+created on (or has been deleted from) the universal device list
+associated with the
+QMCONFIG
+device.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+lidl
+command to list the current contents of the universal device list
+and re-enter the
+chdl
+command with a valid device index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1133"></A>
+<H3>LIBQM MESSAGE #1133</H3>
+<H2> ERROR: Cannot write the device list</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command,
+the update of
+the universal device list associated with the
+QMCONFIG
+device failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for any messages and use the
+lidl
+command to list the current contents of the universal device list.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1135"></A>
+<H3>LIBQM MESSAGE #1135</H3>
+<H2> ERROR: Device name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+crdl
+command,
+the device name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a device name that is 64
+characters or less in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1137"></A>
+<H3>LIBQM MESSAGE #1137</H3>
+<H2> ERROR: Device offset must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+crdl
+command, a non-numeric device offset was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+crdl
+command using a numeric device offset.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1139"></A>
+<H3>LIBQM MESSAGE #1139</H3>
+<H2> ERROR: Size must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+crdl
+command, a non-numeric value was specified for the size of the
+new device extent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+crdl
+command using a numeric size.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1140"></A>
+<H3>LIBQM MESSAGE #1140</H3>
+<H2> ERROR: Cannot create device <I>device</I>, offset <I>offset</I>, size <I>size</I> on <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The operation to create a new extent on the universal device list,
+UDL ,
+during the execution of
+crdl
+failed.
+The device name,
+<I>device</I>,
+offset value,
+<I>offset</I>,
+extent size,
+<I>size</I>,
+and configuration device,
+<I>config</I>,
+are printed in the message.
+If the
+QMCONFIG
+file exists, this command can fail if the file open fails;
+if a read on the device fails;
+if the file is not a configuration file;
+or if the file is not a normal file or a raw device (for example,
+a fifo file).
+If the file doesn't exist, the command can fail if file creation fails
+(for example, if the directory in which the file is to be created
+doesn't exist).
+The command can also fail if it
+failed to lock the configuration file;
+if there are no slots available in the
+UDL ;
+if the extent to be created overlaps with an existing device
+on the
+UDL ;
+if the first entry is being created and the device doesn't match
+QMCONFIG
+or the offset is not 0 or there is not enough space allocated
+to store the
+UDL
+and volume table of contents;
+or if a write fails on the device.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the device specified is correct, the directory exists,
+and that the extent doesn't overlap with existing devices
+that are listed with the
+lidl
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1143"></A>
+<H3>LIBQM MESSAGE #1143</H3>
+<H2> ERROR: Device index must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+dsdl
+command, a non-numeric device index was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+dsdl
+command using a numeric device index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1145"></A>
+<H3>LIBQM MESSAGE #1145</H3>
+<H2> WARN: Device not destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying a device with the
+dsdl
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1146"></A>
+<H3>LIBQM MESSAGE #1146</H3>
+<H2> ERROR: Cannot list device <I>dlindex</I> on <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+dsdl
+command,
+qmadmin
+failed to get the status of the specified device entry,
+<I>dlindex</I>,
+for the
+QMCONFIG
+device,
+<I>config</I>.
+Either device index is invalid or
+qmadmin
+was unable to open and read the universal device list, or
+<I>config</I>
+does not contain a valid configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the device is correct and check the universal
+device list with the
+lidl
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1147"></A>
+<H3>LIBQM MESSAGE #1147</H3>
+<H2> ERROR: Cannot destroy device <I>dlindex</I> on <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+dsdl
+command,
+qmadmin
+failed to destroy the device entry for the specified
+<I>dlindex</I>
+and
+QMCONFIG
+device,
+<I>config.</I>
+The command can fail if it can't lock the configuration exclusively
+for update; if it can't open and read the universal device list,
+UDL ;
+if
+<I>dlindex</I>
+is 0 and the
+UDL
+has other entries
+or the volume table of contents,
+VTOC ,
+has tables other than the
+VTOC
+and
+UDL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the device is correct and check the universal
+device list with the
+lidl
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1151"></A>
+<H3>LIBQM MESSAGE #1151</H3>
+<H2> ERROR: Command <I>command</I> not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+help
+command, an invalid command name was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the
+help
+command without any arguments to get a complete list of available
+commands.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1154"></A>
+<H3>LIBQM MESSAGE #1154</H3>
+<H2> WARN: IPC resources not removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While removing
+IPC
+resources with the
+ipcrm
+command and the
+-f
+option specified, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1156"></A>
+<H3>LIBQM MESSAGE #1156</H3>
+<H2> ERROR: Device index must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+lidl
+command, a non-numeric device index was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+lidl
+command using a numeric device index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1157"></A>
+<H3>LIBQM MESSAGE #1157</H3>
+<H2> ERROR: Device list not initialized on <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+lidl
+command was executed for a configuration,
+<I>config,</I>
+that is not initialized (that is, for a
+device or file that does not exist,
+or does not have at least one device defined in the universal device list).
+This message can also occur if the user does not have proper permissions
+to access the device.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the configuration device or file specified for
+QMCONFIG
+is correct and initialize it using the
+crdl
+command.
+Also check the permissions on the device or file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1166"></A>
+<H3>LIBQM MESSAGE #1166</H3>
+<H2> ERROR: Cannot get VTOC on <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+livtoc
+command was executed for a configuration,
+<I>config,</I>
+that is not initialized (that is, for a
+device or file that does not exist,
+or does not have at least one device defined in the universal device list).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the configuration device or file specified for
+QMCONFIG
+is correct and initialize it using the
+crdl
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1172"></A>
+<H3>LIBQM MESSAGE #1172</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddext
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qaddext
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1173"></A>
+<H3>LIBQM MESSAGE #1173</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddext
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1175"></A>
+<H3>LIBQM MESSAGE #1175</H3>
+<H2> ERROR: Size must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddext
+command, a non-numeric extent size was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qaddext
+command using a numeric extent size.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1176"></A>
+<H3>LIBQM MESSAGE #1176</H3>
+<H2> ERROR: Failed to add extent</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddext
+command,
+qmadmin
+failed to add the extent.
+There are many possible reasons for the failure and the specific reason
+is written to the standard output or the userlog ranging from
+an invalid queue space name
+to other processes being attached to the queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command when the problem has been resolved.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1177"></A>
+<H3>LIBQM MESSAGE #1177</H3>
+<H2> WARN: No queue space is currently open</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+qclose
+command was executed when a queue space is not currently open.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1179"></A>
+<H3>LIBQM MESSAGE #1179</H3>
+<H2> ERROR: Queue name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command,
+the queue name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1181"></A>
+<H3>LIBQM MESSAGE #1181</H3>
+<H2> ERROR: 'fifo' specified multiple times</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, the 'fifo' option was specified multiple times for
+the queue ordering value.
+The values 'fifo', 'lifo', 'priority', and 'time' may
+be entered once; 'fifo' and 'lifo' may not both be specified
+and must be specified as the last (least significant) option.
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+command specifying a valid value for the queue ordering option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1182"></A>
+<H3>LIBQM MESSAGE #1182</H3>
+<H2> ERROR: 'lifo' specified multiple times</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, the value 'lifo' was specified multiple times for
+the queue ordering argument.
+The values 'fifo', 'lifo', 'priority', and 'time' may
+be entered once; 'fifo' and 'lifo' may not both be specified
+and must be specified as the last (least significant) option.
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+command specifying a valid value for the queue ordering argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1183"></A>
+<H3>LIBQM MESSAGE #1183</H3>
+<H2> ERROR: 'priority' specified multiple times</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, the value 'priority' was specified multiple times for
+the queue ordering argument.
+The values 'fifo', 'lifo', 'priority', and 'time' may
+be entered once; 'fifo' and 'lifo' may not both be specified
+and must be specified as the last (least significant) option.
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+command specifying a valid value for the queue ordering argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1184"></A>
+<H3>LIBQM MESSAGE #1184</H3>
+<H2> ERROR: 'time' specified multiple times</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, the value 'fifo' was specified multiple times for
+the queue ordering argument.
+The values 'fifo', 'lifo', 'priority', and 'time' may
+be entered once; 'fifo' and 'lifo' may not both be specified
+and must be specified as the last (least significant) option.
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+command specifying a valid value for the queue ordering argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1185"></A>
+<H3>LIBQM MESSAGE #1185</H3>
+<H2> ERROR: Invalid queue ordering</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, an argument other than 'fifo', 'lifo', 'priority', or 'time'
+was specified for the queue ordering value or an invalid format was entered.
+The values 'fifo', 'lifo', 'priority', and 'time' may
+be entered once; 'fifo' and 'lifo' may not both be specified
+and must be specified as the last (least significant) option.
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+command specifying a valid value for the queue ordering argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1186"></A>
+<H3>LIBQM MESSAGE #1186</H3>
+<H2> ERROR: Device name for entry 0 must match QMCONFIG - <I>device</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+chdl
+command, device entry 0 is being changed and the new device name
+does not match the value for the
+QMCONFIG
+environment variable (or the configuration device specified on the
+command line).
+The device must match QMCONFIG for entry 0 so that the software
+can find the Volume Table of Contents and Device List.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+chdl
+is used to re-name a device.  If re-naming the device for entry 0,
+first copy, move, or re-name the device, then set QMCONFIG to match
+the new device name, and then re-enter the
+chdl
+command specifying the QMCONFIG name for the device name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1187"></A>
+<H3>LIBQM MESSAGE #1187</H3>
+<H2> ERROR: 'fifo/lifo' must be last in sort order</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, a 'fifo' or 'lifo' value was specified in
+the queue ordering argument prior to the 'priority' or 'time' option,
+or both 'fifo' and 'lifo' were specified.
+The values 'fifo', 'lifo', 'priority', and 'time' may
+be entered once; 'fifo' and 'lifo' may not both be specified
+and must be specified as the last (least significant) option.
+Multiple values may be specified separated by commas'
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+command specifying a valid value for the queue ordering argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1189"></A>
+<H3>LIBQM MESSAGE #1189</H3>
+<H2> ERROR: Cannot specify 'none' with any other argument for out-of-order option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the value 'none' was specified with either 'top' or 'msgid'
+in the out-of-order enqueuing argument.
+The values 'top' and/or 'msgid' may
+be entered once or the value may be 'none' (with no other arguments).
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid value for the out-of-order enqueuing argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1190"></A>
+<H3>LIBQM MESSAGE #1190</H3>
+<H2> ERROR: Queue name must be specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the queue name was not entered at the prompt or an empty string
+was specified on the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid queue name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1191"></A>
+<H3>LIBQM MESSAGE #1191</H3>
+<H2> ERROR: Cannot specify 'none' with any other argument for out-of-order option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the value 'none' was specified with either 'top' or 'msgid'
+in the out-of-order enqueuing argument.
+The values 'top' and/or 'msgid' may
+be entered once, or the value may be 'none' (with no other arguments).
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid value for the out-of-order enqueuing argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1192"></A>
+<H3>LIBQM MESSAGE #1192</H3>
+<H2> ERROR: 'top' specified multiple times</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the value 'top' was specified more than once
+in the out-of-order enqueuing argument.
+The values 'top' and/or 'msgid' may
+be entered once or the value may be 'none' (with no other arguments).
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid value for the out-of-order enqueuing argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1193"></A>
+<H3>LIBQM MESSAGE #1193</H3>
+<H2> ERROR: Cannot specify 'none' with any other argument for out-of-order option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the value 'none' was specified with either 'top' or 'msgid'
+in the out-of-order enqueuing argument.
+The values 'top' and/or 'msgid' may
+be entered once or the value may be 'none' (with no other arguments).
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid value for the out-of-order enqueuing argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1194"></A>
+<H3>LIBQM MESSAGE #1194</H3>
+<H2> ERROR: 'msgid' specified multiple times</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the value 'msgid' was specified more than once
+in the out-of-order enqueuing argument.
+The values 'top' and/or 'msgid' may
+be entered once or the value may be 'none' (with no other arguments).
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid value for the out-of-order enqueuing argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1195"></A>
+<H3>LIBQM MESSAGE #1195</H3>
+<H2> ERROR: Invalid out-of-order option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, a value other than 'top', 'msgid' or 'none' was entered
+for the out-of-order enqueuing argument,
+or the value is not formatted correctly.
+The values 'top' and/or 'msgid' may
+be entered once or the value may be 'none' (with no other options).
+Multiple values may be specified separated by commas.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command specifying a valid value for the out-of-order enqueuing argument.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1198"></A>
+<H3>LIBQM MESSAGE #1198</H3>
+<H2> ERROR: Retries must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, a non-numeric retry count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using a numeric retry count.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT1><P>
+<H1>LIBQM MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1201"></A>
+<H3>LIBQM MESSAGE #1201</H3>
+<H2> ERROR: Retry delay must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, a non-numeric delay value for the delay in seconds
+between retries was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using a numeric retry delay value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1205"></A>
+<H3>LIBQM MESSAGE #1205</H3>
+<H2> ERROR: Invalid high threshold type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, an invalid upper threshold value was specified
+(the suffix was not valid).
+The threshold value must be a number suffixed with 'b', 'B', '%',
+or 'm'.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using an appropriate threshold value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1206"></A>
+<H3>LIBQM MESSAGE #1206</H3>
+<H2> ERROR: High threshold must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, an invalid upper threshold value was specified.
+The threshold value must be a number suffixed with 'b', 'B', '%',
+or 'm'.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using an appropriate threshold value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1207"></A>
+<H3>LIBQM MESSAGE #1207</H3>
+<H2> ERROR: Invalid high threshold number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, an upper threshold value of 0 was specified,
+or a percentage greater than 100 was given.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using an appropriate threshold value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1210"></A>
+<H3>LIBQM MESSAGE #1210</H3>
+<H2> ERROR: High and low threshold types do not match</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the suffix on the upper threshold value doesn't match
+the suffix on the lower threshold value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using appropriate threshold values.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1211"></A>
+<H3>LIBQM MESSAGE #1211</H3>
+<H2> ERROR: Low threshold must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, an invalid lower threshold value was specified.
+The threshold value must be a number suffixed with 'b', 'B', '%',
+or 'm'.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using an appropriate threshold value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1212"></A>
+<H3>LIBQM MESSAGE #1212</H3>
+<H2> ERROR: Low threshold must be less than high threshold</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command, the lower threshold value is larger than the upper threshold value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qcreate
+or
+qchange
+command using appropriate threshold values such that the lower value is
+less than the upper threshold value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1215"></A>
+<H3>LIBQM MESSAGE #1215</H3>
+<H2> ERROR: Threshhold command length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+or
+qchange
+command,
+the threshold command was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a threshold command that is 128
+characters or less in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1216"></A>
+<H3>LIBQM MESSAGE #1216</H3>
+<H2> ERROR: Queue creation failed for queue <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command,
+qmadmin
+failed to create the specified queue.
+There are many possible reasons for the failure and the specific reason
+is written to the standard output or the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command when the problem has been resolved.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1219"></A>
+<H3>LIBQM MESSAGE #1219</H3>
+<H2> ERROR: Invalid priority</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchangeprio
+command, a non-numeric priority was specified
+or the priority value was not in the range 1-100, inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qchangeprio
+command using a numeric priority in the range 1-100.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1221"></A>
+<H3>LIBQM MESSAGE #1221</H3>
+<H2> WARN: Priority not changed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While changing message priorities with the
+qchangeprio
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1223"></A>
+<H3>LIBQM MESSAGE #1223</H3>
+<H2> ERROR: Queue name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchangequeue
+command,
+the queue name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1224"></A>
+<H3>LIBQM MESSAGE #1224</H3>
+<H2> ERROR: Queue name must be specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command, the queue name was not entered at the prompt or an empty string
+was specified on the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qdestroy
+command specifying a valid queue name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1226"></A>
+<H3>LIBQM MESSAGE #1226</H3>
+<H2> WARN: Queue not changed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While changing the queue on which messages are queued with the
+qchangequeue
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1228"></A>
+<H3>LIBQM MESSAGE #1228</H3>
+<H2> ERROR: Invalid time format</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchangetime
+command, an invalid date and time value was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qchangetime
+command using a valid date/time value.
+The value must be of the form
+YY[MM[DD[HH[MM[SS]]]]]
+(that is, 2 digits for year, and optionally 2 digits each for the month, date,
+hour, minute, and second),
+with an optional '+' prefix to indicate a relative value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1230"></A>
+<H3>LIBQM MESSAGE #1230</H3>
+<H2> WARN: Time not changed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While changing message execution time with the
+qchangetime
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1232"></A>
+<H3>LIBQM MESSAGE #1232</H3>
+<H2> WARN: Messages not deleted</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While deleting messages with the
+qdeletemsg
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>LIBQM MESSAGE #1233</H3>
+<H2> ERROR: Cannot specify the -p and -f options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command, both the
+-p
+and
+-f
+options were specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qdestroy
+command with either the
+-p
+or
+-f
+option but not both.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1234"></A>
+<H3>LIBQM MESSAGE #1234</H3>
+<H2> ERROR: Cannot specify the -p and -f options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command, both the
+-p
+and
+-f
+options were specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qdestroy
+command with either the
+-p
+or
+-f
+option but not both.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1237"></A>
+<H3>LIBQM MESSAGE #1237</H3>
+<H2> WARN: Queue not destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying a message queue with the
+qdestroy
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1238"></A>
+<H3>LIBQM MESSAGE #1238</H3>
+<H2> ERROR: Failed to destroy queue <I>queue</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command,
+qmadmin
+failed to destroy the specified queue,
+<I>queue.</I>
+There are many possible reasons for the failure and the specific reason
+is written to the standard output or the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command when the problem has been resolved.
+If the command fails because other processes are attached to the
+queue space, the
+-f
+option can be specified to force destroying the queue.
+If the command fails because there are messages on the queue, the
+-p
+option can be specified to purge the queue and destroy it.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1241"></A>
+<H3>LIBQM MESSAGE #1241</H3>
+<H2> ERROR: Failed to open queue space <I>queue_space_name</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qopen
+command,
+qmadmin
+failed to open the specified queue space,
+<I>queue_space_name</I>,
+on the configuration device
+<I>config</I>.
+There are many possible reasons for the failure and the specific reason
+is written to the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for the specific reason for failure.
+Re-enter the command when the problem has been resolved.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1244"></A>
+<H3>LIBQM MESSAGE #1244</H3>
+<H2> ERROR: Transaction index must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaborttrans
+command, a non-numeric transaction index was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qaborttrans
+command using a numeric transaction index associated with
+a transaction printed by the
+qprinttrans
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1246"></A>
+<H3>LIBQM MESSAGE #1246</H3>
+<H2> WARN: Transaction not aborted</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While heuristically aborting a transaction with the
+qaborttrans
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1248"></A>
+<H3>LIBQM MESSAGE #1248</H3>
+<H2> ERROR: Transaction index must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcommittrans
+command, a non-numeric transaction index was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+committrans
+command using a numeric transaction index associated with
+a transaction printed by the
+qprinttrans
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1250"></A>
+<H3>LIBQM MESSAGE #1250</H3>
+<H2> WARN: Transaction not committed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While heuristically committing a transaction with the
+qcommittrans
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1256"></A>
+<H3>LIBQM MESSAGE #1256</H3>
+<H2> ERROR: Invalid time format</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qscan
+command, an invalid date and time value was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qscan
+command using a valid date/time value.  The value must be of the form
+YY[MM[DD[HH[MM[SS]]]]]
+(that is, 2 digits for year, and optionally 2 digits each for the month, date,
+hour, minute, and second).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1257"></A>
+<H3>LIBQM MESSAGE #1257</H3>
+<H2> ERROR: Invalid time format</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qscan
+command with a range of date/time values,
+an invalid date and time value was specified for the second value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qscan
+command using a valid date/time value.  The value must be of the form
+YY[MM[DD[HH[MM[SS]]]]]
+(that is, 2 digits for year, and optionally 2 digits each for the month, date,
+hour, minute, and second).  A range of date/time values is two date/time
+values separated by a hyphen.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1258"></A>
+<H3>LIBQM MESSAGE #1258</H3>
+<H2> ERROR: Invalid priority</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qscan
+command, an invalid priority value was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qscan
+command using a valid priority value.
+The value must be numeric in the range 1-100, inclusive.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1259"></A>
+<H3>LIBQM MESSAGE #1259</H3>
+<H2> ERROR: Invalid priority</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qscan
+command, an invalid range of priority values was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qscan
+command using a valid priority value.
+A priority value must be numeric in the range 1-100, inclusive,
+and a range of priorities is two priority values separated by
+a hyphen.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1260"></A>
+<H3>LIBQM MESSAGE #1260</H3>
+<H2> ERROR: Invalid message id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qscan
+command, an invalid message identifier value was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qscan
+command using a valid message identifier value.
+The value must be a string, less than 33 characters in length,
+with backslash and non-printable characters entered as
+a backslash followed by a two-character hexadecimal value for the
+character.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1261"></A>
+<H3>LIBQM MESSAGE #1261</H3>
+<H2> ERROR: Invalid correlation id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qscan
+command, an invalid correlation identifier value was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qscan
+command using a valid correlation identifier value.
+The value must be a string, less than 33 characters in length,
+with backslash and non-printable characters entered as
+a backslash followed by a two-character hexadecimal value for the
+character.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1262"></A>
+<H3>LIBQM MESSAGE #1262</H3>
+<H2> ERROR: Queue name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qset
+command,
+the queue name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1267"></A>
+<H3>LIBQM MESSAGE #1267</H3>
+<H2> ERROR: Size must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qsize
+command, a non-numeric queue space size was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qsize
+command using a numeric size of the queue space in disk pages (sectors).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1269"></A>
+<H3>LIBQM MESSAGE #1269</H3>
+<H2> ERROR: Queue count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qsize
+command, a non-numeric queue count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qsize
+command using a numeric value for the maximum number of queues
+that can be created in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1271"></A>
+<H3>LIBQM MESSAGE #1271</H3>
+<H2> ERROR: Transaction count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qsize
+command, a non-numeric transaction count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qsize
+command using a numeric value for the maximum number
+of concurrent transactions in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1273"></A>
+<H3>LIBQM MESSAGE #1273</H3>
+<H2> ERROR: Process count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qsize
+command, a non-numeric process count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qsize
+command using a numeric value for the maximum number
+of concurrent processes accessing the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1275"></A>
+<H3>LIBQM MESSAGE #1275</H3>
+<H2> ERROR: Message count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qsize
+command, a non-numeric message count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qsize
+command using a numeric value for the maximum number of
+messages concurrently stored in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1279"></A>
+<H3>LIBQM MESSAGE #1279</H3>
+<H2> ERROR: Must specify queue space name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, the queue space name specified is the null string
+(that is, the name was entered on the command line as "", or
+return was entered for the prompt for the Queue Space Name).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command with the correct queue space name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1280"></A>
+<H3>LIBQM MESSAGE #1280</H3>
+<H2> ERROR: Queue space name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command,
+the queue space name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with a queue space name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1282"></A>
+<H3>LIBQM MESSAGE #1282</H3>
+<H2> ERROR: IPC key must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric
+IPC
+key was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric value for the
+IPC
+key used to create the queue space shared memory and semaphores.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1284"></A>
+<H3>LIBQM MESSAGE #1284</H3>
+<H2> ERROR: Size must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric queue space size was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric size of the queue space in disk pages (sectors).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1286"></A>
+<H3>LIBQM MESSAGE #1286</H3>
+<H2> ERROR: Queue count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric queue count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric value for the maximum number of queues
+that can be created in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1288"></A>
+<H3>LIBQM MESSAGE #1288</H3>
+<H2> ERROR: Transaction count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric transaction count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric value for the maximum number
+of concurrent transactions in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1290"></A>
+<H3>LIBQM MESSAGE #1290</H3>
+<H2> ERROR: Process count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric process count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric value for the maximum number
+of concurrent processes accessing the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1292"></A>
+<H3>LIBQM MESSAGE #1292</H3>
+<H2> ERROR: Message count must be numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, a non-numeric message count was specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command using a numeric value for the maximum number of
+messages concurrently stored in the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1294"></A>
+<H3>LIBQM MESSAGE #1294</H3>
+<H2> ERROR: Error queue name length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command,
+the error queue name was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with an error queue name that is 15 characters or less
+in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1295"></A>
+<H3>LIBQM MESSAGE #1295</H3>
+<H2> ERROR: Queue space creation failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command,
+qmadmin
+failed to create the specified queue space.
+There are many possible reasons for the failure and the specific reason
+is written to the standard output or the userlog.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command when the problem has been resolved.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1298"></A>
+<H3>LIBQM MESSAGE #1298</H3>
+<H2> WARN: Queue space not destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While destroying a queue space with the
+qspacedestroy
+command, the user did not respond with Y or y to the
+prompt for confirmation and the operation was not done.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

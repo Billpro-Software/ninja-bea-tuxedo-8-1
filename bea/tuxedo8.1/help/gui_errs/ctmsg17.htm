@@ -1,0 +1,1687 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1700-1799</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1700"></A>
+<H3>CMDTUX MESSAGE #1700</H3>
+<H2> ERROR: Could not execute, executable file not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a server, the new program could not be started
+(forked or spawned) because
+either the program does not exist or
+it is not correctly in the execution path.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the existence of the desired server, the configured
+environment (TUXDIR and APPDIR) and that the server is executable.
+Re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1701"></A>
+<H3>CMDTUX MESSAGE #1701</H3>
+<H2> WARN: Status uncertain, Timeout period expired on /Admin blocking request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to activate a server on a remote machine,
+the operation timed out.
+The status of the activation is not certain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retrieve the status of active servers to determine the status of
+the server; it may still boot after a delay.
+Check the event log for the remote machine to see if there
+are administrative messages regarding the status of the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1702"></A>
+<H3>CMDTUX MESSAGE #1702</H3>
+<H2> ERROR: Could not execute, network send error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to activate a server on a remote machine,
+a network error occurred while sending the request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+The remote machine or the network may not be available.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1703"></A>
+<H3>CMDTUX MESSAGE #1703</H3>
+<H2> WARN: Status uncertain, Timeout period expired on /Admin blocking request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to activate a server on a remote machine,
+the operation timed out.
+The status of the activation is not certain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retrieve the status of active servers to determine the status of
+the server; it may still boot after a delay.
+Check the event log for the remote machine to see if there
+are administrative messages regarding the status of the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1704"></A>
+<H3>CMDTUX MESSAGE #1704</H3>
+<H2> WARN: Status uncertain, network receive error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to activate a server on a remote machine,
+a network error occurred while receiving information about the request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+The remote machine or the network may not be available.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1705"></A>
+<H3>CMDTUX MESSAGE #1705</H3>
+<H2> WARN: Status uncertain, pipe synchronization error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to activate a server, the indication from the server
+that it is booted did not occur.  Usually this indicates that
+the server did not activate correctly (e.g., it exited or aborted
+execution).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.  If the server is not running
+and no messages appear, check to see if the program is running
+using operating system services.  Also check for a core dump in
+$APPDIR.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1706"></A>
+<H3>CMDTUX MESSAGE #1706</H3>
+<H2> ERROR: No BBL available, cannot boot</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An activation request for a server was received but the administrative
+servers for that machine have not yet been activated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Activate the administrative servers for a machine before any
+application servers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1707"></A>
+<H3>CMDTUX MESSAGE #1707</H3>
+<H2> ERROR: No DBBL available, cannot boot</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An activation request for a server was received but the administrative
+servers for that machine have not yet been activated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Activate the administrative servers for a machine before any
+application servers.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1708"></A>
+<H3>CMDTUX MESSAGE #1708</H3>
+<H2> ERROR: Invalid or unspecified administrative password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a server on a remote site,
+an invalid administrative password was sent to or received from
+the remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+There are two possible ways to correct this problem.
+One is to set up the user invoking
+tmboot
+to include the appropriate password setting via the
+TUXADMPWFILE
+environment variable.
+The second is to modify the password file indicated on the
+tlisten
+command line to include the administrative password for this application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot(1),
+tlisten(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1709"></A>
+<H3>CMDTUX MESSAGE #1709</H3>
+<H2> ERROR: Failed with System/T error <I>message</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a server, a TUXEDO error occurred.
+The message will indicate the specific problem
+Typically, it involves the configurations (e.g., there might
+not be enough service or accessor entries).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the error and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1710"></A>
+<H3>CMDTUX MESSAGE #1710</H3>
+<H2> ERROR: Failed with code <I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a server, a TUXEDO error occurred.
+The message will indicate the specific problem
+Typically, it involves the configurations (e.g., there might
+not be enough service or accessor entries).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the error and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1711"></A>
+<H3>CMDTUX MESSAGE #1711</H3>
+<H2> ERROR: Could not boot any servers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to activate one or more servers failed (no servers
+were booted).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for earlier related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1712"></A>
+<H3>CMDTUX MESSAGE #1712</H3>
+<H2> ERROR: Could not tmunloadcf config file for propagation to remote site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of booting a non-master machine, the configuration file is
+unloaded and propagated to the remote machine.
+This operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that $TUXDIR/bin/tmunloadcf exists and is executable.
+Check for operating system errors that might prevent its execution
+(lack of system resources such as process table entries, free
+space in the file system, etc.).
+Correct the problem and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1713"></A>
+<H3>CMDTUX MESSAGE #1713</H3>
+<H2> ERROR: Could not access unloaded configuration file for propagation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of booting a non-master machine, the configuration file is
+unloaded and propagated to the remote machine.
+This operation failed because the temporary file created to hold
+the configuration could not be opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for operating system errors that might prevent its execution
+(free space in the file system, etc.).
+Correct the problem and re-try the operation.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1714"></A>
+<H3>CMDTUX MESSAGE #1714</H3>
+<H2> ERROR: Send failure on TUXCONFIG propagation to <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of booting a remote machine, an error occurred in
+propagating the configuration file.
+Check the event log, both on the master and remote machines
+for related messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log, both on the master and remote machines
+for related messages.
+Correct the problem and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1715"></A>
+<H3>CMDTUX MESSAGE #1715</H3>
+<H2> ERROR: Receive failure on TUXCONFIG propagation to <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of booting a remote machine, an error occurred in
+propagating the configuration file.
+Check the event log, both on the master and remote machines
+for related messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log, both on the master and remote machines
+for related messages.
+Correct the problem and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1716"></A>
+<H3>CMDTUX MESSAGE #1716</H3>
+<H2> ERROR: Could not create remote tmp file on <I>lmid</I> for <I>file</I> creation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of booting a non-master machine, <I>lmid</I>, an error occurred in
+propagating the configuration file.
+Check the event log, both on the master and remote machines
+for related messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log, both on the master and remote machines
+for related messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1717"></A>
+<H3>CMDTUX MESSAGE #1717</H3>
+<H2> ERROR: tmloadcf error on <I>lmid</I> for <I>file</I> creation, tmloadcf output:</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a TMIB request to boot a non-master machine,
+an error failed in loading the configuration file.
+The message will contain the output of the failed load command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message to determine the problem.
+Correct the problem and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf(1),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1719"></A>
+<H3>CMDTUX MESSAGE #1719</H3>
+<H2> ERROR: Unknown error propagating TUXCONFIG file to <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While activating a non-master machine, an error occurred in
+propagating the configuration file to the remote machine, <I>lmid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for related messages.
+Correct the problem and re-try the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf(1),
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1729"></A>
+<H3>CMDTUX MESSAGE #1729</H3>
+<H2> WARN: Status uncertain, Timeout period expired on /Admin blocking request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to activate a server on a remote machine,
+the operation timed out.
+The status of the activation is not certain.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retrieve the status of active servers to determine the status of
+the server; it may still boot after a delay.
+Check the event log for the remote machine to see if there
+are administrative messages regarding the status of the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1730"></A>
+<H3>CMDTUX MESSAGE #1730</H3>
+<H2> INFO: About to activate server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that a server is about to be activated
+in response to a TMIB request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1731"></A>
+<H3>CMDTUX MESSAGE #1731</H3>
+<H2> INFO: About to deactivate server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that a server is about to be deactivated
+in response to a TMIB request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1732"></A>
+<H3>CMDTUX MESSAGE #1732</H3>
+<H2> ERROR: Application initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server activation failed because the server initialization
+function returned an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Administrative servers normally write a message to the event log.
+If this is an application server, then check whatever feedback
+mechanism is used in the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsvrinit(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1733"></A>
+<H3>CMDTUX MESSAGE #1733</H3>
+<H2> INFO: Duplicate server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A server activation failed because a server with the same
+TA_SRVGRP and TA_SRVID is already active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1734"></A>
+<H3>CMDTUX MESSAGE #1734</H3>
+<H2> ERROR: Identifier for DOMAINID must be &lt;= <I>number</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value specified for the
+DOMAINID
+parameter in the
+*RESOURCES
+section of the ubbconfig</I>(5) file is longer than <I>number</I>
+characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the value specified for this attribute and rerun tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1735"></A>
+<H3>CMDTUX MESSAGE #1735</H3>
+<H2> WARN: Timeout period expired on /Admin request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a TMIB request for tlisten information,
+the operation timed out.
+Normally this indicates that the remote machine or the network
+is unavailable or slow.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for the remote machine to see if there
+are administrative messages regarding the status of the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1736"></A>
+<H3>CMDTUX MESSAGE #1736</H3>
+<H2> ERROR: Services names beginning with '.' are reserved for system servers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+buildserver(1) was invoked with a <Font>-s option that attempted
+to build a reserved service name beginning with '.' into an
+application server.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the options to the buildserver(1) command to eliminate
+the reserved service name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Programmer's Guide" ,
+buildserver (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1737"></A>
+<H3>CMDTUX MESSAGE #1737</H3>
+<H2> ERROR: Could not process internal *MIBPERMS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While loading an application configuration,
+multiple *MIBPERMS sections exist or the value of a string
+is greater than 30 characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Normally, this section is not generated by te administrator,
+but is generated only during activation of a remote machine.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1738"></A>
+<H3>CMDTUX MESSAGE #1738</H3>
+<H2> ERROR: Invalid command name <I>cmdname</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The executable file tpaddusr</I>(1) was invoked with a name, <I>cmdname</I>,
+other than the permissible names of tpaddusr, <Font>tpdelusr, and
+tpmodusr.  This is caused by an application copying or linking the
+delivered executable to a differently named executable file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Modify the command line to use the supported command names.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1739"></A>
+<H3>CMDTUX MESSAGE #1739</H3>
+<H2> ERROR: usage: <I>cmdname</I> usrname> &lt;file> [&lt;cltname>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Either the tpdelusr</I> or <Font>tpmodusr</I> command (indicated by <I>cmdname</I>)
+was invoked improperly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the command line and retry the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1740"></A>
+<H3>CMDTUX MESSAGE #1740</H3>
+<H2> ERROR: usage: <I>cmdname</I> usrname> &lt;file> [&lt;cltname> [&lt;uid>]]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The tpaddusr</I> command (indicated by <I>cmdname</I>)
+was invoked improperly.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the command line and retry the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1741"></A>
+<H3>CMDTUX MESSAGE #1741</H3>
+<H2> ERROR: User name (<I>usr</I>) is too long, maximum <I>num</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The username <I>usr</I> specified on the tpaddusr</I>, <Font>tpdelusr</I>, or
+tpmodusr</I> command line is too long (greater than <I>num</I> characters).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the command line and retry the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1742"></A>
+<H3>CMDTUX MESSAGE #1742</H3>
+<H2> ERROR: Non-numeric value for user id</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user id specified on the tpaddusr, <Font>tpdelusr, or
+tpmodusr command line is non-numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the command line and retry the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1743"></A>
+<H3>CMDTUX MESSAGE #1743</H3>
+<H2> ERROR: Client name (<I>clt</I>) is too long, maximum <I>num</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The client name <I>clt</I> specified on the tpaddusr</I>, <Font>tpdelusr</I>, or
+tpmodusr</I> command line is too long (greater than <I>num</I> characters).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the command line and retry the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1744"></A>
+<H3>CMDTUX MESSAGE #1744</H3>
+<H2> ERROR: Could not access file <I>file</I>, <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The password file <I>file</I> could not be accessed due to a UNIX
+error indicated by the message <I>error</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the problem using the appropriate UNIX tools as indicated by
+the UNIX error message displayed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1745"></A>
+<H3>CMDTUX MESSAGE #1745</H3>
+<H2> ERROR: Could not open file <I>file</I> for read/write</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The password file <I>file</I> could not be accessed for update due to
+a UNIX permissions restriction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the permissions on the relevant files and/or directories and retry
+the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1746"></A>
+<H3>CMDTUX MESSAGE #1746</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while processing one of the following commands; tpaddusr,
+tpdelusr, or <Font>tpmodusr.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+malloc (3)
+in UNIX System reference manuals,
+tpaddusr (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1748"></A>
+<H3>CMDTUX MESSAGE #1748</H3>
+<H2> ERROR: User already exists</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user being added using the tpaddusr command already exists
+in the password file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the command tpmodusr to modify an existing user's entry
+in the password file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1749"></A>
+<H3>CMDTUX MESSAGE #1749</H3>
+<H2> ERROR: Failed to add user</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user could not be added to the password file because of errors
+that occurred while prompting or attempting to prompt for a password
+value for the user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure to run tpaddusr with stdin from the terminal, and be
+sure not to interrupt the command with the break key or any other
+interrupts.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1750"></A>
+<H3>CMDTUX MESSAGE #1750</H3>
+<H2> ERROR: Invalid user specified for deletion</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user was not found in the password file and therefore could
+not be deleted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the correct user name is being used and rerun the tpdelusr
+command if necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1751"></A>
+<H3>CMDTUX MESSAGE #1751</H3>
+<H2> ERROR: Invalid user specified for modification</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user was not found in the password file and therefore could
+not be modified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the correct user name is being used and rerun the tpmodusr
+command if necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1752"></A>
+<H3>CMDTUX MESSAGE #1752</H3>
+<H2> ERROR: Failed to modify user</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user could not be modified in the password file because of errors
+that occurred while prompting or attempting to prompt for a new password
+value for the user.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure to run tpmodusr with stdin from the terminal, and be
+sure not to interrupt the command with the break key or any other
+interrupts.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1753"></A>
+<H3>CMDTUX MESSAGE #1753</H3>
+<H2> ERROR: Could not open file <I>file</I> for writing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The password file could not be opened for writing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure the directories and permissions allow the password file to be
+created and written as necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1754"></A>
+<H3>CMDTUX MESSAGE #1754</H3>
+<H2> ERROR: System error writing file <I>file</I>, <I>error</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The password file <I>file</I> could not be written due to a UNIX
+error indicated by the message <I>error</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the problem using the appropriate UNIX tools as indicated by
+the UNIX error message displayed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1755"></A>
+<H3>CMDTUX MESSAGE #1755</H3>
+<H2> ERROR: tpsvrinit: can't retrieve own table entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A migrating DBBL could not retrieve its own server table entry from the
+bulletin board.  This indicates a corrupt bulletin board on the backup master
+site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance in recovering the application.
+Consideration may need to be given to using protected mode access to
+avoid bulletin board corruption by the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1757"></A>
+<H3>CMDTUX MESSAGE #1757</H3>
+<H2> ERROR: Invalid class specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred in handling a TMIB request for the T_BRIDGE class.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the event log for additional information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1758"></A>
+<H3>CMDTUX MESSAGE #1758</H3>
+<H2> WARN: Could not update master site information completely</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System tables identifying master site information could not be updated due
+to failed configuration file access and/or table lookup.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the site on which the message appeared as soon as possible and
+reboot it to force repropagation of up to date information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1759"></A>
+<H3>CMDTUX MESSAGE #1759</H3>
+<H2> WARN: Could not update master site information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+System tables identifying master site information could not be updated due
+to failed configuration file access and/or table lookup.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut down the site on which the message appeared as soon as possible and
+reboot it to force repropagation of up to date information.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1760"></A>
+<H3>CMDTUX MESSAGE #1760</H3>
+<H2> WARN: BB out of date, machine=<I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine <I>lmid</I> has an out of date bulletin board, most likely
+due to communications failures or delays.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+None.
+The system reacts to this situation automatically by propagating a new
+copy of the bulletin board to the affected site.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1761"></A>
+<H3>CMDTUX MESSAGE #1761</H3>
+<H2> WARN: TUXCONFIG file out of date, machine=<I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine <I>lmid</I> has an out of date configuration file,
+most likely due to communications failures or delays.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+None.
+The system reacts to this situation automatically by propagating a new
+copy of the configuration file to the affected site.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1762"></A>
+<H3>CMDTUX MESSAGE #1762</H3>
+<H2> INFO: Sending new TUXCONFIG file to machine <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system has determined that the logical machine <I>lmid</I> has an
+out of date configuration file and is sending a new copy to that site.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+None.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1763"></A>
+<H3>CMDTUX MESSAGE #1763</H3>
+<H2> ERROR: Failed to find configuration information on machine <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system could not find configuration information about the logical machine
+<I>lmid</I> that it needs to propagate a new configuration file to that machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1764"></A>
+<H3>CMDTUX MESSAGE #1764</H3>
+<H2> ERROR: Failed to propagate updated configuration information to machine <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system could not propagate a new configuration file to the
+logical machine <I>lmid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure the tlisten(1) process is still running on
+the indicated machine and that the permissions for directories and
+files are correct for that machine's configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1766"></A>
+<H3>CMDTUX MESSAGE #1766</H3>
+<H2> ERROR: tpcall() failed, <I>tperrmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The command tmconfig(1) received a failure return from <Font>tpcall(3)
+while processing the requested dynamic configuration request.
+The specific cause of the failure is indicated in <I>tperrmsg</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine from the specific cause of the error if the problem can be
+corrected administratively or is a transient problem
+(for example, a timeout).
+Contact your TUXEDO System Technical Support for assistance if unsure of how
+to resolve the situation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1768"></A>
+<H3>CMDTUX MESSAGE #1768</H3>
+<H2> ERROR: Passwords do not match</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The passwords entered for the original and confirming password prompts
+when executing the command tpaddusr(1) do not match.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the command being careful to enter identical password entries for
+the two prompts.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1769"></A>
+<H3>CMDTUX MESSAGE #1769</H3>
+<H2> ERROR: Passwords do not match</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The passwords entered for the original and confirming password prompts
+when executing the command tpmodusr do not match.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the command being careful to enter identical password entries for
+the two prompts.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpaddusr (1),
+AUTHSVR (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1771"></A>
+<H3>CMDTUX MESSAGE #1771</H3>
+<H2> WARN: MAXDRT increased from <I>num1</I> to <I>num2</I> to meet configured routing criteria</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configured value <I>num1</I> for the
+MAXDRT
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was automatically increased to
+a value <I>num2</I> large enough to accommodate the configured
+*ROUTING
+section entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The ASCII version of the configuration file should be updated to reflect
+the change either manually or using tmunloadcf.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1772"></A>
+<H3>CMDTUX MESSAGE #1772</H3>
+<H2> WARN: MAXRFT increased from <I>num1</I> to <I>num2</I> to meet configured routing criteria</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configured value <I>num1</I> for the
+MAXRFT
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was automatically increased to
+a value <I>num2</I> large enough to accommodate the configured
+*ROUTING
+section entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The ASCII version of the configuration file should be updated to reflect
+the change either manually or using tmunloadcf.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1773"></A>
+<H3>CMDTUX MESSAGE #1773</H3>
+<H2> WARN: MAXRTDATA increased from <I>num1</I> to <I>num2</I> to meet configured routing criteria</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The configured value <I>num1</I> for the
+MAXRTDATA
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was automatically increased to
+a value <I>num2</I> large enough to accommodate the configured
+*ROUTING
+section entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The ASCII version of the configuration file should be updated to reflect
+the change either manually or using tmunloadcf.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+tmunloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1775"></A>
+<H3>CMDTUX MESSAGE #1775</H3>
+<H2> ERROR:  MAXDRT parameter must be >= 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXDRT
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was specified outside of the
+acceptable range of 1 to 32767.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1777"></A>
+<H3>CMDTUX MESSAGE #1777</H3>
+<H2> ERROR:  MAXRFT parameter must be >= 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXRFT
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was specified outside of the
+acceptable range of 1 to 32767.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1779"></A>
+<H3>CMDTUX MESSAGE #1779</H3>
+<H2> ERROR:  MAXRFT parameter must be >= 0 and &lt; 32761</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXRTDATA
+parameter in the
+*RESOURCES
+section of the ubbconfig(5) file was specified outside of the
+acceptable range of 1 to 32760.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the ubbconfig(5) value for this parameter and rerun
+tmloadcf(1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1780"></A>
+<H3>CMDTUX MESSAGE #1780</H3>
+<H2> INFO: Server activated successfully</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to activate a server completed successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1781"></A>
+<H3>CMDTUX MESSAGE #1781</H3>
+<H2> INFO: Server deactivated successfully</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TMIB request to deactivate a server completed successfully.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+TM_MIB(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1783"></A>
+<H3>CMDTUX MESSAGE #1783</H3>
+<H2> ERROR: Can't register machine <I>machine</I> - duplicate serial number</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The license for your copy of the TUXEDO System specifies
+that the software may be installed and executed on only one machine at a time.
+However, the serial number of the copy running on machine <I>machine</I>
+is identical to the serial number of the copy running
+on another machine named in the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact the company from which you purchased the product
+to license additional copies of the TUXEDO System.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1784"></A>
+<H3>CMDTUX MESSAGE #1784</H3>
+<H2> ERROR: Can't register machine <I>machine</I> - will exceed TUXEDO System Binary Licensed User Count (<I>number</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Your license for the TUXEDO System specifies
+that the maximum number of users, application-wide, that can be supported is
+<I>number</I>.
+However, the number of users for machine
+<I>machine</I>,
+as indicated by the value of
+MAXACCESSERS
+in the
+TUXCONFIG
+file, will cause the maximum to be exceeded if that machine is booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reduce the values of
+MAXACCESSERS
+for the machines participating in your application,
+so that their sum does exceed the maximum number of licensed users.
+This number is reported by
+tmboot (1)
+at startup.
+If you wish to increase the maximum number of licensed users,
+contact the company from which you purchased the product.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1786"></A>
+<H3>CMDTUX MESSAGE #1786</H3>
+<H2> ERROR: Unlicensed TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 1606 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 1606 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1787"></A>
+<H3>CMDTUX MESSAGE #1787</H3>
+<H2> ERROR: Expired TUXEDO System Binary</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See Message No. 1609 above.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See Message No. 1609 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1788"></A>
+<H3>CMDTUX MESSAGE #1788</H3>
+<H2> WARN: Could not advertise administrative service</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BRIDGE could not offer the administrative service necessary to
+support access to the T_BRIDGE class via the /AdminAPI.
+The BRIDGE will still start and handle application network
+communication.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the system sizing parameters, specifically the TA_MAXSERVICES
+attribute of the T-DOMAIN class to make sure it is set sufficiently high
+to allow for system services.
+Also check the userlog for additional information.
+The system may need to be brought down and reconfigured to resolve this
+problem.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+MIB (5),
+TM_MIB (5),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1789"></A>
+<H3>CMDTUX MESSAGE #1789</H3>
+<H2> ERROR: String for PREFERENCES must be &lt;= <I>num</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The string value for the PREFERENCES parameter in the
+*RESOURCES section of the <Font>UBBCONFIG file is too large, that
+is, greater than <I>num</I> characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shorten the value for the parameter and rerun tmloadcf.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1791"></A>
+<H3>CMDTUX MESSAGE #1791</H3>
+<H2> ERROR: SANITYSCAN parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The SANITYSCAN parameter is not within acceptable limits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set SANITYSCAN to the proper value in the UBBCONFIG file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1793"></A>
+<H3>CMDTUX MESSAGE #1793</H3>
+<H2> ERROR: DBBLWAIT parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The DBBLWAIT parameter is not within acceptable limits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set DBBLWAIT to the proper value in the UBBCONFIG file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1795"></A>
+<H3>CMDTUX MESSAGE #1795</H3>
+<H2> ERROR: BBLQUERY parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BBLQUERY parameter is not within acceptable limits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set BBLQUERY to the proper value in the UBBCONFIG file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1797"></A>
+<H3>CMDTUX MESSAGE #1797</H3>
+<H2> ERROR: BLOCKTIME parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The BLOCKTIME parameter is not within acceptable limits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set BLOCKTIME to the proper value in the UBBCONFIG file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1799"></A>
+<H3>CMDTUX MESSAGE #1799</H3>
+<H2> ERROR: SCANUNIT parameter must be > 0 and &lt;= 60</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The SCANUNIT parameter is not within acceptable limits.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set SCANUNIT to the proper value in the UBBCONFIG file.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

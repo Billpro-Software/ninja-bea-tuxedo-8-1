@@ -1,0 +1,1706 @@
+<TITLE>LIBWSC MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBWSC MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>LIBWSC MESSAGE #1000</H3>
+<H2> ERROR: Unable to send message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpacall() .
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>LIBWSC MESSAGE #1001</H3>
+<H2> ERROR: Unable to get reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive an acknowledgment to a
+tpacall()
+request failed.
+This could be the result of the network
+going down, the Workstation Handler process not running, or the site of the
+Workstation Handler going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>LIBWSC MESSAGE #1002</H3>
+<H2> ERROR: tpcommit() message send failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpcommit ().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1004"></A>
+<H3>LIBWSC MESSAGE #1004</H3>
+<H2> ERROR: Unable to set type switch index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to check a buffer type or subtype failed during a call to
+tpalloc()
+because the type or subtype is not in
+the buffer type switch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the type and/or subtype is listed in the file tmtypesw.c.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3>LIBWSC MESSAGE #1005</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory failed during a call to
+tpalloc().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that size requested is not inappropriately large.
+Check that the
+application is freeing unneeded buffers
+before attempting to allocate new buffers.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>LIBWSC MESSAGE #1006</H3>
+<H2> ERROR: Type switch buffer initialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to initialize the buffer failed during a call to
+tpalloc().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the initialization function for
+this buffer type exists as specified in the buffer type switch.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>LIBWSC MESSAGE #1007</H3>
+<H2> ERROR: Unable to set type switch index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to check a buffer type or subtype failed during a call to
+tprealloc().
+This is caused by specifying a type or subtype that is not in
+the buffer type switch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the type and/or subtype is listed in the file tmtypesw.c.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>LIBWSC MESSAGE #1009</H3>
+<H2> ERROR: Type switch reinitialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to reinitialize a buffer failed during a call to
+tprealloc().
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the re-initialization function for
+this buffer type exists as specified in the buffer type switch.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>LIBWSC MESSAGE #1010</H3>
+<H2> ERROR: Type switch uninitialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to uninitialize a buffer failed during a call to
+tpfree() .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the uninitialization function for this buffer
+type exists as specified in the buffer type switch.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>LIBWSC MESSAGE #1011</H3>
+<H2> ERROR: tpcall() message send failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpcall().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>LIBWSC MESSAGE #1013</H3>
+<H2> ERROR: tpcall() get reply failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive an acknowledgment to a
+tpcall()
+request failed.
+This could be the result of the network
+going down, the Workstation Handler process not running, or the site of the
+Workstation Handler going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>LIBWSC MESSAGE #1014</H3>
+<H2> ERROR: Unable to create temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a file for temporary storage of a reply
+message failed.
+This is an operating system error that
+could be a result of insufficient space in the file system
+or improper permissions on the device.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The amount of the space on the specified device should be
+checked.
+If the environment variable
+TMPDIR
+has been specified, be sure the indicated directory exists and
+is writable by the application.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>LIBWSC MESSAGE #1015</H3>
+<H2> ERROR: Unable to write to temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to write to a file opened for temporary storage of a reply
+message failed.
+This is an operating system error that
+could be a result of insufficient space in the file system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The amount of the space on the specified device should be
+checked.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>LIBWSC MESSAGE #1016</H3>
+<H2> ERROR: Unable to open temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a file failed.
+This file was created for temporary storage of a reply message.
+This is an operating system error that
+could be a result of an accidental deletion of the
+file, a change in file permissions, or a hardware problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Files created for this purpose have a prefix of WS.
+Check for the existence of such files in the specified
+directory.
+If none are found, restart the client.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>LIBWSC MESSAGE #1017</H3>
+<H2> ERROR: Unable to read from temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to read from a temporary file failed.
+This file was created for temporary storage of a reply
+message.
+This is an operating system error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This error would occur after the file has been successfully
+opened for reading.
+This could indicate a permissions problem
+or a hardware failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>LIBWSC MESSAGE #1018</H3>
+<H2> ERROR: Too many outstanding handles</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application has exceeded the limit (50) of allowable outstanding
+handles.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application must not have more than 50 outstanding handles at any
+one time.
+This error message also indicates
+an internal problem within the system because
+tpcall()
+should have returned
+TPELIMIT .
+If this error occurs, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>LIBWSC MESSAGE #1019</H3>
+<H2> ERROR: Invalid array index</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application has received an unknown handle from the Workstation
+Handler.
+An attempt to delete this handle entry has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application should be restarted.
+If the problem still occurs,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>LIBWSC MESSAGE #1020</H3>
+<H2> ERROR: Unable to obtain authentication level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to connect to the TUXEDO application has
+failed during a
+tpchkauth()
+call.
+There are a number of reasons this could happen.
+The most obvious ones are the network address,
+WSNADDR ,
+is incorrect or the network device,
+WSDEVICE ,
+is not specified or is incorrect.
+Other possibilities for this failure are
+the network may be down, the Workstation
+Listener process may not be running, or the site of the Workstation Handler
+may be down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+WSNADDR
+must be same as the listening address of the
+Workstation Listener specified in the configuration file.
+The
+WSDEVICE
+must be specified for TLI.
+If these are not the problem, then check with the system
+administrator for the status of the Workstation Listener
+and its site.
+Contact your TUXEDO System Technical Support for any other
+problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>LIBWSC MESSAGE #1021</H3>
+<H2> ERROR: tpcommit() message receive failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply from the Workstation Handler process
+failed during a
+tpcommit().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3>LIBWSC MESSAGE #1022</H3>
+<H2> ERROR: Unable to send init request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpinit().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>LIBWSC MESSAGE #1023</H3>
+<H2> ERROR: Unable to get reply to init request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply from the Workstation Handler process
+failed during a
+tpinit().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3>LIBWSC MESSAGE #1025</H3>
+<H2> ERROR: Unable to send tpterm() request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed during a
+tpterm().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and inform the TUXEDO System administrator.
+The administrator will have to remove the client entry.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>LIBWSC MESSAGE #1026</H3>
+<H2> ERROR: Unable to get reply to tpterm() request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply from the Workstation Handler process
+failed during a
+tpterm().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and inform the TUXEDO System administrator.
+The administrator may have to remove the client entry.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>LIBWSC MESSAGE #1027</H3>
+<H2> ERROR: Unable to connect to WSH</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to connect to the TUXEDO System/T application has
+failed during a
+tpchkauth()
+call.
+There are a number of reasons this could happen.
+The most obvious ones:
+the network address,
+WSNADDR ,
+may be incorrect, the network device,
+WSDEVICE ,
+may be incorrect or not specified.
+Other possibilities:
+the network may be down, the
+WSL
+may not be running,
+or the site of the
+WSH
+may be down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The
+WSNADDR
+must be set to the listening address of the
+WSL
+specified in the configuration file.
+WSDEVICE
+is required for TLI.
+If both settings are okay, check with the system
+administrator for the status of the Workstation Listener
+and its site.
+If this fails to resolve the problems,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1028"></A>
+<H3>LIBWSC MESSAGE #1028</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory failed
+while creating an in-memory buffer type switch.
+This allocation is not very large and it happens
+only once when the client is joining the application.
+This failure would indicate a more serious problem
+of lack of machine resources.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult your UNIX system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>LIBWSC MESSAGE #1029</H3>
+<H2> ERROR: Unable to retrieve stored reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to retrieve a stored reply failed.
+This message was either stored in memory or in a
+temporary file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the message was stored in memory, then this indicates an
+internal TUXEDO problem.
+In this case the client should be shut down and restarted.
+Your TUXEDO System Technical Support should be informed.
+If the message was stored in a temporary file, this could
+indicate a permissions problem or a hardware failure.
+Consult your UNIX system administrator in this case.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>LIBWSC MESSAGE #1030</H3>
+<H2> ERROR: Handle not stored</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application has asked for a reply with a handle unknown
+to the system.
+This error should have been detected in
+tpgetrply().
+If the handle is valid, this would indicate an internal
+TUXEDO error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application should be restarted.
+If the problem still occurs, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>LIBWSC MESSAGE #1031</H3>
+<H2> ERROR: Send of OWS_GETRPLY message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to the Workstation Handler process
+failed.
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>LIBWSC MESSAGE #1032</H3>
+<H2> ERROR: Failed to receive expected reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An expected reply from the Workstation Handler process
+was not received.
+This could be a result of the network going down,
+the Workstation Handler process not running,
+or the site of the Workstation Handler going down.
+It could also indicate the client process
+and the Workstation Handler are out of sync.
+This should not happen if the Workstation Handler is running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and attempt to reconnect.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3>LIBWSC MESSAGE #1033</H3>
+<H2> ERROR: Failure to get a message reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply from the Workstation Handler process
+failed.
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+The TUXEDO administrator will have to remove the old client entry.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1034"></A>
+<H3>LIBWSC MESSAGE #1034</H3>
+<H2> ERROR: Received unexpected message with opcode <I>opcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unexpected reply was received from the Workstation Handler process.
+This would indicate the client and Workstation Handler processes are out
+of sync.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and report this message to your TUXEDO System Technical Support.
+The TUXEDO administrator will have to remove
+the old client entry.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>LIBWSC MESSAGE #1035</H3>
+<H2> ERROR: Unable to save a message reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to save a message failed.
+There are two possible causes.
+The first is that the environment variable
+WSRPLYMAX
+was set too high and an attempt to allocate space for the message failed.
+The second is an attempt to write to a file opened
+for temporary storage of a reply message failed.
+This is an operating system error that
+could be a result of insufficient space in the file system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+In the first case, the value of
+WSRPLYMAX
+should be lowered.
+The client must be restarted to get the new value.
+In the second case, the amount of the space on
+the specified device should be checked.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>LIBWSC MESSAGE #1036</H3>
+<H2> ERROR: Unexpected opcode returned <I>opcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unexpected reply was received from the Workstation Handler process.
+This would indicate the client and Workstation Handler processes are out
+of sync.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and report this message to your TUXEDO System Technical Support.
+The TUXEDO administrator will have to remove the old client entry.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>LIBWSC MESSAGE #1037</H3>
+<H2> ERROR: Network message receive failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a message from the network failed.
+This does not mean there was no message.
+This could be a result of the network going
+down or a memory failure in LIBNET.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+The TUXEDO administrator will have to remove the old client entry.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>LIBWSC MESSAGE #1040</H3>
+<H2> ERROR: Decode of header failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to decode a message header failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3>LIBWSC MESSAGE #1041</H3>
+<H2> ERROR: Received message of unknown type '<I>type</I>' subtype '<I>subtype</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An message with an unknown type or subtype was received.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+The buffer type switch for this client may need to be rebuilt.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>LIBWSC MESSAGE #1042</H3>
+<H2> ERROR: Received message of unknown type '<I>type</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An message with an unknown type was received.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+The buffer type switch for this client may need to be rebuilt.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3>LIBWSC MESSAGE #1043</H3>
+<H2> ERROR: Message data decode/decrypt failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to decode a message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3>LIBWSC MESSAGE #1044</H3>
+<H2> ERROR: Post receive on message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to post-receive a message failed.
+This is done in a buffer-type switch function.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1045"></A>
+<H3>LIBWSC MESSAGE #1045</H3>
+<H2> ERROR: Presend on message failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to presend a message failed.
+This is done in a buffer-type switch function.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Shut the client down and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3>LIBWSC MESSAGE #1046</H3>
+<H2> ERROR: Invalid data length of 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a message failed because there was no data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the service really does not require data, send a small amount
+so that the call will succeed.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3>LIBWSC MESSAGE #1048</H3>
+<H2> ERROR: Encoding of message header failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to encode a message header failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop the client and contact TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1049"></A>
+<H3>LIBWSC MESSAGE #1049</H3>
+<H2> ERROR: Encoding of message data failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to encode a message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop the client and contact TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1050"></A>
+<H3>LIBWSC MESSAGE #1050</H3>
+<H2> ERROR: tpsetunsol() not called, dropping unsolicited message.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unsolicited message was received but this client has
+not set the unsolicited message handling function to
+receive these messages.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is not necessarily an error.
+If no message handling function is
+specified, messages are dropped.
+This error documents that action.
+If the client does wish to receive unsolicited messages, the
+tpsetunsol()
+function should be called to set the function to process them.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpsetunsol (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1051"></A>
+<H3>LIBWSC MESSAGE #1051</H3>
+<H2> ERROR: Unable to set environment variables</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to read environment variables from the file designated by
+WSENVFILE
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that
+WSENVFILE
+is set and it is describing the correct file.
+Also check that the contents of the file follow the form
+VARIABLE=
+<I>string</I>.
+Full path names must be entered for those variables describing files.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3>LIBWSC MESSAGE #1052</H3>
+<H2> ERROR: Environment variable WSNADDR not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The environment variable
+WSNADDR
+is not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The environment variable
+WSNADDR
+must be set to allow the Workstation Client to connect to the
+TUXEDO application.
+This variable must be exported into the
+environment or it must be placed in a file designated by
+WSENVFILE.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3>LIBWSC MESSAGE #1053</H3>
+<H2> ERROR: Invalid network address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The address specified by
+WSNADDR
+contains an invalid character.
+Only hexadecimal values are allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the value of the environment variable
+WSNADDR
+matches the listening address of the Workstation Listener as
+specified in the configuration file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1054"></A>
+<H3>LIBWSC MESSAGE #1054</H3>
+<H2> ERROR: Unable to access network</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open the device specified by the environment variable
+WSDEVICE
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the value of the environment variable
+WSDEVICE
+is correct for the networking used.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3>LIBWSC MESSAGE #1055</H3>
+<H2> ERROR: Unable to establish WSL connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to connect to the Workstation Listener process
+failed.
+There are a number of reasons that could cause this problem.
+The address could be incorrect.
+Other causes could be that the Workstation Listener
+process is not running, the network is down,
+or the host machine is down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the value of the environment variable
+WSNADDR
+matches the listening address of the Workstation Listener as
+specified in the configuration file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>LIBWSC MESSAGE #1056</H3>
+<H2> ERROR: Unable to allocate network buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate a buffer for the network calls
+failed.
+This may be a memory resource problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure that the application is managing resources correctly.
+This is particularly important in an
+MS-DOS
+environment.
+Consult with your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>LIBWSC MESSAGE #1057</H3>
+<H2> ERROR: Unable to send message to WSL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a message to the Workstation Listener process
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the machine types have not been set to be the same
+when they should be different.
+If the architectures are different, the environment variable
+WSTYPE
+should be different than the machine type in the configuration file.
+Also check that the Workstation Listener process is running.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3>LIBWSC MESSAGE #1059</H3>
+<H2> ERROR: WSL returns error on connection request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to get the reply to a connection request has failed.
+This could happen if the Workstation Listener process went down
+before it could send the reply.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the Workstation Listener process is running.
+If this is not the case, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>LIBWSC MESSAGE #1060</H3>
+<H2> ERROR: Unable to establish connection on native site</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The return value on a connection request to the Workstation Listener
+Process indicates an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the value of
+tperrno
+for some indication of the cause of the error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>LIBWSC MESSAGE #1061</H3>
+<H2> ERROR: Network address too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The address specified by
+WSNADDR
+contains too many characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the value of the environment variable
+WSNADDR
+matches the listening address of the Workstation Listener as
+specified in the configuration file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1062"></A>
+<H3>LIBWSC MESSAGE #1062</H3>
+<H2> ERROR: Environment variable TUXDIR must be set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The environment variable
+TUXDIR
+is not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The environment variable
+TUXDIR
+must be set to allow the Workstation Client to run.
+This variable must be exported into the
+environment or it must be placed in a file designated by
+WSENVFILE.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3>LIBWSC MESSAGE #1063</H3>
+<H2> ERROR: Unable to open WSH connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to open a network connection failed.
+This is a rare event because the client has just
+connected successfully to the Workstation Listener.
+It is now failing to open a network connection
+to the Workstation Handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1064"></A>
+<H3>LIBWSC MESSAGE #1064</H3>
+<H2> ERROR: Unable to establish WSH connection <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to connect to the Workstation Handler process
+failed.
+This is a rare occurrence because the application has just
+communicated successfully with the Workstation Listener process.
+It is possible that the Workstation Handler
+process is not running, the network has just gone down,
+or the host machine has just gone down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If none of the above is true, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1065"></A>
+<H3>LIBWSC MESSAGE #1065</H3>
+<H2> ERROR: Unable to close WSH connection</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to close the connection to the Workstation Handler process
+failed.
+This is a rare event because the application has just
+communicated successfully with the Workstation Handler process.
+It is possible the network has just gone down.
+This would not affect the disconnect from the TUXEDO application.
+It might indicate a network problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>LIBWSC MESSAGE #1071</H3>
+<H2> ERROR: Path name of TUXDIR is too long</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The environment variable
+TUXDIR
+is set but the path specified is greater
+than 78 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The file system may need to be reorganized in order to
+shorten the path from
+root
+to the location of the TUXEDO software.
+Consult with your system administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>LIBWSC MESSAGE #1073</H3>
+<H2> ERROR: Handle not active</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A request to retrieve a message failed because the entry is not valid.
+If the application requested a message with an invalid handle,
+it should have been detected at a higher level.
+Detection at this level indicates an internal error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Please make a record of the actions that caused this error
+and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>LIBWSC MESSAGE #1074</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory to save a message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The value of
+WSRPLYMAX
+should be lowered.
+This will cause messages to be stored in temporary files
+rather than memory.
+The client must be restarted to get the new value.
+Another solution is to do synchronous requests with
+tpcall().
+This will make it unnecessary to store replies.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>LIBWSC MESSAGE #1075</H3>
+<H2> ERROR: Unable to store message in temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to save a reply message in a temporary file has failed.
+If the application has the necessary permissions,
+then the device must be full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the setting of the environment variable
+TMPDIR.
+This may be set to a file system with restrictive permissions,
+or it may be full.
+Resetting this variable to a file system with sufficient
+space may solve the problem.
+Another solution is to use the synchronous method,
+tpcall(),
+to make service requests.
+This will make it unnecessary to save replies.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>LIBWSC MESSAGE #1076</H3>
+<H2> ERROR: Invalid handle</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to retrieve a message with an invalid handle.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for an application error that would cause this situation.
+If no errors are found, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>LIBWSC MESSAGE #1077</H3>
+<H2> ERROR: Unable to resize message buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt failed to reallocate a buffer to hold a message that
+had been saved in a temporary file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a memory problem.
+Attempt to free up resources for system use.
+There may be some unnecessary buffers in the application.
+Another solution is to use synchronous service requests with
+tpcall().
+This will make it unnecessary to store replies.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>LIBWSC MESSAGE #1078</H3>
+<H2> ERROR: Unable to read message from temporary file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to read from a temporary file failed.
+This file was created for temporary storage of a reply
+message.
+This is an operating system error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The error would occur after the file has been successfully
+opened for reading.
+It could indicate a permissions problem
+or a hardware failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>LIBWSC MESSAGE #1079</H3>
+<H2> ERROR: Unable to get data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt was made to send a broadcast message with a buffer that
+was not obtained with
+tpalloc().
+The system is unable to get the data from an unknown buffer type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Allocate the buffer for the broadcast message with
+tpalloc()
+and attempt to do the broadcast again.
+If this fails, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3>LIBWSC MESSAGE #1080</H3>
+<H2> ERROR: Message presend routine failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to presend a buffer for a broadcast message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this happens, record the circumstances that caused the problem
+and contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>LIBWSC MESSAGE #1082</H3>
+<H2> ERROR: Unable to send unsolicited message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a broadcast or tpnotify message failed
+on a network send.
+The error could be that an invalid buffer type was used.
+The buffer must be obtained by a call to
+tpalloc ().
+If there is no problem with the application, then
+it could be either a network problem, a problem with the host machine,
+or the Workstation Handler process is no longer running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+For these situations, consult the TUXEDO System administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1083"></A>
+<H3>LIBWSC MESSAGE #1083</H3>
+<H2> ERROR: Unable to get reply to unsolicited message request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive the acknowledgment reply for a
+broadcast or tpnotify message failed on a network receive.
+This would indicate either a network problem,
+the host machine is down, or that the Workstation
+Handler process is no longer running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the TUXEDO System administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3>LIBWSC MESSAGE #1085</H3>
+<H2> ERROR: Unable to get reply to unsolicited message request</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to do a network receive failed during a check
+for unsolicited messages.
+This does not mean there were no messages.
+This would indicate either a network problem,
+the host machine is down, or that the Workstation
+Handler process is no longer running.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Consult the TUXEDO System administrator.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>LIBWSC MESSAGE #1087</H3>
+<H2> ERROR: Invalid arguments passed to <I>program</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to build a DOS
+workstation client failed because
+invalid arguments were passed to the
+buildclt
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to
+buildclt
+and re-execute the command.
+If unsure about the proper arguments, refer to the on-line usage message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclt (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>LIBWSC MESSAGE #1088</H3>
+<H2> ERROR: Cannot execute command <I>compiler</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to execute the
+compiler failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the Workstation Reference Manual for the proper use of the
+buildclt
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclt (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>LIBWSC MESSAGE #1089</H3>
+<H2> ERROR: Commit error due to outstanding handles</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to commit a transaction with outstanding handles failed.
+This is an application error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that there are no outstanding
+handles before calling
+tpcommit ().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpcommit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>LIBWSC MESSAGE #1090</H3>
+<H2> ERROR: Unable to allocate system buffer</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory for a system buffer failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The system can not operate without sufficient space for system buffers.
+There are several strategies that an application can employ to solve
+this problem.
+Be sure there are no large application buffers that are not necessary.
+If asynchronous messages are being used, the value of
+WSRPLYMAX
+could be lowered.
+This will cause messages to be stored in temporary files rather than memory.
+The client must be restarted to get the new value.
+An alternative to the last solution is to do synchronous requests with
+tpcall().
+This will make it unnecessary to store replies.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>LIBWSC MESSAGE #1091</H3>
+<H2> ERROR: Unable to get buffer for tpabort() request, transaction will time-out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory for a system buffer to send an abort request
+failed.
+The system will time the transaction out so it will eventually be aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Whenever an allocation of a system buffer fails, the advice is the same.
+Try to reduce the memory usage of the application.
+There are several strategies that an application can employ to solve
+this problem.
+Be sure there are no large application buffers that are not necessary.
+If asynchronous messages are being used, the value of
+WSRPLYMAX
+could be lowered.
+This will cause messages to be stored in temporary files rather than memory.
+The client must be restarted to get the new value.
+An alternative to the last solution is to do synchronous requests with
+tpcall ().
+This will make it unnecessary to store replies.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>LIBWSC MESSAGE #1092</H3>
+<H2> ERROR: Unable to get buffer for tpabort() reply, transaction will time-out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to allocate memory for a system buffer to receive an abort reply
+failed.
+The system will time the transaction out so it will eventually be aborted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Whenever an allocation of a system buffer fails, the advice is the same.
+Try to reduce the memory usage of the application.
+There are several strategies that an application can employ to solve
+this problem.
+Be sure there are no large application buffers that are not necessary.
+If asynchronous messages are being used, the value of
+WSRPLYMAX
+could be lowered.
+This will cause messages to be stored in temporary files rather than memory.
+The client must be restarted to get the new value.
+An alternative to the last solution is to do synchronous requests with
+tpcall ().
+This will make it unnecessary to store replies.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3>LIBWSC MESSAGE #1094</H3>
+<H2> ERROR: Unknown buffer type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is attempting to send a broadcast message with an unknown type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The application must use a buffer obtained from
+tpalloc()
+to send an unsolicited message.
+Either the application must be changed or the buffer type switch for this
+client may need to be rebuilt with the new type.
+Contact your TUXEDO System Technical Support for help with the latter.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1095"></A>
+<H3>LIBWSC MESSAGE #1095</H3>
+<H2> ERROR: Invalid data length of 0, data not self describing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The application is attempting to send a broadcast message with no data.
+This is not allowed in order to eliminate unnecessary messages in the
+system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either send data in the message or send a message with "minimal" data
+to get around the check.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>LIBWSC MESSAGE #1098</H3>
+<H2> ERROR: Unable to send tpabort() request, transaction will time-out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send a request to abort a transaction failed.
+The system will time the transaction out so it will eventually be aborted.
+For that reason an error is not returned.
+However, this is an indication of some other problem that should be
+investigated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This problem is the result of either a network failure, or
+the Workstation Handler or its site being down.
+Contact your TUXEDO System administrator for advice with these problems.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>LIBWSC MESSAGE #1099</H3>
+<H2> ERROR: Unable to receive tpabort() reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to receive a reply from the Workstation Handler process
+failed during a
+tpabort ().
+This could be a result of the network going down, the Workstation
+Handler process not running, or the site of the Workstation Handler
+going down.
+In any event, the transaction will be timed out.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If any of the above problems happened, the client should be shut down
+and restarted when the problem has been resolved.
+This work should be coordinated with the TUXEDO System administrator.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,64 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//--------------------------------------------------------------------
+//
+// billp.idl
+//
+// IDL for the billing part of the university sample application
+//
+// Declares the following interfaces
+// (and their supporting datatypes):
+//
+//   Teller
+//   TellerFactory
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+//--------------------------------------------------------------------
+
+#pragma prefix "beasys.com"
+
+module BillingP
+{
+    //----------------------------------------------------------------
+
+    typedef unsigned long AccountNumber;
+
+    //----------------------------------------------------------------
+
+    interface Teller
+    {
+        double
+        get_balance(
+            in AccountNumber account
+        );
+
+        void
+        credit(
+            in AccountNumber account,
+            in double        amount
+        );
+
+        void
+        debit(
+            in AccountNumber account,
+            in double        amount
+        );
+    };
+
+    //----------------------------------------------------------------
+
+    interface TellerFactory
+    {
+        Teller
+        find_teller(
+            in AccountNumber account
+        );
+    };
+
+    //----------------------------------------------------------------
+};
+
+//--------------------------------------------------------------------
+

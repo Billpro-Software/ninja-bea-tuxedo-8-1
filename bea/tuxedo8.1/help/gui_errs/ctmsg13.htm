@@ -1,0 +1,1589 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 1300-1399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1300"></A>
+<H3>CMDTUX MESSAGE #1300</H3>
+<H2> ERROR: Could not generate security password encryption key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An encryption algorithm error occurred while passing security key
+information to a remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1301"></A>
+<H3>CMDTUX MESSAGE #1301</H3>
+<H2> ERROR: Could not generate security password encryption schedule</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An encryption algorithm error occurred while passing security key
+information to a remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1302"></A>
+<H3>CMDTUX MESSAGE #1302</H3>
+<H2> ERROR: Could not encrypt application security key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An encryption algorithm error occurred while passing security key
+information to a remote machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1307"></A>
+<H3>CMDTUX MESSAGE #1307</H3>
+<H2> ERROR: Unable to obtain application password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tmconfig
+command was unable to obtain a value for the application password.
+This value is entered at the terminal if
+tmconfig
+is being invoked interactively, and is gotten from the
+APP_PW
+environment variable if the standard input to the
+tmconfig
+process is not a terminal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+tmconfig
+command is being invoked in the background, be sure to set
+and export the
+APP_PW
+environment variable.
+If
+tmconfig
+is being invoked at a terminal, be sure that the user enters a
+value at the
+Enter
+Application
+Password :
+prompt.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1308"></A>
+<H3>CMDTUX MESSAGE #1308</H3>
+<H2> ERROR: Must specify NLSADDR parameters in NETWORK entry <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NLSADDR
+parameter in the *NETWORK section of the configuration file must be
+specified for every machine in the network, except the
+master machine.
+It is recommended but not required
+for the master machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+NLSADDR
+information to the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*NETWORK section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1309"></A>
+<H3>CMDTUX MESSAGE #1309</H3>
+<H2> WARN: NLSADDR parameter not specified for NETWORK entry <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+NLSADDR
+parameter in the *NETWORK section of the configuration file
+is recommended but not required for
+the master machine.
+The master machine needs an
+NLSADDR
+and a
+tlisten
+process running in order for
+master migration to work.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add
+NLSADDR
+information for the master machine to the configuration file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*NETWORK section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1316"></A>
+<H3>CMDTUX MESSAGE #1316</H3>
+<H2> ERROR: Can't find the tpadmin field table in <I>dir</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmconfig ,
+the program was unable to get the field identifier for
+TA_SECTION
+from the field table
+$TUXDIR/udataobj/tpadmin .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the tpadmin field table exists and is readable.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1317"></A>
+<H3>CMDTUX MESSAGE #1317</H3>
+<H2> ERROR: Failed to set group id to administrator</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+tmboot
+or
+tmshutdown
+as user id 0 (root),
+the program sets the group identifier to the group identifier
+for the application administrator as specified in the
+TUXCONFIG
+file.  The
+setgid ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+GID
+value as set in the *RESOURCES or *MACHINES sections of the
+UBBCONFIG
+file is valid.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1318"></A>
+<H3>CMDTUX MESSAGE #1318</H3>
+<H2> ERROR: Failed to set user id to administrator</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When executing
+tmboot
+or
+tmshutdown
+as user id 0 (root),
+the program sets the user identifier to the user identifier
+for the application administrator as specified in the
+TUXCONFIG
+file.  The
+setuid ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the
+UID
+value as set in the *RESOURCES or *MACHINES sections of the
+UBBCONFIG
+file is valid.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1319"></A>
+<H3>CMDTUX MESSAGE #1319</H3>
+<H2> INFO: Terminating tlisten process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tlisten
+process will print this message to the standard error output
+when terminating.
+The only valid exit for the
+tlisten
+process is when it receives a
+SIGTERM
+termination signal.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1320"></A>
+<H3>CMDTUX MESSAGE #1320</H3>
+<H2> ERROR: Duplicate -l option specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tlisten ,
+the -l option was specified more than once on the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command specifying the -l option only once with
+the network listening address.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1322"></A>
+<H3>CMDTUX MESSAGE #1322</H3>
+<H2> ERROR: Duplicate -u option specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tlisten ,
+the -u option was specified more than once on the command line.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command specifying the -u option only once with
+the user identifier or name for the configuration administrator.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tlisten (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1326"></A>
+<H3>CMDTUX MESSAGE #1326</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+storing a list of processes to be booted or shut down in
+tmboot
+or
+tmshutdown .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1327"></A>
+<H3>CMDTUX MESSAGE #1327</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+generating a list of servers to be booted in
+tmboot .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1328"></A>
+<H3>CMDTUX MESSAGE #1328</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+generating a list of servers to be shut down in
+tmshutdown .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1329"></A>
+<H3>CMDTUX MESSAGE #1329</H3>
+<H2> ERROR: Error obtaining Application Password</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When the
+SECURITY
+option is defined in the
+UBBCONFIG
+file,
+tmloadcf
+tries to get a password from the user.
+If the standard input is
+connected to a terminal,
+tmloadcf
+prompts for the password interactively.
+If not, it looks at the
+APP_PW
+environment variable.
+This error happens if
+tmloadcf
+cannot open the tty device for prompting, or if
+APP_PW
+is not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If running
+tmloadcf
+from a script, make sure that
+APP_PW
+is set and exported into the environment.
+Otherwise, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1335"></A>
+<H3>CMDTUX MESSAGE #1335</H3>
+<H2> ERROR: UID is not effective user ID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While
+tmloadcf
+is being run on the master machine, the
+UID
+parameter in the *RESOURCES or *MACHINES section of the
+UBBCONFIG
+does not match the effective user identifier of the person running the command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+UID
+parameter in the *RESOURCES or *MACHINES section of the
+UBBCONFIG
+file or run the command under that user identifier.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1336"></A>
+<H3>CMDTUX MESSAGE #1336</H3>
+<H2> ERROR: GID is not effective group ID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While
+tmloadcf
+is being run on the master machine, the
+GID
+parameter in the *RESOURCES or *MACHINES section of the
+UBBCONFIG
+does not match the effective group identifier of the person running the command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+GID
+parameter in the *RESOURCES or *MACHINES section of the
+UBBCONFIG
+file or run the command under that group identifier.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1341"></A>
+<H3>CMDTUX MESSAGE #1341</H3>
+<H2> ERROR: MAXACCESSERS parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXACCESSERS
+parameter in the *MACHINES section of the
+UBBCONFIG
+file must be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXACCESSERS
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1343"></A>
+<H3>CMDTUX MESSAGE #1343</H3>
+<H2> ERROR: MAXGTT parameter must be >= 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXGTT
+parameter in the *MACHINES section of the
+UBBCONFIG
+file must be greater than or equal to 0 and less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXGTT
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than or equal to 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1344"></A>
+<H3>CMDTUX MESSAGE #1344</H3>
+<H2> ERROR: MAXCONV parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MAXCONV
+parameter in the *MACHINES section of the
+UBBCONFIG
+file must be greater than zero and
+less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXCONV
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1351"></A>
+<H3>CMDTUX MESSAGE #1351</H3>
+<H2> ERROR: PERM parameter must be >= 1 and &lt;= 0777</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+PERM
+parameter in the *MACHINES section of the
+UBBCONFIG
+file must be greater than or equal to 1 and
+less than or equal to 0777.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+PERM
+as specified in the *MACHINES section of the
+UBBCONFIG
+file to be greater than or equal to 1 and less than or equal to 0777.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1352"></A>
+<H3>CMDTUX MESSAGE #1352</H3>
+<H2> ERROR: GROUP entry <I>groupname</I> has TMS specified and LMID <I>lmid</I> does not have TLOGDEVICE</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A
+TMSNAME
+parameter is specified for group,
+<I>groupname</I>,
+but the primary LMID for the group,
+<I>lmid</I>,
+does not have a
+TLOGDEVICE
+specified in the *MACHINES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either change the *GROUPS entry to not have a
+TMSNAME
+parameter, or change the
+LMID
+value for the group,
+or change the *MACHINES entry to have a
+TLOGDEVICE
+parameter.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1356"></A>
+<H3>CMDTUX MESSAGE #1356</H3>
+<H2> ERROR: tpalloc() failed - <I>tperrno_msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate a typed buffer using
+tpalloc ()
+failed while
+the
+DBBL
+was broadcasting a message to a
+BBL
+running the prior release of the software.
+The message indicates the reason that
+tpalloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Most likely, the call was unable dynamically to allocate memory.
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1358"></A>
+<H3>CMDTUX MESSAGE #1358</H3>
+<H2> ERROR: Cannot retrieve server information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmshutdown
+with the -R option, the program was unable to retrieve
+the queue information for the servers.
+The server will be shut down and not migrated to the alternate machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1359"></A>
+<H3>CMDTUX MESSAGE #1359</H3>
+<H2> ERROR: Server ID <I>id</I> in group <I>groupname</I> not marked as restartable.  This server will not be restarted upon migration.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmshutdown
+with the -R option, the program determined that the server
+is not configured to be restartable.
+The server will be shut down and not migrated to the alternate machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you want to be able to migrate the server between the primary
+and backup machines, the *GROUPS entry with which the server
+is associated must have a primary and backup
+LMID
+specified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1360"></A>
+<H3>CMDTUX MESSAGE #1360</H3>
+<H2> ERROR: configuration file not found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmboot
+or
+tmshutdown ,
+the program was unable to get the Bulletin Board parameters from
+the
+TUXCONFIG
+configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the
+TUXCONFIG
+environment variable is set and exported.
+Check the userlog for prior messages that indicate the nature
+of the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1370"></A>
+<H3>CMDTUX MESSAGE #1370</H3>
+<H2> INFO: Connecting to <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process has initiated a connection to another machine,
+<I>machine</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1371"></A>
+<H3>CMDTUX MESSAGE #1371</H3>
+<H2> INFO: Connection received from <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process has received a connection from another machine,
+<I>machine</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1372"></A>
+<H3>CMDTUX MESSAGE #1372</H3>
+<H2> INFO: Orderly disconnect from <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process has completed an orderly disconnect sequence
+with a remote
+BRIDGE .
+Orderly disconnections
+usually result from execution of the tmshutdown utility.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+and Messages 1370 and 1371 above.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1373"></A>
+<H3>CMDTUX MESSAGE #1373</H3>
+<H2> ERROR: Abnormal disconnect from <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process has experienced an abnormal disconnect from a remote
+BRIDGE .
+There may be networking problems, or the remote
+<I>machine</I>
+may have crashed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check that
+<I>machine</I>
+is up.
+<LI><P>
+Check network connectivity between the machines.
+<LI><P>
+Check that the TUXEDO System is running on
+<I>machine</I>.
+<LI><P>
+The
+BRIDGE
+processes will automatically reestablish a
+connection between the machines on demand, when possible.
+To prevent thrashing, the link will be suspended for five minutes
+if an automatic reconnect attempt fails.
+No further automatic reconnection attempts are made during this interval.
+<LI><P>
+If desired, use tmadmin(1)'s <Font>reconnect command to
+initiate a reconnection attempt manually.
+Manual attempts are allowed during the five-minute suspension interval.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)'s
+reconnect
+command.
+Also check Messages 1370, 1371, 1374, 1375, and 1376 in
+this chapter.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1374"></A>
+<H3>CMDTUX MESSAGE #1374</H3>
+<H2> WARN: Reconnecting to <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process successfully reconnected to the
+BRIDGE
+on
+<I>machine</I>
+during recovery from a networking problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1373 above
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1375"></A>
+<H3>CMDTUX MESSAGE #1375</H3>
+<H2> ERROR: Unable to reconnect to <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process could not reconnect to
+<I>machine</I>
+during recovery from a networking problem.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check that
+<I>machine</I>
+is up.
+<LI><P>
+Check network connectivity between the machines.
+<LI><P>
+Check that the TUXEDO System is running on
+<I>machine</I>.
+<LI><P>
+The
+BRIDGE
+processes will automatically reestablish a
+connection between the machines on demand, when possible.
+To prevent thrashing, the link will be suspended for five minutes
+if an automatic reconnect attempt fails.
+No further automatic reconnection attempts are made during this interval.
+<LI><P>
+If desired, use
+tmadmin (1)'s
+reconnect
+command to
+initiate a reconnection attempt manually.
+Manual attempts are allowed during the five-minute suspension interval.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Messages 1373 and 1374 above and
+tmadmin (1)'s
+reconnect
+command
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1376"></A>
+<H3>CMDTUX MESSAGE #1376</H3>
+<H2> WARN: Suspending communication with <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process has suspended automatic reconnection
+attempts to
+<I>machine</I>
+for five minutes.
+This is to prevent thrashing caused by too many
+recovery attempts.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use
+tmadmin (1)'s
+reconnect
+command to
+initiate a reconnection attempt manually.
+Manual attempts are allowed during the five-minute suspension interval.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Messages 1373, 1374, and 1375 above and
+tmadmin (1)'s
+reconnect
+command.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1380"></A>
+<H3>CMDTUX MESSAGE #1380</H3>
+<H2> ERROR: Message queue blocking prevented delivery, Qaddr = <I>qaddress</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BRIDGE
+process could not deliver a message it received from
+the network due to UNIX message queue blocking.
+The process(es) associated with the full queue may be
+identified by looking up
+<I>qaddress</I>
+in output of
+tmadmin 's
+printserver
+command (verbose mode).
+Another method of examining message queue status is the
+"ipcs -aq"
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check the machine's kernel parameters related to message queuing:
+MSGMNB ,
+MSGSEG ,
+MSGSSZ ,
+and
+MSGMAX .
+<LI><P>
+Boot more servers on the machine.
+<LI><P>
+Reduce the number of servers per
+multi-server single-queue (MSSQ) set.
+<LI><P>
+Check for performance problems causing overload on the machine.
+<LI><P>
+Update load factors so less work is sent to this machine.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide" ,
+"TUXEDO Administrator's Guide" ,
+ipcs (1)
+in UNIX System reference manuals,
+tmadmin (1)'s
+printqueue
+and
+printserver
+commands
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1383"></A>
+<H3>CMDTUX MESSAGE #1383</H3>
+<H2> WARN: O_IMOK message could not be sent to DBBL, tperrno= <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+process experienced a memory allocation failure
+when attempting to send a message to the
+DBBL
+indicating that it is alive and OK.
+If this happens frequently, the
+BBL
+may become partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1384"></A>
+<H3>CMDTUX MESSAGE #1384</H3>
+<H2> WARN: O_IMOK message could not be sent to DBBL, tperrno= <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+process experienced a failure
+when attempting to send a message to the
+DBBL
+indicating that it is alive and OK.
+If this happens frequently, the
+BBL
+may become partitioned.
+<P>
+This message is often printed furin migration of the DBBL.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If you just migrated the DBBL from master to backup, this message
+can be ignored.
+If it continues, it may be necessary to shutdown and
+reboot the affected machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1385"></A>
+<H3>CMDTUX MESSAGE #1385</H3>
+<H2> INFO: BBL now unpartitioned, machine= <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+process on
+<I>machine</I>
+was partitioned, and now has rejoined the system.
+This information will be broadcast to all
+BBL
+processes, so that
+services provided by
+<I>machine</I>
+will be available again.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1386"></A>
+<H3>CMDTUX MESSAGE #1386</H3>
+<H2> ERROR: BBL broadcast send failure, machine= <I>machine,</I> tperrno = <I>tperrno_val, </I> opcode = 0x<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A broadcast message from the
+DBBL
+to all unpartitioned
+BBL s
+could not be sent.
+Machines that are not sent the broadcast message
+will be marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check for message queue blocking on the master machine.
+Perhaps the kernel parameters are set too low.
+<LI><P>
+Check for heavy CPU load on the master machine that
+might have prevented the
+DBBL
+from completing its broadcast within
+"DBBLWAIT * SCANUNIT"
+seconds.
+<LI><P>
+Increase the
+DBBLWAIT
+parameter in the *RESOURCES section.
+<LI><P>
+If the problem is transient,
+BBL s
+marked as partitioned should automatically
+recover.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1387"></A>
+<H3>CMDTUX MESSAGE #1387</H3>
+<H2> ERROR: BBL broadcast send timeout, machine= <I>machine,</I> opcode = 0x<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Broadcast message(s) from the
+DBBL
+to all unpartitioned
+BBL s
+could not be sent because of a timeout.
+Machines that are not sent the broadcast message
+will be marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check for message queue blocking on the master machine.
+Perhaps the kernel parameters are set too low.
+<LI><P>
+Check for heavy CPU load on the master machine that
+might have prevented the
+DBBL
+from completing its broadcast within
+DBBLWAIT * <Font>SCANUNIT seconds.
+<LI><P>
+Increase the
+DBBLWAIT
+parameter in the *RESOURCES section.
+<LI><P>
+If the problem is transient,
+BBL s
+marked as partitioned should automatically
+recover.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1388"></A>
+<H3>CMDTUX MESSAGE #1388</H3>
+<H2> ERROR: Cannot get BBL broadcast reply buffer, opcode= 0x<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+could not allocate a buffer for broadcast message replies.
+All
+BBL s
+will be marked as partitioned, since the
+DBBL
+does not know the results of the broadcast.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1389"></A>
+<H3>CMDTUX MESSAGE #1389</H3>
+<H2> ERROR: Cannot get BBL broadcast replies, tperrno= <I>tperrno_val,</I> opcode= 0x<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+encountered an error while trying to receive replies
+for a broadcast message.
+All
+BBL s
+that have not yet replied
+will be marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+If this is a transient error, the partitioned
+BBL s
+will automatically recover.
+<LI><P>
+Contact your TUXEDO System Technical Support.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1390"></A>
+<H3>CMDTUX MESSAGE #1390</H3>
+<H2> ERROR: BBL broadcast service failure, machine= <I>machine,</I> opcode= 0x<I>number</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+on
+<I>machine</I>
+had a service failure for a broadcast request.
+It will be marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+The
+BBL
+should automatically recover and become unpartitioned.
+<LI><P>
+Contact your TUXEDO System Technical Support.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1391"></A>
+<H3>CMDTUX MESSAGE #1391</H3>
+<H2> ERROR: BBL broadcast RPC failure, machine=<I>machine</I>, opcode=0x<I>opcodeval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+was unable to process a request from the
+DBBL.
+A message will be sent back to the
+DBBL
+indicating a problem and requesting a new download of the
+Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the download of the Bulletin Board is successful,
+no action is required.
+Otherwise, subsequent userlog messages will indicate further failures
+or actions to be taken.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1392"></A>
+<H3>CMDTUX MESSAGE #1392</H3>
+<H2> ERROR: BBL broadcast reply timeout, machine= <I>machine, </I> opcode= 0x<I>opcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+on
+<I>machine</I>
+did not respond to a broadcast message sent by
+the
+DBBL
+within
+DBBLWAIT * <Font>SCANUNIT seconds.
+As a result, its bulletin board may be out of date,
+and will be reloaded from the
+DBBL 's
+copy.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Check for network failure or slowness.
+<LI><P>
+Check that
+<I>machine</I>
+is still up.
+<LI><P>
+Increase the
+DBBLWAIT
+parameter.
+<LI><P>
+Contact your TUXEDO System Technical Support.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+*RESOURCES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1393"></A>
+<H3>CMDTUX MESSAGE #1393</H3>
+<H2> ERROR: BBL upload request not sent, machine= <I>machine,</I> tperrno= <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An upload request for a new bulletin board could not be sent to the
+BBL
+on
+<I>machine</I>.
+This
+BBL
+will be marked as partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 below
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1394"></A>
+<H3>CMDTUX MESSAGE #1394</H3>
+<H2> ERROR: BBL partitioned, machine= <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+has determined that the
+BBL
+on
+<I>machine</I>
+has become partitioned from the master machine,
+and perhaps from other machines as well.
+Two likely causes are networking problems
+or failure of
+<I>machine</I>.
+The
+DBBL
+will notify all machines it can reach
+that
+<I>machine</I>
+is partitioned.
+This will prevent additional service requests from
+being sent to
+<I>machine</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+<UL>
+<LI><P>
+Verify that
+<I>machine</I>
+is still up.
+<LI><P>
+Verify that the TUXEDO System is still running on
+<I>machine</I>.
+<LI><P>
+Verify that
+<I>machine</I>
+has network connectivity to the master machine.
+<LI><P>
+After checking the above, use
+tmadmin (1)'s
+pclean
+command to remove information about
+<I>machine</I>'s
+servers from non-partitioned bulletin boards.
+Then run
+tmboot (1)
+to restart servers on
+<I>machine</I>.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1),
+Message 1385 above
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1395"></A>
+<H3>CMDTUX MESSAGE #1395</H3>
+<H2> WARN: Slow BBL response, machine= <I>machine</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+on
+<I>machine</I>
+sends an "I'm OK" message
+to the
+DBBL
+every time it performs a sanity check of its machine.
+This check occurs every
+"SANITYSCAN * SCANUNIT"
+seconds,
+as specified in the *RESOURCES section.
+Similarly, every BBLQUERY * <Font>SCANUNIT seconds,
+the
+DBBL
+performs a sanity check of all
+BBL s.
+If an "I'm OK" message has not been received from
+<I>machine</I>
+during the previous
+"BBLQUERY * SCANUNIT"
+seconds, the
+DBBL
+prints this warning message.
+Then an explicit sanity check is done over the network.
+If this check also fails,
+<I>machine</I>
+will be considered partitioned.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This message indicates that there may be network
+congestion or an overload on
+<I>machine</I>.
+There is a risk that
+<I>machine</I>
+will become partitioned.
+<P>
+<UL>
+<LI><P>
+Check for networking problems between the
+two machines, or any cause of slow network
+response.
+<LI><P>
+Check for a CPU overload on
+<I>machine</I>
+that prevents the
+BBL
+process from running.
+<LI><P>
+Check for a CPU overload on
+the master machine
+that prevents the
+DBBL
+from processing messages in its queue.
+<LI><P>
+Adjust the
+BBLQUERY
+parameter so that it is
+larger than the
+SANITYSCAN
+parameter.
+A difference of ten seconds or more should prevent
+spurious warnings under most circumstances.
+</UL>
+<P>
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Message 1394 above,
+ubbconfig (5),
+*RESOURCES section
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1398"></A>
+<H3>CMDTUX MESSAGE #1398</H3>
+<H2> ERROR: TUXDIR environment variable not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXDIR
+environment variable was not set.
+Because of this, the
+buildclient
+command will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXDIR
+environment variable to the base directory of the TUXEDO System software, and
+export this variable.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buildclient (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

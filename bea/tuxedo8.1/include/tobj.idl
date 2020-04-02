@@ -1,0 +1,135 @@
+/*	Copyright (c) 1997 BEA Systems, Inc.
+	All rights reserved
+
+	THIS IS UNPUBLISHED PROPRIETARY
+	SOURCE CODE OF BEA Systems, Inc.
+	The copyright notice above does not
+	evidence any actual or intended
+	publication of such source code.
+*/
+/* #ident	"@(#) objtm/idl/tobj.idl	$Revision: 1.15 $" */
+
+
+#ifndef _OBJTM_TOBJ_IDL
+#define _OBJTM_TOBJ_IDL
+
+#include <lcs.idl>
+#include <ots.idl>
+#include <security.idl>
+
+#ifdef _BLDJDKJAR
+#pragma prefix "beasys.com"
+#endif
+
+module Tobj {
+#pragma prefix "beasys.com/Tobj"
+
+	// Constants
+
+	const string FACTORY_KIND = "FactoryInterface";
+
+	// Exceptions
+
+	exception CannotProceed { };
+	exception InvalidDomain {};
+	exception InvalidName { };
+	exception RegistrarNotAvailable { };
+	exception RMfailed {};
+
+	// Extension to LifeCycle Service
+
+	struct FactoryComponent {
+	    CosLifeCycle::Key factory_key;
+	    CosLifeCycle::_Factory factory_ior;
+	};
+
+	typedef sequence<FactoryComponent> FactoryListing;
+
+	interface FactoryFinder : CosLifeCycle::FactoryFinder {
+		CosLifeCycle::_Factory find_one_factory(in CosLifeCycle::Key factory_key)
+			raises (CosLifeCycle::NoFactory,
+				CannotProceed,
+				RegistrarNotAvailable);
+		CosLifeCycle::_Factory find_one_factory_by_id(in string factory_id)
+			raises (CosLifeCycle::NoFactory,
+				CannotProceed,
+				RegistrarNotAvailable);
+		CosLifeCycle::Factories find_factories_by_id(in string factory_id)
+			raises (CosLifeCycle::NoFactory,
+				CannotProceed,
+				RegistrarNotAvailable);
+	        FactoryListing list_factories()
+	                raises (CannotProceed,
+				RegistrarNotAvailable);
+	};
+
+
+//#ifndef _NETSCAPE
+	interface TransactionCurrent : CosTransactions::Current {
+		void open_xa_rm() raises (RMfailed);
+		void close_xa_rm() raises (RMfailed);
+	};
+//#endif
+
+	// The value of TuxedoSecurity is registered with OMG.
+	// In hex it is 0x54555800
+	const Security::AuthenticationMethod	TuxedoSecurity = 1414879232;
+
+	// The value of CertificateBase is registered with OMG.
+	// In hex it is 0x43455254
+	const Security::AuthenticationMethod	CertificateBased =  1128616532;
+
+	// get_auth_type() return values
+	enum AuthType {
+		TOBJ_NOAUTH,
+		TOBJ_SYSAUTH,
+		TOBJ_APPAUTH
+	};
+
+	// User authentication data
+	typedef sequence<octet> UserAuthData;
+	typedef sequence<octet> LogonData;
+
+	// Security interface for ORB based implementations
+	interface PrincipalAuthenticator : SecurityLevel2::PrincipalAuthenticator { // PIDL
+		// Equivalent of tpchkauth()
+		AuthType get_auth_type();
+
+		// Equivalent to tpinit()
+		Security::AuthenticationStatus logon(
+			in  string 		user_name,
+			in  string 		client_name,
+			in  string 		system_password,
+			in  string		user_password,
+			in  UserAuthData	user_data
+		);
+
+		// Equivalent to tpterm()
+		void logoff();
+
+		// Helper function
+		// Build an Opaque structure and a privilege list from TUXEDO
+		// authentication data for use by authenticate
+		void build_auth_data(
+			in  string			user_name,
+			in  string			client_name,
+			in  string 			system_password,
+			in  string			user_password,
+			in  UserAuthData		user_data,
+			out Security::Opaque		auth_data,
+			out Security::AttributeList	privileges
+		);
+	};
+
+#ifdef notdef
+	// Session for ATMI style implementations
+	interface Session : PrincipalAuthenticator {
+		// Add tpacall(), and so on here
+	};
+#endif
+};
+#ifndef JDKORB
+#pragma ID Tobj "IDL:beasys.com/Tobj:1.0"
+#endif
+
+#endif /* _OBJTM_TOBJ_IDL */

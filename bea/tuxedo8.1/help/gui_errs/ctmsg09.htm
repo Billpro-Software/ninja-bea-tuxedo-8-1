@@ -1,0 +1,1461 @@
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 900-999</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="905"></A>
+<H3>CMDTUX MESSAGE #905</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+parsing the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="906"></A>
+<H3>CMDTUX MESSAGE #906</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing
+tmloadcf ,
+an attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+parsing the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="908"></A>
+<H3>CMDTUX MESSAGE #908</H3>
+<H2> ERROR: Can't read *MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the *MACHINES section of the configuration file
+could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and exported, or that
+TUXCONFIG
+is not corrupted (try a
+tmunloadcf ),
+or
+TUXCONFIG
+was propagated to all machines in the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="909"></A>
+<H3>CMDTUX MESSAGE #909</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, memory could not be allocated for a structure that
+holds information pertaining to the
+DBBL
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="910"></A>
+<H3>CMDTUX MESSAGE #910</H3>
+<H2> ERROR: No DBBL exists</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, information pertaining to the
+DBBL
+in shared memory could not be located.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the application IPC key is correct, or
+that no other application is using the same IPC key,
+or that the parameter
+TUXDIR
+is set correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="911"></A>
+<H3>CMDTUX MESSAGE #911</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, memory could not be allocated for a structure that
+holds information pertaining to a
+BBL
+process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="912"></A>
+<H3>CMDTUX MESSAGE #912</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, memory could not be allocated for a structure that
+holds status information pertaining to the local
+BRIDGE .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that may be tying up physical memory, ensure
+that the application IPC key is correct, or verify that the UNIX
+sysgen
+process sizing parameters are correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="913"></A>
+<H3>CMDTUX MESSAGE #913</H3>
+<H2> ERROR: Can't shutdown BBL on PE <I>machine,</I> causes partitioning</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, a determination is made if the
+BRIDGE
+local to the
+MASTER
+can be shut down.
+This determination fails if remote
+BBLs
+are active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine why remote
+BBLs
+are still active and use
+pclean
+if necessary.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="918"></A>
+<H3>CMDTUX MESSAGE #918</H3>
+<H2> ERROR: Can't shutdown servers, Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, memory could not be allocated for
+a list of servers to be shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Kill any processes that may be tying up physical memory,
+verify that the UNIX
+sysgen
+specification for process sizing is correct, or ensure
+that the application IPC key is correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="919"></A>
+<H3>CMDTUX MESSAGE #919</H3>
+<H2> ERROR: Can't shutdown TMS servers, error reading *GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the *GROUPS section of the configuration file
+could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and exported, or that
+TUXCONFIG
+is not corrupted (try a
+tmunloadcf ),
+or
+TUXCONFIG
+was propagated to all machines in the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="920"></A>
+<H3>CMDTUX MESSAGE #920</H3>
+<H2> ERROR: Can't shutdown servers, error reading *SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the SERVERS section of the configuration file
+could not be read.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the environment variable
+TUXCONFIG
+is set correctly and exported, or that
+TUXCONFIG
+is not corrupted (try a
+tmunloadcf ),
+or
+TUXCONFIG
+was propagated to all machines in the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="922"></A>
+<H3>CMDTUX MESSAGE #922</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, memory could not be allocated for a new
+link in an ordered list of processes to be shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try a partial shutdown if the configuration is too big, or
+ensure that the UNIX
+sysgen
+process sizing is correct.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="924"></A>
+<H3>CMDTUX MESSAGE #924</H3>
+<H2> WARN: Can't find Server Group = <I>svrgroup,</I> Id = <I>srvid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, a search of the
+BBL
+for a list of server ids failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for an erroneous IPC key or corrupted shared memory (two
+or more applications sharing the same IPC key).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="925"></A>
+<H3>CMDTUX MESSAGE #925</H3>
+<H2> WARN: Bad Machine ID, <I>machine_id,</I> in bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, if an acknowledgment to an orderly shutdown
+message is not received from a remote process
+in a given time interval, the bridge
+on the remote machine is then asked, via a message,
+to send that process a software termination signal,
+SIGTERM .
+An invalid machine id associated with the
+remote process or
+BRIDGE
+is indicated by this message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for an erroneous IPC key or corrupted shared memory (two
+or more applications sharing the same IPC key).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="932"></A>
+<H3>CMDTUX MESSAGE #932</H3>
+<H2> INFO: System Shutdown Canceled</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, an interrupt was received
+from the user's terminal terminating the shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="933"></A>
+<H3>CMDTUX MESSAGE #933</H3>
+<H2> INFO: Server <I>grpname</I>/<I>srvid</I> not running</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -d" ,
+an entry in the
+BBL
+for the indicated process could not be found.
+Either the process was not booted or was previously shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="934"></A>
+<H3>CMDTUX MESSAGE #934</H3>
+<H2> WARN: Can't update status of Server Group <I>grpname,</I> Id <I>srvid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the status of the process being terminated could not be
+updated.
+Either a
+BBL
+lock could not be obtained, the machine id was incorrect,
+or the server id did not match an entry in the
+BBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for an invalid IPC key or a corrupted
+BBL .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="937"></A>
+<H3>CMDTUX MESSAGE #937</H3>
+<H2> INFO: Still running</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -n" ,
+indicates that the process, administrative or
+server, is still active.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="938"></A>
+<H3>CMDTUX MESSAGE #938</H3>
+<H2> WARN: Can't report BB resource usage on <I>grpname,</I> Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -n" ,
+space for the list of system IPC resources held
+by each
+BBL
+could not be allocated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that are tying up physical memory, and verify that
+the UNIX sysgen parms for processes are sized adequately.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="939"></A>
+<H3>CMDTUX MESSAGE #939</H3>
+<H2> ERROR: Failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, space for the reply to the message directing
+an administrative process or server to shut down could not be allocated,
+and the debugging option was specified, or the
+-q
+option was not specified.
+This directs the failed message to standard error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that are tying up physical memory, and verify that
+the UNIX sysgen parms for processes are sized adequately.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="940"></A>
+<H3>CMDTUX MESSAGE #940</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, space for the reply to the message directing
+an administrative process or server to shut down could not be allocated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove processes that are tying up physical memory, and verify that
+the UNIX sysgen parms for processes are sized adequately.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="941"></A>
+<H3>CMDTUX MESSAGE #941</H3>
+<H2> WARN: No active alternate LMID for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -R" ,
+the system discovered that none of the
+alternative machine locations specified for migration were
+active (did not have a running BBL).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, make sure that the migration machine
+or the group migration values specified in the configuration file are correct,
+and the corresponding
+BBL(s)
+are active and functioning.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="942"></A>
+<H3>CMDTUX MESSAGE #942</H3>
+<H2> WARN: Can't shutdown server</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -q" ,
+the shutdown message send to a server failed.
+Either the receiving process is dead, no acknowledgment to the send
+was received, or the send itself failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network or a dead server on the remote
+PE .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="943"></A>
+<H3>CMDTUX MESSAGE #943</H3>
+<H2> INFO: Server (<I>sub</I>/<I>sub</I>) was shutdown for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the shutdown message send to a server failed
+because it had migrated or was in the process of migrating.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="944"></A>
+<H3>CMDTUX MESSAGE #944</H3>
+<H2> WARN: Can't shutdown server (<I>sub</I>/<I>sub</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -q" ,
+the shutdown message send to a server failed.
+Either the receiving process is dead, no acknowledgment to the send
+was received, or the send itself failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network or a dead server on the remote
+PE .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="945"></A>
+<H3>CMDTUX MESSAGE #945</H3>
+<H2> WARN: Server was shutdown for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the reply to the shutdown message sent to a
+server on a remote machine was not received in a specified time interval,
+nor was it in the process of migrating.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network or a dead server on the remote
+PE .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="946"></A>
+<H3>CMDTUX MESSAGE #946</H3>
+<H2> INFO: Server (<I>sub</I>/<I>sub</I>) was shutdown for migration</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the reply to the shutdown message sent to a
+server on a remote machine was not received in a specified time interval.
+The server was shut down during a prior migration, or is in the process
+of shutting down from a recent migration request.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="947"></A>
+<H3>CMDTUX MESSAGE #947</H3>
+<H2> WARN: Can't shutdown server (<I>sub</I>/<I>sub</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -q" ,
+the reply to the shutdown message sent to a
+process on a remote machine was not received in a specified time interval.
+Another possibility is that the server died; shutdown of an
+inactive server causes a warning message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for network partition and resubmit
+tmshutdown ,
+or do
+"kill -9"
+on the remote machine and clean up IPC resources.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="949"></A>
+<H3>CMDTUX MESSAGE #949</H3>
+<H2> WARN: Shutdown failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, the message sent to a
+process on a remote machine, telling the process
+to stop in an orderly fashion,
+returned with a failure indication.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Resubmit
+tmshutdown ,
+or do
+"kill -9"
+on the remote machine and clean up IPC resources.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="950"></A>
+<H3>CMDTUX MESSAGE #950</H3>
+<H2> INFO: BB resources on <I>grpname</I> not removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -n" ,
+the system resource information
+associated with a Bulletin Board is displayed but not removed.
+Examples of system resource information are
+shared memory and semaphores.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="951"></A>
+<H3>CMDTUX MESSAGE #951</H3>
+<H2> INFO: BB resources on <I>grpname</I> not removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During
+"tmshutdown -n" ,
+the system resource information
+associated with a Bulletin Board is displayed but not removed.
+Examples of system resource information are shared memory
+and semaphores.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="952"></A>
+<H3>CMDTUX MESSAGE #952</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown ,
+process space could not be allocated for all of the server table
+entry structures associated with each
+BBL
+in the configuration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for wrong shared memory IPC key or corrupted shared memory, or kill
+extraneous processes that may be tying up physical memory.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="953"></A>
+<H3>CMDTUX MESSAGE #953</H3>
+<H2> ERROR: Can't find BBL's</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+During the
+tmshutdown
+process, no
+BBL
+server table entries were located in the Bulletin
+Board, or a lock could not be obtained to search the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for wrong shared memory IPC key or corrupted shared memory, or kill the
+process holding the Bulletin Board lock.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="962"></A>
+<H3>CMDTUX MESSAGE #962</H3>
+<H2> ERROR: BB resources not removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-n
+option was specified with
+tmshutdown
+and the system resource information
+(for example, shared memory or semaphores)
+associated
+with a Bulletin Board could not be found.
+Either the message request for this information failed,
+or the message request to the
+PE
+returned with an indication of no such information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, network failure, or no application running
+on the remote
+PE(s) .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="963"></A>
+<H3>CMDTUX MESSAGE #963</H3>
+<H2> WARN: Status of BB resources unknown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The system resource information associated
+with a Bulletin Board could not be found during
+tmshutdown .
+Examples of system resource information are
+shared memory and semaphores.
+Either the message request for this information failed,
+or the message request to the
+PE
+returned with an indication of no such information.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, network failure, or no application running
+on the remote
+PE(s) .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="971"></A>
+<H3>CMDTUX MESSAGE #971</H3>
+<H2> ERROR: Invalid option <I>option_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The option specified is not a valid option to the
+tmunloadcf
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the options to the
+tmunloadcf
+command as per the usage message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="973"></A>
+<H3>CMDTUX MESSAGE #973</H3>
+<H2> ERROR: Invalid argument - <I>argval</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The argument specified is not a valid argument to the
+tmunloadcf
+command.  There are no options or arguments to
+tmunloadcf.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the argument to the
+tmunloadcf
+command as per the usage message - there are no arguments to the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="976"></A>
+<H3>CMDTUX MESSAGE #976</H3>
+<H2> ERROR: TUXCONFIG environment variable not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+environment variable is not set.
+TUXCONFIG
+must be set
+to the path to the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+TUXCONFIG
+environment variable to the full path of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="977"></A>
+<H3>CMDTUX MESSAGE #977</H3>
+<H2> ERROR: Error in reading TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when trying to read the
+TUXCONFIG
+file pointed to by the
+TUXCONFIG
+environment variable.  Surrounding messages may give more
+information as to the cause.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the
+TUXCONFIG
+file is set appropriately and the file has correct
+permissions.  See possible surrounding messages for more information.  It
+is possible that the
+TUXCONFIG
+file is corrupted.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="978"></A>
+<H3>CMDTUX MESSAGE #978</H3>
+<H2> ERROR: malloc failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+allocating space for the entries in the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1),
+malloc (3)
+in UNIX reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="979"></A>
+<H3>CMDTUX MESSAGE #979</H3>
+<H2> ERROR: Option -d argument <I>arg_value</I> not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-d
+option to the
+ud
+command specifies the maximum delay time in seconds before timeout.
+The
+-d
+option requires an argument, which must be numeric.
+The option argument supplied was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the argument to the
+ud
+command so that the
+-d
+option has a numeric argument, and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="980"></A>
+<H3>CMDTUX MESSAGE #980</H3>
+<H2> ERROR: Cannot use the -d and -r options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-d
+and
+-r
+options to
+ud
+are mutually exclusive.
+The
+-d
+option specifies the maximum delay in receiving a reply before timeout.
+The
+-r
+option states that no reply is expected.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-d
+and
+-r
+options are not both specified and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="981"></A>
+<H3>CMDTUX MESSAGE #981</H3>
+<H2> ERROR: Cannot use the -d and -r options together</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+See message 980 for an explanation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See message 980 for an explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="982"></A>
+<H3>CMDTUX MESSAGE #982</H3>
+<H2> ERROR: Argument <I>arg_value</I> to -s not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-s
+option to
+ud
+specifies a sleep time between requests.
+This option requires an option argument, which must be numeric.
+The option argument specified by the user was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to the
+ud
+command so that the
+-s
+option has a numeric subargument, and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="983"></A>
+<H3>CMDTUX MESSAGE #983</H3>
+<H2> ERROR: Argument <I>arg_value</I> to -t not numeric</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+-t
+option to
+ud
+specifies a transaction timeout value in seconds.
+This option requires an option argument, which must be numeric.
+The option argument specified by the user was not numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the arguments to the
+ud
+command so that the
+-t
+option has a numeric subargument, and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="984"></A>
+<H3>CMDTUX MESSAGE #984</H3>
+<H2> ERROR: Can't have transaction and no reply</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user specified options to
+ud
+that combined the transaction mode option,
+-t ,
+with the no reply option,
+-r .
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-r
+and
+-t
+options are not both specified and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="985"></A>
+<H3>CMDTUX MESSAGE #985</H3>
+<H2> ERROR: Cannot combine transaction (-t) and message delay (-d)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The user specified options to
+ud
+that combined the transaction mode option,
+-t ,
+with the message delay option,
+-d .
+This is not allowed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the arguments to the
+ud
+command so that the
+-d
+and
+-t
+options are not both specified and reexecute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="988"></A>
+<H3>CMDTUX MESSAGE #988</H3>
+<H2> ERROR: ud detected syntax error in fielded buffer #<I>n</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the fielded buffers passed as input to the
+ud
+program has invalid syntax.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Inspect the input data to
+ud
+and correct any errors in the input format.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="989"></A>
+<H3>CMDTUX MESSAGE #989</H3>
+<H2> ERROR: No service in FBFR</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+One of the input buffers to
+ud
+did not contain a service name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Be sure to include a line with fieldname
+SRVCNM ,
+a tab character, and the name of a service in every fielded buffer input
+to
+ud .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="991"></A>
+<H3>CMDTUX MESSAGE #991</H3>
+<H2> ERROR: Can't send buffer <I>buf</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+ud
+was unable to send a buffer to the requested service.
+It is also possible that the transaction or service timed out.
+A description of the particular error encountered is included
+in the latter half of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+To deal with the most common causes of error,
+verify that the service specified in the
+ud
+input buffer exists, is not a conversational service, and is available,
+that the service accepts FML input buffers, and that the server supports
+transactions if the
+-t
+option of
+ud
+was specified.
+The tpcall(3)
+manual page contains information on these and other conditions that could
+cause an error return from
+tpacall .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="993"></A>
+<H3>CMDTUX MESSAGE #993</H3>
+<H2> ERROR: Return packet time out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service call request made by
+ud
+has timed out.
+This can occur either due to a transaction timeout or a blocking timeout.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine whether it is necessary to allocate a longer time for this
+transaction or service call to complete.
+If so, increase the time specified with the
+-t
+option if using transaction mode, or use the
+-d
+option if not running in transaction mode.
+Reexecute the failed request.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="994"></A>
+<H3>CMDTUX MESSAGE #994</H3>
+<H2> ERROR: Reply failure - <I>tperrno_message</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+tpgetrply()
+function was called from within
+ud
+to receive the response from a service request, and returned an error.
+A description of the particular error encountered is included
+in the latter part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Refer to the tpcall(3)
+manual page for information on the particular errors returned.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1),
+tpcall (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="998"></A>
+<H3>CMDTUX MESSAGE #998</H3>
+<H2> ERROR: Too many errors encountered, exiting</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+ud
+command has encountered too many errors, and is exiting.
+The maximum number of allowable errors defaults to 25, and may be
+specified explicitly using the
+-e
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Investigate the earlier errors reported by
+ud ,
+and try to eliminate as many as possible.
+If it is an expected condition for a large number of service
+calls to return errors, invoke
+with the
+-e
+option to specify an explicit error limit.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ud (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,31 @@
+//--------------------------------------------------------------------
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+//
+// simple.idl
+//
+// IDL for the simple sample application
+//
+// BEA Systems Inc. sample code
+//
+//--------------------------------------------------------------------
+
+#pragma prefix "beasys.com"
+
+interface Simple
+{
+    // convert a string to lower case (return a new string)
+    wstring to_lower(in    wstring val);
+
+    // convert a string to upper case (in place)
+    void   to_upper(inout wstring val);
+};
+
+interface SimpleFactory
+{
+    Simple find_simple();
+
+    // To make simpapp scalable have the SimpleFactory use some means
+    // to identify (specify in criteria) the user in the Simple object
+    // reference it creates. eg. Name (string), SS# (unsigned long),
+    // tel_no (string).
+};

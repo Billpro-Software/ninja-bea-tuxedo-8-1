@@ -1,0 +1,23 @@
+<dsml:dsml xmlns:dsml="http://www.dsml.org/DSML">
+  <dsml:directory-schema>
+   <dsml:class
+         id="groupOfURLs"
+         type="structural"
+         superior="#top">
+   <dsml:name>groupOfURLs</dsml:name>
+   <dsml:object-identifier>2.16.840.1.113730.3.2.33</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#memberURL" required="false"/>
+   <dsml:attribute ref="#businessCategory" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+   <dsml:attribute ref="#o" required="false"/>
+   <dsml:attribute ref="#ou" required="false"/>
+   <dsml:attribute ref="#owner" required="false"/>
+   <dsml:attribute ref="#seeAlso" required="false"/>
+  </dsml:class>
+    <dsml:attribute-type id="memberURL" superior="#labeledURI">
+      <dsml:name>memberURL</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.198</dsml:object-identifier>
+    </dsml:attribute-type>
+  </dsml:directory-schema>
+</dsml:dsml>

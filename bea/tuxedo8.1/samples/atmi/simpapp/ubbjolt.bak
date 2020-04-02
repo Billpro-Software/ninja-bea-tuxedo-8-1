@@ -1,0 +1,69 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#ident	"@(#) samples/atmi/simpapp/ubbsimple	$Revision: 1.5 $"
+
+#Skeleton UBBCONFIG file for the TUXEDO Simple Application.
+#Replace the <bracketed> items with the appropriate values.
+
+*RESOURCES
+IPCKEY		123460
+
+DOMAINID	jrep
+MASTER		jrep
+MAXACCESSERS	40
+MAXSERVERS	10
+MAXSERVICES	40
+MODEL		SHM
+LDBAL		N
+
+*MACHINES
+DEFAULT:
+		APPDIR="C:/bea/tuxedo8.1/samples/atmi/simpapp"
+		TUXCONFIG="C:/bea/tuxedo8.1/samples/atmi/simpapp/tuxconfig"
+		TUXDIR="C:/bea/tuxedo8.1"
+		ULOGPFX="C:/bea/tuxedo8.1/samples/atmi/simpapp/ULOG"
+
+DK3303	LMID=jrep
+		MAXWSCLIENTS=10
+
+*GROUPS
+"JOLT"  LMID="jrep"        GRPNO=2
+        TMSCOUNT=3
+
+*SERVERS
+DEFAULT:
+		CLOPT="-A"
+
+
+"JSL"   SRVGRP="JOLT"       SRVID=1
+        CLOPT="-A -- -n //DK3303:7002 -M 2 -m 1"
+        RQPERM=0666     REPLYQ=N        RPPERM=0666     MIN=1   MAX=1   CONV=N
+        SYSTEM_ACCESS=FASTPATH
+        MAXGEN=1        GRACE=86400     RESTART=N
+        MINDISPATCHTHREADS=0    MAXDISPATCHTHREADS=1    THREADSTACKSIZE=0
+        SICACHEENTRIESMAX="500"
+"JREPSVR"       SRVGRP="JOLT"   SRVID=2
+        CLOPT="-A -- -W  -P C:/bea/tuxedo8.1/samples/atmi/simpapp/jrepository_Telia"
+        RQPERM=0666     REPLYQ=N        RPPERM=0666     MIN=1   MAX=1   CONV=N
+        SYSTEM_ACCESS=FASTPATH
+        MAXGEN=1        GRACE=86400     RESTART=N
+        MINDISPATCHTHREADS=0    MAXDISPATCHTHREADS=1    THREADSTACKSIZE=0
+        SICACHEENTRIESMAX="500"
+"JREPSVR"       SRVGRP="JOLT"   SRVID=3
+        CLOPT="-A --  -P C:/bea/tuxedo8.1/samples/atmi/simpapp/jrepository_Telia"
+        RQPERM=0666     REPLYQ=N        RPPERM=0666     MIN=1   MAX=1   CONV=N
+        SYSTEM_ACCESS=FASTPATH
+        MAXGEN=1        GRACE=86400     RESTART=N
+        MINDISPATCHTHREADS=0    MAXDISPATCHTHREADS=1    THREADSTACKSIZE=0
+        SICACHEENTRIESMAX="500"
+"JREPSVR"       SRVGRP="JOLT"   SRVID=4
+        CLOPT="-A --  -P C:/bea/tuxedo8.1/samples/atmi/simpapp/jrepository_Telia"
+        RQPERM=0666     REPLYQ=N        RPPERM=0666     MIN=1   MAX=1   CONV=N
+        SYSTEM_ACCESS=FASTPATH
+        MAXGEN=1        GRACE=86400     RESTART=N
+        MINDISPATCHTHREADS=0    MAXDISPATCHTHREADS=1    THREADSTACKSIZE=0
+        SICACHEENTRIESMAX="500"
+
+
+
+*SERVICES
+

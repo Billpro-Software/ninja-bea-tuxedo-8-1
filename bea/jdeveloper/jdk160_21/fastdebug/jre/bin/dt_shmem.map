@@ -1,0 +1,213 @@
+ dt_shmem
+
+ Timestamp is 4cfae495 (Sat Dec 04 17:02:13 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00003e9cH .text                   CODE
+ 0002:00000000 000000a4H .idata$5                DATA
+ 0002:000000b0 00000098H .rdata                  DATA
+ 0002:00000148 00000069H .rdata$debug            DATA
+ 0002:000001c0 00000004H .rdata$sxdata           DATA
+ 0002:000001c4 00000004H .rtc$IAA                DATA
+ 0002:000001c8 00000004H .rtc$IZZ                DATA
+ 0002:000001cc 00000004H .rtc$TAA                DATA
+ 0002:000001d0 00000004H .rtc$TZZ                DATA
+ 0002:000001d4 00000028H .idata$2                DATA
+ 0002:000001fc 00000014H .idata$3                DATA
+ 0002:00000210 000000a4H .idata$4                DATA
+ 0002:000002b4 00000244H .idata$6                DATA
+ 0002:00000500 00000383H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00001178H .data                   DATA
+ 0003:00001188 0000006cH .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000368H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0001:00000020       _throwException            10001020 f   SharedMemoryTransport.obj
+ 0001:00000070       _throwShmemException       10001070 f   SharedMemoryTransport.obj
+ 0001:000000f0       _Java_com_sun_tools_jdi_SharedMemoryTransportService_accept0@24 100010f0 f   SharedMemoryTransport.obj
+ 0001:00000170       _Java_com_sun_tools_jdi_SharedMemoryTransportService_attach0@20 10001170 f   SharedMemoryTransport.obj
+ 0001:00000220       _Java_com_sun_tools_jdi_SharedMemoryTransportService_name@16 10001220 f   SharedMemoryTransport.obj
+ 0001:000002b0       _Java_com_sun_tools_jdi_SharedMemoryTransportService_initialize@8 100012b0 f   SharedMemoryTransport.obj
+ 0001:00000320       _Java_com_sun_tools_jdi_SharedMemoryTransportService_startListening0@12 10001320 f   SharedMemoryTransport.obj
+ 0001:000003f0       _Java_com_sun_tools_jdi_SharedMemoryTransportService_stopListening0@16 100013f0 f   SharedMemoryTransport.obj
+ 0001:00000410       _Java_com_sun_tools_jdi_SharedMemoryConnection_close0@16 10001410 f   SharedMemoryConnection.obj
+ 0001:00000430       _Java_com_sun_tools_jdi_SharedMemoryConnection_receiveByte0@16 10001430 f   SharedMemoryConnection.obj
+ 0001:00000480       _Java_com_sun_tools_jdi_SharedMemoryConnection_receivePacket0@16 10001480 f   SharedMemoryConnection.obj
+ 0001:00000790       _Java_com_sun_tools_jdi_SharedMemoryConnection_sendByte0@20 10001790 f   SharedMemoryConnection.obj
+ 0001:000007d0       _Java_com_sun_tools_jdi_SharedMemoryConnection_sendPacket0@20 100017d0 f   SharedMemoryConnection.obj
+ 0001:00000990       _jdwpTransport_OnLoad@16   10001990 f   shmemBack.obj
+ 0001:00001250       _shmemBase_initialize      10002250 f   shmemBase.obj
+ 0001:00001280       _shmemBase_listen          10002280 f   shmemBase.obj
+ 0001:000017e0       _shmemBase_accept          100027e0 f   shmemBase.obj
+ 0001:00001ed0       _shmemBase_attach          10002ed0 f   shmemBase.obj
+ 0001:00002450       _shmemBase_closeConnection 10003450 f   shmemBase.obj
+ 0001:00002470       _shmemBase_closeTransport  10003470 f   shmemBase.obj
+ 0001:00002490       _shmemBase_sendByte        10003490 f   shmemBase.obj
+ 0001:00002770       _shmemBase_receiveByte     10003770 f   shmemBase.obj
+ 0001:00002a80       _shmemBase_sendPacket      10003a80 f   shmemBase.obj
+ 0001:00002ec0       _shmemBase_receivePacket   10003ec0 f   shmemBase.obj
+ 0001:00003330       _shmemBase_name            10004330 f   shmemBase.obj
+ 0001:00003340       _shmemBase_getlasterror    10004340 f   shmemBase.obj
+ 0001:00003380       _exitTransportWithError    10004380 f   shmemBase.obj
+ 0001:00003410       _sysSharedMemCreate        10004410 f   shmem_md.obj
+ 0001:00003510       _sysSharedMemOpen          10004510 f   shmem_md.obj
+ 0001:000035c0       _sysSharedMemClose         100045c0 f   shmem_md.obj
+ 0001:00003600       _sysIPMutexCreate          10004600 f   shmem_md.obj
+ 0001:00003690       _sysIPMutexOpen            10004690 f   shmem_md.obj
+ 0001:00003710       _sysIPMutexEnter           10004710 f   shmem_md.obj
+ 0001:00003780       _sysIPMutexExit            10004780 f   shmem_md.obj
+ 0001:000037c0       _sysIPMutexClose           100047c0 f   shmem_md.obj
+ 0001:000037e0       _sysEventCreate            100047e0 f   shmem_md.obj
+ 0001:00003870       _sysEventOpen              10004870 f   shmem_md.obj
+ 0001:000038f0       _sysEventWait              100048f0 f   shmem_md.obj
+ 0001:000039a0       _sysEventSignal            100049a0 f   shmem_md.obj
+ 0001:000039e0       _sysEventClose             100049e0 f   shmem_md.obj
+ 0001:00003a00       _sysProcessGetID           10004a00 f   shmem_md.obj
+ 0001:00003a10       _sysProcessOpen            10004a10 f   shmem_md.obj
+ 0001:00003a70       _sysProcessClose           10004a70 f   shmem_md.obj
+ 0001:00003a90       _sysGetLastError           10004a90 f   shmem_md.obj
+ 0001:00003b30       _sysTlsAlloc               10004b30 f   shmem_md.obj
+ 0001:00003b40       _sysTlsFree                10004b40 f   shmem_md.obj
+ 0001:00003b50       _sysTlsPut                 10004b50 f   shmem_md.obj
+ 0001:00003b70       _sysTlsGet                 10004b70 f   shmem_md.obj
+ 0001:00003b80       _sysSleep                  10004b80 f   shmem_md.obj
+ 0001:00003b90       _free                      10004b90 f   MSVCRT:MSVCR71.dll
+ 0001:00003b96       _memset                    10004b96 f   MSVCRT:MSVCR71.dll
+ 0001:00003b9c       _strcpy                    10004b9c f   MSVCRT:MSVCR71.dll
+ 0001:00003ba2       _strlen                    10004ba2 f   MSVCRT:MSVCR71.dll
+ 0001:00003ba8       _strcat                    10004ba8 f   MSVCRT:MSVCR71.dll
+ 0001:00003bae       _memcpy                    10004bae f   MSVCRT:MSVCR71.dll
+ 0001:00003bb4       __CRT_INIT@12              10004bb4 f   MSVCRT:crtdll.obj
+ 0001:00003c72       __DllMainCRTStartup@12     10004c72 f   MSVCRT:crtdll.obj
+ 0001:00003d56       __initterm                 10004d56 f   MSVCRT:MSVCR71.dll
+ 0001:00003d5c       __onexit                   10004d5c f   MSVCRT:atonexit.obj
+ 0001:00003d82       _atexit                    10004d82 f   MSVCRT:atonexit.obj
+ 0001:00003d94       __RTC_Initialize           10004d94 f   MSVCRT:initsect.obj
+ 0001:00003dd8       __RTC_Terminate            10004dd8 f   MSVCRT:initsect.obj
+ 0001:00003e1c       ___CppXcptFilter           10004e1c f   MSVCRT:MSVCR71.dll
+ 0001:00003e22       _DllMain@12                10004e22 f   MSVCRT:dllmain.obj
+ 0001:00003e44       __SEH_prolog               10004e44 f   MSVCRT:sehprolg.obj
+ 0001:00003e7f       __SEH_epilog               10004e7f f   MSVCRT:sehprolg.obj
+ 0001:00003e90       __except_handler3          10004e90 f   MSVCRT:MSVCR71.dll
+ 0001:00003e96       ___dllonexit               10004e96 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__GetLastError@0      10005000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__DisableThreadLibraryCalls@4 10005004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__Sleep@4             10005008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__TlsGetValue@4       1000500c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__TlsSetValue@8       10005010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__TlsFree@4           10005014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__TlsAlloc@0          10005018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__FormatMessageA@28   1000501c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__OpenProcess@12      10005020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__GetCurrentProcessId@0 10005024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__SetEvent@4          10005028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__OpenEventA@12       1000502c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__CreateEventA@16     10005030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__ReleaseMutex@4      10005034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__WaitForMultipleObjects@16 10005038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__OpenMutexA@12       1000503c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__CreateMutexA@12     10005040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__UnmapViewOfFile@4   10005044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__MapViewOfFile@20    10005048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__CloseHandle@4       1000504c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__CreateFileMappingA@24 10005050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__OpenFileMappingA@12 10005054     kernel32:KERNEL32.dll
+ 0002:00000058       \177KERNEL32_NULL_THUNK_DATA 10005058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp___onexit             1000505c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp____dllonexit         10005060     MSVCRT:MSVCR71.dll
+ 0002:00000064       __imp___except_handler3    10005064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp____CppXcptFilter     10005068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp___adjust_fdiv        1000506c     MSVCRT:MSVCR71.dll
+ 0002:00000070       __imp___initterm           10005070     MSVCRT:MSVCR71.dll
+ 0002:00000074       __imp___iob                10005074     MSVCRT:MSVCR71.dll
+ 0002:00000078       __imp__fprintf             10005078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp__exit                1000507c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp__memcpy              10005080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp__strcat              10005084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp__strlen              10005088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp__strcpy              1000508c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp__memset              10005090     MSVCRT:MSVCR71.dll
+ 0002:00000094       __imp__sprintf             10005094     MSVCRT:MSVCR71.dll
+ 0002:00000098       __imp__malloc              10005098     MSVCRT:MSVCR71.dll
+ 0002:0000009c       __imp__free                1000509c     MSVCRT:MSVCR71.dll
+ 0002:000000a0       \177MSVCR71_NULL_THUNK_DATA 100050a0     MSVCRT:MSVCR71.dll
+ 0002:00000100       __load_config_used         10005100     MSVCRT:loadcfg.obj
+ 0002:000001c0       ___safe_se_handler_table   100051c0     <linker-defined>
+ 0002:000001c4       ___rtc_iaa                 100051c4     MSVCRT:initsect.obj
+ 0002:000001c8       ___rtc_izz                 100051c8     MSVCRT:initsect.obj
+ 0002:000001cc       ___rtc_taa                 100051cc     MSVCRT:initsect.obj
+ 0002:000001d0       ___rtc_tzz                 100051d0     MSVCRT:initsect.obj
+ 0002:000001d4       __IMPORT_DESCRIPTOR_MSVCR71 100051d4     MSVCRT:MSVCR71.dll
+ 0002:000001e8       __IMPORT_DESCRIPTOR_KERNEL32 100051e8     kernel32:KERNEL32.dll
+ 0002:000001fc       __NULL_IMPORT_DESCRIPTOR   100051fc     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    10006000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10006004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10006008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1000600c     MSVCRT:cinitexe.obj
+ 0003:00001184       ___security_cookie         10007184     MSVCRT:seccook.obj
+ 0003:000011e4       __adjust_fdiv              100071e4     <common>
+ 0003:000011e8       ___onexitend               100071e8     <common>
+ 0003:000011ec       ___onexitbegin             100071ec     <common>
+ 0003:000011f0       __pRawDllMain              100071f0     <common>
+
+ entry point at        0001:00003c72
+
+ Static symbols
+
+ 0001:00000000       _allocateWrapper           10001000 f   SharedMemoryTransport.obj
+ 0001:000004f0       _packetToByteArray         100014f0 f   SharedMemoryConnection.obj
+ 0001:00000670       _intToBigInt               10001670 f   SharedMemoryConnection.obj
+ 0001:000006e0       _isBigEndian               100016e0 f   SharedMemoryConnection.obj
+ 0001:00000730       _shortToBigShort           10001730 f   SharedMemoryConnection.obj
+ 0001:00000770       _freePacketData            10001770 f   SharedMemoryConnection.obj
+ 0001:00000850       _byteArrayToPacket         10001850 f   SharedMemoryConnection.obj
+ 0001:00000a60       _shmemGetCapabilities@8    10001a60 f   shmemBack.obj
+ 0001:00000aa0       _shmemStartListening@12    10001aa0 f   shmemBack.obj
+ 0001:00000ba0       _setLastError              10001ba0 f   shmemBack.obj
+ 0001:00000cf0       _shmemAccept@20            10001cf0 f   shmemBack.obj
+ 0001:00000df0       _handshake                 10001df0 f   shmemBack.obj
+ 0001:00000f10       _shmemStopListening@4      10001f10 f   shmemBack.obj
+ 0001:00000f40       _shmemAttach@24            10001f40 f   shmemBack.obj
+ 0001:00001030       _shmemWritePacket@8        10002030 f   shmemBack.obj
+ 0001:000010f0       _shmemReadPacket@8         100020f0 f   shmemBack.obj
+ 0001:00001190       _shmemIsOpen@4             10002190 f   shmemBack.obj
+ 0001:000011b0       _shmemClose@4              100021b0 f   shmemBack.obj
+ 0001:000011e0       _shmemGetLastError@8       100021e0 f   shmemBack.obj
+ 0001:000012c0       _clearLastError            100022c0 f   shmemBase.obj
+ 0001:00001300       _createTransport           10002300 f   shmemBase.obj
+ 0001:00001550       _setLastErrorMsg           10002550 f   shmemBase.obj
+ 0001:000015c0       _setLastError              100025c0 f   shmemBase.obj
+ 0001:00001640       _createWithGeneratedName   10002640 f   shmemBase.obj
+ 0001:000016d0       _createSharedMem           100026d0 f   shmemBase.obj
+ 0001:00001700       _createMutex               10002700 f   shmemBase.obj
+ 0001:00001720       _createEvent               10002720 f   shmemBase.obj
+ 0001:00001740       _allocTransport            10002740 f   shmemBase.obj
+ 0001:00001760       _closeTransport            10002760 f   shmemBase.obj
+ 0001:000017c0       _freeTransport             100027c0 f   shmemBase.obj
+ 0001:000018c0       _freeConnection            100028c0 f   shmemBase.obj
+ 0001:000018e0       _closeConnection           100028e0 f   shmemBase.obj
+ 0001:00001960       _closeStream               10002960 f   shmemBase.obj
+ 0001:00001ae0       _leaveMutex                10002ae0 f   shmemBase.obj
+ 0001:00001b00       _enterMutex                10002b00 f   shmemBase.obj
+ 0001:00001b70       _createConnection          10002b70 f   shmemBase.obj
+ 0001:00001d50       _createStream              10002d50 f   shmemBase.obj
+ 0001:00001e90       _allocConnection           10002e90 f   shmemBase.obj
+ 0001:00001fe0       _openConnection            10002fe0 f   shmemBase.obj
+ 0001:00002150       _openStream                10003150 f   shmemBase.obj
+ 0001:00002220       _openTransport             10003220 f   shmemBase.obj
+ 0001:000023c0       _doAttach                  100033c0 f   shmemBase.obj
+ 0001:00002680       _waitForSpace              10003680 f   shmemBase.obj
+ 0001:00002750       _signalData                10003750 f   shmemBase.obj
+ 0001:00002970       _signalSpace               10003970 f   shmemBase.obj
+ 0001:00002990       _waitForData               10003990 f   shmemBase.obj
+ 0001:00002c50       _sendBytes                 10003c50 f   shmemBase.obj
+ 0001:000030c0       _receiveBytes              100040c0 f   shmemBase.obj

@@ -1,0 +1,872 @@
+ jdwp
+
+ Timestamp is 4cfae46e (Sat Dec 04 17:01:34 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0002b6beH .text                   CODE
+ 0002:00000000 000000e8H .idata$5                DATA
+ 0002:000000f0 000000a0H .rdata                  DATA
+ 0002:00000190 00000061H .rdata$debug            DATA
+ 0002:00000200 00000004H .rdata$sxdata           DATA
+ 0002:00000204 00000004H .rtc$IAA                DATA
+ 0002:00000208 00000004H .rtc$IZZ                DATA
+ 0002:0000020c 00000004H .rtc$TAA                DATA
+ 0002:00000210 00000004H .rtc$TZZ                DATA
+ 0002:00000214 00000028H .idata$2                DATA
+ 0002:0000023c 00000014H .idata$3                DATA
+ 0002:00000250 000000e8H .idata$4                DATA
+ 0002:00000338 000002c2H .idata$6                DATA
+ 0002:00000600 00000068H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 000141f4H .data                   DATA
+ 0003:00014208 000006d0H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000358H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0001:000033e0       _createFrameID             100043e0 f   FrameID.obj
+ 0001:00003430       _getFrameNumber            10004430 f   FrameID.obj
+ 0001:00003440       _validateFrameID           10004440 f   FrameID.obj
+ 0001:000058d0       _searchAllSourceNames      100068d0 f   SDE.obj
+ 0001:00005bd0       _convertLineNumberTable    10006bd0 f   SDE.obj
+ 0001:00005d30       _setGlobalStratumId        10006d30 f   SDE.obj
+ 0001:0000afa0       _bagCreateBag              1000bfa0 f   bag.obj
+ 0001:0000b020       _bagDup                    1000c020 f   bag.obj
+ 0001:0000b080       _bagDestroyBag             1000c080 f   bag.obj
+ 0001:0000b0b0       _bagFind                   1000c0b0 f   bag.obj
+ 0001:0000b110       _bagAdd                    1000c110 f   bag.obj
+ 0001:0000b1e0       _bagDelete                 1000c1e0 f   bag.obj
+ 0001:0000b240       _bagDeleteAll              1000c240 f   bag.obj
+ 0001:0000b250       _bagSize                   1000c250 f   bag.obj
+ 0001:0000b260       _bagEnumerateOver          1000c260 f   bag.obj
+ 0001:0000b2c0       _commonRef_initialize      1000c2c0 f   commonRef.obj
+ 0001:0000b380       _commonRef_reset           1000c380 f   commonRef.obj
+ 0001:0000b600       _commonRef_refToID         1000c600 f   commonRef.obj
+ 0001:0000bad0       _commonRef_idToRef         1000cad0 f   commonRef.obj
+ 0001:0000be40       _commonRef_idToRef_delete  1000ce40 f   commonRef.obj
+ 0001:0000be60       _commonRef_pin             1000ce60 f   commonRef.obj
+ 0001:0000c0a0       _commonRef_unpin           1000d0a0 f   commonRef.obj
+ 0001:0000c210       _commonRef_release         1000d210 f   commonRef.obj
+ 0001:0000c260       _commonRef_releaseMultiple 1000d260 f   commonRef.obj
+ 0001:0000c2b0       _commonRef_compact         1000d2b0 f   commonRef.obj
+ 0001:0000c3e0       _commonRef_lock            1000d3e0 f   commonRef.obj
+ 0001:0000c400       _commonRef_unlock          1000d400 f   commonRef.obj
+ 0001:0000c420       _classTrack_processUnloads 1000d420 f   classTrack.obj
+ 0001:0000c8c0       _classTrack_addPreparedClass 1000d8c0 f   classTrack.obj
+ 0001:0000cb60       _classTrack_initialize     1000db60 f   classTrack.obj
+ 0001:0000cd60       _classTrack_reset          1000dd60 f   classTrack.obj
+ 0001:0000cd70       _debugDispatch_initialize  1000dd70 f   debugDispatch.obj
+ 0001:0000ced0       _debugDispatch_reset       1000ded0 f   debugDispatch.obj
+ 0001:0000cee0       _debugDispatch_getHandler  1000dee0 f   debugDispatch.obj
+ 0001:0000cf20       _Agent_OnLoad@12           1000df20 f   debugInit.obj
+ 0001:0000dbc0       _Agent_OnUnload@4          1000ebc0 f   debugInit.obj
+ 0001:0000e360       _debugInit_isInitComplete  1000f360 f   debugInit.obj
+ 0001:0000e370       _debugInit_waitInitComplete 1000f370 f   debugInit.obj
+ 0001:0000e3b0       _forceExit                 1000f3b0 f   debugInit.obj
+ 0001:0000ebb0       _debugInit_reset           1000fbb0 f   debugInit.obj
+ 0001:0000ecc0       _debugInit_launchOnInit    1000fcc0 f   debugInit.obj
+ 0001:0000ecd0       _debugInit_suspendOnInit   1000fcd0 f   debugInit.obj
+ 0001:0000fb30       _debugInit_exit            10010b30 f   debugInit.obj
+ 0001:0000fd50       _debugLoop_initialize      10010d50 f   debugLoop.obj
+ 0001:0000fd70       _debugLoop_sync            10010d70 f   debugLoop.obj
+ 0001:0000fda0       _debugLoop_run             10010da0 f   debugLoop.obj
+ 0001:000103e0       _print_message             100113e0 f   error_messages.obj
+ 0001:000104c0       _error_message             100114c0 f   error_messages.obj
+ 0001:00010580       _tty_message               10011580 f   error_messages.obj
+ 0001:000105d0       _jdiAssertionFailed        100115d0 f   error_messages.obj
+ 0001:000106d0       _jvmtiErrorText            100116d0 f   error_messages.obj
+ 0001:00010b90       _eventText                 10011b90 f   error_messages.obj
+ 0001:00010c80       _jdwpErrorText             10011c80 f   error_messages.obj
+ 0001:00011080       _do_pause                  10012080 f   error_messages.obj
+ 0001:00011100       _eventFilterRestricted_alloc 10012100 f   eventFilter.obj
+ 0001:00011180       _eventFilterRestricted_passesFilter 10012180 f   eventFilter.obj
+ 0001:000118c0       _eventFilterRestricted_passesUnloadFilter 100128c0 f   eventFilter.obj
+ 0001:00011a50       _eventFilter_predictFiltering 10012a50 f   eventFilter.obj
+ 0001:00011bb0       _eventFilterRestricted_isBreakpointInClass 10012bb0 f   eventFilter.obj
+ 0001:00011c20       _eventFilter_setConditionalFilter 10012c20 f   eventFilter.obj
+ 0001:00011c70       _eventFilter_setCountFilter 10012c70 f   eventFilter.obj
+ 0001:00011cc0       _eventFilter_setThreadOnlyFilter 10012cc0 f   eventFilter.obj
+ 0001:00011d30       _eventFilter_setLocationOnlyFilter 10012d30 f   eventFilter.obj
+ 0001:00011de0       _eventFilter_setFieldOnlyFilter 10012de0 f   eventFilter.obj
+ 0001:00011e60       _eventFilter_setClassOnlyFilter 10012e60 f   eventFilter.obj
+ 0001:00011ee0       _eventFilter_setExceptionOnlyFilter 10012ee0 f   eventFilter.obj
+ 0001:00011f70       _eventFilter_setInstanceOnlyFilter 10012f70 f   eventFilter.obj
+ 0001:00011fe0       _eventFilter_setClassMatchFilter 10012fe0 f   eventFilter.obj
+ 0001:00012040       _eventFilter_setClassExcludeFilter 10013040 f   eventFilter.obj
+ 0001:000120a0       _eventFilter_setStepFilter 100130a0 f   eventFilter.obj
+ 0001:00012160       _eventFilter_setSourceNameMatchFilter 10013160 f   eventFilter.obj
+ 0001:000121c0       _isBreakpointSet           100131c0 f   eventFilter.obj
+ 0001:000122c0       _eventFilterRestricted_install 100132c0 f   eventFilter.obj
+ 0001:00012790       _eventFilterRestricted_deinstall 10013790 f   eventFilter.obj
+ 0001:00012cc0       _eventHandlerRestricted_iterator 10013cc0 f   eventHandler.obj
+ 0001:00012e20       _getMethodClass            10013e20 f   eventHandler.obj
+ 0001:00012ed0       _eventHandler_free         10013ed0 f   eventHandler.obj
+ 0001:00012fd0       _eventHandler_freeAll      10013fd0 f   eventHandler.obj
+ 0001:00013050       _eventHandler_freeClassBreakpoints 10014050 f   eventHandler.obj
+ 0001:000130d0       _eventHandler_freeByID     100140d0 f   eventHandler.obj
+ 0001:00013190       _eventHandler_initialize   10014190 f   eventHandler.obj
+ 0001:00016c80       _eventHandler_reset        10017c80 f   eventHandler.obj
+ 0001:00016d50       _eventHandler_lock         10017d50 f   eventHandler.obj
+ 0001:00016d70       _eventHandler_unlock       10017d70 f   eventHandler.obj
+ 0001:00016d90       _eventHandler_alloc        10017d90 f   eventHandler.obj
+ 0001:00016dd0       _eventHandler_allocHandlerID 10017dd0 f   eventHandler.obj
+ 0001:00016e10       _eventHandler_createPermanentInternal 10017e10 f   eventHandler.obj
+ 0001:00017030       _eventHandler_createInternalThreadOnly 10018030 f   eventHandler.obj
+ 0001:00017060       _eventHandler_createInternalBreakpoint 10018060 f   eventHandler.obj
+ 0001:00017090       _eventHandler_installExternal 10018090 f   eventHandler.obj
+ 0001:000170c0       _eventHelper_holdEvents    100180c0 f   eventHelper.obj
+ 0001:00017100       _eventHelper_releaseEvents 10018100 f   eventHelper.obj
+ 0001:00017140       _unblockCommandLoop        10018140 f   eventHelper.obj
+ 0001:00017180       _eventHelper_initialize    10018180 f   eventHelper.obj
+ 0001:00018250       _eventHelper_reset         10019250 f   eventHelper.obj
+ 0001:000182a0       _eventHelper_lock          100192a0 f   eventHelper.obj
+ 0001:000182d0       _eventHelper_unlock        100192d0 f   eventHelper.obj
+ 0001:00018410       _eventHelper_createEventBag 10019410 f   eventHelper.obj
+ 0001:00018430       _eventHelper_reportEvents  10019430 f   eventHelper.obj
+ 0001:000187d0       _eventHelper_recordEvent   100197d0 f   eventHelper.obj
+ 0001:00018b80       _eventHelper_recordClassUnload 10019b80 f   eventHelper.obj
+ 0001:00018c30       _eventHelper_recordFrameEvent 10019c30 f   eventHelper.obj
+ 0001:00018df0       _eventHelper_reportInvokeDone 10019df0 f   eventHelper.obj
+ 0001:00018ed0       _eventHelper_reportVMInit  10019ed0 f   eventHelper.obj
+ 0001:00018fb0       _eventHelper_suspendThread 10019fb0 f   eventHelper.obj
+ 0001:00019090       _inStream_init             1001a090 f   inStream.obj
+ 0001:000190f0       _inStream_id               1001a0f0 f   inStream.obj
+ 0001:00019100       _inStream_command          1001a100 f   inStream.obj
+ 0001:00019110       _inStream_skipBytes        1001a110 f   inStream.obj
+ 0001:000191b0       _inStream_readBoolean      1001a1b0 f   inStream.obj
+ 0001:000191f0       _inStream_readByte         1001a1f0 f   inStream.obj
+ 0001:00019220       _inStream_readBytes        1001a220 f   inStream.obj
+ 0001:00019240       _inStream_readChar         1001a240 f   inStream.obj
+ 0001:00019280       _inStream_readShort        1001a280 f   inStream.obj
+ 0001:000192c0       _inStream_readInt          1001a2c0 f   inStream.obj
+ 0001:00019320       _inStream_readLong         1001a320 f   inStream.obj
+ 0001:00019420       _inStream_readFloat        1001a420 f   inStream.obj
+ 0001:00019450       _inStream_readDouble       1001a450 f   inStream.obj
+ 0001:00019490       _inStream_readObjectRef    1001a490 f   inStream.obj
+ 0001:00019530       _inStream_readObjectID     1001a530 f   inStream.obj
+ 0001:00019550       _inStream_readClassRef     1001a550 f   inStream.obj
+ 0001:000195a0       _inStream_readThreadRef    1001a5a0 f   inStream.obj
+ 0001:000195f0       _inStream_readThreadGroupRef 1001a5f0 f   inStream.obj
+ 0001:00019640       _inStream_readStringRef    1001a640 f   inStream.obj
+ 0001:00019690       _inStream_readClassLoaderRef 1001a690 f   inStream.obj
+ 0001:000196e0       _inStream_readArrayRef     1001a6e0 f   inStream.obj
+ 0001:00019730       _inStream_readFrameID      1001a730 f   inStream.obj
+ 0001:00019760       _inStream_readMethodID     1001a760 f   inStream.obj
+ 0001:00019790       _inStream_readFieldID      1001a790 f   inStream.obj
+ 0001:000197c0       _inStream_readLocation     1001a7c0 f   inStream.obj
+ 0001:000197e0       _inStream_readString       1001a7e0 f   inStream.obj
+ 0001:000198c0       _inStream_endOfInput       1001a8c0 f   inStream.obj
+ 0001:000198e0       _inStream_error            1001a8e0 f   inStream.obj
+ 0001:000198f0       _inStream_clearError       1001a8f0 f   inStream.obj
+ 0001:00019900       _inStream_readValue        1001a900 f   inStream.obj
+ 0001:00019a80       _inStream_destroy          1001aa80 f   inStream.obj
+ 0001:00019b00       _invoker_initialize        1001ab00 f   invoker.obj
+ 0001:00019b20       _invoker_reset             1001ab20 f   invoker.obj
+ 0001:00019b30       _invoker_lock              1001ab30 f   invoker.obj
+ 0001:00019b50       _invoker_unlock            1001ab50 f   invoker.obj
+ 0001:00019b70       _invoker_enableInvokeRequests 1001ab70 f   invoker.obj
+ 0001:00019c40       _invoker_requestInvoke     1001ac40 f   invoker.obj
+ 0001:0001a1d0       _invoker_doInvoke          1001b1d0 f   invoker.obj
+ 0001:0001b5e0       _invoker_completeInvokeRequest 1001c5e0 f   invoker.obj
+ 0001:0001b880       _invoker_isPending         1001c880 f   invoker.obj
+ 0001:0001b950       _invoker_isEnabled         1001c950 f   invoker.obj
+ 0001:0001ba20       _invoker_detach            1001ca20 f   invoker.obj
+ 0001:0001ba80       _log_message_begin         1001ca80 f   log_messages.obj
+ 0001:0001bb60       _log_message_end           1001cb60 f   log_messages.obj
+ 0001:0001bd90       _setup_logging             1001cd90 f   log_messages.obj
+ 0001:0001be10       _finish_logging            1001ce10 f   log_messages.obj
+ 0001:0001be60       _outStream_initCommand     1001ce60 f   outStream.obj
+ 0001:0001bf30       _outStream_initReply       1001cf30 f   outStream.obj
+ 0001:0001bf60       _outStream_id              1001cf60 f   outStream.obj
+ 0001:0001bf70       _outStream_command         1001cf70 f   outStream.obj
+ 0001:0001bfc0       _outStream_writeBoolean    1001cfc0 f   outStream.obj
+ 0001:0001c180       _outStream_writeByte       1001d180 f   outStream.obj
+ 0001:0001c1a0       _outStream_writeChar       1001d1a0 f   outStream.obj
+ 0001:0001c1e0       _outStream_writeShort      1001d1e0 f   outStream.obj
+ 0001:0001c220       _outStream_writeInt        1001d220 f   outStream.obj
+ 0001:0001c270       _outStream_writeLong       1001d270 f   outStream.obj
+ 0001:0001c360       _outStream_writeFloat      1001d360 f   outStream.obj
+ 0001:0001c390       _outStream_writeDouble     1001d390 f   outStream.obj
+ 0001:0001c3c0       _outStream_writeObjectTag  1001d3c0 f   outStream.obj
+ 0001:0001c3f0       _outStream_writeObjectRef  1001d3f0 f   outStream.obj
+ 0001:0001c590       _outStream_writeFrameID    1001d590 f   outStream.obj
+ 0001:0001c5d0       _outStream_writeMethodID   1001d5d0 f   outStream.obj
+ 0001:0001c600       _outStream_writeFieldID    1001d600 f   outStream.obj
+ 0001:0001c630       _outStream_writeLocation   1001d630 f   outStream.obj
+ 0001:0001c650       _outStream_writeByteArray  1001d650 f   outStream.obj
+ 0001:0001c680       _outStream_writeString     1001d680 f   outStream.obj
+ 0001:0001c7c0       _outStream_writeValue      1001d7c0 f   outStream.obj
+ 0001:0001c9c0       _outStream_skipBytes       1001d9c0 f   outStream.obj
+ 0001:0001ca00       _outStream_error           1001da00 f   outStream.obj
+ 0001:0001ca10       _outStream_setError        1001da10 f   outStream.obj
+ 0001:0001ca70       _outStream_sendReply       1001da70 f   outStream.obj
+ 0001:0001cbe0       _outStream_sendCommand     1001dbe0 f   outStream.obj
+ 0001:0001cc10       _outStream_destroy         1001dc10 f   outStream.obj
+ 0001:0001ccd0       _standardHandlers_defaultHandler 1001dcd0 f   standardHandlers.obj
+ 0001:0001cf00       _standardHandlers_onConnect 1001df00 f   standardHandlers.obj
+ 0001:0001cfa0       _standardHandlers_onDisconnect 1001dfa0 f   standardHandlers.obj
+ 0001:0001cfb0       _stepControl_handleStep    1001dfb0 f   stepControl.obj
+ 0001:0001e060       _stepControl_initialize    1001f060 f   stepControl.obj
+ 0001:0001e080       _stepControl_reset         1001f080 f   stepControl.obj
+ 0001:0001e090       _stepControl_resetRequest  1001f090 f   stepControl.obj
+ 0001:0001e200       _stepControl_beginStep     1001f200 f   stepControl.obj
+ 0001:0001e920       _stepControl_endStep       1001f920 f   stepControl.obj
+ 0001:0001ea40       _stepControl_clearRequest  1001fa40 f   stepControl.obj
+ 0001:0001ea90       _stepControl_lock          1001fa90 f   stepControl.obj
+ 0001:0001eab0       _stepControl_unlock        1001fab0 f   stepControl.obj
+ 0001:0001ead0       _stream_encodeFloat        1001fad0 f   stream.obj
+ 0001:0001eb20       _stream_encodeDouble       1001fb20 f   stream.obj
+ 0001:0001ec10       _threadControl_initialize  1001fc10 f   threadControl.obj
+ 0001:0001edd0       _threadControl_onConnect   1001fdd0 f   threadControl.obj
+ 0001:0001f700       _threadControl_onDisconnect 10020700 f   threadControl.obj
+ 0001:0001f770       _threadControl_onHook      10020770 f   threadControl.obj
+ 0001:0001fbd0       _threadControl_suspendThread 10020bd0 f   threadControl.obj
+ 0001:0001ff20       _threadControl_resumeThread 10020f20 f   threadControl.obj
+ 0001:00020300       _threadControl_suspendCount 10021300 f   threadControl.obj
+ 0001:00020380       _threadControl_suspendAll  10021380 f   threadControl.obj
+ 0001:00020a30       _threadControl_resumeAll   10021a30 f   threadControl.obj
+ 0001:00020f80       _threadControl_getStepRequest 10021f80 f   threadControl.obj
+ 0001:00020fe0       _threadControl_getInvokeRequest 10021fe0 f   threadControl.obj
+ 0001:00021040       _threadControl_addDebugThread 10022040 f   threadControl.obj
+ 0001:000211e0       _threadControl_isDebugThread 100221e0 f   threadControl.obj
+ 0001:00021260       _threadControl_popFrames   10022260 f   threadControl.obj
+ 0001:00021940       _threadControl_onEventHandlerEntry 10022940 f   threadControl.obj
+ 0001:00022050       _threadControl_onEventHandlerExit 10023050 f   threadControl.obj
+ 0001:00022290       _threadControl_applicationThreadStatus 10023290 f   threadControl.obj
+ 0001:00022340       _threadControl_interrupt   10023340 f   threadControl.obj
+ 0001:00022420       _threadControl_clearCLEInfo 10023420 f   threadControl.obj
+ 0001:00022490       _threadControl_cmpCLEInfo  10023490 f   threadControl.obj
+ 0001:00022540       _threadControl_saveCLEInfo 10023540 f   threadControl.obj
+ 0001:000225d0       _threadControl_setPendingInterrupt 100235d0 f   threadControl.obj
+ 0001:00022620       _threadControl_stop        10023620 f   threadControl.obj
+ 0001:00022710       _threadControl_detachInvokes 10023710 f   threadControl.obj
+ 0001:00022780       _threadControl_reset       10023780 f   threadControl.obj
+ 0001:000229c0       _threadControl_getInstructionStepMode 100239c0 f   threadControl.obj
+ 0001:00022a20       _threadControl_setEventMode 10023a20 f   threadControl.obj
+ 0001:00022be0       _threadControl_currentThread 10023be0 f   threadControl.obj
+ 0001:00022c40       _threadControl_getFrameGeneration 10023c40 f   threadControl.obj
+ 0001:00022cb0       _transport_waitForConnection 10023cb0 f   transport.obj
+ 0001:00022d00       _transport_initialize      10023d00 f   transport.obj
+ 0001:00022d40       _transport_reset           10023d40 f   transport.obj
+ 0001:00022dc0       _transport_startTransport  10023dc0 f   transport.obj
+ 0001:00023c10       _transport_close           10024c10 f   transport.obj
+ 0001:00023c30       _transport_is_open         10024c30 f   transport.obj
+ 0001:00023c60       _transport_sendPacket      10024c60 f   transport.obj
+ 0001:00023d10       _transport_receivePacket   10024d10 f   transport.obj
+ 0001:00023d80       _saveGlobalRef             10024d80 f   util.obj
+ 0001:00024010       _tossGlobalRef             10025010 f   util.obj
+ 0001:000241d0       _util_initialize           100251d0 f   util.obj
+ 0001:00025390       _util_reset                10026390 f   util.obj
+ 0001:000253a0       _isObjectTag               100263a0 f   util.obj
+ 0001:00025400       _specificTypeKey           10026400 f   util.obj
+ 0001:000256d0       _sharedGetFieldValues      100266d0 f   util.obj
+ 0001:000261b0       _sharedInvoke              100271b0 f   util.obj
+ 0001:00026440       _uniqueID                  10027440 f   util.obj
+ 0001:00026470       _filterDebugThreads        10027470 f   util.obj
+ 0001:000264e0       _referenceTypeTag          100274e0 f   util.obj
+ 0001:00026530       _fieldModifiers            10027530 f   util.obj
+ 0001:000265b0       _methodModifiers           100275b0 f   util.obj
+ 0001:00026630       _methodClass               10027630 f   util.obj
+ 0001:00026670       _methodLocation            10027670 f   util.obj
+ 0001:000266e0       _methodSignature           100276e0 f   util.obj
+ 0001:000267a0       _methodReturnType          100277a0 f   util.obj
+ 0001:00026830       _classLoader               10027830 f   util.obj
+ 0001:000268b0       _fieldSignature            100278b0 f   util.obj
+ 0001:000269a0       _getEnv                    100279a0 f   util.obj
+ 0001:00026a80       _spawnNewThread            10027a80 f   util.obj
+ 0001:00026e80       _jvmtiGetCapabilities      10027e80 f   util.obj
+ 0001:00026f50       _jvmtiMajorVersion         10027f50 f   util.obj
+ 0001:00027060       _jvmtiMinorVersion         10028060 f   util.obj
+ 0001:00027080       _jvmtiMicroVersion         10028080 f   util.obj
+ 0001:00027090       _canSuspendResumeThreadLists 10028090 f   util.obj
+ 0001:000270d0       _getSourceDebugExtension   100280d0 f   util.obj
+ 0001:00027130       _convertSignatureToClassname 10028130 f   util.obj
+ 0001:00027190       _debugMonitorEnter         10028190 f   util.obj
+ 0001:000272f0       _debugMonitorExit          100282f0 f   util.obj
+ 0001:000273a0       _debugMonitorWait          100283a0 f   util.obj
+ 0001:00027460       _debugMonitorTimedWait     10028460 f   util.obj
+ 0001:00027530       _debugMonitorNotify        10028530 f   util.obj
+ 0001:000275e0       _debugMonitorNotifyAll     100285e0 f   util.obj
+ 0001:00027690       _debugMonitorCreate        10028690 f   util.obj
+ 0001:00027730       _debugMonitorDestroy       10028730 f   util.obj
+ 0001:000277e0       _allThreads                100287e0 f   util.obj
+ 0001:000278e0       _threadGroupInfo           100288e0 f   util.obj
+ 0001:000279c0       _classSignature            100289c0 f   util.obj
+ 0001:00027a20       _getClassname              10028a20 f   util.obj
+ 0001:00027a70       _writeGenericSignature     10028a70 f   util.obj
+ 0001:00027aa0       _classStatus               10028aa0 f   util.obj
+ 0001:00027d40       _isFieldSynthetic          10028d40 f   util.obj
+ 0001:00027dc0       _isMethodSynthetic         10028dc0 f   util.obj
+ 0001:00027e40       _isMethodNative            10028e40 f   util.obj
+ 0001:00027f20       _isSameObject              10028f20 f   util.obj
+ 0001:00027f50       _objectHashCode            10028f50 f   util.obj
+ 0001:00028040       _allInterfaces             10029040 f   util.obj
+ 0001:000280c0       _allLoadedClasses          100290c0 f   util.obj
+ 0001:00028140       _allClassLoaderClasses     10029140 f   util.obj
+ 0001:000281c0       _allNestedClasses          100291c0 f   util.obj
+ 0001:00028430       _createLocalRefSpace       10029430 f   util.obj
+ 0001:000285e0       _isClass                   100295e0 f   util.obj
+ 0001:00028650       _isThread                  10029650 f   util.obj
+ 0001:000286c0       _isThreadGroup             100296c0 f   util.obj
+ 0001:00028730       _isString                  10029730 f   util.obj
+ 0001:000287a0       _isClassLoader             100297a0 f   util.obj
+ 0001:00028810       _isArray                   10029810 f   util.obj
+ 0001:000288e0       _setAgentPropertyValue     100298e0 f   util.obj
+ 0001:00028ed0       _isMethodObsolete          10029ed0 f   util.obj
+ 0001:00028f50       _writeCodeLocation         10029f50 f   util.obj
+ 0001:00028fe0       _jvmtiAllocate             10029fe0 f   util.obj
+ 0001:00029090       _jvmtiDeallocate           1002a090 f   util.obj
+ 0001:00029140       _map2jvmtiError            1002a140 f   util.obj
+ 0001:00029530       _eventIndexInit            1002a530 f   util.obj
+ 0001:000296b0       _eventIndex2jdwp           1002a6b0 f   util.obj
+ 0001:00029740       _eventIndex2jvmti          1002a740 f   util.obj
+ 0001:000297d0       _jdwp2EventIndex           1002a7d0 f   util.obj
+ 0001:00029960       _jvmti2EventIndex          1002a960 f   util.obj
+ 0001:00029b40       _map2jdwpError             1002ab40 f   util.obj
+ 0001:00029ef0       _map2jdwpSuspendStatus     1002aef0 f   util.obj
+ 0001:00029f20       _map2jdwpThreadStatus      1002af20 f   util.obj
+ 0001:00029fa0       _map2jdwpClassStatus       1002afa0 f   util.obj
+ 0001:0002a000       _log_debugee_location      1002b000 f   util.obj
+ 0001:0002a210       _classInstances            1002b210 f   util.obj
+ 0001:0002a550       _classInstanceCounts       1002b550 f   util.obj
+ 0001:0002aa30       _objectReferrers           1002ba30 f   util.obj
+ 0001:0002adb0       _dbgsysGetLastErrorString  1002bdb0 f   linker_md.obj
+ 0001:0002aeb0       _dbgsysBuildLibName        1002beb0 f   linker_md.obj
+ 0001:0002b230       _dbgsysLoadLibrary         1002c230 f   linker_md.obj
+ 0001:0002b2a0       _dbgsysUnloadLibrary       1002c2a0 f   linker_md.obj
+ 0001:0002b2b0       _dbgsysFindLibraryEntry    1002c2b0 f   linker_md.obj
+ 0001:0002b2d0       _dbgsysExec                1002c2d0 f   exec_md.obj
+ 0001:0002b32c       _memset                    1002c32c f   MSVCRT:MSVCR71.dll
+ 0001:0002b340       _strcmp                    1002c340 f   MSVCRT:MSVCR71.dll
+ 0001:0002b350       __allshl                   1002c350 f   MSVCRT:llshl.obj
+ 0001:0002b370       __allshr                   1002c370 f   MSVCRT:llshr.obj
+ 0001:0002b392       __setjmp3                  1002c392 f   MSVCRT:MSVCR71.dll
+ 0001:0002b398       _strlen                    1002c398 f   MSVCRT:MSVCR71.dll
+ 0001:0002b39e       _memcpy                    1002c39e f   MSVCRT:MSVCR71.dll
+ 0001:0002b3a4       _abs                       1002c3a4 f   MSVCRT:MSVCR71.dll
+ 0001:0002b3aa       _strcat                    1002c3aa f   MSVCRT:MSVCR71.dll
+ 0001:0002b3b0       __onexit                   1002c3b0 f   MSVCRT:atonexit.obj
+ 0001:0002b3d6       _atexit                    1002c3d6 f   MSVCRT:atonexit.obj
+ 0001:0002b3e8       _strcpy                    1002c3e8 f   MSVCRT:MSVCR71.dll
+ 0001:0002b3f0       __aullshr                  1002c3f0 f   MSVCRT:ullshr.obj
+ 0001:0002b40f       __CRT_INIT@12              1002c40f f   MSVCRT:crtdll.obj
+ 0001:0002b4cd       __DllMainCRTStartup@12     1002c4cd f   MSVCRT:crtdll.obj
+ 0001:0002b5b2       ___dllonexit               1002c5b2 f   MSVCRT:MSVCR71.dll
+ 0001:0002b5b8       __initterm                 1002c5b8 f   MSVCRT:MSVCR71.dll
+ 0001:0002b5be       __RTC_Initialize           1002c5be f   MSVCRT:initsect.obj
+ 0001:0002b602       __RTC_Terminate            1002c602 f   MSVCRT:initsect.obj
+ 0001:0002b646       ___CppXcptFilter           1002c646 f   MSVCRT:MSVCR71.dll
+ 0001:0002b64c       _DllMain@12                1002c64c f   MSVCRT:dllmain.obj
+ 0001:0002b66c       __SEH_prolog               1002c66c f   MSVCRT:sehprolg.obj
+ 0001:0002b6a7       __SEH_epilog               1002c6a7 f   MSVCRT:sehprolg.obj
+ 0001:0002b6b8       __except_handler3          1002c6b8 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__CreateProcessA@40   1002d000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__FreeLibrary@4       1002d004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__GetFileAttributesA@4 1002d008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetLastError@0      1002d00c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__FormatMessageA@28   1002d010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__GetCurrentThreadId@0 1002d014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__LoadLibraryA@4      1002d018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__GetModuleFileNameA@12 1002d01c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetProcAddress@8    1002d020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__DisableThreadLibraryCalls@4 1002d024     kernel32:KERNEL32.dll
+ 0002:00000028       \177KERNEL32_NULL_THUNK_DATA 1002d028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__strcat              1002d02c     MSVCRT:MSVCR71.dll
+ 0002:00000030       __imp__strrchr             1002d030     MSVCRT:MSVCR71.dll
+ 0002:00000034       __imp__exit                1002d034     MSVCRT:MSVCR71.dll
+ 0002:00000038       __imp__fprintf             1002d038     MSVCRT:MSVCR71.dll
+ 0002:0000003c       __imp__strtol              1002d03c     MSVCRT:MSVCR71.dll
+ 0002:00000040       __imp__atol                1002d040     MSVCRT:MSVCR71.dll
+ 0002:00000044       __imp__strcpy              1002d044     MSVCRT:MSVCR71.dll
+ 0002:00000048       __imp__getenv              1002d048     MSVCRT:MSVCR71.dll
+ 0002:0000004c       __imp__abort               1002d04c     MSVCRT:MSVCR71.dll
+ 0002:00000050       __imp___vsnprintf          1002d050     MSVCRT:MSVCR71.dll
+ 0002:00000054       __imp__fflush              1002d054     MSVCRT:MSVCR71.dll
+ 0002:00000058       __imp___sleep              1002d058     MSVCRT:MSVCR71.dll
+ 0002:0000005c       __imp__setvbuf             1002d05c     MSVCRT:MSVCR71.dll
+ 0002:00000060       __imp__fopen               1002d060     MSVCRT:MSVCR71.dll
+ 0002:00000064       __imp__strftime            1002d064     MSVCRT:MSVCR71.dll
+ 0002:00000068       __imp__localtime           1002d068     MSVCRT:MSVCR71.dll
+ 0002:0000006c       __imp__abs                 1002d06c     MSVCRT:MSVCR71.dll
+ 0002:00000070       __imp__fclose              1002d070     MSVCRT:MSVCR71.dll
+ 0002:00000074       __imp__isdigit             1002d074     MSVCRT:MSVCR71.dll
+ 0002:00000078       __imp__strncpy             1002d078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp__strerror            1002d07c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp___errno              1002d080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp__free                1002d084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp__sprintf             1002d088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp__malloc              1002d08c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp__strcspn             1002d090     MSVCRT:MSVCR71.dll
+ 0002:00000094       __imp__calloc              1002d094     MSVCRT:MSVCR71.dll
+ 0002:00000098       __imp____dllonexit         1002d098     MSVCRT:MSVCR71.dll
+ 0002:0000009c       __imp___onexit             1002d09c     MSVCRT:MSVCR71.dll
+ 0002:000000a0       __imp___initterm           1002d0a0     MSVCRT:MSVCR71.dll
+ 0002:000000a4       __imp___adjust_fdiv        1002d0a4     MSVCRT:MSVCR71.dll
+ 0002:000000a8       __imp____CppXcptFilter     1002d0a8     MSVCRT:MSVCR71.dll
+ 0002:000000ac       __imp___except_handler3    1002d0ac     MSVCRT:MSVCR71.dll
+ 0002:000000b0       __imp__strchr              1002d0b0     MSVCRT:MSVCR71.dll
+ 0002:000000b4       __imp__memcpy              1002d0b4     MSVCRT:MSVCR71.dll
+ 0002:000000b8       __imp___snprintf           1002d0b8     MSVCRT:MSVCR71.dll
+ 0002:000000bc       __imp__longjmp             1002d0bc     MSVCRT:MSVCR71.dll
+ 0002:000000c0       __imp__strlen              1002d0c0     MSVCRT:MSVCR71.dll
+ 0002:000000c4       __imp__strncmp             1002d0c4     MSVCRT:MSVCR71.dll
+ 0002:000000c8       __imp___setjmp3            1002d0c8     MSVCRT:MSVCR71.dll
+ 0002:000000cc       __imp__strcmp              1002d0cc     MSVCRT:MSVCR71.dll
+ 0002:000000d0       __imp___iob                1002d0d0     MSVCRT:MSVCR71.dll
+ 0002:000000d4       __imp__time                1002d0d4     MSVCRT:MSVCR71.dll
+ 0002:000000d8       __imp__memset              1002d0d8     MSVCRT:MSVCR71.dll
+ 0002:000000dc       __imp__getpid              1002d0dc     MSVCRT:MSVCR71.dll
+ 0002:000000dc       __imp___getpid             1002d0dc     MSVCRT:MSVCR71.dll
+ 0002:000000e0       __imp___strdup             1002d0e0     MSVCRT:MSVCR71.dll
+ 0002:000000e0       __imp__strdup              1002d0e0     MSVCRT:MSVCR71.dll
+ 0002:000000e4       \177MSVCR71_NULL_THUNK_DATA 1002d0e4     MSVCRT:MSVCR71.dll
+ 0002:00000110       __real@0000000000000000    1002d110     inStream.obj
+ 0002:00000148       __load_config_used         1002d148     MSVCRT:loadcfg.obj
+ 0002:00000200       ___safe_se_handler_table   1002d200     <linker-defined>
+ 0002:00000204       ___rtc_iaa                 1002d204     MSVCRT:initsect.obj
+ 0002:00000208       ___rtc_izz                 1002d208     MSVCRT:initsect.obj
+ 0002:0000020c       ___rtc_taa                 1002d20c     MSVCRT:initsect.obj
+ 0002:00000210       ___rtc_tzz                 1002d210     MSVCRT:initsect.obj
+ 0002:00000214       __IMPORT_DESCRIPTOR_MSVCR71 1002d214     MSVCRT:MSVCR71.dll
+ 0002:00000228       __IMPORT_DESCRIPTOR_KERNEL32 1002d228     kernel32:KERNEL32.dll
+ 0002:0000023c       __NULL_IMPORT_DESCRIPTOR   1002d23c     MSVCRT:MSVCR71.dll
+ 0003:00000000       ___xc_a                    1002e000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    1002e004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    1002e008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1002e00c     MSVCRT:cinitexe.obj
+ 0003:00000ae4       _ArrayReference_Cmds       1002eae4     ArrayReferenceImpl.obj
+ 0003:00000ef4       _ArrayType_Cmds            1002eef4     ArrayTypeImpl.obj
+ 0003:000012a4       _ClassType_Cmds            1002f2a4     ClassTypeImpl.obj
+ 0003:00001308       _ClassLoaderReference_Cmds 1002f308     ClassLoaderReferenceImpl.obj
+ 0003:00001310       _ClassObjectReference_Cmds 1002f310     ClassObjectReferenceImpl.obj
+ 0003:00001318       _EventRequest_Cmds         1002f318     EventRequestImpl.obj
+ 0003:00001458       _Method_Cmds               1002f458     MethodImpl.obj
+ 0003:00001988       _ObjectReference_Cmds      1002f988     ObjectReferenceImpl.obj
+ 0003:00001c68       _ReferenceType_Cmds        1002fc68     ReferenceTypeImpl.obj
+ 0003:0000259c       _StackFrame_Cmds           1003059c     StackFrameImpl.obj
+ 0003:000026a0       _StringReference_Cmds      100306a0     StringReferenceImpl.obj
+ 0003:000027f4       _ThreadGroupReference_Cmds 100307f4     ThreadGroupReferenceImpl.obj
+ 0003:00002fcc       _ThreadReference_Cmds      10030fcc     ThreadReferenceImpl.obj
+ 0003:00003408       _VirtualMachine_Cmds       10031408     VirtualMachineImpl.obj
+ 0003:00014200       ___security_cookie         10042200     MSVCRT:seccook.obj
+ 0003:0001420c       _Field_Cmds                1004220c     FieldImpl.obj
+ 0003:00014884       _gdata                     10042884     util.obj
+ 0003:000148c8       __adjust_fdiv              100428c8     <common>
+ 0003:000148cc       __pRawDllMain              100428cc     <common>
+ 0003:000148d0       ___onexitend               100428d0     <common>
+ 0003:000148d4       ___onexitbegin             100428d4     <common>
+
+ entry point at        0001:0002b4cd
+
+ Static symbols
+
+ 0001:00000000       _length                    10001000 f   ArrayReferenceImpl.obj
+ 0001:000000a0       _getValues                 100010a0 f   ArrayReferenceImpl.obj
+ 0001:00000540       _writeBooleanComponents    10001540 f   ArrayReferenceImpl.obj
+ 0001:00000600       _newComponents             10001600 f   ArrayReferenceImpl.obj
+ 0001:00000660       _deleteComponents          10001660 f   ArrayReferenceImpl.obj
+ 0001:00000680       _writeByteComponents       10001680 f   ArrayReferenceImpl.obj
+ 0001:00000740       _writeCharComponents       10001740 f   ArrayReferenceImpl.obj
+ 0001:00000800       _writeShortComponents      10001800 f   ArrayReferenceImpl.obj
+ 0001:000008c0       _writeIntComponents        100018c0 f   ArrayReferenceImpl.obj
+ 0001:00000980       _writeLongComponents       10001980 f   ArrayReferenceImpl.obj
+ 0001:00000a50       _writeFloatComponents      10001a50 f   ArrayReferenceImpl.obj
+ 0001:00000b10       _writeDoubleComponents     10001b10 f   ArrayReferenceImpl.obj
+ 0001:00000be0       _writeObjectComponents     10001be0 f   ArrayReferenceImpl.obj
+ 0001:00000d40       _setValues                 10001d40 f   ArrayReferenceImpl.obj
+ 0001:00001260       _readBooleanComponents     10002260 f   ArrayReferenceImpl.obj
+ 0001:00001320       _readByteComponents        10002320 f   ArrayReferenceImpl.obj
+ 0001:000013e0       _readCharComponents        100023e0 f   ArrayReferenceImpl.obj
+ 0001:000014a0       _readShortComponents       100024a0 f   ArrayReferenceImpl.obj
+ 0001:00001560       _readIntComponents         10002560 f   ArrayReferenceImpl.obj
+ 0001:00001620       _readLongComponents        10002620 f   ArrayReferenceImpl.obj
+ 0001:000016e0       _readFloatComponents       100026e0 f   ArrayReferenceImpl.obj
+ 0001:000017a0       _readDoubleComponents      100027a0 f   ArrayReferenceImpl.obj
+ 0001:00001860       _readObjectComponents      10002860 f   ArrayReferenceImpl.obj
+ 0001:00001950       _newInstance               10002950 f   ArrayTypeImpl.obj
+ 0001:00001a60       _writeNewObjectArray       10002a60 f   ArrayTypeImpl.obj
+ 0001:00001c30       _getComponentClass         10002c30 f   ArrayTypeImpl.obj
+ 0001:00001db0       _writeNewPrimitiveArray    10002db0 f   ArrayTypeImpl.obj
+ 0001:00002210       _superclass                10003210 f   ClassTypeImpl.obj
+ 0001:00002310       _setValues                 10003310 f   ClassTypeImpl.obj
+ 0001:00002480       _readStaticFieldValue      10003480 f   ClassTypeImpl.obj
+ 0001:000028f0       _invokeStatic              100038f0 f   ClassTypeImpl.obj
+ 0001:00002910       _visibleClasses            10003910 f   ClassLoaderReferenceImpl.obj
+ 0001:00002a60       _reflectedType             10003a60 f   ClassObjectReferenceImpl.obj
+ 0001:00002ae0       _setCommand                10003ae0 f   EventRequestImpl.obj
+ 0001:00002ca0       _readAndSetFilters         10003ca0 f   EventRequestImpl.obj
+ 0001:000032e0       _clearCommand              100042e0 f   EventRequestImpl.obj
+ 0001:000033a0       _clearAllBreakpoints       100043a0 f   EventRequestImpl.obj
+ 0001:00003490       _lineTable                 10004490 f   MethodImpl.obj
+ 0001:000036c0       _variableTable             100046c0 f   MethodImpl.obj
+ 0001:000036e0       _doVariableTable           100046e0 f   MethodImpl.obj
+ 0001:000039a0       _variableTableWithGenerics 100049a0 f   MethodImpl.obj
+ 0001:000039c0       _bytecodes                 100049c0 f   MethodImpl.obj
+ 0001:00003af0       _isObsolete                10004af0 f   MethodImpl.obj
+ 0001:00003b70       _referenceType             10004b70 f   ObjectReferenceImpl.obj
+ 0001:00003c90       _getValues                 10004c90 f   ObjectReferenceImpl.obj
+ 0001:00003cb0       _setValues                 10004cb0 f   ObjectReferenceImpl.obj
+ 0001:00003eb0       _readFieldValue            10004eb0 f   ObjectReferenceImpl.obj
+ 0001:00004320       _monitorInfo               10005320 f   ObjectReferenceImpl.obj
+ 0001:000044c0       _invokeInstance            100054c0 f   ObjectReferenceImpl.obj
+ 0001:000044e0       _disableCollection         100054e0 f   ObjectReferenceImpl.obj
+ 0001:00004550       _enableCollection          10005550 f   ObjectReferenceImpl.obj
+ 0001:000045c0       _isCollected               100055c0 f   ObjectReferenceImpl.obj
+ 0001:00004660       _referringObjects          10005660 f   ObjectReferenceImpl.obj
+ 0001:000047f0       _signature                 100057f0 f   ReferenceTypeImpl.obj
+ 0001:00004890       _signatureWithGeneric      10005890 f   ReferenceTypeImpl.obj
+ 0001:00004950       _getClassLoader            10005950 f   ReferenceTypeImpl.obj
+ 0001:000049e0       _modifiers                 100059e0 f   ReferenceTypeImpl.obj
+ 0001:00004ab0       _methods                   10005ab0 f   ReferenceTypeImpl.obj
+ 0001:00004ad0       _methods1                  10005ad0 f   ReferenceTypeImpl.obj
+ 0001:00004c10       _writeMethodInfo           10005c10 f   ReferenceTypeImpl.obj
+ 0001:00004d70       _methodsWithGeneric        10005d70 f   ReferenceTypeImpl.obj
+ 0001:00004d90       _instances                 10005d90 f   ReferenceTypeImpl.obj
+ 0001:00004f20       _getClassVersion           10005f20 f   ReferenceTypeImpl.obj
+ 0001:00005000       _getConstantPool           10006000 f   ReferenceTypeImpl.obj
+ 0001:00005110       _fields                    10006110 f   ReferenceTypeImpl.obj
+ 0001:00005130       _fields1                   10006130 f   ReferenceTypeImpl.obj
+ 0001:00005270       _writeFieldInfo            10006270 f   ReferenceTypeImpl.obj
+ 0001:000053e0       _fieldsWithGeneric         100063e0 f   ReferenceTypeImpl.obj
+ 0001:00005400       _getValues                 10006400 f   ReferenceTypeImpl.obj
+ 0001:00005420       _sourceFile                10006420 f   ReferenceTypeImpl.obj
+ 0001:00005500       _sourceDebugExtension      10006500 f   ReferenceTypeImpl.obj
+ 0001:00005590       _nestedTypes               10006590 f   ReferenceTypeImpl.obj
+ 0001:000056e0       _getClassStatus            100066e0 f   ReferenceTypeImpl.obj
+ 0001:00005740       _interfaces                10006740 f   ReferenceTypeImpl.obj
+ 0001:00005870       _classObject               10006870 f   ReferenceTypeImpl.obj
+ 0001:00005940       _loadDebugInfo             10006940 f   SDE.obj
+ 0001:00005a90       _searchOneSourceName       10006a90 f   SDE.obj
+ 0001:00005b10       _patternMatch              10006b10 f   SDE.obj
+ 0001:00005d40       _stratumTableIndex         10006d40 f   SDE.obj
+ 0001:00005db0       _defaultStratumTableIndex  10006db0 f   SDE.obj
+ 0001:00005de0       _decode                    10006de0 f   SDE.obj
+ 0001:00005f00       _syntax                    10006f00 f   SDE.obj
+ 0001:00005f60       _sdeRead                   10006f60 f   SDE.obj
+ 0001:00005fa0       _readLine                  10006fa0 f   SDE.obj
+ 0001:00006040       _ignoreWhite               10007040 f   SDE.obj
+ 0001:00006070       _sdePeek                   10007070 f   SDE.obj
+ 0001:000060a0       _sdeAdvance                100070a0 f   SDE.obj
+ 0001:000060c0       _ignoreLine                100070c0 f   SDE.obj
+ 0001:00006110       _storeStratum              10007110 f   SDE.obj
+ 0001:000061d0       _assureStratumTableSize    100071d0 f   SDE.obj
+ 0001:000062e0       _stratumSection            100072e0 f   SDE.obj
+ 0001:00006300       _fileSection               10007300 f   SDE.obj
+ 0001:00006320       _fileLine                  10007320 f   SDE.obj
+ 0001:00006390       _readNumber                10007390 f   SDE.obj
+ 0001:000063e0       _storeFile                 100073e0 f   SDE.obj
+ 0001:00006440       _assureFileTableSize       10007440 f   SDE.obj
+ 0001:00006550       _lineSection               10007550 f   SDE.obj
+ 0001:00006570       _lineLine                  10007570 f   SDE.obj
+ 0001:00006640       _storeLine                 10007640 f   SDE.obj
+ 0001:000066e0       _assureLineTableSize       100076e0 f   SDE.obj
+ 0001:000067f0       _ignoreSection             100077f0 f   SDE.obj
+ 0001:00006810       _createJavaStratum         10007810 f   SDE.obj
+ 0001:00006870       _stiLineTableIndex         10007870 f   SDE.obj
+ 0001:000068f0       _stiLineNumber             100078f0 f   SDE.obj
+ 0001:00006930       _isValid                   10007930 f   SDE.obj
+ 0001:00006940       _getValues                 10007940 f   StackFrameImpl.obj
+ 0001:00006b00       _validateThreadFrame       10007b00 f   StackFrameImpl.obj
+ 0001:00006b60       _writeVariableValue        10007b60 f   StackFrameImpl.obj
+ 0001:000070c0       _setValues                 100080c0 f   StackFrameImpl.obj
+ 0001:00007280       _readVariableValue         10008280 f   StackFrameImpl.obj
+ 0001:00007760       _thisObject                10008760 f   StackFrameImpl.obj
+ 0001:00007a00       _popFrames                 10008a00 f   StackFrameImpl.obj
+ 0001:00007b10       _value                     10008b10 f   StringReferenceImpl.obj
+ 0001:00007c60       _name                      10008c60 f   ThreadGroupReferenceImpl.obj
+ 0001:00007d40       _parent                    10008d40 f   ThreadGroupReferenceImpl.obj
+ 0001:00007e20       _children                  10008e20 f   ThreadGroupReferenceImpl.obj
+ 0001:00008000       _name                      10009000 f   ThreadReferenceImpl.obj
+ 0001:00008170       _suspend                   10009170 f   ThreadReferenceImpl.obj
+ 0001:00008200       _resume                    10009200 f   ThreadReferenceImpl.obj
+ 0001:00008290       _status                    10009290 f   ThreadReferenceImpl.obj
+ 0001:00008350       _threadGroup               10009350 f   ThreadReferenceImpl.obj
+ 0001:000084c0       _frames                    100094c0 f   ThreadReferenceImpl.obj
+ 0001:00008840       _validateSuspendedThread   10009840 f   ThreadReferenceImpl.obj
+ 0001:000088a0       _getFrameCount             100098a0 f   ThreadReferenceImpl.obj
+ 0001:000089b0       _ownedMonitors             100099b0 f   ThreadReferenceImpl.obj
+ 0001:00008ba0       _currentContendedMonitor   10009ba0 f   ThreadReferenceImpl.obj
+ 0001:00008d30       _stop                      10009d30 f   ThreadReferenceImpl.obj
+ 0001:00008e00       _interrupt                 10009e00 f   ThreadReferenceImpl.obj
+ 0001:00008e90       _suspendCount              10009e90 f   ThreadReferenceImpl.obj
+ 0001:00008f40       _ownedMonitorsWithStackDepth 10009f40 f   ThreadReferenceImpl.obj
+ 0001:00009160       _forceEarlyReturn          1000a160 f   ThreadReferenceImpl.obj
+ 0001:00009710       _version                   1000a710 f   VirtualMachineImpl.obj
+ 0001:00009840       _classesForSignature       1000a840 f   VirtualMachineImpl.obj
+ 0001:00009ae0       _allClasses                1000aae0 f   VirtualMachineImpl.obj
+ 0001:00009b00       _allClasses1               1000ab00 f   VirtualMachineImpl.obj
+ 0001:00009d90       _allClassesWithGeneric     1000ad90 f   VirtualMachineImpl.obj
+ 0001:00009db0       _instanceCounts            1000adb0 f   VirtualMachineImpl.obj
+ 0001:00009ff0       _redefineClasses           1000aff0 f   VirtualMachineImpl.obj
+ 0001:0000a2c0       _setDefaultStratum         1000b2c0 f   VirtualMachineImpl.obj
+ 0001:0000a330       _getAllThreads             1000b330 f   VirtualMachineImpl.obj
+ 0001:0000a450       _topLevelThreadGroups      1000b450 f   VirtualMachineImpl.obj
+ 0001:0000a5c0       _dispose                   1000b5c0 f   VirtualMachineImpl.obj
+ 0001:0000a5d0       _idSizes                   1000b5d0 f   VirtualMachineImpl.obj
+ 0001:0000a620       _suspend                   1000b620 f   VirtualMachineImpl.obj
+ 0001:0000a670       _resume                    1000b670 f   VirtualMachineImpl.obj
+ 0001:0000a6c0       _doExit                    1000b6c0 f   VirtualMachineImpl.obj
+ 0001:0000a770       _createString              1000b770 f   VirtualMachineImpl.obj
+ 0001:0000a910       _capabilities              1000b910 f   VirtualMachineImpl.obj
+ 0001:0000aa10       _capabilitiesNew           1000ba10 f   VirtualMachineImpl.obj
+ 0001:0000acb0       _classPaths                1000bcb0 f   VirtualMachineImpl.obj
+ 0001:0000ad40       _writePaths                1000bd40 f   VirtualMachineImpl.obj
+ 0001:0000ae50       _countPaths                1000be50 f   VirtualMachineImpl.obj
+ 0001:0000aec0       _disposeObjects            1000bec0 f   VirtualMachineImpl.obj
+ 0001:0000af80       _holdEvents                1000bf80 f   VirtualMachineImpl.obj
+ 0001:0000af90       _releaseEvents             1000bf90 f   VirtualMachineImpl.obj
+ 0001:0000b310       _initializeObjectsByID     1000c310 f   commonRef.obj
+ 0001:0000b480       _deleteNode                1000c480 f   commonRef.obj
+ 0001:0000b6c0       _findNodeByRef             1000c6c0 f   commonRef.obj
+ 0001:0000b750       _newCommonRef              1000c750 f   commonRef.obj
+ 0001:0000b870       _createNode                1000c870 f   commonRef.obj
+ 0001:0000ba10       _newSeqNum                 1000ca10 f   commonRef.obj
+ 0001:0000ba60       _hashIn                    1000ca60 f   commonRef.obj
+ 0001:0000bab0       _hashBucket                1000cab0 f   commonRef.obj
+ 0001:0000bc30       _deleteNodeByID            1000cc30 f   commonRef.obj
+ 0001:0000bd90       _findNodeByID              1000cd90 f   commonRef.obj
+ 0001:0000bf20       _strengthenNode            1000cf20 f   commonRef.obj
+ 0001:0000c130       _weakenNode                1000d130 f   commonRef.obj
+ 0001:0000c620       _transferClass             1000d620 f   classTrack.obj
+ 0001:0000c6c0       _hashKlass                 1000d6c0 f   classTrack.obj
+ 0001:0000c6f0       _deleteTable               1000d6f0 f   classTrack.obj
+ 0001:0000da70       _get_gdata                 1000ea70 f   debugInit.obj
+ 0001:0000da90       _set_event_notification    1000ea90 f   debugInit.obj
+ 0001:0000db90       _compatible_versions       1000eb90 f   debugInit.obj
+ 0001:0000dbf0       _cbEarlyVMInit@12          1000ebf0 f   debugInit.obj
+ 0001:0000dd10       _cbEarlyVMDeath@8          1000ed10 f   debugInit.obj
+ 0001:0000de30       _disposeEnvironment        1000ee30 f   debugInit.obj
+ 0001:0000df10       _cbEarlyException@40       1000ef10 f   debugInit.obj
+ 0001:0000e3d0       _initialize                1000f3d0 f   debugInit.obj
+ 0001:0000e9f0       _startTransport            1000f9f0 f   debugInit.obj
+ 0001:0000eb40       _signalInitComplete        1000fb40 f   debugInit.obj
+ 0001:0000ece0       _parseOptions              1000fce0 f   debugInit.obj
+ 0001:0000f900       _get_tok                   10010900 f   debugInit.obj
+ 0001:0000f9a0       _printUsage                100109a0 f   debugInit.obj
+ 0001:0000f9c0       _checkAddress              100109c0 f   debugInit.obj
+ 0001:0000fa30       _add_to_options            10010a30 f   debugInit.obj
+ 0001:0000fab0       _get_boolean               10010ab0 f   debugInit.obj
+ 0001:0000fb20       _atexit_finish_logging     10010b20 f   debugInit.obj
+ 0001:0000fc30       _jniFatalError             10010c30 f   debugInit.obj
+ 0001:00010040       _lastCommand               10011040 f   debugLoop.obj
+ 0001:00010070       _resumeCommand             10011070 f   debugLoop.obj
+ 0001:000100a0       _reader@12                 100110a0 f   debugLoop.obj
+ 0001:000101d0       _enqueue                   100111d0 f   debugLoop.obj
+ 0001:000102f0       _dequeue                   100112f0 f   debugLoop.obj
+ 0001:000103a0       _notifyTransportError      100113a0 f   debugLoop.obj
+ 0001:00010420       _vprint_message            10011420 f   error_messages.obj
+ 0001:000116d0       _patternStringMatch        100126d0 f   eventFilter.obj
+ 0001:00011790       _eventInstance             10012790 f   eventFilter.obj
+ 0001:00012200       _matchBreakpoint           10013200 f   eventFilter.obj
+ 0001:000122e0       _enableEvents              100132e0 f   eventFilter.obj
+ 0001:000123c0       _setBreakpoint             100133c0 f   eventFilter.obj
+ 0001:000124d0       _findFilter                100134d0 f   eventFilter.obj
+ 0001:00012520       _setWatchpoint             10013520 f   eventFilter.obj
+ 0001:00012660       _matchWatchpoint           10013660 f   eventFilter.obj
+ 0001:000126f0       _requestThread             100136f0 f   eventFilter.obj
+ 0001:00012750       _matchThread               10013750 f   eventFilter.obj
+ 0001:000127d0       _clearFilters              100137d0 f   eventFilter.obj
+ 0001:00012980       _disableEvents             10013980 f   eventFilter.obj
+ 0001:00012a70       _clearBreakpoint           10013a70 f   eventFilter.obj
+ 0001:00012b80       _clearWatchpoint           10013b80 f   eventFilter.obj
+ 0001:00012d90       _getHandlerChain           10013d90 f   eventHandler.obj
+ 0001:00012f10       _freeHandler               10013f10 f   eventHandler.obj
+ 0001:00012f60       _deinsert                  10013f60 f   eventHandler.obj
+ 0001:00013130       _find                      10014130 f   eventHandler.obj
+ 0001:00013150       _findInChain               10014150 f   eventHandler.obj
+ 0001:00013750       _cbSingleStep@24           10014750 f   eventHandler.obj
+ 0001:00013980       _event_callback            10014980 f   eventHandler.obj
+ 0001:00013df0       _reportEvents              10014df0 f   eventHandler.obj
+ 0001:00013f70       _deferEventReport          10014f70 f   eventHandler.obj
+ 0001:00014090       _skipEventReport           10015090 f   eventHandler.obj
+ 0001:00014140       _synthesizeUnloadEvent     10015140 f   eventHandler.obj
+ 0001:000142f0       _cbBreakpoint@24           100152f0 f   eventHandler.obj
+ 0001:00014520       _cbFramePop@20             10015520 f   eventHandler.obj
+ 0001:00014750       _cbException@40            10015750 f   eventHandler.obj
+ 0001:000149a0       _cbThreadStart@12          100159a0 f   eventHandler.obj
+ 0001:00014ba0       _cbThreadEnd@12            10015ba0 f   eventHandler.obj
+ 0001:00014da0       _cbClassPrepare@16         10015da0 f   eventHandler.obj
+ 0001:00014fb0       _cbGarbageCollectionFinish@4 10015fb0 f   eventHandler.obj
+ 0001:00015030       _cbClassLoad@16            10016030 f   eventHandler.obj
+ 0001:00015240       _cbFieldAccess@36          10016240 f   eventHandler.obj
+ 0001:00015480       _cbFieldModification@48    10016480 f   eventHandler.obj
+ 0001:000156d0       _cbExceptionCatch@28       100166d0 f   eventHandler.obj
+ 0001:00015900       _cbMethodEntry@16          10016900 f   eventHandler.obj
+ 0001:00015b20       _cbMethodExit@28           10016b20 f   eventHandler.obj
+ 0001:00015d60       _cbMonitorContendedEnter@16 10016d60 f   eventHandler.obj
+ 0001:00016010       _cbMonitorContendedEntered@16 10017010 f   eventHandler.obj
+ 0001:000162c0       _cbMonitorWait@24          100172c0 f   eventHandler.obj
+ 0001:00016570       _getObjectClass            10017570 f   eventHandler.obj
+ 0001:000165e0       _cbMonitorWaited@20        100175e0 f   eventHandler.obj
+ 0001:00016890       _cbVMInit@12               10017890 f   eventHandler.obj
+ 0001:00016a90       _cbVMDeath@8               10017a90 f   eventHandler.obj
+ 0001:00016d00       _freeHandlerChain          10017d00 f   eventHandler.obj
+ 0001:00016e40       _createInternal            10017e40 f   eventHandler.obj
+ 0001:00016f30       _installHandler            10017f30 f   eventHandler.obj
+ 0001:00016fe0       _insert                    10017fe0 f   eventHandler.obj
+ 0001:00017200       _commandLoop@12            10018200 f   eventHelper.obj
+ 0001:000172b0       _completeCommand           100182b0 f   eventHelper.obj
+ 0001:00017320       _freeCommand               10018320 f   eventHelper.obj
+ 0001:00017340       _dequeueCommand            10018340 f   eventHelper.obj
+ 0001:00017490       _commandSize               10018490 f   eventHelper.obj
+ 0001:000174c0       _handleCommand             100184c0 f   eventHelper.obj
+ 0001:000175d0       _handleReportEventCompositeCommand 100185d0 f   eventHelper.obj
+ 0001:000177c0       _handleEventCommandSingle  100187c0 f   eventHelper.obj
+ 0001:000179d0       _writeSingleStepEvent      100189d0 f   eventHelper.obj
+ 0001:00017a20       _writeBreakpointEvent      10018a20 f   eventHelper.obj
+ 0001:00017a70       _writeFieldAccessEvent     10018a70 f   eventHelper.obj
+ 0001:00017b30       _writeFieldModificationEvent 10018b30 f   eventHelper.obj
+ 0001:00017c10       _writeExceptionEvent       10018c10 f   eventHelper.obj
+ 0001:00017cb0       _writeThreadEvent          10018cb0 f   eventHelper.obj
+ 0001:00017cd0       _writeMonitorEvent         10018cd0 f   eventHelper.obj
+ 0001:00017db0       _writeClassEvent           10018db0 f   eventHelper.obj
+ 0001:00017ee0       _writeVMDeathEvent         10018ee0 f   eventHelper.obj
+ 0001:00017ef0       _handleUnloadCommandSingle 10018ef0 f   eventHelper.obj
+ 0001:00017f40       _handleFrameEventCommandSingle 10018f40 f   eventHelper.obj
+ 0001:00018050       _suspendWithInvokeEnabled  10019050 f   eventHelper.obj
+ 0001:00018080       _handleReportInvokeDoneCommand 10019080 f   eventHelper.obj
+ 0001:000180b0       _handleReportVMInitCommand 100190b0 f   eventHelper.obj
+ 0001:00018190       _handleSuspendThreadCommand 10019190 f   eventHelper.obj
+ 0001:000181c0       _doBlockCommandLoop        100191c0 f   eventHelper.obj
+ 0001:00018200       _needBlockCommandLoop      10019200 f   eventHelper.obj
+ 0001:00018300       _tossEventInfoRefs         10019300 f   eventHelper.obj
+ 0001:00018540       _enqueueCommand            10019540 f   eventHelper.obj
+ 0001:000186a0       _enumForCombinedSuspendPolicy 100196a0 f   eventHelper.obj
+ 0001:00018740       _enumForVMDeath            10019740 f   eventHelper.obj
+ 0001:00018780       _enumForCopyingSingles     10019780 f   eventHelper.obj
+ 0001:000188b0       _saveEventInfoRefs         100198b0 f   eventHelper.obj
+ 0001:00019130       _readBytes                 1001a130 f   inStream.obj
+ 0001:00019ad0       _deleteRef                 1001aad0 f   inStream.obj
+ 0001:00019cf0       _fillInvokeRequest         1001acf0 f   invoker.obj
+ 0001:00019e00       _createGlobalRefs          1001ae00 f   invoker.obj
+ 0001:0001a0c0       _nextArgumentTypeTag       1001b0c0 f   invoker.obj
+ 0001:0001a170       _firstArgumentTypeTag      1001b170 f   invoker.obj
+ 0001:0001a510       _invokeConstructor         1001b510 f   invoker.obj
+ 0001:0001a5a0       _invokeStatic              1001b5a0 f   invoker.obj
+ 0001:0001aad0       _returnTypeTag             1001bad0 f   invoker.obj
+ 0001:0001ab30       _invokeVirtual             1001bb30 f   invoker.obj
+ 0001:0001b060       _invokeNonvirtual          1001c060 f   invoker.obj
+ 0001:0001bab0       _fill_location_stamp       1001cab0 f   log_messages.obj
+ 0001:0001baf0       _file_basename             1001caf0 f   log_messages.obj
+ 0001:0001bcc0       _get_time_stamp            1001ccc0 f   log_messages.obj
+ 0001:0001bd40       _standard_logging_format   1001cd40 f   log_messages.obj
+ 0001:0001bea0       _commonInit                1001cea0 f   outStream.obj
+ 0001:0001bff0       _writeBytes                1001cff0 f   outStream.obj
+ 0001:0001cac0       _outStream_send            1001dac0 f   outStream.obj
+ 0001:0001cca0       _releaseID                 1001dca0 f   outStream.obj
+ 0001:0001cd50       _handleClassPrepare        1001dd50 f   standardHandlers.obj
+ 0001:0001cdb0       _handleGarbageCollectionFinish 1001ddb0 f   standardHandlers.obj
+ 0001:0001cdf0       _handleFrameEvent          1001ddf0 f   standardHandlers.obj
+ 0001:0001ced0       _genericHandler            1001ded0 f   standardHandlers.obj
+ 0001:0001d6a0       _getFrameCount             1001e6a0 f   stepControl.obj
+ 0001:0001d780       _disableStepping           1001e780 f   stepControl.obj
+ 0001:0001d840       _getFrameLocation          1001e840 f   stepControl.obj
+ 0001:0001d8f0       _findLineNumber            1001e8f0 f   stepControl.obj
+ 0001:0001d980       _hasLineNumbers            1001e980 f   stepControl.obj
+ 0001:0001d9c0       _getLineNumberTable        1001e9c0 f   stepControl.obj
+ 0001:0001da70       _handleMethodEnterEvent    1001ea70 f   stepControl.obj
+ 0001:0001dc30       _enableStepping            1001ec30 f   stepControl.obj
+ 0001:0001dcf0       _completeStep              1001ecf0 f   stepControl.obj
+ 0001:0001dde0       _initState                 1001ede0 f   stepControl.obj
+ 0001:0001e3a0       _initEvents                1001f3a0 f   stepControl.obj
+ 0001:0001e520       _handleFramePopEvent       1001f520 f   stepControl.obj
+ 0001:0001e790       _handleExceptionCatchEvent 1001f790 f   stepControl.obj
+ 0001:0001e9b0       _clearStep                 1001f9b0 f   stepControl.obj
+ 0001:0001ee10       _handleAppResumeBreakpoint 1001fe10 f   threadControl.obj
+ 0001:0001ee80       _getResumee                1001fe80 f   threadControl.obj
+ 0001:0001ef10       _blockOnDebuggerSuspend    1001ff10 f   threadControl.obj
+ 0001:0001ef60       _findThread                1001ff60 f   threadControl.obj
+ 0001:0001f020       _setThreadLocalStorage     10020020 f   threadControl.obj
+ 0001:0001f100       _getThreadLocalStorage     10020100 f   threadControl.obj
+ 0001:0001f1f0       _nonTlsSearch              100201f0 f   threadControl.obj
+ 0001:0001f240       _trackAppResume            10020240 f   threadControl.obj
+ 0001:0001f3c0       _getStackDepth             100203c0 f   threadControl.obj
+ 0001:0001f4a0       _handleAppResumeCompletion 100204a0 f   threadControl.obj
+ 0001:0001f530       _notifyAppResumeComplete   10020530 f   threadControl.obj
+ 0001:0001f5a0       _pendingAppResume          100205a0 f   threadControl.obj
+ 0001:0001f690       _threadState               10020690 f   threadControl.obj
+ 0001:0001f8d0       _insertThread              100208d0 f   threadControl.obj
+ 0001:0001fb60       _addNode                   10020b60 f   threadControl.obj
+ 0001:0001fc20       _preSuspend                10020c20 f   threadControl.obj
+ 0001:0001fc80       _getLocks                  10020c80 f   threadControl.obj
+ 0001:0001fcb0       _releaseLocks              10020cb0 f   threadControl.obj
+ 0001:0001fce0       _postSuspend               10020ce0 f   threadControl.obj
+ 0001:0001fcf0       _commonSuspend             10020cf0 f   threadControl.obj
+ 0001:0001fd50       _deferredSuspendThreadByNode 10020d50 f   threadControl.obj
+ 0001:0001fdc0       _commonSuspendByNode       10020dc0 f   threadControl.obj
+ 0001:0001fe80       _suspendThreadByNode       10020e80 f   threadControl.obj
+ 0001:0001ffb0       _removeResumed             10020fb0 f   threadControl.obj
+ 0001:00020000       _removeThread              10021000 f   threadControl.obj
+ 0001:00020050       _removeNode                10021050 f   threadControl.obj
+ 0001:000200d0       _clearThread               100210d0 f   threadControl.obj
+ 0001:00020160       _commonResume              10021160 f   threadControl.obj
+ 0001:000201a0       _resumeThreadByNode        100211a0 f   threadControl.obj
+ 0001:000204e0       _enumerateOverThreadList   100214e0 f   threadControl.obj
+ 0001:00020530       _commonSuspendList         10021530 f   threadControl.obj
+ 0001:00020910       _newArray                  10021910 f   threadControl.obj
+ 0001:00020950       _deleteArray               10021950 f   threadControl.obj
+ 0001:00020970       _suspendAllHelper          10021970 f   threadControl.obj
+ 0001:000209e0       _contains                  100219e0 f   threadControl.obj
+ 0001:00020b10       _commonResumeList          10021b10 f   threadControl.obj
+ 0001:00020e40       _resumeCopyHelper          10021e40 f   threadControl.obj
+ 0001:00020f00       _resumeCountHelper         10021f00 f   threadControl.obj
+ 0001:00020f60       _resumeHelper              10021f60 f   threadControl.obj
+ 0001:000210f0       _threadControl_removeDebugThread 100220f0 f   threadControl.obj
+ 0001:00021390       _initLocks                 10022390 f   threadControl.obj
+ 0001:000213d0       _setPopFrameThread         100223d0 f   threadControl.obj
+ 0001:000214a0       _popOneFrame               100224a0 f   threadControl.obj
+ 0001:000216b0       _getPopFrameEvent          100226b0 f   threadControl.obj
+ 0001:00021780       _setPopFrameEvent          10022780 f   threadControl.obj
+ 0001:00021870       _setPopFrameProceed        10022870 f   threadControl.obj
+ 0001:00021b10       _moveNode                  10022b10 f   threadControl.obj
+ 0001:00021b80       _processDeferredEventModes 10022b80 f   threadControl.obj
+ 0001:00021cb0       _removeEventMode           10022cb0 f   threadControl.obj
+ 0001:00021cf0       _threadSetEventNotificationMode 10022cf0 f   threadControl.obj
+ 0001:00021d80       _checkForPopFrameEvents    10022d80 f   threadControl.obj
+ 0001:00021e90       _getPopFrameThread         10022e90 f   threadControl.obj
+ 0001:00021ef0       _popFrameCompleteEvent     10022ef0 f   threadControl.obj
+ 0001:00021f80       _getPopFrameProceed        10022f80 f   threadControl.obj
+ 0001:000221a0       _doPendingTasks            100231a0 f   threadControl.obj
+ 0001:00022760       _detachHelper              10023760 f   threadControl.obj
+ 0001:00022850       _freeDeferredEventModes    10023850 f   threadControl.obj
+ 0001:000228b0       _resetHelper               100238b0 f   threadControl.obj
+ 0001:00022b30       _addDeferredEventMode      10023b30 f   threadControl.obj
+ 0001:00022bb0       _insertEventMode           10023bb0 f   threadControl.obj
+ 0001:00022d80       _setTransportProperty      10023d80 f   transport.obj
+ 0001:000231c0       _printLastError            100241c0 f   transport.obj
+ 0001:00023380       _loadTransport             10024380 f   transport.obj
+ 0001:00023720       _findTransportOnLoad       10024720 f   transport.obj
+ 0001:00023760       _loadTransportLibrary      10024760 f   transport.obj
+ 0001:00023820       _acceptThread@12           10024820 f   transport.obj
+ 0001:00023980       _connectionInitiated       10024980 f   transport.obj
+ 0001:00023a50       _attachThread@12           10024a50 f   transport.obj
+ 0001:00023ad0       _launch                    10024ad0 f   transport.obj
+ 0001:00024900       _findClass                 10025900 f   util.obj
+ 0001:00024bd0       _getMethod                 10025bd0 f   util.obj
+ 0001:00024fa0       _getStaticMethod           10025fa0 f   util.obj
+ 0001:00025830       _writeFieldValue           10026830 f   util.obj
+ 0001:00025d10       _writeStaticFieldValue     10026d10 f   util.obj
+ 0001:00026f70       _jvmtiVersion              10027f70 f   util.obj
+ 0001:00027260       _handleInterrupt           10028260 f   util.obj
+ 0001:000272a0       _ignore_vm_death           100282a0 f   util.obj
+ 0001:00027b80       _isArrayClass              10028b80 f   util.obj
+ 0001:00027c60       _isInterface               10028c60 f   util.obj
+ 0001:00028390       _is_a_nested_class         10029390 f   util.obj
+ 0001:00028ab0       _getPropertyUTF8           10029ab0 f   util.obj
+ 0001:00028cd0       _getPropertyValue          10029cd0 f   util.obj
+ 0001:0002a3d0       _getSpecialJvmti           1002b3d0 f   util.obj
+ 0001:0002a4c0       _cbObjectTagInstance@48    1002b4c0 f   util.obj
+ 0001:0002a830       _cbObjectCounterFromRef@48 1002b830 f   util.obj
+ 0001:0002a990       _cbObjectCounter@28        1002b990 f   util.obj
+ 0001:0002acc0       _cbObjectTagReferrer@48    1002bcc0 f   util.obj
+ 0001:0002b0d0       _split_path                1002c0d0 f   linker_md.obj

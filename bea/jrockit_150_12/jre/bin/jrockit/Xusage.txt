@@ -1,0 +1,92 @@
+    -Xbootclasspath:<directories and zip/jar files separated by :>
+              set search path for bootstrap classes and resources
+    -Xbootclasspath/a:<directories and zip/jar files separated by :> 
+              append to end of bootstrap class path
+    -Xbootclasspath/p:<directories and zip/jar files separated by :>
+              prepend in front of bootstrap class path
+    -Xgcprio:[throughput|pausetime|deterministic]
+	      sets prio for the gc-system
+		  throughput	optimizes the gc-behavior to achieve optimal
+                                throughput (initially starts off with 
+                                single-spaced parallel GC mode but may switch
+                                to other GC modes dynamically during runtime)
+		  pausetime	optimizes the gc-behavior to achieve minimal
+                                pause times (initially starts off with 
+                                single-spaced concurrent GC mode but may switch
+                                to other GC modes dynamically during runtime)
+		  deterministic	optimizes the gc-behavior to ensure extremely
+                                short pause times and limit the total number of
+                                those pauses within a prescribed window (this
+                                feature requires a valid license)
+    -Xgc:[singlecon|gencon|parallel]
+              used to set a static garbage collector
+              will override the -Xgcprio option
+                  singlecon     use the single-spaced concurrent garbage
+                                collector algorithm (default in client mode)
+                  gencon        use the generational concurrent 
+                                garbage collector algorithm
+                  parallel      use the single-spaced parallel 
+                                garbage collector algorithm
+                                (default in server mode)
+    -Xms<size>[g|G|m|M|k|K]
+              sets the initial Java heap size (ms)
+                  server mode:  the default value is 25% of the amount 
+				of free physical memory in the system 
+				up to 64 MB with a minimum of 8 MB (default)
+                  client mode:  the default value is 25% of the amount 
+				of free physical memory in the system 
+				up to 16 MB with a minimum of 8 MB
+    -Xmx<size>[g|G|m|M|k|K]
+	      sets the maximum Java heap size (mx)
+                  server mode:  the default value is the smallest of 75% of
+                       		physical memory and 1536 MB (default)
+                  client mode: 	the default value is the smallest of 75% of
+				physical memory and 64 MB              
+    -Xns<size>[g|G|m|M|k|K]
+	      sets the initial Java nursery size for generational collectors
+                  server mode:  the default value is 10 MB per (default)
+                  client mode:  the default value is 2 MB            
+    -Xss<size>[g|G|m|M|k|K]
+              set initial stack size
+    -Xpausetarget=<optimal_pause_time>[ms|s]
+              JRockit will optimize the pause time to the given target,
+              uses -Xgcprio:pausetime
+                  ms            pause time specified in milliseconds (default)
+                  s             pause time specified in seconds
+    -Xnoclassgc
+              disable class garbage collection
+    -Xgcpause 
+              print pause times caused by the garbage collector
+    -Xgcreport   
+              write extensive memory report at end of run
+    -Xdebug
+              enables debugging support in the VM
+    -Xrun<library>	    
+              loads and runs a library
+    -Xjvmpi:[<argument1>=<value1>[,<argumentN>=<valueN>]]
+	      enable/disable groups of jvmpi events when running jvmpi
+	          entryexit     (default on)
+		  allocs        (default on)
+		  monitors      (default on)
+    -Xmanagement
+              enable the management agent
+    -Xnoopt   
+              do not optimize code
+    -Xstrictfp
+              always use strict floating point calculations
+    -Xverify  
+              do full bytecode verification
+    -Xnohup or -Xrs
+              JRockit will not process CTRL_LOGOFF_EVENT or SIGHUP events
+    -Xverbose[:memory|load|jni|cpuinfo|codegen|opt]
+              enable verbose output
+    -Xverboselog:<file>
+              log verbose output to a file 
+    -Xverbosetimestamp
+              adds a timestamp to the verbose printout
+    -Xverbosedecorations:<decorations>
+              adds <decorations> to the verbose printout
+    -Xcheck:jni       
+	      perform additional checks for JNI functions
+For more information on these options refer to the documentation.
+The -X options are non-standard and subject to change without notice.

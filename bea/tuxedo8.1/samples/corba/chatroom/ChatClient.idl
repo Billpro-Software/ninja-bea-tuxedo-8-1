@@ -1,0 +1,9 @@
+//	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+module ChatClient {
+
+    interface Listener {
+        oneway void post( in string from,
+                          in string output_line );
+    };
+
+};

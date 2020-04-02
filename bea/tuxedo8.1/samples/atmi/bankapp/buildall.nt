@@ -1,0 +1,29 @@
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#	Copyright (c) 1995 Novell, Inc.	
+#	  All Rights Reserved 	 
+
+#	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF 
+#	Novell, Inc.  
+#	The copyright notice above does not evidence any  
+#	actual or intended publication of such source code.
+
+#Copyright (c) 1995 Novell, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/bankapp/buildall.nt	$Revision: 1.4 $"
+
+all: driver.exe bankappd.exe bankappn.exe
+
+driver.exe:
+	cd nt\driver
+	nmake /f driver.mak "CFG=driver - Win32 Release"
+	cd ..\..
+bankappd.exe:
+	cd nt\bankappd
+	nmake /f bankappd.mak "CFG=bankappd - Win32 Release"
+	cd ..\..
+bankappn.exe: bankflds 
+	$(TUXDIR)\bin\mkfldhdr$(FML32) bankflds
+	cd nt\client
+	nmake /f nt.mak 
+	cd ..\..
+

@@ -1,0 +1,1623 @@
+ fontmanager
+
+ Timestamp is 4cfade0c (Sat Dec 04 16:34:20 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00060798H .text                   CODE
+ 0002:00000000 0000018cH .idata$5                DATA
+ 0002:00000190 000149d8H .rdata                  DATA
+ 0002:00014b68 00000077H .rdata$debug            DATA
+ 0002:00014be0 00000004H .rdata$sxdata           DATA
+ 0002:00014be4 00000004H .rtc$IAA                DATA
+ 0002:00014be8 00000004H .rtc$IZZ                DATA
+ 0002:00014bec 00000004H .rtc$TAA                DATA
+ 0002:00014bf0 00000004H .rtc$TZZ                DATA
+ 0002:00014bf4 0000008cH .idata$2                DATA
+ 0002:00014c80 00000014H .idata$3                DATA
+ 0002:00014c94 0000018cH .idata$4                DATA
+ 0002:00014e20 00000626H .idata$6                DATA
+ 0002:00015450 0000092cH .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00006c54H .data                   DATA
+ 0003:00006c80 00000bb0H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000370H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0001:00000000       _ag_Abs16                  10001000 f   autogrid.obj
+ 0001:00000020       _ag_Height                 10001020 f   autogrid.obj
+ 0001:000003c0       _ag_LINK                   100013c0 f   autogrid.obj
+ 0001:000004b0       _ag_ADJUST                 100014b0 f   autogrid.obj
+ 0001:000006e0       _ag_ADJUSTSPACING          100016e0 f   autogrid.obj
+ 0001:00000850       _ag_INIT_STORE             10001850 f   autogrid.obj
+ 0001:00000890       _AG_CHECK_AND_TWEAK        10001890 f   autogrid.obj
+ 0001:00000a10       _ag_ASSURE_AT_LEAST_EQUAL  10001a10 f   autogrid.obj
+ 0001:00000a70       _ag_ASSURE_AT_MOST_EQUAL   10001a70 f   autogrid.obj
+ 0001:00000ad0       _ag_ASSURE_AT_MOST_EQUAL2  10001ad0 f   autogrid.obj
+ 0001:00000b60       _ag_ModifyHeightGoal       10001b60 f   autogrid.obj
+ 0001:00000bd0       _ag_ModifyWeightGoal       10001bd0 f   autogrid.obj
+ 0001:00000c20       _ag_SVTCA_X                10001c20 f   autogrid.obj
+ 0001:00000c30       _ag_SVTCA_Y                10001c30 f   autogrid.obj
+ 0001:00000c40       _ag_MDRPX                  10001c40 f   autogrid.obj
+ 0001:00000d60       _ag_MDRPY                  10001d60 f   autogrid.obj
+ 0001:00000ea0       _ag_MDAPX                  10001ea0 f   autogrid.obj
+ 0001:00000ef0       _ag_MDAPY                  10001ef0 f   autogrid.obj
+ 0001:00000f40       _ag_MIAPX                  10001f40 f   autogrid.obj
+ 0001:00000fb0       _ag_MIAPY                  10001fb0 f   autogrid.obj
+ 0001:00001020       _ag_IPPointX               10002020 f   autogrid.obj
+ 0001:000010b0       _ag_IPPointY               100020b0 f   autogrid.obj
+ 0001:00001140       _ag_XSmooth                10002140 f   autogrid.obj
+ 0001:000013a0       _ag_YSmooth                100023a0 f   autogrid.obj
+ 0001:00001600       _ag_MoveDirectRelativePointInPositiveDirection 10002600 f   autogrid.obj
+ 0001:00001650       _ag_MoveDirectRelativePointInNegativeDirection 10002650 f   autogrid.obj
+ 0001:000016a0       _ag_BiDirectionalLink      100026a0 f   autogrid.obj
+ 0001:000017e0       _ag_BiDirectionalLinkWithCvt 100027e0 f   autogrid.obj
+ 0001:00001810       _ag_GetCvtNumber           10002810 f   autogrid.obj
+ 0001:00001a20       _ag_GetXMaxCvtVal          10002a20 f   autogrid.obj
+ 0001:00001a80       _ag_GetYMaxCvtVal          10002a80 f   autogrid.obj
+ 0001:00001ae0       _ag_HintInit               10002ae0 f   autogrid.obj
+ 0001:00001df0       _ag_GetHintMaxInfo         10002df0 f   autogrid.obj
+ 0001:00001e90       _ag_HintEnd                10002e90 f   autogrid.obj
+ 0001:00001f80       _ag_SetHintInfo            10002f80 f   autogrid.obj
+ 0001:00002060       _ag_SetScale               10003060 f   autogrid.obj
+ 0001:00002650       _ag_AutoFindStems          10003650 f   autogrid.obj
+ 0001:00004da0       _ag_AutoGridOutline        10005da0 f   autogrid.obj
+ 0001:00005040       _ReadGHints                10006040 f   ghints.obj
+ 0001:00005140       _ComputeGlobalHints        10006140 f   ghints.obj
+ 0001:00005e70       _ReadDeltaXYValue          10006e70 f   glyph.obj
+ 0001:00006a00       _TEST_T2K_GLYPH            10007a00 f   glyph.obj
+ 0001:00006a10       _glyph_CloseContour        10007a10 f   glyph.obj
+ 0001:00006c80       _glyph_AddDummyStemFrame   10007c80 f   glyph.obj
+ 0001:00006f50       _glyph_AddHStem            10007f50 f   glyph.obj
+ 0001:00007260       _glyph_AddVStem            10008260 f   glyph.obj
+ 0001:00007550       _glyph_markDotsection      10008550 f   glyph.obj
+ 0001:00007570       _glyph_AddPoint            10008570 f   glyph.obj
+ 0001:00007700       _glyph_StartLine           10008700 f   glyph.obj
+ 0001:00007760       _New_EmptyGlyph            10008760 f   glyph.obj
+ 0001:00007900       _New_GlyphClassT2K         10008900 f   glyph.obj
+ 0001:00007f60       _FlipContourDirectionShort 10008f60 f   glyph.obj
+ 0001:000080e0       _ReverseContourDirectionDirect 100090e0 f   glyph.obj
+ 0001:00008220       _ReverseContourDirection   10009220 f   glyph.obj
+ 0001:00008400       _Add_GlyphClass            10009400 f   glyph.obj
+ 0001:00008c50       _Delete_GlyphClass         10009c50 f   glyph.obj
+ 0001:00008dc0       _ag_DoGlyphProgram97       10009dc0 f   hstrat97.obj
+ 0001:0000abd0       _tsi_NewScanConv           1000bbd0 f   t2ksc.obj
+ 0001:0000c740       _MakeGreyscaleBits         1000d740 f   t2ksc.obj
+ 0001:0000cd50       _tsi_DeleteScanConv        1000dd50 f   t2ksc.obj
+ 0001:0000cda0       _MakeBWBits                1000dda0 f   t2ksc.obj
+ 0001:0000cfd0       _tsi_SHAPET_BOLD_METRICS   1000dfd0 f   shapet.obj
+ 0001:0000d0a0       _tsi_SHAPET_BOLD_GLYPH_Hinted 1000e0a0 f   shapet.obj
+ 0001:0000db70       _tsi_SHAPET_Italic_GLYPH_Hinted 1000eb70 f   shapet.obj
+ 0001:0000dc80       _tsi_SHAPET_BoldItalic_GLYPH_Hinted 1000ec80 f   shapet.obj
+ 0001:0000dd40       _FindContourOrientation    1000ed40 f   shapet.obj
+ 0001:0000e140       _FindContourOrientationShort 1000f140 f   shapet.obj
+ 0001:0000e2d0       _AccumulateGlyphContours   1000f2d0 f   shapet.obj
+ 0001:0000e450       _ExtractPureT1FromPCType1  1000f450 f   t1.obj
+ 0001:0000e5d0       _hashUnicodeValue          1000f5d0 f   t1.obj
+ 0001:0000e5f0       _tsi_T1AddUnicodeToGIMapping 1000f5f0 f   t1.obj
+ 0001:0000e8f0       _tsi_T1GetGlyphIndex       1000f8f0 f   t1.obj
+ 0001:0000e9c0       _tsi_T1GetGlyphByIndex     1000f9c0 f   t1.obj
+ 0001:00010110       _tsi_T1GetGlyphByCharCode  10011110 f   t1.obj
+ 0001:00010150       _tsi_T1GetParam            10011150 f   t1.obj
+ 0001:00010370       _tsi_T1GetFixedParam       10011370 f   t1.obj
+ 0001:00010590       _tsi_NewT1Class            10011590 f   t1.obj
+ 0001:000119d0       _tsi_DeAllocChainedList    100129d0 f   t1.obj
+ 0001:00011a00       _tsi_DeleteT1Class         10012a00 f   t1.obj
+ 0001:00011b30       _tsi_T2GetGlyphIndex       10012b30 f   t1.obj
+ 0001:00011be0       _tsi_NewCFFClass           10012be0 f   t1.obj
+ 0001:00015cd0       _tsi_DeleteCFFClass        10016cd0 f   t1.obj
+ 0001:00015dd0       _tsi_T2GetGlyphByIndex     10016dd0 f   t1.obj
+ 0001:00019ae0       _tsi_T2GetGlyphByCharCode  1001aae0 f   t1.obj
+ 0001:00019b20       _get_recommendedStemLength 1001ab20 f   t1hint.obj
+ 0001:00019b60       _Type1HintGlyph            1001ab60 f   t1hint.obj
+ 0001:0001b260       _NewT2K                    1001c260 f   t2k.obj
+ 0001:0001b4a0       _T2K_TransformXFunits      1001c4a0 f   t2k.obj
+ 0001:0001b560       _T2K_TransformYFunits      1001c560 f   t2k.obj
+ 0001:0001b620       _T2K_NewTransformation     1001c620 f   t2k.obj
+ 0001:0001c3b0       _T2K_PurgeMemory           1001d3b0 f   t2k.obj
+ 0001:0001c4e0       _ExtractUnitVectors        1001d4e0 f   t2k.obj
+ 0001:0001c5d0       _ApplyPostStyle            1001d5d0 f   t2k.obj
+ 0001:0001c6d0       _T2K_GetNumAxes            1001d6d0 f   t2k.obj
+ 0001:0001c740       _T2K_GetAxisGranularity    1001d740 f   t2k.obj
+ 0001:0001c7b0       _T2K_GetCoordinate         1001d7b0 f   t2k.obj
+ 0001:0001c820       _T2K_SetCoordinate         1001d820 f   t2k.obj
+ 0001:0001c890       _T2K_GlyphSbitsExists      1001d890 f   t2k.obj
+ 0001:0001c9c0       _T2K_RenderGlyph           1001d9c0 f   t2k.obj
+ 0001:000202e0       _DeleteT2K                 100212e0 f   t2k.obj
+ 0001:00020400       _T2K_GetGlyphIndex         10021400 f   t2k.obj
+ 0001:00020430       _T2K_MeasureTextInX        10021430 f   t2k.obj
+ 0001:00020620       _T2K_GetIdealLineWidth     10021620 f   t2k.obj
+ 0001:00020700       _T2K_LayoutString          10021700 f   t2k.obj
+ 0001:00020ac0       _PreLoadT2KInputStream     10021ac0 f   t2kstrm.obj
+ 0001:00020b70       _PrimeT2KInputStream       10021b70 f   t2kstrm.obj
+ 0001:00020bd0       _ReadInt32                 10021bd0 f   t2kstrm.obj
+ 0001:00020d10       _ReadInt16                 10021d10 f   t2kstrm.obj
+ 0001:00020e20       _ReadSegment               10021e20 f   t2kstrm.obj
+ 0001:00020ed0       _SizeInStream              10021ed0 f   t2kstrm.obj
+ 0001:00020ef0       _GetEntireStreamIntoMemory 10021ef0 f   t2kstrm.obj
+ 0001:00020f50       _New_InputStream           10021f50 f   t2kstrm.obj
+ 0001:00021040       _New_InputStream2          10022040 f   t2kstrm.obj
+ 0001:00021140       _New_InputStream3          10022140 f   t2kstrm.obj
+ 0001:00021230       _New_NonRamInputStream     10022230 f   t2kstrm.obj
+ 0001:00021320       _Rewind_InputStream        10022320 f   t2kstrm.obj
+ 0001:00021370       _Seek_InputStream          10022370 f   t2kstrm.obj
+ 0001:000213c0       _Tell_InputStream          100223c0 f   t2kstrm.obj
+ 0001:000213e0       _Delete_InputStream        100223e0 f   t2kstrm.obj
+ 0001:00021470       _ReadUnsignedNumber        10022470 f   t2kstrm.obj
+ 0001:000215c0       _New_hmtxEmptyClass        100225c0 f   truetype.obj
+ 0001:00021650       _Delete_hmtxClass          10022650 f   truetype.obj
+ 0001:000216a0       _GetTableDirEntry_sfntClass 100226a0 f   truetype.obj
+ 0001:00021700       _GetStreamForTable         10022700 f   truetype.obj
+ 0001:00021760       _GetNumGlyphs_sfntClass    10022760 f   truetype.obj
+ 0001:000217f0       _GetGlyphByIndex           100227f0 f   truetype.obj
+ 0001:00022a70       _GetSfntClassGlyphIndex    10023a70 f   truetype.obj
+ 0001:00023320       _IsFigure                  10024320 f   truetype.obj
+ 0001:00023420       _GetGlyphByCharCode        10024420 f   truetype.obj
+ 0001:000234c0       _t2k_SetHmtx               100244c0 f   truetype.obj
+ 0001:000237a0       _t2k_SetStyling            100247a0 f   truetype.obj
+ 0001:00023840       _New_sfntClassLogical      10024840 f   truetype.obj
+ 0001:00024d80       _GetUPEM                   10025d80 f   truetype.obj
+ 0001:00024e00       _GetMaxPoints              10025e00 f   truetype.obj
+ 0001:00024eb0       _GetFontWideOutlineMetrics 10025eb0 f   truetype.obj
+ 0001:00025230       _Purge_cmapMemory          10026230 f   truetype.obj
+ 0001:000252e0       _Delete_sfntClass          100262e0 f   truetype.obj
+ 0001:00025460       _tsi_Error                 10026460 f   tsimem.obj
+ 0001:00025480       _tsi_NewMemhandler         10026480 f   tsimem.obj
+ 0001:000255a0       _tsi_DeleteMemhandler      100265a0 f   tsimem.obj
+ 0001:00025610       _tsi_EmergencyShutDown     10026610 f   tsimem.obj
+ 0001:00025690       _tsi_AllocArray            10026690 f   tsimem.obj
+ 0001:000256e0       _tsi_ReAllocArray          100266e0 f   tsimem.obj
+ 0001:00025740       _tsi_AllocMem              10026740 f   tsimem.obj
+ 0001:00025880       _tsi_ReAllocMem            10026880 f   tsimem.obj
+ 0001:00025a30       _tsi_DeAllocMem            10026a30 f   tsimem.obj
+ 0001:00025b80       _ReadFileIntoMemory        10026b80 f   util.obj
+ 0001:00025d10       _util_SortShortArray       10026d10 f   util.obj
+ 0001:00025dc0       _util_FixMul               10026dc0 f   util.obj
+ 0001:00025ea0       _util_FixDiv               10026ea0 f   util.obj
+ 0001:00025f60       _util_FixSin               10026f60 f   util.obj
+ 0001:00026040       _util_EuclidianDistance    10027040 f   util.obj
+ 0001:00026190       _New_blocClass             10027190 f   t2ksbit.obj
+ 0001:00026a90       _Delete_blocClass          10027a90 f   t2ksbit.obj
+ 0001:00026b40       _New_ebscClass             10027b40 f   t2ksbit.obj
+ 0001:000272a0       _Delete_ebscClass          100282a0 f   t2ksbit.obj
+ 0001:000272e0       _GetFontWideSbitMetrics    100282e0 f   t2ksbit.obj
+ 0001:00027890       _FindGlyph_blocClass       10028890 f   t2ksbit.obj
+ 0001:000284e0       _ExtractBitMap_blocClass   100294e0 f   t2ksbit.obj
+ 0001:0002a270       _MultiplyDivide            1002b270 f   FixMulDiv.obj
+ 0001:0002a550       _MultiplyFract             1002b550 f   FixMulDiv.obj
+ 0001:0002a590       _fnt_SVTCA_0               1002b590 f   Fnt.obj
+ 0001:0002a5f0       _fnt_SVTCA_1               1002b5f0 f   Fnt.obj
+ 0001:0002a650       _fnt_SPVTCA                1002b650 f   Fnt.obj
+ 0001:0002a6e0       _fnt_SFVTCA                1002b6e0 f   Fnt.obj
+ 0001:0002a750       _fnt_SPVTL                 1002b750 f   Fnt.obj
+ 0001:0002a9d0       _fnt_SFVTL                 1002b9d0 f   Fnt.obj
+ 0001:0002ac30       _fnt_SPVFS                 1002bc30 f   Fnt.obj
+ 0001:0002ad10       _fnt_SFVFS                 1002bd10 f   Fnt.obj
+ 0001:0002add0       _fnt_GPV                   1002bdd0 f   Fnt.obj
+ 0001:0002ae80       _fnt_GFV                   1002be80 f   Fnt.obj
+ 0001:0002af30       _fnt_SFVTPV                1002bf30 f   Fnt.obj
+ 0001:0002af60       _fnt_SMD                   1002bf60 f   Fnt.obj
+ 0001:0002afc0       _fnt_SCVTCI                1002bfc0 f   Fnt.obj
+ 0001:0002b020       _fnt_SSWCI                 1002c020 f   Fnt.obj
+ 0001:0002b080       _fnt_SSW                   1002c080 f   Fnt.obj
+ 0001:0002b110       _fnt_SRP0                  1002c110 f   Fnt.obj
+ 0001:0002b170       _fnt_SRP1                  1002c170 f   Fnt.obj
+ 0001:0002b1d0       _fnt_SRP2                  1002c1d0 f   Fnt.obj
+ 0001:0002b230       _fnt_SLOOP                 1002c230 f   Fnt.obj
+ 0001:0002b290       _fnt_POP                   1002c290 f   Fnt.obj
+ 0001:0002b2e0       _fnt_SetElementPtr         1002c2e0 f   Fnt.obj
+ 0001:0002b3d0       _fnt_SetRoundState         1002c3d0 f   Fnt.obj
+ 0001:0002b4e0       _fnt_DUP                   1002c4e0 f   Fnt.obj
+ 0001:0002b580       _fnt_CLEAR                 1002c580 f   Fnt.obj
+ 0001:0002b5a0       _fnt_SWAP                  1002c5a0 f   Fnt.obj
+ 0001:0002b6a0       _fnt_DEPTH                 1002c6a0 f   Fnt.obj
+ 0001:0002b710       _fnt_CINDEX                1002c710 f   Fnt.obj
+ 0001:0002b7d0       _fnt_MINDEX                1002c7d0 f   Fnt.obj
+ 0001:0002b920       _fnt_ROLL                  1002c920 f   Fnt.obj
+ 0001:0002b9c0       _fnt_MDAP                  1002c9c0 f   Fnt.obj
+ 0001:0002bb40       _fnt_MIAP                  1002cb40 f   Fnt.obj
+ 0001:0002bde0       _fnt_IUP                   1002cde0 f   Fnt.obj
+ 0001:0002c2c0       _fnt_SHP                   1002d2c0 f   Fnt.obj
+ 0001:0002c660       _fnt_SHC                   1002d660 f   Fnt.obj
+ 0001:0002c940       _fnt_SHZ                   1002d940 f   Fnt.obj
+ 0001:0002cd40       _fnt_SHPIX                 1002dd40 f   Fnt.obj
+ 0001:0002ce00       _fnt_IP                    1002de00 f   Fnt.obj
+ 0001:0002d2a0       _fnt_MSIRP                 1002e2a0 f   Fnt.obj
+ 0001:0002d580       _fnt_ALIGNRP               1002e580 f   Fnt.obj
+ 0001:0002d7a0       _fnt_ALIGNPTS              1002e7a0 f   Fnt.obj
+ 0001:0002d9f0       _fnt_SCANCTRL              1002e9f0 f   Fnt.obj
+ 0001:0002da70       _fnt_SCANTYPE              1002ea70 f   Fnt.obj
+ 0001:0002db30       _fnt_INSTCTRL              1002eb30 f   Fnt.obj
+ 0001:0002dc40       _fnt_PUSHB                 1002ec40 f   Fnt.obj
+ 0001:0002dd50       _fnt_PUSHB0                1002ed50 f   Fnt.obj
+ 0001:0002de10       _fnt_NPUSHB                1002ee10 f   Fnt.obj
+ 0001:0002de70       _fnt_PUSHW                 1002ee70 f   Fnt.obj
+ 0001:0002dfd0       _fnt_PUSHW0                1002efd0 f   Fnt.obj
+ 0001:0002e0d0       _fnt_NPUSHW                1002f0d0 f   Fnt.obj
+ 0001:0002e110       _fnt_WS                    1002f110 f   Fnt.obj
+ 0001:0002e1f0       _fnt_RS                    1002f1f0 f   Fnt.obj
+ 0001:0002e2c0       _fnt_WCVTP                 1002f2c0 f   Fnt.obj
+ 0001:0002e3f0       _fnt_WCVTF                 1002f3f0 f   Fnt.obj
+ 0001:0002e4e0       _fnt_RCVT                  1002f4e0 f   Fnt.obj
+ 0001:0002e5b0       _fnt_GC                    1002f5b0 f   Fnt.obj
+ 0001:0002e740       _fnt_SCFS                  1002f740 f   Fnt.obj
+ 0001:0002e900       _fnt_MD                    1002f900 f   Fnt.obj
+ 0001:0002ec10       _fnt_MPPEM                 1002fc10 f   Fnt.obj
+ 0001:0002ed10       _fnt_GETINFO               1002fd10 f   Fnt.obj
+ 0001:0002ee50       _fnt_GETVARIATION          1002fe50 f   Fnt.obj
+ 0001:0002ef80       _fnt_GETDATA               1002ff80 f   Fnt.obj
+ 0001:0002f120       _fnt_FLIPON                10030120 f   Fnt.obj
+ 0001:0002f140       _fnt_FLIPOFF               10030140 f   Fnt.obj
+ 0001:0002f160       _fnt_BinaryOperand         10030160 f   Fnt.obj
+ 0001:0002f680       _fnt_UnaryOperand          10030680 f   Fnt.obj
+ 0001:0002f8d0       _fnt_IF                    100308d0 f   Fnt.obj
+ 0001:0002f9e0       _fnt_ELSE                  100309e0 f   Fnt.obj
+ 0001:0002fa80       _fnt_EIF                   10030a80 f   Fnt.obj
+ 0001:0002fa90       _fnt_JMPR                  10030a90 f   Fnt.obj
+ 0001:0002fb20       _fnt_JROT                  10030b20 f   Fnt.obj
+ 0001:0002fbf0       _fnt_JROF                  10030bf0 f   Fnt.obj
+ 0001:0002fcc0       _fnt_ROUND                 10030cc0 f   Fnt.obj
+ 0001:0002fda0       _fnt_NROUND                10030da0 f   Fnt.obj
+ 0001:0002fe70       _fnt_MDRP                  10030e70 f   Fnt.obj
+ 0001:00030310       _fnt_MIRP                  10031310 f   Fnt.obj
+ 0001:000307b0       _fnt_CALL                  100317b0 f   Fnt.obj
+ 0001:000308c0       _fnt_FDEF                  100318c0 f   Fnt.obj
+ 0001:00030a10       _fnt_LOOPCALL              10031a10 f   Fnt.obj
+ 0001:00030b90       _fnt_DELTAP1               10031b90 f   Fnt.obj
+ 0001:00030d60       _fnt_DELTAP2               10031d60 f   Fnt.obj
+ 0001:00030da0       _fnt_DELTAP3               10031da0 f   Fnt.obj
+ 0001:00030de0       _fnt_DELTAC1               10031de0 f   Fnt.obj
+ 0001:00030e20       _fnt_DELTAC2               10031e20 f   Fnt.obj
+ 0001:00030e60       _fnt_DELTAC3               10031e60 f   Fnt.obj
+ 0001:00030ea0       _fnt_DefaultJumpTable      10031ea0 f   FntInit.obj
+ 0001:00031a20       _fnt_SDPVTL                10032a20 f   FntRare.obj
+ 0001:00031d10       _fnt_ISECT                 10032d10 f   FntRare.obj
+ 0001:00032490       _fnt_SROUND                10033490 f   FntRare.obj
+ 0001:00032720       _fnt_S45ROUND              10033720 f   FntRare.obj
+ 0001:000327a0       _fnt_RAW                   100337a0 f   FntRare.obj
+ 0001:00032830       _fnt_SANGW                 10033830 f   FntRare.obj
+ 0001:00032880       _fnt_AA                    10033880 f   FntRare.obj
+ 0001:000328d0       _fnt_DEBUG                 100338d0 f   FntRare.obj
+ 0001:00032930       _fnt_UTP                   10033930 f   FntRare.obj
+ 0001:00032a60       _fnt_SDB                   10033a60 f   FntRare.obj
+ 0001:00032ac0       _fnt_SDS                   10033ac0 f   FntRare.obj
+ 0001:00032b20       _fnt_ADJUST                10033b20 f   FntRare.obj
+ 0001:00033180       _fnt_FLIPPT                10034180 f   FntRare.obj
+ 0001:000332c0       _fnt_FLIPRGON              100342c0 f   FntRare.obj
+ 0001:000334b0       _fnt_FLIPRGOFF             100344b0 f   FntRare.obj
+ 0001:000336b0       _fnt_MPS                   100346b0 f   FntRare.obj
+ 0001:00033710       _fnt_IDefPatch             10034710 f   FntRare.obj
+ 0001:00033820       _fnt_IDEF                  10034820 f   FntRare.obj
+ 0001:000339a0       _PostInterpreterError      100349a0 f   FntUtilities.obj
+ 0001:000339b0       _FatalInterpreterError     100349b0 f   FntUtilities.obj
+ 0001:000339d0       _fnt_Normalize             100349d0 f   FntUtilities.obj
+ 0001:00033ad0       _fnt_SkipPushCrap          10034ad0 f   FntUtilities.obj
+ 0001:00033be0       _fnt_RoundToDoubleGrid     10034be0 f   FntUtilities.obj
+ 0001:00033c60       _fnt_RoundDownToGrid       10034c60 f   FntUtilities.obj
+ 0001:00033cd0       _fnt_RoundUpToGrid         10034cd0 f   FntUtilities.obj
+ 0001:00033d50       _fnt_RoundToGrid           10034d50 f   FntUtilities.obj
+ 0001:00033dd0       _fnt_RoundToHalfGrid       10034dd0 f   FntUtilities.obj
+ 0001:00033e50       _fnt_RoundOff              10034e50 f   FntUtilities.obj
+ 0001:00033e90       _fnt_SuperRound            10034e90 f   FntUtilities.obj
+ 0001:00033f70       _fnt_Super45Round          10034f70 f   FntUtilities.obj
+ 0001:000340a0       _fnt_MovePoint             100350a0 f   FntUtilities.obj
+ 0001:000342b0       _fnt_MoveAPoint            100352b0 f   FntUtilities.obj
+ 0001:00034380       _fnt_XMovePoint            10035380 f   FntUtilities.obj
+ 0001:00034450       _fnt_YMovePoint            10035450 f   FntUtilities.obj
+ 0001:00034520       _fnt_Project               10035520 f   FntUtilities.obj
+ 0001:00034560       _fnt_OldProject            10035560 f   FntUtilities.obj
+ 0001:000345a0       _fnt_XProject              100355a0 f   FntUtilities.obj
+ 0001:000345b0       _fnt_YProject              100355b0 f   FntUtilities.obj
+ 0001:000345c0       _fnt_GetCVTScale           100355c0 f   FntUtilities.obj
+ 0001:000346b0       _fnt_GetCVTEntryFast       100356b0 f   FntUtilities.obj
+ 0001:000346f0       _fnt_GetCVTEntrySlow       100356f0 f   FntUtilities.obj
+ 0001:00034750       _fnt_GetSingleWidthFast    10035750 f   FntUtilities.obj
+ 0001:00034770       _fnt_GetSingleWidthSlow    10035770 f   FntUtilities.obj
+ 0001:000347a0       _fnt_ChangeCvt             100357a0 f   FntUtilities.obj
+ 0001:000347f0       _fnt_Check_PF_Proj         100357f0 f   FntUtilities.obj
+ 0001:00034840       _fnt_ComputeAndCheck_PF_Proj 10035840 f   FntUtilities.obj
+ 0001:000348d0       _fnt_IllegalInstruction    100358d0 f   FntUtilities.obj
+ 0001:000348f0       _fnt_InnerTraceExecute     100358f0 f   FntUtilities.obj
+ 0001:00034ab0       _fnt_InnerExecute          10035ab0 f   FntUtilities.obj
+ 0001:00034b70       _CorrectUnscaledOutline    10035b70 f   FntUtilities.obj
+ 0001:00034c70       _fnt_Execute               10035c70 f   FntUtilities.obj
+ 0001:00034eb0       _GrowStackForPush          10035eb0 f   FntUtilities.obj
+ 0001:00034ec0       _ShortFracMul              10035ec0 f   FontMath.obj
+ 0001:00034fa0       _ShortMulDiv               10035fa0 f   FontMath.obj
+ 0001:00034fc0       _ShortFracDot              10035fc0 f   FontMath.obj
+ 0001:00034fe0       _ShortFracDivide           10035fe0 f   FontMath.obj
+ 0001:00035060       _Mul26Dot6                 10036060 f   FontMath.obj
+ 0001:00035190       _Div26Dot6                 10036190 f   FontMath.obj
+ 0001:00035310       _ComputeElementSizes       10036310 f   GlyphOutline.obj
+ 0001:00035360       _SetElementPointers        10036360 f   GlyphOutline.obj
+ 0001:00035450       _TTScalerHintGlyph         10036450 f   HintGlyph.obj
+ 0001:00035ca0       _New_fpgmEmptyClass        10036ca0 f   HintIO.obj
+ 0001:00035d10       _Read_fpgmClass            10036d10 f   HintIO.obj
+ 0001:00035d50       _New_fpgmClass             10036d50 f   HintIO.obj
+ 0001:00035d80       _Delete_fpgmClass          10036d80 f   HintIO.obj
+ 0001:00035dc0       _New_prepEmptyClass        10036dc0 f   HintIO.obj
+ 0001:00035e30       _Read_prepClass            10036e30 f   HintIO.obj
+ 0001:00035e70       _New_prepClass             10036e70 f   HintIO.obj
+ 0001:00035ea0       _Delete_prepClass          10036ea0 f   HintIO.obj
+ 0001:00035ee0       _New_cvtEmptyClass         10036ee0 f   HintIO.obj
+ 0001:00035f30       _Read_cvtClass             10036f30 f   HintIO.obj
+ 0001:00035f90       _New_cvtClass              10036f90 f   HintIO.obj
+ 0001:00035fc0       _Delete_cvtClass           10036fc0 f   HintIO.obj
+ 0001:00036000       _TTScalerTTHintTran        10037000 f   HintTran.obj
+ 0001:000362b0       _TTScalerTTHintTranDefault 100372b0 f   HintTran.obj
+ 0001:00036410       _TTScalerCloseTransform    10037410 f   HintTran.obj
+ 0001:00036440       _InitTTHintTranForT2K      10037440 f   HintTran.obj
+ 0001:00036620       _NewTTHintTranForT2K       10037620 f   HintTran.obj
+ 0001:00036670       _ReleaseTTHintTranForT2K   10037670 f   HintTran.obj
+ 0001:000366b0       _PrepareTheCVT             100376b0 f   InterpreterGlue.obj
+ 0001:00036790       _SetGlobalGSDefaults       10037790 f   InterpreterGlue.obj
+ 0001:00036810       _SetGlobalGSMapping        10037810 f   InterpreterGlue.obj
+ 0001:00036920       _RunFontProgram            10037920 f   InterpreterGlue.obj
+ 0001:00036aa0       _RunPreProgram             10037aa0 f   InterpreterGlue.obj
+ 0001:00036ba0       _RunGlyphProgram           10037ba0 f   InterpreterGlue.obj
+ 0001:00036c90       _FractDivide               10037c90 f   PinkGlue.obj
+ 0001:00036cc0       _FractMultiply             10037cc0 f   PinkGlue.obj
+ 0001:00036ce0       _FixedDivide               10037ce0 f   PinkGlue.obj
+ 0001:00036d10       _FixedMultiply             10037d10 f   PinkGlue.obj
+ 0001:00036d30       _FixedMultiplyRound        10037d30 f   PinkGlue.obj
+ 0001:00036e40       _Magnitude                 10037e40 f   PinkGlue.obj
+ 0001:00036e80       _RandomBits                10037e80 f   PinkGlue.obj
+ 0001:00036e90       _CopyToMapping             10037e90 f   PinkGlue.obj
+ 0001:00036f10       _convertFixedMatrixToTGraf 10037f10 f   PinkGlue.obj
+ 0001:00036ff0       _convertTGrafMatrixToFixed 10037ff0 f   PinkGlue.obj
+ 0001:00037120       _concatTGrafMatrices       10038120 f   PinkGlue.obj
+ 0001:00037190       _MapMapping                10038190 f   PinkGlue.obj
+ 0001:000371f0       _TransformPoint            100381f0 f   PinkGlue.obj
+ 0001:00037280       _ResetMapping              10038280 f   PinkGlue.obj
+ 0001:000372c0       _MapPoints                 100382c0 f   PinkGlue.obj
+ 0001:00037380       _GetTGrafMapType           10038380 f   PinkGlue.obj
+ 0001:00037470       _GetGXMapType              10038470 f   PinkGlue.obj
+ 0001:000374a0       _MxFlags                   100384a0 f   PinkGlue.obj
+ 0001:00037520       _MxMul                     10038520 f   PinkGlue.obj
+ 0001:00037540       _CopyBytes                 10038540 f   PinkGlue.obj
+ 0001:00037560       _FillBytes                 10038560 f   PinkGlue.obj
+ 0001:00037580       _MoveBytes                 10038580 f   PinkGlue.obj
+ 0001:000375a0       _GetPerFontMemoryAllocator 100385a0 f   TTHintFont.obj
+ 0001:000375b0       _GetPerFontMemory          100385b0 f   TTHintFont.obj
+ 0001:000375d0       _ReleasePerFontMemory      100385d0 f   TTHintFont.obj
+ 0001:000375f0       _InitTheKeyByScaler        100385f0 f   TTHintFont.obj
+ 0001:00037670       _InitTheKeyByFont          10038670 f   TTHintFont.obj
+ 0001:000376b0       _InitTheKeyByVary          100386b0 f   TTHintFont.obj
+ 0001:00037710       _InitTheKeyByTrans         10038710 f   TTHintFont.obj
+ 0001:00037750       _GetSFNTClassFromPerFont   10038750 f   TTHintFont.obj
+ 0001:00037770       _GetMemObjectFromPerFont   10038770 f   TTHintFont.obj
+ 0001:00037780       _GetT2KFromPerFont         10038780 f   TTHintFont.obj
+ 0001:00037790       _NewTTSHintcalerFont       10038790 f   TTHintFont.obj
+ 0001:00037bf0       _TTScalerCloseFont         10038bf0 f   TTHintFont.obj
+ 0001:00037c10       _TTScalerNewVariation1Dot1 10038c10 f   TTHintFont.obj
+ 0001:00037c60       _TTScalerNewVariationDefault 10038c60 f   TTHintFont.obj
+ 0001:00037c80       _TTScalerCloseVary         10038c80 f   TTHintFont.obj
+ 0001:00037c90       _NewTTHintFontForT2K       10038c90 f   TTHintFont.obj
+ 0001:00037ce0       _ReleaseTTHintFontForT2K   10038ce0 f   TTHintFont.obj
+ 0001:00037d30       _fs_ContourScan3           10038d30 f   HintScan.obj
+ 0001:00037fc0       _fs_FindBitMapSize4        10038fc0 f   HintScan.obj
+ 0001:00038080       _fs_CalculateBounds        10039080 f   HintScan.obj
+ 0001:00038410       _sc_ScanChar2              10039410 f   sc.obj
+ 0001:000400a0       _sc_FindExtrema4           100410a0 f   sc.obj
+ 0001:000409d0       _SetOrientBlock            100419d0 f   Orient.obj
+ 0001:00040a20       _FindNonZeroWindingCounts  10041a20 f   Orient.obj
+ 0001:00042540       _BadOrientationState       10043540 f   OrientDB.obj
+ 0001:00042550       _InitContourData           10043550 f   OrientDB.obj
+ 0001:00042630       _InitContourDataEmpty      10043630 f   OrientDB.obj
+ 0001:00042670       _InitializeDefaultContourData 10043670 f   OrientDB.obj
+ 0001:000426b0       _VerifyContourUsage        100436b0 f   OrientDB.obj
+ 0001:000426c0       _ReleaseContourData        100436c0 f   OrientDB.obj
+ 0001:00042700       _SetContourDataSet         10043700 f   OrientDB.obj
+ 0001:00042750       _SetContourDataSetQuick    10043750 f   OrientDB.obj
+ 0001:000427a0       _GetContourDataSet         100437a0 f   OrientDB.obj
+ 0001:00042820       _GetContourDataSetQuick    10043820 f   OrientDB.obj
+ 0001:000428a0       _FlipContourDataList       100438a0 f   OrientDB.obj
+ 0001:00042910       _Java_java_text_Bidi_nativeGetDirectionCode@12 10043910 f   jbidi.obj
+ 0001:00042930       _Java_java_text_Bidi_nativeBidiChars@36 10043930 f   jbidi.obj
+ 0001:00042d50       _ubidi_open                10043d50 f   ubidi.obj
+ 0001:00042d70       _ubidi_openSized           10043d70 f   ubidi.obj
+ 0001:00042eb0       _ubidi_getMemory           10043eb0 f   ubidi.obj
+ 0001:00042f50       _ubidi_close               10043f50 f   ubidi.obj
+ 0001:00042fc0       _ubidi_setInverse          10043fc0 f   ubidi.obj
+ 0001:00042fe0       _ubidi_isInverse           10043fe0 f   ubidi.obj
+ 0001:00043000       _ubidi_setPara             10044000 f   ubidi.obj
+ 0001:000441d0       _ubidi_getDirection        100451d0 f   ubidi.obj
+ 0001:000441f0       _ubidi_getText             100451f0 f   ubidi.obj
+ 0001:00044210       _ubidi_getLength           10045210 f   ubidi.obj
+ 0001:00044230       _ubidi_getParaLevel        10045230 f   ubidi.obj
+ 0001:00044250       _ubidi_setLine             10045250 f   ubidiln.obj
+ 0001:000444c0       _ubidi_getLevelAt          100454c0 f   ubidiln.obj
+ 0001:00044510       _ubidi_getLevels           10045510 f   ubidiln.obj
+ 0001:00044610       _ubidi_getLogicalRun       10045610 f   ubidiln.obj
+ 0001:00044760       _ubidi_countRuns           10045760 f   ubidiln.obj
+ 0001:000447b0       _ubidi_getVisualRun        100457b0 f   ubidiln.obj
+ 0001:00044860       _ubidi_getRuns             10045860 f   ubidiln.obj
+ 0001:00044db0       _ubidi_reorderLogical      10045db0 f   ubidiln.obj
+ 0001:00044ed0       _ubidi_reorderVisual       10045ed0 f   ubidiln.obj
+ 0001:000450c0       _ubidi_getVisualIndex      100460c0 f   ubidiln.obj
+ 0001:00045200       _ubidi_getLogicalIndex     10046200 f   ubidiln.obj
+ 0001:000453a0       _ubidi_getLogicalMap       100463a0 f   ubidiln.obj
+ 0001:000453f0       _ubidi_getVisualMap        100463f0 f   ubidiln.obj
+ 0001:000454f0       _ubidi_invertMap           100464f0 f   ubidiln.obj
+ 0001:00045540       _u_getDirection            10046540 f   uchardir.obj
+ 0001:00045680       _u_charDirection           10046680 f   uchardir.obj
+ 0001:000456a0       _u_surrogatePairDirection  100466a0 f   uchardir.obj
+ 0001:000456d0       _setupBlitVector           100466d0 f   DrawGlyphList.obj
+ 0001:00045bc0       _RefineBounds              10046bc0 f   DrawGlyphList.obj
+ 0001:00045cc0       _Java_sun_java2d_loops_DrawGlyphList_DrawGlyphList@20 10046cc0 f   DrawGlyphList.obj
+ 0001:00045f60       _Java_sun_java2d_loops_DrawGlyphListAA_DrawGlyphListAA@20 10046f60 f   DrawGlyphList.obj
+ 0001:00046000       _Java_sun_java2d_loops_DrawGlyphListLCD_DrawGlyphListLCD@20 10047000 f   DrawGlyphList.obj
+ 0001:00046300       _setupLCDBlitVector        10047300 f   DrawGlyphList.obj
+ 0001:00046a40       _initLUT                   10047a40 f   DrawGlyphList.obj
+ 0001:00046c90       _initLCDGammaTables        10047c90 f   DrawGlyphList.obj
+ 0001:00046ce0       _t2kMagnitude              10047ce0 f   scalerMethods.obj
+ 0001:00046fa0       _t2kFracMul                10047fa0 f   scalerMethods.obj
+ 0001:000470b0       _t2kFracDiv                100480b0 f   scalerMethods.obj
+ 0001:00047260       _Java_sun_font_FontManager_getPlatformFontVar@8 10048260 f   scalerMethods.obj
+ 0001:00047290       _Java_sun_font_FontManager_initIDs@12 10048290 f   scalerMethods.obj
+ 0001:000478e0       _Java_sun_font_FontManager_getFont2D@12 100488e0 f   scalerMethods.obj
+ 0001:00047910       _Java_sun_font_FontManager_setFont2D@16 10048910 f   scalerMethods.obj
+ 0001:00047940       _Java_sun_font_FontManager_setCreatedFont@12 10048940 f   scalerMethods.obj
+ 0001:00047970       _Java_sun_font_FontManager_isCreatedFont@12 10048970 f   scalerMethods.obj
+ 0001:00047990       _isNullScaler              10048990 f   scalerMethods.obj
+ 0001:00047a10       _Java_sun_font_FileFont_getNullScaler@8 10048a10 f   scalerMethods.obj
+ 0001:00047a20       _Java_sun_font_Type1Font_createScaler@12 10048a20 f   scalerMethods.obj
+ 0001:00047c40       _Java_sun_font_FileFontStrike_getNullScalerContext@16 10048c40 f   scalerMethods.obj
+ 0001:00047c80       _Java_sun_font_FileFontStrike_createScalerContext@48 10048c80 f   scalerMethods.obj
+ 0001:00047ff0       _freeScalerInfoAfterError  10048ff0 f   scalerMethods.obj
+ 0001:000480b0       _Java_sun_font_FileFont_freeScaler@16 100490b0 f   scalerMethods.obj
+ 0001:000481a0       _newLayoutTableCache       100491a0 f   scalerMethods.obj
+ 0001:00048230       _freeLayoutTableCache      10049230 f   scalerMethods.obj
+ 0001:000482e0       _Java_sun_font_TrueTypeFont_createScaler@24 100492e0 f   scalerMethods.obj
+ 0001:000487f0       _setupT2KContext           100497f0 f   scalerMethods.obj
+ 0001:000488a0       _Java_sun_font_FileFont_setNullScaler@16 100498a0 f   scalerMethods.obj
+ 0001:000488c0       _Java_sun_font_FileFont_getGlyphAdvance@20 100498c0 f   scalerMethods.obj
+ 0001:00048a50       _Java_sun_font_FileFont_getGlyphMetrics@24 10049a50 f   scalerMethods.obj
+ 0001:00048cb0       _Java_sun_font_FileFont_getGlyphImage@20 10049cb0 f   scalerMethods.obj
+ 0001:00049e50       _Java_sun_font_TrueTypeFont_getGlyphPoint@24 1004ae50 f   scalerMethods.obj
+ 0001:0004a000       _getUnitsPerEmForLayout    1004b000 f   scalerMethods.obj
+ 0001:0004a060       _Java_sun_font_FileFont_getFontMetrics@16 1004b060 f   scalerMethods.obj
+ 0001:0004a4e0       _Java_sun_font_StrikeCache_getGlyphCacheDescription@12 1004b4e0 f   scalerMethods.obj
+ 0001:0004a640       _Java_sun_font_StrikeCache_freeIntPointer@12 1004b640 f   scalerMethods.obj
+ 0001:0004a660       _Java_sun_font_StrikeCache_freeLongPointer@16 1004b660 f   scalerMethods.obj
+ 0001:0004a680       _Java_sun_font_StrikeCache_freeIntMemory@20 1004b680 f   scalerMethods.obj
+ 0001:0004a750       _Java_sun_font_StrikeCache_freeLongMemory@20 1004b750 f   scalerMethods.obj
+ 0001:0004a840       _Java_sun_font_Type1Font_getNumGlyphs@16 1004b840 f   scalerMethods.obj
+ 0001:0004a880       _Java_sun_font_Type1Font_getMissingGlyphCode@16 1004b880 f   scalerMethods.obj
+ 0001:0004a8c0       _Java_sun_font_Type1Font_getGlyphCode@20 1004b8c0 f   scalerMethods.obj
+ 0001:0004a900       _Java_sun_font_FontManager_getFontPath@12 1004b900 f   fontpath.obj
+ 0001:0004aa50       _Java_sun_font_FontManager_setNativeFontPath@12 1004ba50 f   fontpath.obj
+ 0001:0004aa60       _Java_sun_font_FontManager_populateFontFileNameMap@24 1004ba60 f   fontpath.obj
+ 0001:0004bac0       _Java_sun_font_FileFontStrike_initNative@8 1004cac0 f   lcdglyph.obj
+ 0001:0004bb30       _Java_sun_font_FileFontStrike__1getGlyphImageFromWindows@28 1004cb30 f   lcdglyph.obj
+ 0001:0004cc80       ?process@CursiveAttachmentSubtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 1004dc80 f   CursiveAttachmentSubtables.obj
+ 0001:0004cd80       ?getGlyphCoverage@LookupSubtable@@QBEJK@Z 1004dd80 f i CursiveAttachmentSubtables.obj
+ 0001:0004cdb0       ?swapWord@LESwaps@@SAGG@Z  1004ddb0 f i CursiveAttachmentSubtables.obj
+ 0001:0004cdd0       ?process@ExtensionSubtable@@QBEKPBVLookupProcessor@@GPAVGlyphIterator@@PBVLEFontInstance@@@Z 1004ddd0 f   ExtensionSubtables.obj
+ 0001:0004ce40       ?swapLong@LESwaps@@SAKK@Z  1004de40 f i ExtensionSubtables.obj
+ 0001:0004ce70       ??0MPreFixups@@QAE@J@Z     1004de70 f   MPreFixups.obj
+ 0001:0004ceb0       ??1MPreFixups@@QAE@XZ      1004deb0 f   MPreFixups.obj
+ 0001:0004cee0       ?add@MPreFixups@@QAEXJJ@Z  1004dee0 f   MPreFixups.obj
+ 0001:0004cf30       ?apply@MPreFixups@@QAEXAAVLEGlyphStorage@@@Z 1004df30 f   MPreFixups.obj
+ 0001:0004d180       ??ALEGlyphStorage@@QBEAAKJ@Z 1004e180 f i MPreFixups.obj
+ 0001:0004d1a0       ??0HanOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJPBUGlyphSubstitutionTableHeader@@@Z 1004e1a0 f   HanLayoutEngine.obj
+ 0001:0004d1f0       ??1HanOpenTypeLayoutEngine@@UAE@XZ 1004e1f0 f   HanLayoutEngine.obj
+ 0001:0004d210       ?characterProcessing@HanOpenTypeLayoutEngine@@MAEJQBGJJJDAAPAGAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1004e210 f   HanLayoutEngine.obj
+ 0001:0004d2d0       ??_GHanOpenTypeLayoutEngine@@UAEPAXI@Z 1004e2d0 f i HanLayoutEngine.obj
+ 0001:0004d2d0       ??_EHanOpenTypeLayoutEngine@@UAEPAXI@Z 1004e2d0 f i HanLayoutEngine.obj
+ 0001:0004d300       ?getSubFont@LEFontInstance@@UBEPBV1@QBGPAJJJAAW4LEErrorCode@@@Z 1004e300 f   LEFontInstance.obj
+ 0001:0004d360       ?mapCharsToGlyphs@LEFontInstance@@UBEXQBGJJDPBVLECharMapper@@AAVLEGlyphStorage@@@Z 1004e360 f   LEFontInstance.obj
+ 0001:0004d4a0       ?mapCharToGlyph@LEFontInstance@@UBEKKPBVLECharMapper@@@Z 1004e4a0 f   LEFontInstance.obj
+ 0001:0004d500       ??0ContextualGlyphSubstitutionProcessor@@QAE@PBUMorphSubtableHeader@@@Z 1004e500 f   ContextualGlyphSubstProc.obj
+ 0001:0004d560       ??1ContextualGlyphSubstitutionProcessor@@UAE@XZ 1004e560 f   ContextualGlyphSubstProc.obj
+ 0001:0004d580       ?beginStateTable@ContextualGlyphSubstitutionProcessor@@UAEXXZ 1004e580 f   ContextualGlyphSubstProc.obj
+ 0001:0004d5a0       ?processStateEntry@ContextualGlyphSubstitutionProcessor@@UAEFAAVLEGlyphStorage@@AAJE@Z 1004e5a0 f   ContextualGlyphSubstProc.obj
+ 0001:0004d730       ?endStateTable@ContextualGlyphSubstitutionProcessor@@UAEXXZ 1004e730 f   ContextualGlyphSubstProc.obj
+ 0001:0004d740       ??_EContextualGlyphSubstitutionProcessor@@UAEPAXI@Z 1004e740 f i ContextualGlyphSubstProc.obj
+ 0001:0004d740       ??_GContextualGlyphSubstitutionProcessor@@UAEPAXI@Z 1004e740 f i ContextualGlyphSubstProc.obj
+ 0001:0004d770       ??0IndicRearrangementProcessor@@QAE@PBUMorphSubtableHeader@@@Z 1004e770 f   IndicRearrangementProcessor.obj
+ 0001:0004d7c0       ??1IndicRearrangementProcessor@@UAE@XZ 1004e7c0 f   IndicRearrangementProcessor.obj
+ 0001:0004d7e0       ?beginStateTable@IndicRearrangementProcessor@@UAEXXZ 1004e7e0 f   IndicRearrangementProcessor.obj
+ 0001:0004d800       ?processStateEntry@IndicRearrangementProcessor@@UAEFAAVLEGlyphStorage@@AAJE@Z 1004e800 f   IndicRearrangementProcessor.obj
+ 0001:0004d8b0       ?endStateTable@IndicRearrangementProcessor@@UAEXXZ 1004e8b0 f   IndicRearrangementProcessor.obj
+ 0001:0004d8c0       ?doRearrangementAction@IndicRearrangementProcessor@@QBEXAAVLEGlyphStorage@@W4IndicRearrangementVerb@@@Z 1004e8c0 f   IndicRearrangementProcessor.obj
+ 0001:0004ebb0       ??_EIndicRearrangementProcessor@@UAEPAXI@Z 1004fbb0 f i IndicRearrangementProcessor.obj
+ 0001:0004ebb0       ??_GIndicRearrangementProcessor@@UAEPAXI@Z 1004fbb0 f i IndicRearrangementProcessor.obj
+ 0001:0004ebe0       ??0LigatureSubstitutionProcessor@@QAE@PBUMorphSubtableHeader@@@Z 1004fbe0 f   LigatureSubstProc.obj
+ 0001:0004ec80       ??1LigatureSubstitutionProcessor@@UAE@XZ 1004fc80 f   LigatureSubstProc.obj
+ 0001:0004eca0       ?beginStateTable@LigatureSubstitutionProcessor@@UAEXXZ 1004fca0 f   LigatureSubstProc.obj
+ 0001:0004ecc0       ?processStateEntry@LigatureSubstitutionProcessor@@UAEFAAVLEGlyphStorage@@AAJE@Z 1004fcc0 f   LigatureSubstProc.obj
+ 0001:0004ef70       ?endStateTable@LigatureSubstitutionProcessor@@UAEXXZ 1004ff70 f   LigatureSubstProc.obj
+ 0001:0004ef80       ??_ELigatureSubstitutionProcessor@@UAEPAXI@Z 1004ff80 f i LigatureSubstProc.obj
+ 0001:0004ef80       ??_GLigatureSubstitutionProcessor@@UAEPAXI@Z 1004ff80 f i LigatureSubstProc.obj
+ 0001:0004efb0       ?lookupSegment@BinarySearchLookupTable@@QBEPBULookupSegment@@PBU2@K@Z 1004ffb0 f   LookupTables.obj
+ 0001:0004f0a0       ?lookupSingle@BinarySearchLookupTable@@QBEPBULookupSingle@@PBU2@K@Z 100500a0 f   LookupTables.obj
+ 0001:0004f190       ?process@MorphTableHeader@@QBEXAAVLEGlyphStorage@@@Z 10050190 f   MorphTables.obj
+ 0001:0004f2d0       ?process@MorphSubtableHeader@@QBEXAAVLEGlyphStorage@@@Z 100502d0 f   MorphTables.obj
+ 0001:0004f410       ??0NonContextualGlyphSubstitutionProcessor@@IAE@XZ 10050410 f   NonContextualGlyphSubstProc.obj
+ 0001:0004f430       ??0NonContextualGlyphSubstitutionProcessor@@IAE@PBUMorphSubtableHeader@@@Z 10050430 f   NonContextualGlyphSubstProc.obj
+ 0001:0004f460       ??1NonContextualGlyphSubstitutionProcessor@@MAE@XZ 10050460 f   NonContextualGlyphSubstProc.obj
+ 0001:0004f480       ?createInstance@NonContextualGlyphSubstitutionProcessor@@SAPAVSubtableProcessor@@PBUMorphSubtableHeader@@@Z 10050480 f   NonContextualGlyphSubstProc.obj
+ 0001:0004f5e0       ??_ENonContextualGlyphSubstitutionProcessor@@MAEPAXI@Z 100505e0 f i NonContextualGlyphSubstProc.obj
+ 0001:0004f5e0       ??_GNonContextualGlyphSubstitutionProcessor@@MAEPAXI@Z 100505e0 f i NonContextualGlyphSubstProc.obj
+ 0001:0004f610       ??0SegmentArrayProcessor@@AAE@XZ 10050610 f   SegmentArrayProcessor.obj
+ 0001:0004f630       ??0SegmentArrayProcessor@@QAE@PBUMorphSubtableHeader@@@Z 10050630 f   SegmentArrayProcessor.obj
+ 0001:0004f670       ??1SegmentArrayProcessor@@UAE@XZ 10050670 f   SegmentArrayProcessor.obj
+ 0001:0004f690       ?process@SegmentArrayProcessor@@UAEXAAVLEGlyphStorage@@@Z 10050690 f   SegmentArrayProcessor.obj
+ 0001:0004f790       ??_GSegmentArrayProcessor@@UAEPAXI@Z 10050790 f i SegmentArrayProcessor.obj
+ 0001:0004f790       ??_ESegmentArrayProcessor@@UAEPAXI@Z 10050790 f i SegmentArrayProcessor.obj
+ 0001:0004f7c0       ?getGlyphCount@LEGlyphStorage@@QBEJXZ 100507c0 f i SegmentArrayProcessor.obj
+ 0001:0004f7c0       ?getWorstCaseExpansion@IndicClassTable@@QBEJXZ 100507c0 f i IndicClassTables.obj
+ 0001:0004f7e0       ??0SegmentSingleProcessor@@AAE@XZ 100507e0 f   SegmentSingleProcessor.obj
+ 0001:0004f800       ??0SegmentSingleProcessor@@QAE@PBUMorphSubtableHeader@@@Z 10050800 f   SegmentSingleProcessor.obj
+ 0001:0004f840       ??1SegmentSingleProcessor@@UAE@XZ 10050840 f   SegmentSingleProcessor.obj
+ 0001:0004f860       ?process@SegmentSingleProcessor@@UAEXAAVLEGlyphStorage@@@Z 10050860 f   SegmentSingleProcessor.obj
+ 0001:0004f920       ??_GSegmentSingleProcessor@@UAEPAXI@Z 10050920 f i SegmentSingleProcessor.obj
+ 0001:0004f920       ??_ESegmentSingleProcessor@@UAEPAXI@Z 10050920 f i SegmentSingleProcessor.obj
+ 0001:0004f950       ??0SimpleArrayProcessor@@AAE@XZ 10050950 f   SimpleArrayProcessor.obj
+ 0001:0004f970       ??0SimpleArrayProcessor@@QAE@PBUMorphSubtableHeader@@@Z 10050970 f   SimpleArrayProcessor.obj
+ 0001:0004f9b0       ??1SimpleArrayProcessor@@UAE@XZ 100509b0 f   SimpleArrayProcessor.obj
+ 0001:0004f9d0       ?process@SimpleArrayProcessor@@UAEXAAVLEGlyphStorage@@@Z 100509d0 f   SimpleArrayProcessor.obj
+ 0001:0004fa70       ??_GSimpleArrayProcessor@@UAEPAXI@Z 10050a70 f i SimpleArrayProcessor.obj
+ 0001:0004fa70       ??_ESimpleArrayProcessor@@UAEPAXI@Z 10050a70 f i SimpleArrayProcessor.obj
+ 0001:0004faa0       ??0SingleTableProcessor@@AAE@XZ 10050aa0 f   SingleTableProcessor.obj
+ 0001:0004fac0       ??0SingleTableProcessor@@QAE@PBUMorphSubtableHeader@@@Z 10050ac0 f   SingleTableProcessor.obj
+ 0001:0004fb00       ??1SingleTableProcessor@@UAE@XZ 10050b00 f   SingleTableProcessor.obj
+ 0001:0004fb20       ?process@SingleTableProcessor@@UAEXAAVLEGlyphStorage@@@Z 10050b20 f   SingleTableProcessor.obj
+ 0001:0004fbb0       ??_GSingleTableProcessor@@UAEPAXI@Z 10050bb0 f i SingleTableProcessor.obj
+ 0001:0004fbb0       ??_ESingleTableProcessor@@UAEPAXI@Z 10050bb0 f i SingleTableProcessor.obj
+ 0001:0004fbe0       ??0StateTableProcessor@@IAE@XZ 10050be0 f   StateTableProcessor.obj
+ 0001:0004fc00       ??0StateTableProcessor@@IAE@PBUMorphSubtableHeader@@@Z 10050c00 f   StateTableProcessor.obj
+ 0001:0004fcf0       ??1StateTableProcessor@@MAE@XZ 10050cf0 f   StateTableProcessor.obj
+ 0001:0004fd10       ?process@StateTableProcessor@@UAEXAAVLEGlyphStorage@@@Z 10050d10 f   StateTableProcessor.obj
+ 0001:0004fe10       ??_EStateTableProcessor@@MAEPAXI@Z 10050e10 f i StateTableProcessor.obj
+ 0001:0004fe10       ??_GStateTableProcessor@@MAEPAXI@Z 10050e10 f i StateTableProcessor.obj
+ 0001:0004fe40       ??0SubtableProcessor@@IAE@XZ 10050e40 f   SubtableProcessor.obj
+ 0001:0004fe60       ??0SubtableProcessor@@IAE@PBUMorphSubtableHeader@@@Z 10050e60 f   SubtableProcessor.obj
+ 0001:0004fed0       ??1SubtableProcessor@@UAE@XZ 10050ed0 f   SubtableProcessor.obj
+ 0001:0004fef0       ??_GSubtableProcessor@@UAEPAXI@Z 10050ef0 f i SubtableProcessor.obj
+ 0001:0004fef0       ??_ESubtableProcessor@@UAEPAXI@Z 10050ef0 f i SubtableProcessor.obj
+ 0001:0004ff20       ??0TrimmedArrayProcessor@@AAE@XZ 10050f20 f   TrimmedArrayProcessor.obj
+ 0001:0004ff40       ??0TrimmedArrayProcessor@@QAE@PBUMorphSubtableHeader@@@Z 10050f40 f   TrimmedArrayProcessor.obj
+ 0001:0004ffc0       ??1TrimmedArrayProcessor@@UAE@XZ 10050fc0 f   TrimmedArrayProcessor.obj
+ 0001:0004ffe0       ?process@TrimmedArrayProcessor@@UAEXAAVLEGlyphStorage@@@Z 10050fe0 f   TrimmedArrayProcessor.obj
+ 0001:000500b0       ??_ETrimmedArrayProcessor@@UAEPAXI@Z 100510b0 f i TrimmedArrayProcessor.obj
+ 0001:000500b0       ??_GTrimmedArrayProcessor@@UAEPAXI@Z 100510b0 f i TrimmedArrayProcessor.obj
+ 0001:000500e0       ?process@AlternateSubstitutionSubtable@@QBEKPAVGlyphIterator@@PBVLEGlyphFilter@@@Z 100510e0 f   AlternateSubstSubtables.obj
+ 0001:000501c0       ?getAnchor@AnchorTable@@QBEXKPBVLEFontInstance@@AAULEPoint@@@Z 100511c0 f   AnchorTables.obj
+ 0001:00050260       ?getAnchor@Format1AnchorTable@@QBEXPBVLEFontInstance@@AAULEPoint@@@Z 10051260 f   AnchorTables.obj
+ 0001:000502e0       ?getAnchor@Format2AnchorTable@@QBEXKPBVLEFontInstance@@AAULEPoint@@@Z 100512e0 f   AnchorTables.obj
+ 0001:00050390       ?getAnchor@Format3AnchorTable@@QBEXPBVLEFontInstance@@AAULEPoint@@@Z 10051390 f   AnchorTables.obj
+ 0001:000504b0       ?sortMarks@CanonShaping@@CAXPAJPBJJJ@Z 100514b0 f   CanonShaping.obj
+ 0001:00050550       ?reorderMarks@CanonShaping@@SAXPBGJDPAGAAVLEGlyphStorage@@@Z 10051550 f   CanonShaping.obj
+ 0001:000506f0       ?getGlyphClass@ClassDefinitionTable@@QBEJK@Z 100516f0 f   ClassDefinitionTables.obj
+ 0001:00050760       ?hasGlyphClass@ClassDefinitionTable@@QBEDJ@Z 10051760 f   ClassDefinitionTables.obj
+ 0001:000507d0       ?getGlyphClass@ClassDefFormat1Table@@QBEJK@Z 100517d0 f   ClassDefinitionTables.obj
+ 0001:00050860       ?hasGlyphClass@ClassDefFormat1Table@@QBEDJ@Z 10051860 f   ClassDefinitionTables.obj
+ 0001:000508d0       ?getGlyphClass@ClassDefFormat2Table@@QBEJK@Z 100518d0 f   ClassDefinitionTables.obj
+ 0001:00050940       ?hasGlyphClass@ClassDefFormat2Table@@QBEDJ@Z 10051940 f   ClassDefinitionTables.obj
+ 0001:000509b0       ?applySubstitutionLookups@ContextualSubstitutionBase@@SAXPBVLookupProcessor@@PBUSubstitutionLookupRecord@@GPAVGlyphIterator@@PBVLEFontInstance@@J@Z 100519b0 f   ContextualSubstSubtables.obj
+ 0001:00050a50       ?matchGlyphIDs@ContextualSubstitutionBase@@SADPBGGPAVGlyphIterator@@D@Z 10051a50 f   ContextualSubstSubtables.obj
+ 0001:00050af0       ?matchGlyphClasses@ContextualSubstitutionBase@@SADPBGGPAVGlyphIterator@@PBUClassDefinitionTable@@D@Z 10051af0 f   ContextualSubstSubtables.obj
+ 0001:00050bb0       ?matchGlyphCoverages@ContextualSubstitutionBase@@SADPBGGPAVGlyphIterator@@PBDD@Z 10051bb0 f   ContextualSubstSubtables.obj
+ 0001:00050c50       ?process@ContextualSubstitutionSubtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10051c50 f   ContextualSubstSubtables.obj
+ 0001:00050cf0       ?process@ContextualSubstitutionFormat1Subtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10051cf0 f   ContextualSubstSubtables.obj
+ 0001:00050e70       ?process@ContextualSubstitutionFormat2Subtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10051e70 f   ContextualSubstSubtables.obj
+ 0001:00051030       ?process@ContextualSubstitutionFormat3Subtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10052030 f   ContextualSubstSubtables.obj
+ 0001:000510f0       ?process@ChainingContextualSubstitutionSubtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 100520f0 f   ContextualSubstSubtables.obj
+ 0001:00051190       ?process@ChainingContextualSubstitutionFormat1Subtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10052190 f   ContextualSubstSubtables.obj
+ 0001:00051410       ?process@ChainingContextualSubstitutionFormat2Subtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10052410 f   ContextualSubstSubtables.obj
+ 0001:00051750       ?process@ChainingContextualSubstitutionFormat3Subtable@@QBEKPBVLookupProcessor@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 10052750 f   ContextualSubstSubtables.obj
+ 0001:00051950       ?getGlyphCoverage@CoverageTable@@QBEJK@Z 10052950 f   CoverageTables.obj
+ 0001:000519c0       ?getGlyphCoverage@CoverageFormat1Table@@QBEJK@Z 100529c0 f   CoverageTables.obj
+ 0001:00051ad0       ?getGlyphCoverage@CoverageFormat2Table@@QBEJK@Z 10052ad0 f   CoverageTables.obj
+ 0001:00051b70       ?getAdjustment@DeviceTable@@QBEFG@Z 10052b70 f   DeviceTables.obj
+ 0001:00051cb0       ?getFeatureTable@FeatureListTable@@QBEPBUFeatureTable@@GPAK@Z 10052cb0 f   Features.obj
+ 0001:00051d60       ?getFeatureTable@FeatureListTable@@QBEPBUFeatureTable@@K@Z 10052d60 f   Features.obj
+ 0001:00051e10       ??0GDEFMarkFilter@@QAE@PBUGlyphDefinitionTableHeader@@@Z 10052e10 f   GDEFMarkFilter.obj
+ 0001:00051e40       ??1GDEFMarkFilter@@UAE@XZ  10052e40 f   GDEFMarkFilter.obj
+ 0001:00051e60       ?accept@GDEFMarkFilter@@UBEDK@Z 10052e60 f   GDEFMarkFilter.obj
+ 0001:00051e90       ??_EGDEFMarkFilter@@UAEPAXI@Z 10052e90 f i GDEFMarkFilter.obj
+ 0001:00051e90       ??_GGDEFMarkFilter@@UAEPAXI@Z 10052e90 f i GDEFMarkFilter.obj
+ 0001:00051ec0       ??0LEGlyphFilter@@QAE@XZ   10052ec0 f i GDEFMarkFilter.obj
+ 0001:00051ee0       ??_GLEGlyphFilter@@UAEPAXI@Z 10052ee0 f i GDEFMarkFilter.obj
+ 0001:00051ee0       ??_ELEGlyphFilter@@UAEPAXI@Z 10052ee0 f i GDEFMarkFilter.obj
+ 0001:00051f10       ?getGlyphClassDefinitionTable@GlyphDefinitionTableHeader@@QBEPBUClassDefinitionTable@@XZ 10052f10 f   GlyphDefinitionTables.obj
+ 0001:00051f40       ?getAttachmentListTable@GlyphDefinitionTableHeader@@QBEPBUAttachmentListTable@@XZ 10052f40 f   GlyphDefinitionTables.obj
+ 0001:00051f70       ?getLigatureCaretListTable@GlyphDefinitionTableHeader@@QBEPBULigatureCaretListTable@@XZ 10052f70 f   GlyphDefinitionTables.obj
+ 0001:00051fa0       ?getMarkAttachClassDefinitionTable@GlyphDefinitionTableHeader@@QBEPBUClassDefinitionTable@@XZ 10052fa0 f   GlyphDefinitionTables.obj
+ 0001:00051fd0       ??0GlyphIterator@@QAE@AAVLEGlyphStorage@@PAVGlyphPositionAdjustments@@DGKPBUGlyphDefinitionTableHeader@@@Z 10052fd0 f   GlyphIterator.obj
+ 0001:000520d0       ??0GlyphIterator@@QAE@AAV0@@Z 100530d0 f   GlyphIterator.obj
+ 0001:00052180       ??0GlyphIterator@@QAE@AAV0@K@Z 10053180 f   GlyphIterator.obj
+ 0001:00052230       ??0GlyphIterator@@QAE@AAV0@G@Z 10053230 f   GlyphIterator.obj
+ 0001:000522e0       ??1GlyphIterator@@UAE@XZ   100532e0 f   GlyphIterator.obj
+ 0001:00052300       ?reset@GlyphIterator@@QAEXGK@Z 10053300 f   GlyphIterator.obj
+ 0001:00052330       ?insertGlyphs@GlyphIterator@@QAEPAKJ@Z 10053330 f   GlyphIterator.obj
+ 0001:00052360       ?applyInsertions@GlyphIterator@@QAEJXZ 10053360 f   GlyphIterator.obj
+ 0001:000523a0       ?getCurrStreamPosition@GlyphIterator@@QBEJXZ 100533a0 f   GlyphIterator.obj
+ 0001:000523c0       ?isRightToLeft@GlyphIterator@@QBEDXZ 100533c0 f   GlyphIterator.obj
+ 0001:000523e0       ?ignoresMarks@GlyphIterator@@QBEDXZ 100533e0 f   GlyphIterator.obj
+ 0001:00052400       ?baselineIsLogicalEnd@GlyphIterator@@QBEDXZ 10053400 f   GlyphIterator.obj
+ 0001:00052420       ?getCurrGlyphID@GlyphIterator@@QBEKXZ 10053420 f   GlyphIterator.obj
+ 0001:00052490       ?getCursiveEntryPoint@GlyphIterator@@QBEXAAULEPoint@@@Z 10053490 f   GlyphIterator.obj
+ 0001:00052500       ?getCursiveExitPoint@GlyphIterator@@QBEXAAULEPoint@@@Z 10053500 f   GlyphIterator.obj
+ 0001:00052570       ?setCurrGlyphID@GlyphIterator@@QAEXG@Z 10053570 f   GlyphIterator.obj
+ 0001:000525d0       ?setCurrStreamPosition@GlyphIterator@@QAEXJ@Z 100535d0 f   GlyphIterator.obj
+ 0001:00052670       ?setCurrGlyphBaseOffset@GlyphIterator@@QAEXJ@Z 10053670 f   GlyphIterator.obj
+ 0001:000526e0       ?adjustCurrGlyphPositionAdjustment@GlyphIterator@@QAEXMMMM@Z 100536e0 f   GlyphIterator.obj
+ 0001:00052790       ?setCurrGlyphPositionAdjustment@GlyphIterator@@QAEXMMMM@Z 10053790 f   GlyphIterator.obj
+ 0001:00052840       ?setCursiveEntryPoint@GlyphIterator@@QAEXAAULEPoint@@@Z 10053840 f   GlyphIterator.obj
+ 0001:000528c0       ?setCursiveExitPoint@GlyphIterator@@QAEXAAULEPoint@@@Z 100538c0 f   GlyphIterator.obj
+ 0001:00052940       ?setCursiveGlyph@GlyphIterator@@QAEXXZ 10053940 f   GlyphIterator.obj
+ 0001:000529b0       ?filterGlyph@GlyphIterator@@ABEDK@Z 100539b0 f   GlyphIterator.obj
+ 0001:00052ad0       ?hasFeatureTag@GlyphIterator@@ABEDXZ 10053ad0 f   GlyphIterator.obj
+ 0001:00052b20       ?findFeatureTag@GlyphIterator@@QAEDXZ 10053b20 f   GlyphIterator.obj
+ 0001:00052b60       ?nextInternal@GlyphIterator@@AAEDK@Z 10053b60 f   GlyphIterator.obj
+ 0001:00052be0       ?next@GlyphIterator@@QAEDK@Z 10053be0 f   GlyphIterator.obj
+ 0001:00052c20       ?prevInternal@GlyphIterator@@AAEDK@Z 10053c20 f   GlyphIterator.obj
+ 0001:00052ca0       ?prev@GlyphIterator@@QAEDK@Z 10053ca0 f   GlyphIterator.obj
+ 0001:00052ce0       ?getMarkComponent@GlyphIterator@@QBEJJ@Z 10053ce0 f   GlyphIterator.obj
+ 0001:00052d40       ?findMark2Glyph@GlyphIterator@@QAEDXZ 10053d40 f   GlyphIterator.obj
+ 0001:00052db0       ??_EGlyphIterator@@UAEPAXI@Z 10053db0 f i GlyphIterator.obj
+ 0001:00052db0       ??_GGlyphIterator@@UAEPAXI@Z 10053db0 f i GlyphIterator.obj
+ 0001:00052de0       ?setBaseOffset@GlyphPositionAdjustments@@QAEXJJ@Z 10053de0 f i GlyphIterator.obj
+ 0001:00052e10       ?setBaseOffset@Adjustment@GlyphPositionAdjustments@@QAEXJ@Z 10053e10 f i GlyphIterator.obj
+ 0001:00052e30       ?adjustXPlacement@GlyphPositionAdjustments@@QAEXJM@Z 10053e30 f i GlyphIterator.obj
+ 0001:00052e60       ?adjustXPlacement@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10053e60 f i GlyphIterator.obj
+ 0001:00052e80       ?adjustYPlacement@GlyphPositionAdjustments@@QAEXJM@Z 10053e80 f i GlyphIterator.obj
+ 0001:00052eb0       ?adjustYPlacement@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10053eb0 f i GlyphIterator.obj
+ 0001:00052ed0       ?adjustXAdvance@GlyphPositionAdjustments@@QAEXJM@Z 10053ed0 f i GlyphIterator.obj
+ 0001:00052f00       ?adjustXAdvance@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10053f00 f i GlyphIterator.obj
+ 0001:00052f20       ?adjustYAdvance@GlyphPositionAdjustments@@QAEXJM@Z 10053f20 f i GlyphIterator.obj
+ 0001:00052f50       ?adjustYAdvance@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10053f50 f i GlyphIterator.obj
+ 0001:00052f70       ?setXPlacement@GlyphPositionAdjustments@@QAEXJM@Z 10053f70 f i GlyphIterator.obj
+ 0001:00052fa0       ?setXPlacement@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10053fa0 f i GlyphIterator.obj
+ 0001:00052fc0       ?setYPlacement@GlyphPositionAdjustments@@QAEXJM@Z 10053fc0 f i GlyphIterator.obj
+ 0001:00052ff0       ?setYPlacement@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10053ff0 f i GlyphIterator.obj
+ 0001:00053010       ?setXAdvance@GlyphPositionAdjustments@@QAEXJM@Z 10054010 f i GlyphIterator.obj
+ 0001:00053040       ?setXAdvance@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10054040 f i GlyphIterator.obj
+ 0001:00053060       ?setYAdvance@GlyphPositionAdjustments@@QAEXJM@Z 10054060 f i GlyphIterator.obj
+ 0001:00053090       ?setYAdvance@Adjustment@GlyphPositionAdjustments@@QAEXM@Z 10054090 f i GlyphIterator.obj
+ 0001:000530b0       ?coversScript@GlyphLookupTableHeader@@QBEDK@Z 100540b0 f   GlyphLookupTables.obj
+ 0001:00053100       ?coversScriptAndLanguage@GlyphLookupTableHeader@@QBEDKKD@Z 10054100 f   GlyphLookupTables.obj
+ 0001:00053160       ??0GlyphPositionAdjustments@@QAE@J@Z 10054160 f   GlyphPositionAdjustments.obj
+ 0001:000531f0       ??1GlyphPositionAdjustments@@QAE@XZ 100541f0 f   GlyphPositionAdjustments.obj
+ 0001:00053260       ?getEntryPoint@GlyphPositionAdjustments@@QBEPBULEPoint@@JAAU2@@Z 10054260 f   GlyphPositionAdjustments.obj
+ 0001:00053290       ?getExitPoint@GlyphPositionAdjustments@@QBEPBULEPoint@@JAAU2@@Z 10054290 f   GlyphPositionAdjustments.obj
+ 0001:000532c0       ?setEntryPoint@GlyphPositionAdjustments@@QAEXJAAULEPoint@@D@Z 100542c0 f   GlyphPositionAdjustments.obj
+ 0001:00053350       ?setExitPoint@GlyphPositionAdjustments@@QAEXJAAULEPoint@@D@Z 10054350 f   GlyphPositionAdjustments.obj
+ 0001:000533e0       ?setCursiveGlyph@GlyphPositionAdjustments@@QAEXJD@Z 100543e0 f   GlyphPositionAdjustments.obj
+ 0001:00053470       ?applyCursiveAdjustments@GlyphPositionAdjustments@@QAEXAAVLEGlyphStorage@@DPBVLEFontInstance@@@Z 10054470 f   GlyphPositionAdjustments.obj
+ 0001:000536c0       ?getEntryPoint@EntryExitPoint@GlyphPositionAdjustments@@QBEPAULEPoint@@AAU3@@Z 100546c0 f   GlyphPositionAdjustments.obj
+ 0001:00053700       ?getExitPoint@EntryExitPoint@GlyphPositionAdjustments@@QBEPAULEPoint@@AAU3@@Z 10054700 f   GlyphPositionAdjustments.obj
+ 0001:00053740       ??0Adjustment@GlyphPositionAdjustments@@QAE@XZ 10054740 f i GlyphPositionAdjustments.obj
+ 0001:00053780       ??_H@YGXPAXIHP6EPAX0@Z@Z   10054780 f i GlyphPositionAdjustments.obj
+ 0001:000537b0       ??_I@YGXPAXIHP6EX0@Z@Z     100547b0 f i GlyphPositionAdjustments.obj
+ 0001:000537e0       ??_EEntryExitPoint@GlyphPositionAdjustments@@QAEPAXI@Z 100547e0 f i GlyphPositionAdjustments.obj
+ 0001:000537e0       ??_EAdjustment@GlyphPositionAdjustments@@QAEPAXI@Z 100547e0 f i GlyphPositionAdjustments.obj
+ 0001:00053850       ??0EntryExitPoint@GlyphPositionAdjustments@@QAE@XZ 10054850 f i GlyphPositionAdjustments.obj
+ 0001:00053890       ?setEntryPoint@EntryExitPoint@GlyphPositionAdjustments@@QAEXAAULEPoint@@D@Z 10054890 f i GlyphPositionAdjustments.obj
+ 0001:000538e0       ?setExitPoint@EntryExitPoint@GlyphPositionAdjustments@@QAEXAAULEPoint@@D@Z 100548e0 f i GlyphPositionAdjustments.obj
+ 0001:00053930       ?setCursiveGlyph@EntryExitPoint@GlyphPositionAdjustments@@QAEXD@Z 10054930 f i GlyphPositionAdjustments.obj
+ 0001:00053970       ?isCursiveGlyph@GlyphPositionAdjustments@@QBEDJ@Z 10054970 f i GlyphPositionAdjustments.obj
+ 0001:000539b0       ?isCursiveGlyph@EntryExitPoint@GlyphPositionAdjustments@@QBEDXZ 100549b0 f i GlyphPositionAdjustments.obj
+ 0001:000539d0       ?baselineIsLogicalEnd@GlyphPositionAdjustments@@QBEDJ@Z 100549d0 f i GlyphPositionAdjustments.obj
+ 0001:00053a10       ?baselineIsLogicalEnd@EntryExitPoint@GlyphPositionAdjustments@@QBEDXZ 10054a10 f i GlyphPositionAdjustments.obj
+ 0001:00053a30       ?hasCursiveGlyphs@GlyphPositionAdjustments@@QBEDXZ 10054a30 f i GlyphPositionAdjustments.obj
+ 0001:00053a50       ??0GlyphPositioningLookupProcessor@@QAE@PBUGlyphPositioningTableHeader@@KKPBUFeatureMap@@JD@Z 10054a50 f   GlyphPosnLookupProc.obj
+ 0001:00053ac0       ??0GlyphPositioningLookupProcessor@@IAE@XZ 10054ac0 f   GlyphPosnLookupProc.obj
+ 0001:00053ae0       ?applySubtable@GlyphPositioningLookupProcessor@@UBEKPBULookupSubtable@@GPAVGlyphIterator@@PBVLEFontInstance@@@Z 10054ae0 f   GlyphPosnLookupProc.obj
+ 0001:00053c50       ??1GlyphPositioningLookupProcessor@@UAE@XZ 10054c50 f   GlyphPosnLookupProc.obj
+ 0001:00053c70       ??_GGlyphPositioningLookupProcessor@@UAEPAXI@Z 10054c70 f i GlyphPosnLookupProc.obj
+ 0001:00053c70       ??_EGlyphPositioningLookupProcessor@@UAEPAXI@Z 10054c70 f i GlyphPosnLookupProc.obj
+ 0001:00053ca0       ?process@GlyphPositioningTableHeader@@QBEXAAVLEGlyphStorage@@PAVGlyphPositionAdjustments@@DKKPBUGlyphDefinitionTableHeader@@PBVLEFontInstance@@PBUFeatureMap@@JD@Z 10054ca0 f   GlyphPositioningTables.obj
+ 0001:00053d10       ??0GlyphSubstitutionLookupProcessor@@QAE@PBUGlyphSubstitutionTableHeader@@KKPBVLEGlyphFilter@@PBUFeatureMap@@JD@Z 10054d10 f   GlyphSubstLookupProc.obj
+ 0001:00053d90       ??0GlyphSubstitutionLookupProcessor@@IAE@XZ 10054d90 f   GlyphSubstLookupProc.obj
+ 0001:00053db0       ?applySubtable@GlyphSubstitutionLookupProcessor@@UBEKPBULookupSubtable@@GPAVGlyphIterator@@PBVLEFontInstance@@@Z 10054db0 f   GlyphSubstLookupProc.obj
+ 0001:00053ef0       ??1GlyphSubstitutionLookupProcessor@@UAE@XZ 10054ef0 f   GlyphSubstLookupProc.obj
+ 0001:00053f10       ??_GGlyphSubstitutionLookupProcessor@@UAEPAXI@Z 10054f10 f i GlyphSubstLookupProc.obj
+ 0001:00053f10       ??_EGlyphSubstitutionLookupProcessor@@UAEPAXI@Z 10054f10 f i GlyphSubstLookupProc.obj
+ 0001:00053f40       ?process@GlyphSubstitutionTableHeader@@QBEJAAVLEGlyphStorage@@DKKPBUGlyphDefinitionTableHeader@@PBVLEGlyphFilter@@PBUFeatureMap@@JD@Z 10054f40 f   GlyphSubstitutionTables.obj
+ 0001:00053fa0       ?shape@HebrewShaping@@SAXPBGJJJDPAPBK@Z 10054fa0 f   HebrewShaping.obj
+ 0001:00054010       ?getCharClass@IndicClassTable@@QBEKG@Z 10055010 f   IndicClassTables.obj
+ 0001:00054080       ?getScriptClassTable@IndicClassTable@@SAPBU1@J@Z 10055080 f   IndicClassTables.obj
+ 0001:000540a0       ?getWorstCaseExpansion@IndicReordering@@SAJJ@Z 100550a0 f   IndicClassTables.obj
+ 0001:000540d0       ?getFeatureMap@IndicReordering@@SAPBUFeatureMap@@AAJ@Z 100550d0 f   IndicReordering.obj
+ 0001:000540f0       ?findSyllable@IndicReordering@@CAJPBUIndicClassTable@@PBGJJ@Z 100550f0 f   IndicReordering.obj
+ 0001:00054160       ?reorder@IndicReordering@@SAJPBGJJPAGAAVLEGlyphStorage@@PAPAVMPreFixups@@@Z 10055160 f   IndicReordering.obj
+ 0001:00054c70       ?adjustMPres@IndicReordering@@SAXPAVMPreFixups@@AAVLEGlyphStorage@@@Z 10055c70 f   IndicReordering.obj
+ 0001:00054cc0       ?isConsonant@IndicClassTable@@SADK@Z 10055cc0 f i IndicReordering.obj
+ 0001:00054cd0       ?isVirama@IndicClassTable@@SADK@Z 10055cd0 f i IndicReordering.obj
+ 0001:00054cf0       ?isVattu@IndicClassTable@@SADK@Z 10055cf0 f i IndicReordering.obj
+ 0001:00054d00       ?hasPostOrBelowBaseForm@IndicClassTable@@SADK@Z 10055d00 f i IndicReordering.obj
+ 0001:00054d10       ?hasPostBaseForm@IndicClassTable@@SADK@Z 10055d10 f i IndicReordering.obj
+ 0001:00054d20       ?hasBelowBaseForm@IndicClassTable@@SADK@Z 10055d20 f i IndicReordering.obj
+ 0001:00054d30       ?isVowelModifier@IndicClassTable@@QBEDG@Z 10055d30 f i IndicReordering.obj
+ 0001:00054d60       ?isVowelModifier@IndicClassTable@@SADK@Z 10055d60 f i IndicReordering.obj
+ 0001:00054d80       ?isStressMark@IndicClassTable@@QBEDG@Z 10055d80 f i IndicReordering.obj
+ 0001:00054db0       ?isStressMark@IndicClassTable@@SADK@Z 10055db0 f i IndicReordering.obj
+ 0001:00054dd0       ?isConsonant@IndicClassTable@@QBEDG@Z 10055dd0 f i IndicReordering.obj
+ 0001:00054e00       ?isReph@IndicClassTable@@QBEDG@Z 10055e00 f i IndicReordering.obj
+ 0001:00054e30       ?isReph@IndicClassTable@@SADK@Z 10055e30 f i IndicReordering.obj
+ 0001:00054e40       ?isVirama@IndicClassTable@@QBEDG@Z 10055e40 f i IndicReordering.obj
+ 0001:00054e70       ?isNukta@IndicClassTable@@QBEDG@Z 10055e70 f i IndicReordering.obj
+ 0001:00054ea0       ?isNukta@IndicClassTable@@SADK@Z 10055ea0 f i IndicReordering.obj
+ 0001:00054ec0       ??0ReorderingOutput@@QAE@PAGAAVLEGlyphStorage@@PAVMPreFixups@@@Z 10055ec0 f i IndicReordering.obj
+ 0001:00054fd0       ??1Adjustment@GlyphPositionAdjustments@@QAE@XZ 10055fd0 f i GlyphPositionAdjustments.obj
+ 0001:00054fd0       ??1EntryExitPoint@GlyphPositionAdjustments@@QAE@XZ 10055fd0 f i GlyphPositionAdjustments.obj
+ 0001:00054fd0       ??1ReorderingOutput@@QAE@XZ 10055fd0 f i IndicReordering.obj
+ 0001:00054fe0       ?reset@ReorderingOutput@@QAEXXZ 10055fe0 f i IndicReordering.obj
+ 0001:00055050       ?writeChar@ReorderingOutput@@QAEXGKK@Z 10056050 f i IndicReordering.obj
+ 0001:000550c0       ?noteMatra@ReorderingOutput@@QAEDPBUIndicClassTable@@GKKD@Z 100560c0 f i IndicReordering.obj
+ 0001:000551c0       ?getSplitMatra@IndicClassTable@@QBEPAY02$$CBGK@Z 100561c0 f i IndicReordering.obj
+ 0001:000551f0       ?isMatra@IndicClassTable@@SADK@Z 100561f0 f i IndicReordering.obj
+ 0001:00055220       ?isSplitMatra@IndicClassTable@@SADK@Z 10056220 f i IndicReordering.obj
+ 0001:00055230       ?saveMatra@ReorderingOutput@@AAEXGJK@Z 10056230 f i IndicReordering.obj
+ 0001:00055330       ?isLengthMark@IndicClassTable@@SADK@Z 10056330 f i IndicReordering.obj
+ 0001:00055340       ?noteVowelModifier@ReorderingOutput@@QAEXPBUIndicClassTable@@GKK@Z 10056340 f i IndicReordering.obj
+ 0001:000553c0       ?noteStressMark@ReorderingOutput@@QAEXPBUIndicClassTable@@GKK@Z 100563c0 f i IndicReordering.obj
+ 0001:00055440       ?noteBaseConsonant@ReorderingOutput@@QAEXXZ 10056440 f i IndicReordering.obj
+ 0001:00055480       ?writeVirama@ReorderingOutput@@QAEXXZ 10056480 f i IndicReordering.obj
+ 0001:000554c0       ?writeMpre@ReorderingOutput@@QAEXXZ 100564c0 f i IndicReordering.obj
+ 0001:00055500       ?writeMbelow@ReorderingOutput@@QAEXXZ 10056500 f i IndicReordering.obj
+ 0001:00055540       ?writeMabove@ReorderingOutput@@QAEXXZ 10056540 f i IndicReordering.obj
+ 0001:00055580       ?writeMpost@ReorderingOutput@@QAEXXZ 10056580 f i IndicReordering.obj
+ 0001:000555c0       ?writeLengthMark@ReorderingOutput@@QAEXXZ 100565c0 f i IndicReordering.obj
+ 0001:00055600       ?writeVMabove@ReorderingOutput@@QAEXXZ 10056600 f i IndicReordering.obj
+ 0001:00055640       ?writeVMpost@ReorderingOutput@@QAEXXZ 10056640 f i IndicReordering.obj
+ 0001:00055680       ?writeSMabove@ReorderingOutput@@QAEXXZ 10056680 f i IndicReordering.obj
+ 0001:000556c0       ?writeSMbelow@ReorderingOutput@@QAEXXZ 100566c0 f i IndicReordering.obj
+ 0001:00055700       ?getOutputIndex@ReorderingOutput@@QAEJXZ 10056700 f i IndicReordering.obj
+ 0001:00055710       ??_GMPreFixups@@QAEPAXI@Z  10056710 f i IndicReordering.obj
+ 0001:00055740       ??0KernTable@@QAE@PBVLEFontInstance@@PBX@Z 10056740 f   KernTable.obj
+ 0001:00055910       ?process@KernTable@@QAEXAAVLEGlyphStorage@@@Z 10056910 f   KernTable.obj
+ 0001:00055aa0       ??0KhmerOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJPBUGlyphSubstitutionTableHeader@@@Z 10056aa0 f   KhmerLayoutEngine.obj
+ 0001:00055b00       ??0KhmerOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJ@Z 10056b00 f   KhmerLayoutEngine.obj
+ 0001:00055b50       ??1KhmerOpenTypeLayoutEngine@@UAE@XZ 10056b50 f   KhmerLayoutEngine.obj
+ 0001:00055b70       ?characterProcessing@KhmerOpenTypeLayoutEngine@@MAEJQBGJJJDAAPAGAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 10056b70 f   KhmerLayoutEngine.obj
+ 0001:00055c70       ??_GKhmerOpenTypeLayoutEngine@@UAEPAXI@Z 10056c70 f i KhmerLayoutEngine.obj
+ 0001:00055c70       ??_EKhmerOpenTypeLayoutEngine@@UAEPAXI@Z 10056c70 f i KhmerLayoutEngine.obj
+ 0001:00055ca0       ?getCharClass@KhmerClassTable@@QBEKG@Z 10056ca0 f   KhmerReordering.obj
+ 0001:00055d10       ?getKhmerClassTable@KhmerClassTable@@SAPBU1@XZ 10056d10 f   KhmerReordering.obj
+ 0001:00055d20       ?getFeatureMap@KhmerReordering@@SAPBUFeatureMap@@AAJ@Z 10056d20 f   KhmerReordering.obj
+ 0001:00055d40       ?findSyllable@KhmerReordering@@CAJPBUKhmerClassTable@@PBGJJ@Z 10056d40 f   KhmerReordering.obj
+ 0001:00055db0       ?reorder@KhmerReordering@@SAJPBGJJPAGAAVLEGlyphStorage@@@Z 10056db0 f   KhmerReordering.obj
+ 0001:00056290       ??0ReorderingOutput@@QAE@PAGAAVLEGlyphStorage@@@Z 10057290 f i KhmerReordering.obj
+ 0001:000562c0       ??0LEGlyphStorage@@QAE@XZ  100572c0 f   LEGlyphStorage.obj
+ 0001:00056330       ??1LEGlyphStorage@@QAE@XZ  10057330 f   LEGlyphStorage.obj
+ 0001:00056350       ?reset@LEGlyphStorage@@QAEXXZ 10057350 f   LEGlyphStorage.obj
+ 0001:00056440       ?allocateGlyphArray@LEGlyphStorage@@QAEXJDAAW4LEErrorCode@@@Z 10057440 f   LEGlyphStorage.obj
+ 0001:000565b0       ?allocatePositions@LEGlyphStorage@@QAEJAAW4LEErrorCode@@@Z 100575b0 f   LEGlyphStorage.obj
+ 0001:00056610       ?allocateAuxData@LEGlyphStorage@@QAEJAAW4LEErrorCode@@@Z 10057610 f   LEGlyphStorage.obj
+ 0001:00056660       ?getCharIndices@LEGlyphStorage@@QBEXQAJJAAW4LEErrorCode@@@Z 10057660 f   LEGlyphStorage.obj
+ 0001:000566e0       ?getCharIndices@LEGlyphStorage@@QBEXQAJAAW4LEErrorCode@@@Z 100576e0 f   LEGlyphStorage.obj
+ 0001:00056740       ?getGlyphs@LEGlyphStorage@@QBEXQAKKAAW4LEErrorCode@@@Z 10057740 f   LEGlyphStorage.obj
+ 0001:000567c0       ?getGlyphs@LEGlyphStorage@@QBEXQAKAAW4LEErrorCode@@@Z 100577c0 f   LEGlyphStorage.obj
+ 0001:00056820       ?getGlyphID@LEGlyphStorage@@QBEKJAAW4LEErrorCode@@@Z 10057820 f   LEGlyphStorage.obj
+ 0001:00056890       ?setGlyphID@LEGlyphStorage@@QAEXJKAAW4LEErrorCode@@@Z 10057890 f   LEGlyphStorage.obj
+ 0001:000568f0       ?getCharIndex@LEGlyphStorage@@QBEJJAAW4LEErrorCode@@@Z 100578f0 f   LEGlyphStorage.obj
+ 0001:00056950       ?setCharIndex@LEGlyphStorage@@QAEXJJAAW4LEErrorCode@@@Z 10057950 f   LEGlyphStorage.obj
+ 0001:000569b0       ?getAuxData@LEGlyphStorage@@QBEXQAKAAW4LEErrorCode@@@Z 100579b0 f   LEGlyphStorage.obj
+ 0001:00056a10       ?getAuxData@LEGlyphStorage@@QBEKJAAW4LEErrorCode@@@Z 10057a10 f   LEGlyphStorage.obj
+ 0001:00056a70       ?setAuxData@LEGlyphStorage@@QAEXJKAAW4LEErrorCode@@@Z 10057a70 f   LEGlyphStorage.obj
+ 0001:00056ad0       ?getGlyphPositions@LEGlyphStorage@@QBEXQAMAAW4LEErrorCode@@@Z 10057ad0 f   LEGlyphStorage.obj
+ 0001:00056b30       ?getGlyphPosition@LEGlyphStorage@@QBEXJAAM0AAW4LEErrorCode@@@Z 10057b30 f   LEGlyphStorage.obj
+ 0001:00056ba0       ?setPosition@LEGlyphStorage@@QAEXJMMAAW4LEErrorCode@@@Z 10057ba0 f   LEGlyphStorage.obj
+ 0001:00056c00       ?adjustPosition@LEGlyphStorage@@QAEXJMMAAW4LEErrorCode@@@Z 10057c00 f   LEGlyphStorage.obj
+ 0001:00056c80       ?adoptGlyphArray@LEGlyphStorage@@QAEXAAV1@@Z 10057c80 f   LEGlyphStorage.obj
+ 0001:00056d10       ?adoptCharIndicesArray@LEGlyphStorage@@QAEXAAV1@@Z 10057d10 f   LEGlyphStorage.obj
+ 0001:00056d50       ?adoptPositionArray@LEGlyphStorage@@QAEXAAV1@@Z 10057d50 f   LEGlyphStorage.obj
+ 0001:00056d90       ?adoptAuxDataArray@LEGlyphStorage@@QAEXAAV1@@Z 10057d90 f   LEGlyphStorage.obj
+ 0001:00056dd0       ?adoptGlyphCount@LEGlyphStorage@@QAEXAAV1@@Z 10057dd0 f   LEGlyphStorage.obj
+ 0001:00056df0       ?adoptGlyphCount@LEGlyphStorage@@QAEXJ@Z 10057df0 f   LEGlyphStorage.obj
+ 0001:00056e10       ?insertGlyphs@LEGlyphStorage@@QAEPAKJJ@Z 10057e10 f   LEGlyphStorage.obj
+ 0001:00056e30       ?applyInsertions@LEGlyphStorage@@QAEJXZ 10057e30 f   LEGlyphStorage.obj
+ 0001:00056f10       ?applyInsertion@LEGlyphStorage@@MAEDJJQAK@Z 10057f10 f   LEGlyphStorage.obj
+ 0001:00057090       ??0LEInsertionCallback@@QAE@XZ 10058090 f i LEGlyphStorage.obj
+ 0001:000570b0       ??_GLEInsertionList@@QAEPAXI@Z 100580b0 f i LEGlyphStorage.obj
+ 0001:000570e0       ??0LEInsertionList@@QAE@D@Z 100580e0 f   LEInsertionList.obj
+ 0001:00057120       ??1LEInsertionList@@QAE@XZ 10058120 f   LEInsertionList.obj
+ 0001:00057140       ?reset@LEInsertionList@@QAEXXZ 10058140 f   LEInsertionList.obj
+ 0001:00057190       ?getGrowAmount@LEInsertionList@@QAEJXZ 10058190 f   LEInsertionList.obj
+ 0001:000571b0       ?insert@LEInsertionList@@QAEPAKJJ@Z 100581b0 f   LEInsertionList.obj
+ 0001:00057240       ?applyInsertions@LEInsertionList@@QAEDPAVLEInsertionCallback@@@Z 10058240 f   LEInsertionList.obj
+ 0001:000572a0       ?process@LigatureSubstitutionSubtable@@QBEKPAVGlyphIterator@@PBVLEGlyphFilter@@@Z 100582a0 f   LigatureSubstSubtables.obj
+ 0001:000574b0       ?applyLookupTable@LookupProcessor@@QBEKPBULookupTable@@PAVGlyphIterator@@PBVLEFontInstance@@@Z 100584b0 f   LookupProcessor.obj
+ 0001:00057560       ?process@LookupProcessor@@QBEJAAVLEGlyphStorage@@PAVGlyphPositionAdjustments@@DPBUGlyphDefinitionTableHeader@@PBVLEFontInstance@@@Z 10058560 f   LookupProcessor.obj
+ 0001:000576a0       ?applySingleLookup@LookupProcessor@@QBEKGPAVGlyphIterator@@PBVLEFontInstance@@@Z 100586a0 f   LookupProcessor.obj
+ 0001:00057710       ?selectLookups@LookupProcessor@@IAEJPBUFeatureTable@@KJ@Z 10058710 f   LookupProcessor.obj
+ 0001:000577d0       ??0LookupProcessor@@IAE@PBDGGGKKPBUFeatureMap@@JD@Z 100587d0 f   LookupProcessor.obj
+ 0001:00057c70       ??0LookupProcessor@@IAE@XZ 10058c70 f   LookupProcessor.obj
+ 0001:00057c90       ??1LookupProcessor@@UAE@XZ 10058c90 f   LookupProcessor.obj
+ 0001:00057cd0       ??_GLookupProcessor@@UAEPAXI@Z 10058cd0 f i LookupProcessor.obj
+ 0001:00057cd0       ??_ELookupProcessor@@UAEPAXI@Z 10058cd0 f i LookupProcessor.obj
+ 0001:00057d00       ?getLookupTable@LookupListTable@@QBEPBULookupTable@@G@Z 10058d00 f   Lookups.obj
+ 0001:00057d60       ?getLookupSubtable@LookupTable@@QBEPBULookupSubtable@@G@Z 10058d60 f   Lookups.obj
+ 0001:00057dc0       ?getGlyphCoverage@LookupSubtable@@QBEJGK@Z 10058dc0 f   Lookups.obj
+ 0001:00057e00       ?getMarkClass@MarkArray@@QBEJKJPBVLEFontInstance@@AAULEPoint@@@Z 10058e00 f   MarkArrays.obj
+ 0001:00057e90       ?findBaseGlyph@MarkToBasePositioningSubtable@@QBEKPAVGlyphIterator@@@Z 10058e90 f   MarkToBasePosnSubtables.obj
+ 0001:00057ec0       ?process@MarkToBasePositioningSubtable@@QBEJPAVGlyphIterator@@PBVLEFontInstance@@@Z 10058ec0 f   MarkToBasePosnSubtables.obj
+ 0001:00058180       ?getBaseCoverage@AttachmentPositioningSubtable@@QBEJK@Z 10059180 f i MarkToBasePosnSubtables.obj
+ 0001:000581b0       ?findLigatureGlyph@MarkToLigaturePositioningSubtable@@QBEKPAVGlyphIterator@@@Z 100591b0 f   MarkToLigaturePosnSubtables.obj
+ 0001:000581e0       ?process@MarkToLigaturePositioningSubtable@@QBEJPAVGlyphIterator@@PBVLEFontInstance@@@Z 100591e0 f   MarkToLigaturePosnSubtables.obj
+ 0001:000584e0       ?findMark2Glyph@MarkToMarkPositioningSubtable@@QBEKPAVGlyphIterator@@@Z 100594e0 f   MarkToMarkPosnSubtables.obj
+ 0001:00058510       ?process@MarkToMarkPositioningSubtable@@QBEJPAVGlyphIterator@@PBVLEFontInstance@@@Z 10059510 f   MarkToMarkPosnSubtables.obj
+ 0001:000587c0       ?process@MultipleSubstitutionSubtable@@QBEKPAVGlyphIterator@@PBVLEGlyphFilter@@@Z 100597c0 f   MultipleSubstSubtables.obj
+ 0001:000589f0       ?highBit@OpenTypeUtilities@@SACJ@Z 100599f0 f   OpenTypeUtilities.obj
+ 0001:00058a90       ?getTagOffset@OpenTypeUtilities@@SAGKPBUTagAndOffsetRecord@@J@Z 10059a90 f   OpenTypeUtilities.obj
+ 0001:00058c00       ?getGlyphRangeIndex@OpenTypeUtilities@@SAJGPBUGlyphRangeRecord@@J@Z 10059c00 f   OpenTypeUtilities.obj
+ 0001:00058cf0       ?search@OpenTypeUtilities@@SAJKQBKJ@Z 10059cf0 f   OpenTypeUtilities.obj
+ 0001:00058d70       ?search@OpenTypeUtilities@@SAJGQBGJ@Z 10059d70 f   OpenTypeUtilities.obj
+ 0001:00058e00       ?sort@OpenTypeUtilities@@SAXPAGJ@Z 10059e00 f   OpenTypeUtilities.obj
+ 0001:00058e90       ?process@PairPositioningSubtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 10059e90 f   PairPositioningSubtables.obj
+ 0001:00058f00       ?process@PairPositioningFormat1Subtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 10059f00 f   PairPositioningSubtables.obj
+ 0001:000590d0       ?process@PairPositioningFormat2Subtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 1005a0d0 f   PairPositioningSubtables.obj
+ 0001:000592a0       ?findPairValueRecord@PairPositioningFormat1Subtable@@ABEPBUPairValueRecord@@GPBU2@GG@Z 1005a2a0 f   PairPositioningSubtables.obj
+ 0001:00059390       ?findLanguage@ScriptTable@@QBEPBULangSysTable@@KD@Z 1005a390 f   ScriptAndLanguage.obj
+ 0001:00059430       ?findScript@ScriptListTable@@QBEPBUScriptTable@@K@Z 1005a430 f   ScriptAndLanguage.obj
+ 0001:00059490       ?findLanguage@ScriptListTable@@QBEPBULangSysTable@@KKD@Z 1005a490 f   ScriptAndLanguage.obj
+ 0001:000594d0       ?process@SinglePositioningSubtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 1005a4d0 f   SinglePositioningSubtables.obj
+ 0001:00059540       ?process@SinglePositioningFormat1Subtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 1005a540 f   SinglePositioningSubtables.obj
+ 0001:000595a0       ?process@SinglePositioningFormat2Subtable@@QBEKPAVGlyphIterator@@PBVLEFontInstance@@@Z 1005a5a0 f   SinglePositioningSubtables.obj
+ 0001:00059610       ?process@SingleSubstitutionSubtable@@QBEKPAVGlyphIterator@@PBVLEGlyphFilter@@@Z 1005a610 f   SingleSubstitutionSubtables.obj
+ 0001:00059680       ?process@SingleSubstitutionFormat1Subtable@@QBEKPAVGlyphIterator@@PBVLEGlyphFilter@@@Z 1005a680 f   SingleSubstitutionSubtables.obj
+ 0001:00059720       ?process@SingleSubstitutionFormat2Subtable@@QBEKPAVGlyphIterator@@PBVLEGlyphFilter@@@Z 1005a720 f   SingleSubstitutionSubtables.obj
+ 0001:000597b0       ?applySubstitutionLookups@SubstitutionLookup@@SAXPAVLookupProcessor@@PAUSubstitutionLookupRecord@@GPAVGlyphIterator@@PBVLEFontInstance@@J@Z 1005a7b0 f   SubstitutionLookups.obj
+ 0001:00059850       ?getCharClass@ThaiShaping@@CAEG@Z 1005a850 f   ThaiShaping.obj
+ 0001:00059890       ?leftAboveVowel@ThaiShaping@@CAGGE@Z 1005a890 f   ThaiShaping.obj
+ 0001:000598e0       ?lowerRightTone@ThaiShaping@@CAGGE@Z 1005a8e0 f   ThaiShaping.obj
+ 0001:00059920       ?lowerLeftTone@ThaiShaping@@CAGGE@Z 1005a920 f   ThaiShaping.obj
+ 0001:00059960       ?upperLeftTone@ThaiShaping@@CAGGE@Z 1005a960 f   ThaiShaping.obj
+ 0001:000599a0       ?lowerBelowVowel@ThaiShaping@@CAGGE@Z 1005a9a0 f   ThaiShaping.obj
+ 0001:000599e0       ?noDescenderCOD@ThaiShaping@@CAGGE@Z 1005a9e0 f   ThaiShaping.obj
+ 0001:00059a20       ?doTransition@ThaiShaping@@CAEUStateTransition@1@GJEGPAGAAVLEGlyphStorage@@AAJ@Z 1005aa20 f   ThaiShaping.obj
+ 0001:00059dd0       ?getNextState@ThaiShaping@@CAEGEJEGAAEPAGAAVLEGlyphStorage@@AAJ@Z 1005add0 f   ThaiShaping.obj
+ 0001:00059e40       ?isLegalHere@ThaiShaping@@CADGE@Z 1005ae40 f   ThaiShaping.obj
+ 0001:00059eb0       ?compose@ThaiShaping@@SAJPBGJJEGPAGAAVLEGlyphStorage@@@Z 1005aeb0 f   ThaiShaping.obj
+ 0001:0005a030       ?getTransition@ThaiShaping@@CA?AUStateTransition@1@EE@Z 1005b030 f i ThaiShaping.obj
+ 0001:0005a050       ?getFieldValue@ValueRecord@@QBEFGF@Z 1005b050 f   ValueRecords.obj
+ 0001:0005a0a0       ?getFieldValue@ValueRecord@@QBEFFGF@Z 1005b0a0 f   ValueRecords.obj
+ 0001:0005a110       ?adjustPosition@ValueRecord@@QBEXGPBDAAVGlyphIterator@@PBVLEFontInstance@@@Z 1005b110 f   ValueRecords.obj
+ 0001:0005a4d0       ?adjustPosition@ValueRecord@@QBEXFGPBDAAVGlyphIterator@@PBVLEFontInstance@@@Z 1005b4d0 f   ValueRecords.obj
+ 0001:0005a8b0       ?getSize@ValueRecord@@SAFG@Z 1005b8b0 f   ValueRecords.obj
+ 0001:0005a8d0       ?getFieldCount@ValueRecord@@CAFG@Z 1005b8d0 f   ValueRecords.obj
+ 0001:0005a930       ?getFieldIndex@ValueRecord@@CAFGF@Z 1005b930 f   ValueRecords.obj
+ 0001:0005a950       ?accept@CharSubstitutionFilter@@UBEDK@Z 1005b950 f   ArabicLayoutEngine.obj
+ 0001:0005a980       ??0ArabicOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJPBUGlyphSubstitutionTableHeader@@@Z 1005b980 f   ArabicLayoutEngine.obj
+ 0001:0005a9e0       ??0ArabicOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJ@Z 1005b9e0 f   ArabicLayoutEngine.obj
+ 0001:0005aa30       ??1ArabicOpenTypeLayoutEngine@@UAE@XZ 1005ba30 f   ArabicLayoutEngine.obj
+ 0001:0005aa50       ?characterProcessing@ArabicOpenTypeLayoutEngine@@MAEJQBGJJJDAAPAGAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005ba50 f   ArabicLayoutEngine.obj
+ 0001:0005ab60       ?adjustGlyphPositions@ArabicOpenTypeLayoutEngine@@MAEXQBGJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005bb60 f   ArabicLayoutEngine.obj
+ 0001:0005ac40       ??0UnicodeArabicOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJ@Z 1005bc40 f   ArabicLayoutEngine.obj
+ 0001:0005acc0       ??1UnicodeArabicOpenTypeLayoutEngine@@UAE@XZ 1005bcc0 f   ArabicLayoutEngine.obj
+ 0001:0005ad10       ?glyphPostProcessing@UnicodeArabicOpenTypeLayoutEngine@@MAEJAAVLEGlyphStorage@@0AAW4LEErrorCode@@@Z 1005bd10 f   ArabicLayoutEngine.obj
+ 0001:0005ade0       ?mapCharsToGlyphs@UnicodeArabicOpenTypeLayoutEngine@@MAEXQBGJJDDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005bde0 f   ArabicLayoutEngine.obj
+ 0001:0005aea0       ?adjustGlyphPositions@UnicodeArabicOpenTypeLayoutEngine@@MAEXQBGJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005bea0 f   ArabicLayoutEngine.obj
+ 0001:0005af20       ??_EArabicOpenTypeLayoutEngine@@UAEPAXI@Z 1005bf20 f i ArabicLayoutEngine.obj
+ 0001:0005af20       ??_GArabicOpenTypeLayoutEngine@@UAEPAXI@Z 1005bf20 f i ArabicLayoutEngine.obj
+ 0001:0005af50       ??_EUnicodeArabicOpenTypeLayoutEngine@@UAEPAXI@Z 1005bf50 f i ArabicLayoutEngine.obj
+ 0001:0005af50       ??_GUnicodeArabicOpenTypeLayoutEngine@@UAEPAXI@Z 1005bf50 f i ArabicLayoutEngine.obj
+ 0001:0005af80       ?getShapeType@ArabicShaping@@CAJG@Z 1005bf80 f   ArabicShaping.obj
+ 0001:0005afc0       ?getFeatureMap@ArabicShaping@@SAPBUFeatureMap@@AAJ@Z 1005bfc0 f   ArabicShaping.obj
+ 0001:0005afe0       ?adjustTags@ArabicShaping@@CAXJJAAVLEGlyphStorage@@@Z 1005bfe0 f   ArabicShaping.obj
+ 0001:0005b040       ?shape@ArabicShaping@@SAXPBGJJJDAAVLEGlyphStorage@@@Z 1005c040 f   ArabicShaping.obj
+ 0001:0005b250       ??0GXLayoutEngine@@QAE@PBVLEFontInstance@@JJPBUMorphTableHeader@@@Z 1005c250 f   GXLayoutEngine.obj
+ 0001:0005b290       ??1GXLayoutEngine@@UAE@XZ  1005c290 f   GXLayoutEngine.obj
+ 0001:0005b2c0       ?computeGlyphs@GXLayoutEngine@@MAEJQBGJJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005c2c0 f   GXLayoutEngine.obj
+ 0001:0005b360       ?adjustGlyphPositions@GXLayoutEngine@@MAEXQBGJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005c360 f   GXLayoutEngine.obj
+ 0001:0005b3a0       ??_EGXLayoutEngine@@UAEPAXI@Z 1005c3a0 f i GXLayoutEngine.obj
+ 0001:0005b3a0       ??_GGXLayoutEngine@@UAEPAXI@Z 1005c3a0 f i GXLayoutEngine.obj
+ 0001:0005b3d0       ??0IndicOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJPBUGlyphSubstitutionTableHeader@@@Z 1005c3d0 f   IndicLayoutEngine.obj
+ 0001:0005b430       ??0IndicOpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJ@Z 1005c430 f   IndicLayoutEngine.obj
+ 0001:0005b490       ??1IndicOpenTypeLayoutEngine@@UAE@XZ 1005c490 f   IndicLayoutEngine.obj
+ 0001:0005b4b0       ?glyphProcessing@IndicOpenTypeLayoutEngine@@MAEJQBGJJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005c4b0 f   IndicLayoutEngine.obj
+ 0001:0005b550       ?characterProcessing@IndicOpenTypeLayoutEngine@@MAEJQBGJJJDAAPAGAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005c550 f   IndicLayoutEngine.obj
+ 0001:0005b670       ??_EIndicOpenTypeLayoutEngine@@UAEPAXI@Z 1005c670 f i IndicLayoutEngine.obj
+ 0001:0005b670       ??_GIndicOpenTypeLayoutEngine@@UAEPAXI@Z 1005c670 f i IndicLayoutEngine.obj
+ 0001:0005b6a0       ?mapChar@DefaultCharMapper@@UBEKK@Z 1005c6a0 f   LayoutEngine.obj
+ 0001:0005b7a0       ??1LEGlyphFilter@@UAE@XZ   1005c7a0 f   LayoutEngine.obj
+ 0001:0005b7c0       ??0CharSubstitutionFilter@@QAE@PBVLEFontInstance@@@Z 1005c7c0 f   LayoutEngine.obj
+ 0001:0005b7f0       ??1CharSubstitutionFilter@@UAE@XZ 1005c7f0 f   LayoutEngine.obj
+ 0001:0005b810       ??0LayoutEngine@@IAE@PBVLEFontInstance@@JJJ@Z 1005c810 f   LayoutEngine.obj
+ 0001:0005b890       ?getGlyphCount@LayoutEngine@@QBEJXZ 1005c890 f   LayoutEngine.obj
+ 0001:0005b8b0       ?getCharIndices@LayoutEngine@@QBEXQAJJAAW4LEErrorCode@@@Z 1005c8b0 f   LayoutEngine.obj
+ 0001:0005b8e0       ?getCharIndices@LayoutEngine@@QBEXQAJAAW4LEErrorCode@@@Z 1005c8e0 f   LayoutEngine.obj
+ 0001:0005b900       ?getGlyphs@LayoutEngine@@UBEXQAKKAAW4LEErrorCode@@@Z 1005c900 f   LayoutEngine.obj
+ 0001:0005b930       ?getGlyphs@LayoutEngine@@QBEXQAKAAW4LEErrorCode@@@Z 1005c930 f   LayoutEngine.obj
+ 0001:0005b950       ?getGlyphPositions@LayoutEngine@@QBEXQAMAAW4LEErrorCode@@@Z 1005c950 f   LayoutEngine.obj
+ 0001:0005b970       ?getGlyphPosition@LayoutEngine@@QBEXJAAM0AAW4LEErrorCode@@@Z 1005c970 f   LayoutEngine.obj
+ 0001:0005b9a0       ?characterProcessing@LayoutEngine@@MAEJQBGJJJDAAPAGAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005c9a0 f   LayoutEngine.obj
+ 0001:0005bc80       ?computeGlyphs@LayoutEngine@@MAEJQBGJJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005cc80 f   LayoutEngine.obj
+ 0001:0005bd80       ?positionGlyphs@LayoutEngine@@MAEXAAVLEGlyphStorage@@MMAAW4LEErrorCode@@@Z 1005cd80 f   LayoutEngine.obj
+ 0001:0005be50       ?adjustGlyphPositions@LayoutEngine@@MAEXQBGJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005ce50 f   LayoutEngine.obj
+ 0001:0005bec0       ?adjustMarkGlyphs@LayoutEngine@@KAXAAVLEGlyphStorage@@PAVLEGlyphFilter@@AAW4LEErrorCode@@@Z 1005cec0 f   LayoutEngine.obj
+ 0001:0005bfb0       ?adjustMarkGlyphs@LayoutEngine@@KAXQBGJDAAVLEGlyphStorage@@PAVLEGlyphFilter@@AAW4LEErrorCode@@@Z 1005cfb0 f   LayoutEngine.obj
+ 0001:0005c0d0       ?getFontTable@LayoutEngine@@MBEPBXK@Z 1005d0d0 f   LayoutEngine.obj
+ 0001:0005c100       ?mapCharsToGlyphs@LayoutEngine@@MAEXQBGJJDDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005d100 f   LayoutEngine.obj
+ 0001:0005c170       ?layoutChars@LayoutEngine@@QAEJQBGJJJDMMAAW4LEErrorCode@@@Z 1005d170 f   LayoutEngine.obj
+ 0001:0005c240       ?reset@LayoutEngine@@UAEXXZ 1005d240 f   LayoutEngine.obj
+ 0001:0005c260       ?layoutEngineFactory@LayoutEngine@@SAPAV1@PBVLEFontInstance@@JJAAW4LEErrorCode@@@Z 1005d260 f   LayoutEngine.obj
+ 0001:0005c280       ?layoutEngineFactory@LayoutEngine@@SAPAV1@PBVLEFontInstance@@JJJAAW4LEErrorCode@@@Z 1005d280 f   LayoutEngine.obj
+ 0001:0005c730       ??1LayoutEngine@@UAE@XZ    1005d730 f   LayoutEngine.obj
+ 0001:0005c780       ??_ECharSubstitutionFilter@@UAEPAXI@Z 1005d780 f i LayoutEngine.obj
+ 0001:0005c780       ??_GCharSubstitutionFilter@@UAEPAXI@Z 1005d780 f i LayoutEngine.obj
+ 0001:0005c7b0       ??_ELayoutEngine@@UAEPAXI@Z 1005d7b0 f i LayoutEngine.obj
+ 0001:0005c7b0       ??_GLayoutEngine@@UAEPAXI@Z 1005d7b0 f i LayoutEngine.obj
+ 0001:0005c7e0       ??0DefaultCharMapper@@QAE@DDD@Z 1005d7e0 f i LayoutEngine.obj
+ 0001:0005c820       ??1DefaultCharMapper@@UAE@XZ 1005d820 f i LayoutEngine.obj
+ 0001:0005c840       ??1LECharMapper@@UAE@XZ    1005d840 f i LayoutEngine.obj
+ 0001:0005c860       ??_ELECharMapper@@UAEPAXI@Z 1005d860 f i LayoutEngine.obj
+ 0001:0005c860       ??_GLECharMapper@@UAEPAXI@Z 1005d860 f i LayoutEngine.obj
+ 0001:0005c890       ??_GDefaultCharMapper@@UAEPAXI@Z 1005d890 f i LayoutEngine.obj
+ 0001:0005c890       ??_EDefaultCharMapper@@UAEPAXI@Z 1005d890 f i LayoutEngine.obj
+ 0001:0005c8c0       ??0LECharMapper@@QAE@XZ    1005d8c0 f i LayoutEngine.obj
+ 0001:0005c8e0       ??_GLEGlyphStorage@@QAEPAXI@Z 1005d8e0 f i LayoutEngine.obj
+ 0001:0005c910       ?getFloat@@YAXPAUJNIEnv_@@PAV_jobject@@AAM2@Z 1005d910 f   SunLayoutEngine.obj
+ 0001:0005c950       ?putFloat@@YAXPAUJNIEnv_@@PAV_jobject@@MM@Z 1005d950 f   SunLayoutEngine.obj
+ 0001:0005c990       _Java_sun_font_SunLayoutEngine_initGVIDs@8 1005d990 f   SunLayoutEngine.obj
+ 0001:0005cb50       ?putGV@@YAHPAUJNIEnv_@@JJPAV_jobject@@PBVLayoutEngine@@H@Z 1005db50 f   SunLayoutEngine.obj
+ 0001:0005cd50       _Java_sun_font_SunLayoutEngine_nativeLayout@68 1005dd50 f   SunLayoutEngine.obj
+ 0001:0005cf50       ?GetFloatField@JNIEnv_@@QAEMPAV_jobject@@PAU_jfieldID@@@Z 1005df50 f i SunLayoutEngine.obj
+ 0001:0005cf80       ?SetFloatField@JNIEnv_@@QAEXPAV_jobject@@PAU_jfieldID@@M@Z 1005df80 f i SunLayoutEngine.obj
+ 0001:0005cfb0       ?FindClass@JNIEnv_@@QAEPAV_jclass@@PBD@Z 1005dfb0 f i SunLayoutEngine.obj
+ 0001:0005cfd0       ?NewGlobalRef@JNIEnv_@@QAEPAV_jobject@@PAV2@@Z 1005dfd0 f i SunLayoutEngine.obj
+ 0001:0005cff0       ?GetFieldID@JNIEnv_@@QAEPAU_jfieldID@@PAV_jclass@@PBD1@Z 1005dff0 f i SunLayoutEngine.obj
+ 0001:0005d020       ?GetObjectField@JNIEnv_@@QAEPAV_jobject@@PAV2@PAU_jfieldID@@@Z 1005e020 f i SunLayoutEngine.obj
+ 0001:0005d050       ?GetIntField@JNIEnv_@@QAEJPAV_jobject@@PAU_jfieldID@@@Z 1005e050 f i SunLayoutEngine.obj
+ 0001:0005d080       ?SetIntField@JNIEnv_@@QAEXPAV_jobject@@PAU_jfieldID@@J@Z 1005e080 f i SunLayoutEngine.obj
+ 0001:0005d0b0       ?GetArrayLength@JNIEnv_@@QAEJPAV_jarray@@@Z 1005e0b0 f i SunLayoutEngine.obj
+ 0001:0005d0d0       ?GetPrimitiveArrayCritical@JNIEnv_@@QAEPAXPAV_jarray@@PAE@Z 1005e0d0 f i SunLayoutEngine.obj
+ 0001:0005d100       ?ReleasePrimitiveArrayCritical@JNIEnv_@@QAEXPAV_jarray@@PAXJ@Z 1005e100 f i SunLayoutEngine.obj
+ 0001:0005d130       ?GetCharArrayRegion@JNIEnv_@@QAEXPAV_jcharArray@@JJPAG@Z 1005e130 f i SunLayoutEngine.obj
+ 0001:0005d160       ?GetFloatArrayRegion@JNIEnv_@@QAEXPAV_jfloatArray@@JJPAM@Z 1005e160 f i SunLayoutEngine.obj
+ 0001:0005d190       ??1FontInstanceAdapter@@UAE@XZ 1005e190 f i SunLayoutEngine.obj
+ 0001:0005d1b0       ??1LEFontInstance@@UAE@XZ  1005e1b0 f i SunLayoutEngine.obj
+ 0001:0005d1d0       ??_GLEFontInstance@@UAEPAXI@Z 1005e1d0 f i SunLayoutEngine.obj
+ 0001:0005d1d0       ??_ELEFontInstance@@UAEPAXI@Z 1005e1d0 f i SunLayoutEngine.obj
+ 0001:0005d200       ?canDisplay@LEFontInstance@@UBEDK@Z 1005e200 f i SunLayoutEngine.obj
+ 0001:0005d230       ?xUnitsToPoints@LEFontInstance@@UBEMM@Z 1005e230 f i SunLayoutEngine.obj
+ 0001:0005d270       ?yUnitsToPoints@LEFontInstance@@UBEMM@Z 1005e270 f i SunLayoutEngine.obj
+ 0001:0005d2b0       ?unitsToPoints@LEFontInstance@@UBEXAAULEPoint@@0@Z 1005e2b0 f i SunLayoutEngine.obj
+ 0001:0005d2b0       ?unitsToPoints@FontInstanceAdapter@@UBEXAAULEPoint@@0@Z 1005e2b0 f i SunLayoutEngine.obj
+ 0001:0005d2f0       ?xPixelsToUnits@LEFontInstance@@UBEMM@Z 1005e2f0 f i SunLayoutEngine.obj
+ 0001:0005d330       ?yPixelsToUnits@LEFontInstance@@UBEMM@Z 1005e330 f i SunLayoutEngine.obj
+ 0001:0005d370       ?pixelsToUnits@LEFontInstance@@UBEXAAULEPoint@@0@Z 1005e370 f i SunLayoutEngine.obj
+ 0001:0005d370       ?pixelsToUnits@FontInstanceAdapter@@UBEXAAULEPoint@@0@Z 1005e370 f i SunLayoutEngine.obj
+ 0001:0005d3b0       ?transformFunits@LEFontInstance@@UBEXMMAAULEPoint@@@Z 1005e3b0 f i SunLayoutEngine.obj
+ 0001:0005d410       ?getLineHeight@LEFontInstance@@UBEJXZ 1005e410 f i SunLayoutEngine.obj
+ 0001:0005d450       ?getSubFont@FontInstanceAdapter@@UBEPBVLEFontInstance@@QBGPAJJJAAW4LEErrorCode@@@Z 1005e450 f i SunLayoutEngine.obj
+ 0001:0005d460       ?getKernPairs@FontInstanceAdapter@@UBEPAXXZ 1005e460 f i SunLayoutEngine.obj
+ 0001:0005d480       ?setKernPairs@FontInstanceAdapter@@UBEXPAX@Z 1005e480 f i SunLayoutEngine.obj
+ 0001:0005d4a0       ?canDisplay@FontInstanceAdapter@@UBEDK@Z 1005e4a0 f i SunLayoutEngine.obj
+ 0001:0005d4d0       ?CallBooleanMethod@JNIEnv_@@QAAEPAV_jobject@@PAU_jmethodID@@ZZ 1005e4d0 f i SunLayoutEngine.obj
+ 0001:0005d510       ?getUnitsPerEM@FontInstanceAdapter@@UBEJXZ 1005e510 f i SunLayoutEngine.obj
+ 0001:0005d570       ?IsInstanceOf@JNIEnv_@@QAEEPAV_jobject@@PAV_jclass@@@Z 1005e570 f i SunLayoutEngine.obj
+ 0001:0005d5a0       ?GetLongField@JNIEnv_@@QAE_JPAV_jobject@@PAU_jfieldID@@@Z 1005e5a0 f i SunLayoutEngine.obj
+ 0001:0005d5d0       ?getXPixelsPerEm@FontInstanceAdapter@@UBEMXZ 1005e5d0 f i SunLayoutEngine.obj
+ 0001:0005d5f0       ?getYPixelsPerEm@FontInstanceAdapter@@UBEMXZ 1005e5f0 f i SunLayoutEngine.obj
+ 0001:0005d610       ?xUnitsToPoints@FontInstanceAdapter@@UBEMM@Z 1005e610 f i SunLayoutEngine.obj
+ 0001:0005d630       ?yUnitsToPoints@FontInstanceAdapter@@UBEMM@Z 1005e630 f i SunLayoutEngine.obj
+ 0001:0005d650       ?xPixelsToUnits@FontInstanceAdapter@@UBEMM@Z 1005e650 f i SunLayoutEngine.obj
+ 0001:0005d670       ?yPixelsToUnits@FontInstanceAdapter@@UBEMM@Z 1005e670 f i SunLayoutEngine.obj
+ 0001:0005d690       ?getScaleFactorX@FontInstanceAdapter@@UBEMXZ 1005e690 f i SunLayoutEngine.obj
+ 0001:0005d6b0       ?getScaleFactorY@FontInstanceAdapter@@UBEMXZ 1005e6b0 f i SunLayoutEngine.obj
+ 0001:0005d6d0       ?getDescent@FontInstanceAdapter@@UBEJXZ 1005e6d0 f i SunLayoutEngine.obj
+ 0001:0005d6d0       ?getAscent@FontInstanceAdapter@@UBEJXZ 1005e6d0 f i SunLayoutEngine.obj
+ 0001:0005d6d0       ?getLeading@FontInstanceAdapter@@UBEJXZ 1005e6d0 f i SunLayoutEngine.obj
+ 0001:0005d6e0       ??_GFontInstanceAdapter@@UAEPAXI@Z 1005e6e0 f i SunLayoutEngine.obj
+ 0001:0005d6e0       ??_EFontInstanceAdapter@@UAEPAXI@Z 1005e6e0 f i SunLayoutEngine.obj
+ 0001:0005d710       ??0OpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJPBUGlyphSubstitutionTableHeader@@@Z 1005e710 f   OpenTypeLayoutEngine.obj
+ 0001:0005d830       ?reset@OpenTypeLayoutEngine@@MAEXXZ 1005e830 f   OpenTypeLayoutEngine.obj
+ 0001:0005d850       ??0OpenTypeLayoutEngine@@QAE@PBVLEFontInstance@@JJJ@Z 1005e850 f   OpenTypeLayoutEngine.obj
+ 0001:0005d8c0       ??1OpenTypeLayoutEngine@@UAE@XZ 1005e8c0 f   OpenTypeLayoutEngine.obj
+ 0001:0005d8f0       ?getScriptTag@OpenTypeLayoutEngine@@SAKJ@Z 1005e8f0 f   OpenTypeLayoutEngine.obj
+ 0001:0005d910       ?getLangSysTag@OpenTypeLayoutEngine@@SAKJ@Z 1005e910 f   OpenTypeLayoutEngine.obj
+ 0001:0005d930       ?setScriptAndLanguageTags@OpenTypeLayoutEngine@@AAEXXZ 1005e930 f   OpenTypeLayoutEngine.obj
+ 0001:0005d970       ?characterProcessing@OpenTypeLayoutEngine@@MAEJQBGJJJDAAPAGAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005e970 f   OpenTypeLayoutEngine.obj
+ 0001:0005da50       ?glyphProcessing@OpenTypeLayoutEngine@@MAEJQBGJJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005ea50 f   OpenTypeLayoutEngine.obj
+ 0001:0005db30       ?glyphPostProcessing@OpenTypeLayoutEngine@@MAEJAAVLEGlyphStorage@@0AAW4LEErrorCode@@@Z 1005eb30 f   OpenTypeLayoutEngine.obj
+ 0001:0005db90       ?computeGlyphs@OpenTypeLayoutEngine@@MAEJQBGJJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005eb90 f   OpenTypeLayoutEngine.obj
+ 0001:0005dce0       ?adjustGlyphPositions@OpenTypeLayoutEngine@@MAEXQBGJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005ece0 f   OpenTypeLayoutEngine.obj
+ 0001:0005df40       ??_GOpenTypeLayoutEngine@@UAEPAXI@Z 1005ef40 f i OpenTypeLayoutEngine.obj
+ 0001:0005df40       ??_EOpenTypeLayoutEngine@@UAEPAXI@Z 1005ef40 f i OpenTypeLayoutEngine.obj
+ 0001:0005df70       ?getXPlacement@GlyphPositionAdjustments@@QBEMJ@Z 1005ef70 f i OpenTypeLayoutEngine.obj
+ 0001:0005df90       ?getXPlacement@Adjustment@GlyphPositionAdjustments@@QBEMXZ 1005ef90 f i OpenTypeLayoutEngine.obj
+ 0001:0005dfa0       ?getYPlacement@GlyphPositionAdjustments@@QBEMJ@Z 1005efa0 f i OpenTypeLayoutEngine.obj
+ 0001:0005dfc0       ?getYPlacement@Adjustment@GlyphPositionAdjustments@@QBEMXZ 1005efc0 f i OpenTypeLayoutEngine.obj
+ 0001:0005dfe0       ?getXAdvance@GlyphPositionAdjustments@@QBEMJ@Z 1005efe0 f i OpenTypeLayoutEngine.obj
+ 0001:0005e000       ?getXAdvance@Adjustment@GlyphPositionAdjustments@@QBEMXZ 1005f000 f i OpenTypeLayoutEngine.obj
+ 0001:0005e020       ?getYAdvance@GlyphPositionAdjustments@@QBEMJ@Z 1005f020 f i OpenTypeLayoutEngine.obj
+ 0001:0005e040       ?getYAdvance@Adjustment@GlyphPositionAdjustments@@QBEMXZ 1005f040 f i OpenTypeLayoutEngine.obj
+ 0001:0005e060       ?getBaseOffset@GlyphPositionAdjustments@@QBEJJ@Z 1005f060 f i OpenTypeLayoutEngine.obj
+ 0001:0005e080       ?getBaseOffset@Adjustment@GlyphPositionAdjustments@@QBEJXZ 1005f080 f i OpenTypeLayoutEngine.obj
+ 0001:0005e0a0       ??_GGlyphPositionAdjustments@@QAEPAXI@Z 1005f0a0 f i OpenTypeLayoutEngine.obj
+ 0001:0005e0d0       ??0ThaiLayoutEngine@@QAE@PBVLEFontInstance@@JJJ@Z 1005f0d0 f   ThaiLayoutEngine.obj
+ 0001:0005e1a0       ??1ThaiLayoutEngine@@UAE@XZ 1005f1a0 f   ThaiLayoutEngine.obj
+ 0001:0005e1c0       ?computeGlyphs@ThaiLayoutEngine@@MAEJQBGJJJDAAVLEGlyphStorage@@AAW4LEErrorCode@@@Z 1005f1c0 f   ThaiLayoutEngine.obj
+ 0001:0005e2f0       ??_EThaiLayoutEngine@@UAEPAXI@Z 1005f2f0 f i ThaiLayoutEngine.obj
+ 0001:0005e2f0       ??_GThaiLayoutEngine@@UAEPAXI@Z 1005f2f0 f i ThaiLayoutEngine.obj
+ 0001:0005e320       ??0FontInstanceAdapter@@QAE@PAUJNIEnv_@@PAV_jobject@@1PAMJJ@Z 1005f320 f   FontInstanceAdapter.obj
+ 0001:0005e520       ?getFontTable@FontInstanceAdapter@@UBEPBXK@Z 1005f520 f   FontInstanceAdapter.obj
+ 0001:0005e760       ?mapCharToGlyph@FontInstanceAdapter@@UBEKKPBVLECharMapper@@@Z 1005f760 f   FontInstanceAdapter.obj
+ 0001:0005e7e0       ?mapCharToGlyph@FontInstanceAdapter@@UBEKK@Z 1005f7e0 f   FontInstanceAdapter.obj
+ 0001:0005e820       ?mapCharsToWideGlyphs@FontInstanceAdapter@@UBEXQBGJJDPBVLECharMapper@@QAK@Z 1005f820 f   FontInstanceAdapter.obj
+ 0001:0005e950       ?mapCharToWideGlyph@FontInstanceAdapter@@UBEKKPBVLECharMapper@@@Z 1005f950 f   FontInstanceAdapter.obj
+ 0001:0005e9c0       ?getGlyphAdvance@FontInstanceAdapter@@UBEXKAAULEPoint@@@Z 1005f9c0 f   FontInstanceAdapter.obj
+ 0001:0005e9e0       ?getKerningAdjustment@FontInstanceAdapter@@UBEXAAULEPoint@@@Z 1005f9e0 f   FontInstanceAdapter.obj
+ 0001:0005eb50       ?getWideGlyphAdvance@FontInstanceAdapter@@UBEXKAAULEPoint@@@Z 1005fb50 f   FontInstanceAdapter.obj
+ 0001:0005ebf0       ?getGlyphPoint@FontInstanceAdapter@@UBEDKJAAULEPoint@@@Z 1005fbf0 f   FontInstanceAdapter.obj
+ 0001:0005ec70       ?transformFunits@FontInstanceAdapter@@UBEXMMAAULEPoint@@@Z 1005fc70 f   FontInstanceAdapter.obj
+ 0001:0005ed60       ?euclidianDistance@FontInstanceAdapter@@AAEMMM@Z 1005fd60 f   FontInstanceAdapter.obj
+ 0001:0005ee80       ??0LEFontInstance@@QAE@XZ  1005fe80 f i FontInstanceAdapter.obj
+ 0001:0005eea0       ?CallObjectMethod@JNIEnv_@@QAAPAV_jobject@@PAV2@PAU_jmethodID@@ZZ 1005fea0 f i FontInstanceAdapter.obj
+ 0001:0005eee0       ?GetByteArrayRegion@JNIEnv_@@QAEXPAV_jbyteArray@@JJPAC@Z 1005fee0 f i FontInstanceAdapter.obj
+ 0001:0005ef10       ?CallIntMethod@JNIEnv_@@QAAJPAV_jobject@@PAU_jmethodID@@ZZ 1005ff10 f i FontInstanceAdapter.obj
+ 0001:0005ef50       ?NewObject@JNIEnv_@@QAAPAV_jobject@@PAV_jclass@@PAU_jmethodID@@ZZ 1005ff50 f i FontInstanceAdapter.obj
+ 0001:0005ef90       ??0GeneralPath@@QAE@J@Z    1005ff90 f   GeneralPath.obj
+ 0001:0005f000       ??1GeneralPath@@QAE@XZ     10060000 f   GeneralPath.obj
+ 0001:0005f050       ?needRoom@GeneralPath@@QAEEJJ@Z 10060050 f   GeneralPath.obj
+ 0001:0005f110       ?getShape@GeneralPath@@QAEPAV_jobject@@PAUJNIEnv_@@@Z 10060110 f   GeneralPath.obj
+ 0001:0005f1d0       ?getBounds@GeneralPath@@QAEPAV_jobject@@PAUJNIEnv_@@@Z 100601d0 f   GeneralPath.obj
+ 0001:0005f3e0       ?addGlyphToGeneralPath@@YAXABUGlyphClass@@AAUGeneralPath@@MM_N@Z 100603e0 f   GeneralPath.obj
+ 0001:0005f830       ?NewByteArray@JNIEnv_@@QAEPAV_jbyteArray@@J@Z 10060830 f i GeneralPath.obj
+ 0001:0005f850       ?NewFloatArray@JNIEnv_@@QAEPAV_jfloatArray@@J@Z 10060850 f i GeneralPath.obj
+ 0001:0005f870       ?SetByteArrayRegion@JNIEnv_@@QAEXPAV_jbyteArray@@JJPBC@Z 10060870 f i GeneralPath.obj
+ 0001:0005f8a0       ?SetFloatArrayRegion@JNIEnv_@@QAEXPAV_jfloatArray@@JJPBM@Z 100608a0 f i GeneralPath.obj
+ 0001:0005f8d0       ?moveTo@GeneralPath@@QAEXMM@Z 100608d0 f i GeneralPath.obj
+ 0001:0005f950       ?lineTo@GeneralPath@@QAEXMM@Z 10060950 f i GeneralPath.obj
+ 0001:0005f9d0       ?quadTo@GeneralPath@@QAEXMMMM@Z 100609d0 f i GeneralPath.obj
+ 0001:0005faa0       ?curveTo@GeneralPath@@QAEXMMMMMM@Z 10060aa0 f i GeneralPath.obj
+ 0001:0005fbb0       ?closePath@GeneralPath@@QAEXXZ 10060bb0 f i GeneralPath.obj
+ 0001:0005fbf0       ??0Walker@@QAE@ABUGlyphClass@@MM_N@Z 10060bf0 f i GeneralPath.obj
+ 0001:0005fc60       ?nextContour@Walker@@QAE_NXZ 10060c60 f i GeneralPath.obj
+ 0001:0005fd00       ?doneWithContour@Walker@@QBE_NXZ 10060d00 f i GeneralPath.obj
+ 0001:0005fd20       ?next@Walker@@QAEXXZ       10060d20 f i GeneralPath.obj
+ 0001:0005fd90       ?currentOnCurve@Walker@@QBE_NXZ 10060d90 f i GeneralPath.obj
+ 0001:0005fdb0       ?nextOnCurve@Walker@@QBE_NXZ 10060db0 f i GeneralPath.obj
+ 0001:0005fdd0       ?setCurrent@Walker@@QBEXAAUJPoint@@@Z 10060dd0 f i GeneralPath.obj
+ 0001:0005fe30       ?setNext@Walker@@QBEXAAUJPoint@@@Z 10060e30 f i GeneralPath.obj
+ 0001:0005fe90       ?setAverage@Walker@@QBEXAAUJPoint@@@Z 10060e90 f i GeneralPath.obj
+ 0001:0005ff40       _Java_sun_font_FileFont_getGlyphOutline@28 10060f40 f   t2kScalerMethods.obj
+ 0001:000600d0       _Java_sun_font_FileFont_getGlyphOutlineBounds@20 100610d0 f   t2kScalerMethods.obj
+ 0001:00060130       _Java_sun_font_FileFont_getGlyphVectorOutline@32 10061130 f   t2kScalerMethods.obj
+ 0001:00060320       ?GetIntArrayRegion@JNIEnv_@@QAEXPAV_jintArray@@JJPAJ@Z 10061320 f i t2kScalerMethods.obj
+ 0001:0006034c       _JNU_NewStringPlatform@8   1006134c f   java:java.dll
+ 0001:00060352       _JNU_ThrowNoSuchFieldException@8 10061352 f   java:java.dll
+ 0001:00060358       _JNU_ThrowInternalError@8  10061358 f   java:java.dll
+ 0001:0006035e       _JNU_ThrowClassNotFoundException@8 1006135e f   java:java.dll
+ 0001:00060364       _JNU_ThrowArrayIndexOutOfBoundsException@8 10061364 f   java:java.dll
+ 0001:0006036a       _SurfaceData_IntersectBounds@8 1006136a f   awt:awt.dll
+ 0001:00060370       _GrPrim_Sg2dGetEaRGB@8     10061370 f   awt:awt.dll
+ 0001:00060376       _GrPrim_Sg2dGetPixel@8     10061376 f   awt:awt.dll
+ 0001:0006037c       _GetNativePrim@8           1006137c f   awt:awt.dll
+ 0001:00060382       _GrPrim_Sg2dGetClip@12     10061382 f   awt:awt.dll
+ 0001:00060388       _GrPrim_Sg2dGetCompInfo@16 10061388 f   awt:awt.dll
+ 0001:0006038e       _SurfaceData_GetOps@8      1006138e f   awt:awt.dll
+ 0001:00060394       _GrPrim_Sg2dGetLCDTextContrast@8 10061394 f   awt:awt.dll
+ 0001:0006039a       _AccelGlyphCache_RemoveAllCellInfos 1006139a f   awt:awt.dll
+ 0001:000603a0       _memcpy                    100613a0 f   MSVCRT:MSVCR71.dll
+ 0001:000603a6       _memset                    100613a6 f   MSVCRT:MSVCR71.dll
+ 0001:000603b0       __ftol2                    100613b0 f   MSVCRT:ftol2.obj
+ 0001:00060426       _strlen                    10061426 f   MSVCRT:MSVCR71.dll
+ 0001:0006042c       _strcmp                    1006142c f   MSVCRT:MSVCR71.dll
+ 0001:00060432       __setjmp3                  10061432 f   MSVCRT:MSVCR71.dll
+ 0001:00060438       _sqrt                      10061438 f   MSVCRT:MSVCR71.dll
+ 0001:0006043e       _pow                       1006143e f   MSVCRT:MSVCR71.dll
+ 0001:00060444       _fabs                      10061444 f   MSVCRT:MSVCR71.dll
+ 0001:0006044a       _strcpy                    1006144a f   MSVCRT:MSVCR71.dll
+ 0001:00060450       _strcat                    10061450 f   MSVCRT:MSVCR71.dll
+ 0001:00060460       __chkstk                   10061460 f   MSVCRT:chkstk.obj
+ 0001:00060460       __alloca_probe             10061460     MSVCRT:chkstk.obj
+ 0001:0006049e       ??3@YAXPAX@Z               1006149e f   MSVCRT:MSVCR71.dll
+ 0001:000604a4       ??2@YAPAXI@Z               100614a4 f   MSVCRT:MSVCR71.dll
+ 0001:000604aa       __purecall                 100614aa f   MSVCRT:MSVCR71.dll
+ 0001:000604b0       __CRT_INIT@12              100614b0 f   MSVCRT:crtdll.obj
+ 0001:0006056e       __DllMainCRTStartup@12     1006156e f   MSVCRT:crtdll.obj
+ 0001:00060652       __initterm                 10061652 f   MSVCRT:MSVCR71.dll
+ 0001:00060658       __onexit                   10061658 f   MSVCRT:atonexit.obj
+ 0001:0006067e       _atexit                    1006167e f   MSVCRT:atonexit.obj
+ 0001:00060690       __RTC_Initialize           10061690 f   MSVCRT:initsect.obj
+ 0001:000606d4       __RTC_Terminate            100616d4 f   MSVCRT:initsect.obj
+ 0001:00060718       ___CppXcptFilter           10061718 f   MSVCRT:MSVCR71.dll
+ 0001:0006071e       _DllMain@12                1006171e f   MSVCRT:dllmain.obj
+ 0001:00060740       __SEH_prolog               10061740 f   MSVCRT:sehprolg.obj
+ 0001:0006077b       __SEH_epilog               1006177b f   MSVCRT:sehprolg.obj
+ 0001:0006078c       __except_handler3          1006178c f   MSVCRT:MSVCR71.dll
+ 0001:00060792       ___dllonexit               10061792 f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__RegEnumValueA@32    10062000     advapi32:ADVAPI32.dll
+ 0002:00000004       __imp__RegOpenKeyExA@20    10062004     advapi32:ADVAPI32.dll
+ 0002:00000008       __imp__RegQueryInfoKeyW@48 10062008     advapi32:ADVAPI32.dll
+ 0002:0000000c       __imp__RegQueryInfoKeyA@48 1006200c     advapi32:ADVAPI32.dll
+ 0002:00000010       __imp__RegCloseKey@4       10062010     advapi32:ADVAPI32.dll
+ 0002:00000014       __imp__RegEnumValueW@32    10062014     advapi32:ADVAPI32.dll
+ 0002:00000018       \177ADVAPI32_NULL_THUNK_DATA 10062018     advapi32:ADVAPI32.dll
+ 0002:0000001c       __imp__CreateFontIndirectW@4 1006201c     gdi32:GDI32.dll
+ 0002:00000020       __imp__SetMapMode@8        10062020     gdi32:GDI32.dll
+ 0002:00000024       __imp__CreateCompatibleDC@4 10062024     gdi32:GDI32.dll
+ 0002:00000028       __imp__DeleteObject@4      10062028     gdi32:GDI32.dll
+ 0002:0000002c       __imp__SelectObject@8      1006202c     gdi32:GDI32.dll
+ 0002:00000030       __imp__GetTextMetricsA@8   10062030     gdi32:GDI32.dll
+ 0002:00000034       __imp__GetGlyphOutlineA@28 10062034     gdi32:GDI32.dll
+ 0002:00000038       __imp__CreateCompatibleBitmap@12 10062038     gdi32:GDI32.dll
+ 0002:0000003c       __imp__GetStockObject@4    1006203c     gdi32:GDI32.dll
+ 0002:00000040       __imp__SetBkColor@8        10062040     gdi32:GDI32.dll
+ 0002:00000044       __imp__GetDeviceCaps@8     10062044     gdi32:GDI32.dll
+ 0002:00000048       __imp__SetTextColor@8      10062048     gdi32:GDI32.dll
+ 0002:0000004c       __imp__EnumFontFamiliesExA@20 1006204c     gdi32:GDI32.dll
+ 0002:00000050       __imp__EnumFontFamiliesExW@20 10062050     gdi32:GDI32.dll
+ 0002:00000054       __imp__GetDIBits@28        10062054     gdi32:GDI32.dll
+ 0002:00000058       __imp__ExtTextOutW@32      10062058     gdi32:GDI32.dll
+ 0002:0000005c       \177GDI32_NULL_THUNK_DATA  1006205c     gdi32:GDI32.dll
+ 0002:00000060       __imp__GetSystemDirectoryA@8 10062060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__DisableThreadLibraryCalls@4 10062064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetVersion@0        10062068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__GetVersionExA@4     1006206c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__GetWindowsDirectoryA@8 10062070     kernel32:KERNEL32.dll
+ 0002:00000074       \177KERNEL32_NULL_THUNK_DATA 10062074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp____dllonexit         10062078     MSVCRT:MSVCR71.dll
+ 0002:0000007c       __imp___except_handler3    1006207c     MSVCRT:MSVCR71.dll
+ 0002:00000080       __imp___adjust_fdiv        10062080     MSVCRT:MSVCR71.dll
+ 0002:00000084       __imp___onexit             10062084     MSVCRT:MSVCR71.dll
+ 0002:00000088       __imp____CppXcptFilter     10062088     MSVCRT:MSVCR71.dll
+ 0002:0000008c       __imp__memset              1006208c     MSVCRT:MSVCR71.dll
+ 0002:00000090       __imp___initterm           10062090     MSVCRT:MSVCR71.dll
+ 0002:00000094       __imp___iob                10062094     MSVCRT:MSVCR71.dll
+ 0002:00000098       __imp__fprintf             10062098     MSVCRT:MSVCR71.dll
+ 0002:0000009c       __imp___purecall           1006209c     MSVCRT:MSVCR71.dll
+ 0002:000000a0       __imp_??2@YAPAXI@Z         100620a0     MSVCRT:MSVCR71.dll
+ 0002:000000a4       __imp_??3@YAXPAX@Z         100620a4     MSVCRT:MSVCR71.dll
+ 0002:000000a8       __imp__wcsstr              100620a8     MSVCRT:MSVCR71.dll
+ 0002:000000ac       __imp__strstr              100620ac     MSVCRT:MSVCR71.dll
+ 0002:000000b0       __imp__wcscmp              100620b0     MSVCRT:MSVCR71.dll
+ 0002:000000b4       __imp__wcslen              100620b4     MSVCRT:MSVCR71.dll
+ 0002:000000b8       __imp___assert             100620b8     MSVCRT:MSVCR71.dll
+ 0002:000000bc       __imp__memcpy              100620bc     MSVCRT:MSVCR71.dll
+ 0002:000000c0       __imp__stricmp             100620c0     MSVCRT:MSVCR71.dll
+ 0002:000000c0       __imp___stricmp            100620c0     MSVCRT:MSVCR71.dll
+ 0002:000000c4       __imp__memmove             100620c4     MSVCRT:MSVCR71.dll
+ 0002:000000c8       __imp__malloc              100620c8     MSVCRT:MSVCR71.dll
+ 0002:000000cc       __imp__strtoul             100620cc     MSVCRT:MSVCR71.dll
+ 0002:000000d0       __imp__toupper             100620d0     MSVCRT:MSVCR71.dll
+ 0002:000000d4       __imp__strlen              100620d4     MSVCRT:MSVCR71.dll
+ 0002:000000d8       __imp__strcmp              100620d8     MSVCRT:MSVCR71.dll
+ 0002:000000dc       __imp__free                100620dc     MSVCRT:MSVCR71.dll
+ 0002:000000e0       __imp___setjmp3            100620e0     MSVCRT:MSVCR71.dll
+ 0002:000000e4       __imp__longjmp             100620e4     MSVCRT:MSVCR71.dll
+ 0002:000000e8       __imp__realloc             100620e8     MSVCRT:MSVCR71.dll
+ 0002:000000ec       __imp__fclose              100620ec     MSVCRT:MSVCR71.dll
+ 0002:000000f0       __imp__fread               100620f0     MSVCRT:MSVCR71.dll
+ 0002:000000f4       __imp__ftell               100620f4     MSVCRT:MSVCR71.dll
+ 0002:000000f8       __imp__fseek               100620f8     MSVCRT:MSVCR71.dll
+ 0002:000000fc       __imp__fopen               100620fc     MSVCRT:MSVCR71.dll
+ 0002:00000100       __imp__sqrt                10062100     MSVCRT:MSVCR71.dll
+ 0002:00000104       __imp__ceil                10062104     MSVCRT:MSVCR71.dll
+ 0002:00000108       __imp__floor               10062108     MSVCRT:MSVCR71.dll
+ 0002:0000010c       __imp__calloc              1006210c     MSVCRT:MSVCR71.dll
+ 0002:00000110       __imp__pow                 10062110     MSVCRT:MSVCR71.dll
+ 0002:00000114       __imp__getenv              10062114     MSVCRT:MSVCR71.dll
+ 0002:00000118       __imp__fabs                10062118     MSVCRT:MSVCR71.dll
+ 0002:0000011c       __imp__strcpy              1006211c     MSVCRT:MSVCR71.dll
+ 0002:00000120       __imp__strcat              10062120     MSVCRT:MSVCR71.dll
+ 0002:00000124       __imp__strrchr             10062124     MSVCRT:MSVCR71.dll
+ 0002:00000128       __imp__wcscpy              10062128     MSVCRT:MSVCR71.dll
+ 0002:0000012c       \177MSVCR71_NULL_THUNK_DATA 1006212c     MSVCRT:MSVCR71.dll
+ 0002:00000130       __imp__GetDesktopWindow@0  10062130     user32:USER32.dll
+ 0002:00000134       __imp__SystemParametersInfoA@16 10062134     user32:USER32.dll
+ 0002:00000138       __imp__FillRect@12         10062138     user32:USER32.dll
+ 0002:0000013c       __imp__ReleaseDC@8         1006213c     user32:USER32.dll
+ 0002:00000140       __imp__GetWindowDC@4       10062140     user32:USER32.dll
+ 0002:00000144       __imp__GetDC@4             10062144     user32:USER32.dll
+ 0002:00000148       \177USER32_NULL_THUNK_DATA 10062148     user32:USER32.dll
+ 0002:0000014c       __imp__GrPrim_Sg2dGetPixel@8 1006214c     awt:awt.dll
+ 0002:00000150       __imp__GetNativePrim@8     10062150     awt:awt.dll
+ 0002:00000154       __imp__SurfaceData_IntersectBounds@8 10062154     awt:awt.dll
+ 0002:00000158       __imp__GrPrim_Sg2dGetClip@12 10062158     awt:awt.dll
+ 0002:0000015c       __imp__GrPrim_Sg2dGetCompInfo@16 1006215c     awt:awt.dll
+ 0002:00000160       __imp__SurfaceData_GetOps@8 10062160     awt:awt.dll
+ 0002:00000164       __imp__GrPrim_Sg2dGetLCDTextContrast@8 10062164     awt:awt.dll
+ 0002:00000168       __imp__AccelGlyphCache_RemoveAllCellInfos 10062168     awt:awt.dll
+ 0002:0000016c       __imp__GrPrim_Sg2dGetEaRGB@8 1006216c     awt:awt.dll
+ 0002:00000170       \177awt_NULL_THUNK_DATA    10062170     awt:awt.dll
+ 0002:00000174       __imp__JNU_ThrowArrayIndexOutOfBoundsException@8 10062174     java:java.dll
+ 0002:00000178       __imp__JNU_ThrowClassNotFoundException@8 10062178     java:java.dll
+ 0002:0000017c       __imp__JNU_ThrowInternalError@8 1006217c     java:java.dll
+ 0002:00000180       __imp__JNU_ThrowNoSuchFieldException@8 10062180     java:java.dll
+ 0002:00000184       __imp__JNU_NewStringPlatform@8 10062184     java:java.dll
+ 0002:00000188       \177java_NULL_THUNK_DATA   10062188     java:java.dll
+ 0002:000001b0       __real@3fe0000000000000    100621b0     shapet.obj
+ 0002:000001b8       __real@40f0000000000000    100621b8     shapet.obj
+ 0002:000001c0       __real@3ff0000000000000    100621c0     shapet.obj
+ 0002:000001c8       __real@0000000000000000    100621c8     shapet.obj
+ 0002:000001d0       _c1                        100621d0     t1.obj
+ 0002:000001d4       _c2                        100621d4     t1.obj
+ 0002:000024f0       _PSNAME_START_INDEX        100644f0     t1.obj
+ 0002:000025c8       _dFixed1                   100645c8     PinkGlue.obj
+ 0002:000025d0       _dFract1                   100645d0     PinkGlue.obj
+ 0002:000025d8       _rFixed1                   100645d8     PinkGlue.obj
+ 0002:000025e0       _rFract1                   100645e0     PinkGlue.obj
+ 0002:000025e8       __real@3fc0000000000000    100645e8     Orient.obj
+ 0002:000025f0       __real@3fd0000000000000    100645f0     Orient.obj
+ 0002:000025f8       __real@4020000000000000    100645f8     Orient.obj
+ 0002:00002600       __real@4000000000000000    10064600     Orient.obj
+ 0002:00002620       __real@00000000            10064620     DrawGlyphList.obj
+ 0002:00002624       __real@3f000000            10064624     DrawGlyphList.obj
+ 0002:00002628       __real@40400000            10064628     DrawGlyphList.obj
+ 0002:0000262c       __real@3e2aaaad            1006462c     DrawGlyphList.obj
+ 0002:00002630       __real@406fe00000000000    10064630     DrawGlyphList.obj
+ 0002:00002638       __real@4059000000000000    10064638     DrawGlyphList.obj
+ 0002:00002640       __real@3ef0000000000000    10064640     scalerMethods.obj
+ 0002:00002648       __real@47800000            10064648     scalerMethods.obj
+ 0002:00002650       __real@4050000000000000    10064650     scalerMethods.obj
+ 0002:000026e0       __real@3f800000            100646e0     lcdglyph.obj
+ 0002:000026fc       ??_7HanOpenTypeLayoutEngine@@6B@ 100646fc     HanLayoutEngine.obj
+ 0002:00002728       ??_7ContextualGlyphSubstitutionProcessor@@6B@ 10064728     ContextualGlyphSubstProc.obj
+ 0002:0000273c       ??_7IndicRearrangementProcessor@@6B@ 1006473c     IndicRearrangementProcessor.obj
+ 0002:00002750       ??_7LigatureSubstitutionProcessor@@6B@ 10064750     LigatureSubstProc.obj
+ 0002:00002764       ??_7NonContextualGlyphSubstitutionProcessor@@6B@ 10064764     NonContextualGlyphSubstProc.obj
+ 0002:0000276c       ??_7SegmentArrayProcessor@@6B@ 1006476c     SegmentArrayProcessor.obj
+ 0002:00002774       ??_7SegmentSingleProcessor@@6B@ 10064774     SegmentSingleProcessor.obj
+ 0002:0000277c       ??_7SimpleArrayProcessor@@6B@ 1006477c     SimpleArrayProcessor.obj
+ 0002:00002784       ??_7SingleTableProcessor@@6B@ 10064784     SingleTableProcessor.obj
+ 0002:0000278c       ??_7StateTableProcessor@@6B@ 1006478c     StateTableProcessor.obj
+ 0002:000027a0       ??_7SubtableProcessor@@6B@ 100647a0     SubtableProcessor.obj
+ 0002:000027a8       ??_7TrimmedArrayProcessor@@6B@ 100647a8     TrimmedArrayProcessor.obj
+ 0002:000027b0       ?glyphSubstitutionTable@CanonShaping@@2QBEB 100647b0     CanonData.obj
+ 0002:00010b58       ?glyphDefinitionTable@CanonShaping@@2QBEB 10072b58     CanonData.obj
+ 0002:000110e4       ?fieldMasks@DeviceTable@@0QBGB 100730e4     DeviceTables.obj
+ 0002:000110ec       ?fieldSignBits@DeviceTable@@0QBGB 100730ec     DeviceTables.obj
+ 0002:000110f4       ?fieldBits@DeviceTable@@0QBGB 100730f4     DeviceTables.obj
+ 0002:000110fc       ??_7GDEFMarkFilter@@6B@    100730fc     GDEFMarkFilter.obj
+ 0002:00011104       ??_7LEGlyphFilter@@6B@     10073104     GDEFMarkFilter.obj
+ 0002:0001110c       ??_7GlyphIterator@@6B@     1007310c     GlyphIterator.obj
+ 0002:00011110       ??_7GlyphPositioningLookupProcessor@@6B@ 10073110     GlyphPosnLookupProc.obj
+ 0002:00011118       ??_7GlyphSubstitutionLookupProcessor@@6B@ 10073118     GlyphSubstLookupProc.obj
+ 0002:00011120       ?glyphSubstitutionTable@HebrewShaping@@2QBEB 10073120     HebrewLigatureData.obj
+ 0002:000112f0       ?glyphDefinitionTable@HebrewShaping@@2QBEB 100732f0     HebrewLigatureData.obj
+ 0002:00012904       ??_7KhmerOpenTypeLayoutEngine@@6B@ 10074904     KhmerLayoutEngine.obj
+ 0002:00012c1c       ??_7LEGlyphStorage@@6B@    10074c1c     LEGlyphStorage.obj
+ 0002:00012c20       ??_7LEInsertionCallback@@6B@ 10074c20     LEGlyphStorage.obj
+ 0002:00012c24       ??_7LookupProcessor@@6B@   10074c24     LookupProcessor.obj
+ 0002:00012c30       ?mirroredChars@DefaultCharMapper@@0QBKB 10074c30     MirroredCharData.obj
+ 0002:00013160       ?srahCderorrim@DefaultCharMapper@@0QBKB 10075160     MirroredCharData.obj
+ 0002:00013690       ?mirroredCharsCount@DefaultCharMapper@@0JB 10075690     MirroredCharData.obj
+ 0002:00013698       ?shapingTypeTable@ArabicShaping@@0QBEB 10075698     ShapingTypeData.obj
+ 0002:00013bc8       ?classTable@ThaiShaping@@0QBEB 10075bc8     ThaiStateTables.obj
+ 0002:00013c28       ?thaiStateTable@ThaiShaping@@0QAY0BD@$$CBUStateTransition@1@A 10075c28     ThaiStateTables.obj
+ 0002:00014424       ??_7ArabicOpenTypeLayoutEngine@@6B@ 10076424     ArabicLayoutEngine.obj
+ 0002:00014450       ??_7UnicodeArabicOpenTypeLayoutEngine@@6B@ 10076450     ArabicLayoutEngine.obj
+ 0002:00014480       ?shapeTypes@ArabicShaping@@0QBJB 10076480     ArabicShaping.obj
+ 0002:00014510       ??_7GXLayoutEngine@@6B@    10076510     GXLayoutEngine.obj
+ 0002:00014534       ??_7IndicOpenTypeLayoutEngine@@6B@ 10076534     IndicLayoutEngine.obj
+ 0002:00014560       ?controlChars@DefaultCharMapper@@0QBKB 10076560     LayoutEngine.obj
+ 0002:000145a8       ?controlCharsCount@DefaultCharMapper@@0JB 100765a8     LayoutEngine.obj
+ 0002:000145b0       ?controlCharsZWJ@DefaultCharMapper@@0QBKB 100765b0     LayoutEngine.obj
+ 0002:00014600       ?controlCharsZWJCount@DefaultCharMapper@@0JB 10076600     LayoutEngine.obj
+ 0002:0001460c       ??_7CharSubstitutionFilter@@6B@ 1007660c     LayoutEngine.obj
+ 0002:00014614       ??_7LayoutEngine@@6B@      10076614     LayoutEngine.obj
+ 0002:00014638       ??_7DefaultCharMapper@@6B@ 10076638     LayoutEngine.obj
+ 0002:00014640       ??_7LECharMapper@@6B@      10076640     LayoutEngine.obj
+ 0002:00014738       ??_7FontInstanceAdapter@@6B@ 10076738     SunLayoutEngine.obj
+ 0002:000147b8       ??_7LEFontInstance@@6B@    100767b8     SunLayoutEngine.obj
+ 0002:00014860       ??_7OpenTypeLayoutEngine@@6B@ 10076860     OpenTypeLayoutEngine.obj
+ 0002:0001488c       ??_7ThaiLayoutEngine@@6B@  1007688c     ThaiLayoutEngine.obj
+ 0002:000148b0       ?scriptTags@OpenTypeLayoutEngine@@0QBKB 100768b0     ScriptAndLanguageTags.obj
+ 0002:00014990       ?languageTags@OpenTypeLayoutEngine@@0QBKB 10076990     ScriptAndLanguageTags.obj
+ 0002:00014a08       __real@42900000            10076a08     FontInstanceAdapter.obj
+ 0002:00014a0c       __real@40000000            10076a0c     FontInstanceAdapter.obj
+ 0002:00014ae8       __real@42800000            10076ae8     GeneralPath.obj
+ 0002:00014b20       __load_config_used         10076b20     MSVCRT:loadcfg.obj
+ 0002:00014be0       ___safe_se_handler_table   10076be0     <linker-defined>
+ 0002:00014be4       ___rtc_iaa                 10076be4     MSVCRT:initsect.obj
+ 0002:00014be8       ___rtc_izz                 10076be8     MSVCRT:initsect.obj
+ 0002:00014bec       ___rtc_taa                 10076bec     MSVCRT:initsect.obj
+ 0002:00014bf0       ___rtc_tzz                 10076bf0     MSVCRT:initsect.obj
+ 0002:00014bf4       __IMPORT_DESCRIPTOR_java   10076bf4     java:java.dll
+ 0002:00014c08       __IMPORT_DESCRIPTOR_ADVAPI32 10076c08     advapi32:ADVAPI32.dll
+ 0002:00014c1c       __IMPORT_DESCRIPTOR_USER32 10076c1c     user32:USER32.dll
+ 0002:00014c30       __IMPORT_DESCRIPTOR_GDI32  10076c30     gdi32:GDI32.dll
+ 0002:00014c44       __IMPORT_DESCRIPTOR_awt    10076c44     awt:awt.dll
+ 0002:00014c58       __IMPORT_DESCRIPTOR_MSVCR71 10076c58     MSVCRT:MSVCR71.dll
+ 0002:00014c6c       __IMPORT_DESCRIPTOR_KERNEL32 10076c6c     kernel32:KERNEL32.dll
+ 0002:00014c80       __NULL_IMPORT_DESCRIPTOR   10076c80     java:java.dll
+ 0003:00000000       ___xc_a                    10078000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    10078004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    10078008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1007800c     MSVCRT:cinitexe.obj
+ 0003:00000c58       _maxVertexMove             10078c58     shapet.obj
+ 0003:000054ac       _useSpotSize               1007d4ac     HintTran.obj
+ 0003:000064d0       _defaultGammaLUT           1007e4d0     DrawGlyphList.obj
+ 0003:000065d0       _defaultInvGammaLUT        1007e5d0     DrawGlyphList.obj
+ 0003:00006c60       ___security_cookie         1007ec60     MSVCRT:seccook.obj
+ 0003:00006c80       _absPixelError             1007ec80     hstrat97.obj
+ 0003:00006c84       _relPixelError             1007ec84     hstrat97.obj
+ 0003:00006c88       _totEvals                  1007ec88     hstrat97.obj
+ 0003:00006c90       _reversals                 1007ec90     Orient.obj
+ 0003:00006c94       _rarelyHappens             1007ec94     Orient.obj
+ 0003:00006ca8       _theNullScaler             1007eca8     scalerMethods.obj
+ 0003:00006cac       _theNullScalerContext      1007ecac     scalerMethods.obj
+ 0003:00006ec0       _sunFontIDs                1007eec0     <common>
+ 0003:00006f60       _lcdGammaLUT               1007ef60     <common>
+ 0003:000071c0       _lcdInvGammaLUT            1007f1c0     <common>
+ 0003:00007420       _globPerScaler             1007f420     <common>
+ 0003:00007820       __adjust_fdiv              1007f820     <common>
+ 0003:00007824       ___onexitend               1007f824     <common>
+ 0003:00007828       ___onexitbegin             1007f828     <common>
+ 0003:0000782c       __pRawDllMain              1007f82c     <common>
+
+ entry point at        0001:0006056e
+
+ Static symbols
+
+ 0001:00001e40       _ag_IsHinthandle           10002e40 f   autogrid.obj
+ 0001:000020b0       _ag_SetUpCvt               100030b0 f   autogrid.obj
+ 0001:00002610       _ag_ModifyCvtGoal          10003610 f   autogrid.obj
+ 0001:000026a0       _ag_ProcessOutline         100036a0 f   autogrid.obj
+ 0001:00002830       _ag_AnalyzeChar            10003830 f   autogrid.obj
+ 0001:00002a00       _ag_ComputeTangents        10003a00 f   autogrid.obj
+ 0001:00002d80       _ag_DoubleNorm             10003d80 f   autogrid.obj
+ 0001:00002ee0       _ag_MarkPoints             10003ee0 f   autogrid.obj
+ 0001:000037b0       _ag_FDist                  100047b0 f   autogrid.obj
+ 0001:00003810       _ag_XDist                  10004810 f   autogrid.obj
+ 0001:00003850       _ag_YDist                  10004850 f   autogrid.obj
+ 0001:00003890       _ag_FindXandYExtrema       10004890 f   autogrid.obj
+ 0001:00003a90       _ag_PrevDifferentYValue    10004a90 f   autogrid.obj
+ 0001:00003b10       _ag_PrevDifferentXValue    10004b10 f   autogrid.obj
+ 0001:00003b90       _ag_FindInflections        10004b90 f   autogrid.obj
+ 0001:00004120       _ag_FindPointPairs         10005120 f   autogrid.obj
+ 0001:00004520       _ag_BlackAndParallell      10005520 f   autogrid.obj
+ 0001:00004630       _ag_FindLinks              10005630 f   autogrid.obj
+ 0001:00004a50       _ag_GetStems               10005a50 f   autogrid.obj
+ 0001:00004ea0       _ag_ScaleGlyph             10005ea0 f   autogrid.obj
+ 0001:00005bf0       _MedianHeight              10006bf0 f   ghints.obj
+ 0001:00005d30       _GetYMax                   10006d30 f   ghints.obj
+ 0001:00005dd0       _GetYMin                   10006dd0 f   ghints.obj
+ 0001:00006bb0       _glyph_AllocContours       10007bb0 f   glyph.obj
+ 0001:00006cd0       _addStemFrame              10007cd0 f   glyph.obj
+ 0001:0000a870       _HeapSort                  1000b870 f   hstrat97.obj
+ 0001:0000a910       _downHeap                  1000b910 f   hstrat97.obj
+ 0001:0000aa30       _isComplexChar             1000ba30 f   hstrat97.obj
+ 0001:0000ace0       _Make3rdDegreeBezierEdgeList 1000bce0 f   t2ksc.obj
+ 0001:0000b090       _ShellSort                 1000c090 f   t2ksc.obj
+ 0001:0000b2b0       _DoNonZeroWindingRule      1000c2b0 f   t2ksc.obj
+ 0001:0000b4b0       _drawLine                  1000c4b0 f   t2ksc.obj
+ 0001:0000b990       _ReAllocEdges              1000c990 f   t2ksc.obj
+ 0001:0000baa0       _draw3rdDegreeBezier       1000caa0 f   t2ksc.obj
+ 0001:0000bf50       _MakeEdgeList              1000cf50 f   t2ksc.obj
+ 0001:0000c3f0       _drawParabola              1000d3f0 f   t2ksc.obj
+ 0001:0000d020       _GetDoubleDeltaMetric      1000e020 f   shapet.obj
+ 0001:0000d050       _ApplyDeltaToHMTX          1000e050 f   shapet.obj
+ 0001:0000d960       _AdjustBoldAlignmentValues 1000e960 f   shapet.obj
+ 0001:0000d9c0       _isVectorFlip              1000e9c0 f   shapet.obj
+ 0001:0000da10       _ComputeIntersectionDouble 1000ea10 f   shapet.obj
+ 0001:0000dbb0       _AdjustItalicMultiplier    1000ebb0 f   shapet.obj
+ 0001:0000dbe0       _ApplyItalicContour        1000ebe0 f   shapet.obj
+ 0001:0000dc40       _F26Dot6Fix28MulRoundSlant 1000ec40 f   shapet.obj
+ 0001:0000ded0       _AnalyzeVector             1000eed0 f   shapet.obj
+ 0001:0000e040       _AnalyzeAngle              1000f040 f   shapet.obj
+ 0001:0000e6f0       _PSNameToUnicode           1000f6f0 f   t1.obj
+ 0001:0000eb50       _PrepareForHinting         1000fb50 f   t1.obj
+ 0001:0000ece0       _FlipContourDirection      1000fce0 f   t1.obj
+ 0001:0000ee60       _backwardsATOI             1000fe60 f   t1.obj
+ 0001:0000ef00       _Type1BuildChar            1000ff00 f   t1.obj
+ 0001:00010040       _SetMetrics                10011040 f   t1.obj
+ 0001:00010080       _tsi_T1GetGlyphIndexFromAdobeCode 10011080 f   t1.obj
+ 0001:000101a0       _ATOI                      100111a0 f   t1.obj
+ 0001:00010250       _tsi_T1Find                10011250 f   t1.obj
+ 0001:000103c0       _ATOFixed                  100113c0 f   t1.obj
+ 0001:000106d0       _TransformData             100116d0 f   t1.obj
+ 0001:000107b0       _DecryptData               100117b0 f   t1.obj
+ 0001:00010b50       _Decrypt                   10011b50 f   t1.obj
+ 0001:00010ba0       _IsHex                     10011ba0 f   t1.obj
+ 0001:00010c00       _MapHex                    10011c00 f   t1.obj
+ 0001:00010c30       _BuildMetricsEtc           10011c30 f   t1.obj
+ 0001:00010f50       _GetGlyphYMax              10011f50 f   t1.obj
+ 0001:00010fc0       _GetGlyphYMin              10011fc0 f   t1.obj
+ 0001:00011030       _tsi_T1GetFixedArray       10012030 f   t1.obj
+ 0001:00011150       _GetT1FontMatrix           10012150 f   t1.obj
+ 0001:000112f0       _BuildSubrs                100122f0 f   t1.obj
+ 0001:000114e0       _BuildCMAP                 100124e0 f   t1.obj
+ 0001:000117d0       _ReadGlobalHints           100127d0 f   t1.obj
+ 0001:00011890       _tsi_T1GetShortArray       10012890 f   t1.obj
+ 0001:00012250       _tsi_NewCFFIndexClass      10013250 f   t1.obj
+ 0001:00012450       _GetOffsetFunction         10013450 f   t1.obj
+ 0001:000124d0       _ReadOfffset1              100134d0 f   t1.obj
+ 0001:000125e0       _ReadOfffset2              100135e0 f   t1.obj
+ 0001:00012800       _ReadOfffset3              10013800 f   t1.obj
+ 0001:00012b30       _ReadOfffset4              10013b30 f   t1.obj
+ 0001:00012f70       _tsi_ParsePrivateDictData  10013f70 f   t1.obj
+ 0001:000133b0       _READ_REAL                 100143b0 f   t1.obj
+ 0001:000134f0       _READ_INTEGER              100144f0 f   t1.obj
+ 0001:00013e20       _tsi_ParseCFFTopDict       10014e20 f   t1.obj
+ 0001:00014550       _BuildT2MetricsEtc         10015550 f   t1.obj
+ 0001:000147d0       _BuildT2CMAP               100157d0 f   t1.obj
+ 0001:00015d90       _tsi_DeleteCFFIndexClass   10016d90 f   t1.obj
+ 0001:00016000       _GetGlyphXMin              10017000 f   t1.obj
+ 0001:00016070       _Type2BuildChar            10017070 f   t1.obj
+ 0001:00019ba0       _process_stems             1001aba0 f   t1hint.obj
+ 0001:0001a750       _find_top_range            1001b750 f   t1hint.obj
+ 0001:0001a800       _find_bottom_range         1001b800 f   t1hint.obj
+ 0001:0001a8c0       _find_range                1001b8c0 f   t1hint.obj
+ 0001:0001a900       _get_range_point           1001b900 f   t1hint.obj
+ 0001:0001a9f0       _placeStemLowerEnd         1001b9f0 f   t1hint.obj
+ 0001:0001aa30       _place_points              1001ba30 f   t1hint.obj
+ 0001:0001be50       _ExtractBitmapTransform    1001ce50 f   t2k.obj
+ 0001:0001c070       _T2K_NewTransformationInternal 1001d070 f   t2k.obj
+ 0001:0001c130       _T2KDoGriddingSetUp        1001d130 f   t2k.obj
+ 0001:0001c420       _T2K_PurgeMemoryInternal   1001d420 f   t2k.obj
+ 0001:0001c510       _SetOneUnitAxis            1001d510 f   t2k.obj
+ 0001:0001cd50       _MatrixTimesVector         1001dd50 f   t2k.obj
+ 0001:0001ce80       _T2K_RenderGlyphInternal   1001de80 f   t2k.obj
+ 0001:0001e570       _getDropoutMode            1001f570 f   t2k.obj
+ 0001:0001e760       _scaleValue                1001f760 f   t2k.obj
+ 0001:0001e7b0       _MatrixTimesMatrix16x16    1001f7b0 f   t2k.obj
+ 0001:0001e8c0       _T2K_GetSbits              1001f8c0 f   t2k.obj
+ 0001:0001eca0       _bold_bitmap               1001fca0 f   t2k.obj
+ 0001:0001f340       _ApplyCompensationTransformToMetrics 10020340 f   t2k.obj
+ 0001:0001f6b0       _ApplyCompensationTransformToBitmap 100206b0 f   t2k.obj
+ 0001:0001f9b0       _bold_greyscale_bitmap     100209b0 f   t2k.obj
+ 0001:00020190       _adjust_advances_after_bitmap_bolding 10021190 f   t2k.obj
+ 0001:00021ab0       _New_GlyphClass            10022ab0 f   truetype.obj
+ 0001:00022af0       _Compute_cmapClass_GlyphIndex 10023af0 f   truetype.obj
+ 0001:00022b70       _Compute_cmapClass_Index0  10023b70 f   truetype.obj
+ 0001:00022bc0       _Compute_cmapClass_Index4  10023bc0 f   truetype.obj
+ 0001:00022da0       _Compute_cmapClass_Index6  10023da0 f   truetype.obj
+ 0001:00022ec0       _LoadCMAP                  10023ec0 f   truetype.obj
+ 0001:00022f50       _New_cmapClass             10023f50 f   truetype.obj
+ 0001:000233c0       _IsFigure_cmapClass        100243c0 f   truetype.obj
+ 0001:000236c0       _Copy_hmtxClass            100246c0 f   truetype.obj
+ 0001:00023b80       _CacheKeyTables_sfntClass  10024b80 f   truetype.obj
+ 0001:00024350       _New_sfnt_OffsetTable      10025350 f   truetype.obj
+ 0001:00024430       _New_sfnt_DirectoryEntry   10025430 f   truetype.obj
+ 0001:000244a0       _Delete_sfnt_OffsetTable   100254a0 f   truetype.obj
+ 0001:00024510       _Delete_sfnt_DirectoryEntry 10025510 f   truetype.obj
+ 0001:00024530       _New_hheaClass             10025530 f   truetype.obj
+ 0001:000246a0       _Delete_hheaClass          100256a0 f   truetype.obj
+ 0001:000246c0       _New_hmtxClass             100256c0 f   truetype.obj
+ 0001:000247f0       _New_ttcfClass             100257f0 f   truetype.obj
+ 0001:000248c0       _Delete_ttcfClass          100258c0 f   truetype.obj
+ 0001:00024900       _New_headClass             10025900 f   truetype.obj
+ 0001:00024a90       _Delete_headClass          10025a90 f   truetype.obj
+ 0001:00024ab0       _New_maxpClass             10025ab0 f   truetype.obj
+ 0001:00024c10       _Delete_maxpClass          10025c10 f   truetype.obj
+ 0001:00024c30       _New_locaClass             10025c30 f   truetype.obj
+ 0001:00024d40       _Delete_locaClass          10025d40 f   truetype.obj
+ 0001:00025250       _Delete_cmapClass          10026250 f   truetype.obj
+ 0001:000262d0       _New_bitmapSizeTable       100272d0 f   t2ksbit.obj
+ 0001:00026b10       _Delete_bitmapSizeTable    10027b10 f   t2ksbit.obj
+ 0001:000275b0       _FindBitmapSizeTable       100285b0 f   t2ksbit.obj
+ 0001:00027790       _FintBestSubstitute        10028790 f   t2ksbit.obj
+ 0001:00027850       _RescalePixelValue         10028850 f   t2ksbit.obj
+ 0001:00027c90       _ReadBigMetrics            10028c90 f   t2ksbit.obj
+ 0001:00028cc0       _ReadSmallMetrics          10029cc0 f   t2ksbit.obj
+ 0001:00029220       _CreateBitMap              1002a220 f   t2ksbit.obj
+ 0001:00029af0       _MergeBits                 1002aaf0 f   t2ksbit.obj
+ 0001:00029cf0       _ScaleBits                 1002acf0 f   t2ksbit.obj
+ 0001:00029fe0       _ScaleYBits                1002afe0 f   t2ksbit.obj
+ 0001:0002a0e0       _ScaleXBits                1002b0e0 f   t2ksbit.obj
+ 0001:0002a2a0       _WideMul                   1002b2a0 f   FixMulDiv.obj
+ 0001:0002a3a0       _WideDiv                   1002b3a0 f   FixMulDiv.obj
+ 0001:0002c300       _fnt_SH_Common             1002d300 f   Fnt.obj
+ 0001:0002c4c0       _fnt_SHP_Common            1002d4c0 f   Fnt.obj
+ 0001:0002dc60       _fnt_PushSomeBytes         1002ec60 f   Fnt.obj
+ 0001:0002de90       _fnt_PushSomeWords         1002ee90 f   Fnt.obj
+ 0001:0002ec90       _fnt_ProjectIntegerPPEM    1002fc90 f   Fnt.obj
+ 0001:00030280       _fnt_CheckSingleWidth      10031280 f   Fnt.obj
+ 0001:00030bd0       _fnt_DeltaEngine           10031bd0 f   Fnt.obj
+ 0001:00032510       _fnt_SetRoundValues        10033510 f   FntRare.obj
+ 0001:000337b0       _fnt_FindIDef              100347b0 f   FntRare.obj
+ 0001:000359d0       _CreateGlyphElement        100369d0 f   HintGlyph.obj
+ 0001:00035bb0       _AdjustPhantoms            10036bb0 f   HintGlyph.obj
+ 0001:00035be0       _AdjustPhantomAxis         10036be0 f   HintGlyph.obj
+ 0001:00035c60       _OffsetAxis                10036c60 f   HintGlyph.obj
+ 0001:000362e0       _SetupScalerDefaultTTD     100372e0 f   HintTran.obj
+ 0001:00036330       _TTScalerTTHintTranDeep    10037330 f   HintTran.obj
+ 0001:00036360       _SetupScalerTransform      10037360 f   HintTran.obj
+ 0001:000363d0       _SetupGXMatrixFromT2K      100373d0 f   HintTran.obj
+ 0001:00036490       _TTHintTransformAllocation 10037490 f   HintTran.obj
+ 0001:00036730       _ScaleCVT                  10037730 f   InterpreterGlue.obj
+ 0001:000369c0       _SetUpProgramPtrs          100379c0 f   InterpreterGlue.obj
+ 0001:00036a70       _SetGlobalGSStackData      10037a70 f   InterpreterGlue.obj
+ 0001:00036da0       _util_FixMulRoundPositive  10037da0 f   PinkGlue.obj
+ 0001:00036fd0       _FixedToGCoordinate        10037fd0 f   PinkGlue.obj
+ 0001:00036fe0       _FractToGCoordinate        10037fe0 f   PinkGlue.obj
+ 0001:000370e0       _GCoordinateToFixed        100380e0 f   PinkGlue.obj
+ 0001:00037100       _GCoordinateToFract        10038100 f   PinkGlue.obj
+ 0001:00037610       _SetupDebugPointers        10038610 f   TTHintFont.obj
+ 0001:00037b50       _LargestElementCounts      10038b50 f   TTHintFont.obj
+ 0001:00037bc0       _OnceOnlyTTFDefInit        10038bc0 f   TTHintFont.obj
+ 0001:00039190       _sc_wnNrowFill             1003a190 f   sc.obj
+ 0001:00039750       _sortCols                  1003a750 f   sc.obj
+ 0001:000398f0       _sortRows                  1003a8f0 f   sc.obj
+ 0001:00039a80       _sc_lineGen                1003aa80 f   sc.obj
+ 0001:00039b50       _sc_lineGenRows            1003ab50 f   sc.obj
+ 0001:00039c20       _sc_mark                   1003ac20 f   sc.obj
+ 0001:0003e110       _sc_markRows               1003f110 f   sc.obj
+ 0001:0003f340       _sc_orSomeBits             10040340 f   sc.obj
+ 0001:0003fab0       _invpixSegY                10040ab0 f   sc.obj
+ 0001:0003fc30       _invpixSegX                10040c30 f   sc.obj
+ 0001:0003fce0       _invpixOn                  10040ce0 f   sc.obj
+ 0001:0003fd40       _sc_lineInit               10040d40 f   sc.obj
+ 0001:0003fde0       _nUpperXings               10040de0 f   sc.obj
+ 0001:0003feb0       _nOnOff                    10040eb0 f   sc.obj
+ 0001:0003ffd0       _nLowerXings               10040fd0 f   sc.obj
+ 0001:000406b0       _sc_DrawParabola           100416b0 f   sc.obj
+ 0001:00040c00       _InitScanPointStructure    10041c00 f   Orient.obj
+ 0001:00040c60       _GetNonGridXPointOnLineSegment 10041c60 f   Orient.obj
+ 0001:00040cf0       _GetOffGrid                10041cf0 f   Orient.obj
+ 0001:00040e10       _GetNonGridXPointOnQuadratic 10041e10 f   Orient.obj
+ 0001:000410b0       _IsOutsideConvexHull       100420b0 f   Orient.obj
+ 0001:00041130       _SplitQuadraticAtEndPoint  10042130 f   Orient.obj
+ 0001:000412e0       _XGetQuadraticBezier       100422e0 f   Orient.obj
+ 0001:00041370       _GetQuatraticControlPointOneAxis 10042370 f   Orient.obj
+ 0001:000413a0       _SingleSetupYAxisScan      100423a0 f   Orient.obj
+ 0001:000413f0       _GetSplineValueOnY         100423f0 f   Orient.obj
+ 0001:00041650       _BalancedSetupYAxisScan    10042650 f   Orient.obj
+ 0001:00041730       _CheckLeftOrRight          10042730 f   Orient.obj
+ 0001:00041860       _GetXCurveRelationship     10042860 f   Orient.obj
+ 0001:00041890       _UpdatePoint               10042890 f   Orient.obj
+ 0001:00041920       _EvaluateCurveType         10042920 f   Orient.obj
+ 0001:00041a10       _SetupCurveSegment         10042a10 f   Orient.obj
+ 0001:00041b60       _SplitQuadratic            10042b60 f   Orient.obj
+ 0001:00041ca0       _EvaluateQuadraticAt       10042ca0 f   Orient.obj
+ 0001:00041d20       _EvaluateQuadraticAtForAxis 10042d20 f   Orient.obj
+ 0001:00041d60       _GetInterpolatedAxis       10042d60 f   Orient.obj
+ 0001:00041d80       _ScanCheckContour          10042d80 f   Orient.obj
+ 0001:00041f30       _CheckLineSegment          10042f30 f   Orient.obj
+ 0001:00042090       _UpdateQuadraticCurve      10043090 f   Orient.obj
+ 0001:000422a0       _UpdateMonotonicQuadratic  100432a0 f   Orient.obj
+ 0001:00042300       _UpdateBalancedQuadraticCurve 10043300 f   Orient.obj
+ 0001:000423c0       _UpdateControlOutsideQuadratic 100433c0 f   Orient.obj
+ 0001:00042470       _GetNonZeroWinding         10043470 f   Orient.obj
+ 0001:000425a0       _NeededAllocationContourBytes 100435a0 f   OrientDB.obj
+ 0001:000425c0       _NeededContourWords        100435c0 f   OrientDB.obj
+ 0001:000425f0       _SetupAllocatedContourData 100435f0 f   OrientDB.obj
+ 0001:00042cd0       _resetBidi                 10043cd0 f   jbidi.obj
+ 0001:00043420       _getDirProps               10044420 f   ubidi.obj
+ 0001:000436a0       _resolveExplicitLevels     100446a0 f   ubidi.obj
+ 0001:00043a30       _checkExplicitLevels       10044a30 f   ubidi.obj
+ 0001:00043b60       _directionFromFlags        10044b60 f   ubidi.obj
+ 0001:00043ba0       _resolveImplicitLevels     10044ba0 f   ubidi.obj
+ 0001:000440b0       _adjustWSLevels            100450b0 f   ubidi.obj
+ 0001:000446d0       _setTrailingWSStart        100456d0 f   ubidiln.obj
+ 0001:00044b50       _getSingleRun              10045b50 f   ubidiln.obj
+ 0001:00044b90       _reorderLine               10045b90 f   ubidiln.obj
+ 0001:00045010       _prepareReorder            10046010 f   ubidiln.obj
+ 0001:000455b0       _u_getDirectionInternal    100465b0 f   uchardir.obj
+ 0001:00045d60       _drawGlyphList             10046d60 f   DrawGlyphList.obj
+ 0001:000460e0       _drawGlyphListLCD          100470e0 f   DrawGlyphList.obj
+ 0001:00046bd0       _getLCDGammaLUT            10047bd0 f   DrawGlyphList.obj
+ 0001:00046c30       _getInvLCDGammaLUT         10047c30 f   DrawGlyphList.obj
+ 0001:000479d0       _getNullScaler             100489d0 f   scalerMethods.obj
+ 0001:00048030       _freeScalerInfo            10049030 f   scalerMethods.obj
+ 0001:000485f0       _ReadTTFontFileFunc        100495f0 f   scalerMethods.obj
+ 0001:00049270       _CopyBW2Grey8              1004a270 f   scalerMethods.obj
+ 0001:000493a0       _CopyBW2LCDH               1004a3a0 f   scalerMethods.obj
+ 0001:000496d0       _CopyBW2LCDV               1004a6d0 f   scalerMethods.obj
+ 0001:00049970       _getTBFromBW2              1004a970 f   scalerMethods.obj
+ 0001:00049a50       _filterPixelsH             1004aa50 f   scalerMethods.obj
+ 0001:00049b40       _filterPixelsV             1004ab40 f   scalerMethods.obj
+ 0001:00049e20       _getNullGlyphImage         1004ae20 f   scalerMethods.obj
+ 0001:0004a440       _ProjectUnitVector         1004b440 f   scalerMethods.obj
+ 0001:0004b060       _GetOSVersion              1004c060 f   fontpath.obj
+ 0001:0004b0e0       _EnumFamilyNamesA@16       1004c0e0 f   fontpath.obj
+ 0001:0004b240       _EnumFontFacesInFamilyProcA@16 1004c240 f   fontpath.obj
+ 0001:0004b300       _EnumFamilyNamesW@16       1004c300 f   fontpath.obj
+ 0001:0004b480       _EnumFontFacesInFamilyProcW@16 1004c480 f   fontpath.obj
+ 0001:0004b580       _DifferentFamily           1004c580 f   fontpath.obj
+ 0001:0004b610       _CheckFontFamilyProcW@16   1004c610 f   fontpath.obj
+ 0001:0004b640       _RegistryToBaseTTNameA     1004c640 f   fontpath.obj
+ 0001:0004b6d0       _RegistryToBaseTTNameW     1004c6d0 f   fontpath.obj
+ 0001:0004b770       _registerFontA             1004c770 f   fontpath.obj
+ 0001:0004b900       _registerFontW             1004c900 f   fontpath.obj
+ 0001:0004cb90       _getIGTable                1004db90 f   lcdglyph.obj
+ 0001:0005ffa0       _getGlyphGeneralPath       10060fa0 f   t2kScalerMethods.obj

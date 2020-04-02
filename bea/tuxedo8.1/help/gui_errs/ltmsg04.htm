@@ -1,0 +1,1859 @@
+<TITLE>LIBTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBTUX MESSAGES 600-699</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="600"></A>
+<H3>LIBTUX MESSAGE #600</H3>
+<H2> ERROR: [Invalid buffer type information <I>type</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer type information provided in the
+configuration file was incorrect.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file,
+verify that the buffer type provided is
+correct, and repeat the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="601"></A>
+<H3>LIBTUX MESSAGE #601</H3>
+<H2> ERROR: [Invalid buffer subtype information <I>subtype_val</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The buffer subtype information provided
+in the configuration file was incorrect.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file,
+verify that the buffer type provided is
+correct, and repeat the operation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="602"></A>
+<H3>LIBTUX MESSAGE #602</H3>
+<H2> ERROR: TUXCONFIG environment variable not set</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+environment variable is not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set and export the
+TUXCONFIG
+environment variable, which should be the same as
+defined in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="603"></A>
+<H3>LIBTUX MESSAGE #603</H3>
+<H2> ERROR: TUXCONFIG file <I>filename</I> does not exist</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+file,
+<I>filename,</I>
+does not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the
+TUXCONFIG
+environment variable to see if it matches with the definition of the
+TUXCONFIG
+in the
+UBBCONFIG
+file.  Then, check to see if the
+TUXCONFIG
+file has been generated.  If not, use tmloadcf(1) to create the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="604"></A>
+<H3>LIBTUX MESSAGE #604</H3>
+<H2> ERROR: Cannot get file status on TUXCONFIG file <I>filename</I>, errno = <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Cannot get the file status on the
+TUXCONFIG
+file,
+<I>filename.</I>
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the UNIX errno for reasons and take appropriate actions accordingly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+stats (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="605"></A>
+<H3>LIBTUX MESSAGE #605</H3>
+<H2> ERROR: TUXOFFSET environment variable must be >= 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXOFFSET
+environment variable is less than 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a value for the
+TUXOFFSET
+environment variable that is greater than or equal to 0.  This
+TUXOFFSET
+value must be the same as defined in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="607"></A>
+<H3>LIBTUX MESSAGE #607</H3>
+<H2> ERROR: Cannot open section <I>section_name</I> of the TUXCONFIG: <I>file</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+<I>section_name</I>
+of the
+TUXCONFIG
+file cannot be opened.  The
+TUXCONFIG
+file might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+You can shut down the application and re-load the
+TUXCONFIG file using <Font>tmloadcf.
+If the error still occurs, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="608"></A>
+<H3>LIBTUX MESSAGE #608</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Memory allocation failed for adding new sections in the
+TUXCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="610"></A>
+<H3>LIBTUX MESSAGE #610</H3>
+<H2> ERROR: Cannot close the TUXCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXCONFIG
+file in the
+VTOC
+table cannot be closed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the permission and the existence of the
+TUXCONFIG
+file, or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="612"></A>
+<H3>LIBTUX MESSAGE #612</H3>
+<H2> ERROR: Read an entry from the VTOC table failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Reading an entry from the disk table failed.
+Possible causes: 1) the logical table file descriptor was corrupted, 2) the
+read page offset was set incorrectly by the system, or 3) the
+table itself got corrupted which caused read() to fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your disk tables such as
+VTOC
+for possible corruptions and/or
+damages.  If this error still occurs, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+read (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="614"></A>
+<H3>LIBTUX MESSAGE #614</H3>
+<H2> ERROR: Cannot write to the <I>section_name</I> of the TUXCONFIG file which is not opened</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Cannot write to the
+<I>section_name</I>
+of the
+TUXCONFIG
+file which was never opened.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+TUXCONFIG
+file, or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmunloadcf (1),
+write(2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="615"></A>
+<H3>LIBTUX MESSAGE #615</H3>
+<H2> ERROR: Write to the <I>section_name</I> of the TUXCONFIG file failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Write to the
+<I>section_name</I>
+of the
+TUXCONFIG
+file in VTOC table failed.
+Possible causes: 1) the logical table file descriptor was corrupted, 2) the
+write page offset was set incorrectly by the system, or 3) the
+table itself got corrupted which caused write() to fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your disk tables such as VTOC for possible corruptions and/or
+damages.  If this error still occurs, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+write (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="616"></A>
+<H3>LIBTUX MESSAGE #616</H3>
+<H2> ERROR: The routing section of the TUXCONFIG file cannot be located</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing section of the
+TUXCONFIG
+file cannot be located.
+Possible causes: 1) the
+TUXCONFIG
+file might be corrupted, 2) the
+TUXCONFIG
+environment variable might not be set, or 3) the
+TUXOFFSET
+enironment variable was less than zero.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+See Messages 602, 605, and 607 in this chapter
+for explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="624"></A>
+<H3>LIBTUX MESSAGE #624</H3>
+<H2> ERROR: Data tables for routing section full</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Data routing tables in the Bulletin Board are full when
+parsing the routing range and creating the data routing
+entries.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a system error, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="625"></A>
+<H3>LIBTUX MESSAGE #625</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the short routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the short routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="626"></A>
+<H3>LIBTUX MESSAGE #626</H3>
+<H2> ERROR: Range values out of order <I>upper_range</I> &lt; <I>upper_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the short routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the short routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="627"></A>
+<H3>LIBTUX MESSAGE #627</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the integer routing data
+was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the integer routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="628"></A>
+<H3>LIBTUX MESSAGE #628</H3>
+<H2> ERROR: Range values out of order <I>upper_range</I> &lt; <I>lower_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the integer routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the integer routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="629"></A>
+<H3>LIBTUX MESSAGE #629</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the long routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the long routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="630"></A>
+<H3>LIBTUX MESSAGE #630</H3>
+<H2> ERROR: Range values out of order <I>upper_range</I> &lt; <I>lower_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the long routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the long routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="631"></A>
+<H3>LIBTUX MESSAGE #631</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the float routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the float routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="632"></A>
+<H3>LIBTUX MESSAGE #632</H3>
+<H2> ERROR: Range values out of order <I>upper_range</I> &lt; <I>lower_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the float routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the float routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="633"></A>
+<H3>LIBTUX MESSAGE #633</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the double routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the double routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="634"></A>
+<H3>LIBTUX MESSAGE #634</H3>
+<H2> ERROR: Range values out of order <I>upper_range</I> &lt; <I>lower_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the double routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the double routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="635"></A>
+<H3>LIBTUX MESSAGE #635</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the char routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the char routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="636"></A>
+<H3>LIBTUX MESSAGE #636</H3>
+<H2> ERROR: Range values out of order <I>upper_range</I> &lt; <I>lower_range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the char routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the char routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="637"></A>
+<H3>LIBTUX MESSAGE #637</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the string routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the string routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="638"></A>
+<H3>LIBTUX MESSAGE #638</H3>
+<H2> ERROR: Range values out of order for the string routing data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the string routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the string routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="639"></A>
+<H3>LIBTUX MESSAGE #639</H3>
+<H2> ERROR: More than one wild card in entry <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+More than one wild-card (*) range for the carray routing data was
+specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check your
+UBBCONFIG
+file for multiple definitions of wild-card ranges
+for the carray routing data.  Only one wild-card range is allowed
+per routing entry and it should be the last (ranges following it will
+be ignored).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="640"></A>
+<H3>LIBTUX MESSAGE #640</H3>
+<H2> ERROR: Range values out of order for the carray routing data</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The range values for the carray routing data are out of order,
+that is, the upper range value is less than the lower range value.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the carray routing data in your
+UBBCONFIG
+file.  The lower range value must be less than or
+equal to the upper range value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="641"></A>
+<H3>LIBTUX MESSAGE #641</H3>
+<H2> ERROR: Unknown field type was specified for data routing entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An unknown field type was specified in the data routing entry.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the field types specified in the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="642"></A>
+<H3>LIBTUX MESSAGE #642</H3>
+<H2> ERROR: Expected colon to separate server group <I>range</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Within a range and a server group pair, the range is separated from
+the server group by a colon (:) in the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and server group specified in the ROUTING section of the
+UBBCONFIG
+file.  A colon (:) is expected to separate the range
+and the server group.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="643"></A>
+<H3>LIBTUX MESSAGE #643</H3>
+<H2> ERROR: Expected comma after group name <I>grpname</I>,<I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Within a range and a server group pair, a comma (,) is expected after
+server group name in the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and the server group specified in the ROUTING section of the
+UBBCONFIG
+file.  A comma (,) is expected after the server group name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="644"></A>
+<H3>LIBTUX MESSAGE #644</H3>
+<H2> ERROR: Expecting keyword MAX</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The keyword MAX is expected to indicate the maximum value for the
+data type of the associated field in the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and server group specified in the ROUTING section of the
+UBBCONFIG
+file.  The keyword MAX should be specified to indicate
+the maximum value for the data type of the associated field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="645"></A>
+<H3>LIBTUX MESSAGE #645</H3>
+<H2> ERROR: Expecting keyword MIN</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The keyword MIN is expected to indicate the minimum value for the
+data type of the associated field in the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and the server group specified in the ROUTING section
+of the
+UBBCONFIG
+file.  The keyword MIN should be specified to indicate
+the minimum value for the data type of the associated field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="646"></A>
+<H3>LIBTUX MESSAGE #646</H3>
+<H2> ERROR: Expecting keyword MIN or MAX</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The keyword MAX or MIN is expected to indicate the maximum
+or minimum value for the data type of the associated field
+in the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the range and server group specified in the ROUTING
+section of the
+UBBCONFIG
+file.  The keyword MAX or MIN should
+be specified to indicate the maximum or the minimum value
+for the data type of the associated field.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="647"></A>
+<H3>LIBTUX MESSAGE #647</H3>
+<H2> ERROR: Value out of range for a short <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a short routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the short routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="648"></A>
+<H3>LIBTUX MESSAGE #648</H3>
+<H2> ERROR: Value out of range for an int <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for an integer routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the integer routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="649"></A>
+<H3>LIBTUX MESSAGE #649</H3>
+<H2> ERROR: Value out of range for a long <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a long routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the long routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="650"></A>
+<H3>LIBTUX MESSAGE #650</H3>
+<H2> ERROR: Expecting a ' ', '+', '-' or number after 'e/E' in float/double</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A ' ', '+', '-' or number after 'e' or 'E' is expected for float or double
+routing values.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the routing range values of the float and double in the ROUTING
+section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="651"></A>
+<H3>LIBTUX MESSAGE #651</H3>
+<H2> ERROR: Value out of range for a float <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a float routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the float routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="652"></A>
+<H3>LIBTUX MESSAGE #652</H3>
+<H2> ERROR: Value out of range for a double <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing value for a double routing data is out of range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the double routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="653"></A>
+<H3>LIBTUX MESSAGE #653</H3>
+<H2> ERROR: Expected single quote to begin char routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A single quote (') is expected at the beginning of char routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the char routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+A char routing data must be begun with a single quote (').
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="654"></A>
+<H3>LIBTUX MESSAGE #654</H3>
+<H2> ERROR: Expected single quote to end char routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A single quote (') is expected at the end of char routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for the char routing data in
+the ROUTING section of the
+UBBCONFIG
+file.
+A char routing data must be ended with a single quote (').
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="655"></A>
+<H3>LIBTUX MESSAGE #655</H3>
+<H2> ERROR: No more string pool free space available for routing strings and carrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The routing string pool in the Bulletin Board is full when filling
+the data routing section with string and carray data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a system error, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="656"></A>
+<H3>LIBTUX MESSAGE #656</H3>
+<H2> ERROR: Expected single quote for string/carray routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A single quote (') is expected for string and <Font>carray routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check routing range values for string and <Font>carray routing data in
+the ROUTING section of the
+UBBCONFIG
+file.  The string and <Font>carray
+routing data must be within single quotes (').
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="657"></A>
+<H3>LIBTUX MESSAGE #657</H3>
+<H2> ERROR: No more string pool free space available for routing strings and carrays</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There is not enough routing free string pool space in the Bulletin Board
+when filling the data section with string and carray data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a system error, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="659"></A>
+<H3>LIBTUX MESSAGE #659</H3>
+<H2> ERROR: Discovered a NULL character in string routing data <I>value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A NULL character is found in the string routing data.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the string routing data for NULL characters in the
+ROUTING section of the
+UBBCONFIG
+file.  A string value is terminated with a NULL character.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="660"></A>
+<H3>LIBTUX MESSAGE #660</H3>
+<H2> ERROR: [Unable to find server group section of TUXCONFIG file]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System internal function was used to retrieve
+server group information from the
+TUXCONFIG
+file, but the function failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support for assistance.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="661"></A>
+<H3>LIBTUX MESSAGE #661</H3>
+<H2> ERROR: Invalid logical machine name - <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine name identifier provided is invalid.
+The most likely reason for that is a duplicate logical machine identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file and ensure that no duplicate logical
+machine names are being used.
+If so, correct the name and try the operation again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="662"></A>
+<H3>LIBTUX MESSAGE #662</H3>
+<H2> ERROR: Invalid logical machine name - <I>lmid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine name identifier provided is invalid.
+The most likely reason for that is a duplicate logical machine identifier.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file and ensure that no duplicate logical
+machine names are being used.
+If duplicates are present,
+correct the name and try the operation again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="663"></A>
+<H3>LIBTUX MESSAGE #663</H3>
+<H2> ERROR: Invalid logical machine name for server group</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The logical machine name identifier provided for the server group is invalid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file and ensure that the
+LMID
+used for the server group is correct.
+Then try the operation again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="664"></A>
+<H3>LIBTUX MESSAGE #664</H3>
+<H2> ERROR: Duplicate server group entry</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A duplicate entry for server groups was defined.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the configuration file and ensure that the server group names
+and IDs are unique.
+Then try the operation again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5),
+tmloadcf (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="665"></A>
+<H3>LIBTUX MESSAGE #665</H3>
+<H2> ERROR: Invalid server group name - <I>svrgrp_name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Cannot retrieve server group from the Bulletin Board because
+an invalid server group name was given.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is a system error, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="666"></A>
+<H3>LIBTUX MESSAGE #666</H3>
+<H2> ERROR: Message operation failed because the queue was removed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the queue was removed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message queues, or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="667"></A>
+<H3>LIBTUX MESSAGE #667</H3>
+<H2> ERROR: Message operation failed because of the bad message type</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because of the bad message type.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message type in msgsnd().  The message is probably
+corrupted.  Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="668"></A>
+<H3>LIBTUX MESSAGE #668</H3>
+<H2> ERROR: Message operation failed because the message size &lt; 0</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the message size is less than zero.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message size in msgsnd().  The message is probably corrupted.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="669"></A>
+<H3>LIBTUX MESSAGE #669</H3>
+<H2> ERROR: Message operation failed because of the invalid message queue identifier</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because of invalid message queue identifier.
+This can also occur if a request is made by a client who exits before
+the request is satisfied.  The cleanup after the client exits removes
+the message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message queue identifier in msgsnd().
+The message may be corrupted.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="670"></A>
+<H3>LIBTUX MESSAGE #670</H3>
+<H2> ERROR: Message operation failed because the message is too big</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the message is too big.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the size of the message in msgsnd().
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="671"></A>
+<H3>LIBTUX MESSAGE #671</H3>
+<H2> ERROR: Message operation failed because the message queue is empty</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the message queue is empty.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message queues.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="672"></A>
+<H3>LIBTUX MESSAGE #672</H3>
+<H2> ERROR: Message operation failed because the message queue or the system is full</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the message queue or the system is full.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check kernel parameters for message queues.  Re-configure your system
+to meet your needs.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="673"></A>
+<H3>LIBTUX MESSAGE #673</H3>
+<H2> ERROR: Message operation failed because the access permissions were denied</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the message queue cannot be accessed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the message queue permissions.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="674"></A>
+<H3>LIBTUX MESSAGE #674</H3>
+<H2> ERROR: Message operation failed because of a bad address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed because the message pointer is
+pointing to an illegal address.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the address of the message queue pointer, or
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="675"></A>
+<H3>LIBTUX MESSAGE #675</H3>
+<H2> ERROR: Message operation failed due to unknown causes</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd
+to a queue failed due to unknown causes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="678"></A>
+<H3>LIBTUX MESSAGE #678</H3>
+<H2> ERROR: Message send/receive failure for remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+msgsnd/rcv
+failed for remote procedure call requests
+that are sent to the DBBL (or BBL in SHM mode).
+Possible causes: 1) cannot find DBBL, 2) a server died, or 3) messages
+send/receive failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check DBBL, servers, and message queues, or contact your TUXEDO System Technical Support.
+See Messages 503, 505, and 506 in this chapter for explanation
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+intro (2),
+msgsnd (2),
+msgrcv (2),
+msgctl (2)
+in UNIX system reference manuals
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="679"></A>
+<H3>LIBTUX MESSAGE #679</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+making a private copy of the bulletin board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="680"></A>
+<H3>LIBTUX MESSAGE #680</H3>
+<H2> ERROR: Effective UID or GID does not match bulletin board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The calling process's effective user-id,
+UID ,
+or group-id,
+GID ,
+is incorrect.
+They should match the
+UID
+and
+GID
+specified
+in the *RESOURCES or *MACHINES section of the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Run the process with the correct effective
+UID
+and
+GID .
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="681"></A>
+<H3>LIBTUX MESSAGE #681</H3>
+<H2> ERROR: Failure to create message queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A UNIX system message queue could not be created during
+TUXEDO System process initialization.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify the UNIX System's kernel parameters related to message queues, and
+increase if necessary.
+In particular, check
+MSGMNI .
+The TUXEDO System's multi-server single queue,
+MSSG ,
+feature allows multiple servers to share the same queue,
+reducing the number required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Installation Guide"
+<SECT2 Role="Procedure">
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="682"></A>
+<H3>LIBTUX MESSAGE #682</H3>
+<H2> ERROR: Send/receive error for remote procedure call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message send failed.
+The message send failure may have resulted
+from a message type switch function failure,
+an invalid message length,
+or a low level message send failure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network, corrupted shared memory, all
+administrative processes are running, and sysgen parms for messages are
+appropriate.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="683"></A>
+<H3>LIBTUX MESSAGE #683</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+creating a system message buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="684"></A>
+<H3>LIBTUX MESSAGE #684</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+a server process was trying to advertise its services.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="687"></A>
+<H3>LIBTUX MESSAGE #687</H3>
+<H2> ERROR: Received message with an unknown release number <I>X</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System message was received with an unknown release number in
+its message header.
+Messages from both the current release and the previous release
+are understood.
+This does not include minor "point" maintenance releases.
+For example, a 4.2.1 TUXEDO System process understands 4.2.1, 4.2, and 4.1
+message formats.
+It does not understand a release 4.0 message,
+since that is two major releases old.
+<P>
+There is a different problem if the unknown release number is 0 or a
+very large number.
+It has been observed that if the underlying TCP/IP
+network is unreliable, and drops bytes from the middle of messages,
+this "unknown release number" error may occur frequently.
+It would typically be reported by the
+BRIDGE
+or
+WSH
+process.
+The problem is that TUXEDO's message header describes how many
+bytes follow the header.
+If some are lost by the network,
+all subsequent message headers will not be in the correct position
+in the data stream.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Upgrade any machines in the network running an old release
+of the TUXEDO System.
+Note that the
+MASTER
+and
+BACKUP
+must be upgraded first, so they are always running the most recent version.
+Investigate and resolve any networking problems.
+TCP/IP should guarantee reliable end-to-end transport of data.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="689"></A>
+<H3>LIBTUX MESSAGE #689</H3>
+<H2> ERROR: Received a message that is smaller than system minimum</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A TUXEDO System message was received by the process, and is known to be
+invalid because it was too small.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A likely cause is a compressed message being received
+by a process linked with release 4.2 or earlier
+TUXEDO System libraries.
+The message compression feature was introduced in release 4.2.1,
+and should not be enabled until the entire application is
+running 4.2.1 or a later release.
+This includes application client and server processes, which
+need to be relinked.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="695"></A>
+<H3>LIBTUX MESSAGE #695</H3>
+<H2> ERROR: Unknown table type given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO System table was requested, and could not be
+read because its type is unknown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="696"></A>
+<H3>LIBTUX MESSAGE #696</H3>
+<H2> ERROR: Missing search key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO System table was requested, and could not be
+read because a search key was not provided to the low-level
+access routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="697"></A>
+<H3>LIBTUX MESSAGE #697</H3>
+<H2> ERROR: Missing search key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO System table was requested, and could not be
+read because a search key was not provided to the low-level
+access routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="698"></A>
+<H3>LIBTUX MESSAGE #698</H3>
+<H2> ERROR: Invalid search key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO System table was requested, and could not be
+read because an invalid search key was passed to the low-level
+access routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="699"></A>
+<H3>LIBTUX MESSAGE #699</H3>
+<H2> ERROR: Missing search key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An internal TUXEDO System table was requested, and could not be
+read because a search key was not provided to the low-level
+access routine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A sample XSD using top level complex type definitions
+ -->
+<xsd:schema targetNamespace="http://xmlns.oracle.com/provider"
+        xmlns:pd="http://xmlns.oracle.com/provider"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <xsd:element name="pdkProvider"
+               type="pd:pdkProviderType"/>
+  
+  <xsd:complexType name="pdkProviderType">
+    <xsd:sequence>
+      <xsd:element name="providerInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="pd:directoryInfo"/>
+            <xsd:element ref="pd:location"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+	<xsd:attribute name="version" type="xsd:string" fixed="10.1.3" use="required"/> 
+  </xsd:complexType>
+
+<xsd:element name="directoryInfo">
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:ID"/>
+      <xsd:attribute name="name" type="xsd:string"/>
+      <xsd:attribute name="description" type="xsd:string"
+                     default="hello world"/>
+      <xsd:attribute name="owner" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="location">
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:ID"/>
+      <xsd:attribute name="accessUrl" type="xsd:string"/>
+      <xsd:attribute name="path" type="xsd:string"/>   
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
+

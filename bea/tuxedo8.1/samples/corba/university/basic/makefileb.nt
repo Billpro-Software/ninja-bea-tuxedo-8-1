@@ -1,0 +1,197 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefileb.nt
+#
+# NT makefile for the university sample application
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+
+include <ntwin32.mak>
+
+#---------------------------------------------------------------------
+# Declarations
+#---------------------------------------------------------------------
+
+REMOVE=-del /Q
+
+# ORACLE stuff :
+# Is the version of the Oracle installation 8i?
+!if exists($(ORACLE_HOME)\precomp\public)
+ORAINC=$(ORACLE_HOME)\precomp\public
+ORADEF=-DORACLE8I
+!else
+ORAINC=$(ORACLE_HOME)\$(PRODIR)\c\include
+!endif
+RM=Oracle_XA
+
+# TUXDIR related stuff :
+TUXINC=$(TUXDIR)\include
+
+# Application specific stuff :
+UTILS= $(APPDIR)\..\utils
+
+# Oracle SQL Precompiler stuff :
+PROCPLSFLAGS= parse=partial release_cursor=yes
+PROCPPFLAGS=  code=cpp include=$(ORAINC)  \
+     include=$(TUXINC) include=$(UTILS)   \
+     include="$(MSVCDIR)\include"         \
+     include="$(MSVCDIR)\Mfc\include"
+
+# CORBA IDL compiler stuff :
+IDLFLAGS=-D_TOBJ -I$(TUXINC)
+
+# C++ compiler stuff :
+CPPFLAGS=-I$(ORAINC) -I$(TUXINC) -I$(UTILS) -DWIN32 $(ORADEF)
+
+#---------------------------------------------------------------------
+# Main build rules
+#---------------------------------------------------------------------
+
+# by default, don't build the java client:
+all        : servers ifrepos cxxclient
+
+servers    : univb_server.exe
+
+ifrepos    : repository_1.ifr
+
+cxxclient  : univb_client.exe
+
+javaclient : UnivBApplet.class
+
+#---------------------------------------------------------------------
+# C++ Client
+#---------------------------------------------------------------------
+
+CLIENT_SRCS =               \
+    $(UTILS)\log.cpp        \
+    $(UTILS)\log_client.cpp \
+    univb_c.cpp             \
+    univb_utils.cpp         \
+    univbc.cpp
+
+univb_client.exe: $(CLIENT_SRCS)
+	set CFLAGS=$(CPPFLAGS)
+	buildobjclient -v -o $@ \
+            -f "$(CLIENT_SRCS)"
+
+#---------------------------------------------------------------------
+# Java Client
+#---------------------------------------------------------------------
+
+UnivBApplet.class: UnivBApplet.java univb.idl
+	$(IDLTOJAVA) univb.idl
+	javac -g UnivBApplet.java
+
+#---------------------------------------------------------------------
+# C++ University Server
+#---------------------------------------------------------------------
+
+UNIV_SERVER_SRCS=             \
+    $(UTILS)\log.cpp          \
+    $(UTILS)\log_server.cpp   \
+    $(UTILS)\unique_id.cpp    \
+    $(UTILS)\samplesdb.cpp    \
+    $(UTILS)\samplesdbsql.cpp \
+    $(UTILS)\oradbconn.cpp    \
+    univb_c.cpp               \
+    univb_s.cpp               \
+    univb_utils.cpp           \
+    univb_i.cpp               \
+    univbs.cpp
+
+# Even though we're not transactional, build with the Oracle
+# resource manager since that will link in all appropriate
+# Oracle libraries:
+univb_server.exe: $(UNIV_SERVER_SRCS)
+	set CFLAGS=$(CPPFLAGS)
+	buildobjserver -v -o $@ -r $(RM) \
+            -f "$(UNIV_SERVER_SRCS)"
+
+#----------------------------------------------------------------------
+# Interface Repository file
+#----------------------------------------------------------------------
+
+repository_1.ifr : univb.idl
+	idl2ir $(IDLFLAGS) $(TUXINC)\tobjin.idl univb.idl
+
+#----------------------------------------------------------------------
+# IDL files
+#----------------------------------------------------------------------
+
+univb_c.cpp univb_c.h univb_s.cpp univb_s.h : univb.idl univb.icf
+	idl $(IDLFLAGS) univb.idl univb.icf
+
+#---------------------------------------------------------------------
+# Initialize the database
+#---------------------------------------------------------------------
+
+LOADSCRIPT=     $(UTILS)\university.sql
+
+initdb	:
+	sqlplus $(USERID) @$(LOADSCRIPT)
+
+#---------------------------------------------------------------------
+# Header file dependencies
+#---------------------------------------------------------------------
+
+univb_i.h               : univb_s.h $(UTILS)\samplesdb.h
+univb_utils.h           : univb_c.h
+
+$(UTILS)\samplesdbsql.h	: $(UTILS)\samplesdb.h
+
+#---------------------------------------------------------------------
+# Source file dependencies
+#---------------------------------------------------------------------
+
+univb_utils.cpp	         : univb_utils.h
+univb_i.cpp              : $(UTILS)\log.h $(UTILS)\unique_id.h \
+                           univb_utils.h univb_i.h
+univbs.cpp               : $(UTILS)\log.h univb_i.h
+univbc.cpp               : $(UTILS)\log.h univb_utils.h
+
+$(UTILS)\log.cpp         : $(UTILS)\log.h
+$(UTILS)\log_client.cpp  : $(UTILS)\log.h
+$(UTILS)\log_server.cpp  : $(UTILS)\log.h
+$(UTILS)\samplesdb.cpp   : $(UTILS)\samplesdb.h
+$(UTILS)\oradbconn.cpp   : $(UTILS)\samplesdbsql.h
+$(UTILS)\samplesdbsql.cpp: $(UTILS)\samplesdbsql.pc
+$(UTILS)\samplesdbsql.pc : $(UTILS)\samplesdbsql.h
+
+#----------------------------------------------------------------------
+# Valid suffixes
+#----------------------------------------------------------------------
+.SUFFIXES:      .pc .cpp .java .class
+
+#----------------------------------------------------------------------
+# Suffix rules
+#----------------------------------------------------------------------
+
+.pc.cpp:
+	$(PROC) $(PROCPLSFLAGS) $(PROCPPFLAGS) iname=$*.pc
+
+.java.class:
+	javac -g  $<
+
+#----------------------------------------------------------------------
+# Housekeeping
+#----------------------------------------------------------------------
+
+clean:
+	$(REMOVE) OBB*
+	$(REMOVE) $(UTILS)\samplesdbsql.cpp
+	$(REMOVE) *.obj
+	$(REMOVE) univb_c*
+	$(REMOVE) univb_s*
+	$(REMOVE) UniversityB\*
+	$(REMOVE) Univ*.class
+	$(REMOVE) *.exe
+	$(REMOVE) repository*
+	$(REMOVE) ULOG*
+	$(REMOVE) *.dat
+	$(REMOVE) stderr
+	$(REMOVE) stdout
+
+#----------------------------------------------------------------------

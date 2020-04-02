@@ -1,0 +1,304 @@
+<java>
+/*
+ * Copyright (c) 1998 BEA Systems, Inc.  All rights reserved
+ *
+ * THIS IS SOURCE CODE PUBLISHED FOR DEMONSTRATION PURPOSES
+ *
+ * This JHTML illustrates how a BankApp HTML client using JoltWAS Servlet in
+ * WebLogic Application Server to access TUXEDO BankApp TRANSFER service.
+ */
+</java>
+
+<java type=import>
+bea.jolt.pool.*
+bea.jolt.pool.servlet.*
+java.util.Properties
+java.util.Hashtable
+java.io.IOException
+</java>
+
+<java type=class>
+  private boolean b_init = false;
+  private ServletSessionPoolManager b_mgr;
+
+/**
+ * Since there is no way to override the init() method, we need
+ * to come up a local initialization method.
+ */
+private void localInit(ServletContext ctxt, HttpServletRequest req)
+    throws ServletException
+  {
+    // Create a session pool and get the session pool manager through a
+    // proprietory mechanism
+    try {
+      b_mgr = ServletPoolManagerConfig.getSessionPoolManager();
+      if ((b_mgr == null) || (b_mgr.getSessionPool("bankapp") == null))
+      {
+	// Load the "bankapp.properties" file.
+	String path = ctxt.getRealPath("/")+"/bankapp.properties";
+	Properties props = ServletPoolManagerConfig.load(path);
+	if (props == null)
+		throw new ServletException(path+" not found");
+	ServletPoolManagerConfig.startup(props);
+	b_mgr = ServletPoolManagerConfig.getSessionPoolManager();
+      }
+    }
+    catch (Exception e) {
+      throw new ServletException(e.toString());
+    }
+  }
+</java>
+
+<java type=code>
+  // Codes that are in the "service()" method.
+  if (!b_init) {
+  // Do some local initialization: get the session pool manager
+  // which has initialized a session pool when web server starts.
+
+    localInit(getServletConfig().getServletContext(), request);
+    b_init = true;
+  }
+
+  ServletResult output;
+
+  // Get the "bankapp" session pool
+  ServletSessionPool session =
+    (ServletSessionPool) b_mgr.getSessionPool("bankapp");
+  if (session == null) {
+</java>
+
+<html>
+<head><title>Bankapp</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+<h2>
+No Session Pool
+</h2>
+<p>
+Copyright (c) 1998 by BEA Systems, Inc. All Rights Reserved.
+</font>
+</body>
+</html>
+
+<java>
+    out.close();
+    return;
+  }
+
+  try {
+    // Invoke a service and get the result.  No transaction is
+    // needed for services, so the 3rd parameter in this call is
+    // null.  Present the result page with input and output data.
+    output = session.call("TRANSFER", request, null);
+</java>
+
+<html>
+<head><title>TRANSFER Result</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h2>
+<font color=#DB1260>
+Result of the TRANSFER Service
+</font>
+</h2>
+
+<script>document.write(new Date())</script>
+
+<p>
+<table border=1><tr>
+<td></td>
+<td align=center><b>Account number</b></td>
+<td align=center><b>Current balance</b></td>
+</tr>
+
+<tr>
+<td align=right><b>From:</b></td>
+<td><java type=print>request.getParameterValues("ACCOUNT_ID_0")[0]</java></td>
+<td><java type=print>output.getStringValue("SBALANCE", 0, "")</java></td>
+</tr>
+
+<tr>
+<td align=right><b>To:</b></td>
+<td><java type=print>request.getParameterValues("ACCOUNT_ID_1")[0]</java></td>
+<td><java type=print>output.getStringValue("SBALANCE", 1, "")</java></td>
+</tr>
+</table>
+
+<center>
+<form>
+<input type='button' value='Back' onClick='history.go(-1)'>
+</form>
+</center>
+
+<p>
+Copyright (c) 1998 by BEA Systems, Inc. All Rights Reserved.
+</font>
+</body>
+</html>
+
+<java>
+  }
+  catch (SessionPoolException e) {
+    // All sessions are busy
+</java>
+
+<html>
+<head><title>Error</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h2>
+<font color=#DB1260>
+Your request could not be completed
+</font>
+</h2>
+
+<p>
+Possible reasons:<br>
+<ul>
+<li>No sessions are available
+<li>The session pool is suspended
+<li>The session pool is shutdown
+</ul>
+<p>
+Please re-submit your request later.
+<p>
+Copyright (c) 1998 by BEA Systems, Inc. All Rights Reserved.
+</font>
+</body>
+</html>
+
+<java>
+  }
+  catch (ApplicationException e) {
+    // An application error
+    output = (ServletResult) e.getResult();
+</java>
+
+<html>
+<head><title>Application Error</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h3>
+<font color='#FF0000'>
+Application Error
+</font>
+</h3>
+
+<table border=0><tr>
+<td align=right><b>From account number:</b></td>
+<td><font color='#0000FF'>
+<java type=print>request.getParameterValues("ACCOUNT_ID_0")[0]</java></font></td>
+</tr>
+
+<tr>
+<td align=right><b>To account number:</b></td>
+<td><font color='#0000FF'>
+<java type=print>request.getParameterValues("ACCOUNT_ID_1")[0]</java></font></td>
+</tr>
+
+<tr>
+<td align=right><b>Status:</b></td>
+<td><font color='#0000FF'>
+<java type=print>output.getStringValue("STATLIN", "")
+</java></font></td>
+</tr></table>
+
+<center>
+<form>
+<input type='button' value='Back' OnClick='history.go(-1)'>
+</form>
+</center>
+
+<p>
+Copyright (c) 1998 by BEA Systems, Inc. All Rights Reserved.
+</font>
+</body>
+</html>
+
+<java>
+  }
+  catch (ServiceException e) {
+    // System error
+</java>
+
+<html>
+<head><title>System Error</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h3>
+<font color='#FF0000'>System Error
+</font></h3>
+
+<table border=0><tr>
+<td align=right><b>Error message:</b></td>
+<td><font color='#0000FF'>
+<java type=print>e.getMessage()</java></font></td>
+</tr>
+
+<tr>
+<td align=right><b>Error number:</b></td>
+<td><font color='#0000FF'>
+<java type=print>e.getErrno()</java></font></td>
+</tr>
+</table>
+
+<center>
+<form>
+<input type='button' value='Back' OnClick='history.go(-1)'>
+</form>
+</center>
+<p>
+Copyright (c) 1998 by BEA Systems, Inc. All Rights Reserved.
+</font>
+</body>
+</html>
+
+<java>
+  }
+  catch (Exception e) {
+  // Any Java errors
+</java>
+
+<html>
+<head><title>System Error</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h3>
+<font color='#FF0000'>
+System Error
+</font>
+</h3>
+
+<table border=0><tr>
+<td align=right><b>Error message:</b></td>
+<td><font color='#0000FF'>
+<java type=print>e.getMessage()</java></font></td>
+</tr>
+
+<tr>
+<td align=right><b>Error number:</b></td>
+<td><font color='#0000FF'>Unknown</font></td>
+</tr>
+</table>
+
+<center>
+<form>
+<input type='button' value='Back' OnClick='history.go(-1)'>
+</form>
+</center>
+
+<p>
+Copyright (c) 1998 by BEA Systems, Inc. All Rights Reserved.
+</font>
+</body>
+</html>
+
+<java>
+  }
+  out.close();
+</java>

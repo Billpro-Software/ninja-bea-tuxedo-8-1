@@ -1,0 +1,799 @@
+<!-- .if n .pH errman.h.ctmsg03.htm @(#)ctmsg03.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>CMDTUX_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>CMDTUX MESSAGES 300-399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="358"></A>
+<H3>CMDTUX MESSAGE #358</H3>
+<H2> ERROR: LMID <I>lmid</I> must be &lt;= <I>len</I> characters in length.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+LMID
+parameter in the *MACHINES section of the
+UBBCONFIG
+file was greater than the system imposed limit of 30 characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+LMID
+parameter to be 30 characters or less and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="359"></A>
+<H3>CMDTUX MESSAGE #359</H3>
+<H2> ERROR: LMID <I>lmid</I> appears more than once in the *MACHINES section.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A *MACHINES section entry in the
+UBBCONFIG
+file had an
+LMID
+parameter
+that had previously been used for another machine.
+Each machine must have a unique
+LMID .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+LMID
+parameter to be unique and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="360"></A>
+<H3>CMDTUX MESSAGE #360</H3>
+<H2> ERROR: The TUXOFFSET parameter (<I>offset</I>) of the Master machine <I>machine</I> does not match the TUXOFFSET environment variable (<I>offset</I>).</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+TUXOFFSET
+parameter defined for the Master node of the configuration
+does not match the
+TUXOFFSET
+environment variable of the user running
+tmloadcf .
+Since
+tmloadcf
+must be run on the Master node, the defined
+TUXOFFSET
+must match the
+TUXOFFSET
+in the environment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+TUXOFFSET
+parameter or
+environment variable and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="361"></A>
+<H3>CMDTUX MESSAGE #361</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+parsing the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="365"></A>
+<H3>CMDTUX MESSAGE #365</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to load the configuration file in tmloadcf.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="369"></A>
+<H3>CMDTUX MESSAGE #369</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to load a configuration file with tmloadcf.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="372"></A>
+<H3>CMDTUX MESSAGE #372</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+parsing the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="373"></A>
+<H3>CMDTUX MESSAGE #373</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+parsing the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="377"></A>
+<H3>CMDTUX MESSAGE #377</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while
+parsing the configuration file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmloadcf (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="381"></A>
+<H3>CMDTUX MESSAGE #381</H3>
+<H2> WARN: DBBL tpsvrinit - bad command line options were specified when booting the DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Bad command line options were specified when booting the
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The system should specify correct command line options for booting the
+DBBL .
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="382"></A>
+<H3>CMDTUX MESSAGE #382</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot find the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a networked application (MP mode), the
+DBBL
+server initialization
+routine cannot find the
+DBBL
+entry in the Bulletin Board.  The DBBL's
+copy of the Bulletin Board in its own process space might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.  The
+DBBL
+should be booted before
+the
+BBL
+in a networked application.  Try to shut down the application,
+remove IPC, and then reboot the
+DBBL
+and
+BBL .
+If the error persists,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="383"></A>
+<H3>CMDTUX MESSAGE #383</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot update the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a networked application (MP mode), the
+DBBL
+server initialization
+routine cannot update the
+DBBL
+entry in the Bulletin Board.  The DBBL's
+copy of the Bulletin Board in its own process space might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.  The
+DBBL
+should be booted before the
+BBL
+in a networked application.  Try to shut down the application,
+remove IPC, and then reboot the
+DBBL
+and
+BBL .
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="384"></A>
+<H3>CMDTUX MESSAGE #384</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot open Bulletin Board image file, <I>filename,</I> while restarting the DBBL, errno <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart the
+DBBL,
+the
+DBBL
+server initialization routine
+cannot open the Bulletin Board image file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and clean up space in either
+$TMPDIR
+or
+/tmp
+on your machine,
+or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="385"></A>
+<H3>CMDTUX MESSAGE #385</H3>
+<H2> ERROR: DBBL tpsvrinit: cannot get file system information of the Bulletin Board image file, <I>filename,</I> errno=<I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to start the
+DBBL,
+the
+DBBL
+server initialization routine
+cannot get the file system information for the Bulletin Board image file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and cleanup space in either
+$TMPDIR
+or
+/tmp
+on your machine.
+Also, check for proper permissions for the files in either
+$TMPDIR
+or
+/tmp .
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="386"></A>
+<H3>CMDTUX MESSAGE #386</H3>
+<H2> ERROR: DBBL tpsvrinit - the size of the Bulletin Board image file, <I>filename,</I> inconsistent with the UBBCONFIG file</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart the
+DBBL,
+the
+DBBL
+server initialization routine
+detected that the size of the Bulletin Board image file is inconsistent with
+the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="387"></A>
+<H3>CMDTUX MESSAGE #387</H3>
+<H2> ERROR: DBBL tpsvrinit: error in reading the Bulletin Board image file, <I>filename,</I> errno= <I>errno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to start the
+DBBL,
+the
+DBBL
+server initialization routine
+detected error in reading the Bulletin Board image file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check file permissions of the Bulletin Board image file either in
+$TMPDIR
+or
+/tmp
+on your machine, or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="388"></A>
+<H3>CMDTUX MESSAGE #388</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot recalculate the offsets for routing section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart the
+DBBL ,
+the
+DBBL
+server initialization routine
+cannot recalculate the offsets for the routing section in the Bulletin Board.
+Possible causes: 1) Bulletin Board corrupted, 2)
+VIEWFILES
+and
+VIEWDIR
+environment variables are not set, or 3) viewname or
+FIELD
+specified in the routing section are not correct.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+See messages 621 and 658 later in this chapter
+for further explanation.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="389"></A>
+<H3>CMDTUX MESSAGE #389</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot find DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+When booting the
+DBBL ,
+the
+DBBL
+server initialization routine cannot
+find its own entry in the Bulletin Board.  The DBBL's copy of the
+Bulletin Board in its own process space might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.  The
+DBBL
+should be booted before the
+BBLs
+in a networked application.  Try to shut down the application,
+remove IPC, and then reboot the
+administrative processes.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="390"></A>
+<H3>CMDTUX MESSAGE #390</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot reset the current acting master reference</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting start the
+DBBL ,
+the
+DBBL
+server initialization routine
+cannot reset the current acting master reference because another node has
+already assumed the master role or the Bulletin Board might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use
+tmadmin
+to assume the role of master node or
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="391"></A>
+<H3>CMDTUX MESSAGE #391</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot update the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a networked application (MP mode), the
+DBBL
+server initialization
+routine cannot update the
+DBBL
+entry in the Bulletin Board.  The DBBL's
+copy of the Bulletin Board in its own process space might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.  The
+DBBL
+should be booted before the
+BBLs
+in a networked application.  Try to shut down the application,
+remove IPC, and then reboot the
+administrative processes.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="392"></A>
+<H3>CMDTUX MESSAGE #392</H3>
+<H2> ERROR: DBBL tpsvrinit - system standard init function failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to start the
+DBBL,
+the call to the system standard initialization function failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for earlier messages in the userlog that describe the
+nature of the failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="394"></A>
+<H3>CMDTUX MESSAGE #394</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot find the current BBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to start the
+DBBL ,
+the
+DBBL
+server initialization routine
+needs to set up the internal registry table information on the active
+BBLs
+in the system.  However, it was unable to find the current BBL entry in the
+Bulletin Board.  The DBBL's copy of the Bulletin Board in its own process
+space might be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.  The
+DBBL
+should be booted before the
+BBLs
+in a networked application.  Try to shut down the application,
+remove IPC, and then reboot the administrative processes.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="395"></A>
+<H3>CMDTUX MESSAGE #395</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed in the
+DBBL
+while trying to acquire space for the Bulletin Board or
+while retrieving the current BBL entry on a restart.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="396"></A>
+<H3>CMDTUX MESSAGE #396</H3>
+<H2> ERROR: DBBL tpsvrinit - exceeds maximum number of BBLs on all the application nodes</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Maximum number of BBLs (
+MAXBBL )
+on all the application nodes
+has been reached.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+System limit for the number of BBLs in an application has been reached.
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="397"></A>
+<H3>CMDTUX MESSAGE #397</H3>
+<H2> ERROR: DBBL tpsvrinit - unable to clean up BBLs, the recovery failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+DBBL
+recovery failed because it was not able to clean up BBLs.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="398"></A>
+<H3>CMDTUX MESSAGE #398</H3>
+<H2> ERROR: DBBL tpsvrinit - cannot update the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a networked application (MP mode), the
+DBBL
+server initialization routine
+cannot update the
+DBBL
+entry in the Bulletin Board when restarting the
+DBBL.
+The
+DBBL 's
+copy of the Bulletin Board in its own process space might be
+corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.  The
+DBBL
+should be booted before the
+BBL
+in a networked application.  Try to shut down the application,
+remove IPC, and then reboot the administrative processes.
+If the error persists, contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="399"></A>
+<H3>CMDTUX MESSAGE #399</H3>
+<H2> ERROR: Administrative service request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service request handled by the
+DBBL
+failed with a fatal error.
+These requests include
+tmadmin
+requests,
+tmboot
+and
+tmshutdown
+requests.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The system is unstable and a TUXEDO System reboot is recommended,
+or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1),
+tmboot (1),
+tmshutdown (1)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

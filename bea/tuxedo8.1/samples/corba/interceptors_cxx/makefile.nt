@@ -1,0 +1,45 @@
+#---------------------------------------------------------------------
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#
+# makefile.nt
+#
+# Windows makefile for the interceptor samples
+#
+# BEA Systems Inc. sample code
+#
+#---------------------------------------------------------------------
+#
+# check that "setenv.cmd" was run first:
+#
+!IF "$(INTERCEPTOR_CXX_SETUP)" == ""
+error1:
+        @echo "ERROR : setenv.cmd has not been run"
+        @exit
+!ENDIF
+
+#---------------------------------------------------------------------
+#
+# define symbols for building all interceptor samples directories 
+#
+ARGS=all
+
+ALL=common simple_cxx security_cxx data_cxx app_cxx
+
+#---------------------------------------------------------------------
+#
+# default target for building
+#
+all: $(ALL)
+
+$(ALL)::
+	cd $(@)
+	$(MAKE) -f makefile.nt $(ARGS)
+	cd ..
+
+#--------------------------------------------------------------------
+#
+# target for cleaning up subdirectories
+#
+clean:
+	$(MAKE) -f makefile.nt ARGS=$(@)
+

@@ -1,0 +1,3318 @@
+<!-- .if n .pH errman.h.lgtmsg01.htm @(#)lgtmsg01.htm	60.4 of 3/25/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<BODY BGCOLOR="#FFFFFF">
+<H1>LIBGWT MESSAGES  </H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<SECT1>
+<H1>LIBGWT MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>LIBGWT MESSAGE #1000</H3>
+<H2> ERROR: Remote domain link not set in action table</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information on the remote domain is not available to establish
+a connection.  Tables may have been changed since the service request came in
+and the remote domain is no longer configured.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>LIBGWT MESSAGE #1001</H3>
+<H2> ERROR: No free context structures available</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A free slot cannot be found in the context table.  See surrounding messages
+for more information such as a memory allocation failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>LIBGWT MESSAGE #1002</H3>
+<H2> ERROR: No free fd structures available</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A free slot cannot be found in the file descriptor table.  See surrounding
+messages for more information such as a memory allocation failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>LIBGWT MESSAGE #1003</H3>
+<H2> ERROR: No free context structures available</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A free slot cannot be found in the context table.  See surrounding messages
+for more information such as a memory allocation failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1004"></A>
+<H3>LIBGWT MESSAGE #1004</H3>
+<H2> ERROR: Unable to obtain local tdomain address from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available to get local
+device for connection establishment.  Severe shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1005"></A>
+<H3>LIBGWT MESSAGE #1005</H3>
+<H2> ERROR: Unable to open device \</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The opening of the device specified in the "TDOM" section of the
+DMCONFIG
+for the local domain was not successful.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the "NWDEVICE" value for the local domain as specified in the DM_TDOMAIN
+section of the
+DMCONFIG
+file.  See the specified network error for more
+information, such as the permissions being incorrect on the device or the
+network not being up.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>LIBGWT MESSAGE #1006</H3>
+<H2> ERROR: Unable to obtain remote domain entry from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the remote domain is not available to get needed
+information.  An update to the configuration (DM_REMOTE_DOMAINS section) may
+have removed the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Retry the request after all configuration information has been updated or
+contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1007"></A>
+<H3>LIBGWT MESSAGE #1007</H3>
+<H2> ERROR: Unable to obtain remote tdomain address from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the remote domain is not available to get the
+addressing information for connection establishment.  An update to the
+configuration (DM_TDOMAINS section) may have removed the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Retry the request after all configuration information has been updated.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>LIBGWT MESSAGE #1008</H3>
+<H2> ERROR: Unable to connect to remote domain <I>domain_name</I>; network error code 0x<I>number</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to establish a connection to the remote domain <I>domain_name</I>
+failed with the network error of <I>number</I>.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+More details can be found from the definition of the error code for your
+particular network or contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1009"></A>
+<H3>LIBGWT MESSAGE #1009</H3>
+<H2> ERROR: Cannot associate with network transaction</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to mark the domain's shared memory record of the transaction
+that this action is beginning to send as part of the transaction failed.
+This was possibly due to the fact that the
+transaction has already begun rollback.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the state of the transaction through
+tmadmin (1)
+or contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>LIBGWT MESSAGE #1010</H3>
+<H2> ERROR: Cannot change action into failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred during an attempt to begin processing a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>LIBGWT MESSAGE #1011</H3>
+<H2> ERROR: Unable to obtain local domain info from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available.  Severe
+shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>LIBGWT MESSAGE #1013</H3>
+<H2> ERROR: Unable to send service request \</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to send the <I>servicename</I> service request to the remote domain
+failed.  The file descriptor will be closed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration of both the remote service (DM_REMOTE_SERVICES) and
+remote domain (DM_REMOTE_DOMAIN.)
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>LIBGWT MESSAGE #1014</H3>
+<H2> ERROR: Cannot set remote domain for transaction</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to set this remote domain as a participant in the transaction in
+the domain's shared memory record of the transaction failed.  This was
+possibly due to the fact that the transaction has already begun rollback, or
+that the maximum number of remote domains participating in a transaction
+has been exceeded.  See possible surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the MAXRDOM parameter in the
+DMCONFIG
+file for the configured maximum number of remote domains (MAXRDOM) that can
+participate in a single transaction.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>LIBGWT MESSAGE #1015</H3>
+<H2> ERROR: Cannot disassociate with network transaction</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to mark the domain's shared memory record of the transaction
+that this action has completed its initial sending as part of the transaction
+failed.  This was possibly due to the fact that the
+transaction has already begun rollback.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the state of the transaction through
+tmadmin (1)
+or contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tmadmin (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>LIBGWT MESSAGE #1016</H3>
+<H2> ERROR: Cannot change action into failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred during an attempt to begin processing a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>LIBGWT MESSAGE #1017</H3>
+<H2> ERROR: Unexpected action state <I>number</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing a service request.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>LIBGWT MESSAGE #1018</H3>
+<H2> ERROR: Unable to obtain local domainid info from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available to get
+information associated with the domain id.  Severe shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>LIBGWT MESSAGE #1019</H3>
+<H2> ERROR: Message presend routine failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to the
+_tmpresend ()
+routine to process the buffer before encoding and
+sending has failed.  The routine is as defined in the typeswitch which can
+be defined by the specific TUXEDO application.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+TYPESW (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>LIBGWT MESSAGE #1020</H3>
+<H2> ERROR: Invalid data length of 0, data not self describing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The message buffer to be sent on the service call has an invalid length
+of 0 after calling the buffer type switch
+_tmpresend ()
+routine.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+TYPESW (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>LIBGWT MESSAGE #1021</H3>
+<H2> ERROR: Encoding of message data failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to the _tmencdec() routine to encode the buffer failed.  The routine
+is as defined in the typeswitch which can be defined by the specific TUXEDO
+application.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+TYPESW (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3>LIBGWT MESSAGE #1022</H3>
+<H2> ERROR: Improper action calling nw_snd</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing a service request.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>LIBGWT MESSAGE #1023</H3>
+<H2> ERROR: Improper action calling nw_snd</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing a service request.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3>LIBGWT MESSAGE #1024</H3>
+<H2> ERROR: _tprandkey() failed tperrno = <I>number</I>, could not generate random encryption key</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to get a randomly generated encryption key for the security exchange
+when a connection is being set up from a remote domain returned with a failure
+with the specified tperrno.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1025"></A>
+<H3>LIBGWT MESSAGE #1025</H3>
+<H2> ERROR: Validation of ticket failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The ticket returned during the security check when a connection is being
+set up from a remote domain did not pass validation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the password entries configured on both the local and remote domains
+in the binary domains configuration file.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1026"></A>
+<H3>LIBGWT MESSAGE #1026</H3>
+<H2> ERROR: Cannot change action into failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred during an attempt to begin processing a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1027"></A>
+<H3>LIBGWT MESSAGE #1027</H3>
+<H2> ERROR: Action data incorrect - null context</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing a service request - mandatory
+context information is missing for the action.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1028"></A>
+<H3>LIBGWT MESSAGE #1028</H3>
+<H2> ERROR: Failed security validation with remote domain (domainid=<I>domainid</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The challenge returned during the security check when connecting to the
+specified remote domain did not pass validation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the password entries configured on both the local and remote domains
+in the binary domains configuration file.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>LIBGWT MESSAGE #1029</H3>
+<H2> ERROR: Failed security validation with remote domain (domainid=<I>domainid</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+When trying to set up a connection to the specified remote domain, the remote
+domain returned a failure for the security validation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the password entries configured on both the local and remote domains
+in the binary domains configuration file.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>LIBGWT MESSAGE #1030</H3>
+<H2> ERROR: Unable to set signals on file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to set up signals on the file descriptor used for establishing
+a connection to a remote domain failed.  The signals are used to notify of
+incoming data or a relief of a blocking condition.  Although processing
+will continue, timely response to data may be jeopardized without signal
+functionality.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>LIBGWT MESSAGE #1031</H3>
+<H2> ERROR: Unable to set signals on file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to set up signals on the file descriptor used for listening for
+connections from a remote domain failed.  The signals are used to notify of
+incoming data or a relief of a blocking condition.  Although processing
+will continue, timely response to data may be jeopardized without signal
+functionality.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>LIBGWT MESSAGE #1032</H3>
+<H2> ERROR: Unable to set signals on file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to set up signals on the file descriptor used for accepting
+connections from a remote domain failed.  The signals are used to notify of
+incoming data or a relief of a blocking condition.  Although processing
+will continue, timely response to data may be jeopardized without signal
+functionality.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3>LIBGWT MESSAGE #1033</H3>
+<H2> ERROR: Action data incorrect - null fd index</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing a service request - mandatory
+file descriptor index is missing for the action.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1034"></A>
+<H3>LIBGWT MESSAGE #1034</H3>
+<H2> ERROR: Action data incorrect - null fd</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing a service request - mandatory
+file descriptor referenced by the index in the action is null.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>LIBGWT MESSAGE #1035</H3>
+<H2> ERROR: Can't set the parent of initiator as itself</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to set the parent of the transaction to itself when it is the
+initiator failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>LIBGWT MESSAGE #1036</H3>
+<H2> ERROR: Too many unrecoverable errors occurred - deleting action</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The calls to process error conditions on a single action occurred more than
+twice.  The action will no longer be processed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>LIBGWT MESSAGE #1037</H3>
+<H2> ERROR: Unrecoverable error occurred on send of data - sending failure reply locally</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when trying to send data across network.  A local failure
+reply will be sent.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3>LIBGWT MESSAGE #1038</H3>
+<H2> ERROR: Unrecoverable error occurred - sending disconnects</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during a conversational exchange.  A disconnect of
+the conversation will be started.  See surrounding messages for more
+information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3>LIBGWT MESSAGE #1039</H3>
+<H2> ERROR: Cannot create action to send remote disconnect</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During error processing, the action needed to send a disconnect across the
+network cannot be created.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>LIBGWT MESSAGE #1040</H3>
+<H2> ERROR: Cannot create action to send remote disconnect</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During error processing, the action needed to send a disconnect locally
+cannot be created.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1041"></A>
+<H3>LIBGWT MESSAGE #1041</H3>
+<H2> ERROR: Unrecoverable error occurred on send of data - sending failure reply over network</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred when trying to send a reply or commitment protocol across
+network.  A failure reply will be sent over the network.  See surrounding
+messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>LIBGWT MESSAGE #1042</H3>
+<H2> ERROR: Unrecoverable error occurred - cannot detect received opcode - deleting action</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The opcode for the received data cannot be determined.  No further processing
+will occur on the action.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3>LIBGWT MESSAGE #1043</H3>
+<H2> ERROR: Unrecoverable error occurred on receipt of data - sending failure reply over network</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during processing of data received over the network.  A
+failure reply will be sent across network.  See surrounding messages for more
+information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1044"></A>
+<H3>LIBGWT MESSAGE #1044</H3>
+<H2> ERROR: Unrecoverable error occurred on receipt of data - sending disconnects</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during processing of conversational data received over
+the network.  A disconnect of the conversation will be started.  See
+surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1045"></A>
+<H3>LIBGWT MESSAGE #1045</H3>
+<H2> ERROR: Cannot create action to send remote disconnect</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During error processing, the action needed to send a disconnect across the
+network cannot be created.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1046"></A>
+<H3>LIBGWT MESSAGE #1046</H3>
+<H2> ERROR: Cannot create action to send remote disconnect</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During error processing, the action needed to send a disconnect locally
+cannot be created.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1047"></A>
+<H3>LIBGWT MESSAGE #1047</H3>
+<H2> ERROR: Unrecoverable error occurred on receipt of data - sending failure reply locally</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during processing of data or commitment protocol received
+over the network.  A failure reply will be sent locally.  See surrounding
+messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1048"></A>
+<H3>LIBGWT MESSAGE #1048</H3>
+<H2> ERROR: Unrecoverable error occurred - deleting action</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during processing of data received over the network.  No
+further processing will occur on the action.  See surrounding messages for
+more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1049"></A>
+<H3>LIBGWT MESSAGE #1049</H3>
+<H2> ERROR: Unrecoverable error occurred - deleting action</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during processing of data received over the network.  No
+further processing will occur on the action.  See surrounding messages for
+more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1050"></A>
+<H3>LIBGWT MESSAGE #1050</H3>
+<H2> ERROR: File descriptor closed while processing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file descriptor has been marked as closed when attempting to send data
+across the network.  A local failure reply will be sent.  See surrounding
+messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1051"></A>
+<H3>LIBGWT MESSAGE #1051</H3>
+<H2> ERROR: Cannot change action into failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred during an attempt to begin processing a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1052"></A>
+<H3>LIBGWT MESSAGE #1052</H3>
+<H2> ERROR: Unable to obtain remote service information from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the remote service is not available to get needed
+information.  An update to the configuration (DM_REMOTE_SERVICES section) may
+have removed the service information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Retry the request after all configuration information has been updated or
+contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1053"></A>
+<H3>LIBGWT MESSAGE #1053</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Initialization of encryption with the session key during the security phase
+of establishing a connection to a remote domain failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1054"></A>
+<H3>LIBGWT MESSAGE #1054</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Encryption of sending domain during the security phase of establishing a
+connection to a remote domain failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1055"></A>
+<H3>LIBGWT MESSAGE #1055</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to get a ticket for the security exchange when a connection is being
+set up from a remote domain returned with a failure.  See possible surrounding
+messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1056"></A>
+<H3>LIBGWT MESSAGE #1056</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Getting the session key or initialization of encryption with the session key
+for the security exchange when a connection is being set up from a remote
+domain failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1057"></A>
+<H3>LIBGWT MESSAGE #1057</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Encryption of ticket for the security exchange when a connection is being
+set up from a remote domain failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1058"></A>
+<H3>LIBGWT MESSAGE #1058</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Getting the session key or initialization of encryption with the session key
+for the security exchange when a connection is being set up from a remote
+domain failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1059"></A>
+<H3>LIBGWT MESSAGE #1059</H3>
+<H2> ERROR: System encryption failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Encryption of ticket for the security exchange when a connection is being
+set up from a remote domain failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1060"></A>
+<H3>LIBGWT MESSAGE #1060</H3>
+<H2> ERROR: Encoding of header failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the header information to send across the network failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1061"></A>
+<H3>LIBGWT MESSAGE #1061</H3>
+<H2> ERROR: Action data incorrect - null action index</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing receipt of data - mandatory
+action index is missing for the call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1062"></A>
+<H3>LIBGWT MESSAGE #1062</H3>
+<H2> ERROR: Action data incorrect - null context index</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing receipt of data - mandatory
+context information is missing for the action.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1063"></A>
+<H3>LIBGWT MESSAGE #1063</H3>
+<H2> ERROR: Action data incorrect - null fd index</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing receipt of data - mandatory
+file descriptor index is missing for the action.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1064"></A>
+<H3>LIBGWT MESSAGE #1064</H3>
+<H2> WARN: File descriptor has been closed, cannot receive data</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file descriptor has been marked as closed when attempting to receive data
+from the network.  See possible surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1066"></A>
+<H3>LIBGWT MESSAGE #1066</H3>
+<H2> WARN: Network returned error on receive from <I>domain name</I>, closing file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was returned from an attempt to receive data (header information) over
+the network from the named remote domain.  The file descriptor will be closed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1068"></A>
+<H3>LIBGWT MESSAGE #1068</H3>
+<H2> ERROR: Network returned error on receive from <I>domain name</I>, closing file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was returned from an attempt to receive data over the network from
+the named remote domain.  The file descriptor will be closed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1069"></A>
+<H3>LIBGWT MESSAGE #1069</H3>
+<H2> ERROR: Decoding of header failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The decoding of the header information received over the network failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1070"></A>
+<H3>LIBGWT MESSAGE #1070</H3>
+<H2> ERROR: Unable to obtain local service information from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local service is not available to get needed
+information.  An update to the configuration (DM_LOCAL_SERVICES section) may
+have removed the service information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check configuration of both the local and remote machines to ensure the
+services offered are as required.  Retry the request after all configuration
+information has been updated.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1071"></A>
+<H3>LIBGWT MESSAGE #1071</H3>
+<H2> WARN: Access Control List check failed for local service <I>servicename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The configured Access Control List does not accept the remote domain as
+being allowed to access the specified local service.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration of the service's Access Control List to allow the
+remote domain to access the local service as required.  Retry the request
+after all configuration information has been updated.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1072"></A>
+<H3>LIBGWT MESSAGE #1072</H3>
+<H2> ERROR: Received unsupported opcode: <I>number</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The opcode - description of action to be done with data - for the data received
+over the network is not valid.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1073"></A>
+<H3>LIBGWT MESSAGE #1073</H3>
+<H2> ERROR: Unable to obtain remote domain id (<I>domainid</I>) information from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of receipt of data, shared memory information for the
+specified remote domain is not available to get needed information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration for proper listing of the specified remote domain.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1074"></A>
+<H3>LIBGWT MESSAGE #1074</H3>
+<H2> ERROR: Unable to obtain remote domain name (<I>domainid</I>) information from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of receipt of data, shared memory information for the
+specified remote domain is not available to get needed information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration for proper listing of the specified remote domain.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1075"></A>
+<H3>LIBGWT MESSAGE #1075</H3>
+<H2> ERROR: Unable to create/find local txid from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred when either trying to search shared memory for the network
+transaction id to determine the local transaction id, or trying to create a
+new local transaction id to associate with the network transaction id.  See
+possible surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1076"></A>
+<H3>LIBGWT MESSAGE #1076</H3>
+<H2> WARN: Unable to find conversation context</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The conversation id received from the network on the data on a disconnect or
+conversation reply cannot be associated with a local conversation context.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1077"></A>
+<H3>LIBGWT MESSAGE #1077</H3>
+<H2> INFO: Stale message found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A reply or security exchange reply was received from the network which is not
+longer associated with an outstanding request.  The original request may have
+timed out internally.  The message is considered stale and is deleted.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1078"></A>
+<H3>LIBGWT MESSAGE #1078</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically reallocate memory from the operating system using
+realloc ()
+failed while attempting to allocate space for more data structures to associate
+with file descriptors.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1079"></A>
+<H3>LIBGWT MESSAGE #1079</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically reallocate memory from the operating system using
+realloc ()
+failed while attempting to allocate space for more data structures for the
+action context.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1080"></A>
+<H3>LIBGWT MESSAGE #1080</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to allocate space for buffers to hold data received
+from network.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1082"></A>
+<H3>LIBGWT MESSAGE #1082</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to allocate space for buffers to hold data to send
+across network.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1084"></A>
+<H3>LIBGWT MESSAGE #1084</H3>
+<H2> INFO: Request id not found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A request id was not found among actions waiting to be processed.
+See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+See surrounding messages for action needed.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1085"></A>
+<H3>LIBGWT MESSAGE #1085</H3>
+<H2> INFO: Conversation id not found</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A conversation id was not found among actions waiting to be processed.
+See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+See surrounding messages for action needed.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1086"></A>
+<H3>LIBGWT MESSAGE #1086</H3>
+<H2> ERROR: File descriptor closed while processing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file descriptor has been marked as closed when attempting to send
+commitment protocol across the network.  See surrounding messages for
+more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1087"></A>
+<H3>LIBGWT MESSAGE #1087</H3>
+<H2> ERROR: Unable to obtain local domain addr from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available.
+Severe shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1088"></A>
+<H3>LIBGWT MESSAGE #1088</H3>
+<H2> ERROR: Unable to obtain domainid entry from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available to get
+information associated with the domain id.  Severe shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1089"></A>
+<H3>LIBGWT MESSAGE #1089</H3>
+<H2> ERROR: Unable to obtain remote domainid entry from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of commitment protocol, shared memory information for the
+specified remote domain is not available to get needed information.
+An update to the configuration (DM_TDOMAINS section) may have removed
+the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration for proper listing of the specified remote domain.
+Retry the request after all configuration information has been updated.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1090"></A>
+<H3>LIBGWT MESSAGE #1090</H3>
+<H2> ERROR: Encoding of header failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The encoding of the header information to send commitment protocol across
+the network failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1091"></A>
+<H3>LIBGWT MESSAGE #1091</H3>
+<H2> ERROR: Network returned error on send, closing file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to send the commitment protocol to the remote domain
+failed.  The file descriptor will be closed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1092"></A>
+<H3>LIBGWT MESSAGE #1092</H3>
+<H2> ERROR: Unable to set remote domain branch state in shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred in an attempt to mark the domain's shared memory record
+of the transaction that the remote domain is in a new state of commitment.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1093"></A>
+<H3>LIBGWT MESSAGE #1093</H3>
+<H2> ERROR: System state error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing the sending of commitment protocol.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1094"></A>
+<H3>LIBGWT MESSAGE #1094</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (prepare)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send the first phase of commitment.  This could be caused by an
+abort having been previously sent or received while the prepare was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1095"></A>
+<H3>LIBGWT MESSAGE #1095</H3>
+<H2> ERROR: Unable to create action to prepare branch</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create an action to send the first phase of commitment to a
+branch failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1096"></A>
+<H3>LIBGWT MESSAGE #1096</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (commit)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send the second phase of commitment.  This could be caused by an
+abort having been previously sent or received while the commit was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1097"></A>
+<H3>LIBGWT MESSAGE #1097</H3>
+<H2> ERROR: Unable to determine locality of transaction</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The check to determine if the local domain is the root of the transaction
+failed.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1098"></A>
+<H3>LIBGWT MESSAGE #1098</H3>
+<H2> ERROR: Unable to obtain remote domainid entry from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of commitment protocol, shared memory information for the
+specified remote domain is not available to get needed information.
+An update to the configuration (DM_TDOMAINS section) may have removed
+the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration for proper listing of the specified remote domain.
+Retry the request after all configuration information has been updated.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1099"></A>
+<H3>LIBGWT MESSAGE #1099</H3>
+<H2> ERROR: Unable to obtain remote domain entry from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of commitment protocol, shared memory information for the
+specified remote domain is not available to get needed information.
+An update to the configuration (DM_REMOTE_DOMAINS section) may have removed
+the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration for proper listing of the specified remote domain.
+Retry the request after all configuration information has been updated.
+<SECT1>
+<H1>LIBGWT MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>LIBGWT MESSAGE #1100</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (sndcommit)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send the second phase of commitment.  This could be caused by an
+abort having been previously sent or received while the commit was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>LIBGWT MESSAGE #1101</H3>
+<H2> ERROR: Unable to create action to commit branch</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create an action to send the second phase of commitment to a
+branch failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1102"></A>
+<H3>LIBGWT MESSAGE #1102</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (commit branch)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send the second phase of commitment.  This could be caused by an
+abort having been previously sent or received while the commit was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1103"></A>
+<H3>LIBGWT MESSAGE #1103</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (done)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send the second phase of commitment.  This could be caused by an
+abort having been previously sent or received while the done was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>LIBGWT MESSAGE #1104</H3>
+<H2> ERROR: Unable to determine locality of transaction</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The check to determine if the local domain is the root of the transaction
+failed.  See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1105"></A>
+<H3>LIBGWT MESSAGE #1105</H3>
+<H2> ERROR: Unable to obtain remote domainid entry from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of commitment protocol, shared memory information for the
+specified remote domain is not available to get needed information.
+An update to the configuration (DM_TDOMAINS section) may have removed
+the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1106"></A>
+<H3>LIBGWT MESSAGE #1106</H3>
+<H2> ERROR: Unable to obtain remote domain entry from shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+During processing of commitment protocol, shared memory information for the
+specified remote domain is not available to get needed information.
+An update to the configuration (DM_REMOTE_DOMAINS section) may have removed
+the domain information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the configuration for proper listing of the specified remote domain.
+Retry the request after all configuration information has been updated.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>LIBGWT MESSAGE #1107</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (sndcommit)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send commitment rollback.  This could be caused by an
+abort having been previously sent or received while the rollback was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>LIBGWT MESSAGE #1108</H3>
+<H2> ERROR: Unable to create action to rollback branch</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create an action to send commitment rollback to a
+branch failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>LIBGWT MESSAGE #1109</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (sndfailure)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to send a failure reply/rollback.  This could be caused by an
+abort having been previously sent or received while the failure was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>LIBGWT MESSAGE #1110</H3>
+<H2> ERROR: Unable to change nwstate in shared memory (sndfailure)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred in an attempt to mark the domain's shared memory record
+of the transaction that a failure has been sent on the transaction.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>LIBGWT MESSAGE #1111</H3>
+<H2> ERROR: Unable to create action to send rollback</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create an action to send commitment rollback to a
+branch failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1112"></A>
+<H3>LIBGWT MESSAGE #1112</H3>
+<H2> ERROR: Unable to set remote domain branch state in shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred in an attempt to mark the domain's shared memory record
+of the transaction that the remote domain is in a new state of commitment.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1113"></A>
+<H3>LIBGWT MESSAGE #1113</H3>
+<H2> ERROR: Unable to obtain transaction entry from shared memory (prepare)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The transaction entry is not found in the domain's shared memory table when
+trying to process the receipt of the first phase of commitment.  This could
+be caused by an
+abort having been previously sent or received while the prepare was waiting
+to be processed by the gateway.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1114"></A>
+<H3>LIBGWT MESSAGE #1114</H3>
+<H2> ERROR: Unable to set remote domain branch state in shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred in an attempt to mark the domain's shared memory record
+of the transaction that the remote domain is in a new state of commitment.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1115"></A>
+<H3>LIBGWT MESSAGE #1115</H3>
+<H2> ERROR: Unable to set remote domain branch state in shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred in an attempt to mark the domain's shared memory record
+of the transaction that the remote domain is in a new state of commitment.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1116"></A>
+<H3>LIBGWT MESSAGE #1116</H3>
+<H2> ERROR: Unable to set remote domain branch state in shared memory</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A failure occurred in an attempt to mark the domain's shared memory record
+of the transaction that the remote domain is in a new state of commitment.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1117"></A>
+<H3>LIBGWT MESSAGE #1117</H3>
+<H2> ERROR: Unable to create action to send rollback</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to create an action to send commitment rollback to the local
+system failed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1118"></A>
+<H3>LIBGWT MESSAGE #1118</H3>
+<H2> ERROR: System state error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal error occurred in processing the receipt of commitment protocol.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1119"></A>
+<H3>LIBGWT MESSAGE #1119</H3>
+<H2> WARN: connections structure initialization failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred during initialization of network connection structure.  See
+surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1120"></A>
+<H3>LIBGWT MESSAGE #1120</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to allocate space for data structures for network
+information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1121"></A>
+<H3>LIBGWT MESSAGE #1121</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to allocate space for data structures for file
+descriptor information, network data information, or context information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1122"></A>
+<H3>LIBGWT MESSAGE #1122</H3>
+<H2> ERROR: Unable to allocate free fd structure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc ()
+failed while attempting to allocate space for data structures for file
+descriptor information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1123"></A>
+<H3>LIBGWT MESSAGE #1123</H3>
+<H2> ERROR: Unable to obtain local tdomain address from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available to get local
+device for listening endpoint.  Severe shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1124"></A>
+<H3>LIBGWT MESSAGE #1124</H3>
+<H2> ERROR: Unable to open listening endpoint</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The opening of the device specified in the "TDOM" section of the
+DMCONFIG
+for the local domain was not successful.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the "NWDEVICE" value for the local domain as specified in the DM_TDOMAIN
+section of the
+DMCONFIG
+file.  See the specified network error for more
+information, such as the permissions being incorrect on the device or the
+network not being up.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1126"></A>
+<H3>LIBGWT MESSAGE #1126</H3>
+<H2> ERROR: Unable to obtain local domain info from shmem</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Shared memory information for the local domain is not available.  Severe
+shared memory error.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1127"></A>
+<H3>LIBGWT MESSAGE #1127</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+tpalloc (3)
+failed while attempting to allocate space for decoding of received data.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpalloc (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1128"></A>
+<H3>LIBGWT MESSAGE #1128</H3>
+<H2> INFO: Connection accepted from domain (domainid=&lt;<I>domainid</I>>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The specified remote domain has made a network connection to the gateway.
+Security measures, if configured, have not yet been applied.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1129"></A>
+<H3>LIBGWT MESSAGE #1129</H3>
+<H2> INFO: Connection established with domain (domainid=&lt;<I>domainid</I>>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The gateway has made a network connection to the specified remote domain.
+Security measures, if configured, have not yet been applied.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1130"></A>
+<H3>LIBGWT MESSAGE #1130</H3>
+<H2> INFO: Disconnected from domain (domainid=&lt;<I>domainid</I>>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The network connection to the specified remote domain has been terminated.
+See surrounding messages for more information.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1131"></A>
+<H3>LIBGWT MESSAGE #1131</H3>
+<H2> ERROR: /DOMAIN gateway could not close a NW connection</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The attempt to close a network connection to a remote domain failed during
+shutdown processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1132"></A>
+<H3>LIBGWT MESSAGE #1132</H3>
+<H2> ERROR: Memory allocation failure for post receive</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically reallocate memory from the operating system using
+tprealloc ()
+failed while attempting to allocate more space for the processing required
+for
+buffer ().
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc (3),
+buffer (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1133"></A>
+<H3>LIBGWT MESSAGE #1133</H3>
+<H2> ERROR: Post receive operation on message failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to the buffer() routine to process the buffer after decoding
+received data has failed.  The routine is as defined in the typeswitch which
+can be defined by the specific TUXEDO application.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1134"></A>
+<H3>LIBGWT MESSAGE #1134</H3>
+<H2> ERROR: Memory allocation failure for post receive</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically reallocate memory from the operating system using
+tprealloc ()
+failed while attempting to allocate more space for the processing required
+for
+buffer ().
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tprealloc (3),
+buffer (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1135"></A>
+<H3>LIBGWT MESSAGE #1135</H3>
+<H2> ERROR: Post receive operation on message failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to the buffer</>(3) <Font>_tmpostrecv()</> routine
+to process the buffer of
+received data has failed.  The routine is as defined in the typeswitch which
+can be defined by the specific TUXEDO application.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3)
+<SECT2>
+<H2> 1136 ERROR: Network initialization failure</H2><HR>
+<P>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while initializing the network provider.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure that your network stack is correctly installed and
+configured.  Use network administration tools to determine
+the cause of the initialization problem.
+H
+<H1> LIBGWT MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<H2>  1200 INFO: Transaction received HEURISTIC MIX result from remote domain <I>val</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain gateway received a heuristic mix message indicating
+that part of the transaction committed and part of the
+transaction rolled back.
+This may cause an inconsistency in the application data.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<H2>  1201 INFO: Transaction received HEURISTIC HAZARD result from remote domain <I>val</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain gateway received a heuristic hazard message indicating
+that the outcome of part of the transaction is uncertain.
+This may cause an inconsistency in the application data.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<H2>  1202 ERROR: Bad message from <I>sub</I>.  Closing file descriptor</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid message was received in the Domain gateway.
+The gateway connection will be closed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the TYPE values are set correctly if encoding is
+needed between domains.
+<H2>  1203 ERROR: Memory allocation failure for decompression</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decompressing a received message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H2>  1204 ERROR: Memory allocation failure for decompression</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decompressing a received message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H2>  1205 ERROR: Unable to obtain remote domain entry from shmem</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While compressing a message, the entry for the remote domain
+could not be found (to determine the compression limit).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error should not occur.
+Contact TUXEDO Support.
+<H2>  1206 ERROR: Memory allocation failure for compression</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While compressing a message, the entry for the remote domain
+could not be found (to determine the compression limit).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error should not occur.
+Contact TUXEDO Support.
+<H2>  1207 ERROR: Unable to obtain remote domain entry from shmem</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+While compressing a message, the entry for the remote domain
+could not be found (to determine the compression limit).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This error should not occur.
+Contact TUXEDO Support.
+<H2>  1208 ERROR: Memory allocation failure for compression</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while compressing a message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H2>  1209 ERROR: Memory allocation failure for decompression</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decompressing a message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<H2>  1210 ERROR: decompression failed</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while decompressing a message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check for other errors in the event log.
+<H2>  1211 ERROR: Failed to destroy inflate structure</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while decompressing a message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check for other errors in the event log.
+<H2>  1212 WARN: Network connection closed by <I>rdom</I>, closing file descriptor</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The gateway at the remote domain closed the network connection.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<H2>  1213 WARN: Network connection closed by <I>rdom</I>, closing file descriptor</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The gateway at the remote domain closed the network connection.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+No action required.
+<H2>  1214 WARN: Corrupted Communication Control data detected!</H2><HR>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred in the information associated with the
+domain connection.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact TUXEDO Support.
+<H2>  1215 WARN: Communication to remote domain <I>rdom</I> already disconnected</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A message was sent to a domain that has already disconnected from
+the local domain.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.
+<H2> 1216 WARN: Communication to remote domain <I>rdom</I> already disconnected</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+A message was sent to a domain that has already disconnected from
+the local domain.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Re-try the operation.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1217"></A>
+<H3>LIBGWT MESSAGE #1217</H3>
+<H2> ERROR: Decode function failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The call to the buffer</>(3) <Font>_tmencdec()</> routine
+to process the buffer of
+received data has failed.  The routine is as defined in the typeswitch which
+can be defined by the specific TUXEDO application.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+buffer (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1218"></A>
+<H3>LIBGWT MESSAGE #1218</H3>
+<H2> ERROR: memory allocation failed for compression</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to compress a
+message.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1219"></A>
+<H3>LIBGWT MESSAGE #1219</H3>
+<H2> ERROR: compression fails...continuing</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to compress a
+message.  An internal function call returned a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1220"></A>
+<H3>LIBGWT MESSAGE #1220</H3>
+<H2> ERROR: memory allocation failure in decompression</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decompress
+a message.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1221"></A>
+<H3>LIBGWT MESSAGE #1221</H3>
+<H2> ERROR: decompression of message failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decompress
+a message.  An internal function call returned a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1222"></A>
+<H3>LIBGWT MESSAGE #1222</H3>
+<H2> ERROR: uncompressed message reallocation failed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to decompress
+a message.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1223"></A>
+<H3>LIBGWT MESSAGE #1223</H3>
+<H2> WARN: Reach system open max(<I>maximum</I>) limit</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to get a free
+file descriptor entry.  The Tuxedo System maximum <I>maximum</I> for open files was
+reached.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and close any files which are open unnecessarily.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1224"></A>
+<H3>LIBGWT MESSAGE #1224</H3>
+<H2> ERROR: Minimum encryption (<I>number of bits</I>) is larger than 0, but the link level package is not installed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to process a
+connect operation.  The minimum number of encryption bits <I>number of bits</I>
+specified in the *DM_TDOMAIN section of the domain configuration file is greater
+than zero; however, no link level security package is installed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the configuration so that the minimum number of encryption bits is
+consistent with the link level security package in use.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1225"></A>
+<H3>LIBGWT MESSAGE #1225</H3>
+<H2> ERROR: Minimum encryption (<I>number of bits</I>) is larger than 40, but only the 40-bit package is installed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to process a
+connect operation.  The minimum number of encryption bits <I>number of bits</I>
+specified in the *DM_TDOMAIN section of the domain configuration file is greater
+than fourty; however, the fourty-bit link level security package is installed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the configuration so that the minimum number of encryption bits is
+consistent with the link level security package in use.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1226"></A>
+<H3>LIBGWT MESSAGE #1226</H3>
+<H2> ERROR: Could not allocate encryption handle</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to process a
+connect operation.  The encryption handle could not be allocated.  An internal
+function call returned a failure.  A more descriptive error messages will be
+issued by the failing routine.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the surrounding error messages for more descriptive error information.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1227"></A>
+<H3>LIBGWT MESSAGE #1227</H3>
+<H2> ERROR: Could not get encryption settings</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  The process was unable to obtain from shared memory the *DM_TDOMAIN
+configuration section containing the encryption settings.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your TUXEDO System Technical Support with the exact error
+message.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1228"></A>
+<H3>LIBGWT MESSAGE #1228</H3>
+<H2> ERROR: Minimum encryption (<I>number of bits</I>) is larger than 40, but only the 40-bit package is installed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  The minimum number of encryption bits <I>number of bits</I> specified in
+the *DM_TDOMAIN section of the domain configuration file is greater than fourty;
+however, the fourty-bit link level security package is installed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the configuration so that the minimum number of encryption bits is
+consistent with the link level security package in use.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1229"></A>
+<H3>LIBGWT MESSAGE #1229</H3>
+<H2> ERROR: Encryption negotiation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  An error was detected in the encryption flag settings.  The encryption
+flags are all zero.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the encryption bit settings in the *DM_TDOMAIN sections of the
+dmconfig file are consistent for communicating domains.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1230"></A>
+<H3>LIBGWT MESSAGE #1230</H3>
+<H2> ERROR: Unable to generate first diffie-hellman packet</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to send a
+message.  An internal function call for encryption returned a failure.
+Additional error messages from the failing routine will be issued prior to this
+message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the messages from the failing routine for more specific information
+regarding the cause of this error.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1231"></A>
+<H3>LIBGWT MESSAGE #1231</H3>
+<H2> ERROR: Could not allocate encryption handle</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  An error was detected in the internal routine to allocate an
+encryption handle.  A more specific message will be issued by the failing
+routine.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the surrounding error messages for additional information.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1232"></A>
+<H3>LIBGWT MESSAGE #1232</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  The process was unable to allocate enough virtual memory for the
+operation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Attempt to identify and stop any extraneous processes to free up virtual memory
+on your system.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>LIBGWT MESSAGE #1233</H3>
+<H2> ERROR: Unable to generate second diffie-hellman packet</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to send a
+message.  An internal function call for encryption returned a failure.
+Additional error messages from the failing routine will be issued prior to this
+message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the messages from the failing routine for more specific information
+regarding the cause of this error.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1234"></A>
+<H3>LIBGWT MESSAGE #1234</H3>
+<H2> ERROR: Unexpected link level encryption failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to send a
+message.  An internal function call for encryption returned a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1236"></A>
+<H3>LIBGWT MESSAGE #1236</H3>
+<H2> ERROR: Encryption negotiation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  An error was detected in the encryption flag settings.  The encryption
+flags are all zero.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the encryption bit settings in the *DM_TDOMAIN sections of the
+dmconfig file are consistent for communicating domains.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1237"></A>
+<H3>LIBGWT MESSAGE #1237</H3>
+<H2> ERROR: Invalid security level</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  An invalid encryption level was detected.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1238"></A>
+<H3>LIBGWT MESSAGE #1238</H3>
+<H2> ERROR: Unexpected link level encryption failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to receive a
+message.  An internal function call for encryption returned a failure.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+This is an internal error with no associated user action.  If the error
+persists, contact your Tuxedo System technical support with the exact error
+message.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+tpstrerror (3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1240"></A>
+<H3>LIBGWT MESSAGE #1240</H3>
+<H2> ERROR: Minimum encryption (<I>number of bits</I>) is larger than 0, but the link level package is not installed</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Gateway library software detected an error while trying to process a
+receive operation.  The minimum number of encryption bits <I>number of bits</I>
+specified in the *DM_TDOMAIN section of the domain configuration file is greater
+than zero; however, no link level security package is installed.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the configuration so that the minimum number of encryption bits is
+consistent with the link level security package in use.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+DMCONFIG (5)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1241"></A>
+<H3>LIBGWT MESSAGE #1241</H3>
+<H2> ERROR: Invalid parameter, tdom_link is NULL</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN detects an internal error, or possible data corruption when
+it does a network open call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO system Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1242"></A>
+<H3>LIBGWT MESSAGE #1242</H3>
+<H2> ERROR: Invalid parameter, tdom_link contains NULL pointer</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN detects an internal error, or possible data corruption when
+it does a network open call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO system Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1243"></A>
+<H3>LIBGWT MESSAGE #1243</H3>
+<H2> WARN: Open <I>domain_name</I> address <I>ip_port</I> failed, Network error(0x<I>error_code</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN tries to open a listening end point form domain domain_name
+using the port number and IP address as specified by ip_address failed with
+network error code specified.
+This can be caused by either the port is already been used, or
+the port just been release in some TCP/IP implementation.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+If the configuration contains multiple address entries for the specified
+domain, the GWTDOMAIN will continue with the next one. If all the address
+specified exhausted and still can't open the listening end point, GWTDOMAIN
+will exit.  The user can try to restart it, or change configuration and restart
+it.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1244"></A>
+<H3>LIBGWT MESSAGE #1244</H3>
+<H2> WARN: No more NW address to try</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN already tries all the listening end points specified in the
+BDMCONFIG file, and still could not able to open any listening end point.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The administrator should check whether the configuration is correct,
+and whether any other process already uses the port number.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1245"></A>
+<H3>LIBGWT MESSAGE #1245</H3>
+<H2> INFO: Try next one, device <I>device_name</I> address <I>ip_address</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+This is informational.  It tells the user that GWTDOMAIN is going to try
+the next IP address and port number specified in the configuration.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Nothing.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1246"></A>
+<H3>LIBGWT MESSAGE #1246</H3>
+<H2> ERROR: Invalid parameter, tdom_link is NULL</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN detects an internal error, or possible data corruption when
+it does a network connect call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO system Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1247"></A>
+<H3>LIBGWT MESSAGE #1247</H3>
+<H2> ERROR: Invalid parameter, tdom_link contains NULL pointer</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN detects an internal error, or possible data corruption when
+it does a network connect call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO system Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1248"></A>
+<H3>LIBGWT MESSAGE #1248</H3>
+<H2> ERROR: Invalid parameter, fd is -1</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN detects an internal error, or possible data corruption when
+it does a network connect call.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO system Technical Support.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1249"></A>
+<H3>LIBGWT MESSAGE #1249</H3>
+<H2> WARN: Connect to <I>domain_name</I> address <I>ip_addr</I> failed, Network error(0x<I>errno</I>)</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN tries to connect to a remote domain domain_name
+using the port number and IP address as specified by ip_address failed with
+network error code specified.
+This can be caused by network failure, wrong IP address or port number
+in the configuration, or the remote GWTDOMAIN not yet up and running, or
+the remote GWTDOMAIN has not yet able to open the listening end,
+or the remote GWTDOMAIN opened different end point then what specified in
+the local domain configuration file.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the network, and check proper configuration.  And also make sure the
+remote domain GWTDOMAIN is up and runing and use the port and IP adress
+specified in the configuration.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1250"></A>
+<H3>LIBGWT MESSAGE #1250</H3>
+<H2> WARN: No more remote domain NW address to try</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+GWTDOMAIN has exhausted all the address information specified in the
+configuration file, and still could not connect to remote GWTDOMAIN.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check the network, and check proper configuration.  And also make sure the
+remote domain GWTDOMAIN is up and runing and use the port and IP adress
+specified in the configuration.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1251"></A>
+<H3>LIBGWT MESSAGE #1251</H3>
+<H2> INFO: Try next one, address <I>ip_address</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+This is informational.  It tells the user that GWTDOMAIN is going to try
+the next IP address and port number specified in the configuration to connect
+to remote GWTDOMAIN.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Nothing.
+<P>
+<H2> 1252 ERROR: Unable to obtain transaction entry from shared memory (rollback)</H2><HR>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+The /Domain transaction table entry for this transaction was not
+found in the /Domain shared memory tables when trying to process
+a transaction rollback.  This could be caused if a stray message was
+received for a transaction that was already aborted.
+<H3>ACTION</H3>
+If the
+<KBD>dmadmin</KBD>
+subcommand
+<KBD>pt</KBD>
+indicates that the transaction has already been removed from /Domain
+shared memory, no action is required.  Otherwise, contact your
+TUXEDO System Technical Support.
+<H2>  1207 ERROR: Unable to obtain remote domain entry from shmem</H2><HR>
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

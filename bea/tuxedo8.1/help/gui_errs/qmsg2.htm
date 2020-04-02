@@ -1,0 +1,2553 @@
+<TITLE>LIBQM </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>LIBQM MESSAGES 1300-1399</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1350"></A>
+<H3>LIBQM MESSAGE #1350</H3>
+<H2> ERROR: <I>operation</I> - failed to open table <I>qspace</I>.<I>extent</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified
+<I>operation</I>
+could not open the queue space extent,
+<I>qspace.extent,</I>
+on the specified configuration,
+<I>config</I>.
+The
+<I>operation</I>
+is one of the following:
+"Print transactions",
+"Commit transaction",
+"Abort transaction",
+"Queue information",
+"Queue scan",
+"Queue list",
+"Change priority",
+"Delete messages",
+"ipcs",
+"ipcrm",
+"Create queue space",
+"Add extent",
+"Destroy queue space",
+"Create queue",
+"Destroy queue",
+"enqueue",
+"dequeue",
+"Queue information",
+"xa_open",
+"xa_close",
+"xa_start",
+"xa_end",
+"xa_prepare",
+"xa_commit",
+"xa_rollback",
+"xa_recover",
+"xa_forget",
+"Transaction commit",
+"Transaction rollback",
+"Change exec time",
+or
+"Change queue".
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Normally this error results from specifying an invalid queue space
+name or configuration device.
+When using
+qmadmin,
+check the values of
+QMCONFIG
+and the queue space name.
+When this results from a client or server failing in
+tpopen(3),
+check the
+OPENINFO
+string in the configuration file.
+It may also result from have too few file descriptors configured
+in the operating system tunable parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1),
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1351"></A>
+<H3>LIBQM MESSAGE #1351</H3>
+<H2> ERROR: <I>operation</I> - failed to read block <I>block</I> of table <I>qspace</I>.<I>extent</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified
+<I>operation</I>
+could not read a block from the queue space extent,
+<I>qspace.extent</I>,
+on the specified configuration,
+<I>config</I>.
+The
+<I>operation</I>
+values are listed in message 1350.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably indicates a disk error or problem and normally
+means that a message will be lost.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1352"></A>
+<H3>LIBQM MESSAGE #1352</H3>
+<H2> ERROR: <I>operation</I> - failed to write block <I>block</I> of table <I>qspace</I>.<I>extent</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified
+<I>operation</I>
+could not write a block to the queue space extent,
+<I>qspace.extent</I>,
+on the specified configuration,
+<I>config</I>.
+The
+<I>operation</I>
+values are listed in message 1350.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably indicates a disk error or problem and may
+mean that a message will be lost.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1353"></A>
+<H3>LIBQM MESSAGE #1353</H3>
+<H2> ERROR: <I>operation</I> - checksum failed on block <I>block</I> of table <I>qspace</I>.<I>extent</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified
+<I>operation</I>
+could read a block from the queue space extent
+<I>qspace.extent</I>
+on the specified configuration,
+<I>config</I>,
+and found that its checksum was not valid.
+The
+<I>operation</I>
+values are listed in message 1350.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably indicates a disk error or problem and normally
+means that a message will be lost.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1354"></A>
+<H3>LIBQM MESSAGE #1354</H3>
+<H2> ERROR: <I>operation</I> - queue space for rmid <I>rmid</I> not defined or not open</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The specified
+<I>operation</I>
+was executed but the queue space (the resource manager
+identified by
+<I>rmid</I>)
+either didn't exist or was not open.
+The
+<I>operation</I>
+values are listed in message 1350.
+This probably indicates that a System/T client or server
+did not call
+tpopen ()
+before starting a transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Call
+tpopen ()
+to open the queue space before doing any
+transaction operations.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpopen(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1355"></A>
+<H3>LIBQM MESSAGE #1355</H3>
+<H2> ERROR: [<I>operation</I> - invalid flags 0x<I>flags</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid flags value,
+<I>flags,</I>
+was passed from the transaction manager to the specified
+<I>operation</I>(
+xa_start ,
+xa_end ,
+xa_prepare ,
+xa_commit ,
+xa_rollback ,
+xa_recover ,
+or
+xa_forget ).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1356"></A>
+<H3>LIBQM MESSAGE #1356</H3>
+<H2> ERROR: <I>operation</I> - queue space <I>qspace</I> needs to be restarted</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An error was detected in the queue space that requires the resource
+manager to be restarted.
+Normally, this is caused by the abnormal
+termination of a process attached to the queue space while
+it was in a critical section of code.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop all processes attached to the queue space, remove the
+IPC
+resources using the
+qmadmin
+ipcrm
+command, and restart the processes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1357"></A>
+<H3>LIBQM MESSAGE #1357</H3>
+<H2> ERROR: <I>operation</I> - invalid queue name <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid queue name,
+<I>name,</I>
+was specified for the specified
+<I>operation</I>.
+The operation can be one of
+"Queue information" ,
+"Queue list" ,
+"Change priority" ,
+"Change exec time" ,
+"Change queue" ,
+"Delete messages" ,
+or
+"Destroy queue" .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+qinfo
+command to list the available queues in the queue space
+and re-enter the command with a valid queue name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1360"></A>
+<H3>LIBQM MESSAGE #1360</H3>
+<H2> WARN: Print transaction - unable to save transaction information;    committrans and aborttrans not available</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qprinttrans
+command, the transaction information that can be subsequently used
+for
+qcommittrans
+or
+qaborttrans
+could not be saved because
+malloc ()
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+It will not be possible to execute
+qcommittrans
+or
+qaborttrans
+successfully.
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1377"></A>
+<H3>LIBQM MESSAGE #1377</H3>
+<H2> ERROR: <I>operation</I> - must execute printtrans to get transaction information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+qcommittrans
+or
+qaborttrans
+command was executed without previously executing
+printtrans
+successfully (that is, without getting message 1377)
+to get a list of transactions.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the
+qprinttrans
+command to get a list of transactions.
+An index for one of the listed transactions must be specified for
+the
+qcommittrans
+or
+qaborttrans
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1378"></A>
+<H3>LIBQM MESSAGE #1378</H3>
+<H2> ERROR: <I>operation</I> - invalid transaction index specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcommittrans
+or
+qaborttrans
+command, a transaction index was specified that did not match an
+index printed by the
+qprinttrans
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify a valid transaction index from the output of the
+qprinttrans
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1379"></A>
+<H3>LIBQM MESSAGE #1379</H3>
+<H2> ERROR: <I>operation</I> - transaction for the index specified has changed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcommittrans
+or
+qaborttrans
+command, a transaction index was specified for a transaction
+that no longer exists (that is, has already been completed).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the
+qprinttrans
+command to get a list of transactions that are currently outstanding
+and re-enter the
+qcommittrans
+or
+qaborttrans
+command with a valid transaction index.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1381"></A>
+<H3>LIBQM MESSAGE #1381</H3>
+<H2> ERROR: <I>operation</I> - cannot heuristically complete, status <I>status</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcommittrans
+or
+qaborttrans
+command, a transaction index was specified for a transaction that
+is not in the
+READY
+state.
+The current status of the transaction,
+<I>status</I>,
+is printed in the system message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the
+qprinttrans
+command to get a list of currently outstanding transactions.
+Only transactions in the
+READY
+state may be specified for the
+qcommittrans
+or
+qaborttrans
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1398"></A>
+<H3>LIBQM MESSAGE #1398</H3>
+<H2> INFO: Queue information - no queues defined.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+qinfo
+command was executed but no queues are currently defined in the
+open queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1399"></A>
+<H3>LIBQM MESSAGE #1399</H3>
+<H2> ERROR: Queue scan - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while scanning the queue.
+The associated operation
+(qlist ,
+qchangetime ,
+qchangeprio ,
+qchangequeue ,
+or
+qdeletemsg)
+will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT1><P>
+<H1>LIBQM MESSAGES 1400-1499</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1400"></A>
+<H3>LIBQM MESSAGE #1400</H3>
+<H2> ERROR: Queue scan - realloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate memory from the operating system
+using
+realloc ()
+failed while scanning the queue.
+The associated operation
+(qlist ,
+qchangetime ,
+qchangeprio ,
+qchangequeue ,
+or
+qdeletemsg)
+will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage
+on the machine or increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1401"></A>
+<H3>LIBQM MESSAGE #1401</H3>
+<H2> INFO: Queue list - no messages matched on queue <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qlist
+command, no messages were found on the queue name that was set with
+qset
+and the selection criteria set with
+qscan .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Try specifying a different queue name or different scan criteria
+using
+qset
+or
+qscan .
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1407"></A>
+<H3>LIBQM MESSAGE #1407</H3>
+<H2> INFO: <I>operation</I> - no messages matched on queue <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchangetime
+or
+qchangeprio
+command, no messages were found on the queue name that was set with
+qset
+and the selection criteria set with
+qscan .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1409"></A>
+<H3>LIBQM MESSAGE #1409</H3>
+<H2> WARN: Queue change - new queue name <I>newqueue</I> matches old queue name</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While changing the queue on which messages are queued,
+the new queue name matched the original queue name so
+no change occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1410"></A>
+<H3>LIBQM MESSAGE #1410</H3>
+<H2> INFO: <I>operation</I> - no messages matched on queue <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qchangequeue
+or
+qdeletemsg
+command, no messages were found on the queue name that was set with
+qset
+and the selection criteria set with
+qscan .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1422"></A>
+<H3>LIBQM MESSAGE #1422</H3>
+<H2> ERROR: ipcrm - processes attached to queue space <I>qspace</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcrm
+command without the
+-f
+option
+or while executing the
+qaddext
+or
+qspacedestroy
+command, the
+IPC
+resources could not be removed because other processes
+were attached to the queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop all processes attached to the queue space and re-execute
+the command.
+In rare situations where it doesn't matter if processes
+are attached to the queue space, the
+-f
+option of
+ipcrm
+can be used to force removal of the
+IPC
+resources, even
+if processes are attached to the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1423"></A>
+<H3>LIBQM MESSAGE #1423</H3>
+<H2> WARN: ipcrm - failed to remove semid <I>ident</I> for queue space <I>qspace</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcrm ,
+qaddext ,
+or
+qspacedestroy
+command,
+one of the semaphores with semaphore identifier
+<I>ident</I>
+was not removed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Normally this should not occur since the administrator is running
+qmadmin
+and is also the owner of the
+IPC
+resources.
+It is possible that the semaphore was removed directly
+using the operating system
+ipcrm (1)
+command.
+The operating system command (outside of
+qmadmin )
+"ipcs -s"
+will list
+currently existing semaphores and the semaphore can be
+removed directly by executing
+"ipcrm -s"
+<I>ident</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1424"></A>
+<H3>LIBQM MESSAGE #1424</H3>
+<H2> WARN: ipcrm - failed to delete shared memory id <I>ident</I> for queue space <I>qspace</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+ipcrm ,
+qaddext ,
+or
+qspacedestroy
+command,
+one of the shared memory segments with identifier
+<I>ident</I>
+was not removed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Normally this should not occur since the administrator is running
+qmadmin
+and is also the owner of the
+IPC
+resources.
+It is possible that the shared memory segment was removed directly
+using the operating system
+ipcrm (1)
+command.
+The operating system command (outside of
+qmadmin )
+"ipcs -m"
+will list
+currently existing shared memory segments and the segment can be
+removed directly by executing
+"ipcrm -m"
+<I>ident</I>.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1425"></A>
+<H3>LIBQM MESSAGE #1425</H3>
+<H2> ERROR: Queue space creation - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, an invalid parameter was specified.
+The following are invalid: the
+IPC
+key is less than or equal to 0; the number of queues, transactions,
+processes, or messages is less than or equal to 0; the configuration
+device is not specified;
+the queue space name is not specified or is greater than 15 characters
+in length;
+or the extent size is less than or equal to 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1427"></A>
+<H3>LIBQM MESSAGE #1427</H3>
+<H2> ERROR: Queue space creation - extent size too small</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command,
+the size of the extent that was specified was too small.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the
+qspacecreate
+command with an extent size that is at least (<I>Q</I> +2) where
+<I>Q</I> is the number of queues specified.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1428"></A>
+<H3>LIBQM MESSAGE #1428</H3>
+<H2> ERROR: Queue space creation - failed to create table <I>name</I>, size <I>size</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command,
+qmadmin
+was unable to create a table,
+<I>name</I>,
+of size,
+<I>size</I>,
+on the configuration file,
+<I>config</I>.
+Most likely, there was not enough space available in the universal
+device list (or the
+UDL
+was not correctly initialized).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+lidl
+command to ensure that the universal device list is properly initialized
+and has enough space (use the
+crdl
+command to initialize it and create an extent that can be used to
+allocate space for the queue space).
+Also check the userlog for messages regarding locking the configuration
+or other configuration errors.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1429"></A>
+<H3>LIBQM MESSAGE #1429</H3>
+<H2> ERROR: Add extent - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddextent
+command, an invalid parameter was specified.
+The following are invalid:
+the device is not specified;
+the queue space name is not specified or is greater than 15 characters
+in length; or the extent size is less than or equal to 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1430"></A>
+<H3>LIBQM MESSAGE #1430</H3>
+<H2> ERROR: Add extent - cannot lock queue space <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddext
+command,
+qmadmin
+failed to lock the
+QMCONFIG
+device for exclusive update.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for further information about the process
+that has the configuration locked.
+Re-enter the command after the configuration has been unlocked.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1431"></A>
+<H3>LIBQM MESSAGE #1431</H3>
+<H2> ERROR: Add extent - failed to create table <I>name</I>, size <I>size</I> for new extent on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qaddext
+command,
+qmadmin
+was unable to create a table,
+<I>name</I>,
+of size,
+<I>size</I>,
+on the configuration file,
+<I>config</I>.
+Most likely, there was not enough space available in the universal
+device list (or the
+UDL
+was not correctly initialized).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+lidl
+command to ensure that the universal device list is properly initialized
+and has enough space (use the
+crdl
+command to initialize it and create an extent that can be used to
+allocate the extent for the queue space).
+Also check the userlog for messages regarding locking the configuration
+or other configuration errors.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1432"></A>
+<H3>LIBQM MESSAGE #1432</H3>
+<H2> ERROR: Destroy queue space - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacedestroy
+command, an invalid parameter was specified.
+The following are invalid:
+the device is not specified;
+or the queue space name is not specified or is greater than 15 characters
+in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1433"></A>
+<H3>LIBQM MESSAGE #1433</H3>
+<H2> ERROR: Destroy queue space - cannot lock queue space <I>name</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroyspace
+command,
+qmadmin
+failed to lock the
+QMCONFIG
+device for exclusive update.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for further information about the process
+that has the configuration locked.
+Re-enter the command after the configuration has been unlocked.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1434"></A>
+<H3>LIBQM MESSAGE #1434</H3>
+<H2> ERROR: Destroy queue space - queue exists and force flag not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+qspacedestroy
+command without the
+-f
+option but one or more queues exist in the queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the
+qinfo
+command to see what queues exist in the queue space and how many
+messages are on the queues.
+To destroy the queue space, even if queues exist and processes
+may be attached,
+execute the
+qspacedestroy
+command with the
+-f
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1435"></A>
+<H3>LIBQM MESSAGE #1435</H3>
+<H2> WARN: Destroy queue space - failed to destroy table <I>name</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacedestroy
+command,
+qmadmin
+was unable to destroy a configuration table,
+<I>name</I>,
+associated with queue space extent.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog to see if further information failure has been
+printed there.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1436"></A>
+<H3>LIBQM MESSAGE #1436</H3>
+<H2> ERROR: Create queue - invalid parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, an invalid parameter was specified.
+The following are invalid:
+invalid ordering parameters such as the same sort value specified
+more than once or 'lifo'/'fifo' not specified as the least significant
+sort value; an invalid out-of-order value; retries or delay time
+less than 0;
+the queue space name is not specified or greater than 15
+characters in length;
+the upper threshold less than or equal to 0 or less than the
+lower threshold value; or an invalid threshold type or a threshold
+type of '%' with a upper threshold value greater than 100.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-enter the command with the correct parameters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1437"></A>
+<H3>LIBQM MESSAGE #1437</H3>
+<H2> ERROR: Create queue - duplicate queue name '<I>queue_name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command, a queue name,
+<I>queue_name</I>,
+was specified that already exists in the queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+qinfo
+command to list the queues that currently exist in the queue
+space and choose a different queue name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1438"></A>
+<H3>LIBQM MESSAGE #1438</H3>
+<H2> INFO: Create queue - error queue <I>name</I> created</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The queue that was just created with the
+qcreate
+command is the error queue that was defined for the queue space
+(using the
+qspacecreate
+command).
+When the queue space is first created and opened, the
+error queue does not exist and a warning is printed
+in the userlog.
+This message indicates that the error queue is now available.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1439"></A>
+<H3>LIBQM MESSAGE #1439</H3>
+<H2> ERROR: Destroy queue - invalid queue name parameter</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command, the queue name was not specified.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-execute the command with a valid queue name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1440"></A>
+<H3>LIBQM MESSAGE #1440</H3>
+<H2> ERROR: Destroy queue failed - processes attached</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command without the
+-f
+option, the operation failed because processes were attached to
+the queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop the processes that are attached to the queue space and
+re-execute the command.
+In situations where it doesn't matter if processes
+are attached to the queue space, the
+-f
+option of
+qdestroy
+can be used to force removal of the queue, even
+if processes are attached to the queue space.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1441"></A>
+<H3>LIBQM MESSAGE #1441</H3>
+<H2> ERROR: Destroy queue failed - shmctl returned -1, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command without the
+-f
+option, the operation failed because
+qmadmin
+was unable to get the status of the queue space shared memory.
+The errno,
+<I>errno</I>,
+is printed as part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Using the errno, determine why the status (
+shmctl
+) failed
+and re-execute the command.
+If necessary, stop all processes attached to the queue space
+and remove the
+IPC
+resources using the
+qmadmin
+ipcrm
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1442"></A>
+<H3>LIBQM MESSAGE #1442</H3>
+<H2> ERROR: Semaphore initialization - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while initializing the system semaphores.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1443"></A>
+<H3>LIBQM MESSAGE #1443</H3>
+<H2> ERROR: Destroy queue failed - messages on queue and force or purge not specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command without the
+-f
+or
+-p
+options, messages were found on the queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the queue is to be destroyed, purging the messages from the queue,
+then re-execute the
+qdestroy
+command with the
+-p
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1444"></A>
+<H3>LIBQM MESSAGE #1444</H3>
+<H2> WARN: Destroy queue - error queue <I>queue_name</I> destroyed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qdestroy
+command,
+the error queue for the queue space was destroyed.
+This means that when messages have reached their retry count limit,
+they will be deleted instead of being moved to the error queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1445"></A>
+<H3>LIBQM MESSAGE #1445</H3>
+<H2> ERROR: <I>operation</I> - invalid queuespace <I>qspace</I> on config <I>config</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the specified operation,
+<I>operation</I>,
+for the queue space,
+<I>qspace</I>,
+on the specified configuration,
+<I>config</I>,
+the operation failed because the queue space was not valid.
+In particular, the first block of the first extent did not
+contain a valid queue space block (superblock).
+The
+<I>operation</I>
+may be one of
+ipcs ,
+ipcrm ,
+"Add extent" ,
+"Destroy queue space" ,
+or
+xa_open .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that the correct queue space name and device
+were specified.
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1446"></A>
+<H3>LIBQM MESSAGE #1446</H3>
+<H2> ERROR: semop() lock failure, id = <I>ident</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a portion of the queue space (using a system semaphore
+with the specified identifier,
+<I>ident</I>),
+an error was returned from the
+semop ()
+system call
+(the error number was
+<I>errno)</I>.
+This usually indicates that the semaphore was removed using
+ipcrm
+and can be verified by using the
+ipcs(1)
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop all processes attached to the queue space.
+Remove all
+IPC
+resources using the
+ipcrm
+command within
+qmadmin ,
+and re-start the processes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1447"></A>
+<H3>LIBQM MESSAGE #1447</H3>
+<H2> WARN: [Semaphore appears stuck - currently held by <I>pid</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock a portion of the queue space
+(using a user-level semaphore),
+the process is unable to get the lock for a long period.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This WARNING message is from _qm_lock() function which locks any semaphore
+used by the queue space.  The process identifier printed in this WARNING
+message should give you some indications on which
+process is trying to lock the semaphore.
+<P>
+If the process is hung, it must be stopped and the IPC resources must be
+removed using qmadmin ipcrm command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1448"></A>
+<H3>LIBQM MESSAGE #1448</H3>
+<H2> ERROR: semop() unlock failure, id = <I>ident</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to unlock a portion of the queue space (using a system semaphore
+with the specified identifier,
+<I>ident</I>),
+an error was returned from the
+semop ()
+system call
+(the error number was
+<I>errno</I>).
+This usually indicates that the semaphore was removed using
+ipcrm
+and can be verified by using the
+ipcs(1)
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1449"></A>
+<H3>LIBQM MESSAGE #1449</H3>
+<H2> ERROR: Create queue - no more queue entries (max = <I>entries</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qcreate
+command,
+no more queue entries were available.
+The number of queues is specified when the queue space is
+created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Use the
+qinfo
+command to see what queues are available in the queue space and determine
+if they are all being used.
+Re-use an existing queue or delete an existing queue using the
+qdelete
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1450"></A>
+<H3>LIBQM MESSAGE #1450</H3>
+<H2> ERROR: semctl() SETALL failure, key = <I>key</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While first opening the queue space and initializing the
+IPC
+resources,
+semctl
+failed to initialize a newly created
+semaphore set.
+The key for the semaphore set,
+<I>key</I>,
+and the error number,
+<I>errno</I>,
+are printed in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine why the error occurred by looking at the errno value
+and also checking if the semaphore set exists using
+the
+ipcs(1)
+command.
+Remove any
+IPC
+resources created for the queue space using the
+ipcrm
+command in
+qmadmin
+and try again.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1451"></A>
+<H3>LIBQM MESSAGE #1451</H3>
+<H2> ERROR: semget() failure, key = <I>key</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While first opening the queue space and initializing the
+IPC
+resources,
+semget
+failed to get a semaphore set.
+The key for the semaphore set,
+<I>key</I>,
+and the error number,
+<I>errno</I>,
+are printed in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Determine why the error occurred by looking at the errno value
+and also checking if the semaphore set exists using the
+ipcs(1)
+command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1452"></A>
+<H3>LIBQM MESSAGE #1452</H3>
+<H2> ERROR: semop() lock failure, id = <I>ident</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to lock the queue space (using a system semaphore
+with the specified identifier,
+<I>ident</I>),
+an error was returned from the
+semop ()
+system call (the error number was
+<I>errno</I>).
+This usually indicates that the semaphore was removed using
+ipcrm
+and can be verified by using the
+ipcs(1)
+command.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop all processes attached to the queue space.
+Remove all
+IPC
+resources using the
+ipcrm
+command within
+qmadmin ,
+and re-start the processes.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1456"></A>
+<H3>LIBQM MESSAGE #1456</H3>
+<H2> ERROR: Enqueue - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while enqueuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1457"></A>
+<H3>LIBQM MESSAGE #1457</H3>
+<H2> ERROR: Enqueue - realloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate memory from the operating system
+using
+realloc ()
+failed while enqueuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1458"></A>
+<H3>LIBQM MESSAGE #1458</H3>
+<H2> ERROR: Enqueue - out of message entries</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to enqueue a message, the maximum number of messages
+that can be stored in the queue space was reached so the message
+could not be enqueued.
+A diagnostic
+"(QMESYSTEM)"
+is returned to the
+process trying to enqueue the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove some messages from the queue space either by processing
+them or by deleting some via the
+qdeletemsg
+command of
+qmadmin.
+The
+qinfo
+command of
+qmadmin
+can be used to determine on what queues the messages reside.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1),
+tpenqueue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1459"></A>
+<H3>LIBQM MESSAGE #1459</H3>
+<H2> ERROR: Enqueue - out of queue space</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While trying to enqueue a message, no room was found to store the
+message in the queue space so the message
+could not be enqueued.
+A diagnostic
+"(QMESYSTEM)"
+is returned to the
+process trying to enqueue the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove some messages from the queue space either by processing
+them or by deleting some via the
+qdeletemsg
+command of
+qmadmin .
+The
+qinfo
+command of
+qmadmin
+can be used to determine on what queues the messages reside.
+The
+qaddext
+command can be used to add another extent to the queue space to
+provide more room for storing messages.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1460"></A>
+<H3>LIBQM MESSAGE #1460</H3>
+<H2> ERROR: Dequeue - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while dequeuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1461"></A>
+<H3>LIBQM MESSAGE #1461</H3>
+<H2> ERROR: Dequeue - realloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate memory from the operating system
+using
+realloc ()
+failed while dequeuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1462"></A>
+<H3>LIBQM MESSAGE #1462</H3>
+<H2> ERROR: Dequeue - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while dequeuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1463"></A>
+<H3>LIBQM MESSAGE #1463</H3>
+<H2> ERROR: Dequeue - realloc() failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically re-allocate memory from the operating system
+using
+realloc ()
+failed while dequeuing a message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tpdequeue(3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1464"></A>
+<H3>LIBQM MESSAGE #1464</H3>
+<H2> ERROR: xa_open() - OPENINFO string is null</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_open
+was called with a
+NULL
+OPENINFO
+string.
+The
+NULL
+value is only supposed to be passed to the
+"NULL XA"
+interface.
+This usually indicates that
+the application was configured as the
+"NULL XA"
+interface but the server provided was that for the Queue Manager.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration to indicate the correct resource manager.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1465"></A>
+<H3>LIBQM MESSAGE #1465</H3>
+<H2> ERROR: xa_open() - OPENINFO string length must be less than <I>len</I> characters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_open
+was called with an
+OPENINFO
+string that was too long (that is,
+<I>len</I>
+characters or more).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the application configuration to ensure that the
+OPENINFO
+string, composed of the name of configuration device
+or file and the queue space name, separated by a colon,
+is 256 characters or less in length.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1467"></A>
+<H3>LIBQM MESSAGE #1467</H3>
+<H2> ERROR: xa_open() - invalid OPENINFO string</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_open
+was called with an invalid
+OPENINFO
+string; it did not contain
+a colon separating the configuration name from the queue space name.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the application configuration to ensure that the
+OPENINFO
+string is composed of the name of configuration device
+or file and the queue space name, separated by a colon.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1468"></A>
+<H3>LIBQM MESSAGE #1468</H3>
+<H2> ERROR: [xa_open() - OPENINFO doesn't match for rmid <I>rmid</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_open
+was called more than once in the same process with the same resource manager
+identifier,
+<I>rmid,</I>
+but with different
+OPENINFO
+strings.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1469"></A>
+<H3>LIBQM MESSAGE #1469</H3>
+<H2> ERROR: [xa_close() - thread must dissociate before calling xa_close]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_close
+was called while still associated with a transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1470"></A>
+<H3>LIBQM MESSAGE #1470</H3>
+<H2> ERROR: xa_open() - Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system
+using
+malloc ()
+failed while opening a queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1471"></A>
+<H3>LIBQM MESSAGE #1471</H3>
+<H2> ERROR: <I>operation</I> - effective user id, <I>userid</I>, must match the owner of <I>config</I>, <I>config_userid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process
+was run by a user whose effective user identifier,
+<I>userid</I>,
+is not the same
+as the owner of the configuration device,
+<I>config</I>,
+which has a user identifier
+<I>config_userid</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the ownership of the configuration
+device or file, or run the program as the corresponding user.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1472"></A>
+<H3>LIBQM MESSAGE #1472</H3>
+<H2> ERROR: xa_start() - no more tran table entries (max = <I>entries</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_start
+was called to start a new transaction but no transaction entries
+are free in the queue space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Execute the
+qprinttrans
+command to see what transactions are currently outstanding.
+Use
+qcommittrans
+or
+qaborttrans
+to complete transactions that are in
+READY
+state but not completed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1473"></A>
+<H3>LIBQM MESSAGE #1473</H3>
+<H2> ERROR: Queue space creation - ipckey is already used -- choose another one or check existing semaphores</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While executing the
+qspacecreate
+command, an IPC key was specified for which a semaphore already exists.
+This probably means that another application is using the IPC key.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Choose another IPC key and re-execute the command.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1474"></A>
+<H3>LIBQM MESSAGE #1474</H3>
+<H2> ERROR: [xa_start() - TMRESUME specified for unassociated thread]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_start
+was called with the
+TMRESUME
+flag in a process that is not
+associated with the transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1475"></A>
+<H3>LIBQM MESSAGE #1475</H3>
+<H2> ERROR: [xa_start() - cannot associate with prepared transaction]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_start
+was called for a transaction that is prepared for commit.
+xa_start
+will fail.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1476"></A>
+<H3>LIBQM MESSAGE #1476</H3>
+<H2> ERROR: [xa_start() - called with TMJOIN when TMRESUME expected]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_start ()
+was called with the
+TMJOIN
+flag for a transaction in
+which the process is currently suspended.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1477"></A>
+<H3>LIBQM MESSAGE #1477</H3>
+<H2> ERROR: [xa_start() - called twice with no intervening xa_end]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_start ()
+was called for a transaction with which the process is already
+associated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1478"></A>
+<H3>LIBQM MESSAGE #1478</H3>
+<H2> ERROR: [xa_end() - TMMIGRATE not supported]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_end ()
+was called with the
+TMMIGRATE
+flag, even though the resource manager
+indicated that it does not support migration.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1479"></A>
+<H3>LIBQM MESSAGE #1479</H3>
+<H2> ERROR: [xa_end() - xid differs from xa_start xid]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_end
+was called with a transaction identifier that is different from
+the one with which the process is currently associated.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1480"></A>
+<H3>LIBQM MESSAGE #1480</H3>
+<H2> ERROR: [xa_end() - called from unassociated thread]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_end
+was called in a process that is not associated with a transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1481"></A>
+<H3>LIBQM MESSAGE #1481</H3>
+<H2> ERROR: [xa_end() - xid differs from xa_start xid]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_end
+was called with a transaction identifier that does not match
+the transaction identifier specified in the prior
+xa_start .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1482"></A>
+<H3>LIBQM MESSAGE #1482</H3>
+<H2> ERROR: [xa_end() - transaction status not valid (trx = <I>index</I>, status = <I>status</I>)]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_end ()
+was called but the transaction status is not valid.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1483"></A>
+<H3>LIBQM MESSAGE #1483</H3>
+<H2> ERROR: [xa_prepare() - transaction already in ready state]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_prepare
+was called but the transaction is already in
+READY
+state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1484"></A>
+<H3>LIBQM MESSAGE #1484</H3>
+<H2> ERROR: [xa_prepare() - threads still active]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_prepare ()
+was called while one or more processes were still associated with
+the transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1485"></A>
+<H3>LIBQM MESSAGE #1485</H3>
+<H2> ERROR: [xa_prepare() - transaction not in proper state for prepare (status = 0x<I>status</I>)]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_prepare ()
+was called but the transaction is not in a valid state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1486"></A>
+<H3>LIBQM MESSAGE #1486</H3>
+<H2> ERROR: [xa_commit() - threads still active]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_commit ()
+was called but one or more processes are still associated with
+the transaction.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1487"></A>
+<H3>LIBQM MESSAGE #1487</H3>
+<H2> ERROR: [xa_commit() - tried to one-phase commit and TMONEPHASE not set]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_commit ()
+was called without first calling
+xa_prepare ()
+but the
+TMONEPHASE
+flag was not set.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1488"></A>
+<H3>LIBQM MESSAGE #1488</H3>
+<H2> ERROR: [xa_commit() - transaction not in proper state for commit (status = 0x<I>status</I>)]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_commit ()
+was called but the transaction is not in a valid state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1489"></A>
+<H3>LIBQM MESSAGE #1489</H3>
+<H2> ERROR: [xa_rollback() - transaction not in proper state for roll back (status=0x<I>status</I>)]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_rollback ()
+was called but the transaction is not in a valid state.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1490"></A>
+<H3>LIBQM MESSAGE #1490</H3>
+<H2> ERROR: [xa_recover() - xid pointer is NULL, count is not 0]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_recover ()
+was called with a
+NULL
+pointer for the transaction array but
+the count of entries in the array is not 0.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1491"></A>
+<H3>LIBQM MESSAGE #1491</H3>
+<H2> ERROR: [xa_recover() - count cannot be negative]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_recover ()
+was called with a negative count for the number of entries
+in the transaction array.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1492"></A>
+<H3>LIBQM MESSAGE #1492</H3>
+<H2> ERROR: [xa_recover() - called without TMSTARTRSCAN and scan not in progress]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_recover ()
+was called without the
+TMSTARTRSCAN
+flag and it was not
+previously called with the
+TMSTARTRSCAN
+to start a scan.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1493"></A>
+<H3>LIBQM MESSAGE #1493</H3>
+<H2> ERROR: [xa_forget() - transaction has not been heuristically completed]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+xa_forget ()
+was called for a transaction that has not been heuristically committed
+or rolled back.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1494"></A>
+<H3>LIBQM MESSAGE #1494</H3>
+<H2> ERROR: xa_open() - failed to get shared memory, key = <I>key</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While opening the queue space,
+xa_open ()
+was unable to get the necessary shared memory.
+The error number,
+<I>errno</I>,
+is printed in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This failure can be caused by a number of reasons but
+the most likely is that either the amount of shared memory
+requested would cause an operating system tunable to be exceeded
+(shared memory for the system or shared memory identifiers),
+or another application is using the same key.
+Determine and correct the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1495"></A>
+<H3>LIBQM MESSAGE #1495</H3>
+<H2> ERROR: xa_open() - failed to attach to shared memory, key = <I>key</I>, errno = <I>errno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While opening the queue space,
+xa_open ()
+was unable to attach to the queue space shared memory.
+The error number,
+<I>errno</I>,
+is printed in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This failure can be caused by a number of reasons but
+the most likely is that the amount of shared memory
+requested would cause an operating system tunable to be exceeded
+(shared memory for the system, process size or shared memory segments
+attached to a process).
+Determine and correct the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1496"></A>
+<H3>LIBQM MESSAGE #1496</H3>
+<H2> WARN: xa_open() - error queue <I>name</I> not created</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While opening the queue space, the
+error queue,
+<I>name</I>,
+does not exist.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action is required but any messages that reach the retry count
+limit for their queue will be deleted instead of being
+moved to the queue space error queue.
+It is recommended that the error queue be creating using the
+qcreate
+command of
+qmadmin.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1497"></A>
+<H3>LIBQM MESSAGE #1497</H3>
+<H2> ERROR: xa_open() - no more process table slots</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While opening the queue space,
+no more entries were found in the process table.
+The size of this table is specified when the queue space is
+created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Stop any processes that are attached to the queue space that
+are not needed.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1498"></A>
+<H3>LIBQM MESSAGE #1498</H3>
+<H2> WARN: xa_open() - message with no matching queue '<I>name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While opening the queue space for the first time after the
+machine has been booted or after the
+IPC
+resources have been removed, the queue space is warm started.
+During warm start, a message was found that did not
+have a corresponding queue.
+This can occur when a queue with messages on it is
+deleted but the operation does not complete.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the queue named in the message was not deleted,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+qmadmin(1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1499"></A>
+<H3>LIBQM MESSAGE #1499</H3>
+<H2> ERROR: xa_open() - no more tran table entries (max = <I>entries</I>)</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While opening the queue space for the first time after the
+machine has been booted or after the
+IPC
+resources have been removed, the queue space is warm started.
+During warm start, all transaction table entries were used.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This could occur if the queue space transaction table size
+was changed with outstanding transactions on the queue space.
+Use the
+qspacechange
+command to increase the size of the transaction table.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

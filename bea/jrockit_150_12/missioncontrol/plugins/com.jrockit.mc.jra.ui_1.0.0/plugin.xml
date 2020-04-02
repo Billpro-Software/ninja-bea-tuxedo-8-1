@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="jraTabs" name="JRA Tab" schema="schema/jratabs.exsd"/>
+
+    	<extension id="jra" point="org.eclipse.core.runtime.products"> 
+		<product name="%productName" application="org.eclipse.ui.editors.jraEdit" description="%productBlurb"> 
+			<property name="windowImages" value="icons/jra_app_icon.gif"/> 
+			<property name="aboutImage" value="icons/bealogo_TM_small.gif"/> 
+			<property name="aboutText" value="%productBlurb"/> 
+			<property name="appName" value="%productName"/> 
+		</product> 
+	</extension>
+	<extension id="jraEdit" point="org.eclipse.ui.editors">
+      <editor
+            class="com.jrockit.mc.jra.ui.JRAEditor"
+            icon="icons/jra.gif"
+            contributorClass="com.jrockit.mc.jra.ui.editors.JRAEditorContributor"
+            name="%EDITOR_JRA_NAME"
+            id="com.jrockit.mc.jra.ui.editors.JRAEditor"
+            extensions="jra,encr,gz,zip,xml"/>
+   	</extension>
+	
+   
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="%CATEGORY_MISSION_CONTROL"
+            id="com.jrockit.mc.jra"
+            />
+      <wizard
+            class="com.jrockit.mc.jra.ui.wizards.StartRecordingWizard"
+            icon="icons/jra.gif"
+            category="com.jrockit.mc.jra"
+            name="%NEW_JRA_WIZARD_NAME"
+            id="com.jrockit.mc.jra.ui.wizards.StartRecordingWizard"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="%ACTION_SET_JRA_LABEL"
+            visible="true"
+            id="com.bea.jra.actionSet">
+         <menu
+               id="com.jrockit.mc.core.mcMenu"
+               label="%MENU_LABEL_MISSION_CONTROL"
+               >
+            <groupMarker name="mcGroup"/>
+         </menu>
+         <menu
+               id="jraMenu"
+               label="%MENU_JRA_LABEL"
+               path="com.jrockit.mc.core.mcMenu/mcGroup">
+            <separator name="jraGroup"/>
+         </menu>
+		<action
+				class="com.jrockit.mc.jra.ui.actions.StartJRA"
+				helpContextId="com.jrockit.mc.jra.ui.action_startjra"
+				icon="icons/jra.gif"
+				id="com.jrockit.mc.jra.ui.actions.StartJRA"
+				label="%ACTION_START_JRA_RECORDING_LABEL"
+				menubarPath="com.jrockit.mc.core.mcMenu/jraMenu/jraGroup"
+				toolbarPath="com.jrockit.mc.core.actionSet/mcGroup"
+				tooltip="%ACTION_START_JRA_RECORDING_TOOLTIP"/>
+		<action
+				class="com.jrockit.mc.jra.ui.actions.StartJRA"
+				helpContextId="com.jrockit.mc.jra.ui.action_startjra"
+				icon="icons/jra.gif"
+				id="com.jrockit.mc.jra.ui.actions.newJRARecording"
+				label="%ACTION_START_JRA_RECORDING_LABEL"
+				menubarPath="file/new/"
+				toolbarPath="com.jrockit.mc.core.actionSet/mcGroup"
+				tooltip="%ACTION_START_JRA_RECORDING_TOOLTIP"/>               
+		<action
+               label="%ACTION_OPEN_JRA_RECORDING_LABEL"
+               class="com.jrockit.mc.jra.ui.actions.OpenJRAFileAction"
+               tooltip="%ACTION_OPEN_JRA_RECORDING_TOOLTIP"
+               menubarPath="com.jrockit.mc.core.mcMenu/jraMenu/jraGroup"
+               icon="icons/jra.gif"
+               id="com.jrockit.mc.jra.ui.actions.OpenJRAFileAction"/>
+		<action
+			class="com.jrockit.mc.jra.ui.actions.OpenJRAFileAction"
+			icon="icons/jra.gif"
+			id="com.jrockit.mc.jra.ui.actions.OpenJRAFileAction"
+			label="%ACTION_OPEN_JRA_RECORDING_LABEL"
+			menubarPath="file/open/"
+			tooltip="%ACTION_OPEN_JRA_RECORDING_TOOLTIP"/>        
+		<action
+			label="Test JRA "
+			class="com.jrockit.mc.jra.ui.actions.JRATestAction"
+			tooltip="Test JRA"
+			menubarPath="file/mcdebug/"
+			icon="icons/kermit.gif"
+			id="com.jrockit.mc.jra.ui.actions.JRATestAction"/>           
+		<action
+			label="Import JRA UI Settings"
+			class="com.jrockit.mc.jra.ui.actions.ImportUIAction"
+			tooltip="Import UI Settings"
+			menubarPath="file/mcdebug/"
+			id="com.jrockit.mc.jra.ui.actions.ImportUIAction"/>	               
+		<action
+			label="Export JRA UI Settings"
+			class="com.jrockit.mc.jra.ui.actions.ExportUIAction"
+			tooltip="Export UI Settings"
+			menubarPath="file/mcdebug/"
+			id="com.jrockit.mc.jra.ui.actions.ExportUIAction"/>               
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="com.jrockit.mc.jra.ui.menucontribution"
+            targetID="com.jrockit.mc.browser.views.JRockitBrowserView">
+         <action
+               class="com.jrockit.mc.jra.ui.actions.StartJRA"
+               enablesFor="*"
+               helpContextId="com.jrockit.mc.console.ui.action_startjra"
+               icon="icons/jra.gif"
+               id="com.jrockit.mc.console.jra.actions.sj"
+               label="%ACTION_START_JRA_RECORDING_LABEL"
+               menubarPath="additions"
+               toolbarPath="additions"
+               tooltip="%ACTION_START_JRA_RECORDING_TOOLTIP"/>
+      </viewContribution>
+   </extension>
+   <extension point="org.eclipse.ui.popupMenus">
+   	<viewerContribution id="com.jrockit.mc.jra.ui.contextmenucontribution"
+		targetID="com.jrockit.mc.browser.views.JRockitBrowserView">
+         <action
+               class="com.jrockit.mc.jra.ui.actions.StartJRA"
+               enablesFor="*"
+               helpContextId="com.jrockit.mc.jra.ui.action_start"
+               icon="icons/jra.gif"
+               id="com.jrockit.mc.jra.ui.actions.sc"
+               label="%ACTION_START_JRA_RECORDING_LABEL"
+               menubarPath="additions"
+               tooltip="%ACTION_START_JRA_RECORDING_TOOLTIP"/>   	
+    </viewerContribution>   
+   </extension>
+   <extension
+         id="com.jrockit.mc.jra.u"
+         name="com.jrockit.mc.jra.u"
+         point="com.jrockit.mc.jra.ui.jraTabs">         
+		<jraTab
+        class="com.jrockit.mc.jra.ui.general.GeneralTab"
+        icon="icons/overview_obj.gif"
+        id="com.jrockit.mc.jra.ui.general.GeneralTab"
+        name="%TAB_GENERAL_NAME"
+        position="100"/>
+		<jraTab
+        class="com.jrockit.mc.jra.ui.methods.MethodsTab"
+        icon="icons/kermit.gif"
+        id="com.jrockit.mc.jra.ui.methods.MethodsTab"
+        name="%TAB_METHODS_NAME"
+        position="200"/>
+		<jraTab
+            class="com.jrockit.mc.jra.ui.gcevent.GCEventTab"
+            id="com.jrockit.mc.jra.ui.gcevent.GCEventTab"
+            name="%TAB_GC_EVENTS_NAME"
+            position="400"/>
+		<jraTab
+            class="com.jrockit.mc.jra.ui.gcgeneral.GCGeneralTab"
+            id="com.jrockit.mc.jra.ui.gcgeneral.GCGeneralTab"
+            name="%TAB_GC_GENERAL_NAME"
+            position="300"/>
+		<jraTab
+        class="com.jrockit.mc.jra.ui.heapoverview.HeapOverviewTab"
+        icon="icons/memory_view.gif"
+        id="com.jrockit.mc.jra.ui.heapoverview.HeapOverviewTab"
+        name="%TAB_HEAP_OVERVIEW_NAME"
+        position="500"/>
+		<jraTab
+        class="com.jrockit.mc.jra.ui.objectstatistics.ObjectStatisticsTab"
+        icon="icons/objectstatistics.gif"
+        id="com.jrockit.mc.jra.ui.objectstatistics.ObjectStatisticsTab"
+        name="%TAB_OBJECT_STATISTICS_NAME"
+        position="600"/>
+		<jraTab
+            class="com.jrockit.mc.jra.ui.optimizations.OptimizationsTab"
+            id="com.jrockit.mc.jra.ui.optimizations.OptimizationsTab"
+            name="%TAB_OPTIMIZATIONS_NAME"
+            position="700"/>
+		<jraTab
+            class="com.jrockit.mc.jra.ui.lockprofiling.LockProfilingTab"
+            id="com.jrockit.mc.jra.ui.lockprofiling.LockProfilingTab"
+            name="%TAB_LOCK_PROFILING_NAME"
+            position="800"/>
+		<jraTab
+        class="com.jrockit.mc.jra.ui.comments.CommentsTab"
+        icon="icons/properties.gif"
+        id="com.jrockit.mc.jra.ui.comments.CommentsTab"
+        name="%TAB_COMMENTS_NAME"
+        position="900"/>
+        <jraTab
+        class="com.jrockit.mc.jra.ui.processes.ProcessTab"
+        id="com.jrockit.mc.jra.ui.process.ProcessTab"
+        name="%TAB_PROCESSES_NAME"
+        position="2000"/>
+		<jraTab
+        class="com.jrockit.mc.jra.ui.dcmd.DiagCmdTab"
+        id="com.jrockit.mc.jra.ui.dcmd.DiagCmdTab"
+        name="%TAB_THREADS_NAME"
+        position="2100"/>
+ 
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.jrockit.mc.browser.views.JRockitBrowserConnectionNode"
+            class="com.jrockit.mc.jra.ui.JRAEditorInputFactory">
+         <adapter type="com.jrockit.mc.jra.ui.JRAEditorInput"/>
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.help.toc">
+      <toc file="toc.xml"/>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="com.jrockit.mc.jra.ui.comments_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.comments"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.dcmd_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.dcmd"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.gcevent_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.gcevent"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.gcgeneral_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.gcgeneral"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.general_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.general"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.heapoverview_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.heapoverview"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.lockprofiling_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.lockprofiling"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.methods_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.methods"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.objectstatistics_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.objectstatistics"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.optimizations_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.optimizations"/>
+      <contexts
+            file="com.jrockit.mc.jra.ui.processes_contexts.xml"
+            plugin="com.jrockit.mc.jra.ui.processes"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.jrockit.mc.core.preferences.MissionControlPage"
+            class="com.jrockit.mc.jra.ui.preferences.GeneralPage"
+            id="com.jrockit.mc.jra.ui.preferences.GeneralPage"
+            name="%JRA_PREFS_NAME"/>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.jrockit.mc.jra.ui.preferences.Initializer"/>
+   </extension>
+</plugin>

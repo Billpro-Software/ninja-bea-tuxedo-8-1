@@ -1,0 +1,26 @@
+/*	(c) 2003 BEA Systems, Inc. All Rights Reserved. */
+#include "ChatClient.idl"
+
+module ChatRoom {
+
+    interface Moderator {
+        exception IdAlreadyUsed{};
+        exception NoRoomLeft{};
+        exception IdNotKnown{};
+        
+        void signon( in string                  who, 
+                     in ChatClient::Listener    callback_ref )
+                        raises( IdAlreadyUsed, NoRoomLeft );
+        void send  ( in string                  who, 
+                     in string                  input_line )
+                        raises( IdNotKnown );
+        void signoff(in string                  who )
+                        raises( IdNotKnown );
+
+    };
+    
+    interface ModeratorFactory {
+        Moderator get_moderator( in string chatroom_name );
+
+    };
+};

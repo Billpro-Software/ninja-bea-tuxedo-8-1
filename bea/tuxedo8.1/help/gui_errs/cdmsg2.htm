@@ -1,0 +1,1089 @@
+<!-- .i</PRE>f n .pH errman.h.cdmsg2.htm @(#)cdmsg2.htm	60.2 of 3/6/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>CMDDES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1>
+<H1>CMDDES MESSAGES 200-299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="206"></A>
+<H3>CMDDES MESSAGE #206</H3>
+<H2> WARN: Cannot determine unsolicited message buffer type, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+mio
+received an unsolicited message (tpbroadcast</> or
+tpnotify )
+and it could not determine the buffer type for processing.
+The indicated TUXEDO System
+error <I>tperrno</I> is the returned error indication from
+the ATMI routine
+tptypes ().
+<SECT3>
+<H3>ACTION</H3>
+<P>
+The most likely cause of this error is a non-TUXEDO System process
+sending messages via Unix System queues and mistakenly putting one
+such message on
+mio 's
+queue.
+Examine other operations on your
+system to ensure that this is not occurring.  Additionally, check
+permissions specified in your
+UBBCONFIG
+file to allow write access
+only as necessary.  If the problem cannot be resolved, then please
+contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1), <Font>tptypes</>(3), <Font>tpbroadcast</>(3),
+tpnotify</>(3)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="207"></A>
+<H3>CMDDES MESSAGE #207</H3>
+<H2> WARN: Invalid unsolicited message buffer type <I>type</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+mio
+received an unsolicited message (tpbroadcast</> or
+tpnotify )
+with an unsupported buffer type.
+mio
+supports unsolicited messages with
+either the
+FML
+or
+STRING
+buffer type only.  The indicated message will
+be ignored and
+mio
+will continue processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Check application clients and servers that send unsolicited messages to see
+what buffer types are being used.
+Correct improper uses to use only
+FML
+or
+STRING
+buffer types when communicating with what may be an
+mio
+client.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1), <Font>tpbroadcast</>(3), <Font>tpnotify</>(3),
+"TUXEDO Data Entry System Guide"
+<SECT1>
+<H1>CMDDES MESSAGES 1000-1099</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1000"></A>
+<H3>CMDDES MESSAGE #1000</H3>
+<H2> ERROR: Overlapped field definition detected</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+Two basic descriptor statement field definitions define screen fields
+that overlap.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the mask and rerun the mask compiler.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mc</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1001"></A>
+<H3>CMDDES MESSAGE #1001</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while allocating space for the screen image.
+Additional information about the problem is printed as
+part of the message.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1002"></A>
+<H3>CMDDES MESSAGE #1002</H3>
+<H2> WARN: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1003"></A>
+<H3>CMDDES MESSAGE #1003</H3>
+<H2> WARN: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1006"></A>
+<H3>CMDDES MESSAGE #1006</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation
+of mio</>.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1008"></A>
+<H3>CMDDES MESSAGE #1008</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation
+of mio</>.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1010"></A>
+<H3>CMDDES MESSAGE #1010</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1011"></A>
+<H3>CMDDES MESSAGE #1011</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1012"></A>
+<H3>CMDDES MESSAGE #1012</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1013"></A>
+<H3>CMDDES MESSAGE #1013</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1014"></A>
+<H3>CMDDES MESSAGE #1014</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1015"></A>
+<H3>CMDDES MESSAGE #1015</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc</>(3) in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1016"></A>
+<H3>CMDDES MESSAGE #1016</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause mio</> to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1017"></A>
+<H3>CMDDES MESSAGE #1017</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists,
+contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1018"></A>
+<H3>CMDDES MESSAGE #1018</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1019"></A>
+<H3>CMDDES MESSAGE #1019</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1020"></A>
+<H3>CMDDES MESSAGE #1020</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1021"></A>
+<H3>CMDDES MESSAGE #1021</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1022"></A>
+<H3>CMDDES MESSAGE #1022</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1023"></A>
+<H3>CMDDES MESSAGE #1023</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1024"></A>
+<H3>CMDDES MESSAGE #1024</H3>
+<H2> ERROR: Disk Error while accessing mask form</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error was encountered on a disk operation while accessing a mask
+form that had not been cached.  Possible errors include problems reading,
+problems seeking, and corrupted information in the mask form.
+The occurrence of this error will cause
+mio
+to terminate processing.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Regenerate the mask forms used by
+mio
+in the case where the problem
+was encountered and try the interaction again.
+If the problem persists, contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1029"></A>
+<H3>CMDDES MESSAGE #1029</H3>
+<H2> ERROR: <I>program</I>: Could not open replay file <I>filename</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The file <I>filename</I> was specified with the
+-p
+option to
+mio
+as a replay
+file to be used instead of terminal input for this run of
+mio .
+However, <I>filename</I> could not be opened and this run of
+mio
+was terminated.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct the filename used with the
+-p
+option or correct the permissions
+on the file to allow read access and rerun
+mio .
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1030"></A>
+<H3>CMDDES MESSAGE #1030</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc(3)
+in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1031"></A>
+<H3>CMDDES MESSAGE #1031</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc(3)
+in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1032"></A>
+<H3>CMDDES MESSAGE #1032</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc(3)
+in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1033"></A>
+<H3>CMDDES MESSAGE #1033</H3>
+<H2> ERROR: Fielded buffer error</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An internal fielded buffer used by
+mio
+to process application
+forms has become corrupted and
+mio
+must discontinue processing
+on this form(s).
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1035"></A>
+<H3>CMDDES MESSAGE #1035</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc(3)
+in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1036"></A>
+<H3>CMDDES MESSAGE #1036</H3>
+<H2> ERROR: Access for user <I>login</I> to mask form <I>form</I> denied</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+You have made a menu selection in the current mask that maps
+to a mask form to which access is not allowed according to the
+current settings of the environment variables
+OKXACTS
+and
+NGXACTS .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your application administrator to modify the environment variables
+OKXACTS
+and
+NGXACTS
+to allow access to the indicated mask.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1037"></A>
+<H3>CMDDES MESSAGE #1037</H3>
+<H2> ERROR: User <I>login</I> could not find form <I>form</I></H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The form <I>form</I> could not be found in any directory referenced by
+the current setting of
+MASKPATH .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Correct your setting of the
+MASKPATH
+environment variable and rerun
+mio .
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1038"></A>
+<H3>CMDDES MESSAGE #1038</H3>
+<H2> ERROR: Unknown service access failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The service being accessed from the current form could not be
+processed for some internal reason other than the following
+error codes which are identified to the user via other distinct
+error message numbers:
+TPEOS ,
+TPENOENT ,
+TPEABORT ,
+TPETIME ,
+and
+TPEITYPE .
+Errors may occur on any of four
+ATMI
+calls:
+tpbegin ,
+tpacall ,
+tpgetrply ,
+or
+tpcommit .
+This error message will usually
+be preceded by a more explanatory message as to the cause of the problem.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1), <Font>tpacall</>(3), <Font>tpbegin</>(3), <Font>tpcommit</>(3),
+tpgetrply</>(3),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1039"></A>
+<H3>CMDDES MESSAGE #1039</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while updating the modified fields in a form.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+malloc(3)
+in Unix System reference manuals,
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1040"></A>
+<H3>CMDDES MESSAGE #1040</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to dynamically allocate memory from the operating system using
+malloc()
+failed while processing the form(s) associated with this invocation of
+mio .
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio</>(1),
+"TUXEDO Data Entry System Guide"
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1042"></A>
+<H3>CMDDES MESSAGE #1042</H3>
+<H2> ERROR: <I>progname</I>: Client name <I>cltname</I> is too long</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+The client name,
+<I>cltname</I>,
+specified as an argument to the
+-b
+option on the
+mio
+command line is longer than the system specified maximum for this
+field.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Shorten the name being used to be less than or equal to the limit
+imposed by the system.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1)
+<SECT2>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1043"></A>
+<H3>CMDDES MESSAGE #1043</H3>
+<H2> ERROR: can't become a client - tpinit() failed -</H2><HR>
+<P>
+<SECT3>
+<H3>DESCRIPTION</H3>
+<P>
+An error occurred while attempting to join the system.
+Additional information will be printed to
+give more details about the problem.
+The
+information
+may have one of two formats.
+	1. <I>TUX_error_information</I>
+	2. <I>sys_call_info</I> operating system error: <I>UNIX_error_information</I>
+Form 1 is used for all TUXEDO System errors, and form 2 is used for
+all operating system errors.
+<I>TUX_error_information</I> is a textual description of the
+error code returned from a call to tpinit</>(), for example,
+TPEINVAL
+would map to the string ``invalid arguments given''.
+<I>sys_call_info</I>
+is an indication of a UNIX system call that
+resulted in the error, for example, a failure on a call to msgsnd</>()
+would result in the string ``msgsnd'' being used.
+<I>UNIX_error_information</I>
+is a mapping of the UNIX
+errno
+value to
+a textual description of the error code.
+<SECT3>
+<H3>ACTION</H3>
+<P>
+Action for this failure depends on the actual error returned.
+If the error is a TUXEDO System error (form 1 above) and ``no entry found''
+is displayed, then this indicates that space limitations in the configured
+application have been reached.
+The application administrator should reconfigure
+the application to accommodate additional users.
+If ``bad permissions'' is displayed, then this indicates that either UNIX
+permissions or application security has kept mio</> from joining the
+system.
+Contact your application administrator for further clarification
+in this case.
+For all other error indications, please contact your TUXEDO System Technical Support.
+<SECT3>
+<H3>SEE ALSO</H3>
+<P>
+mio (1),
+tpinit (3)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

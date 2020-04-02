@@ -1,0 +1,69 @@
+				BankApp Sample
+
+The "bankapp" application illustrates how the servlet written in
+PageCompiledServlet with Servlet Connectivity for Tuxedo.  It shows how
+to use a property file to create a session pool, how to get the session pool
+manager, how to retrieve a session pool by name, how to invoke a TUXEDO
+service and how to process the result set.
+
+REQUIREMENT
+===========
+Any Web Application Server with Servlet JSDK 1.1 or above
+TUXEDO 6.4 or 6.5 with BankApp sample running
+Jolt 1.2
+
+INSTALLATION INSTRUCTIONS
+=========================
+1. Install the Jolt class library (jolt.jar) and Servlet Connectivity for
+   Tuxedo class library (joltjse.jar) to the web application server.  Extract
+   the class files if it is required by your web application server.
+
+2. Copy all HTML, JHTML and bankapp.properties files to the public
+   HTML directory of the web application server (e.g.
+   $WEBLOGIC/myserver/public_html for WebLogic):
+
+	bankapp.properties
+	tellerForm.html
+	inquiryForm.html
+	depositForm.html
+	withdrawalForm.html
+	transferForm.html
+	InquiryServlet.jhtml
+	DepositServlet.jhtml
+	WithdrawalServlet.jhtml
+	TransferServlet.jhtml
+
+3. Modify the bankapp.properties file.  Change the "appaddrlist" and
+   "failoverlist" with the proper Jolt server hosts and ports.  Specify
+   the proper TUXEDO authentication information if the BankApp has security
+   turned on.  For example,
+
+	#bankapp
+	#Fri Apr 16 00:43:30 PDT 1999
+	poolname=bankapp
+	appaddrlist=//host:8000,//host:7000
+	failoverlist=//backup:9000
+	minpoolsize=2
+	maxpoolsize=10
+	userrole=teller
+	apppassword=appPass
+	username=JaneDoe
+	userpassword=myPass
+
+4. If applicable, turn on the automatic page compilation for JHTML from
+   your servlet engine.  Consult the user manual of your web application
+   server.
+
+5. To access BankApp through Servlet Connectivity for Tuxedo, use the
+   following URL in your favorite browser:
+
+	http://mywebserver:8080/tellerForm.html
+
+REFERENCES
+==========
+1. Java Servlets
+	http://jserv.java.sun.com/products/java-server/documentation/
+		webserver1.1/index_developer.html
+
+2. Servlet Interest Group:
+	servlet-interest@java.sun.com

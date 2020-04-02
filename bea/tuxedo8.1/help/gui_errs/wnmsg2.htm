@@ -1,0 +1,3056 @@
+<!-- .if n .pH errman.h.wnmsg2.htm @(#)wnmsg2.htm	60.2 of 3/7/97 -->
+<!-- Copyright 1997 BEA Systems, Inc. -->
+<!-- Copyright 1996 Novell, Inc. -->
+<TITLE>WSNAT_CAT </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1><P>
+<H1>NATIVE /WS MESSAGES 1100-1199</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1100"></A>
+<H3>NATIVE MESSAGE #1100</H3>
+<H2> ERROR: -n option is required</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener (WSL) process was invoked without the
+-n
+option.
+This parameter contains the well-known network address used by the
+workstation listener, and is required.
+The
+WSL
+process is exiting due to the absence of a required option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the
+configuration file and determine the change that needs to be made to the
+CLOPT
+argument for the
+WSL
+process.  The
+-n
+option must occur, must have an appropriate option argument, and must
+be located after the double dash,
+-- ,
+that separates
+TUXEDO System/T
+options from
+WSL
+specific options.
+The options for a server may be updated while the system is running
+through use of the
+tmconfig (1)
+command, or may be updated while the system is shut down by reloading
+the configuration file through use of
+tmloadcf (1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tmloadcf (1),
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1101"></A>
+<H3>NATIVE MESSAGE #1101</H3>
+<H2> ERROR: Bad hex number provided for listening address: <I>bad_hex_value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener (WSL) process was invoked with a
+-n
+option that specified a hexadecimal value as an option-argument.
+However, the value specified was not a valid hexadecimal constant.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the network address specified for the
+WSL
+so that it contains an even number
+of hexadecimal digits, and make certain that each digit is '0'
+through '9', 'A' through 'F', or 'a' through 'f'.
+Also, remember that the
+WSNADDR
+environment variable in client processes associated with this
+WSL
+must be set to this same address.
+The WSL -n
+option and its associated network address are part of the
+CLOPT
+parameter specified for the
+WSL
+process in the configuration file.
+The options for a server may be updated while the system is running
+through use of the
+tmconfig (1)
+command, or may be updated while the system is shut down by reloading
+the configuration file through use of
+tmloadcf (1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tmloadcf (1),
+ubbconfig (5),
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1103"></A>
+<H3>NATIVE MESSAGE #1103</H3>
+<H2> ERROR: Bad -m option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener (WSL) process was invoked with a
+-m
+option that specified an option-argument outside of the allowed range.
+The
+-m
+option specifies the minimum number of handlers that should be available
+in conjunction with this
+WSL
+at any given time.  The legal range is between 0 and 255.
+The
+WSL
+process is exiting due to an error in its arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the value for the
+WSL
+-m
+option so that it is within the legal range.
+The options for a server may be updated while the system is running
+through use of the
+tmconfig (1)
+command, or may be updated while the system is shut down by reloading
+the configuration file through use of
+tmloadcf (1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tmloadcf (1),
+ubbconfig (5),
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1104"></A>
+<H3>NATIVE MESSAGE #1104</H3>
+<H2> ERROR: Bad -x option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener (WSL) process was invoked with a
+-x
+option that specified an option-argument outside of the allowed range.
+The
+-x
+option specifies the degree of multiplexing desired within each workstation
+handler.
+The legal range is between 1 and 32767.
+The
+WSL
+process is exiting due to an error in its arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the value for the
+WSL
+-x
+option so that it is within the legal range.
+The options for a server may be updated while the system is running
+through use of the
+tmconfig (1)
+command, or may be updated while the system is shut down by reloading
+the configuration file through use of
+tmloadcf (1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tmloadcf (1),
+ubbconfig (5),
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1105"></A>
+<H3>NATIVE MESSAGE #1105</H3>
+<H2> ERROR: Bad -M option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener (WSL) process was invoked with a
+-M
+option that specified an option-argument outside of the allowed range.
+The
+-M
+option specifies the maximum number of handlers that should be available
+in conjunction with this
+WSL
+at any given time.  The legal range is between 1 and 32767.
+The
+WSL
+process is exiting due to an error in its arguments.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the value for the
+WSL
+-M
+option so that it is within the legal range.
+The options for a server may be updated while the system is running
+through use of the
+tmconfig (1)
+command, or may be updated while the system is shut down by reloading
+the configuration file through use of
+tmloadcf (1).
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+tmloadcf (1),
+ubbconfig (5),
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1106"></A>
+<H3>NATIVE MESSAGE #1106</H3>
+<H2> ERROR: Error receiving unsolicited message, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process experienced an error while receiving
+an unsolicited message.  The numeric value of
+tperrno
+is also printed; this can aid in determination of a more exact cause
+for the problem.
+A numeric value of
+tperrno
+can be converted to a symbolic value by looking in the &lt;atmi.h>
+header file.
+In most cases, there will also be a preceding message in the userlog
+giving further information as to the cause of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the userlog for any immediately preceding messages
+giving further information as to the cause of the error.
+Also examine the userlog on the site that sent the failed unsolicited
+message for further clues as to the cause of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1107"></A>
+<H3>NATIVE MESSAGE #1107</H3>
+<H2> ERROR: Error receiving messages, tperrno = TPEOS, Uunixerr = UMSGRCV</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The UNIX System
+msgrcv
+system call returned an error to the workstation handler process.
+A prior message in the userlog will provide more information as to the
+cause of the error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the prior message in the userlog to determine the specific
+UNIX System error associated with this
+msgrcv
+failure.  If the failure is not transient and the
+WSH
+is still active, the
+WSL
+may need to restart this particular
+WSH .
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+Uunix_err (3),
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1108"></A>
+<H3>NATIVE MESSAGE #1108</H3>
+<H2> ERROR: Handler received unexpected unsolicited opcode <I>opcode_value</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process received an unsolicited message that
+contained an unexpected internal opcode.
+The opcode value is printed as part of the error message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1109"></A>
+<H3>NATIVE MESSAGE #1109</H3>
+<H2> ERROR: Failed to process broadcast message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process received a broadcast message to be
+forwarded to the appropriate workstation client(s).  However,
+it was unable to process this message for forwarding to the workstation
+client(s).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A previous message in the userlog may indicate a more precise cause of the
+error and indicate a corrective action to take.
+The workstations associated with this workstation handler did not receive the
+broadcast message sent to them.  Depending on the particular situation,
+these workstations may need to be informed of the broadcast in another way.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1110"></A>
+<H3>NATIVE MESSAGE #1110</H3>
+<H2> ERROR: Couldn't change to client context <I>context_number</I>, continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error switching to the context of
+a client when dropping all connections during shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The connection is ignored.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1111"></A>
+<H3>NATIVE MESSAGE #1111</H3>
+<H2> ERROR: Sending of broadcast message to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process received a broadcast message to be
+forwarded to the appropriate workstation client(s).  However,
+it was unable to process this message for forwarding to one of
+the workstation clients.  Often, this is due to a network error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make use of network management utilities to determine if any networking
+problems exist between the machine on which the
+WSH
+process is running and its associated workstation client.
+Also, examine the userlog to see if any immediately preceding entries
+give a more detailed explanation for the error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1112"></A>
+<H3>NATIVE MESSAGE #1112</H3>
+<H2> ERROR: Failed to process notification message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process received a notification message to be
+forwarded to a workstation client.  However, it was unable to process
+this message for forwarding to the workstation client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If a prior message in the userlog provides further explanation for the
+cause of the problem, follow the recommendations listed for that message.
+Otherwise, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1113"></A>
+<H3>NATIVE MESSAGE #1113</H3>
+<H2> ERROR: Couldn't change to client context <I>context_number</I>, continuing</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Workstation Handler encountered an error switching to the context of
+a client when dropping all connections during shutdown.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The connection is ignored.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1114"></A>
+<H3>NATIVE MESSAGE #1114</H3>
+<H2> ERROR: Sending of notification message to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process received a notification message to be
+forwarded to a workstation client.  However,
+it was unable to process this message for forwarding to the workstation
+client.  Often, this is due to a network error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make use of network management utilities to determine if any networking
+problems exist between the machine on which the
+WSH
+process is running and its associated workstation client.
+Also, examine the userlog to see if any immediately preceding entries
+give a more detailed explanation for the error.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1120"></A>
+<H3>NATIVE MESSAGE #1120</H3>
+<H2> ERROR: tpchkauth() failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+As part of its startup processing, the workstation handler process
+attempted to determine whether application authentication is required
+by this application configuration, but encountered an error trying
+to obtain this information.
+The numeric value of
+tperrno
+is printed as part of the error message; this may be converted to a
+symbolic value by examining &lt;atmi.h> .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Examine the userlog for a prior message indicating a more exact cause
+of the error.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1121"></A>
+<H3>NATIVE MESSAGE #1121</H3>
+<H2> ERROR: Couldn't get administrative key for decrypting workstation client messages</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The process was unable to access the encoded form of
+the password used to create the encryption/decryption schedule employed
+between the workstation handler and workstation clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Verify that the process is running under the
+ID
+of the application
+administrator.
+Also, verify that the file
+$APPDIR/.adm/.keydb
+has not been accidentally removed and that the
+TUXCONFIG
+file has not been corrupted.
+If either of these two files has been corrupted, it will be necessary
+to reload the
+TUXCONFIG
+file.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1122"></A>
+<H3>NATIVE MESSAGE #1122</H3>
+<H2> ERROR: Restoring message to original condition after sending failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener or workstation handler process sent an
+encrypted message to a workstation client.  After the send, the
+WSL
+or
+WSH
+tried to restore the message to its original
+unencrypted state, but this operation failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1124"></A>
+<H3>NATIVE MESSAGE #1124</H3>
+<H2> ERROR: Broadcast message received with unknown type '<I>type_name</I>' subtype '<I>subtype_name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler process received
+a notification or broadcast message from a workstation node with a type
+not known to it.  This may occur if the system administrator adds a
+user-defined type to the TUXEDO System/T typeswitch but does not rebuild the
+workstation handler using the new typeswitch.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If this application makes use of an application-defined typeswitch,
+rebuild the workstation handler with the
+buildwsh (1)
+command using the same application typeswitch as in other clients and
+servers.
+If the application typeswitch feature is not being used,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1131"></A>
+<H3>NATIVE MESSAGE #1131</H3>
+<H2> ERROR: tpbroadcast() or tpnotify() failed on send, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler that performs the
+tpbroadcast
+or
+tpbroadcast
+call on behalf of
+the workstation clients failed to forward the broadcast message to the
+(D)BBL
+administrative server.
+The message is to be sent to the
+DBBL
+administrative server in
+MP
+mode
+and to the
+BBL
+administrative server in
+SHM
+mode, which in turn takes care of broadcasting the unsolicited message
+to the target application clients.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error number, <I>tperrno</I>, and determine why the workstation
+handler was not able to send the message.
+Most likely the
+(D)BBL
+administrative server queue is full.
+In this case, change the operating system tunable parameters to
+increase the maximum queue size.
+If <I>tperrno</I> is set to
+TPESYSTEM
+or
+TPEOS ,
+check the userlog for other
+error messages that may indicate the exact nature of the problem and the
+reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpbroadcast (3),
+tperrno (5),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1132"></A>
+<H3>NATIVE MESSAGE #1132</H3>
+<H2> ERROR: Received message of type '<I>type</I>' to tpinit() call</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler that performs the
+tpinit
+call on behalf of
+workstation clients received a request to join a workstation client
+to the application.
+However, the message it received in conjunction with
+the request was not a
+TPINIT
+buffer, but of type <I>type</I>.
+The workstation handler will therefore remove the workstation client
+context from the workstation handler and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the workstation clients trying to join an application
+pass a buffer to the workstation handler, make sure that it is a
+TPINIT
+buffer.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1133"></A>
+<H3>NATIVE MESSAGE #1133</H3>
+<H2> ERROR: TPINIT information must be passed to tpinit() call in secure application</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Prior to performing a
+tpinit
+on behalf of a workstation client, the
+workstation handler must make sure a
+TPINIT
+structure is passed
+if the application requires client authentication.
+In this case, the
+TPINIT
+information was not passed even though client
+authentication is required.
+The workstation handler will therefore unregister the workstation
+client from the Bulletin Board, remove the workstation client
+context from the workstation handler, and return an error.
+An error message, with
+tperrno
+set to
+TPEPERM ,
+is sent back to the workstation client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the workstation clients trying to join the secure application
+are passing the
+TPINIT
+information to the workstation handler.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1134"></A>
+<H3>NATIVE MESSAGE #1134</H3>
+<H2> ERROR: Sending of reply to ticket protocol failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to send the ticket reply back
+to the workstation client.
+The workstation handler will therefore unregister the workstation
+client from the Bulletin Board, remove the workstation client
+context from the workstation handler, and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1135"></A>
+<H3>NATIVE MESSAGE #1135</H3>
+<H2> ERROR: Invalid client name given '<I>cltname</I>'.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a workstation client's request to join the application,
+an invalid client name, <I>cltname</I>,
+was found in the
+TPINIT
+buffer.
+The value
+sysclient
+is reserved by the system for the
+cltname
+field.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the workstation client does not use
+sysclient
+as a client name.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1136"></A>
+<H3>NATIVE MESSAGE #1136</H3>
+<H2> WARN: Invalid notification option given 0x<I>option</I>, reset to TPU_IGN.</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a workstation client's request to join the application,
+an invalid notification option, <I>option</I>, was found in the
+TPINIT
+buffer flags field.
+For client notification, the possible values for flags are as follows:
+TPU_SIG ,
+TPU_DIP ,
+or
+TPU_IGN .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the client notification value in the
+TPINIT
+buffer flags
+field is set correctly for the workstation client that failed to
+join the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1137"></A>
+<H3>NATIVE MESSAGE #1137</H3>
+<H2> ERROR: Invalid length for TPINIT structure given</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a workstation client's request to join the application,
+an invalid data length was found in the
+TPINIT
+buffer datalen field.
+The length must be greater than or equal to zero.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the data length value in the
+TPINIT
+buffer datalen field is set
+correctly for the workstation client that failed to join the application.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1138"></A>
+<H3>NATIVE MESSAGE #1138</H3>
+<H2> ERROR: Failed to update registry table information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to update the workstation client
+information in the Bulletin Board's registry table.
+The workstation handler will therefore unregister the workstation
+client from the Bulletin Board, remove the workstation client
+context from the workstation handler, and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1139"></A>
+<H3>NATIVE MESSAGE #1139</H3>
+<H2> ERROR: Failed to send message to authentication server, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to send the
+TPINIT
+information to
+the authentication server.
+The call to
+tpacall
+failed with
+tperrno
+set to <I>tperrno_val</I>.
+This failure will cause the workstation handler to return an error
+to the workstation client with tperrno set to
+TPEPERM .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error number, <I>tperrno_val</I>, and determine why the call
+to the authentication server failed.
+Most likely, the authentication server is not booted.
+In this case, boot the authentication server.
+If <I>tperrno_val</I> is set to
+TPESYSTEM
+or
+TPEOS ,
+check the userlog for other
+error messages that may indicate the exact nature of the problem and the
+reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3),
+tpacall (3),
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1140"></A>
+<H3>NATIVE MESSAGE #1140</H3>
+<H2> WARN: tpbroadcast() or tpnotify() encountered blocking condition</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to send an unsolicited message due to
+a blocking condition.
+The workstation handler is responsible for sending to the
+(D)BBL
+administrative server a request to forward unsolicited message on
+behalf of the workstation client.
+The request was not sent because of an existing blocking condition on
+the
+(D)BBL
+administrative server queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Most likely a system limit has been reached.
+You may wish to change the operating system tunable parameters related
+to the maximum size of a queue.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpbroadcast (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1141"></A>
+<H3>NATIVE MESSAGE #1141</H3>
+<H2> ERROR: Unable to assign connection request, can't create any more handlers</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener failed to start a new workstation handler.
+This may be due to no more workstation handlers being available,
+an error in the formatting of the command line for the workstation handler,
+an error in retrieving the machine table entry for the workstation listener
+in the Bulletin Board,
+or an error executing the workstation handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1142"></A>
+<H3>NATIVE MESSAGE #1142</H3>
+<H2> ERROR: For a secure application, the two-phase challenge/response protocol must be followed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler received a message over the network from
+a workstation client.
+No context exists for this client.
+When running in a secure application, the only message that can
+be accepted by the workstation handler from a workstation client
+with no context is a two-phase challenge/response message.
+This is not the case.
+The two-phase challenge/response protocol must be followed in
+a secure application.
+An error message, with tperrno set to
+TPEPERM ,
+is sent back to the workstation client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1143"></A>
+<H3>NATIVE MESSAGE #1143</H3>
+<H2> ERROR: Failed to create encryption/decryption schedule</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to create an encryption/decryption
+schedule.
+The function used to create the encryption/decryption schedule is
+called
+_tpcryptinit .
+It is part of an internal interface that is designed to support various
+methods of data encryption.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably indicates that a TUXEDO System or operating system error
+occurred.
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+_tpcryptinit
+may also fail because an invalid argument was given.
+In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+encryption (3i)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1144"></A>
+<H3>NATIVE MESSAGE #1144</H3>
+<H2> ERROR: _tprandkey() failed tperrno = <I>tperrno_val</I>, could not generate random encryption key</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to create a random key conforming to the
+restrictions of the encryption subsystem in use.
+The function used to create the random key is
+_tprandkey .
+It is part of an internal interface that is designed to support various
+methods of data encryption.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error number and determine why
+_tprandkey
+failed.
+This probably indicates that a TUXEDO System or operating system error
+occurred.
+Check the user log for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+_tprandkey
+may also fail because an invalid argument was given.
+In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+encryption (3i)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1145"></A>
+<H3>NATIVE MESSAGE #1145</H3>
+<H2> ERROR: tpalloc() failed, tperrno = <I>tperrno_val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate a buffer in the workstation handler failed.
+The call to
+tpalloc
+failed with tperrno set to <I>tperrno_val</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the error number and determine why
+tpalloc
+failed.
+Most likely, a system limit has been reached.
+Change the operating system tunables to increase the amount
+of space a process is allowed dynamically to allocate.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpalloc (3),
+tperrno (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1146"></A>
+<H3>NATIVE MESSAGE #1146</H3>
+<H2> ERROR: Sending of reply to challenge call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to send the challenge reply back
+to the workstation client.
+The workstation handler will therefore unregister the workstation
+client from the Bulletin Board, remove the workstation client
+context from the workstation handler, and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1147"></A>
+<H3>NATIVE MESSAGE #1147</H3>
+<H2> ERROR: Protocol error, can't process tpinit() request before performing security protocol</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler in a secure application received a request to
+perform a
+tpinit
+on behalf of a workstation client before performing
+the security protocol.
+The workstation handler will therefore unregister the workstation
+client from the Bulletin Board, remove the workstation client
+context from the workstation handler, and return an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+tpinit (3)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1148"></A>
+<H3>NATIVE MESSAGE #1148</H3>
+<H2> ERROR: Processing of message to be sent to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to send a message to the workstation client.
+The failure occurred in a low level routine that performs all manipulations
+for the message send.
+This includes pre-send, encoding, and post-send work.
+The message being sent from the workstation handler to the workstation
+client had to do with the workstation client trying to join the application.
+During this phase, all messages are encrypted when they are sent across the
+network.
+The messages may also be encoded if the machines are not of the same type.
+The workstation handler failed to encrypt the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1149"></A>
+<H3>NATIVE MESSAGE #1149</H3>
+<H2> ERROR: Validation of TPINIT information failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to validate the TPINIT structure identifying
+the connecting client against an uninterpreted ticket structure identifying
+the security agent's opinion of the client to determine if the connecting
+client should be granted access to the application.
+The function used to perform the validation is _tpvalidate(3i).
+It is part of an internal interface that is designed to support various
+methods of application authentication.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably indicates that the security ticket and tpinit information
+do not match, and the user should not be allowed to join the application.
+It can also mean that a TUXEDO System or operating system error occurred.
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+_tpvalidate
+may also fail because an invalid argument was given.
+In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+security (3i)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1150"></A>
+<H3>NATIVE MESSAGE #1150</H3>
+<H2> ERROR: Incorrect timestamp value sent by workstation client</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to validate the ticket information
+passed to it by a workstation client.
+The ticket information passed from the workstation client to the
+workstation handler does not match the timestamp information stored in
+the workstation handler.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1152"></A>
+<H3>NATIVE MESSAGE #1152</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc failed while validating the ticket information passed
+to the workstation handler by the workstation client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used be a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1153"></A>
+<H3>NATIVE MESSAGE #1153</H3>
+<H2> ERROR: Could not obtain session key from ticket</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to retrieve a session key from a ticket
+in a secure application while trying to validate the ticket information
+passed to it by a workstation client.
+The function used to retrieve the session key is
+_tpsessionkey .
+It is part of an internal interface that is designed to support various
+methods of authentication.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably means that a TUXEDO System or operating system error occurred.
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+_tpsessionkey
+may also fail because an invalid argument was given or
+the ticket could not be processed because the workstation client was denied
+permission for an implementation specific reason.
+In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+security(3i)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1154"></A>
+<H3>NATIVE MESSAGE #1154</H3>
+<H2> ERROR: Failed to encrypt ticket information</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to encrypt data according to a schedule
+while accepting a challenge and timestamp value that is to be used to
+verify that the request is valid.
+The function used to encrypt data is
+_tpcrypt .
+It is part of an internal interface that is designed to support various
+methods of encryption.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably means that a TUXEDO System or operating system error occurred.
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+_tpcrypt
+may also fail because an invalid argument was given.
+In this case,
+contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+encryption(3i)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1155"></A>
+<H3>NATIVE MESSAGE #1155</H3>
+<H2> ERROR: Couldn't process message for workstation client</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler failed to receive a message from the workstation
+client. The failure occurred in a low level routine that performs all
+manipulations on a message after it has been received.
+This includes decoding and post receive work.
+The message received has an invalid data size field in the message header.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for other error messages that may indicate
+the exact nature of the problem and reason for this failure.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide"
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1156"></A>
+<H3>NATIVE MESSAGE #1156</H3>
+<H2> ERROR: Decryption of challenge request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+decrypting the challenge request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1157"></A>
+<H3>NATIVE MESSAGE #1157</H3>
+<H2> ERROR: Encryption of challenge request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encrypting the challenge request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1158"></A>
+<H3>NATIVE MESSAGE #1158</H3>
+<H2> ERROR: Couldn't create encryption/decryption schedule</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+the encryption or decryption schedule could not be created.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1159"></A>
+<H3>NATIVE MESSAGE #1159</H3>
+<H2> ERROR: Failed to encode/decode establish connection request message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding of the establish connection request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1160"></A>
+<H3>NATIVE MESSAGE #1160</H3>
+<H2> ERROR: Decryption of challenge reply failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+decrypting the challenge reply message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1161"></A>
+<H3>NATIVE MESSAGE #1161</H3>
+<H2> ERROR: Encryption of challenge reply failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encrypting the challenge reply message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1162"></A>
+<H3>NATIVE MESSAGE #1162</H3>
+<H2> ERROR: Encoding/decoding of ticket request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding the ticket request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1163"></A>
+<H3>NATIVE MESSAGE #1163</H3>
+<H2> ERROR: Encoding/decoding of ticket request failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding the ticket request message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1164"></A>
+<H3>NATIVE MESSAGE #1164</H3>
+<H2> ERROR: Decryption of TPINIT buffer failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+decrypting the
+TPINIT
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1165"></A>
+<H3>NATIVE MESSAGE #1165</H3>
+<H2> ERROR: Encoding/decoding of TPINIT buffer failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encoding or decoding the
+TPINIT
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1166"></A>
+<H3>NATIVE MESSAGE #1166</H3>
+<H2> ERROR: Encryption of TPINIT buffer failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+encrypting the
+TPINIT
+message failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1167"></A>
+<H3>NATIVE MESSAGE #1167</H3>
+<H2> ERROR: Unknown work station message to process</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+an unknown message type was encountered for processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1168"></A>
+<H3>NATIVE MESSAGE #1168</H3>
+<H2> ERROR: Tried to process unexpected message opcode 0x<I>code</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While a workstation client was attempting to join the application,
+an unknown message type was encountered for processing.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1169"></A>
+<H3>NATIVE MESSAGE #1169</H3>
+<H2> ERROR: Expected numeric argument to -D option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument was passed to the workstation listener command line option.
+The argument to the
+-D
+option needs to be numeric.
+This error will cause the workstation listener not to be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the argument to the -D option is numeric.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1170"></A>
+<H3>NATIVE MESSAGE #1170</H3>
+<H2> ERROR: Expected numeric argument to -M option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument was passed to the workstation listener command line option.
+The argument to the
+-M
+option needs to be numeric.
+This error will cause the workstation listener not to be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the argument to the
+-M
+option is numeric.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1171"></A>
+<H3>NATIVE MESSAGE #1171</H3>
+<H2> ERROR: Expected numeric argument to -m option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument was passed to the workstation listener command line option.
+The argument to the
+-m
+option needs to be numeric.
+This error will cause the workstation listener not to be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the argument to the
+-m
+option is numeric.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1172"></A>
+<H3>NATIVE MESSAGE #1172</H3>
+<H2> ERROR: Expected numeric argument to -t option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument was passed to the workstation listener command line option.
+The argument to the
+-t
+option needs to be numeric.
+This error will cause the workstation listener not to be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the argument to the
+-t
+option is numeric.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1173"></A>
+<H3>NATIVE MESSAGE #1173</H3>
+<H2> ERROR: Bad -t option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid argument was passed to the workstation listener
+command line option.
+The argument to the
+-t
+option needs to be in the range 1 to 255 inclusive.
+This error will cause the workstation listener not to be booted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the argument to the
+-t
+option is in the allowable range.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1174"></A>
+<H3>NATIVE MESSAGE #1174</H3>
+<H2> WARN: Disconnecting listener connection to workstation, connection timed out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener will scan its
+handler table and time out any connections that are
+overdue, restart any dead handlers, and allocate any blocked connection
+requests to a handler that is available.
+When scanning this table, the workstation listener
+found a handler that was waiting
+for a connection that had timed out.
+The workstation listener
+went ahead and forced the connection closed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The workstation listener -t
+command line option can be used to specify the amount of
+time that should be allowed for a workstation client to complete
+initialization processing through the workstation handler before being
+timed out by the workstation listener.
+This number may need to be increased to avoid frequent timeouts.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1175"></A>
+<H3>NATIVE MESSAGE #1175</H3>
+<H2> WARN: Disconnecting listener connection to workstation, request timed out</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener will scan its handler table and time out any
+connections that are overdue, restart any dead handlers, and allocate
+any blocked connection requests to a handler that is available.
+When scanning this table, the workstation listener found a blocked
+connection request that had not been passed to an available handler.
+Since the time to assign a handler expired, the workstation listener went
+ahead and forced the connection closed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This probably indicates that the number of workstation clients
+that need to join the application can not be supported by the
+existing configuration.
+The workstation listener command line options should be reset to support
+a larger number of workstation clients.
+The workstation listener -m, <Font>-M, and <Font>-x options
+should be used to that effect.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO /Workstation Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1176"></A>
+<H3>NATIVE MESSAGE #1176</H3>
+<H2> ERROR: Sending of reply to tpconnect() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpconnect
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1177"></A>
+<H3>NATIVE MESSAGE #1177</H3>
+<H2> ERROR: Sending of reply to tpdiscon() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpdiscon
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1178"></A>
+<H3>NATIVE MESSAGE #1178</H3>
+<H2> ERROR: Sending of reply to tpsend() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpbroadcast
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1179"></A>
+<H3>NATIVE MESSAGE #1179</H3>
+<H2> ERROR: Unrecognized opcode: <I>opcode</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A message was received in the
+Workstation Handler requesting an operation that is not known.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+It could indicate the use of newer workstation client software with an
+older Workstation Handler.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1180"></A>
+<H3>NATIVE MESSAGE #1180</H3>
+<H2> ERROR: Sending of reply to tpconnect() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to send an acknowledgment of a
+tpconnect
+request
+to the Workstation Client has failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an internal message. This failure indicates a problem with the
+network, with the Workstation, or with the Workstation client process.
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1182"></A>
+<H3>NATIVE MESSAGE #1182</H3>
+<H2> ERROR: Invalid -T option = <I>num</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -T command line option for the /WS listener WSL had an invalid
+argument.
+The value must be greater than or equal to 0 and less than 70409299.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reconfigure the CLOPT for the WSL and reboot the process.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1183"></A>
+<H3>NATIVE MESSAGE #1183</H3>
+<H2> ERROR: Expected numeric argument to -T option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -T command line option for the /WS listener WSL had a
+non-numeric argument.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Reconfigure the CLOPT for the WSL and reboot the process.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1185"></A>
+<H3>NATIVE MESSAGE #1185</H3>
+<H2> INFO: Userid: [<I>user</I>], Clientid: [<I>client</I>] timed out due to inactivity</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A /WS client attached to the application has been invalid for longer
+than the configured timeout value, specified via the -T command line
+option.
+The associated user name and client name are printed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1186"></A>
+<H3>NATIVE MESSAGE #1186</H3>
+<H2> ERROR: Cannot convert message with unknown protocol <I>num</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /WS Handler, WSH, received a message from a /WS client with an
+unknown protocol number, <I>num</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the WSTYPE environment variable is correctly set so that
+encoding is done if necessary.
+Validate that the correct /WS software is being used with the associated
+WSH.
+You may need to contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1187"></A>
+<H3>NATIVE MESSAGE #1187</H3>
+<H2> ERROR: Cannot convert message from protocol <I>num1</I> to <I>num2</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /WS Handler, WSH, received a message to or from a /WS client with a
+protocol version that cannot be converted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1188"></A>
+<H3>NATIVE MESSAGE #1188</H3>
+<H2> ERROR: Unrecognized message format, release <I>num</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /WS Listener, WSL, received a connection message from a /WS client
+with an unknown protocol number, <I>num</I>.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check that the WSTYPE environment variable is correctly set so that
+encoding is done if necessary.
+Validate that the correct /WS software is being used with the associated
+WSL.
+You may need to contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1189"></A>
+<H3>NATIVE MESSAGE #1189</H3>
+<H2> ERROR: Received message of unknown type '<I>type</I>' subtype '<I>subtype</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The /WS Handler, WSH, received a typed buffer from a /WS client
+with an unknown type and/or subtype, indicated in the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The /WS client must have a type switch that contains types and/or
+subtypes that are unknown to the WSH.
+These buffer types must be added to the type switch associated with the
+WSH.
+See the
+"TUXEDO Administrator's Guide"
+for further information.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1190"></A>
+<H3>NATIVE MESSAGE #1190</H3>
+<H2> INFO: Reestablished network address <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A previously suspended workstation listener process has been unsuspended
+and has reestablished its network address.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Informational message, no action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB (5),
+WS_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1191"></A>
+<H3>NATIVE MESSAGE #1191</H3>
+<H2> INFO: Network address disabled</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A workstation listener process has been suspended and has disabled its
+listening network address to disallow further incoming connections.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Informational message, no action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB (5),
+WS_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1192"></A>
+<H3>NATIVE MESSAGE #1192</H3>
+<H2> INFO: Abortively disconnecting workstation client user[<I>usr</I>], client[<I>clt</I>]</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A workstation handler is disconnecting the virtual circuit associated
+with a particular workstation client (<I>&lt;usr>/&lt;clt></I>) because of an
+administrative request to set the client state to DEAD.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Informational message, no action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1193"></A>
+<H3>NATIVE MESSAGE #1193</H3>
+<H2> WARN: Obsolete option used, -t</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An obsolete option, -t, was specified in the command line options for a
+workstation listener server.
+This option is being replaced by the -I option, which takes a client
+initialization timeout value in seconds instead of the SCANUNIT multiple
+expected for the -t option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The -t option may be removed in future releases; therefore, the
+administrator should plan to transition workstation listener
+specifications to use the -I option.
+Since the administrator may not know at configuration time if the site
+where the listener may be run supports the -I option yet, the current
+implementation allows both on the command line and will use the last
+option found on the command line.
+Therefore, the recommended action is to add a corresponding -I option at
+the end of the command line options for the workstation listener.
+In environments where there are no pre-release 6.0 TUXEDO System sites,
+the -t option may be discarded entirely.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB (5),
+WSL (5),
+WS_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1194"></A>
+<H3>NATIVE MESSAGE #1194</H3>
+<H2> ERROR: Invalid or non-numeric value specified for -I option, <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener command line options contained an invalid value
+for the -I option.
+This option requires a numeric value between 1 and 32,767 inclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value in the command line options and reboot the server.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+MIB (5),
+WSL (5),
+WS_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1195"></A>
+<H3>NATIVE MESSAGE #1195</H3>
+<H2> WARN: Failed to reestablish network address <I>string</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A previously suspended workstation listener server was administratively
+unsuspended but could not reestablish its network address.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Failure to reestablish the network address is usually caused either by a
+failure of the network drivers on the machine to clear the previously
+held network address or by another process claiming the network address
+while the listener was suspended.
+In the former case, the network address will eventually be released by
+the system and the workstation listener will reestablish its network
+address through its periodic retry mechanism; therefore, no action is
+required in this case.
+In the latter case, local commands may be used to determine what process
+and user are occupying the network address, and they should be asked to
+relinquish the address.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+netstat (1),
+MIB (5),
+WS_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1196"></A>
+<H3>NATIVE MESSAGE #1196</H3>
+<H2> INFO: Terminating handlers in preparation for shutdown</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener is shutting down and is about to terminate its
+associated workstation handler processes in preparation.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Informational message, no action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+tmshutdown (1),
+MIB (5),
+WS_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1197"></A>
+<H3>NATIVE MESSAGE #1197</H3>
+<H2> INFO: Exiting system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener has completed its shutdown and is exiting the
+system.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Informational message, no action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+"TUXEDO Administrator's Guide" ,
+WSL (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1198"></A>
+<H3>NATIVE MESSAGE #1198</H3>
+<H2> WARN: Forced shutdown of client; user name '<I>name</I>'; client name '<I>name</I>'</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A client connection to a WSH has been terminated abnormally
+(the client did not call tpterm()).
+This results from shutting down a WSH when clients are connected,
+a client connection has timed out, or the WSH was unable to
+send a network message to the client.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1199"></A>
+<H3>NATIVE MESSAGE #1199</H3>
+<H2> WARN: .SysClientDied: User <I>usrname</I> on <I>LMID</I> client died</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above exited the
+application without doing a tpterm().
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+In the normal way, the clients should do a tpterm() before exiting
+the application.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT1><P>
+<H1>NATIVE /WS MESSAGES 1200-1299</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1200"></A>
+<H3>NATIVE MESSAGE #1200</H3>
+<H2> INFO: .SysClientState: User <I>usrname</I> on <I>LMID</I> state change to <I>state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above changed to a new
+state.
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+This is an informational message.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1201"></A>
+<H3>NATIVE MESSAGE #1201</H3>
+<H2> WARN: .SysClientSecurity: User <I>usrname</I> on <I>LMID</I> authentication failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+This message indicates that the client specified above failed security
+validation when trying to join the application.
+A complete listing of the current attributes of the client are sent in
+the posted buffer.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check to make sure that this is not some hacker trying to gain access to
+your application data.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+EVENT_MIB (5),
+TM_MIB (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1202"></A>
+<H3>NATIVE MESSAGE #1202</H3>
+<H2> ERROR: Could not initialize network</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt to initialize the networking software from the WSL or
+WSH failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the correct networking software is installed on the
+system and that the network is accessible.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1204"></A>
+<H3>NATIVE MESSAGE #1204</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decoding a /WS client message.
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1205"></A>
+<H3>NATIVE MESSAGE #1205</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while decompressing a /WS client message.
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1206"></A>
+<H3>NATIVE MESSAGE #1206</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to compress a message.
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1207"></A>
+<H3>NATIVE MESSAGE #1207</H3>
+<H2> ERROR: Expected numeric argument to -c option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A non-numeric argument was passed to the WSL -c option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration of the WSL to have a numeric
+compression limit.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1208"></A>
+<H3>NATIVE MESSAGE #1208</H3>
+<H2> ERROR: Memory allocation failure <I>error_info</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+failed while trying to process a /WS client message for _tmpostrecv().
+Additional information about the problem is printed as
+part of the message.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1213"></A>
+<H3>NATIVE MESSAGE #1213</H3>
+<H2> ERROR: Type switch uninitialization failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While processing a /WS client buffer,
+the buffer uninitialization function, _tmuninitbuf(), returned
+an error.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the buffer type switch to see that it is correctly set up
+(that the right uninitialization function is associated with
+the correct buffer type).
+If an application-defined buffer type, check the uninitialization
+function to see that it is coded correctly.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+buffer(3),
+typesw(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1215"></A>
+<H3>NATIVE MESSAGE #1215</H3>
+<H2> ERROR: Expected numeric argument to -k option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A non-numeric argument was passed to the WSL -k option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the configuration of the WSL to have a numeric
+compression limit.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+WSL(5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1216"></A>
+<H3>NATIVE MESSAGE #1216</H3>
+<H2> ERROR: Expected numeric argument to -p option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -p option to the workstation listener controls the minimum TCP port
+number which a workstation handler will attempt to listen.  This port number
+must be numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the -p option to be numeric.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1217"></A>
+<H3>NATIVE MESSAGE #1217</H3>
+<H2> ERROR: Expected numeric argument to -P option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -P option to the workstation listener controls the maximum TCP port
+number which a workstation handler will attempt to listen.  This port number
+must be numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the -P option to be numeric.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1218"></A>
+<H3>NATIVE MESSAGE #1218</H3>
+<H2> ERROR: The -p (<I>minport</I>) or -P (<I>maxport</I>) option is out of range</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+minport must be less than or equal to <Font>maxport, and both must be
+less than or equal to 65535.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the -p or -P option to comply with the restrictions.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1219"></A>
+<H3>NATIVE MESSAGE #1219</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While creating a data structure to keep track of TCP port numbers, the
+system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1220"></A>
+<H3>NATIVE MESSAGE #1220</H3>
+<H2> ERROR: Exhausted all available ports</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener has tried all TCP ports within the range specified
+by the -p and -P options.  It could not bind to any of the TCP ports in the
+range.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If there are more workstation handlers than ports available in the range
+specified by -p and -P, then a new handler will not be able to bind to
+any of the TCP ports in the allowable range.  Do not forget about the TCP
+port which is used by the workstation listener as well.  Increase the
+range specified by the -p and -P options.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1221"></A>
+<H3>NATIVE MESSAGE #1221</H3>
+<H2> ERROR: Could not establish listening address <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener has tried all TCP ports within the range specified
+by the -p and -P options.  It could not bind to any of the TCP ports in the
+range.  The workstation listener could not bind to the given address.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If there are more workstation handlers than ports available in the range
+specified by -p and -P, then a new handler will not be able to bind to
+any of the TCP ports in the allowable range.  Do not forget about the TCP
+port which is used by the workstation listener as well.  Increase the
+range specified by the -p and -P options.  Make sure that address
+is correct.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1222"></A>
+<H3>NATIVE MESSAGE #1222</H3>
+<H2> ERROR: Expected numeric argument to -z option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -z option to the workstation listener controls the minimum allowable
+encryption strength.  This number must be numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the -z option to be numeric.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1223"></A>
+<H3>NATIVE MESSAGE #1223</H3>
+<H2> ERROR: Expected numeric argument to -Z option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The -z option to the workstation listener controls the maximum allowable
+encryption strength.  This number must be numeric.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the -Z option to be numeric.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1224"></A>
+<H3>NATIVE MESSAGE #1224</H3>
+<H2> ERROR: Link Level Encryption add-on package is not installed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The minimum number of encryption bits was greater than zero, but there
+is no link level encryption add-on package installed on this machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Install the link level encryption package or change the minimum encryption
+bits (the -z option) to be zero.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1225"></A>
+<H3>NATIVE MESSAGE #1225</H3>
+<H2> ERROR: Only 40 bit encryption is allowed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The minimum number of encryption bits was greater than forty, but only
+the 40-bit link level encryption add-on package is installed on this machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Install the 128-bit link level encryption package or change the
+minimum encryption bits (the -z option) to be zero or forty.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1226"></A>
+<H3>NATIVE MESSAGE #1226</H3>
+<H2> ERROR: The -z (<I>min</I>) or -Z (<I>max</I>) must be 0, 40 or 128</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The only levels of encryption understood by the system are 0, 40 or 128.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that both min and <Font>max are set only to 0, 40 or 128.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1229"></A>
+<H3>NATIVE MESSAGE #1229</H3>
+<H2> WARN: A client failed encryption negotiation</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A workstation client attempted to log in to the system, but could not
+negotiate an acceptable encryption level.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+When workstation clients log into the system, they negotiate an encryption
+strength with the workstation listener.  If the client and listener cannot
+agree on the level of encryption (for example, if the workstation listener
+demands 128-bit encryption and the client can only speak 40-bits encryption)
+then this message will appear.  The administrator can either change the
+encryption policy of the workstation listener or workstation client.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1230"></A>
+<H3>NATIVE MESSAGE #1230</H3>
+<H2> ERROR: Invalid security protocol</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid opcode was attempted while the workstation listener was insecure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1231"></A>
+<H3>NATIVE MESSAGE #1231</H3>
+<H2> ERROR: Memory allocation error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While negotiating the Diffie-Hellman parameters, the workstation listener
+ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1232"></A>
+<H3>NATIVE MESSAGE #1232</H3>
+<H2> ERROR: Encryption negotiation protocol error</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid opcode was attempted while the workstation listener was insecure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1233"></A>
+<H3>NATIVE MESSAGE #1233</H3>
+<H2> ERROR: Unable to get encryption handle</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While negotiating the Diffie-Hellman parameters, the workstation listener
+had an error while attempting to get an encryption handle.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1234"></A>
+<H3>NATIVE MESSAGE #1234</H3>
+<H2> ERROR: Unable to establish negotiation parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An invalid opcode was attempted while the workstation listener was insecure.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1235"></A>
+<H3>NATIVE MESSAGE #1235</H3>
+<H2> ERROR: Unable to send negotiation parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to send the Diffie-Hellman parameters to the client, an
+error occurred.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The network may have experienced an error, or the client waiting for the
+security packet may have been killed.  If neither of these events has
+occurred, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1236"></A>
+<H3>NATIVE MESSAGE #1236</H3>
+<H2> ERROR: Unable to begin encryption</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After establishing the shared key, an error occurred while starting encryption.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Monitor your network for malicious use.  Contact your Tuxedo System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1237"></A>
+<H3>NATIVE MESSAGE #1237</H3>
+<H2> ERROR: tpnotify(TPACK) failed to reply, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler sent an acknowledged unsolicited message to a client.
+However, that client never sent its acknowledgment.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The network may have experienced an error, or the client waiting for the
+notification may have been killed.  tperrno may provide clues as
+to the cause of this failure.  If neither of these events has occurred,
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1238"></A>
+<H3>NATIVE MESSAGE #1238</H3>
+<H2> ERROR: Invalid security parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encryption level of the workstation listener is greater than zero bits,
+but the link level encryption package is not installed on this machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The MIB may have changed the minimum encryption bits for this workstation
+handler.  If the new value of the the minimum encryption bits is greater
+than zero and the link level encryption package is not installed, then
+no clients will be able to log into the workstation handler.  Change the
+minimum encryption value via the -z option to the workstation listener,
+or through the MIB with the TA_MINENCRYPTBITS member of the T_WSL class.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1239"></A>
+<H3>NATIVE MESSAGE #1239</H3>
+<H2> ERROR: Invalid security parameters</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The encryption level of the workstation listener is greater than forty bits,
+but only the 40-bit link level encryption package is installed on this machine.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The MIB may have changed the minimum encryption bits for this workstation
+handler.  If the new value of the the minimum encryption bits is greater
+than forty, then no clients will be able to log into the workstation handler.
+Change the minimum encryption value via the -z option to the workstation
+listener, or through the MIB with the TA_MINENCRYPTBITS member of the
+T_WSL class.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1240"></A>
+<H3>NATIVE MESSAGE #1240</H3>
+<H2> ERROR: Failed to read server table entry, tperrno = <I>tperrno</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation listener was rebooting after a failure and could not
+read the server table.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The bulletin board may be corrupted.  tperrno may provide clues as to
+the cause of this failure.  Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1241"></A>
+<H3>NATIVE MESSAGE #1241</H3>
+<H2> ERROR: Sending of reply to tpbroadcast() or tpnotify() call to client failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The workstation handler received an acknowledgment from a workstation client
+but was unable to forward the acknowledgment to the sender of the tpnotify.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The originator of the tpnotify may have been killed.  If the originator of
+the notify has not been killed, contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1242"></A>
+<H3>NATIVE MESSAGE #1242</H3>
+<H2> ERROR: Bad Internet type of listening address provided: <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+<KBD>address</KBD> is not a valid internet address.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet
+address.  The following formats are recognized by the system:
+//host.name:port_number and //#.#.#.#:port_number.  Other formats may be
+recognized.  Change address to comply with the known formats.  If you
+believe that your address is in the proper format, contact your TUXEDO System
+Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1243"></A>
+<H3>NATIVE MESSAGE #1243</H3>
+<H2> ERROR: -H hexadecimal value has to have an even length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If an address starts with 0x, then that address must be an even length
+of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+A hexidecimal character represents a nibble (4 bits).  A byte is 8 bits.  To
+fully specify a byte, two characters are needed.  Change the address to have
+an even number of characters.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1244"></A>
+<H3>NATIVE MESSAGE #1244</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While creating a data structure for an address specified via the -H option,
+the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1245"></A>
+<H3>NATIVE MESSAGE #1245</H3>
+<H2> ERROR: Bad hexadecimal number provided for external address: <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The hexadecimal address address from the -H option is in an improper
+format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with 0x must be a valid hexadecimal
+address.  Valid hexadecimal characters are 0 - 9, a-f and A-F.
+Change address to comply with the known formats.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1246"></A>
+<H3>NATIVE MESSAGE #1246</H3>
+<H2> ERROR: Bad Internet type of external address provided: <I>address</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The internet address address from the -H option is in an improper format.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Any address which starts with // must be a valid internet
+address.  The following formats are recognized by the system:
+//host.name:port_number and //#.#.#.#:port_number.  Other formats may be
+recognized.  Change address to comply with the known formats.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1247"></A>
+<H3>NATIVE MESSAGE #1247</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While allocating space for the binary representation of the -H option address,
+the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1248"></A>
+<H3>NATIVE MESSAGE #1248</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While allocating space for the binary representation of the -H option address,
+the system ran out of memory.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of memory
+that can be used by a process.
+Reduce the memory usage on the machine or increase the amount of
+physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1249"></A>
+<H3>NATIVE MESSAGE #1249</H3>
+<H2> ERROR: -H and -n have different length of network address</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+If you are using an external address, then that address must have the
+same format as the -n option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the -H option to have the same format as the -n option.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1250"></A>
+<H3>NATIVE MESSAGE #1250</H3>
+<H2> ERROR: External address can not be resolved <I>val</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Domain Name Service could not resolve the address given by the -H option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure that the Domain Name Service knows the server represented by the
+address given in the -H option.  If the name service does not know the
+server, reconfigure the name service properly.  Change the address in the
+-H option to a name which is well known by the name service.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1251"></A>
+<H3>NATIVE MESSAGE #1251</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system
+using malloc failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Make sure the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used be a process.
+Reduce the memory usage on the machine or increase the amount
+of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1252"></A>
+<H3>NATIVE MESSAGE #1252</H3>
+<H2> ERROR: Unable to determine license level</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While validating the value of the -c argument of the workstation listener,
+an error occurred while retrieving the current license attributes.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1253"></A>
+<H3>NATIVE MESSAGE #1253</H3>
+<H2> ERROR: Workstation compression configured, but no license for workstation compression was found</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+You do not have a license to use workstation compression.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Purchase a license for workstation compression.  If you believe that you
+own and have installed the license for workstation compression,
+contact your TUXEDO System Technical Support.
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

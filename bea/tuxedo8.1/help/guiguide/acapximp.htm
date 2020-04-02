@@ -1,0 +1,177 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="GENERATOR" content="WebWorks Publisher Quadralay WebWorks Publisher 5.0.2">
+<meta name="TEMPLATEBASE" content="BEA WebWorks Help v.1.7.6">
+<meta name="LASTUPDATED" content="05/03/01 12:48:06">
+<title>Architecture and Implementation </title>
+<script language="JavaScript">
+var prev=new Array("down", "dsbl", "out", "over", "up");
+prev["down"] = "wwhgifs/prevdown.gif";
+prev["dsbl"] = "wwhgifs/prevdsbl.gif";
+prev["out"] = "wwhgifs/prevout.gif";
+prev["over"] = "wwhgifs/prevover.gif";
+prev["up"] = "wwhgifs/prevup.gif";
+
+var next=new Array("down", "dsbl", "out", "over", "up");
+next["down"] = "wwhgifs/nextdown.gif";
+next["dsbl"] = "wwhgifs/nextdsbl.gif";
+next["out"] = "wwhgifs/nextout.gif";
+next["over"] = "wwhgifs/nextover.gif";
+next["up"] = "wwhgifs/nextup.gif";
+</script>
+</head>
+
+<body link="#CC0000" vlink="#CC0000" text="#000000" alink="#CC0000" bgcolor="#FFFFFF" background="wwhgifs/backgrnd.gif">
+<div align="right">
+  <table border="0">
+    <tr>
+      <td>
+        <font face="Verdana, Arial, Helvetica, sans-serif" size="-1" color="#999999">
+        <b>Architecture and Implementation </b>
+        </font>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>
+  <a href="accorba.htm" onMouseDown="document.images.topprev.src=prev['down']" onMouseOut="document.images.topprev.src=prev['out']" onMouseOver="document.images.topprev.src=prev['over']" onMouseUp="document.images.topprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="topprev" border="0" alt="prev"></a><a href="edition.htm" onMouseDown="document.images.topnext.src=next['down']" onMouseOut="document.images.topnext.src=next['out']" onMouseOver="document.images.topnext.src=next['over']" onMouseUp="document.images.topnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="topnext" border="0" alt="next"></a>
+</p>
+
+<a name="10346">
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Architecture and Implementation   </font>
+</h2>
+</a>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This appendix is a guide to the architecture and implementation of the BEA Tuxedo Administration Console. It is meant for advanced users and developers who are familiar with the concepts and protocols of the World Wide Web and Java programs.</p>
+<a name="417926"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Architecture Overview
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The BEA Tuxedo Administration Console applet is an advanced client-server application, written in Java on the client side, and C on the server side. The client (user) machine runs a Java applet, and the BEA Tuxedo server machine runs a gateway program that interfaces with the BEA Tuxedo MIB (Management Information Base) via a custom protocol.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">A Web (HTTP) server is not needed for the actual operation of the GUI, but is necessary for delivering the applet code to the Web browser, and for displaying the online help and snapshots. If you do not already have a Web server on your system, you can use <font face="Courier">tuxwsvr</font>, which is delivered with the BEA Tuxedo software. </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Web server does two things:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>It retrieves remote "content" files (HTML, Images, and Java files).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>It runs special programs that deliver "content." Such programs are called CGI (Common Gateway Interface) programs. The BEA Tuxedo Administration Console is delivered with one CGI program, called <font face="Courier">tuxadm</font> (described in the following paragraphs).</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The gateway program run on the server machine (as mentioned previously) is called <font face="Courier">wgated</font>. It is not run directly, but is kicked off by the BEA Tuxedo Administration Console listener, <font face="Courier">wlisten</font>. If you run the <font face="Courier">ps</font> command while the GUI is running, you will see one or more <font face="Courier">wgated</font> processes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Both <font face="Courier">tuxwsvr</font> and <font face="Courier">wlisten</font> listen on distinct network ports waiting for requests to arrive. They know nothing about each other. Therefore, the GUI needs two network ports to operate. These are different from the network ports that are configured in the <font face="Courier">UBBCONFIG</font> file for the Bridges and <font face="Courier">tlisten</font> processes.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">In order for a Web browser to run a Java applet, the browser must load an HTML file containing an &lt;APPLET&gt; element. The applet element contains the name of the program, and the parameters to it. It is similar to a command line in an ordinary program.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You could certainly hard-code the applet element for a particular invocation of the GUI, and then retrieve that HTML page with your Web browser. However, the flexibility of the BEA Tuxedo Administration Console architecture makes it unnecessary for you to do so. An initialization file (or .<font face="Courier">ini</font> file) controls the operation of the GUI. Some of the parameters in the <font face="Courier">ini</font> file control the applet, some control the server gateway, and some are used by both.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The <font face="Courier">tuxadm</font> CGI program mentioned above reads the <font face="Courier">ini</font> file, and merges it with an HTML template file, generating the applet HTML on the fly. The template file, delivered with the BEA Tuxedo software, resides in:</p><p><blockquote><pre><font face="Courier" color="#000000">$TUXDIR/udataobj/webgui/webgui.html</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This is a bare bones template; customers are expected to add their corporate style to it. All that <font face="Courier">tuxadm</font> does is replace the keyword %APPLET% with the actual applet element. You can specify an alternate location for the template by setting the <font face="Courier">TEMPLATE</font> parameter in the server's initialization file (see the following instructions).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you use the "View Source" feature of your Web browser while the GUI is running, you can see this expanded HTML page that is used to deliver the applet.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Before continuing, look at the following example of HTML code generated by <font face="Courier">tuxadm</font>:</p><a name="417951"><p style="FONT-WEIGHT: Bold; FONT-SIZE: 10pt">Listing A-1	    Sample HTML Code</p></a><p><blockquote><pre><font face="Courier" color="#000000">&lt;HTML&gt;<br>&lt;HEAD&gt;<br>&lt;TITLE&gt;BEA Tuxedo Administrator Console Applet Screen&lt;/TITLE&gt;<br>&lt;/HEAD&gt;<br>&lt;BODY&gt;<br>&lt;CENTER&gt;<br>&lt;H1&gt;The Applet is Loading&lt;/H1&gt;<br>&lt;APPLET ARCHIVE="bea/tuxadm/TuxApplet.jar"<br>CODE="bea/tuxadm/TuxApplet.class"<br>WIDTH="400" HEIGHT="150" CODEBASE="/java"&gt;<br>&lt;PARAM NAME="TUXDIR" VALUE="/usr/tuxedo"&gt;<br>&lt;PARAM NAME="PORT" VALUE="4009"&gt;<br>&lt;PARAM NAME="WIDTH" VALUE="400"&gt;<br>&lt;PARAM NAME="HEIGHT" VALUE="150"&gt;<br>&lt;PARAM NAME="ENCRYPTBITS" VALUE="0"&gt;<br>&lt;PARAM NAME="DOCBASE" VALUE="/docs"&gt;<br>&lt;PARAM NAME="SNAPBASE" VALUE="/java/snapshot"&gt;<br>&lt;PARAM NAME="TOTALDOMAINS" VALUE="2"&gt;<br>&lt;PARAM NAME="DOMAINNAME0" VALUE="simpapp"&gt;<br>&lt;PARAM NAME="TUXCONFIG0" VALUE="/home/sdo/simpapp/tuxconfig"&gt;<br>&lt;PARAM NAME="DOMAINNAME1" VALUE="bankapp"&gt;<br>&lt;PARAM NAME="TUXCONFIG1" VALUE="/home/sdo/bankapp/tuxconfig"&gt;<br>&lt;B&gt;Your browser does not appear to support JAVA.<br>Administration Console must be run on a JAVA capable browser.CCheck your browser's options to see if JAVA processing has been disabled.&lt;/B&gt;<br>&lt;/APPLET&gt;<br>&lt;/CENTER&gt;<br>&lt;/BODY&gt;<br><br>&lt;/HTML&gt;</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> If you are using encryption for communication between the Administration Console applet and server, the HTML code generated by <font face="Courier">tuxadm</font> contains some Javascript code. To see this generated code, use "View Source."</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Now you can see why you do not want to create this by hand.</p>
+<a name="419229"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Running the Web Server
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To deliver the above HTML and the applet to the Web browser, a Web server must be running.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">To run <font face="Courier">tuxwsvr</font>, use the following command line:</p><p><blockquote><pre><font face="Courier" color="#000000"><font face="Courier">tuxwsvr -l //</font>machine:port<font face="Courier"> -i </font>ini-file</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You may have to replace <font face="Courier">/dev/tcp</font> with the pathname of the correct device name for the network device. This device will be the same one that you used for <font face="Courier">tlisten</font>, and that you specify for the <font face="Courier">BRIDGE</font> parameter in the <font face="Courier">UBBCONFIG</font> file. The string machine:port is based on the standard DNS naming convention used by BEA Tuxedo. Web servers usually run at port 80. However, because you must be root in order to use that port, we recommend selecting a different one, for example:</p><p><blockquote><pre><font face="Courier" color="#000000">//lcuw99:8080</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> This is <em>not</em> the port number that you saw in the applet element shown previously. That port number was the one given to<strong> </strong><font face="Courier">WLISTEN</font><strong>, </strong><em>not</em><strong> </strong><font face="Courier">TUXWSVR</font><strong>. </strong>We haven't discussed<strong> </strong><font face="Courier">WLISTEN</font><strong> </strong>yet<strong>.</strong></p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The <font face="Courier">ini-file</font> contains the directory mappings for the Web server.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">No administrator wants to open up the entire file system to outsiders. Therefore, several aliases are provided for the directory names used by the BEA Tuxedo Administration Console:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>One alias is for the main HTML page that launches the GUI. You will normally bring up the GUI by retrieving the page called <font face="Courier">webguitop.html</font>. This page has a button that calls the <font face="Courier">tuxadm</font> CGI program, which returns the above HTML needed to run the applet.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>One alias is for the directory in which CGI programs can be found.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>One alias is for the Java files and images.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>One alias is for the Help documents.</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you do not want the ULOG and Event snapshot files to be written in your Java directory, you may need another alias for a replacement snapshot directory.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">When you installed BEA Tuxedo software from CD, you created a Web server <font face="Courier">ini</font> file automatically. However, if you do not care for the default values in that file, you will need to create your own <font face="Courier">ini</font> file.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Add the following to your <font face="Courier">ini</font> file for the Web server: </p><p><blockquote><pre><font face="Courier" color="#000000">CGI      /cgi-bin<em>   </em>TUXDIR/bin</font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000">HTML     /java TUXDIR/udataobj/webgui/java</font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000">HTML     /TUXDIR/udataobj/webgui</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> TUXDIR should be replaced by the full path to the BEA Tuxedo root directory, e.g., <font face="Courier">/usr/tuxedo</font>. Do not put the word <font face="Courier">TUXDIR</font> in the <font face="Courier">ini</font> file.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">What does this mean? Well, when the Web server gets the initial request to run the CGI program, it will look like <font face="Courier">/cgi-bin/tuxadm</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The above file maps this to the BEA Tuxedo <font face="Courier">bin</font> directory, where <font face="Courier">tuxadm</font> resides. In a secure environment, you would not do this; you would copy <font face="Courier">tuxadm</font> somewhere else (or you might need it to be a shell script that sets <font face="Courier">LD_LIBRARY_PATH</font> and executes the real <font face="Courier">tuxadm</font>). It also helps to have <font face="Courier">TUXDIR</font> set in the environment before running <font face="Courier">tuxwsvr</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The APPLET element has an attribute called <font face="Courier">CODEBASE</font> which, as you can see from above, is <font face="Courier">/java</font>. When the Web browser attempts to retrieve the applet from the Web server using the path <font face="Courier">/java/bea/tuxadm/TuxApplet.class</font>, the above <font face="Courier">ini</font> file remaps that to the following:</p><p><blockquote><pre><font face="Courier" color="#000000">$TUXDIR/udataobj/webgui/java/bea/tuxadm/TuxApplet.class </font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The mapping of <font face="Courier">/</font> to <font face="Courier">udataobj/webgui</font> is used to map the top-level Web page, <font face="Courier">webguitop.html</font>. (Because the <font face="Courier">java</font> directory is right under the <font face="Courier">webgui</font> directory, the mapping of <font face="Courier">/java</font> in the <font face="Courier">tuxwsvr.ini</font> file is not strictly needed. We have put it there for illustration purposes, in case you want to move your Java files elsewhere.)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you have installed the BEA Tuxedo online documentation, you will probably also have a mapping for the documentation.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Web server's <font face="Courier">ini</font> file can contain multiple CGI and HTML lines, and they are processed in sequential order until a match is reached.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This is a good place to describe the difference between the <font face="Courier">webgui.ini</font> parameters that end in <font face="Courier">DIR</font> and <font face="Courier">BASE. DIR</font> means a directory on the server, where <font face="Courier">wlisten</font> was run. The server programs use files there.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">BASE</font> means the URL prefix that a Web browser uses to retrieve a document. The <font face="Courier">CODEBASE</font> for the Java code is <font face="Courier">/java</font>, but the server directory for the Java code is <font face="Courier">/usr/tuxedo/udataobj/webgui/java</font>.</p>
+<a name="418017"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Configuring the BEA Tuxedo Administration Console
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The next step is to set up the <font face="Courier">webgui.ini</font> file, which is used by <font face="Courier">tuxadm</font> and <font face="Courier">wlisten</font>.<font face="Courier"> tuxadm</font> will look in <font face="Courier">$TUXDIR/udataobj/webgui/webgui.ini</font> if it is not given the <font face="Courier">INIFILE</font> parameter (more on this later). <font face="Courier">wlisten</font> requires the <font face="Courier">ini</font> file path on the command line (more later). (If you have installed BEA Tuxedo using the installation utility, you probably have a usable <font face="Courier">webgui.ini</font> file already.)</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> This is a different <font face="Courier">ini</font> file from the one described for the Web Server. Listing A-2 shows what your <font face="Courier">ini</font> file might look like:</p><a name="419681"><p style="FONT-WEIGHT: Bold; FONT-SIZE: 10pt">Listing A-2	    Sample webgui.ini File</p></a><p><blockquote><pre><font face="Courier" color="#000000">TUXDIR=/usr/tuxedo<br>INIFILE=/home/sdo/gui/webgui.ini<br>NADDR=//lcuw99:4009<br>DEVICE=/dev/tcp<br>ENCRYPTBITS=128<br>DOCBASE=/tuxdocs<br>CODEBASE=/java<br>WIDTH=400 (optional)<br>HEIGHT=150 (optional)<br>FRAMEWIDTH=800<br>FRAMEHEIGHT=450<br>TEMPLATE=/usr/tuxedo/udataobj/webgui/webgui.html (optional)<br>DOMAIN=simpapp;/home/sdo/simpapp/tuxconfig<br>DOMAIN=bankapp;/home/sdo/bankapp/tuxconfig<br>DOMAIN=...</font></pre></blockquote></p>
+</p>
+<ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">TUXDIR</font> is where BEA Tuxedo is installed.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">NADDR</font> is the network address that you will use for <font face="Courier">wlisten</font>, in the standard BEA Tuxedo syntax (DNS, 0x, . . . or another provider-specific form).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">DEVICE</font> is the device filename for the TCP/IP device (not needed on some systems that use sockets, such as HP and IBM).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">ENCRYPTBITS</font> is 0, 40, 56, or 128. This parameter specifies the strength of encryption used in communication between the GUI applet and the Administration Console server. The default is 128-bit. </font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">CODEBASE</font> is the path of the directory in which the Java code can be found (i.e., the aliased path recognized by the Web server, not the physical path on the machine).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">DOCBASE</font> is where the BEA Tuxedo help files will be found.</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">INIFILE</font> is the path of this file (the real path, not the aliased path).</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li><font face="Courier">TEMPLATE</font> is where the HTML template file that <font face="Courier">tuxadm</font> uses to deliver the applet.</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The <font face="Courier">DOMAIN</font> list is optional, especially if you are using the GUI to create your domains from scratch.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">For each domain in the domain list (up to 64), include a DOMAIN line that looks like:</p><p><blockquote><pre><font face="Courier" color="#000000">DOMAIN=domain_name;tuxconfig-path</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The value of tuxconfig-path is the real path, not the aliased path.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Now you can see how the APPLET HTML code is generated by <font face="Courier">tuxadm</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Once you start using the GUI, it will add some lines to the <font face="Courier">ini</font> file to store such information as your folder selection lists, and the options you set from the options button.</p>
+<a name="418051"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Running wlisten
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Before running <font face="Courier">wlisten</font>, you need to set the FML32 environment variables so that the programs can find the BEA Tuxedo MIB field tables. Set the following variables as shown:</p><p><blockquote><pre><font face="Courier" color="#000000">FLDTBLDIR32=$TUXDIR/udataobj<br>FIELDTBLS32=tpadm,evt_mib</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The command line for <font face="Courier">wlisten</font> is:</p><p><blockquote><pre><font face="Courier" color="#000000">wlisten -i ini-file</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><font face="Courier">wlisten</font> can operate in either of two security modes:</p><ul><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Authentication mode</font><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><li>Encryption mode</font></ul><p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">These modes can be used together or authentication can be used by itself.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Authentication is done based on the <font face="Courier">tlisten</font> password file. If there is a file of passwords called <font face="Courier">tlisten.pw</font>, in either <font face="Courier">$TUXDIR/udataobj</font> or <font face="Courier">$APPDIR/.adm</font>, then the user is required to enter a username and password when the applet starts. The password must match one of the passwords in the password file, or authentication fails. The username is passed to <font face="Courier">tpinit</font> when the GUI gateway program, <font face="Courier">wgated</font>, connects to BEA Tuxedo.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If encryption is also being used, then the communications that occur from then on, between the applet and the server, are encrypted using RSA encryption.</p>
+<a name="420208"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Starting the BEA Tuxedo Administration Console (for Nonexpert Users)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">Now that you have a Web server and a <font face="Courier">wlisten</font> running, it is time to run the BEA Tuxedo Administration Console.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The installation script places a file called <font face="Courier">webguitop.html</font> in the directory used by the Web Server for its general HTML files. The bottom of this file has a Submit FORM, which generates the URL to run <font face="Courier">tuxadm</font> (the CGI program).</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You would normally bring up this Web page by entering the following URL:</p><p><blockquote><pre><font face="Courier" color="#000000">http://lcuw99:8080/webguitop.html</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">and clicking the button at the bottom.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you want to edit the default <font face="Courier">webguitop.html</font> file, you should go to the very bottom, where you will see:</p><p><blockquote><pre><font face="Courier" color="#000000">&lt;FORM ACTION="http://HOST/CGI-BIN/tuxadm"&gt;</font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000">&lt;INPUT TYPE=HIDDEN NAME="TUXDIR" VALUE="TUXDIRVALUE"&gt;</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">You should edit it to something like:</p><p><blockquote><pre><font face="Courier" color="#000000">&lt;FORM ACTION="/cgi-bin/tuxadm"&gt;</font></pre></blockquote></p>
+</p>
+<p><blockquote><pre><font face="Courier" color="#000000">&lt;INPUT TYPE=HIDDEN NAME="INIFILE" VALUE="/home/sdo/gui/webgui.ini"&gt;</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">where <font face="Courier">INIFILE</font> is set to the place where you have put your GUI <font face="Courier">ini</font> file.</p>
+<a name="418072"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Starting the BEA Tuxedo Administration Console (for Developers)
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">If you have previously agreed to the software license on the <font face="Courier">webguitop.html</font> page, you can proceed directly into the GUI by using the special URL:</p><p><blockquote><pre><font face="Courier" color="#000000">http://machine:port/cgi-bin/tuxadm?TUXDIR=tuxdir-path&amp;INIFILE=inifile-path</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The port is the port at which you ran the Web server (<font face="Courier">tuxwsvr</font>), not the <font face="Courier">wlisten</font>. You will get strange results if you use the wlisten port by mistake.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The <font face="Courier">tuxdir-path</font> is the absolute path of the BEA Tuxedo root directory on the server machine. The <font face="Courier">inifile-path</font> is the absolute path of the <font face="Courier">ini</font> file for the wlisten (not the Web server). <font face="Courier">INIFILE</font> should match the <font face="Courier">INIFILE</font> parameter within the <font face="Courier">ini</font> file. You can leave out the entire <font face="Courier">&amp;INIFILE= . . .</font> if the <font face="Courier">INIFILE</font> is in the default location of <font face="Courier">$TUXDIR/udataobj/webgui/webgui.ini</font>.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The URL that would be used in our example is:</p><p><blockquote><pre><font face="Courier" color="#000000">http://lcuw99:8080/cgi-bin/tuxadm?TUXDIR=/home/units/<br>r63&amp;INIFILE=/home/sdo/gui/webgui.ini</font></pre></blockquote></p>
+</p>
+
+<a name="418504"> 
+<h2>
+<font color="#FF0000" face="Verdana, Arial, Helvetica, sans-serif">Using Appletviewer
+</font>
+</h2>
+</a>
+
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This is an advanced topic not needed by most Administration Console users. However, if you are a Java programmer, you might want to know how to run the Administration Console using the Appletviewer (the standalone program for running a Java applet). </p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000"><strong>Note:	</strong> BEA has not tested, nor does it support using Appletviewer, but in special circumstances, (for example, if your Web Server is not working properly), you might want to run the console using the Appletviewer.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The applet code and images can be installed on a machine where the Java Appletviewer program will be run.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The HTML containing the APPLET element needs to be modified in two ways: the <font face="Courier">CODEBASE</font> needs to point to a local directory on the machine, and you need to add a <font face="Courier">HOST</font> parameter to give the DNS name of the machine on which <font face="Courier">wlisten</font> is running.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">In our example from above, your APPLET element would have a new PARAM tag that looks like:</p><p><blockquote><pre><font face="Courier" color="#000000">&lt;PARAM NAME="HOST" VALUE="lcuw99"&gt;</font></pre></blockquote></p>
+</p>
+<p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">This HOST parameter is undocumented, so do not look for it anywhere.</p><p><font face="Verdana,Geneva,Arial,Helvetica,sans-serif" color="#000000">The Web server is not used in this configuration. However, since you are not using a browser, you will not be able to use the Help system, nor see the ULOG and Event snapshots. The BEA Tuxedo Administration Console has not been tested on and therefore does not support Java version 1.1.</p>
+
+<p>
+  <a href="accorba.htm" onMouseDown="document.images.bottomprev.src=prev['down']" onMouseOut="document.images.bottomprev.src=prev['out']" onMouseOver="document.images.bottomprev.src=prev['over']" onMouseUp="document.images.bottomprev.src=prev['up']"><img src="wwhgifs/prevout.gif" width="30" height="30" name="bottomprev" border="0" alt="prev"></a><a href="edition.htm" onMouseDown="document.images.bottomnext.src=next['down']" onMouseOut="document.images.bottomnext.src=next['out']" onMouseOver="document.images.bottomnext.src=next['over']" onMouseUp="document.images.bottomnext.src=next['up']"><img src="wwhgifs/nextout.gif" width="30" height="30" name="bottomnext" border="0" alt="next"></a>
+</p>
+
+<!-- thin red line -->
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+                <td valign="middle" width="100%" bgcolor="#FF0000" height="1">
+          <p style="MARGIN-LEFT: 0; MARGIN-RIGHT: 0; MARGIN-TOP: 0; MARGIN-BOTTOM: 0; FONT-SIZE: 1pt">&nbsp;</p>
+                </td>
+        </tr>
+</table>
+
+<!-- copyright -->
+<table align="right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right"><font size="1"><a href="edition.htm">Copyright</a> &#169; 2001 BEA Systems, Inc. All rights reserved. 
+<br>Required browser: Netscape 4.0 or higher, or Microsoft Internet Explorer 4.0 or higher.
+    </font></td>
+  </tr>
+</table>
+
+</body>
+</html>

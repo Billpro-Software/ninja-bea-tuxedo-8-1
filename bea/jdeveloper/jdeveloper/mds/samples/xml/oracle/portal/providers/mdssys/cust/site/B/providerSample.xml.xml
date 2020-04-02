@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customization xmlns="http://xmlns.oracle.com/mds"
+               customizes="/oracle/portal/providers/providerSample.xml"
+               version="9.0.5"
+               xml:lang="en-US">
+  <modifications>
+    <modify element="dirInfo">
+      <attribute name="owner" value="kaalvare"/>
+      <attribute name="description" value="My customized provider"/>
+    </modify>
+    <modify element="location">
+      <attribute name="path" value="oracle/portal/providers/mycustomizedsample"/>
+    </modify>
+    <move node="dirInfo" after="location"/>
+  </modifications>
+</customization>

@@ -1,0 +1,90 @@
+#!/bin/sh
+#    mdsbeangen
+#
+#  DESCRIPTION
+#    This file is used to call the MDSBeanGenTool utility
+#
+#   MODIFIED   (MM/DD/YY)
+#   snoton      08/24/09  - #(8808215) use mds-tools.jar instead of 
+#                           setMDSclasspath
+#   erwang      09/16/08  - Clean up internal references in comments
+#   dklein      06/06/07  - Get classpath from setMDSclasspath
+#   gnagaraj    01/11/07  - Use commons-collections from j2ee\home\lib
+#   pwhaley     01/08/07  - Remove concurrent.jar.
+#   dklein      09/12/06  - Rename adfshare.jar to adfsharebase.jar
+#   snoton      04/11/06  - Add adfshare.jar to classpath 
+#   cbarrow     04/26/06  - Add Java Object Cache to classpath 
+#   ntriggs     04/11/06  - Fail with an error if JAVA_HOME not set
+#   dklein      03/14/06  - Discontinue work around. Add
+#                           commons-collections.jar and commons-cli-1.0.jar
+#                           to classpath.
+#   dklein      01/31/06  - Add to classpath libraries to get round  
+#                           the issue, and share.jar for relationship support. 
+#   ntriggs     01/24/06  - Add jars for --usemelem option
+#   spathak     09/30/05  - 
+#   hlie        05/16/05  - Changed to use mdsrt.jar.
+#   hlie        04/25/05  - Changes in library locations (el, cli, cache).
+#   jhsi        03/21/05  - jhsi_bean_gen_tool
+#   jhsi        02/25/05  - Creation.
+#
+
+#############################################################################
+##   This file should be in sync with the "mdsbeangen.bat" windows batch   ##
+##   file. Please update "mdsbeangen.bat" when updating this file.         ##
+#############################################################################
+
+if [ "$JAVA_HOME" = "" ]
+then
+    echo Set the JAVA_HOME environment variable to the root directory of the JDK installation.
+    exit 1
+fi
+
+# ------------------------------------------------------------------
+# --------- COMPUTE DELIVER. DO NOT CHANGE THIS VALUE !! ---------
+# -- DELIVER directory
+# Set DELIVER to the value of the BUILT environment setting if present (means
+# this script was called by rtmdstest.bat).  
+# Otherwise, compute it by assuming this script is being called from the
+# jdev/bin subdir of the DELIVER directory.
+DELIVER=$BUILT
+if [ "$BUILT" = "" ] 
+then 
+    DELIVER=`dirname $0`/../..
+fi
+# need to the default values for variables
+verbose="n"
+param=
+logFile=$DELIVER/mds/bin/mdstoolslog.properties
+
+# The commented out section below should be enabled when a solution for 
+# $@ automatic expansion is found. This loop is needed to enable verbose mode.
+# If the given shell argument is "/**", the for loop starts iterating all
+# the contents of the root directory because of automatic expansion.
+# for arg in "$@"
+# do
+#     if [ "$arg" = "--verbose" ]
+#     then
+#         verbose="y"
+#     else
+#         param=$param" "$arg
+#    fi
+#done
+
+
+# ------- CLASSPATH settings
+cp=${DELIVER}/mds/bin/mdstools.jar
+
+# ------- PATH settings
+PATH=$JAVA_HOME/bin:$PATH
+
+if [ "$verbose" = "y" ]
+then
+    java -version
+    echo CLASSPATH = ${cp}
+fi
+
+java -Djava.util.logging.config.file=$logFile -cp $cp oracle.mds.tools.bean.MDSBeanGenTool "$@"
+
+# ----- For testing return value from the tool
+# ----- echo MDSBeanGenTool returned: $? 
+

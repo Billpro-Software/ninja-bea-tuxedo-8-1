@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the persitence pages in the j2ee subsystem of the WebLogic Server administration console.
+
+    There are several principle artifacts in this book:
+
+     - PersistenceUnitBook is the pageset for configuring persistence
+       units for a deployment. 
+         o PersistenceUnitGeneralPage is the first config page, and the
+           return point when configuring plugins.
+         
+    Copyright (c) 2006,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <!-- Definition for the PersistenceBook configuration pages -->
+  <netuix:book definitionLabel="Persistence" title="book.title" markupName="book"
+               markupType="Book"
+               presentationClass="invisible">
+    <netuix:content>
+      <!-- Definition for the PersistenceUnit pageset -->
+      <netuix:book definitionLabel="PersistenceUnitBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.PersistenceUnitBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="PersistenceUnitPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book" definitionLabel="PersistenceUnitTabsBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the General tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PersistenceUnitGeneralPage"
+                                   presentationClass="page-content"
+                                   title="tab.general.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="configuration-page"
+                                     content="weblogic.j2ee.descriptor.PersistenceUnitBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitGeneralPortlet"
+                                                      contentUri="/PortalConfig/persistence/PersistenceUnitGeneral.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Advanced tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PersistenceUnitAdvancedPage"
+                                   presentationClass="page-content"
+                                   title="tab.advanced.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.advanced.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitAdvancedPortlet"
+                                                      contentUri="/PortalConfig/persistence/PersistenceUnitAdvanced.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Data Sources tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PersistenceUnitDataSourcesPage"
+                                   presentationClass="page-content"
+                                   title="tab.datasources.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.datasources.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitDataSourcesPortlet"
+                                                      contentUri="/PortalConfig/persistence/PersistenceUnitDataSources.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Jta Connection tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PersistenceUnitJtaConnectionPage"
+                                   presentationClass="page-content"
+                                   title="tab.jta.connection.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.jtaconnection.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitJtaConnectionPortlet"
+                                                      contentUri="/PortalConfig/persistence/PersistenceUnitJtaConnection.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Non-Jta Connection tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PersistenceUnitNonJtaConnectionPage"
+                                   presentationClass="page-content"
+                                   title="tab.nonjta.connection.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.nonjtaconnection.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitNonJtaConnectionPortlet"
+                                                      contentUri="/PortalConfig/persistence/PersistenceUnitNonJtaConnection.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Data Cache plugin pageset -->
+      <netuix:book definitionLabel="PluginDataCacheOverviewBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.PersistenceUnitBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PluginDataCacheOverviewPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="PluginDataCacheOverviewPagesBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="PluginDataCacheOverview"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.kodo.conf.descriptor.CustomDataCacheBean.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="kodo.conf.descriptor.DataCacheBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDataCacheOverviewPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDataCacheOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Query Cache plugin pageset -->
+      <netuix:book definitionLabel="PluginQueryCacheOverviewBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.PersistenceUnitBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PluginQueryCacheOverviewPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="PluginQueryCacheOverviewPagesBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="PluginQueryCacheOverview"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="kodo.conf.descriptor.QueryCacheBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginQueryCacheOverviewPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginQueryCacheOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Remote Commit Provider plugin pageset -->
+      <netuix:book definitionLabel="PluginRemoteCommitProviderOverviewBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.PersistenceUnitBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PluginRemoteCommitProviderOverviewPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="PluginRemoteCommitProviderOverviewPagesBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginRemoteCommitProviderOverview"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="configuration-page"
+                                     content="kodo.conf.descriptor.RemoteCommitProviderBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginRemoteCommitProviderOverviewPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginRemoteCommitProviderOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the DBDictionary plugin pageset -->
+      <netuix:book definitionLabel="PluginDBDictionaryBook" title="book.title" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.PersistenceUnitBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page" definitionLabel="PluginDBDictionaryPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="PluginDBDictionaryPagesBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Schema page -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="PluginDBDictionarySchema"
+                                   presentationClass="page-content"
+                                   title="tab.schema.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="kodo.jdbc.conf.descriptor.DBDictionaryBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionarySchemaPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionarySchema.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Special Characters and Words page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginDBDictionarySpecialChars"
+                                   presentationClass="page-content"
+                                   title="tab.specialcharsandwords.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionarySpecialCharsPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionarySpecialChars.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Sizes page -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="PluginDBDictionarySizes"
+                                   presentationClass="page-content"
+                                   title="tab.sizesandlimits.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionarySizesPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionarySizes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the SQL page -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="PluginDBDictionarySQL"
+                                   presentationClass="page-content"
+                                   title="tab.sql.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionarySQLPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionarySQL.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Data Types page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginDBDictionaryDataTypes"
+                                   presentationClass="page-content"
+                                   title="tab.datatypes.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionaryDataTypesPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionaryDataTypes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Data Type Names page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginDBDictionaryDataTypeNames"
+                                   presentationClass="page-content"
+                                   title="tab.datatypenames.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionaryDataTypeNamesPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionaryDataTypeNames.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Functions page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginDBDictionaryFunctions"
+                                   presentationClass="page-content"
+                                   title="tab.functions.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionaryFunctionsPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionaryFunctions.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Supported Features page -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginDBDictionaryFeatures"
+                                   presentationClass="page-content"
+                                   title="tab.features.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionaryFeaturesPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionaryFeatures.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Miscellaneous page -->
+                      <netuix:page markupName="page" markupType="Page" definitionLabel="PluginDBDictionaryMisc"
+                                   presentationClass="page-content"
+                                   title="tab.miscellaneous.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDBDictionaryMiscPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginDBDictionaryMisc.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the CustomDictionary plugin pageset -->
+      <netuix:book definitionLabel="PluginCustomDictionaryOverviewBook" title="book.title"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.PersistenceUnitBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PluginCustomDictionaryOverviewPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:book markupName="book" markupType="Book"
+                               definitionLabel="PluginCustomDictionaryOverviewPagesBook"
+                               title="not.used">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" markupType="Page"
+                                   definitionLabel="PluginCustomDictionaryOverview"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.persistenceunit.general.title;j2ee"/>
+                        <netuix:meta name="configuration-page"
+                                     content="kodo.jdbc.conf.descriptor.CustomDictionaryBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="PluginCustomDictionaryOverviewPortlet"
+                                                      contentUri="/PortalConfig/persistence/PluginCustomDictionaryOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the plugin dispatcher page -->
+      <netuix:book definitionLabel="PersistenceUnitDispatcher" markupName="book" markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deployments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDispatcherPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitDispatcherPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDispatcher.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Data Cache creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateDataCacheBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.datacache.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateDataCache"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createdatacache.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitCreateDataCachePortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateDataCache.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Data Cache deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteDataCacheBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.datacache.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteDataCache"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deletedatacache.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitDeleteDataCachePortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteDataCache.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Remote Commit Provider creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateRemoteCommitProviderBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.remotecommitprovider.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateRemoteCommitProvider"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="J2EE.persistenceunit.createremotecommitprovider.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitCreateRemoteCommitProviderPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateRemoteCommitProvider.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Remote Commit Provider deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteRemoteCommitProviderBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.remotecommitprovider.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteRemoteCommitProvider"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="J2EE.persistenceunit.deleteremotecommitprovider.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitDeleteRemoteCommitProviderPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteRemoteCommitProvider.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the DB Dictionary creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateDBDictionaryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.dbdictionary.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateDBDictionary"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createdbdictionary.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitCreateDBDictionaryPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateDBDictionary.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the DB Dictionary deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteDBDictionaryBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.dbdictionary.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteDBDictionary"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deletedbdictionary.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitDeleteDBDictionaryPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteDBDictionary.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Query Cache creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateQueryCacheBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.querycache.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateQueryCache"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createquerycache.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitCreateQueryCachePortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateQueryCache.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Query Cache Provider deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteQueryCacheBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.querycache.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteQueryCache"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deletequerycache.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PersistenceUnitDeleteQueryCachePortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteQueryCache.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JtaConnectionFactoryProperty creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateJtaConnectionFactoryPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateJtaConnectionFactoryProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitCreateJtaConnectionFactoryPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateJtaConnectionFactoryProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JtaConnectionFactoryProperty deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteJtaConnectionFactoryPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteJtaConnectionFactoryProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deleteproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitDeleteJtaConnectionFactoryPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteJtaConnectionFactoryProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JtaConnectionProperty creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateJtaConnectionPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateJtaConnectionProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitCreateJtaConnectionPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateJtaConnectionProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JtaConnectionProperty deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteJtaConnectionPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteJtaConnectionProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deleteproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitDeleteJtaConnectionPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteJtaConnectionProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the NonJtaConnectionFactoryProperty creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateNonJtaConnectionFactoryPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateNonJtaConnectionFactoryProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitCreateNonJtaConnectionFactoryPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateNonJtaConnectionFactoryProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the NonJtaConnectionFactoryProperty deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteNonJtaConnectionFactoryPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteNonJtaConnectionFactoryProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deleteproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitDeleteNonJtaConnectionFactoryPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteNonJtaConnectionFactoryProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the NonJtaConnectionProperty creation assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitCreateNonJtaConnectionPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitCreateNonJtaConnectionProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitCreateNonJtaConnectionPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitCreateNonJtaConnectionProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the NonJtaConnectionProperty deletion assistant page -->
+      <netuix:book definitionLabel="PersistenceUnitDeleteNonJtaConnectionPropertyBook"
+                   markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PersistenceUnitDeleteNonJtaConnectionProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deleteproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet"
+                                          instanceLabel="PersistenceUnitDeleteNonJtaConnectionPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PersistenceUnitDeleteNonJtaConnectionProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the CustomPlugin Property creation assistant page -->
+      <netuix:book definitionLabel="PluginCreateCustomPropertyBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PluginCreateCustomProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.createproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PluginCreateCustomPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PluginCreateCustomProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the CustomPlugin Property deletion assistant page -->
+      <netuix:book definitionLabel="PluginDeleteCustomPropertyBook" markupName="book"
+                   markupType="Book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.property.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+  		</netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" markupType="Page"
+                       definitionLabel="PluginDeleteCustomProperty"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.persistenceunit.deleteproperty.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupType="Placeholder" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="PluginDeleteCustomPropertyPortlet"
+                                          contentUri="/PortalConfig/persistence/PluginDeleteCustomProperty.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

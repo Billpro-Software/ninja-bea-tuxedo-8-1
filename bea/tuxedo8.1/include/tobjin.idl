@@ -1,0 +1,143 @@
+/*	Copyright (c) 1997 BEA Systems, Inc.
+	All rights reserved
+
+	THIS IS UNPUBLISHED PROPRIETARY
+	SOURCE CODE OF BEA Systems, Inc.
+	The copyright notice above does not
+	evidence any actual or intended
+	publication of such source code.
+*/
+/* #ident	"@(#) objtm/idl/tobjin.idl	$Revision: 1.12 $" */
+
+#ifndef _OBJTM_TOBJIN_IDL
+#define _OBJTM_TOBJIN_IDL
+
+#include <tobj.idl>
+
+#ifdef _BLDJDKJAR
+#pragma prefix "beasys.com"
+#endif
+
+module TobjInternal {
+#pragma prefix "beasys.com/TobjInternal"
+
+	struct Version {
+		octet	major;
+		octet	minor;
+	};
+
+	struct InitRef {
+		string name;
+		string ref;
+	};
+	typedef sequence<InitRef> InitRefList;
+
+	struct InitObjRef {
+		string name;
+		string strref;
+		Object objref;
+	};
+	typedef sequence<InitObjRef> InitObjRefList;
+
+	typedef string ObjectId;
+	typedef sequence<ObjectId> ObjectIdList;
+
+	interface InitialReferences {
+		Object get(in ObjectId id);
+		ObjectIdList list();
+		void get_references(inout Version v, out InitRefList refs, out string secUid);
+	};
+
+
+	enum ATMIerrors {
+		TPNOERROR,
+		TPEABORT,
+		TPEBADDESC,
+		TPEBLOCK,
+		TPEINVAL,
+		TPELIMIT,
+		TPENOENT,
+ 		TPEOS,
+ 		TPEPERM,
+		TPEPROTO,
+ 		TPESVCERR,
+		TPESVCFAIL,
+		TPESYSTEM,
+ 		TPETIME,
+ 		TPETRAN,
+ 		TPGOTSIG,
+ 		TPERMERR,
+ 		TPEITYPE,
+		TPEOTYPE,
+		TPERELEASE,
+		TPEHAZARD,
+ 		TPEHEURISTIC,
+ 		TPEEVENT,
+ 		TPEMATCH,   
+		TPEDIAGNOSTIC,
+ 		TPEMIB
+	};
+
+	module OTSImpl {
+		enum TxStatus {
+			TX_ERROR,
+			TX_NO_TRANSACTION,
+			TX_ACTIVE,
+			TX_TIMEOUT_ROLLBACK_ONLY,
+			TX_ROLLBACK_ONLY
+		};
+
+		typedef sequence<octet> cntl;
+
+		interface DelegatedCurrent {
+			ATMIerrors begin(in unsigned long seconds);
+
+			ATMIerrors commit(in boolean report_heuristic);
+
+			ATMIerrors rollback();
+
+			ATMIerrors rollback_only();
+
+			ATMIerrors get_status(out TxStatus status);
+
+			ATMIerrors get_transaction_name(out string name);
+
+			ATMIerrors suspend(out cntl which);
+
+			ATMIerrors resume(in cntl which);
+
+			ATMIerrors get_control(out cntl which);
+		};
+
+	}; // end of module OTSImpl
+
+	module SecImpl {
+		interface DelegatedAuthenticator {
+			ATMIerrors get_auth(
+				out Tobj::AuthType 	type
+			);
+
+			ATMIerrors logon(
+				in string		user_name,
+				in string		client_name,
+				in Tobj::UserAuthData	user_data,
+				in Tobj::LogonData	logon_data
+			);
+
+			ATMIerrors logoff();
+		};
+	};
+
+	module CallbackImpl {
+		interface DelegatedBiDir {
+			void register_callback_port(
+				in Object        	objref
+			);
+		};
+	};
+};
+#ifndef JDKORB
+#pragma ID TobjInternal "IDL:beasys.com/TobjInternal:1.0"
+#endif
+
+#endif /* _OBJTM_TOBJIN_IDL */

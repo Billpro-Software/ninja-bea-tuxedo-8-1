@@ -1,0 +1,1062 @@
+ cmm
+
+ Timestamp is 4cfac310 (Sat Dec 04 14:39:12 2010)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00027290H .text                   CODE
+ 0002:00000000 00000154H .idata$5                DATA
+ 0002:00000160 00000798H .rdata                  DATA
+ 0002:000008f8 00000063H .rdata$debug            DATA
+ 0002:00000960 00000004H .rdata$sxdata           DATA
+ 0002:00000964 00000004H .rtc$IAA                DATA
+ 0002:00000968 00000004H .rtc$IZZ                DATA
+ 0002:0000096c 00000004H .rtc$TAA                DATA
+ 0002:00000970 00000004H .rtc$TZZ                DATA
+ 0002:00000974 00000064H .idata$2                DATA
+ 0002:000009d8 00000014H .idata$3                DATA
+ 0002:000009ec 00000154H .idata$4                DATA
+ 0002:00000b40 000004deH .idata$6                DATA
+ 0002:00001020 00000383H .edata                  DATA
+ 0003:00000000 00000004H .CRT$XCA                DATA
+ 0003:00000004 00000004H .CRT$XCZ                DATA
+ 0003:00000008 00000004H .CRT$XIA                DATA
+ 0003:0000000c 00000004H .CRT$XIZ                DATA
+ 0003:00000010 00001494H .data                   DATA
+ 0003:000014c0 000005d0H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 00000308H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base     Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0001:00000000       _freeAttributes            10001000 f   attrmgr.obj
+ 0001:0000011d       _GetAttribute              1000111d f   attrmgr.obj
+ 0001:0000021c       _copyAttrList              1000121c f   attrmgr.obj
+ 0001:0000030c       _PTGetAttribute            1000130c f   attrmgr.obj
+ 0001:000004c3       _copyAllAttr               100014c3 f   attrmgr.obj
+ 0001:00000524       _getIntAttr                10001524 f   attrmgr.obj
+ 0001:000005a7       _getIntAttrDef             100015a7 f   attrmgr.obj
+ 0001:000005cd       _PTSetAttribute            100015cd f   attrmgr.obj
+ 0001:00000680       _readAttributes            10001680 f   attrmgr.obj
+ 0001:000009fb       _loadAuxPT                 100019fb f   auxpt.obj
+ 0001:00000ae9       _fut_calc_itblEx           10001ae9 f   calc.obj
+ 0001:00000bbb       _fut_calc_gtblEx           10001bbb f   calc.obj
+ 0001:00000dfd       _fut_calc_otblEx           10001dfd f   calc.obj
+ 0001:00000ecf       _fut_irampEx               10001ecf f   calc.obj
+ 0001:00000ecf       _fut_orampEx               10001ecf f   calc.obj
+ 0001:00000edb       _fut_grampEx               10001edb f   calc.obj
+ 0001:00000ee9       _constructfut              10001ee9 f   calc.obj
+ 0001:00001111       _calcGtbl3                 10002111 f   calcgtbl.obj
+ 0001:0000126a       _PTCreateTRC               1000226a f   calcitbl.obj
+ 0001:000012da       _calcItblN                 100022da f   calcitbl.obj
+ 0001:00001525       _calcOtblLSN               10002525 f   calcmtbl.obj
+ 0001:00001725       _calcOtblLS1               10002725 f   calcmtbl.obj
+ 0001:0000182f       _calcOtblLN                1000282f f   calcmtbl.obj
+ 0001:00001a0b       _calcOtblL1                10002a0b f   calcmtbl.obj
+ 0001:00001aed       _otblFunc                  10002aed f   calcmtbl.obj
+ 0001:00001af4       _calcInvertTRC             10002af4 f   calcotbl.obj
+ 0001:00001d80       _calcOtbl0                 10002d80 f   calcotbl.obj
+ 0001:00001e10       _calcOtbl1                 10002e10 f   calcotbl.obj
+ 0001:00001f1b       _calcOtblN                 10002f1b f   calcotbl.obj
+ 0001:00002268       _KCPChainSetup             10003268 f   chainsu.obj
+ 0001:000022cb       _getChainRule              100032cb f   chainsu.obj
+ 0001:00002310       _getChainState             10003310 f   chainsu.obj
+ 0001:00002358       _putChainState             10003358 f   chainsu.obj
+ 0001:0000236a       _clearChain                1000336a f   chainsu.obj
+ 0001:000025c1       _PTChainInitM              100035c1 f   chnrules.obj
+ 0001:000025ff       _PTChainEnd                100035ff f   chnrules.obj
+ 0001:00002621       _DllMain@12                10003621 f   cmmdll.obj
+ 0001:0000280c       _ComposeAttr               1000380c f   cmpsatt.obj
+ 0001:0000291e       _moveAttrList              1000391e f   cmpsattf.obj
+ 0001:00002a4e       _ComposeAttrFut            10003a4e f   cmpsattf.obj
+ 0001:00002b39       _cmyklin_iFunc             10003b39 f   cmyklin.obj
+ 0001:00002b95       _cmyklini_iFunc            10003b95 f   cmyklin.obj
+ 0001:00002bf3       _cmyklin_oFunc             10003bf3 f   cmyklin.obj
+ 0001:00002c4f       _cmyklini_oFunc            10003c4f f   cmyklin.obj
+ 0001:00002e13       _getMaxGridDim             10003e13 f   combine.obj
+ 0001:00003269       _PTCombine                 10004269 f   combine.obj
+ 0001:000036ef       _fut_comp_ilut             100046ef f   compilut.obj
+ 0001:00003817       _fut_comp_itbl             10004817 f   compitbl.obj
+ 0001:00003bd3       _fut_comp                  10004bd3 f   compose.obj
+ 0001:00004076       _fut_comp_otbl             10005076 f   compotbl.obj
+ 0001:0000420f       _KpItoa                    1000520f f   convert1.obj
+ 0001:00004268       _KpAtoi                    10005268 f   convert1.obj
+ 0001:000042a9       _fut_copy_itbl             100052a9 f   copy.obj
+ 0001:00004349       _fut_copy_gtbl             10005349 f   copy.obj
+ 0001:000043de       _fut_copy_otbl             100053de f   copy.obj
+ 0001:0000447e       _fut_copy_chan             1000547e f   copy.obj
+ 0001:0000458e       _fut_copy                  1000558e f   copy.obj
+ 0001:0000474e       _Kp_Crc32                  1000574e f   crc32.obj
+ 0001:00004783       _KpSysInit                 10005783 f   dispatch.obj
+ 0001:000047ca       _allocBufferHandle         100057ca f   dispatch.obj
+ 0001:000047d0       _reallocBufferPtr          100057d0 f   dispatch.obj
+ 0001:000047d6       _freeBuffer                100057d6 f   dispatch.obj
+ 0001:000047dc       _getHandleFromPtr          100057dc f   dispatch.obj
+ 0001:000047e2       _lockBuffer                100057e2 f   dispatch.obj
+ 0001:000047e8       _unlockBuffer              100057e8 f   dispatch.obj
+ 0001:000047ee       _evalImage                 100057ee f   doevalsw.obj
+ 0001:00004cc1       _evalImageMP               10005cc1 f   doevalsw.obj
+ 0001:00004fd2       _PTEvalSeq                 10005fd2 f   doevalsw.obj
+ 0001:000052a5       _evaluateFut               100062a5 f   eval.obj
+ 0001:0000547a       _evalTh1i3o1d8             1000647a f   evalth13.obj
+ 0001:0000567e       _evalTh1i3o1d16            1000667e f   evalth13.obj
+ 0001:00005925       _evalTh1i3o2d8             10006925 f   evalth13.obj
+ 0001:00005bb6       _evalTh1i3o2d16            10006bb6 f   evalth13.obj
+ 0001:00005f7d       _evalTh1i3o3d8             10006f7d f   evalth13.obj
+ 0001:0000627b       _evalTh1iB24oB24           1000727b f   evalth13.obj
+ 0001:00006514       _evalTh1iL24oL24           10007514 f   evalth13.obj
+ 0001:000067aa       _evalTh1i3o3d16            100077aa f   evalth13.obj
+ 0001:00006c81       _evalTh1i3oXd16n           10007c81 f   evalth13.obj
+ 0001:00007903       _evalTh1i3o3d8to16         10008903 f   evalth13.obj
+ 0001:00007db8       _evalTh1i3o3d16to8QS       10008db8 f   evalth13.obj
+ 0001:00007fd0       _evalTh1i3o4d8             10008fd0 f   evalth13.obj
+ 0001:0000834d       _evalTh1i3o4d16            1000934d f   evalth13.obj
+ 0001:00008921       _evalTh1i3o5d8             10009921 f   evalth13.obj
+ 0001:00008cea       _evalTh1i3o5d16            10009cea f   evalth13.obj
+ 0001:000093a4       _evalTh1i3o6d8             1000a3a4 f   evalth13.obj
+ 0001:0000980f       _evalTh1i3o6d16            1000a80f f   evalth13.obj
+ 0001:00009fc6       _evalTh1i3o7d8             1000afc6 f   evalth13.obj
+ 0001:0000a4ae       _evalTh1i3o7d16            1000b4ae f   evalth13.obj
+ 0001:0000ad3f       _evalTh1i3o8d8             1000bd3f f   evalth13.obj
+ 0001:0000b2b6       _evalTh1i3o8d16            1000c2b6 f   evalth13.obj
+ 0001:0000bc41       _evalTh1i3o3d16to8         1000cc41 f   evalth13.obj
+ 0001:0000bf9c       _evalTh1i4o1d8             1000cf9c f   evalth14.obj
+ 0001:0000c34e       _evalTh1i4o1d16            1000d34e f   evalth14.obj
+ 0001:0000c7d5       _evalTh1i4o2d8             1000d7d5 f   evalth14.obj
+ 0001:0000cc3c       _evalTh1i4o2d16            1000dc3c f   evalth14.obj
+ 0001:0000d24b       _evalTh1i4o3d8             1000e24b f   evalth14.obj
+ 0001:0000d728       _evalTh1i4o3d16            1000e728 f   evalth14.obj
+ 0001:0000de55       _evalTh1i4o4d8             1000ee55 f   evalth14.obj
+ 0001:0000e387       _evalTh1iB32oB32           1000f387 f   evalth14.obj
+ 0001:0000e845       _evalTh1iL32oL32           1000f845 f   evalth14.obj
+ 0001:0000ed2a       _evalTh1i4o4d16            1000fd2a f   evalth14.obj
+ 0001:0000f591       _evalTh1i4oXd16n           10010591 f   evalth14.obj
+ 0001:000104ce       _getEvalFunc               100114ce f   evalth1c.obj
+ 0001:00010547       _unlockEvalTables          10011547 f   evalth1c.obj
+ 0001:00010589       _nullEvalTables            10011589 f   evalth1c.obj
+ 0001:000105da       _freeEvalTables            100115da f   evalth1c.obj
+ 0001:00010637       _initEvalTables            10011637 f   evalth1c.obj
+ 0001:00010bd6       _evalTh1gen                10011bd6 f   evalth1g.obj
+ 0001:0001117a       _f4l                       1001217a f   f4lex.obj
+ 0001:000113dc       _KpMapFileEx               100123dc f   filemap.obj
+ 0001:00011464       _KpUnMapFile               10012464 f   filemap.obj
+ 0001:00011491       _format555to8              10012491 f   fmtdata.obj
+ 0001:00011503       _format565to8              10012503 f   fmtdata.obj
+ 0001:00011573       _format555to12             10012573 f   fmtdata.obj
+ 0001:000115ec       _format565to12             100125ec f   fmtdata.obj
+ 0001:0001165d       _format8to12               1001265d f   fmtdata.obj
+ 0001:000116ba       _format10to12              100126ba f   fmtdata.obj
+ 0001:00011730       _format555to16             10012730 f   fmtdata.obj
+ 0001:000117af       _format565to16             100127af f   fmtdata.obj
+ 0001:00011834       _format8to16               10012834 f   fmtdata.obj
+ 0001:0001188d       _format10to16              1001288d f   fmtdata.obj
+ 0001:00011909       _format12to16              10012909 f   fmtdata.obj
+ 0001:0001196d       _pass8in                   1001296d f   fmtdata.obj
+ 0001:000119bd       _pass16in                  100129bd f   fmtdata.obj
+ 0001:00011a10       _format8to555              10012a10 f   fmtdata.obj
+ 0001:00011a8a       _format8to565              10012a8a f   fmtdata.obj
+ 0001:00011b04       _format12to555             10012b04 f   fmtdata.obj
+ 0001:00011b85       _format12to565             10012b85 f   fmtdata.obj
+ 0001:00011c06       _format12to8               10012c06 f   fmtdata.obj
+ 0001:00011c70       _format12to10              10012c70 f   fmtdata.obj
+ 0001:00011cee       _format16to555             10012cee f   fmtdata.obj
+ 0001:00011d76       _format16to565             10012d76 f   fmtdata.obj
+ 0001:00011e00       _format16to8               10012e00 f   fmtdata.obj
+ 0001:00011e6d       _format16to10              10012e6d f   fmtdata.obj
+ 0001:00011eee       _format16to12              10012eee f   fmtdata.obj
+ 0001:00011f4e       _pass8out                  10012f4e f   fmtdata.obj
+ 0001:00011f9e       _pass16out                 10012f9e f   fmtdata.obj
+ 0001:00011ff1       _TpReadHdr                 10012ff1 f   futiomem.obj
+ 0001:000120b7       _TpCompareHdr              100130b7 f   futiomem.obj
+ 0001:00012249       _unlockPT                  10013249 f   futiomem.obj
+ 0001:00012279       _TpFreeHdr                 10013279 f   futiomem.obj
+ 0001:00012287       _TpFreeData                10013287 f   futiomem.obj
+ 0001:000122b1       _TpSetImplicitAttr         100132b1 f   futiomem.obj
+ 0001:000123e7       _initAttrib                100133e7 f   futiomem.obj
+ 0001:000124ba       _initExport                100134ba f   futiomem.obj
+ 0001:0001255e       _TpReadData                1001355e f   futiomem.obj
+ 0001:00012a2f       _TpCalCrc                  10013a2f f   futiomem.obj
+ 0001:00012a7c       _checkDataClass            10013a7c f   futiomem.obj
+ 0001:00012b42       _makeMftiTblDat            10013b42 f   futmft2.obj
+ 0001:00012bd4       _makeFutiTblDat            10013bd4 f   futmft2.obj
+ 0001:00012c57       _makeMftTblDat             10013c57 f   futmft2.obj
+ 0001:00012dd9       _makeFutTblDat             10013dd9 f   futmft2.obj
+ 0001:00012f21       _fut_to_mft                10013f21 f   futmft2.obj
+ 0001:00012f41       _mft_to_fut                10013f41 f   futmft2.obj
+ 0001:00012f61       _makeForwardXformMono      10013f61 f   fwdmono.obj
+ 0001:000130d4       _makeInverseMonotonic      100140d4 f   invxform.obj
+ 0001:000130d4       _makeMonotonic             100140d4 f   fwdxform.obj
+ 0001:00013133       _makeForwardXformFromMatrix 10014133 f   fwdxform.obj
+ 0001:0001333f       _fxnull_iFunc_x            1001433f f   fxnull.obj
+ 0001:000133d2       _fxnull_iFunc_y            100143d2 f   fxnull.obj
+ 0001:00013465       _fxnull_oFunc_x            10014465 f   fxnull.obj
+ 0001:000134cd       _fxnull_oFunc_y            100144cd f   fxnull.obj
+ 0001:00013535       _makeInverseXformMono      10014535 f   invmono.obj
+ 0001:00013680       _makeInverseXformFromMatrix 10014680 f   invxform.obj
+ 0001:000138db       _fut_read_futhdr           100148db f   io.obj
+ 0001:00014065       _fut_write_tbls            10015065 f   io.obj
+ 0001:000140e6       _fut_read_tbls             100150e6 f   io.obj
+ 0001:0001418d       _fut_cal_crc               1001518d f   io.obj
+ 0001:0001420b       _fut_swab_hdr              1001520b f   io_swab.obj
+ 0001:00014292       _fut_swab_itbl             10015292 f   io_swab.obj
+ 0001:000142d2       _fut_swab_otbl             100152d2 f   io_swab.obj
+ 0001:00014307       _fut_swab_gtbl             10015307 f   io_swab.obj
+ 0001:000144a2       _fut_io_encode             100154a2 f   ioencode.obj
+ 0001:00014674       _fut_io_decode             10015674 f   ioencode.obj
+ 0001:000147c8       _fut_readMFutHdr           100157c8 f   iomf.obj
+ 0001:00014897       _fut_mfutInfo              10015897 f   iomf.obj
+ 0001:00014a1f       _isIdentityMatrix          10015a1f f   iomf.obj
+ 0001:00014bcc       _fut_readMabFutHdr         10015bcc f   iomf.obj
+ 0001:00014f7c       _convert1DTable            10015f7c f   iomf.obj
+ 0001:0001653b       _fut_readMabFutTbls        1001753b f   iomf.obj
+ 0001:000165cc       _fut_readMFutTbls          100175cc f   iomf.obj
+ 0001:000166f0       _fut_get_otbl              100176f0 f   iotable.obj
+ 0001:00016774       _KpOpen                    10017774 f   kcms_io.obj
+ 0001:000167f7       _Kp_close                  100177f7 f   kcms_io.obj
+ 0001:0001684f       _Kp_read                   1001784f f   kcms_io.obj
+ 0001:000168c1       _Kp_write                  100178c1 f   kcms_io.obj
+ 0001:00016949       _Kp_skip                   10017949 f   kcms_io.obj
+ 0001:0001697d       _Kp_set_position           1001797d f   kcms_io.obj
+ 0001:000169ac       _Kp_get_position           100179ac f   kcms_io.obj
+ 0001:000169d8       _Kp_get_crc                100179d8 f   kcms_io.obj
+ 0001:00016a00       _KCMDsetup                 10017a00 f   kcpmgr.obj
+ 0001:00016a49       _PTTerminate               10017a49 f   kcpmgr.obj
+ 0001:00016a59       _getInitializedGlobals     10017a59 f   kcpmgr.obj
+ 0001:00016a6e       _initProgressPasses        10017a6e f   kcpmgru.obj
+ 0001:00016a86       _initProgress              10017a86 f   kcpmgru.obj
+ 0001:00016a99       _doProgress                10017a99 f   kcpmgru.obj
+ 0001:00016af6       _KpFileStripPath           10017af6 f   kpfile.obj
+ 0001:00016b43       _KpFileRead                10017b43 f   kpfile.obj
+ 0001:00016b76       _KpFileWrite               10017b76 f   kpfile.obj
+ 0001:00016baa       _KpFileFind                10017baa f   kpfile.obj
+ 0001:00016e01       _KpFileClose               10017e01 f   kpfile.obj
+ 0001:00016e12       _KpFilePosition            10017e12 f   kpfile.obj
+ 0001:00016e47       _KpFileExists              10017e47 f   kpfile.obj
+ 0001:00016e76       _KpFileOpen                10017e76 f   kpfile.obj
+ 0001:0001719e       _KpFileSize                1001819e f   kpfile.obj
+ 0001:000171e8       _KpMemCpy                  100181e8 f   kplib.obj
+ 0001:000171ed       _KpMemCmp                  100181ed f   kplib.obj
+ 0001:000171f2       _KpMemSet                  100181f2 f   kplib.obj
+ 0001:000171f7       _Kp_swab16                 100181f7 f   kplib.obj
+ 0001:00017217       _Kp_swab32                 10018217 f   kplib.obj
+ 0001:00017245       _MD5Init                   10018245 f   kpmd5.obj
+ 0001:00017af4       _MD5Update                 10018af4 f   kpmd5.obj
+ 0001:00017b9c       _MD5Final                  10018b9c f   kpmd5.obj
+ 0001:00017bfd       _LabuvLInit                10018bfd f   lab2uvl.obj
+ 0001:00017c5c       _LabuvL_ia                 10018c5c f   lab2uvl.obj
+ 0001:00017d04       _LabuvL_ib                 10018d04 f   lab2uvl.obj
+ 0001:00017da4       _LabuvL_gFun               10018da4 f   lab2uvl.obj
+ 0001:00017fe3       _LabuvL_ou                 10018fe3 f   lab2uvl.obj
+ 0001:00018070       _LabuvL_ov                 10019070 f   lab2uvl.obj
+ 0001:000180f7       _LabuvL_oL                 100190f7 f   lab2uvl.obj
+ 0001:000180f7       _fxnull_oFunc_z            100190f7 f   fxnull.obj
+ 0001:0001812c       _LabuvL_iL                 1001912c f   lab2uvl.obj
+ 0001:0001812c       _fxnull_iFunc_z            1001912c f   fxnull.obj
+ 0001:000183e3       _get_lab2xyz               100193e3 f   lab2xyz.obj
+ 0001:0001846f       _Hfunc                     1001946f f   lensity.obj
+ 0001:000184b4       _Hinverse                  100194b4 f   lensity.obj
+ 0001:000184f5       _lensityInit               100194f5 f   lensity.obj
+ 0001:00018692       _get_linlab_fut            10019692 f   linlab.obj
+ 0001:0001871b       _logrgb_iFunc              1001971b f   logrgb.obj
+ 0001:000187f9       _logrgb_oFunc              100197f9 f   logrgb.obj
+ 0001:000188d3       _loguvl_iFunc_x            100198d3 f   loguvl.obj
+ 0001:00018981       _loguvl_iFunc_y            10019981 f   loguvl.obj
+ 0001:00018a33       _loguvl_iFunc_z            10019a33 f   loguvl.obj
+ 0001:00018aaa       _loguvl_oFunc_x            10019aaa f   loguvl.obj
+ 0001:00018b29       _loguvl_oFunc_y            10019b29 f   loguvl.obj
+ 0001:00018ba8       _loguvl_oFunc_z            10019ba8 f   loguvl.obj
+ 0001:00018c4d       _fut_alloc_fut             10019c4d f   malloc.obj
+ 0001:00018c83       _fut_alloc_chan            10019c83 f   malloc.obj
+ 0001:00018ca8       _fut_alloc_itbl            10019ca8 f   malloc.obj
+ 0001:00018cd1       _fut_alloc_gtbl            10019cd1 f   malloc.obj
+ 0001:00018cfa       _fut_alloc_otbl            10019cfa f   malloc.obj
+ 0001:00018d23       _fut_alloc_itbldat         10019d23 f   malloc.obj
+ 0001:00018d5f       _fut_alloc_gtbldat         10019d5f f   malloc.obj
+ 0001:00018d99       _fut_alloc_otbldat         10019d99 f   malloc.obj
+ 0001:00018dd5       _fut_alloc_imftdat         10019dd5 f   malloc.obj
+ 0001:00018e1d       _fut_alloc_gmftdat         10019e1d f   malloc.obj
+ 0001:00018e5c       _fut_alloc_omftdat         10019e5c f   malloc.obj
+ 0001:000190d1       _fut_unlock_fut            1001a0d1 f   malloc.obj
+ 0001:00019121       _fut_lock_fut              1001a121 f   malloc.obj
+ 0001:00019162       _getNumParaParams          1001a162 f   mat2fut.obj
+ 0001:00019190       _makeCurveFromPara         1001a190 f   mat2fut.obj
+ 0001:00019d26       _makeFutFromMatrix         1001ad26 f   mat2fut.obj
+ 0001:00019ea7       _KpMatMul                  1001aea7 f   matrix.obj
+ 0001:00019f7a       _KpMatDotMul               1001af7a f   matrix.obj
+ 0001:00019fea       _KpMatDotDiv               1001afea f   matrix.obj
+ 0001:0001a05a       _KpMatCopy                 1001b05a f   matrix.obj
+ 0001:0001a0c8       _KpMatZero                 1001b0c8 f   matrix.obj
+ 0001:0001a1a0       _get_idenMonCurv_fut       1001b1a0 f   moncurv.obj
+ 0001:0001a29a       _fut_free_itbldat          1001b29a f   new.obj
+ 0001:0001a2d2       _fut_free_gtbldat          1001b2d2 f   new.obj
+ 0001:0001a30a       _fut_free_otbldat          1001b30a f   new.obj
+ 0001:0001a342       _fut_free_imftdat          1001b342 f   new.obj
+ 0001:0001a37d       _fut_free_gmftdat          1001b37d f   new.obj
+ 0001:0001a3b5       _fut_free_omftdat          1001b3b5 f   new.obj
+ 0001:0001a3f0       _fut_new_empty             1001b3f0 f   new.obj
+ 0001:0001a454       _fut_add_chan              1001b454 f   new.obj
+ 0001:0001a50d       _fut_free_itbl             1001b50d f   new.obj
+ 0001:0001a549       _fut_free_gtbl             1001b549 f   new.obj
+ 0001:0001a585       _fut_free_otbl             1001b585 f   new.obj
+ 0001:0001a5c1       _fut_free_tbldat           1001b5c1 f   new.obj
+ 0001:0001a621       _fut_free_mftdat           1001b621 f   new.obj
+ 0001:0001a681       _fut_new_itblEx            1001b681 f   new.obj
+ 0001:0001a70b       _fut_new_gtblEx            1001b70b f   new.obj
+ 0001:0001a7ae       _fut_new_otblEx            1001b7ae f   new.obj
+ 0001:0001a827       _fut_free_chan             1001b827 f   new.obj
+ 0001:0001a860       _fut_new_chan              1001b860 f   new.obj
+ 0001:0001a9aa       _fut_defchan               1001b9aa f   new.obj
+ 0001:0001aa90       _fut_free                  1001ba90 f   new.obj
+ 0001:0001ab1a       _fut_free_tbl              1001bb1a f   new.obj
+ 0001:0001ab64       _fut_free_tbls             1001bb64 f   new.obj
+ 0001:0001ab7f       _fut_new                   1001bb7f f   new.obj
+ 0001:0001acc0       _makeOutputMatrixXform     1001bcc0 f   outmat.obj
+ 0001:0001adb2       _PTNewMatGamAIPT           1001bdb2 f   profile.obj
+ 0001:0001b22c       _PTNewMonoPT               1001c22c f   profilem.obj
+ 0001:0001b32a       _PTChain                   1001c32a f   ptchain.obj
+ 0001:0001b661       _PTEvaluate                1001c661 f   pteval.obj
+ 0001:0001b97f       _PTEvalDT                  1001c97f f   pteval.obj
+ 0001:0001b9a7       _PTDeActivate              1001c9a7 f   ptiomem.obj
+ 0001:0001b9d5       _PTCheckOut                1001c9d5 f   ptiomem.obj
+ 0001:0001ba19       _fut2PT                    1001ca19 f   ptiomem.obj
+ 0001:0001bb78       _PTMemTest                 1001cb78 f   ptiomem.obj
+ 0001:0001bb93       _PTCheckIn                 1001cb93 f   ptiomem.obj
+ 0001:0001bc79       _PTActivate                1001cc79 f   ptiomem.obj
+ 0001:0001bdf9       _checkPT                   1001cdf9 f   pttmgr.obj
+ 0001:0001be1a       _lockPTTable               1001ce1a f   pttmgr.obj
+ 0001:0001be56       _unlockPTTable             1001ce56 f   pttmgr.obj
+ 0001:0001be6d       _deletePTTable             1001ce6d f   pttmgr.obj
+ 0001:0001bece       _makeActive                1001cece f   pttmgr.obj
+ 0001:0001bef7       _makeSerial                1001cef7 f   pttmgr.obj
+ 0001:0001bf11       _makeInActive              1001cf11 f   pttmgr.obj
+ 0001:0001bfd5       _makeCheckedOut            1001cfd5 f   pttmgr.obj
+ 0001:0001c031       _getPTStatus               1001d031 f   pttmgr.obj
+ 0001:0001c066       _getPTHdr                  1001d066 f   pttmgr.obj
+ 0001:0001c07f       _setPTHdr                  1001d07f f   pttmgr.obj
+ 0001:0001c0a0       _getPTAttr                 1001d0a0 f   pttmgr.obj
+ 0001:0001c0b9       _setPTAttr                 1001d0b9 f   pttmgr.obj
+ 0001:0001c0d3       _getPTData                 1001d0d3 f   pttmgr.obj
+ 0001:0001c0ec       _setMatrixPTRefNum         1001d0ec f   pttmgr.obj
+ 0001:0001c114       _getMatrixPTRefNum         1001d114 f   pttmgr.obj
+ 0001:0001c14c       _PTGetSrcFormat            1001d14c f   pttmgr.obj
+ 0001:0001c162       _resolvePTData             1001d162 f   pttmgr.obj
+ 0001:0001c230       _registerPT                1001d230 f   pttmgr.obj
+ 0001:0001c2e5       _hasPTData                 1001d2e5 f   pttmgr.obj
+ 0001:0001c2ff       _addSerialData             1001d2ff f   pttmgr.obj
+ 0001:0001c422       _PTGetPTInfo               1001d422 f   pttmgr.obj
+ 0001:0001c8b9       _KpWriteRegistryString     1001d8b9 f   registry.obj
+ 0001:0001c963       _KpReadRegistryString      1001d963 f   registry.obj
+ 0001:0001ca05       _PTGetRelToAbsPT           1001da05 f   rel2abs.obj
+ 0001:0001cb81       _fut_resize                1001db81 f   resize.obj
+ 0001:0001cdc1       _fut_share_itbl            1001ddc1 f   share.obj
+ 0001:0001cde0       _fut_share_gtbl            1001dde0 f   share.obj
+ 0001:0001cdff       _fut_share_otbl            1001ddff f   share.obj
+ 0001:0001ce1e       _fut_share_chan            1001de1e f   share.obj
+ 0001:0001ceba       _solvemat                  1001deba f   solvemat.obj
+ 0001:0001d15c       _MultiLangToMLString       1001e15c f   spattpr.obj
+ 0001:0001d225       _SpTagGetType@12           1001e225 f   spattr.obj
+ 0001:0001d265       _SpTagGetIdType@8          1001e265 f   spattr.obj
+ 0001:0001d295       _SpTagGetByIdEx@12         1001e295 f   spattr.obj
+ 0001:0001d312       _SpTagFree@4               1001e312 f   spattr.obj
+ 0001:0001d53c       _SpTagGetById@12           1001e53c f   spattr.obj
+ 0001:0001e29b       _SpCurveToPublic           1001f29b f   spattrio.obj
+ 0001:0001e30d       _SpParaCurveDataToPublic   1001f30d f   spattrio.obj
+ 0001:0001e397       _SpHeaderToPublic@12       1001f397 f   spattrio.obj
+ 0001:0001e547       _SpHeaderFromPublic@12     1001f547 f   spattrio.obj
+ 0001:0001e6bc       _SpParaCurveToPublic       1001f6bc f   spattrio.obj
+ 0001:0001e6d6       _SpTagToPublic@20          1001f6d6 f   spattrio.obj
+ 0001:0001edc7       _SpPutUInt16               1001fdc7 f   spcvrt.obj
+ 0001:0001eddb       _SpPutUInt32               1001fddb f   spcvrt.obj
+ 0001:0001ee05       _SpGetBytes                1001fe05 f   spcvrt.obj
+ 0001:0001ee2c       _SpGetUInt16               1001fe2c f   spcvrt.obj
+ 0001:0001ee45       _SpGetUInt16s              1001fe45 f   spcvrt.obj
+ 0001:0001ee68       _SpGetUInt32               1001fe68 f   spcvrt.obj
+ 0001:0001ee92       _SpGetF15d16               1001fe92 f   spcvrt.obj
+ 0001:0001eeb5       _SpGetF15d16XYZ            1001feb5 f   spcvrt.obj
+ 0001:0001eee9       _SpDoProgress              1001fee9 f   speval.obj
+ 0001:0001ef04       _SpConnectTypeToPTCombineType 1001ff04 f   speval.obj
+ 0001:0001efc3       _SpConnectSequenceImp      1001ffc3 f   speval.obj
+ 0001:0001f09e       _SpConnectSequenceCombine  1002009e f   speval.obj
+ 0001:0001f15a       _SpConnectSequenceEx@28    1002015a f   speval.obj
+ 0001:0001f527       _SpConnectSequence@24      10020527 f   speval.obj
+ 0001:0001f5ed       _SpEvaluate@20             100205ed f   speval.obj
+ 0001:0001f7a8       _SpFreeTextDesc            100207a8 f   splink.obj
+ 0001:0001f7ca       _SpFreeMultiLang           100207ca f   splink.obj
+ 0001:0001f800       _SpStringToTextDesc        10020800 f   splink.obj
+ 0001:0001f8a5       _SpFreeDeviceDesc          100208a5 f   splink.obj
+ 0001:0001f908       _SpLut8Create@16           10020908 f   splut.obj
+ 0001:0001face       _SpLut16Create@24          10020ace f   splut.obj
+ 0001:0001fdde       _SpLutABCreate@32          10020dde f   splut.obj
+ 0001:0001ff6a       _SpLutBACreate@32          10020f6a f   splut.obj
+ 0001:00020330       _SpLutToPublic             10021330 f   splut.obj
+ 0001:00020389       _SpLutFree@4               10021389 f   splut.obj
+ 0001:000205ed       _SpProfileLock             100215ed f   sprofile.obj
+ 0001:00020610       _unlockSysBuffer           10021610 f   winmem.obj
+ 0001:00020610       _SpXformUnlock             10021610 f   spxform.obj
+ 0001:00020610       _SpProfileUnlock           10021610 f   sprofile.obj
+ 0001:00020615       _SpProfileLoadFromBufferImp 10021615 f   sprofile.obj
+ 0001:000206fe       _SpProfileLoadFromBuffer@12 100216fe f   sprofile.obj
+ 0001:00020743       _SpProfileGetHeader@8      10021743 f   sprofile.obj
+ 0001:00020777       _SpProfileSetHeader@8      10021777 f   sprofile.obj
+ 0001:000207ab       _SpProfileCheckSize        100217ab f   sprofile.obj
+ 0001:000207dd       _SpIsICCProfile@8          100217dd f   sprofpr.obj
+ 0001:000208ab       _SpProfileLoadHeader@12    100218ab f   sprofpr.obj
+ 0001:00020954       _SpTagShare                10021954 f   spsave.obj
+ 0001:00020a15       _SpProfileOrderList@8      10021a15 f   spsearch.obj
+ 0001:00020c31       _TestHeaderDate            10021c31 f   spsearch.obj
+ 0001:00020cd6       _SpProfileCheck@8          10021cd6 f   spsearch.obj
+ 0001:00020f27       _GetWinDefaultDB@8         10021f27 f   spsearch.obj
+ 0001:000210b8       _SpProfileGetDefaultDB@12  100220b8 f   spsearch.obj
+ 0001:0002128f       _SpProfileSearchRefine@16  1002228f f   spsearch.obj
+ 0001:00021555       _SpProfileSearch@24        10022555 f   spsearch.obj
+ 0001:000215fa       _SpMalloc                  100225fa f   spsys.obj
+ 0001:000215ff       _SpFree                    100225ff f   spsys.obj
+ 0001:00021648       _SpCallerIdValidate        10022648 f   spsystem.obj
+ 0001:0002170c       _SpStatusFromPTErr         1002270c f   spsystem.obj
+ 0001:000217d5       _SpTerminate@4             100227d5 f   spsystem.obj
+ 0001:00021816       _SpInitializeEx@16         10022816 f   spsystem.obj
+ 0001:00021932       _SpInitialize@12           10022932 f   spsystem.obj
+ 0001:00021a76       _SpRespToPublic            10022a76 f   sptagio.obj
+ 0001:00021c80       _SpDevSetToPublic          10022c80 f   sptagio.obj
+ 0001:00021ce9       _SpChromToPublic           10022ce9 f   sptagio.obj
+ 0001:00021d83       _SpRespFree                10022d83 f   sptagio.obj
+ 0001:00021dcf       _SpDevSetFree              10022dcf f   sptagio.obj
+ 0001:00021e8f       _SpTagFindById             10022e8f f   sptagmgr.obj
+ 0001:00021ed6       _SpRawTagDataFree@12       10022ed6 f   sptagmgr.obj
+ 0001:00021f54       _SpProfileAlloc            10022f54 f   sptagmgr.obj
+ 0001:00022002       _SpProfileFree@4           10023002 f   sptagmgr.obj
+ 0001:0002208c       _SpProfilePopTagArray      1002308c f   sptagmgr.obj
+ 0001:00022121       _SpTagDirEntryAdd          10023121 f   sptagmgr.obj
+ 0001:0002228e       _SpTagGetCount             1002328e f   sptagmgr.obj
+ 0001:000222e3       _SpRawTagDataGet@16        100232e3 f   sptagmgr.obj
+ 0001:0002237e       _SpRawTagDataGetSize@12    1002337e f   sptagmgr.obj
+ 0001:00022409       _SpRawTagDataSet@16        10023409 f   sptagmgr.obj
+ 0001:000224a9       _SpProfileGetProfileSize@8 100234a9 f   sputilpr.obj
+ 0001:00022567       _SpProfileGetProfileId@8   10023567 f   sputilpr.obj
+ 0001:000227f0       _SpProfileSaveToBuffer@12  100237f0 f   sputilpr.obj
+ 0001:000229c0       _SpRawHeaderGet@12         100239c0 f   sputilpr.obj
+ 0001:00022a4b       _SpSetKcmAttrInt           10023a4b f   spxf_gen.obj
+ 0001:00022aa1       _SpGetKcmAttrInt           10023aa1 f   spxf_gen.obj
+ 0001:00022ad9       _SpXformFromPTRefNumImp    10023ad9 f   spxf_gen.obj
+ 0001:00022b8f       _SpXformGrayCreate@16      10023b8f f   spxf_gen.obj
+ 0001:00022bdb       _SpXformCreate@44          10023bdb f   spxf_gen.obj
+ 0001:00022dc1       _SetWtPt                   10023dc1 f   spxf_gen.obj
+ 0001:00022e58       _SpXformGenerate@20        10023e58 f   spxf_gen.obj
+ 0001:000231de       _SpCurveToResponseRec      100241de f   spxfgpr.obj
+ 0001:00023212       _SpXformLock               10024212 f   spxform.obj
+ 0001:00023235       _SpXformAllocate           10024235 f   spxform.obj
+ 0001:00023278       _SpXformGetRefNum@8        10024278 f   spxform.obj
+ 0001:00023310       _SpColorSpaceKp2Sp         10024310 f   spxform.obj
+ 0001:0002351c       _SpColorSpaceSp2Kp         1002451c f   spxform.obj
+ 0001:000237d2       _SpSetColorSpaceICC2Kp     100247d2 f   spxform.obj
+ 0001:0002386e       _SpXformInitColorSpace     1002486e f   spxform.obj
+ 0001:000238d3       _SpXformGetColorSpace      100248d3 f   spxform.obj
+ 0001:0002390b       _SpXformLoadImp            1002490b f   spxform.obj
+ 0001:00023997       _SpXformFree@4             10024997 f   spxform.obj
+ 0001:000239d4       _SpGetChannelsFromColorSpace 100249d4 f   spxform.obj
+ 0001:00023a74       _SpDTtoKcmDT               10024a74 f   spxform.obj
+ 0001:00023aa2       _SpXformFromBufferDT@24    10024aa2 f   spxform.obj
+ 0001:00023e0a       _SpXformGet@16             10024e0a f   spxform.obj
+ 0001:00023ecd       _SpXformGetChannels@12     10024ecd f   spxfprv.obj
+ 0001:00023f9b       _KpSleep                   10024f9b f   sync.obj
+ 0001:00023fa6       _KpGetCurrentThreadId      10024fa6 f   sync.obj
+ 0001:00023fac       _KpGetCurrentProcessId     10024fac f   sync.obj
+ 0001:00023fb2       _KpEnterCriticalSection    10024fb2 f   sync.obj
+ 0001:00023fcc       _KpLeaveCriticalSection    10024fcc f   sync.obj
+ 0001:00023fdb       _KpInitializeCriticalSection 10024fdb f   sync.obj
+ 0001:0002401b       _KpDeleteCriticalSection   1002501b f   sync.obj
+ 0001:00024051       _KpGetSystemInfo           10025051 f   sysinfo.obj
+ 0001:000240c6       _KpGetLocalTime            100250c6 f   systime.obj
+ 0001:0002416d       _KpThreadCreate@20         1002516d f   thread.obj
+ 0001:000241a4       _KpThreadWait@20           100251a4 f   thread.obj
+ 0001:000241ed       _KpThreadDestroy@4         100251ed f   thread.obj
+ 0001:00024472       _KpThreadMemCreate         10025472 f   thredmem.obj
+ 0001:000244f1       _KpThreadMemDestroy        100254f1 f   thredmem.obj
+ 0001:0002454d       _KpThreadMemFind           1002554d f   thredmem.obj
+ 0001:000245a9       _KpThreadMemUnlock         100255a9 f   thredmem.obj
+ 0001:00024607       _fut_required_inputs       10025607 f   util.obj
+ 0001:00024651       _fut_first_chan            10025651 f   util.obj
+ 0001:0002466a       _fut_unique_id             1002566a f   util.obj
+ 0001:00024676       _fut_gtbl_imask            10025676 f   util.obj
+ 0001:0002469d       _fut_reset_iomask          1002569d f   util.obj
+ 0001:00024744       _fut_is_separable          10025744 f   util.obj
+ 0001:00024770       _fut_iomask_check          10025770 f   util.obj
+ 0001:000247c0       _uvLLabInit                100257c0 f   uvl2lab.obj
+ 0001:000247e8       _uvLLab_iu                 100257e8 f   uvl2lab.obj
+ 0001:00024846       _uvLLab_iv                 10025846 f   uvl2lab.obj
+ 0001:000248a4       _uvLLab_iL                 100258a4 f   uvl2lab.obj
+ 0001:00024910       _uvLLab_gFun               10025910 f   uvl2lab.obj
+ 0001:00024ac3       _uvLLab_oFun               10025ac3 f   uvl2lab.obj
+ 0001:000250b1       _KpMemInit                 100260b1 f   winmem.obj
+ 0001:000251d0       _allocBufferHandlePrv      100261d0 f   winmem.obj
+ 0001:000251dd       _reallocBufferPtrPrv       100261dd f   winmem.obj
+ 0001:00025228       _freeBufferPrv             10026228 f   winmem.obj
+ 0001:00025236       _freeSysBufferPtr          10026236 f   winmem.obj
+ 0001:00025236       _freeBufferPtr             10026236 f   winmem.obj
+ 0001:0002523b       _getBufferSizePrv          1002623b f   winmem.obj
+ 0001:00025249       _lockBufferPrv             10026249 f   winmem.obj
+ 0001:00025249       _getHandleFromPtrPrv       10026249 f   winmem.obj
+ 0001:0002524e       _unlockBufferPrv           1002624e f   winmem.obj
+ 0001:00025258       _unlockBufferPtr           10026258 f   winmem.obj
+ 0001:00025274       _allocBufferPtr            10026274 f   winmem.obj
+ 0001:00025274       _allocSysBufferPtr         10026274 f   winmem.obj
+ 0001:00025274       _allocSysBufferHandle      10026274 f   winmem.obj
+ 0001:00025279       _getSysHandleFromPtr       10026279 f   winmem.obj
+ 0001:0002527e       _lockSysBuffer             1002627e f   winmem.obj
+ 0001:00025283       _PTInitializeEx            10026283 f   wkcpmgr.obj
+ 0001:000252b4       _PTTerminatePlatform       100262b4 f   wkcpmgr.obj
+ 0001:000252c7       _PTInitialize              100262c7 f   wkcpmgr.obj
+ 0001:000252d0       _KCPInitIGblP              100262d0 f   wkcpmgr.obj
+ 0001:0002534d       _init_xfer                 1002634d f   xfers.obj
+ 0001:00025515       _set_xfer                  10026515 f   xfers.obj
+ 0001:00025569       _xfer                      10026569 f   xfers.obj
+ 0001:0002578a       _get_xyz2lab               1002678a f   xyz2lab.obj
+ 0001:0002580b       _xyzmap_iFunc              1002680b f   xyzmap.obj
+ 0001:00025877       _xyzmap_oFunc              10026877 f   xyzmap.obj
+ 0001:00025f41       _handleAlpha               10026f41 f   CMM.obj
+ 0001:00026641       _Java_sun_awt_color_CMM_cmmInit@8 10027641 f   CMM.obj
+ 0001:0002666d       _Java_sun_awt_color_CMM_cmmTerminate@8 1002766d f   CMM.obj
+ 0001:000266c2       _Java_sun_awt_color_CMM_cmmLoadProfile@16 100276c2 f   CMM.obj
+ 0001:0002676c       _Java_sun_awt_color_CMM_cmmFreeProfile@16 1002776c f   CMM.obj
+ 0001:0002679d       _Java_sun_awt_color_CMM_cmmGetProfileSize@20 1002779d f   CMM.obj
+ 0001:000267df       _Java_sun_awt_color_CMM_cmmGetProfileData@20 100277df f   CMM.obj
+ 0001:00026845       _Java_sun_awt_color_CMM_cmmCullICC_1Profiles@28 10027845 f   CMM.obj
+ 0001:00026924       _Java_sun_awt_color_CMM_cmmFindICC_1Profiles@28 10027924 f   CMM.obj
+ 0001:00026a12       _Java_sun_awt_color_CMM_cmmGetTagData@24 10027a12 f   CMM.obj
+ 0001:00026ad3       _Java_sun_awt_color_CMM_cmmGetTagSize@24 10027ad3 f   CMM.obj
+ 0001:00026b2b       _Java_sun_awt_color_CMM_cmmSetTagData@24 10027b2b f   CMM.obj
+ 0001:00026bc1       _Java_sun_awt_color_CMM_cmmGetTransform@24 10027bc1 f   CMM.obj
+ 0001:00026c77       _Java_sun_awt_color_CMM_cmmFreeTransform@16 10027c77 f   CMM.obj
+ 0001:00026ca8       _Java_sun_awt_color_CMM_cmmGetNumComponents@20 10027ca8 f   CMM.obj
+ 0001:00026d0e       _Java_sun_awt_color_CMM_cmmCombineTransforms@16 10027d0e f   CMM.obj
+ 0001:00026dfe       _Java_sun_awt_color_CMM_cmmColorConvert@24 10027dfe f   CMM.obj
+ 0001:00026ea0       _JNU_ThrowNullPointerException@8 10027ea0 f   java:java.dll
+ 0001:00026ea6       _strlen                    10027ea6 f   MSVCRT:MSVCR71.dll
+ 0001:00026eac       _strcpy                    10027eac f   MSVCRT:MSVCR71.dll
+ 0001:00026eb2       _strcmp                    10027eb2 f   MSVCRT:MSVCR71.dll
+ 0001:00026ec0       __ftol2                    10027ec0 f   MSVCRT:ftol2.obj
+ 0001:00026f36       _pow                       10027f36 f   MSVCRT:MSVCR71.dll
+ 0001:00026f3c       _strcat                    10027f3c f   MSVCRT:MSVCR71.dll
+ 0001:00026f50       __chkstk                   10027f50 f   MSVCRT:chkstk.obj
+ 0001:00026f50       __alloca_probe             10027f50     MSVCRT:chkstk.obj
+ 0001:00026f8e       _memcpy                    10027f8e f   MSVCRT:MSVCR71.dll
+ 0001:00026f94       _sqrt                      10027f94 f   MSVCRT:MSVCR71.dll
+ 0001:00026f9a       _fabs                      10027f9a f   MSVCRT:MSVCR71.dll
+ 0001:00026fa0       _memset                    10027fa0 f   MSVCRT:MSVCR71.dll
+ 0001:00026fa6       _memcmp                    10027fa6 f   MSVCRT:MSVCR71.dll
+ 0001:00026fac       _tan                       10027fac f   MSVCRT:MSVCR71.dll
+ 0001:00026fb2       _atan2                     10027fb2 f   MSVCRT:MSVCR71.dll
+ 0001:00026fb8       _exp                       10027fb8 f   MSVCRT:MSVCR71.dll
+ 0001:00026fbe       _log                       10027fbe f   MSVCRT:MSVCR71.dll
+ 0001:00026fc4       _log10                     10027fc4 f   MSVCRT:MSVCR71.dll
+ 0001:00026fca       __CRT_INIT@12              10027fca f   MSVCRT:crtdll.obj
+ 0001:00027088       __DllMainCRTStartup@12     10028088 f   MSVCRT:crtdll.obj
+ 0001:0002716c       __initterm                 1002816c f   MSVCRT:MSVCR71.dll
+ 0001:00027172       __onexit                   10028172 f   MSVCRT:atonexit.obj
+ 0001:00027198       _atexit                    10028198 f   MSVCRT:atonexit.obj
+ 0001:000271aa       __RTC_Initialize           100281aa f   MSVCRT:initsect.obj
+ 0001:000271ee       __RTC_Terminate            100281ee f   MSVCRT:initsect.obj
+ 0001:00027232       ___CppXcptFilter           10028232 f   MSVCRT:MSVCR71.dll
+ 0001:00027238       __SEH_prolog               10028238 f   MSVCRT:sehprolg.obj
+ 0001:00027273       __SEH_epilog               10028273 f   MSVCRT:sehprolg.obj
+ 0001:00027284       __except_handler3          10028284 f   MSVCRT:MSVCR71.dll
+ 0001:0002728a       ___dllonexit               1002828a f   MSVCRT:MSVCR71.dll
+ 0002:00000000       __imp__RegOpenKeyExA@20    10029000     advapi32:ADVAPI32.dll
+ 0002:00000004       __imp__RegQueryValueA@16   10029004     advapi32:ADVAPI32.dll
+ 0002:00000008       __imp__RegCloseKey@4       10029008     advapi32:ADVAPI32.dll
+ 0002:0000000c       __imp__RegCreateKeyExA@36  1002900c     advapi32:ADVAPI32.dll
+ 0002:00000010       __imp__RegCreateKeyA@12    10029010     advapi32:ADVAPI32.dll
+ 0002:00000014       __imp__RegOpenKeyA@12      10029014     advapi32:ADVAPI32.dll
+ 0002:00000018       __imp__RegSetValueExA@24   10029018     advapi32:ADVAPI32.dll
+ 0002:0000001c       __imp__RegSetValueA@20     1002901c     advapi32:ADVAPI32.dll
+ 0002:00000020       __imp__RegQueryValueExA@24 10029020     advapi32:ADVAPI32.dll
+ 0002:00000024       \177ADVAPI32_NULL_THUNK_DATA 10029024     advapi32:ADVAPI32.dll
+ 0002:00000028       __imp__GetModuleHandleA@4  10029028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__UnmapViewOfFile@4   1002902c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__GetSystemInfo@4     10029030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__HeapFree@12         10029034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__HeapAlloc@12        10029038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__HeapCreate@12       1002903c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__GlobalHandle@4      10029040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__GlobalFree@4        10029044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__GlobalAlloc@8       10029048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__GlobalLock@4        1002904c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__CreateThread@24     10029050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__GetLocalTime@4      10029054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__GetVersionExA@4     10029058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__WaitForMultipleObjects@16 1002905c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__DeleteCriticalSection@4 10029060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__InitializeCriticalSection@4 10029064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetVersion@0        10029068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__InterlockedExchange@8 1002906c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__LeaveCriticalSection@4 10029070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__EnterCriticalSection@4 10029074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__GetCurrentProcessId@0 10029078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__GetCurrentThreadId@0 1002907c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__Sleep@4             10029080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__LoadLibraryA@4      10029084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__FreeLibrary@4       10029088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__GetSystemDirectoryA@8 1002908c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__GetProcAddress@8    10029090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__CloseHandle@4       10029094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__MapViewOfFile@20    10029098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__CreateFileMappingA@24 1002909c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__ReadFile@20         100290a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__WriteFile@20        100290a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__FindClose@4         100290a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__GetLastError@0      100290ac     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp__FindNextFileA@8     100290b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp__FindFirstFileA@8    100290b4     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp__SetFilePointer@16   100290b8     kernel32:KERNEL32.dll
+ 0002:000000bc       __imp__CreateFileA@28      100290bc     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp__GetFileSize@8       100290c0     kernel32:KERNEL32.dll
+ 0002:000000c4       __imp__GetWindowsDirectoryA@8 100290c4     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp__HeapSize@12         100290c8     kernel32:KERNEL32.dll
+ 0002:000000cc       \177KERNEL32_NULL_THUNK_DATA 100290cc     kernel32:KERNEL32.dll
+ 0002:000000d0       __imp___onexit             100290d0     MSVCRT:MSVCR71.dll
+ 0002:000000d4       __imp____dllonexit         100290d4     MSVCRT:MSVCR71.dll
+ 0002:000000d8       __imp___except_handler3    100290d8     MSVCRT:MSVCR71.dll
+ 0002:000000dc       __imp____CppXcptFilter     100290dc     MSVCRT:MSVCR71.dll
+ 0002:000000e0       __imp___adjust_fdiv        100290e0     MSVCRT:MSVCR71.dll
+ 0002:000000e4       __imp__malloc              100290e4     MSVCRT:MSVCR71.dll
+ 0002:000000e8       __imp___initterm           100290e8     MSVCRT:MSVCR71.dll
+ 0002:000000ec       __imp__free                100290ec     MSVCRT:MSVCR71.dll
+ 0002:000000f0       __imp__time                100290f0     MSVCRT:MSVCR71.dll
+ 0002:000000f4       __imp__localtime           100290f4     MSVCRT:MSVCR71.dll
+ 0002:000000f8       __imp__log10               100290f8     MSVCRT:MSVCR71.dll
+ 0002:000000fc       __imp__log                 100290fc     MSVCRT:MSVCR71.dll
+ 0002:00000100       __imp__exp                 10029100     MSVCRT:MSVCR71.dll
+ 0002:00000104       __imp__atan2               10029104     MSVCRT:MSVCR71.dll
+ 0002:00000108       __imp__tan                 10029108     MSVCRT:MSVCR71.dll
+ 0002:0000010c       __imp__memcmp              1002910c     MSVCRT:MSVCR71.dll
+ 0002:00000110       __imp__strrchr             10029110     MSVCRT:MSVCR71.dll
+ 0002:00000114       __imp__memset              10029114     MSVCRT:MSVCR71.dll
+ 0002:00000118       __imp__fabs                10029118     MSVCRT:MSVCR71.dll
+ 0002:0000011c       __imp__sqrt                1002911c     MSVCRT:MSVCR71.dll
+ 0002:00000120       __imp__memcpy              10029120     MSVCRT:MSVCR71.dll
+ 0002:00000124       __imp__strcat              10029124     MSVCRT:MSVCR71.dll
+ 0002:00000128       __imp__pow                 10029128     MSVCRT:MSVCR71.dll
+ 0002:0000012c       __imp__strcmp              1002912c     MSVCRT:MSVCR71.dll
+ 0002:00000130       __imp__strncpy             10029130     MSVCRT:MSVCR71.dll
+ 0002:00000134       __imp__strcpy              10029134     MSVCRT:MSVCR71.dll
+ 0002:00000138       __imp__strlen              10029138     MSVCRT:MSVCR71.dll
+ 0002:0000013c       __imp___stat               1002913c     MSVCRT:MSVCR71.dll
+ 0002:0000013c       __imp__stat                1002913c     MSVCRT:MSVCR71.dll
+ 0002:00000140       \177MSVCR71_NULL_THUNK_DATA 10029140     MSVCRT:MSVCR71.dll
+ 0002:00000144       __imp__LoadStringA@16      10029144     user32:USER32.dll
+ 0002:00000148       \177USER32_NULL_THUNK_DATA 10029148     user32:USER32.dll
+ 0002:0000014c       __imp__JNU_ThrowNullPointerException@8 1002914c     java:java.dll
+ 0002:00000150       \177java_NULL_THUNK_DATA   10029150     java:java.dll
+ 0002:0000017c       ??_C@_05NIGCKKLL@5?41?41?$AA@ 1002917c     attrmgr.obj
+ 0002:00000184       ??_C@_04CGNOCKGB@CP32?$AA@ 10029184     auxpt.obj
+ 0002:0000018c       ??_C@_04NPDHJKC@CP31?$AA@  1002918c     auxpt.obj
+ 0002:00000194       ??_C@_04CHBMEAFG@CP22?$AA@ 10029194     auxpt.obj
+ 0002:0000019c       ??_C@_04BHGMJMIN@CP10?$AA@ 1002919c     auxpt.obj
+ 0002:000001a4       ??_C@_05CHCBEDOP@CP10i?$AA@ 100291a4     auxpt.obj
+ 0002:000001ac       ??_C@_04NOHHHMLC@CP08?$AA@ 100291ac     auxpt.obj
+ 0002:000001b4       ??_C@_04FJOPGAHN@CP07?$AA@ 100291b4     auxpt.obj
+ 0002:000001bc       ??_C@_04GLNJACPP@CP05?$AA@ 100291bc     auxpt.obj
+ 0002:000001c4       ??_C@_04HCMCDDLO@CP04?$AA@ 100291c4     auxpt.obj
+ 0002:000001cc       ??_C@_04CEJIJEDI@CP02?$AA@ 100291cc     auxpt.obj
+ 0002:000001d8       __real@3fdffffbce4217d3    100291d8     calc.obj
+ 0002:000001e0       __real@40efffe000000000    100291e0     calc.obj
+ 0002:000001e8       __real@3ff0000000000000    100291e8     calc.obj
+ 0002:000001f0       __real@3fefe01fe01fe020    100291f0     calc.obj
+ 0002:000001f8       __real@3ff0100000000000    100291f8     calc.obj
+ 0002:00000200       __real@3fe0000000000000    10029200     calcgtbl.obj
+ 0002:00000208       __real@3fb0000000000000    10029208     calcitbl.obj
+ 0002:00000210       __real@4030000000000000    10029210     calcitbl.obj
+ 0002:00000218       __real@3ef0000000000000    10029218     calcitbl.obj
+ 0002:00000220       __real@41f0000000000000    10029220     calcitbl.obj
+ 0002:00000228       __real@3ef0001000100010    10029228     calcmtbl.obj
+ 0002:00000230       __real@3f30010010010010    10029230     calcmtbl.obj
+ 0002:00000238       __real@0000000000000000    10029238     calcmtbl.obj
+ 0002:00000240       __real@3fe00010000fdeb2    10029240     calcmtbl.obj
+ 0002:00000248       ??_C@_01JLIPDDHJ@?3?$AA@   10029248     cmpsatt.obj
+ 0002:00000250       __real@3ff04fb2862c2694    10029250     cmyklin.obj
+ 0002:00000258       __real@3f938b47c73eee52    10029258     cmyklin.obj
+ 0002:00000260       __real@3feb3334175ec8d1    10029260     cmyklin.obj
+ 0002:00000268       __real@3fc69691a75cd0bb    10029268     cmyklin.obj
+ 0002:00000270       __real@3ff2d2d234eb9a17    10029270     cmyklin.obj
+ 0002:00000278       __real@3fef63a5c1c6088d    10029278     cmyklin.obj
+ 0002:00000280       __real@3fdccccccccccccd    10029280     combine.obj
+ 0002:00000288       __real@3fb95810624dd2f2    10029288     combine.obj
+ 0002:00000290       __real@37800080            10029290     compose.obj
+ 0002:00000294       ??_C@_01HIHLOKLC@1?$AA@    10029294     futiomem.obj
+ 0002:00000298       ??_C@_0BH@CLEOMPIO@?0?5all?5rights?5reserved?4?$AA@ 10029298     futiomem.obj
+ 0002:000002b0       ??_C@_0CL@JBNHGNMM@Copyright?5?$CIc?$CJ?5Eastman?5Kodak?5Comp@ 100292b0     futiomem.obj
+ 0002:000002dc       ??_C@_01DHDKHMHF@6?$AA@    100292dc     futiomem.obj
+ 0002:000002e0       __real@3f70000000000000    100292e0     fwdmono.obj
+ 0002:000002e8       __real@3fd5555555555519    100292e8     fxnull.obj
+ 0002:000002f0       __real@3fc5555555555519    100292f0     fxnull.obj
+ 0002:000002f8       __real@4042000000000066    100292f8     fxnull.obj
+ 0002:00000300       __real@c00048484848484b    10029300     fxnull.obj
+ 0002:00000308       __real@3fefb7b7b7b7b788    10029308     fxnull.obj
+ 0002:00000310       __real@3fd5959595959548    10029310     fxnull.obj
+ 0002:00000318       __real@3fe3333333333333    10029318     fxnull.obj
+ 0002:00000320       __real@bff945b77e9b0ce6    10029320     fxnull.obj
+ 0002:00000328       __real@3fe39b9b9b9b9bc2    10029328     fxnull.obj
+ 0002:00000330       __real@3fe8989898989885    10029330     fxnull.obj
+ 0002:00000338       __real@3fd5555555555555    10029338     invxform.obj
+ 0002:00000340       ??_C@_01PAPGNFGE@c?$AA@    10029340     io.obj
+ 0002:00000344       ??_C@_01KDCPPGHE@r?$AA@    10029344     io.obj
+ 0002:00000348       __real@40f0000000000000    10029348     iomf.obj
+ 0002:00000350       __real@3fefe00000000000    10029350     iomf.obj
+ 0002:00000358       __real@3ee4f8b588e368f1    10029358     iomf.obj
+ 0002:00000360       ??_C@_01KICIPPFI@?2?$AA@   10029360     kpfile.obj
+ 0002:00000364       ??_C@_03EMIMMIHL@?$CK?4?$CK?$AA@ 10029364     kpfile.obj
+ 0002:00000368       __real@4022000000000000    10029368     lab2uvl.obj
+ 0002:00000370       __real@400efb69984a0e41    10029370     lab2uvl.obj
+ 0002:00000378       __real@403273fdb4cc2507    10029378     lab2uvl.obj
+ 0002:00000380       __real@3fddddddddddde1a    10029380     lab2uvl.obj
+ 0002:00000388       __real@400010204081022d    10029388     lab2uvl.obj
+ 0002:00000390       __real@3fe11111111110f3    10029390     lab2uvl.obj
+ 0002:00000398       __real@3faad39bd5c31dbc    10029398     lab2uvl.obj
+ 0002:000003a0       __real@4008000000000000    100293a0     lab2uvl.obj
+ 0002:000003a8       __real@3fffdfffffffffaf    100293a8     lab2uvl.obj
+ 0002:000003b0       __real@3fe0101010101039    100293b0     lab2uvl.obj
+ 0002:000003b8       __real@3fc408c5266dac75    100293b8     lab2uvl.obj
+ 0002:000003c0       __real@3fd45f306dc9c883    100293c0     lab2uvl.obj
+ 0002:000003c8       __real@3ff921fb54442d18    100293c8     lab2uvl.obj
+ 0002:000003d0       __real@4010000000000000    100293d0     lab2uvl.obj
+ 0002:000003d8       __real@402e000000000000    100293d8     lab2uvl.obj
+ 0002:000003e0       __real@3fea816f0068db8c    100293e0     lab2uvl.obj
+ 0002:000003e8       __real@3f77c1bda5119ce0    100293e8     lab2uvl.obj
+ 0002:000003f0       __real@3feefb69984a0e41    100293f0     lab2uvl.obj
+ 0002:000003f8       __real@3f630164840e171a    100293f8     lab2uvl.obj
+ 0002:00000400       __real@4060000000000000    10029400     lab2uvl.obj
+ 0002:00000408       __real@406fe00000000000    10029408     lab2uvl.obj
+ 0002:00000410       __real@40198e64b8d4ddae    10029410     lab2uvl.obj
+ 0002:00000418       __real@3fdfdfdfdfdfdf8e    10029418     lab2uvl.obj
+ 0002:00000420       __real@4001249249249227    10029420     lab2uvl.obj
+ 0002:00000428       __real@403315e5bf6fb107    10029428     lab2uvl.obj
+ 0002:00000430       __real@3ffe000000000035    10029430     lab2uvl.obj
+ 0002:00000438       __real@3f70101010101010    10029438     lab2uvl.obj
+ 0002:00000440       __real@406fc00000000000    10029440     lab2uvl.obj
+ 0002:00000448       __real@40038383838383b9    10029448     lab2uvl.obj
+ 0002:00000450       __real@3fb1eb851eb851ec    10029450     lab2uvl.obj
+ 0002:00000458       __real@3fe921fb54442d18    10029458     lab2uvl.obj
+ 0002:00000460       __real@400921fb54442d18    10029460     lab2uvl.obj
+ 0002:00000468       __real@40030db8630db862    10029468     lab2uvl.obj
+ 0002:00000470       __real@3fc51eb851eb851f    10029470     lab2uvl.obj
+ 0002:00000478       __real@3f80204081020408    10029478     lab2xyz.obj
+ 0002:00000480       __real@3f80000000000000    10029480     lab2xyz.obj
+ 0002:00000488       __real@3fdfdfdfdfdfdfe0    10029488     lab2xyz.obj
+ 0002:00000490       __real@3fe0101010101010    10029490     lab2xyz.obj
+ 0002:00000498       __real@3fdedab9f559b3d0    10029498     lab2xyz.obj
+ 0002:000004a0       __real@3fda6594af4f0d84    100294a0     lab2xyz.obj
+ 0002:000004a8       __real@4000000000000000    100294a8     lab2xyz.obj
+ 0002:000004b0       __real@3fca7b9611a7b961    100294b0     lensity.obj
+ 0002:000004b8       __real@3fb47ae147ae147b    100294b8     lensity.obj
+ 0002:000004c0       __real@3fc47ae147ae147b    100294c0     lensity.obj
+ 0002:000004c8       __real@3fe01010100f8cfc    100294c8     linlab.obj
+ 0002:000004d0       __real@3fda981d31fdc766    100294d0     logrgb.obj
+ 0002:000004d8       __real@3f70101010100ba6    100294d8     logrgb.obj
+ 0002:000004e0       __real@4030ede137e8e6f8    100294e0     logrgb.obj
+ 0002:000004e8       __real@3f85d4df6a7ee154    100294e8     logrgb.obj
+ 0002:000004f0       __real@3fcc66c4ff88493e    100294f0     logrgb.obj
+ 0002:000004f8       __real@4001c71c71bf79c2    100294f8     logrgb.obj
+ 0002:00000500       __real@3fed1d085ab64cbf    10029500     logrgb.obj
+ 0002:00000508       __real@3fb961e31ef3b61b    10029508     logrgb.obj
+ 0002:00000510       __real@3fb4c47400e15a00    10029510     logrgb.obj
+ 0002:00000518       __real@401206fa09821b09    10029518     logrgb.obj
+ 0002:00000520       __real@3ff1961e31ef3b62    10029520     logrgb.obj
+ 0002:00000528       __real@3f926e978d4fdf3b    10029528     logrgb.obj
+ 0002:00000530       __real@3fae3e5aaa7949c0    10029530     logrgb.obj
+ 0002:00000538       __real@40026bb1bbb55516    10029538     logrgb.obj
+ 0002:00000540       __real@40034098235bca40    10029540     logrgb.obj
+ 0002:00000548       __real@4009feb2612385aa    10029548     loguvl.obj
+ 0002:00000550       __real@3fd84ff3a991a054    10029550     loguvl.obj
+ 0002:00000558       __real@3fe3331e3a7daa50    10029558     loguvl.obj
+ 0002:00000560       __real@3fda3d70a3d70a3d    10029560     loguvl.obj
+ 0002:00000568       __real@400323076283d2bc    10029568     loguvl.obj
+ 0002:00000570       __real@3fd2656d67f8111c    10029570     loguvl.obj
+ 0002:00000578       __real@3fd0000000000000    10029578     loguvl.obj
+ 0002:00000580       __real@3fdae147ae147ae1    10029580     loguvl.obj
+ 0002:00000588       __real@4003831f3831f383    10029588     loguvl.obj
+ 0002:00000590       __real@40134098235bca40    10029590     loguvl.obj
+ 0002:00000598       __real@3fd3b237cf36acd4    10029598     loguvl.obj
+ 0002:000005a0       __real@40030c30c30c30c3    100295a0     loguvl.obj
+ 0002:000005a8       __real@3fdac13363a4d9f4    100295a8     loguvl.obj
+ 0002:000005b0       __real@3fc71973e5a7a088    100295b0     loguvl.obj
+ 0002:000005b8       __real@3fea6594af4f0d84    100295b8     profile.obj
+ 0002:000005c0       __real@3feedab9f559b3d0    100295c0     profile.obj
+ 0002:000005c8       ??_C@_01GOHFPIOK@m?$AA@    100295c8     ptiomem.obj
+ 0002:000005cc       ??_C@_0P@KKGJHBOJ@Software?2Kodak?$AA@ 100295cc     registry.obj
+ 0002:000005dc       __real@37800000            100295dc     rel2abs.obj
+ 0002:0000062c       ??_C@_0BD@CPFAGHGO@GetColorDirectoryA?$AA@ 1002962c     spsearch.obj
+ 0002:00000640       ??_C@_09IKMBPFJF@mscms?4dll?$AA@ 10029640     spsearch.obj
+ 0002:0000064c       _SpFreeElement             1002964c     sptagmgr.obj
+ 0002:00000650       _SpNotFound                10029650     sptagmgr.obj
+ 0002:00000680       __real@4014000000000000    10029680     spxfgpr.obj
+ 0002:00000688       __real@3fe8000000000000    10029688     spxfgpr.obj
+ 0002:00000690       __real@4000baff052dc4ef    10029690     uvl2lab.obj
+ 0002:00000698       __real@3fe57ce1d531611a    10029698     uvl2lab.obj
+ 0002:000006a0       __real@3ff0739ce739ce97    100296a0     uvl2lab.obj
+ 0002:000006a8       __real@3fee417eb7f49b8d    100296a8     uvl2lab.obj
+ 0002:000006b0       __real@3fd4a5294a52949f    100296b0     uvl2lab.obj
+ 0002:000006b8       __real@3fd5d5d5d5d5d62b    100296b8     uvl2lab.obj
+ 0002:000006c0       __real@3fe084210842105b    100296c0     uvl2lab.obj
+ 0002:000006c8       __real@3f70204081020408    100296c8     uvl2lab.obj
+ 0002:000006d0       __real@3fe001001001000f    100296d0     uvl2lab.obj
+ 0002:000006d8       __real@3f647ae147ae147b    100296d8     uvl2lab.obj
+ 0002:000006e0       __real@40658d3dcb08d3dd    100296e0     uvl2lab.obj
+ 0002:000006e8       __real@3ff3511176577745    100296e8     uvl2lab.obj
+ 0002:000006f0       __real@407af08d3dcb08d4    100296f0     uvl2lab.obj
+ 0002:000006f8       __real@3ff08693177f89e2    100296f8     uvl2lab.obj
+ 0002:00000700       __real@4002000000000000    10029700     uvl2lab.obj
+ 0002:00000708       __real@3fdadf1f312d3e1c    10029708     uvl2lab.obj
+ 0002:00000710       __real@3fda3ce9c6612178    10029710     uvl2lab.obj
+ 0002:00000718       __real@44dfe2afe62f756b    10029718     uvl2lab.obj
+ 0002:00000720       __real@c060000000000000    10029720     uvl2lab.obj
+ 0002:00000728       __real@405fc00000000000    10029728     uvl2lab.obj
+ 0002:00000730       __real@4079000000000000    10029730     uvl2lab.obj
+ 0002:00000738       ??_C@_0N@LKPDLNLB@KodakCMS?4dll?$AA@ 10029738     wkcpmgr.obj
+ 0002:00000748       __real@3fb9999999999999    10029748     xfers.obj
+ 0002:00000750       __real@3d719799812dea11    10029750     xfers.obj
+ 0002:00000758       __real@3fb999999999999a    10029758     xfers.obj
+ 0002:00000760       __real@40009814d0cb0eec    10029760     xyz2lab.obj
+ 0002:00000768       __real@400365734aa30d90    10029768     xyz2lab.obj
+ 0002:00000770       __real@40013dcb08d3dca9    10029770     xyz2lab.obj
+ 0002:00000778       __real@3feb9611a7b9610e    10029778     xyz2lab.obj
+ 0002:00000780       __real@4069000000000000    10029780     xyz2lab.obj
+ 0002:00000788       __real@3ffffe0000000000    10029788     xyz2lab.obj
+ 0002:00000790       __real@3fe6db6db6db6db7    10029790     xyzmap.obj
+ 0002:00000798       __real@3ff6666666666666    10029798     xyzmap.obj
+ 0002:000007a0       ??_C@_0L@PIOLCAEG@sampleInfo?$AA@ 100297a0     CMM.obj
+ 0002:000007ac       ??_C@_0M@LBLJHOKM@DataOffsets?$AA@ 100297ac     CMM.obj
+ 0002:000007b8       ??_C@_02EBOMBDPA@?$FLI?$AA@ 100297b8     CMM.obj
+ 0002:000007bc       ??_C@_08GBNODAMA@chanData?$AA@ 100297bc     CMM.obj
+ 0002:000007c8       ??_C@_0BE@EOPHJDGO@?$FLLjava?1lang?1Object?$DL?$AA@ 100297c8     CMM.obj
+ 0002:000007dc       ??_C@_0M@GCBPFHNE@NumChannels?$AA@ 100297dc     CMM.obj
+ 0002:000007e8       ??_C@_09IBCDCMOD@OffsetRow?$AA@ 100297e8     CMM.obj
+ 0002:000007f4       ??_C@_0N@BPLALLJ@OffsetColumn?$AA@ 100297f4     CMM.obj
+ 0002:00000804       ??_C@_07NIMKDMFP@NumRows?$AA@ 10029804     CMM.obj
+ 0002:0000080c       ??_C@_07JFDJMOPM@NumCols?$AA@ 1002980c     CMM.obj
+ 0002:00000814       ??_C@_04KOACHJEN@Type?$AA@ 10029814     CMM.obj
+ 0002:0000081c       ??_C@_01JPJNBJEM@I?$AA@    1002981c     CMM.obj
+ 0002:00000820       ??_C@_02OLOABKKD@ID?$AA@   10029820     CMM.obj
+ 0002:00000824       ??_C@_01LELAEKIP@J?$AA@    10029824     CMM.obj
+ 0002:00000828       ??_C@_0BC@PIBMLMLI@sun?1awt?1color?1CMM?$AA@ 10029828     CMM.obj
+ 0002:0000083c       ??_C@_0CH@NLOFIALJ@transforms?5array?5contains?5null?5e@ 1002983c     CMM.obj
+ 0002:00000864       ??_C@_0BJ@CLIFEBPE@transforms?5array?5is?5null?$AA@ 10029864     CMM.obj
+ 0002:000008b0       __load_config_used         100298b0     MSVCRT:loadcfg.obj
+ 0002:00000960       ___safe_se_handler_table   10029960     <linker-defined>
+ 0002:00000964       ___rtc_iaa                 10029964     MSVCRT:initsect.obj
+ 0002:00000968       ___rtc_izz                 10029968     MSVCRT:initsect.obj
+ 0002:0000096c       ___rtc_taa                 1002996c     MSVCRT:initsect.obj
+ 0002:00000970       ___rtc_tzz                 10029970     MSVCRT:initsect.obj
+ 0002:00000974       __IMPORT_DESCRIPTOR_java   10029974     java:java.dll
+ 0002:00000988       __IMPORT_DESCRIPTOR_USER32 10029988     user32:USER32.dll
+ 0002:0000099c       __IMPORT_DESCRIPTOR_ADVAPI32 1002999c     advapi32:ADVAPI32.dll
+ 0002:000009b0       __IMPORT_DESCRIPTOR_MSVCR71 100299b0     MSVCRT:MSVCR71.dll
+ 0002:000009c4       __IMPORT_DESCRIPTOR_KERNEL32 100299c4     kernel32:KERNEL32.dll
+ 0002:000009d8       __NULL_IMPORT_DESCRIPTOR   100299d8     java:java.dll
+ 0003:00000000       ___xc_a                    1002b000     MSVCRT:cinitexe.obj
+ 0003:00000004       ___xc_z                    1002b004     MSVCRT:cinitexe.obj
+ 0003:00000008       ___xi_a                    1002b008     MSVCRT:cinitexe.obj
+ 0003:0000000c       ___xi_z                    1002b00c     MSVCRT:cinitexe.obj
+ 0003:000014a0       ___security_cookie         1002c4a0     MSVCRT:seccook.obj
+ 0003:000018c4       _KcpUsageCount             1002c8c4     wkcpmgr.obj
+ 0003:00001900       _kcp_ini                   1002c900     <common>
+ 0003:000019e0       _Sp_uvL2Lab                1002c9e0     <common>
+ 0003:00001a00       _Sp_Lab2uvL                1002ca00     <common>
+ 0003:00001a20       _SpCacheCritFlag           1002ca20     <common>
+ 0003:00001a3c       _ICCRootInstanceID         1002ca3c     <common>
+ 0003:00001a40       _theRootID                 1002ca40     <common>
+ 0003:00001a60       _PTCacheCritFlag           1002ca60     <common>
+ 0003:00001a7c       _SpHInst                   1002ca7c     <common>
+ 0003:00001a80       __adjust_fdiv              1002ca80     <common>
+ 0003:00001a84       ___onexitend               1002ca84     <common>
+ 0003:00001a88       ___onexitbegin             1002ca88     <common>
+ 0003:00001a8c       __pRawDllMain              1002ca8c     <common>
+
+ entry point at        0001:00027088
+
+ Static symbols
+
+ 0001:00000046       _LinearScanList            10001046 f   attrmgr.obj
+ 0001:000001a4       _AddAttribute              100011a4 f   attrmgr.obj
+ 0001:00000420       _SetAttribute              10001420 f   attrmgr.obj
+ 0001:0000075f       _getAuxBuild               1000175f f   auxpt.obj
+ 0001:00001230       _ipowfunc                  10002230 f   calcitbl.obj
+ 0001:00002392       _applyRule                 10003392 f   chnrules.obj
+ 0001:00002413       _getChainClass             10003413 f   chnrules.obj
+ 0001:00002453       _doChainInit               10003453 f   chnrules.obj
+ 0001:00002571       _doChainEnd                10003571 f   chnrules.obj
+ 0001:0000264a       _addIntStr                 1000364a f   cmpsatt.obj
+ 0001:0000267a       _setEFFECTstate            1000367a f   cmpsatt.obj
+ 0001:0000272f       _setLinearized             1000372f f   cmpsatt.obj
+ 0001:0000275d       _generateAttr              1000375d f   cmpsatt.obj
+ 0001:00002cb2       _getGenderMendFut          10003cb2 f   combine.obj
+ 0001:00002ce3       _genderMendCompose         10003ce3 f   combine.obj
+ 0001:00002d3e       _hasLinPlus                10003d3e f   combine.obj
+ 0001:00002e32       _pfCompose                 10003e32 f   combine.obj
+ 0001:00003598       _fut_comp_itbl_ilut        10004598 f   compilut.obj
+ 0001:00003667       _fut_comp_chan_ilut        10004667 f   compilut.obj
+ 0001:00003a72       _fut_comp_iotblMF          10004a72 f   compose.obj
+ 0001:00004a21       _getEvalDataType           10005a21 f   doevalsw.obj
+ 0001:00004a4b       _getFormatFuncI            10005a4b f   doevalsw.obj
+ 0001:00004afd       _getFormatFuncO            10005afd f   doevalsw.obj
+ 0001:00004baf       _format_analyze            10005baf f   doevalsw.obj
+ 0001:00004c85       _getImageBounds            10005c85 f   doevalsw.obj
+ 0001:00010094       _getTh1EvalFuncOpt         10011094 f   evalth1c.obj
+ 0001:00010343       _initGridInfo              10011343 f   evalth1c.obj
+ 0001:00010424       _th1MFtbl2InLut            10011424 f   evalth1c.obj
+ 0001:00010496       _hasEtMem                  10011496 f   evalth1c.obj
+ 0001:000104b1       _lockEtMem                 100114b1 f   evalth1c.obj
+ 0001:000105ad       _freeEtMem                 100115ad f   evalth1c.obj
+ 0001:00010612       _allocEtMem                10011612 f   evalth1c.obj
+ 0001:00010b52       _interp1DTable             10011b52 f   evalth1g.obj
+ 0001:0001112a       _extrap                    1001212a f   f4lex.obj
+ 0001:00012477       _getDataClass              10013477 f   futiomem.obj
+ 0001:00012491       _checkInDataClass          10013491 f   futiomem.obj
+ 0001:000139e5       _fut_write_itbl            100149e5 f   io.obj
+ 0001:00013a85       _fut_read_itbl             10014a85 f   io.obj
+ 0001:00013b7b       _fut_write_otbl            10014b7b f   io.obj
+ 0001:00013c04       _fut_read_otbl             10014c04 f   io.obj
+ 0001:00013cbe       _fut_write_gtbl            10014cbe f   io.obj
+ 0001:00013d94       _fut_read_gtbl             10014d94 f   io.obj
+ 0001:00013eca       _fut_write_chan            10014eca f   io.obj
+ 0001:00013f59       _fut_read_chan             10014f59 f   io.obj
+ 0001:00014375       _futio_encode_itbl         10015375 f   ioencode.obj
+ 0001:000143c6       _futio_decode_itbl         100153c6 f   ioencode.obj
+ 0001:00014437       _futio_decode_otbl         10015437 f   ioencode.obj
+ 0001:00014a5b       _getIndexRatio             10015a5b f   iomf.obj
+ 0001:00014aef       _getValueRatio             10015aef f   iomf.obj
+ 0001:00014b6f       _checkCPv0Gen              10015b6f f   iomf.obj
+ 0001:00014c75       _readMabCurveData          10015c75 f   iomf.obj
+ 0001:00015117       _fut_read_mab_data         10016117 f   iomf.obj
+ 0001:00015454       _futFromMabFutTbls         10016454 f   iomf.obj
+ 0001:00015ca6       _fut_read_mft_data         10016ca6 f   iomf.obj
+ 0001:00016076       _futFromMFutTbls           10017076 f   iomf.obj
+ 0001:000166c4       _has_chan                  100176c4 f   iotable.obj
+ 0001:0001674b       _KpFdCheck                 1001774b f   kcms_io.obj
+ 0001:0001726d       _Encode                    1001826d f   kpmd5.obj
+ 0001:0001729e       _MD5Transform              1001829e f   kpmd5.obj
+ 0001:0001812c       _Lifun                     1001912c f   lab2xyz.obj
+ 0001:00018161       _abifun                    10019161 f   lab2xyz.obj
+ 0001:000181e5       _gfun                      100191e5 f   lab2xyz.obj
+ 0001:0001833b       _ofun                      1001933b f   lab2xyz.obj
+ 0001:0001854f       _Lifun                     1001954f f   linlab.obj
+ 0001:0001858e       _abifun                    1001958e f   linlab.obj
+ 0001:00018604       _ofun                      10019604 f   linlab.obj
+ 0001:00018c29       _fut_malloc                10019c29 f   malloc.obj
+ 0001:00018ea4       _fut_unlock_itbls          10019ea4 f   malloc.obj
+ 0001:00018f19       _fut_lock_itbls            10019f19 f   malloc.obj
+ 0001:00018f68       _fut_unlock_chan           10019f68 f   malloc.obj
+ 0001:0001904b       _fut_lock_chan             1001a04b f   malloc.obj
+ 0001:00019303       _calcItableN               1001a303 f   mat2fut.obj
+ 0001:0001955e       _initOTable                1001a55e f   mat2fut.obj
+ 0001:0001955e       _initOTable                1001a55e f   mat2fut.obj
+ 0001:00019626       _calcOtable0               1001a626 f   mat2fut.obj
+ 0001:000196b6       _calcOtable1               1001a6b6 f   mat2fut.obj
+ 0001:000197b8       _calcOtableN               1001a7b8 f   mat2fut.obj
+ 0001:000199b0       _makeXformFromMatrix       1001a9b0 f   mat2fut.obj
+ 0001:00019e44       _isValidMatrix             1001ae44 f   matrix.obj
+ 0001:00019e66       _getMatrixMinDim           1001ae66 f   matrix.obj
+ 0001:0001a0e9       _gammaFunc                 1001b0e9 f   moncurv.obj
+ 0001:0001a12b       _invGammaFunc              1001b12b f   moncurv.obj
+ 0001:0001a4c9       _fut_free_itbldat_list     1001b4c9 f   new.obj
+ 0001:0001a80b       _fut_free_itbl_list        1001b80b f   new.obj
+ 0001:0001b4b4       _calcChanMask              1001c4b4 f   pteval.obj
+ 0001:0001b4f9       _getDataBytes              1001c4f9 f   pteval.obj
+ 0001:0001b526       _setupEvalList             1001c526 f   pteval.obj
+ 0001:0001bf88       _freeSerialData            1001cf88 f   pttmgr.obj
+ 0001:0001c487       _KpUseRegistryEx           1001d487 f   registry.obj
+ 0001:0001c4c3       _KpconvertSpace            1001d4c3 f   registry.obj
+ 0001:0001c504       _KpCreateRegistry          1001d504 f   registry.obj
+ 0001:0001c612       _KpOpenReadOnlyRegistry    1001d612 f   registry.obj
+ 0001:0001c710       _KpWriteRegistry           1001d710 f   registry.obj
+ 0001:0001c7c0       _KpReadRegistry            1001d7c0 f   registry.obj
+ 0001:0001d27a       _SpTagNeedHeader           1001e27a f   spattr.obj
+ 0001:0001d61b       _SpAttrTypeSigToTypeId     1001e61b f   spattrio.obj
+ 0001:0001d77d       _SpArray16ToPublic         1001e77d f   spattrio.obj
+ 0001:0001d7ce       _SpArray32ToPublic         1001e7ce f   spattrio.obj
+ 0001:0001d822       _SpArray64ToPublic         1001e822 f   spattrio.obj
+ 0001:0001d884       _SpArray8ToPublic          1001e884 f   spattrio.obj
+ 0001:0001d8c4       _SpGetName32               1001e8c4 f   spattrio.obj
+ 0001:0001d909       _SpColorTableToPublic      1001e909 f   spattrio.obj
+ 0001:0001d9c5       _SpTextDescToPublic        1001e9c5 f   spattrio.obj
+ 0001:0001dbc8       _SpMultiLanguageToPublic   1001ebc8 f   spattrio.obj
+ 0001:0001dcf6       _SpDeviceDescToPublic      1001ecf6 f   spattrio.obj
+ 0001:0001dd3b       _SpProfileSeqDescToPublic  1001ed3b f   spattrio.obj
+ 0001:0001dec7       _SpNamedColorGetName       1001eec7 f   spattrio.obj
+ 0001:0001df0b       _SpNamedColor2GetRecord    1001ef0b f   spattrio.obj
+ 0001:0001df6d       _SpNamedColors2ToPublic    1001ef6d f   spattrio.obj
+ 0001:0001e03f       _SpNamedColorsToPublic     1001f03f f   spattrio.obj
+ 0001:0001e144       _SpUcrbgToPublic           1001f144 f   spattrio.obj
+ 0001:0001e22c       _SpCrdGetInfo              1001f22c f   spattrio.obj
+ 0001:0001ef43       _SpChainSequenceImp        1001ff43 f   speval.obj
+ 0001:0001f54a       _SpValidateLayout          1002054a f   speval.obj
+ 0001:0001f5a1       _ProgCallBack@4            100205a1 f   speval.obj
+ 0001:0001f8c6       _SpInitMatrix              100208c6 f   splut.obj
+ 0001:0001f8e5       _SpLut8SizeOfClut          100208e5 f   splut.obj
+ 0001:0001fa07       _SpLut8ToPublic            10020a07 f   splut.obj
+ 0001:0001faa9       _SpLut16SizeOfClut         10020aa9 f   splut.obj
+ 0001:0001fc0e       _SpLut16ToPublic           10020c0e f   splut.obj
+ 0001:0001fcfe       _SpGetABCurve              10020cfe f   splut.obj
+ 0001:0001fd5a       _GetCLUTSize               10020d5a f   splut.obj
+ 0001:0001fd7a       _SpGetABCLut               10020d7a f   splut.obj
+ 0001:000200f6       _SpLutABToPublic           100210f6 f   splut.obj
+ 0001:00020213       _SpLutBAToPublic           10021213 f   splut.obj
+ 0001:00021103       _SpSearchEngine            10022103 f   spsearch.obj
+ 0001:00021344       _TestFile                  10022344 f   spsearch.obj
+ 0001:0002151e       _TestFileCB                1002251e f   spsearch.obj
+ 0001:0002160c       _SpGetInstanceGlobals      1002260c f   spsystem.obj
+ 0001:0002167b       _SpDoTerminate@4           1002267b f   spsystem.obj
+ 0001:00021948       _SpRespCurveToPublic       10022948 f   sptagio.obj
+ 0001:00021b16       _SpSetArrayToPublic        10022b16 f   sptagio.obj
+ 0001:00021bb7       _SpPlatformToPublic        10022bb7 f   sptagio.obj
+ 0001:00021e57       _SpTagDirEntryAssign       10022e57 f   sptagmgr.obj
+ 0001:00021eb7       _SpTagGetFreeIndex         10022eb7 f   sptagmgr.obj
+ 0001:00021ed9       _SpTagDeleteByIndex        10022ed9 f   sptagmgr.obj
+ 0001:00021f17       _SpTagDirArrayInit         10022f17 f   sptagmgr.obj
+ 0001:00022451       _SpProfileCopyHeader       10023451 f   sputilpr.obj
+ 0001:00022488       _DoBufferPadding           10023488 f   sputilpr.obj
+ 0001:000232a5       _SpRenderAndTransToTagId   100242a5 f   spxform.obj
+ 0001:000232e5       _SpConvertLutIdToChainId   100242e5 f   spxform.obj
+ 0001:00023818       _SpGetColorSpaceKp2ICC     10024818 f   spxform.obj
+ 0001:00023afe       _SpXformGetImp             10024afe f   spxform.obj
+ 0001:00024201       _findThreadRoot            10025201 f   thredmem.obj
+ 0001:00024251       _growSlotTable             10025251 f   thredmem.obj
+ 0001:000242d6       _addNewSlotItem            100252d6 f   thredmem.obj
+ 0001:00024344       _deleteSlotItemOne         10025344 f   thredmem.obj
+ 0001:00024380       _deleteSlotItem            10025380 f   thredmem.obj
+ 0001:000243fd       _lockSlotBase              100253fd f   thredmem.obj
+ 0001:0002445f       _unlockSlotBase            1002545f f   thredmem.obj
+ 0001:00024b9d       _DoGlobalAlloc             10025b9d f   winmem.obj
+ 0001:00024bc0       _KpMemHeapSubFind          10025bc0 f   winmem.obj
+ 0001:00024c44       _KpMemHeapSubFree          10025c44 f   winmem.obj
+ 0001:00024cb2       _KpMemHeapSubAlloc         10025cb2 f   winmem.obj
+ 0001:00024d5a       _KpMemHeapSubCreate        10025d5a f   winmem.obj
+ 0001:00024dd1       _KpMemHeapFind             10025dd1 f   winmem.obj
+ 0001:00024dff       _KpMemHeapAdd              10025dff f   winmem.obj
+ 0001:00024f27       _KpMemAllocDoIt            10025f27 f   winmem.obj
+ 0001:00024fa1       _KpMemFreeDoIt             10025fa1 f   winmem.obj
+ 0001:00025005       _KpMemGetSizeDoIt          10026005 f   winmem.obj
+ 0001:0002505e       _KpUseHeap                 1002605e f   winmem.obj
+ 0001:00025095       _KpGetHeapHandle           10026095 f   winmem.obj
+ 0001:000250c2       _KpMemAlloc                100260c2 f   winmem.obj
+ 0001:0002511d       _KpMemFree                 1002611d f   winmem.obj
+ 0001:0002516e       _KpMemGetSize              1002616e f   winmem.obj
+ 0001:000255fa       _ifun                      100265fa f   xyz2lab.obj
+ 0001:00025665       _gfun                      10026665 f   xyz2lab.obj
+ 0001:000256e7       _ofun                      100266e7 f   xyz2lab.obj
+ 0001:000258e6       _criteriaFromHeader        100268e6 f   CMM.obj
+ 0001:00025b20       _pfToID                    10026b20 f   CMM.obj
+ 0001:00025b61       _recordArray               10026b61 f   CMM.obj
+ 0001:00025bee       _initLayoutFids            10026bee f   CMM.obj
+ 0001:00025d0e       _finishLayoutInit          10026d0e f   CMM.obj
+ 0001:000261ed       _initImageLayouts          100271ed f   CMM.obj
+ 0001:00026530       _getClassID                10027530 f   CMM.obj
+ 0001:00026565       _setClassID                10027565 f   CMM.obj
+ 0001:000265a3       _setObjectID               100275a3 f   CMM.obj
+ 0001:000265dc       _getObjectID               100275dc f   CMM.obj
+ 0001:0002661b       _returnInt                 1002761b f   CMM.obj
+ 0001:000266ab       _getCallerID               100276ab f   CMM.obj

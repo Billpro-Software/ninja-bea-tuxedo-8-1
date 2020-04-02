@@ -1,0 +1,285 @@
+#!/bin/sh
+#    runsample
+#
+#  DESCRIPTION
+#    Run one or all of the MDS sample programs that illustrate the use of
+#    the MDS core API to initialize the MDSInstance, register XSD files
+#    and metadata stores, and read and update metadata objects.
+#
+#   MODIFIED   (MM/DD/YY)
+#   snoton     08/24/09  - #(8808215) use mds-tools.jar instead of 
+#                          setMDSclasspath
+#   dklein     04/06/09  - #(8406848) Bypass customization restrictions
+#   dklein     10/15/08  - #(7483381) Remove sample 9
+#   snoton     08/20/08  - set classpath to point to new location of
+#                          mds-samples.jar
+#   pwhaley    07/03/08  - Adjust directories for oracle home reorg; note
+#                          dependency of 4 on 3; quote usage echoing.
+#   snoton     03/11/08  - set classpath to point to mds-samples.jar
+#   pwhaley    08/08/07  - #(6282242) Add DEBUG_SAMPLES to do remote debug.
+#   pwhaley    06/12/07  - #(6128016) setMDSclasspath has moved, so its
+#                          DELIVER is not correct when sourced from here.
+#   dklein     06/05/07  - #(6082153) set property ALWAYS_BINARY_MODE 
+#   cbarrow    05/31/07  - #(6082153) Convert file to unix format.
+#   dklein     05/22/07  - Created based on runsample.bat.
+
+#############################################################################
+##   This file should be in sync with the "runsample.bat" windows batch    ##
+##   file. Please update "runsample.bat." when updating this file.         ##
+#############################################################################
+
+###############################################
+# List of sample programs (add new ones here)
+###############################################
+
+SAMPLE1=oracle.mds.samples.PortalProviderSample
+SAMPLE2=oracle.mds.samples.mymusicindustry.mymusiccompany.ReadMetadataExample
+SAMPLE3=oracle.mds.samples.mymusicindustry.mymusiccompany.CreateMetadataExample
+SAMPLE4=oracle.mds.samples.mymusicindustry.mymusiccompany.WriteMetadataExample
+SAMPLE5=oracle.mds.samples.mymusicindustry.mymusiccompany.TypeInfoExample
+SAMPLE6=oracle.mds.samples.mymusicindustry.mymusiccompany.PortalCustKeyExample
+SAMPLE7=oracle.mds.samples.versioning.VersioningSample
+SAMPLE8=oracle.mds.samples.UseOraMDSProtocolSample
+
+###############################################
+# subroutines
+###############################################
+
+checkDBARGS()
+{
+    # (Can't do a straight if [ !$DBARGS ] test as DBARGS has multiple strings)
+    DBARGSSET=`echo $DBARGS|grep -c username`
+    if [ ${DBARGSSET} -eq 0 ]
+    then
+        echo "Need to set DBARGS environment variable, e.g."
+        echo "  set DBARGS=username=mdsrepos password=secret sid=ORA8 host=myhost.mycorp.com port=1521"
+        exit
+    fi
+}
+
+checkJAVA_HOME()
+{
+    if [ "$JAVA_HOME" = "" ]
+    then
+        JAVA_HOME=$DELIVER/../jdk
+    fi
+}
+
+compile()
+{
+    if test ! -e ${SAMPLES_CLASSES}
+    then
+        mkdir ${SAMPLES_CLASSES}
+    fi
+    
+    PROG_SOURCE=`echo $PROGRAM|sed 's/\./\//g'`
+    PROG_SOURCE=${PROG_SOURCE}.java
+    COMPILE_CMD="javac -classpath $CLASSPATH -d ${SAMPLES_CLASSES} -nowarn -sourcepath ${SAMPLES_JAVA} ${SAMPLES_JAVA}/${PROG_SOURCE} "
+    
+    if [ $VERBOSE ]
+    then
+        echo $COMPILE_CMD
+    fi
+    
+    $COMPILE_CMD
+}
+
+getSampleNumber()
+{
+    SAMPLE_NO=$1
+
+    if [ $SAMPLE_NO -lt 1 -o $SAMPLE_NO -gt 8 ]
+    then
+        echo "Invalid sample number"
+	exit
+    else
+        case $SAMPLE_NO in
+	1)
+	    PROGRAM=$SAMPLE1
+	    ;;
+	2)
+	    PROGRAM=$SAMPLE2
+	    ;;
+        3)
+	    PROGRAM=$SAMPLE3
+	    ;;
+	4)
+	    PROGRAM=$SAMPLE4
+	    ;;
+	5)
+	    PROGRAM=$SAMPLE5
+	    ;;
+	6)
+	    PROGRAM=$SAMPLE6
+	    ;;
+        7)
+	    PROGRAM=$SAMPLE7
+	    ;;
+	8)
+	    PROGRAM=$SAMPLE8
+	    ;;
+	esac
+    fi
+}
+
+run()
+{
+    DEBUG_ARGS=""
+    if [ $DEBUG_SAMPLES ]
+    then
+        DEBUG_ARGS='-client -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=4000 '
+    fi
+    RUN_CMD='java '${DEBUG_ARGS}'-Doracle.mds.bypassCustRestrict=true -Djava.protocol.handler.pkgs=oracle.mds.net.protocol -classpath '${CLASSPATH}' '${PROGRAM}' --BUILD_ROOT '${DELIVER}' --DBARGS='
+    if [ $VERBOSE ]
+    then
+        echo ${RUN_CMD}"${DBARGS}"
+    fi
+    ${RUN_CMD}"${DBARGS}"
+}
+
+setClassPath()
+{
+    CLASSPATH="${DELIVER}/mds/bin/mdstools.jar"
+}
+
+setPathForJava()
+{
+    PATH=$JAVA_HOME/bin:$PATH
+
+    if [ $VERBOSE ]
+    then
+        java -version
+    fi
+}
+
+setSamplesDirs()
+{
+    # Set DELIVER to the value of the BUILT environment setting if present.  
+    # Otherwise, compute it by assuming this script is being called from the
+    # mds/samples/bin subdir of the DELIVER directory.
+    DELIVER=$BUILT
+    if [ "$BUILT" = "" ] 
+    then 
+        DELIVER=`dirname $0`/../../..
+    fi
+    
+    #
+    # Samples directories
+    #
+    SAMPLES_DIR=${DELIVER}/mds/samples
+    SAMPLES_CLASSES=${SAMPLES_DIR}/classes
+    SAMPLES_JAVA=${SAMPLES_DIR}/java
+    # Set BUILT so setMDSclasspath will get it.
+    BUILT="$DELIVER"
+}
+
+usage()
+{
+    echo "USAGE"
+    echo "   runsample           - display usage"
+    echo "   runsample {program}         - compile and run a sample program"
+    echo "   runsample compile {program} - compile a sample programs"
+    echo "   runsample run     {program} - run a sample programs without compiling"
+    echo " where {program} indicates the sample program to run, as follows:"
+    echo "   1  - ${SAMPLE1}"
+    echo "   2  - ${SAMPLE2}"
+    echo "   3  - ${SAMPLE3}"
+    echo "   4  - ${SAMPLE4}"
+    echo "        (must be preceeded by 3 to create data)"
+    echo "   5  - ${SAMPLE5}"
+    echo "   6  - ${SAMPLE6}"
+    echo "   7  - ${SAMPLE7}"
+    echo "   8  - ${SAMPLE8}"
+    echo "  all - Run and/or compile all the sample programmes"
+    echo "PURPOSE"
+    echo "   Run one of the samples programs illustrating usage of the MDS Runtime API."
+    echo "EXAMPLES"
+    echo "   runsample 1"
+    echo "   runsample all"
+    echo "PREREQUISITES"
+    echo "1. The mdstools.jar file must be available in the DELIVER/mds/bin"
+    echo "   directory to set up the required environment variable:"
+    echo "     CLASSPATH - Classpath for MDS runtime dependancies."
+    echo "2. The following environment variable may be set to run the sample"
+    echo "   program against an MDS Repository:"
+    echo "     DBARGS  - Database connection details."
+    echo "     Example:"
+    echo "       set DBARGS=username=mdsrepos password=secret sid=ORA8 host=myhost.mycorp.com port=1521"
+    echo "3. The following environment variable may be set to turn on verbose mode"
+    echo "     (prints the java and/or javac commands to the console)"
+    echo "     VERBOSE=1"
+    echo "4. The environment variable DEBUG_SAMPLES may be set to enable remote debugging."
+}
+
+###############################################
+# main
+###############################################
+if [ $# -eq 0 ]
+then
+    usage
+    exit
+elif [ $# -eq 1 ]
+then
+    SAMPLE_CHOSEN=$1
+    COMPILING=true
+    RUNNING=true
+elif [ $# -eq 2 ]
+then
+    case $1 in
+        compile)
+	    COMPILING=true
+	    OPTION=compile
+	    ;;
+	run)
+	    RUNNING=true
+	    OPTION=run
+	    ;;
+	*)
+	    usage
+	    exit
+	    ;;
+    esac
+    SAMPLE_CHOSEN=$2	     
+else
+    usage
+    exit
+fi
+
+if [ $SAMPLE_CHOSEN = "all" ]
+then
+    #
+    # Call this script for each of the individual samples
+    #
+    $0 $OPTION 1
+    $0 $OPTION 2
+    $0 $OPTION 3
+    $0 $OPTION 4
+    $0 $OPTION 5
+    $0 $OPTION 6
+    $0 $OPTION 7
+    $0 $OPTION 8
+else
+    #
+    # Sample 7 needs DBARGS to be set
+    #
+    if [ $SAMPLE_CHOSEN -eq 7 ]
+    then
+        checkDBARGS
+    fi
+
+    setSamplesDirs
+    checkJAVA_HOME
+    getSampleNumber $SAMPLE_CHOSEN
+    setClassPath
+    setPathForJava
+
+    if [ $COMPILING ]
+    then
+        compile
+    fi
+
+    if [ $RUNNING ]
+    then
+        run
+    fi
+fi

@@ -1,0 +1,54 @@
+<java>
+/**
+* Copyright (c) 1999 BEA Systems, Inc.  All rights reserved
+*
+* THIS IS SOURCE CODE PUBLISHED FOR DEMONSTRATION PURPOSES
+*/
+</java>
+
+<java type=import>
+bea.jolt.pool.*
+bea.jolt.pool.servlet.*
+java.util.Properties
+java.util.Hashtable
+java.util.Enumeration
+java.io.IOException
+</java>
+
+<java type=class>
+SessionPoolManager b_mgr;
+</java>
+
+<html>
+<head><title>Session Pool Administrator</title></head>
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<java type=code>
+	b_mgr = ServletPoolManagerConfig.getSessionPoolManager();
+	if ((b_mgr == null) || (b_mgr.size() == 0))
+	{
+		out.println("<h2>No Session Pools</h2>");
+	}
+	else
+	{
+		out.println("<h2><font color=#DB1260>"+
+				"Please select one of the session pools:"+
+				"</font></h2><ul>");
+		Enumeration enum = b_mgr.keys();
+		while (enum.hasMoreElements())
+		{
+			String pid = (String) enum.nextElement();
+			out.println(
+				"<li><A HREF=PoolAdmin.jhtml?get=Status&id="+
+				pid+">"+pid+"</A>");
+		}
+		out.println("</ul>");
+	}
+</java>
+
+<p>
+Copyright (c) 1999 BEA Systems, Inc.  All rights reserved.
+</font>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Jolt SimpApp Example</title>
+</head>
+<!-- 
+--	Copyright (c) 1998-99 BEA Systems, Inc.  All rights reserved
+--
+--	THIS IS SOURCE CODE PUBLISHED FOR DEMONSTRATION PURPOSES
+-->
+
+<body bgcolor=#FFFFFF>
+<font face="Helvetica">
+
+<h1>
+<font color=#DB1260>
+Jolt SimpApp Example
+</font>
+</h1>
+
+<blockquote> 
+
+This examples demonstrates how a Java HTTP Servlet running in the
+Weblogic Server services a POST request from a
+<font face="Courier New" color=#00aaaa size=-1>&lt;FORM&gt;</font> in
+this HTML file. The <font face="Courier New" size=-1>simpapp</font>
+servlet invokes a service on the BEA TUXEDO Server that converts the
+text you enter here into uppercase. The result is posted back inside
+a servlet-generated html file.
+
+<form name="simpapp" action="/simpapp" method="post">
+<input type="hidden" name="SVCNAME" value="TOUPPER">
+
+<table bgcolor=#dddddd border=1>
+<tr>
+<td>Type some text here and click the Post button:
+<!-- Note that "STRING" must be in upper case! -->
+<input type="text" name="STRING"></td>
+</tr>
+
+<tr>
+<td align=center><input type="submit" value="Post!">
+</td></tr>
+</table>
+</form>
+
+</blockquote>
+
+<p>
+Click here for <A HREF=PoolList.jhtml>session pools statistics</A>
+</font>
+</body>
+</html>

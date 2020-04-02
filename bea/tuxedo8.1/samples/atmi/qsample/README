@@ -1,0 +1,65 @@
+
+#	(c) 2003 BEA Systems, Inc. All Rights Reserved.
+#Copyright (c) 1992 Unix System Laboratories, Inc.
+#All rights reserved
+#ident	"@(#) samples/atmi/qsample/README	$Revision: 1.5 $"
+#
+This is a brief description of the TUXEDO /Q Application.
+A more comprehensive look can be found in the TUXEDO System/Q
+Guide.
+
+The sample /Q application is very similar to the application in
+simpapp. It consists of a single server offering a single
+service, "STRING",  which converts the string "this is a q example" from 
+lower case to upper case.  The service is called STRING.  The client enqueues 
+a request for this service. The request is placed on the request 
+queue, "STRING," by the TMQUEUE server. The request is handled by the 
+TMQFORWARD server.  This server removes the request from the request queue, 
+sends it to the server for processing, and places the results on the reply 
+queue, "RPLYQ."
+
+You should probably copy the sample files to your own directory,
+since one file must be edited and you might also want to experiment 
+with the client and server code. The change that must be made is to
+set TUXDIR to the location of the TUXEDO software.  This value should
+replace the bracketed item. The full path name must be supplied.
+The file that must be edited is:
+
+		a. setenv	<TUXDIR>
+		
+  Once this file is correct the sample application can be run
+by executing the command "sh runsample." This command is a script that
+will build the servers, create the QUEUE and transaction log, boot
+the application, run the client, and then remove everything. Once
+this script has been run successfully, it may be instructive to
+run each command individually outside of the script.
+
+ The files contained in the /Q sample application are:
+
+	client.c - the client program that enqueues the request and
+	  dequeues the reply.
+
+	server.c - the server file that	contains the service "STRING"
+	  which converts a string from lower case to upper case.
+
+	makefile - a makefile that will build the client and server
+	  executables.
+
+	setenv - a script that sets the necessary environment variables.	
+	  Note that if this example is run on a SUN machine, /usr/5bin
+	  should be added to the beginning of the PATH.  Run this before
+          anything else.
+
+	crlog - a script to create the transaction log.
+
+	crque - a script to create the Queue.
+
+	ubb.sample - the configuration file that describes the application.
+	  The command "uname -n" should be run to get the correct machine
+	  name.
+
+	rmipc - a script that removes the IPC resources for the Queue.
+
+	runsample - a script that calls all the necessary commands to build
+	   and run the sample application.
+

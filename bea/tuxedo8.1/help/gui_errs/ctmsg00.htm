@@ -1,0 +1,1777 @@
+<!-- .if n .pH errman.h.ctmsg00.htm @(#)ctmsg00.htm	60.2 of 3/6/97 -->
+<!-- Copyright 1997 BEA Systems, Inc.-->
+<!-- Copyright 1996 Novell, Inc.-->
+<TITLE>CMDTUX MESSAGES </TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<SECT1>
+<H1>CMDTUX MESSAGES 1-99</H1>
+<P></P>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<P></P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<P>
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="1"></A>
+<H3>CMDTUX MESSAGE #1</H3>
+<H2> ERROR: End time is before start time</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+txrpt
+utility was run with a start time (-s option)
+later than the end time (-e option).
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the command with correct start and end options.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+txrpt (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="10"></A>
+<H3>CMDTUX MESSAGE #10</H3>
+<H2> ERROR: Name table full</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Too many service names were supplied with the
+txrpt
+utility's
+-n
+option, causing an internal
+table to overflow.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Re-run the command with fewer service names,
+or contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+txrpt (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="15"></A>
+<H3>CMDTUX MESSAGE #15</H3>
+<H2> ERROR: txrpt: bad -d <I>arg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+txrpt
+command was called with an invalid parameter for the
+-d
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the command with a corrected
+-d
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+txrpt (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="16"></A>
+<H3>CMDTUX MESSAGE #16</H3>
+<H2> ERROR: txrpt: bad -d option value <I>arg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+txrpt
+command was called with an invalid parameter for the
+-d
+option.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Retry the command with a corrected
+-d
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+txrpt (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="17"></A>
+<H3>CMDTUX MESSAGE #17</H3>
+<H2> WARN: BBL tpsvrinit: bad command line options were specified when booting the BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Bad command line options were specified when booting the
+BBL.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Specify correct command line options for booting the
+BBL.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="18"></A>
+<H3>CMDTUX MESSAGE #18</H3>
+<H2> ERROR: BBL tpsvrinit: cannot find the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a networked application (MP mode), the
+BBL
+server initialization routine cannot find the
+DBBL
+entry in the Bulletin Board.
+The
+DBBL's
+copy of the Bulletin Board in its own process space may be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.
+The
+DBBL
+should be booted before the
+BBL
+in a networked application.
+Try to shut down the application, remove
+IPC,
+and then reboot the
+DBBL
+and
+BBL.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="19"></A>
+<H3>CMDTUX MESSAGE #19</H3>
+<H2> ERROR: BBL tpsvrinit: cannot update the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+In a networked application (MP mode), the
+BBL
+server initialization routine cannot find the
+DBBL
+entry in the Bulletin Board.
+The
+DBBL's
+copy of the Bulletin Board in its own process space may be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check if the
+DBBL
+is active.
+The
+DBBL
+should be booted before the
+BBL
+in a networked application.
+Try to shut down the application, remove
+IPC,
+and then reboot the
+DBBL
+and
+BBL.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="20"></A>
+<H3>CMDTUX MESSAGE #20</H3>
+<H2> ERROR: BBL tpsvrinit: cannot find the BBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+server initialization routine cannot find its own entry
+in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.
+Shut down the application, remove IPCs, and reboot the
+DBBL
+and
+BBL.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="21"></A>
+<H3>CMDTUX MESSAGE #21</H3>
+<H2> ERROR: BBL tpsvrinit: cannot update the BBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+server initialization routine cannot update its own entry
+in the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board may be corrupted.
+Shut down the application, remove
+IPC,
+then reboot the
+DBBL
+and
+BBL.
+If the error persists, contact your TUXEDO System Technical Support.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmboot (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="22"></A>
+<H3>CMDTUX MESSAGE #22</H3>
+<H2> ERROR: Exceeds the maximum number of times for the BBL to get a new Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After every interval of value in
+scanunit ,
+the
+BBL
+does sanity checks
+on the Bulletin Board.
+When the BBL detects that the Bulletin Board is insane,
+it attempts to recover the Bulletin Board by getting a new one.
+When the maximum number of Bulletin Board uploads have
+been received, the
+BBL
+will exit.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board on the local machine may have been corrupted.
+System recovery attempts have failed.
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="23"></A>
+<H3>CMDTUX MESSAGE #23</H3>
+<H2> ERROR: Administrative service request <I>servicename</I> handled by BBL  failed - <I>msg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A service request handled by the BBL failed.
+The request could be one of
+tmadmin
+requests,
+tmconfig
+requests,
+tpbroadcast
+requests, and others.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the error is an operating system error, the
+Uunixerr
+and
+errno
+will be printed.
+Check the userlog for earlier messages on the problem.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="24"></A>
+<H3>CMDTUX MESSAGE #24</H3>
+<H2> ERROR: The BBL could not bring down a paired bridge</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Before the
+BBL
+can shut down, it sends a shutdown message to
+its paired
+BRIDGE
+and
+BSBRIDGE .
+The paired bridges could not
+be brought down; the shutdown message was not created
+due to the insufficient memory space.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+See LIBTUX_CAT message 683
+for further explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="25"></A>
+<H3>CMDTUX MESSAGE #25</H3>
+<H2> ERROR: The BBL could not bring down a paired bridge</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+Before the
+BBL
+can shut down, it sends a shutdown message to its paired
+BRIDGE
+and
+BSBRIDGE .
+The paired bridges could not
+be brought down because sending the shutdown message to the
+BRIDGE
+process failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+See LIBTUX_CAT messages 322, 323, 324, and 325
+for further explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="26"></A>
+<H3>CMDTUX MESSAGE #26</H3>
+<H2> INFO: The BBL is exiting system</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+BBL
+process has been shut down.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="27"></A>
+<H3>CMDTUX MESSAGE #27</H3>
+<H2> ERROR: BBL bbclean: cannot re-attach to the Bulletin Board for recovery</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After detecting that the Bulletin Board is corrupted, the
+BBL
+failed to re-initialize and re-attach to the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+The Bulletin Board on your machine has been corrupted,
+recovery attempts have failed.
+Contact your TUXEDO System Technical Support.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="28"></A>
+<H3>CMDTUX MESSAGE #28</H3>
+<H2> ERROR: BBL bbclean: cannot find the DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Bulletin Board cleanup process cannot find the
+DBBL
+entry in the Bulletin Board.
+The
+DBBL 's
+copy of the Bulletin Board
+in its own process space may be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+See messages 18 and 19 above
+for further explanation.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="29"></A>
+<H3>CMDTUX MESSAGE #29</H3>
+<H2> ERROR: Memory allocation failure</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+An attempt dynamically to allocate memory from the operating system using
+malloc ()
+failed while cleaning the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Ensure that the operating system parameters are set correctly
+for the amount of memory on the machine and the amount of
+memory that can be used by a process.
+Reduce the memory usage on the machine or
+increase the amount of physical memory on the machine.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="30"></A>
+<H3>CMDTUX MESSAGE #30</H3>
+<H2> ERROR: BBL bbclean cannot find BBL entries in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Bulletin Board cleanup process cannot find the
+BBL
+entry in the Bulletin Board.
+The Bulletin Board may be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="31"></A>
+<H3>CMDTUX MESSAGE #31</H3>
+<H2> ERROR: BBL bbclean cannot find DBBL entry in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The Bulletin Board cleanup process cannot find the
+DBBL
+entry in the Bulletin Board.
+The
+DBBL 's
+copy of the Bulletin Board
+in its own process space may be corrupted.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+See messages 18 and 19
+in this chapter for further explanation.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="32"></A>
+<H3>CMDTUX MESSAGE #32</H3>
+<H2> ERROR: BBL bbclean cannot find queue entry for DBBL in the Bulletin Board</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to clean up the Bulletin Board, the cleanup process was
+unable to find the queue entry associated with the
+DBBL
+in its internal tables.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="33"></A>
+<H3>CMDTUX MESSAGE #33</H3>
+<H2> ERROR: BBL bbclean cannot open Bulletin Board image, <I>filename,</I> while restarting the DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart the
+DBBL ,
+the cleanup process cannot
+create a temporary file for the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check and clean up space in either
+$TMPDIR
+or
+/tmp
+on your machine, or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="34"></A>
+<H3>CMDTUX MESSAGE #34</H3>
+<H2> ERROR: BBL bbclean cannot write the Bulletin Board for restarting the DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While attempting to restart the
+DBBL ,
+the cleanup process was
+unable to write to the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check free space and file permissions either in
+$TMPDIR
+or
+/tmp
+on your machine,
+or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="36"></A>
+<H3>CMDTUX MESSAGE #36</H3>
+<H2> ERROR: BBL bbclean attempting to restart the DBBL failed</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The cleanup process attempting to restart the
+DBBL
+failed.
+Possible causes: 1) remote restart failed, 2) the
+TUXDIR
+environment variable was not set, or 3)
+system ()
+call failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the remote connection and the
+TUXDIR
+environment variable.
+Also, check the error returned from
+system ()
+call, or contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="37"></A>
+<H3>CMDTUX MESSAGE #37</H3>
+<H2> WARN: BBL received stray reply from the BBL's reply queue</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A stray reply message has appeared on the
+BBL
+reply message queue.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="38"></A>
+<H3>CMDTUX MESSAGE #38</H3>
+<H2> ERROR: BBL requested <I>service</I> service failed - <I>errmsg</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The requested service handled by the
+BBL
+failed.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check the userlog for additional messages on
+the failure.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="39"></A>
+<H3>CMDTUX MESSAGE #39</H3>
+<H2> ERROR: BBL cannot find the DBBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the
+BBL
+is handling a service request, it cannot find
+DBBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Check for a partitioned network or corrupted shared memory, or
+contact your TUXEDO System Technical Support.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="40"></A>
+<H3>CMDTUX MESSAGE #40</H3>
+<H2> WARN: BBL found an unexpected transaction state <I>trans_state</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the
+BBL
+is waiting for requests, it times out and performs
+a scan of the
+GTT
+table every
+scanunit
+seconds.
+An unexpected transaction state was detected in the
+GTT
+table entry of the Bulletin Board.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+However, the local groups participating
+in the transaction are notified.
+If the transaction is already decided, they are sent a commit request.
+Otherwise, an abort, timeout, or status request is sent to
+the
+TMS s.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="41"></A>
+<H3>CMDTUX MESSAGE #41</H3>
+<H2> WARN: BBL found unexpected flag <I>flagval</I> in the message</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+While the
+BBL
+is waiting for requests, it times out and performs
+a scan of the
+GTT
+table every
+scanunit
+seconds.
+Based on the
+location of the groups in transaction and transaction state,
+a different message will be sent to groups.   However, an
+unexpected flag was detected in the message, and thus, no
+message was sent to the
+TMS s.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="42"></A>
+<H3>CMDTUX MESSAGE #42</H3>
+<H2> WARN: BBL failed to wake up the blocking process - <I>pid</I></H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+After checking for transaction timeout, the
+BBL
+goes through the registry
+table entry list and decrements the
+timeleft
+field for blocking processes.  If the
+timeleft
+value becomes less than or equal to zero,
+the process is sent a message to be woken up.
+This error indicates that the
+BBL
+fails to wake up the blocking process.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required.
+<!-- .1B -->
+<!-- .H 3 "SEE ALSO" -->
+<!-- .2B -->
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="43"></A>
+<H3>CMDTUX MESSAGE #43</H3>
+<H2> WARN: SIGTERM was ignored while shutting down the BBL</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+SIGTERM
+signal was received and ignored while shutting down the
+BBL .
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+See
+tmshutdown
+command for shutdown procedures.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmshutdown (1)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="44"></A>
+<H3>CMDTUX MESSAGE #44</H3>
+<H2> ERROR: Must have a RESOURCES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+UBBCONFIG
+file must include a *RESOURCES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add the *RESOURCES section with appropriate values to the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="45"></A>
+<H3>CMDTUX MESSAGE #45</H3>
+<H2> ERROR: Must have a MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+UBBCONFIG
+file must include a *MACHINES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add the *MACHINES section with appropriate values to the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="46"></A>
+<H3>CMDTUX MESSAGE #46</H3>
+<H2> WARN: Missing GROUPS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The *GROUPS section is missing in the
+UBBCONFIG
+file.  This is not a fatal error
+since groups can be added via
+tmconfig.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required if the groups will later be added via
+tmconfig.
+In most cases, a *GROUPS section would exist in the
+UBBCONFIG
+file.
+If the *GROUPS section is desired, it should be added to the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="47"></A>
+<H3>CMDTUX MESSAGE #47</H3>
+<H2> WARN: Missing SERVERS section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The SERVERS section is missing in the
+UBBCONFIG
+file.  This is not a fatal error
+since servers can be added via
+tmconfig.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required if the servers will later be added via
+tmconfig.
+In most cases, a SERVERS section would exist in the
+UBBCONFIG
+file.
+If the SERVERS section is desired, it should be added to the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="48"></A>
+<H3>CMDTUX MESSAGE #48</H3>
+<H2> WARN: Missing SERVICES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The SERVICES section is missing in the
+UBBCONFIG
+file.  This is not a fatal
+error since services can be added via
+tmconfig.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required if the services will later be added via
+tmconfig.
+In most cases, a SERVICES section would exist in the
+UBBCONFIG
+file.
+If the SERVICES section is desired, it should be added to the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="49"></A>
+<H3>CMDTUX MESSAGE #49</H3>
+<H2> WARN: Missing NETWORK section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The *NETWORK section is missing in the
+UBBCONFIG
+file.  This is not a fatal error
+since network configurations can be added via
+tmconfig.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+No action required if the network configuration will later be added via
+tmconfig.
+In most cases in which the
+MP
+model and
+LAN
+option are given,
+a *NETWORK section would exist in the
+UBBCONFIG
+file.
+If the *NETWORK section is desired, it should be added to the
+UBBCONFIG
+file.
+If the *NETWORK section is not desired at all, then the
+LAN
+option and/or
+MP
+model should be checked.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+tmconfig (1),
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="50"></A>
+<H3>CMDTUX MESSAGE #50</H3>
+<H2> ERROR: Multiple machines cannot be configured for SHM mode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The option of
+SHM
+for
+MODEL
+and having multiple machines defined in the
+*MACHINES section are mutually exclusive.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either
+MODEL
+should be set to
+MP
+in the *RESOURCES section of the
+UBBCONFIG
+file, or the *MACHINES section of the configuration file
+should have no more than one machine.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="51"></A>
+<H3>CMDTUX MESSAGE #51</H3>
+<H2> ERROR: MIGRATE option cannot be used with SHM mode</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MIGRATE
+option in the *RESOURCES section of the
+UBBCONFIG
+file cannot be
+used with the
+SHM
+value of
+MODEL
+also in the *RESOURCES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Either the
+MODEL
+value must be changed from
+SHM
+to
+MP ,
+or
+MIGRATE
+must be removed from the
+OPTION
+values in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="53"></A>
+<H3>CMDTUX MESSAGE #53</H3>
+<H2> ERROR: Can't have duplicate RESOURCES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There are multiple *RESOURCES sections defined in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the extraneous *RESOURCES section from the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="54"></A>
+<H3>CMDTUX MESSAGE #54</H3>
+<H2> ERROR: IPCKEY must be specified in RESOURCES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+IPCKEY
+parameter is required to be set in the *RESOURCES section of
+the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+IPCKEY
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="55"></A>
+<H3>CMDTUX MESSAGE #55</H3>
+<H2> ERROR: MASTER must be specified in RESOURCES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MASTER
+parameter is required to be set in the *RESOURCES section of
+the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+MASTER
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="56"></A>
+<H3>CMDTUX MESSAGE #56</H3>
+<H2> ERROR: MODEL must be specified in RESOURCES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MODEL
+parameter is required to be set in the *RESOURCES section of
+the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+MODEL
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="58"></A>
+<H3>CMDTUX MESSAGE #58</H3>
+<H2> ERROR: MODEL must be MP for LAN option</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The
+MODEL
+parameter must be set to
+MP
+(multiple processors) if the
+LAN
+option is specified in the
+OPTIONS
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+If the
+LAN
+option is desired then the
+MODEL
+parameter must be set to
+MP
+in the *RESOURCES section of the
+UBBCONFIG
+file.
+If that option is not
+desired, the
+OPTION
+parameter must be corrected to remove the
+LAN
+option.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="59"></A>
+<H3>CMDTUX MESSAGE #59</H3>
+<H2> ERROR: SCANUNIT (<I>number</I>) must be a multiple of 5, > 0 and &lt;= 60</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for the
+SCANUNIT
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file must be a multiple of 5, must be greater than 0, and
+must be less than or equal to 60.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Set the
+SCANUNIT
+parameter in the *RESOURCES section of the
+UBBCONFIG
+file to
+a value that is a multiple of 5, greater than 0, and less than or equal
+to 60.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="65"></A>
+<H3>CMDTUX MESSAGE #65</H3>
+<H2> ERROR: Identifier <I>string</I> must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identifier specified has a value that is greater than the specified
+maximum number of characters in length.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the length of the value of the identifier in the
+UBBCONFIG
+file to
+be less than or equal to the specified number of characters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="67"></A>
+<H3>CMDTUX MESSAGE #67</H3>
+<H2> ERROR: String <I>string</I> - must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The string specified has a length that is greater than the specified
+maximum number of characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the string in the
+UBBCONFIG
+file to be less than or equal to the
+specified number of characters.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="70"></A>
+<H3>CMDTUX MESSAGE #70</H3>
+<H2> ERROR: Identifier for MASTER must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identifier specified for
+MASTER
+in the *RESOURCES section of the
+UBBCONFIG
+file
+has a length that is greater than the specified maximum number of
+characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MASTER
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="72"></A>
+<H3>CMDTUX MESSAGE #72</H3>
+<H2> ERROR: Identifier for MASTER must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identifier specified for
+MASTER
+in the *RESOURCES section of the
+UBBCONFIG
+file has a length that is greater than the specified maximum number of
+characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MASTER
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="73"></A>
+<H3>CMDTUX MESSAGE #73</H3>
+<H2> ERROR: Invalid MASTER parameter - duplicate LMID <I>lmidname</I> specified</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+A comma-separated pair of logical machine names was specified for the
+MASTER
+field value in the *RESOURCES section, but both values are the same.
+The first logical machine name represents the configuration primary machine,
+and the second logical machine name represents a backup machine to which
+the master may be migrated; they cannot be identical.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+MASTER
+parameter such that the
+LMID
+values are unique, or don't specify a backup machine,
+and re-load the configuration.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="76"></A>
+<H3>CMDTUX MESSAGE #76</H3>
+<H2> ERROR: UID is not effective user ID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+UID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file is not the effective user
+ID
+of the
+tmloadcf
+process.
+The effective
+UID
+of the
+tmloadcf
+process must be the same as the
+UID
+specified in the *RESOURCES
+section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+UID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file
+to the effective
+UID
+of the user who will be running the
+tmloadcf
+command.  If this change is not desired, then the
+tmloadcf
+command cannot be run by this user.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="79"></A>
+<H3>CMDTUX MESSAGE #79</H3>
+<H2> ERROR: GID is not effective group ID</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+GID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file is not the effective group
+ID
+of the
+tmloadcf
+process.
+The effective
+GID
+of the
+tmloadcf
+process must be the same as the
+GID
+specified in the *RESOURCES
+section of the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Change the
+GID
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file
+to the effective
+GID
+of the user who will be running the
+tmloadcf
+command.  If this change is not desired, then the
+tmloadcf
+command cannot be run by this user.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="81"></A>
+<H3>CMDTUX MESSAGE #81</H3>
+<H2> ERROR: PERM parameter must be >= 1 and &lt;= 0777</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+PERM
+(permissions) as specified in the *RESOURCES section of the
+UBBCONFIG
+file is less than 1 or greater than 0777.
+PERM
+must be greater than or equal to 1 and less than or equal to 0777.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+PERM
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than or equal to 1 and less than or equal
+to 0777.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="83"></A>
+<H3>CMDTUX MESSAGE #83</H3>
+<H2> ERROR: MAXACCESSERS parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXACCESSERS
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file, is less than or equal to 0 or greater than or equal to 32768.
+MAXACCESSERS
+must be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXACCESSERS
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="85"></A>
+<H3>CMDTUX MESSAGE #85</H3>
+<H2> ERROR: MAXSERVERS parameter must be > 0 and &lt; 8192</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXSERVERS
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file, is less than or equal to 0 or greater than or equal to 8192.
+MAXSERVERS
+must be greater than 0 and less than 8192.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXSERVERS
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 8192.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="87"></A>
+<H3>CMDTUX MESSAGE #87</H3>
+<H2> ERROR: MAXSERVICES parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXSERVICES
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file, is less than or equal to 0 or greater than or equal to 32768.
+MAXSERVICES
+must be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXSERVICES
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="89"></A>
+<H3>CMDTUX MESSAGE #89</H3>
+<H2> ERROR: MAXGTT parameter must be >= 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXGTT
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file, is less than or equal to 0 or greater than or equal to 32767.
+MAXGTT
+must be greater than 0 and less than 32767.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXGTT
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="91"></A>
+<H3>CMDTUX MESSAGE #91</H3>
+<H2> ERROR: MAXBUFTYPE parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXBUFTYPE
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file, is less than or equal to 0 or greater than or equal to 32768.
+MAXBUFTYPE
+must be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXBUFTYPE
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="93"></A>
+<H3>CMDTUX MESSAGE #93</H3>
+<H2> ERROR: MAXBUFSUBTYPE parameter must be > 0 and &lt; 32768</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The value for
+MAXBUFSUBTYPE
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file, is less than or equal to 0 or greater than or equal to 32768.
+MAXBUFSUBTYPE
+must be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+MAXBUFSUBTYPE
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to be greater than 0 and less than 32768.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="95"></A>
+<H3>CMDTUX MESSAGE #95</H3>
+<H2> ERROR: Identifier for TAGENT must be &lt;= <I>len</I> characters in length</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identifier specified for
+TAGENT
+in the *RESOURCES section of the
+UBBCONFIG
+file has a length that is greater than the specified maximum number of
+characters.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the value for
+TAGENT
+as specified in the *RESOURCES section of the
+UBBCONFIG
+file to have a length less than or equal to the specified value.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="96"></A>
+<H3>CMDTUX MESSAGE #96</H3>
+<H2> ERROR: Can't have duplicate MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+There are multiple *MACHINES sections defined in the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Remove the extraneous *MACHINES
+section from the
+UBBCONFIG
+file.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="97"></A>
+<H3>CMDTUX MESSAGE #97</H3>
+<H2> ERROR: RESOURCES section must appear before MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The *MACHINES section was put before the *RESOURCES section in the
+UBBCONFIG
+file.  There must be a *RESOURCES section before the *MACHINES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Correct the
+UBBCONFIG
+file to specify the *RESOURCES section before the *MACHINES
+section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="98"></A>
+<H3>CMDTUX MESSAGE #98</H3>
+<H2> ERROR: <I>lmidname</I> specified in MASTER, but not defined in MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identified machine was specified as the primary value of
+MASTER
+in the
+*RESOURCES section of the
+UBBCONFIG
+file, but the machine was not defined
+in the *MACHINES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add the identified machine to the *MACHINES
+section of the
+UBBCONFIG
+file, or
+properly list a defined machine as the primary in the
+MASTER
+parameter in
+the *RESOURCES section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+<SECT2><P>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR>
+<A NAME="99"></A>
+<H3>CMDTUX MESSAGE #99</H3>
+<H2> ERROR: <I>lmidname</I> specified in MASTER, but not defined in MACHINES section</H2><HR>
+<P>
+<SECT3><P>
+<H3>DESCRIPTION</H3>
+<P>
+The identified machine was specified as the alternate value of
+MASTER
+in the
+*RESOURCES section of the
+UBBCONFIG
+file, but the machine was not defined
+in the *MACHINES section.
+<SECT3><P>
+<H3>ACTION</H3>
+<P>
+Add the identified machine to the *MACHINES section of the
+UBBCONFIG
+file, or
+properly list a defined machine as the secondary in the
+MASTER
+parameter in
+the *RESOURCES section.
+<SECT3><P>
+<H3>SEE ALSO</H3>
+<P>
+ubbconfig (5)
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+This screen indicates that the message number is missing from the Message Manual. Please contact your Tuxedo support representative.
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+</BODY>

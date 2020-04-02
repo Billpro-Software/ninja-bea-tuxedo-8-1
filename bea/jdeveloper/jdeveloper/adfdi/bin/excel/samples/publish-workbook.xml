@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+
+<!--
+  This is a sample ANT script to demonstrate the invocation
+  of the ADFdi command line workbook publishing tool which prepares
+  a source (Design Time) workbook for Run Time use.
+-->
+
+<project name="publish-adfdi-workbook" default="publish-workbook">
+
+  <target name="publish-workbook" depends="check-for-windows">
+
+    <!-- set some properties to drive to invocation of the tool -->
+    <property name="publishtool.home"
+              location="${oracle.home}/adfdi/bin/excel/tools/publish/"/>
+    <property name="app.home" location="../"/>
+    <property name="sourceWorkbookFilepath"
+              location="${app.home}/ViewController/src/excel/SampleSourceWorkbook.xlsx"/>
+    <property name="publishedWorkbookFilepath"
+              location="${app.home}/ViewController/public_html/excel/SamplePublishedWorkbook.xlsx"/>
+
+    <!-- invoke the tool -->
+    <exec executable="${publishtool.home}/publish-workbook.exe"
+          failonerror="true">
+      <arg line=" -workbook ${sourceWorkbookFilepath} -out ${publishedWorkbookFilepath}"/>
+    </exec>
+  </target>
+
+  <!-- Ensures that the operating system is Windows based. -->
+  <target name="check-for-windows">
+    <condition property="isWindowsOS">
+      <and>
+        <os family="windows"/>
+      </and>
+    </condition>
+    <fail message="Cannot proceed with workbook publishing on a non-windows machine"
+          unless="isWindowsOS"/>
+  </target>
+</project>

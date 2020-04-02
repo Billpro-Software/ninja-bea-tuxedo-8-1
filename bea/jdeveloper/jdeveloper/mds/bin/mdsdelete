@@ -1,0 +1,104 @@
+#!/bin/sh
+#    mdsdelete
+#
+#  DESCRIPTION
+#    This file is used to call the MDSDeleteTool utility 
+#
+#   MODIFIED   (MM/DD/YY)
+#   snoton     08/24/09  - #(8808215) use mds-tools.jar instead of 
+#                          setMDSclasspath
+#   allechen   08/19/08  - Use datadirect 3.7 in WLS install
+#   dklein     06/06/07  - Get classpath from setMDSclasspath
+#   pwhaley    01/15/07  - Add UCP jar, SQLServer jdbc jar.
+#   pwhaley    01/08/07  - Remove concurrent.jar.
+#   erwang     12/26/06  - Add DataDirect JDBC driver support
+#   gnagaraj   01/03/07  - Consume ojdbc5dms.jar
+#   dklein     12/20/06  - Add dafrt.jar and its dependencies
+#   gnagaraj   12/05/06  - Remove bc4jct.jar and collections.jar dependency
+#   dklein     09/22/06  - Rename adfshare.jar to adfsharebase.jar
+#                          Set DELIVER=`dirname $0`/../..
+#                          Set ade property  ALWAYS_BINARY_MODE on this file
+#   ntriggs    09/13/06  - Add JAXB 2.0 jars
+#   gkonduri   01/05/06  - Add commons-collections.jar. 
+#   spathak    09/30/05  - 
+#   hlie       09/26/05  - Add adfshare.jar
+#   lramados   07/26/05  - Remove classes directory from the classpath. 
+#   gnagaraj   07/06/05  - Add xdb.jar to classpath 
+#   azgibson   07/08/05  - Updating location of xml.jar.
+#   gnagaraj   06/01/05  - Add xml.jar to classpath for JAXB.
+#   hlie       05/16/05  - Changed to use mdsrt.jar.
+#   hlie       04/25/05  - Changes in library locations (el, cli, cache).
+#   prasubra   04/06/05  - Fix shell script issues in "sh" shell. 
+#   prasubra   03/17/05  - Fix the xNix char issues in the script.
+#   prasubra   03/08/05  - Added concurrent.jar in the classpath
+#   lramados   03/04/05  - Add xmlef.jar in the classpath 
+#   lramados   02/07/05  - Comment error level 
+#   lramados   01/28/05  - Include log configuration file in the command
+#   lramados   01/27/05  - Fixed shell scipt issues.
+#   prasubra   01/13/05  - Fixed shell scipt issues.
+#   prasubra   01/12/05  - Fixed shell script issues.
+#   prasubra   01/10/05  - Creation.
+#
+
+#############################################################################
+##   This file should be in sync with the "mdsdelete.bat" windows batch    ##
+##   file. Please update "mdsdelete.bat" when updating this file.          ##
+#############################################################################
+
+if [ "$JAVA_HOME" = "" ]
+then
+    echo Set the JAVA_HOME environment variable to the root directory of the JDK installation.
+    exit
+fi
+
+# ------------------------------------------------------------------
+# --------- COMPUTE DELIVER. DO NOT CHANGE THIS VALUE !! ---------
+# -- DELIVER directory
+# Set DELIVER to the value of the BUILT environment setting if present (means
+# this script was called by rtmdstest.bat).  
+# Otherwise, compute it by assuming this script is being called from the
+# jdev/bin subdir of the DELIVER directory.
+DELIVER=$BUILT
+if [ "$BUILT" = "" ] 
+then 
+    DELIVER=`dirname $0`/../..
+fi
+
+# need to the default values for variables
+verbose="n"
+param=
+logFile=$DELIVER/mds/bin/mdstoolslog.properties
+
+# The commented out section below should be enabled when a solution for 
+# $@ automatic expansion is found. This loop is needed to enable verbose mode.
+# If the given shell argument is "/**", the for loop starts iterating all
+# the contents of the root directory because of automatic expansion.
+# for arg in "$@"
+# do
+#     if [ "$arg" = "--verbose" ]
+#     then
+#         verbose="y"
+#     else
+#         param=$param" "$arg
+#    fi
+#done
+
+
+# ------- CLASSPATH settings
+cp=${DELIVER}/mds/bin/mdstools.jar
+
+
+# ------- PATH settings
+PATH=$JAVA_HOME/bin:$PATH
+
+if [ "$verbose" = "y" ]
+then
+    java -version
+    echo CLASSPATH = $CLASSPATH
+fi
+
+java -Djava.util.logging.config.file=$logFile -cp $cp oracle.mds.tools.delete.MDSDeleteTool "$@"
+
+# ----- For testing return value from the tool
+# ----- echo MDSDeleteTool returned: $? 
+

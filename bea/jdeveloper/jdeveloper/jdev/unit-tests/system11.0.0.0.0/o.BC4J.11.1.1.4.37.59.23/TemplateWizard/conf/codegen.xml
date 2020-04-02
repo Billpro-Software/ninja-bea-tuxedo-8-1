@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+
+<!-- global initialization file used by Template wizard framework -->
+
+<WizardConfig>
+
+    <CodeGenVerbs>
+
+           <CodeGenHelper action="substitute">
+                <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxPropertiesTable"/>
+                <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TextSubCodeGenHelper"/>
+           </CodeGenHelper>
+
+           <CodeGenHelper action="xsl">
+                <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxXMLStream"/>
+                <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.XSLCodeGenHelper"/>
+           </CodeGenHelper>
+       
+	   <!-- same as tcopy., textcopy  -->
+
+           <CodeGenHelper action="copy">
+                <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxIdentity"/>
+                <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.tcopy"/>
+           </CodeGenHelper>
+
+	   <!-- binary copy -->
+           <CodeGenHelper action="bcopy">
+                <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxIdentity"/>
+                <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.bcopy"/>
+           </CodeGenHelper>
+
+	   <!-- text copy -->
+           <CodeGenHelper action="tcopy">
+                <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxIdentity"/>
+                <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.tcopy"/>
+           </CodeGenHelper>
+
+           
+           <CodeGenHelper action="xpath">
+                <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxXMLStream"/>
+                <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.XPathCodeGenHelper"/>
+           </CodeGenHelper>
+           
+           <!-- special action for uix -->
+           <CodeGenHelper action="uix-substitute">
+	       <transform class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.TxPropertiesTable"/>
+	       <generator class="oracle.jbo.dt.ui.wizards.wiztemplate.codegen.UIXTextSubCodeGenHelper"/>
+           </CodeGenHelper>      
+		   
+    </CodeGenVerbs>
+    
+</WizardConfig>
+

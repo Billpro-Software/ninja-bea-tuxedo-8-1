@@ -1,0 +1,22 @@
+/*	(c) 2003 BEA Systems, Inc. All Rights Reserved. */
+/*
+ *	Copyright (c) 1996 BEA Systems, Inc.
+ *	All Rights Reserved
+ *
+ *	THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+ *	BEA Systems, Inc.
+ *	The copyright notice above does not evidence any
+ *	actual or intended publication of such source code.
+ */
+
+/* #ident	"@(#) samples/atmi/bankapp/nt/client/user.dlg	$Revision: 1.4 $" */
+
+IDD_USER DIALOG 106, 118, 117, 70
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "User information"
+BEGIN
+    EDITTEXT        IDC_USER, 60, 14, 50, 12, ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWD, 60, 46, 50, 12, ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "User name:", 101, 15, 16, 40, 8
+    LTEXT           "Password:", 102, 15, 47, 43, 8
+END
